@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react';
 import { gsap } from '../lib/gsap';
-
 import { useTheme } from './ThemeProvider';
 
 const HEADLINE_WORDS = ['Websites', 'that', 'make', 'your', 'business', 'look'];
@@ -20,43 +19,53 @@ export default function Hero() {
   const revealedRef = useRef(false);
   const { theme } = useTheme();
 
-  // Build scene + 3.2s intro, then reveal text
+  // Reveal text independently — fires after a short delay so the headline
+  // is visible on first meaningful paint, regardless of how long Three.js
+  // takes to load. The 3D orb intro still plays when ready.
+  useEffect(() => {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const delay = reduced ? 0 : 300;
+
+    const revealText = () => {
+      if (revealedRef.current) return;
+      revealedRef.current = true;
+      const words = h1Ref.current ? h1Ref.current.querySelectorAll('.word') : [];
+      textTl.current = gsap.timeline();
+      words.forEach((w, i) => {
+        textTl.current.add(() => w.classList.add('revealed'), i * 0.085);
+      });
+      const base = words.length * 0.085;
+      textTl.current.add(() => badgeRef.current && badgeRef.current.classList.add('revealed'), base + 0.05);
+      textTl.current.add(() => subRef.current && subRef.current.classList.add('revealed'), base + 0.22);
+      textTl.current.add(() => actionsRef.current && actionsRef.current.classList.add('revealed'), base + 0.4);
+    };
+
+    const timer = setTimeout(revealText, delay);
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Load Three.js hero scene dynamically — off the critical path
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     let api = null;
+    let disposed = false;
     import('./three/HeroScene').then(({ createHeroScene }) => {
+      if (disposed) return;
       api = createHeroScene(canvas);
       sceneRef.current = api;
       api.setTheme(document.documentElement.getAttribute('data-theme') || 'obsidian');
 
       const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      const revealText = () => {
-        if (revealedRef.current) return;
-        revealedRef.current = true;
-        const words = h1Ref.current ? h1Ref.current.querySelectorAll('.word') : [];
-        textTl.current = gsap.timeline();
-        words.forEach((w, i) => {
-          textTl.current.add(() => w.classList.add('revealed'), i * 0.085);
-        });
-        const base = words.length * 0.085;
-        textTl.current.add(() => badgeRef.current && badgeRef.current.classList.add('revealed'), base + 0.05);
-        textTl.current.add(() => subRef.current && subRef.current.classList.add('revealed'), base + 0.22);
-        textTl.current.add(() => actionsRef.current && actionsRef.current.classList.add('revealed'), base + 0.4);
-      };
-
       if (reduced) {
         api.parts.root.scale.setScalar(1);
         api.parts.particles.material.opacity = 0.85;
         api.parts.glow.material.opacity = 0.5;
         api.parts.camera.position.z = 5.8;
-        h1Ref.current && h1Ref.current.querySelectorAll('.word').forEach((w) => w.classList.add('revealed'));
-        [badgeRef, subRef, actionsRef].forEach((r) => r.current && r.current.classList.add('revealed'));
       } else {
-        // 1) The orb system plays alone for ~3.2s
-        introTl.current = gsap.timeline({ delay: 0.3, onComplete: revealText });
+        introTl.current = gsap.timeline({ delay: 0.1 });
         introTl.current
           .to(api.parts.root.scale, { x: 1, y: 1, z: 1, duration: 3.0, ease: 'expo.inOut' }, 0)
           .to(api.parts.camera.position, { z: 5.8, duration: 3.4, ease: 'power2.inOut' }, 0)
@@ -67,6 +76,7 @@ export default function Hero() {
     });
 
     return () => {
+      disposed = true;
       if (introTl.current) introTl.current.kill();
       if (textTl.current) textTl.current.kill();
       if (api) api.dispose();
@@ -150,4 +160,3 @@ export default function Hero() {
     </section>
   );
 }
-
