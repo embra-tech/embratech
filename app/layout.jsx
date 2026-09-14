@@ -5,7 +5,7 @@ import ScrollManager from '../components/ScrollManager';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/next';
 
 const figtree = Figtree({
   subsets: ['latin'],
