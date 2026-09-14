@@ -46,7 +46,7 @@ export default function PricingClient() {
               <a href="/contact" className="btn-flip btn-ghost btn-large pricing-btn">
                 <span className="btn-flip-inner">
                   <span className="btn-flip-state">Get Started <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span>
-                  <span className="btn-flip-state">Get Started <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
+                  <span className="btn-flip-state" aria-hidden="true">Get Started <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
                 </span>
               </a>
             </div>
@@ -69,7 +69,7 @@ export default function PricingClient() {
               <a href="/contact" className="btn-flip btn-primary btn-large pricing-btn">
                 <span className="btn-flip-inner">
                   <span className="btn-flip-state">Start Growing <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span>
-                  <span className="btn-flip-state">Start Growing <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
+                  <span className="btn-flip-state" aria-hidden="true">Start Growing <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
                 </span>
               </a>
             </div>
@@ -91,7 +91,7 @@ export default function PricingClient() {
               <a href="/contact" className="btn-flip btn-ghost btn-large pricing-btn">
                 <span className="btn-flip-inner">
                   <span className="btn-flip-state">Get Care Plan <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span>
-                  <span className="btn-flip-state">Get Care Plan <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
+                  <span className="btn-flip-state" aria-hidden="true">Get Care Plan <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
                 </span>
               </a>
             </div>
@@ -109,7 +109,7 @@ export default function PricingClient() {
             <a href="/contact" className="btn-flip btn-primary">
               <span className="btn-flip-inner">
                 <span className="btn-flip-state">Claim Free Sample <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span>
-                <span className="btn-flip-state">Claim Free Sample <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
+                <span className="btn-flip-state" aria-hidden="true">Claim Free Sample <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
               </span>
             </a>
           </div>
@@ -165,3 +165,4 @@ export default function PricingClient() {
     </div>
   );
 }
+

@@ -25,7 +25,7 @@ const FAQ_SETS = {
   pricing: [
     {
       q: 'What exactly is the free homepage sample?',
-      a: 'We design a fully custom homepage mockup for your business — styled with your brand colours and content — within 24 hours. It\'s a real design, not a template, and you review it at no cost before deciding anything.',
+      a: "We design a fully custom homepage mockup for your business — styled with your brand colours and content — within 24 hours. It's a real design, not a template, and you review it at no cost before deciding anything.",
     },
     {
       q: 'What if I need more than just a homepage?',
@@ -33,15 +33,15 @@ const FAQ_SETS = {
     },
     {
       q: 'Can I cancel the Care Plan at any time?',
-      a: 'Yes. The Care Plan is a rolling monthly subscription with no lock-in. Cancel with written notice and we\'ll transfer all site files and access credentials to you within 7 business days.',
+      a: "Yes. The Care Plan is a rolling monthly subscription with no lock-in. Cancel with written notice and we'll transfer all site files and access credentials to you within 7 business days.",
     },
     {
       q: 'Do I own the website after the build?',
       a: 'Absolutely — full ownership transfers to you upon final payment. No proprietary systems, no lock-in. You get the code, the design files, and all credentials.',
     },
     {
-      q: 'What\'s your refund policy?',
-      a: 'If you\'re unsatisfied within 7 days of launch, contact us and we\'ll make it right. Because every build is custom, refunds after launch aren\'t available — but we\'re committed to your satisfaction throughout the project.',
+      q: "What's your refund policy?",
+      a: "If you're unsatisfied within 7 days of launch, contact us and we'll make it right. Because every build is custom, refunds after launch aren't available — but we're committed to your satisfaction throughout the project.",
     },
   ],
 
@@ -60,7 +60,7 @@ const FAQ_SETS = {
     },
     {
       q: 'How wide is your local SEO coverage?',
-      a: 'We optimise for any US city or service area. We\'ve worked with businesses in Los Angeles, Chicago, Alaska, and across the Gulf Coast. Local SEO strategy is tailored to your specific service radius and competitive landscape.',
+      a: "We optimise for any US city or service area. We've worked with businesses in Los Angeles, Chicago, Alaska, and across the Gulf Coast. Local SEO strategy is tailored to your specific service radius and competitive landscape.",
     },
   ],
 };
@@ -79,9 +79,9 @@ const MinusIcon = () => (
 );
 
 const HEADINGS = {
-  home:     { pill: 'FAQs',    text: 'Got Questions?',     h2: 'Frequently Asked Questions.',        sub: 'Everything you need to know about working with Embra Technologies.' },
-  pricing:  { pill: 'FAQs',    text: 'Pricing Questions',  h2: 'Common Questions About Our Pricing.', sub: 'Transparent answers about costs, ownership, and our free sample offer.' },
-  services: { pill: 'FAQs',    text: 'Service Questions',  h2: 'Questions About Our Services.',       sub: 'Straight answers about how we work, what we build, and who we work with.' },
+  home:     { pill: 'FAQs', text: 'Got Questions?',     h2: 'Frequently Asked Questions.',        sub: 'Everything you need to know about working with Embra Technologies.' },
+  pricing:  { pill: 'FAQs', text: 'Pricing Questions',  h2: 'Common Questions About Our Pricing.', sub: 'Transparent answers about costs, ownership, and our free sample offer.' },
+  services: { pill: 'FAQs', text: 'Service Questions',  h2: 'Questions About Our Services.',       sub: 'Straight answers about how we work, what we build, and who we work with.' },
 };
 
 /**
@@ -106,11 +106,15 @@ export default function Faq({ variant = 'home' }) {
         <div className="faq-wrap reveal-up">
           {faqs.map((f, i) => {
             const open = openIdx === i;
+            const panelId = 'faq-panel-' + i;
+            const btnId = 'faq-btn-' + i;
             return (
-              <div className={`faq-item ${open ? 'open' : ''}`} key={f.q}>
+              <div className={'faq-item' + (open ? ' open' : '')} key={f.q}>
                 <button
                   className="faq-header"
                   aria-expanded={open}
+                  aria-controls={panelId}
+                  id={btnId}
                   onClick={() => setOpenIdx(open ? -1 : i)}
                 >
                   <span>{f.q}</span>
@@ -118,7 +122,7 @@ export default function Faq({ variant = 'home' }) {
                     {open ? <MinusIcon /> : <PlusIcon />}
                   </span>
                 </button>
-                <div className="faq-body" style={{ display: open ? 'block' : 'none' }}>{f.a}</div>
+                <div id={panelId} role="region" aria-labelledby={btnId} className="faq-body" style={{ display: open ? 'block' : 'none' }}>{f.a}</div>
               </div>
             );
           })}

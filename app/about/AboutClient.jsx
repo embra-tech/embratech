@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from 'react';
 import { useReveal } from '../../lib/useReveal';
 import { gsap, ScrollTrigger } from '../../lib/gsap';
 import PageHeader from '../../components/PageHeader';
-import Process from '../../components/Process';
 import Cta from '../../components/Cta';
 import Breadcrumb from '../../components/Breadcrumb';
 
@@ -119,8 +118,8 @@ export default function AboutClient() {
         </div>
       </section>
 
-      <Process />
-      <Cta variant="about" />
+            <Cta variant="about" />
     </div>
   );
 }
+

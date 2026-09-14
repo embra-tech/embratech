@@ -37,6 +37,10 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Contact &amp; Legal</h4>
             <div className="footer-contact-list">
+              <div className="footer-contact-item" style={{ alignItems: 'flex-start' }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" style={{ marginTop: 2 }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span style={{ lineHeight: 1.4 }}>1309 Coffeen Avenue STE 1200<br/>Sheridan, WY 82801</span>
+              </div>
               <div className="footer-contact-item">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>
                 <a href="mailto:info@embratechnologies.org">info@embratechnologies.org</a>
@@ -45,10 +49,15 @@ export default function Footer() {
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.8 19.8 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1.22h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.62-1.62a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
                 <a href="tel:+12122071152">+1 (212) 207-1152</a>
               </div>
-              <div className="footer-contact-item">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
-                <a href="https://embratechnologies.org" target="_blank" rel="noopener noreferrer">embratechnologies.org</a>
-              </div>
+            </div>
+            
+            <div className="footer-socials" style={{ display: 'flex', gap: 14, marginTop: 24 }}>
+              <a href="https://linkedin.com/company/embratechnologies" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ color: 'var(--muted-inv)' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+              <a href="https://twitter.com/embratech" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" style={{ color: 'var(--muted-inv)' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+              </a>
             </div>
           </div>
         </div>

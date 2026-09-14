@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://embratechnologies.org';
+  const baseUrl = 'https://www.embratechnologies.org';
   const now = new Date().toISOString();
 
   const routes = [
@@ -11,6 +11,10 @@ export default function sitemap() {
     { url: `${baseUrl}/contact`, priority: 0.8, changeFrequency: 'yearly' },
     { url: `${baseUrl}/privacy`, priority: 0.3, changeFrequency: 'yearly' },
     { url: `${baseUrl}/terms`, priority: 0.3, changeFrequency: 'yearly' },
+      { url: `${baseUrl}/locations/los-angeles`, priority: 0.6, changeFrequency: 'monthly' },
+    { url: `${baseUrl}/locations/chicago`, priority: 0.6, changeFrequency: 'monthly' },
+    { url: `${baseUrl}/locations/alaska`, priority: 0.6, changeFrequency: 'monthly' },
+    { url: `${baseUrl}/locations/gulf-coast`, priority: 0.6, changeFrequency: 'monthly' },
   ];
 
   return routes.map((route) => ({
@@ -20,3 +24,5 @@ export default function sitemap() {
     priority: route.priority,
   }));
 }
+
+

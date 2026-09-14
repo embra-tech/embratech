@@ -74,7 +74,7 @@ export default function Cta({ variant = 'home' }) {
         <a href={v.href} className="btn-flip btn-primary btn-large" style={{ marginTop: 10 }}>
           <span className="btn-flip-inner">
             <span className="btn-flip-state">{v.cta} <ArrowIcon /></span>
-            <span className="btn-flip-state">{v.cta} <ArrowRightIcon /></span>
+            <span className="btn-flip-state" aria-hidden="true">{v.cta} <ArrowRightIcon /></span>
           </span>
         </a>
         {isEmail && (
@@ -88,3 +88,4 @@ export default function Cta({ variant = 'home' }) {
     </section>
   );
 }
+

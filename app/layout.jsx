@@ -5,6 +5,7 @@ import ScrollManager from '../components/ScrollManager';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
+import CookieBanner from '../components/CookieBanner';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
@@ -30,7 +31,8 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://embratechnologies.org'),
+  metadataBase: new URL('https://www.embratechnologies.org'),
+  alternates: { canonical: '/' },
   title: {
     default: 'Embra Technologies — Websites, SEO & Digital Identity for Growing Businesses',
     template: '%s — Embra Technologies',
@@ -57,6 +59,31 @@ export default function RootLayout({ children }) {
             {children}
             <Footer />
             <WhatsAppButton />
+            <CookieBanner />
+                        <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "ProfessionalService",
+                  "name": "Embra Technologies",
+                  "url": "https://www.embratechnologies.org",
+                  "logo": "https://www.embratechnologies.org/opengraph-image.png",
+                  "image": "https://www.embratechnologies.org/opengraph-image.png",
+                  "description": "Embra Technologies designs and builds fast, modern websites, improves search visibility, and manages digital identity for growing businesses across the United States.",
+                  "telephone": "+1-212-207-1152",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "1309 Coffeen Avenue STE 1200",
+                    "addressLocality": "Sheridan",
+                    "addressRegion": "WY",
+                    "postalCode": "82801",
+                    "addressCountry": "US"
+                  },
+                  "priceRange": "$"
+                })
+              }}
+            />
             <Analytics />
             <SpeedInsights />
           </ScrollManager>
@@ -65,4 +92,7 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
+
 

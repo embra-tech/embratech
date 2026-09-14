@@ -136,13 +136,13 @@ export default function Hero() {
           <a href="/contact" className="btn-flip btn-primary btn-large">
             <span className="btn-flip-inner">
               <span className="btn-flip-state">Start Your Project <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span>
-              <span className="btn-flip-state">Start Your Project <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
+              <span className="btn-flip-state" aria-hidden="true">Start Your Project <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
             </span>
           </a>
           <a href="/portfolio" className="btn-flip btn-ghost btn-large">
             <span className="btn-flip-inner">
               <span className="btn-flip-state">See Our Work <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
-              <span className="btn-flip-state">See Our Work <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6" /></svg></span>
+              <span className="btn-flip-state" aria-hidden="true">See Our Work <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6" /></svg></span>
             </span>
           </a>
         </div>
@@ -150,4 +150,5 @@ export default function Hero() {
     </section>
   );
 }
+
 

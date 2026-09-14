@@ -3,7 +3,6 @@
 import { useRef } from 'react';
 import { useReveal } from '../../lib/useReveal';
 import PageHeader from '../../components/PageHeader';
-import Process from '../../components/Process';
 import WhyUs from '../../components/WhyUs';
 import Cta from '../../components/Cta';
 import Faq from '../../components/Faq';
@@ -105,10 +104,10 @@ export default function ServicesClient() {
         </div>
       </section>
 
-      <Process />
-      <WhyUs />
+            <WhyUs />
       <Faq variant="services" />
       <Cta variant="services" />
     </div>
   );
 }
+
