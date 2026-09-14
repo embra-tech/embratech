@@ -46,7 +46,7 @@ export default function PrivacyPage() {
             <section id="who-we-are">
               <h2>1. Who We Are</h2>
               <p>
-                Embra Technologies Private Limited (&ldquo;Embra,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates the website{' '}
+                Embra Technologies (&ldquo;Embra,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates the website{' '}
                 <a href="https://embratechnologies.org" target="_blank" rel="noopener noreferrer">embratechnologies.org</a>{' '}
                 and any sub-sites. We provide website design, search engine optimisation, and digital identity services for growing businesses.
               </p>
@@ -162,7 +162,7 @@ export default function PrivacyPage() {
               <h2>9. Contact Us</h2>
               <p>If you have questions about this Privacy Policy or our data practices, please contact us:</p>
               <address>
-                <strong>Embra Technologies Private Limited</strong><br />
+                <strong>Embra Technologies</strong><br />
                 Email: <a href="mailto:info@embratechnologies.org">info@embratechnologies.org</a><br />
                 Phone: <a href="tel:+12122071152">+1 (212) 207-1152</a><br />
                 Website: <a href="https://embratechnologies.org">embratechnologies.org</a>

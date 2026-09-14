@@ -116,6 +116,50 @@ export default function PricingClient() {
         </div>
       </section>
 
+      {/* Why $500 Is Possible — justifies the "100% custom" claim */}
+      <section className="pricing-how-section">
+        <div className="wrap">
+          <div className="section-head reveal-up">
+            <div className="section-badge">
+              <span className="badge-pill">Transparency</span>
+              <span className="badge-text">How We Keep Prices Low</span>
+            </div>
+            <h2>Why $500 gets you a purpose-built site — not a template.</h2>
+            <p>We hear the question every time. Here's the honest answer.</p>
+          </div>
+          <div className="pricing-how-grid">
+            {[
+              {
+                n: '01',
+                title: 'Discovery before pixels',
+                body: 'Every project starts with a deep intake: your industry, your competitors, your target customer, and your #1 conversion goal. That research drives every design decision — so we never guess.',
+              },
+              {
+                n: '02',
+                title: 'Purpose-built component system',
+                body: 'We use a proprietary design system we built and maintain ourselves — not Squarespace, not WordPress, not Webflow. That means zero platform fees and zero template lock-in, and the savings go directly to you.',
+              },
+              {
+                n: '03',
+                title: 'Focused, high-impact scope',
+                body: 'A well-crafted homepage and core pages convert better than a bloated 20-page site. We keep scope focused on what actually wins leads, then add pages only when your data says they\'ll pay off.',
+              },
+              {
+                n: '04',
+                title: 'Lean, async team',
+                body: 'No downtown office. No account managers. No bloated retainers passed on to you. You communicate directly with the designers and engineers doing the work — which means faster decisions and a tighter result.',
+              },
+            ].map((item) => (
+              <div className="pricing-how-card reveal-up" key={item.n}>
+                <span className="pricing-how-num">{item.n}</span>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Faq variant="pricing" />
       <Cta variant="pricing" />
     </div>

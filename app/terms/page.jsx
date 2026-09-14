@@ -7,7 +7,7 @@ export const metadata = {
 import Link from 'next/link';
 import Breadcrumb from '../../components/Breadcrumb';
 
-const LAST_UPDATED = 'September 14, 2026';
+const LAST_UPDATED = 'January 1, 2026';
 
 export default function TermsPage() {
   return (
@@ -51,7 +51,7 @@ export default function TermsPage() {
             <section id="agreement">
               <h2>1. Agreement to Terms</h2>
               <p>
-                These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the services provided by Embra Technologies Private Limited (&ldquo;Embra,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). By engaging our services, requesting a free homepage sample, or signing a project agreement, you agree to these Terms in full.
+                These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the services provided by Embra Technologies (&ldquo;Embra,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). By engaging our services, requesting a free homepage sample, or signing a project agreement, you agree to these Terms in full.
               </p>
               <p>If you do not agree to these Terms, please do not use our services.</p>
             </section>
@@ -189,7 +189,7 @@ export default function TermsPage() {
               <h2>14. Contact</h2>
               <p>Questions about these Terms? Reach us at:</p>
               <address>
-                <strong>Embra Technologies Private Limited</strong><br />
+                <strong>Embra Technologies</strong><br />
                 Email: <a href="mailto:info@embratechnologies.org">info@embratechnologies.org</a><br />
                 Phone: <a href="tel:+12122071152">+1 (212) 207-1152</a>
               </address>

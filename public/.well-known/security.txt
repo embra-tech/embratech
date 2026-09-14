@@ -1,0 +1,6 @@
+Contact: mailto:info@embratechnologies.org
+Preferred-Languages: en
+Canonical: https://embratechnologies.org/.well-known/security.txt
+Policy: https://embratechnologies.org/privacy
+Acknowledgments: https://embratechnologies.org/security-thanks
+Expires: 2027-01-01T00:00:00.000Z

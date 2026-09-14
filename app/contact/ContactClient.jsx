@@ -17,7 +17,7 @@ export default function ContactClient() {
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState('');
-  const [form, setForm] = useState({ name: '', email: '', business: '', message: '' });
+  const [form, setForm] = useState({ name: '', email: '', business: '', message: '', _gotcha: '' });
 
   const update = (k) => (e) => setForm({ ...form, [k]: e.target.value });
 
@@ -31,6 +31,7 @@ export default function ContactClient() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           _subject: 'New Lead — Embra Technologies Website',
+          _gotcha: form._gotcha,
           Name: form.name,
           Email: form.email,
           'Business Name & Website': form.business,
@@ -71,7 +72,7 @@ export default function ContactClient() {
                 </div>
                 <h3>Message received</h3>
                 <p>Thanks, {form.name || 'friend'} — we&apos;ll get back to you within 24 hours with your free homepage sample plan.</p>
-                <button type="button" className="btn-flip btn-ghost btn-small" onClick={() => { setSent(false); setForm({ name: '', email: '', business: '', message: '' }); }}>
+                <button type="button" className="btn-flip btn-ghost btn-small" onClick={() => { setSent(false); setForm({ name: '', email: '', business: '', message: '', _gotcha: '' }); }}>
                   <span className="btn-flip-inner">
                     <span className="btn-flip-state">Send Another Message</span>
                     <span className="btn-flip-state">Send Another Message</span>
@@ -80,6 +81,17 @@ export default function ContactClient() {
               </div>
             ) : (
               <>
+                {/* Honeypot — invisible to humans, bots fill it and get rejected */}
+                <input
+                  type="text"
+                  name="_gotcha"
+                  value={form._gotcha}
+                  onChange={update('_gotcha')}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0 }}
+                />
                 <div className="form-row">
                   <div className="form-field">
                     <label htmlFor="cf-name">Your Name</label>
