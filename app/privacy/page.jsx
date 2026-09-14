@@ -91,8 +91,7 @@ export default function PrivacyPage() {
               <ul>
                 <li><strong>Strictly necessary</strong> — cookies required for the website to function (e.g., CSRF tokens, session identifiers). These cannot be disabled.</li>
                 <li><strong>Analytics</strong> — Google Analytics 4 may set cookies to track anonymous usage patterns. You can opt out via your browser settings or by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</li>
-                <li><strong>Preference cookies</strong> — we store your chosen colour theme (e.g., &ldquo;obsidian&rdquo; or &ldquo;cosmic&rdquo;) in <code>localStorage</code> to preserve your visual preference across visits. No personal data is stored in this preference.</li>
-              </ul>
+                </ul>
               <p>You can control cookie settings through your browser. Disabling cookies may affect website functionality.</p>
             </section>
 
@@ -182,4 +181,5 @@ export default function PrivacyPage() {
     </div>
   );
 }
+
 
