@@ -2,14 +2,9 @@
 
 import { useEffect, useRef } from 'react';
 import { ScrollTrigger } from '../lib/gsap';
-import ThreeCanvas from './three/ThreeCanvas';
-import {
-  initRankClimb,
-  initConstellation,
-  initDataStreams,
-  initLayerStack,
-  initRocketArc,
-} from './three/serviceAnimations';
+import dynamic from 'next/dynamic';
+const ThreeCanvas = dynamic(() => import('./three/ThreeCanvas'), { ssr: false });
+
 
 /* ================= 01/05 — BLUEPRINT GENESIS =================
    A browser interface draws itself into existence, line by line,
@@ -111,7 +106,7 @@ export default function Services() {
           <article className="bento-card reveal-up">
             <div className="card-ui-mockup three-mockup">
               <div className="ui-seo-stats mockup-overlay"><span className="ui-stat-pill">Rank #1 Google</span><span className="ui-stat-score">+280% Traffic</span></div>
-              <ThreeCanvas init={initRankClimb} />
+              <ThreeCanvas type='rankClimb' />
               <span className="mockup-tag">Rank Climb</span>
             </div>
             <div className="bento-card-body">
@@ -125,7 +120,7 @@ export default function Services() {
           {/* Card 3 — Digital Identity, featuring Constellation (C) */}
           <article className="bento-card reveal-up">
             <div className="card-ui-mockup three-mockup">
-              <ThreeCanvas init={initConstellation} />
+              <ThreeCanvas type='constellation' />
               <span className="mockup-tag">Constellation</span>
             </div>
             <div className="bento-card-body">
@@ -139,7 +134,7 @@ export default function Services() {
           {/* Card 4 — Digital Systems & Integrations, featuring Data Streams (B) */}
           <article className="bento-card reveal-up">
             <div className="card-ui-mockup three-mockup">
-              <ThreeCanvas init={initDataStreams} />
+              <ThreeCanvas type='dataStreams' />
               <span className="mockup-tag">Data Streams</span>
             </div>
             <div className="bento-card-body">
@@ -153,7 +148,7 @@ export default function Services() {
           {/* Card 5 — Custom UI Design, featuring Layer Stack (C) */}
           <article className="bento-card reveal-up">
             <div className="card-ui-mockup three-mockup">
-              <ThreeCanvas init={initLayerStack} />
+              <ThreeCanvas type='layerStack' />
               <span className="mockup-tag">Layer Stack</span>
             </div>
             <div className="bento-card-body">
@@ -167,7 +162,7 @@ export default function Services() {
           {/* Card 6 — Launch & Scale, featuring Rocket Arc (A) */}
           <article className="bento-card reveal-up">
             <div className="card-ui-mockup three-mockup">
-              <ThreeCanvas init={initRocketArc} />
+              <ThreeCanvas type='rocketArc' />
               <span className="mockup-tag">Rocket Arc</span>
             </div>
             <div className="bento-card-body">
@@ -183,3 +178,4 @@ export default function Services() {
     </section>
   );
 }
+

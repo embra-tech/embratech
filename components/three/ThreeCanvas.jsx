@@ -8,7 +8,11 @@ import gsap from 'gsap';
 // lighting/parallax/disposal rig used across the rest of the site's
 // WebGL scenes (see components/three/HeroScene.js).
 // init(root, camera) -> { update(t, dt), dispose?() }
-export default function ThreeCanvas({ init }) {
+import { initRankClimb, initConstellation, initDataStreams, initLayerStack, initRocketArc } from './serviceAnimations';
+
+const INITS = { rankClimb: initRankClimb, constellation: initConstellation, dataStreams: initDataStreams, layerStack: initLayerStack, rocketArc: initRocketArc };
+
+export default function ThreeCanvas({ type }) {
   const mountRef = useRef(null);
 
   useEffect(() => {
@@ -57,7 +61,8 @@ export default function ThreeCanvas({ init }) {
     mount.addEventListener('pointermove', onMove);
     mount.addEventListener('pointerleave', onLeave);
 
-    const api = init(root, camera);
+    const init = INITS[type];
+    const api = init ? init(root, camera) : null;
 
     const tick = (time, deltaTime) => {
       const dt = Math.min((deltaTime || 16.7) / 1000, 0.05);
@@ -87,7 +92,8 @@ export default function ThreeCanvas({ init }) {
       renderer.dispose();
       if (renderer.domElement.parentNode === mount) mount.removeChild(renderer.domElement);
     };
-  }, [init]);
+  }, [type]);
 
   return <div ref={mountRef} className="three-mount" />;
 }
+
