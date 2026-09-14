@@ -53,9 +53,13 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p className="footer-copy">© 2026 Embra Technologies Private Limited. All rights reserved.</p>
+          <p className="footer-copy">© 2026 Embra Technologies. All rights reserved.</p>
           <p className="footer-built">Built by <a href="https://embratechnologies.org" target="_blank" rel="noopener noreferrer">Embra Technologies</a></p>
-          <div className="footer-legal"><Link href="/privacy">Privacy Policy</Link><Link href="/terms">Terms of Service</Link></div>
+          <div className="footer-legal">
+            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms of Service</Link>
+            <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer">Sitemap</a>
+          </div>
         </div>
       </div>
     </footer>
