@@ -1,0 +1,21 @@
+{
+  "name": "embra-next",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Embra Technologies — Next.js + GSAP + Lenis + Three.js rebuild",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.14",
+    "next": "14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.166.1"
+  }
+}
