@@ -22,6 +22,7 @@ export default function Footer() {
               <li><Link href="/services">Services</Link></li>
               <li><Link href="/pricing">Pricing</Link></li>
               <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
@@ -44,6 +45,10 @@ export default function Footer() {
               <div className="footer-contact-item">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>
                 <a href="mailto:info@embratechnologies.org">info@embratechnologies.org</a>
+              </div>
+              <div className="footer-contact-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Mon-Fri, 9am - 6pm EST</span>
               </div>
               <div className="footer-contact-item">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.8 19.8 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1.22h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.62-1.62a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>

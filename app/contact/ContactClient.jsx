@@ -9,7 +9,7 @@ import Link from 'next/link';
 const CHANNELS = [
   { label: 'Email', value: 'sales@embratechnologies.org', href: 'mailto:sales@embratechnologies.org', icon: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></> },
   { label: 'Phone', value: '+1 (212) 207-1152', href: 'tel:+12122071152', icon: <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.8 19.8 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1.22h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.62-1.62a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /> },
-  { label: 'Website', value: 'embratechnologies.org', href: 'https://www.embratechnologies.org', icon: <><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></> },
+  { label: 'Hours', value: 'Mon - Fri, 9:00 AM - 6:00 PM EST', href: null, icon: <><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></> },
 ];
 
 export default function ContactClient() {
@@ -174,15 +174,25 @@ export default function ContactClient() {
 
           <div className="contact-side">
             <div className="contact-channels reveal-up">
-              {CHANNELS.map((c) => (
-                <a href={c.href} className="contact-channel" key={c.label} target={c.href.startsWith('http') ? '_blank' : undefined} rel={c.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
-                  <span className="contact-channel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">{c.icon}</svg></span>
-                  <div>
-                    <span className="contact-channel-label">{c.label}</span>
-                    <span className="contact-channel-value">{c.value}</span>
+              {CHANNELS.map((c) => 
+                c.href ? (
+                  <a href={c.href} className="contact-channel" key={c.label} target={c.href.startsWith('http') ? '_blank' : undefined} rel={c.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                    <span className="contact-channel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">{c.icon}</svg></span>
+                    <div>
+                      <div className="channel-label">{c.label}</div>
+                      <div className="channel-value">{c.value}</div>
+                    </div>
+                  </a>
+                ) : (
+                  <div className="contact-channel" key={c.label}>
+                    <span className="contact-channel-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">{c.icon}</svg></span>
+                    <div>
+                      <div className="channel-label">{c.label}</div>
+                      <div className="channel-value">{c.value}</div>
+                    </div>
                   </div>
-                </a>
-              ))}
+                )
+              )}
             </div>
 
             <div className="contact-promise reveal-up">

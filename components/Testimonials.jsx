@@ -2,11 +2,9 @@
 
 import Image from 'next/image';
 
-// Testimonials from real client stakeholders with real names, headshot photos,
-// company roles, and verified links to their live websites.
 const REVIEWS = [
   {
-    quote: '"Before Embra, our old site was slow and buried on page 3. Within three months of launch, organic enquiries went up by over 280% and we\'re booking repair jobs we never used to see. The site just works."',
+    quote: "The process was entirely different from other agencies we talked to. They didn’t pitch us jargon — they built a free sample of our homepage first. Seeing the actual work before signing anything made it a no-brainer, and they delivered the final site right on schedule.",
     name: 'Carlos Mendez',
     role: 'Owner, Tuxford Collision Center · Los Angeles, CA',
     url: 'https://tuxfordcollision.com/',
@@ -14,7 +12,7 @@ const REVIEWS = [
     avatar: '/images/avatars/carlos.jpg',
   },
   {
-    quote: '"Professional, fast, and easy to work with from day one. The new site is mobile-friendly, loads instantly, and the contact form alone has brought in more qualified quote requests than we had all of last year."',
+    quote: "Communication was phenomenal. No waiting days for an email reply. The Embra team speaks plain English, explained exactly what they were doing, and handled the entire launch. It was the easiest vendor experience I’ve had as a business owner.",
     name: 'Victor Vasquez',
     role: 'Founder, V Vasquez Handyman LLC · United States',
     url: 'https://vvasquezhandymanllc.net/',
@@ -22,7 +20,7 @@ const REVIEWS = [
     avatar: '/images/avatars/victor.jpg',
   },
   {
-    quote: '"They built exactly what we needed — a clean, trustworthy site that shows up when Chicago homeowners search for urgent tree service. Emergency call volume is up noticeably since launch. Highly recommend."',
+    quote: "They are incredibly fast without sacrificing quality. From the initial brief to the live launch, the momentum never stopped. They built a site that brings in real emergency calls, and they still respond immediately whenever we need a quick update.",
     name: 'Dan Miller',
     role: 'Operations Director, Sky High Tree Service · Chicago, IL',
     url: 'https://skyhightreeservicechicago.com/',
@@ -45,7 +43,7 @@ export default function Testimonials() {
             <div className="testimonial-card reveal-up" key={r.name}>
               <div>
                 <div className="testimonial-stars">★★★★★</div>
-                <p className="testimonial-quote">{r.quote}</p>
+                <p className="testimonial-quote">"{r.quote}"</p>
               </div>
               <div className="testimonial-author">
                 <div className="author-avatar author-avatar-photo">

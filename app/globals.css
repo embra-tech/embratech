@@ -1790,3 +1790,55 @@ section { padding: 90px 0; }
   box-shadow: 0 0 24px -4px rgba(99,102,241,0.35);
 }
 .hero-badge-wrap a.section-badge:hover .badge-arrow { transform: translateX(3px); }
+
+/* Prose / Blog Content */
+.prose h2 { font-size: 24px; margin-top: 40px; margin-bottom: 15px; color: #fff; letter-spacing: -0.01em; }
+.prose h3 { font-size: 20px; margin-top: 30px; margin-bottom: 12px; color: #fff; }
+.prose p { margin-bottom: 20px; }
+.prose ul, .prose ol { margin-bottom: 20px; padding-left: 20px; }
+.prose li { margin-bottom: 10px; }
+.prose strong { color: #fff; font-weight: 600; }
+.blog-card:hover { border-color: var(--line-highlight) !important; background: rgba(255,255,255,0.04) !important; }
+
+/* Case Study Pages */
+.case-hero { padding-bottom: 60px; border-bottom: 1px solid var(--line-dark); }
+.cs-breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 30px; font-family: var(--ff-mono); text-transform: uppercase; letter-spacing: .05em; }
+.cs-breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color .2s ease; }
+.cs-breadcrumb a:hover { color: var(--primary); }
+.cs-meta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+.cs-industry-pill, .cs-location-pill, .cs-timeline-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: rgba(255,255,255,0.03); border: 1px solid var(--line-dark); border-radius: 999px; font-size: 12.5px; color: rgba(255,255,255,0.8); }
+.cs-title { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.1; margin-bottom: 12px; }
+.cs-sub { font-size: 18px; color: rgba(255,255,255,0.6); margin-bottom: 40px; }
+.cs-result-chips { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
+.cs-chip { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 12px; font-size: 15px; font-weight: 600; color: #fff; text-decoration: none; }
+.cs-chip--verified { transition: all .2s ease; cursor: pointer; }
+.cs-chip--verified:hover { background: rgba(99, 102, 241, 0.15); border-color: var(--primary); }
+.cs-chip-verify { font-size: 12px; font-weight: 500; color: var(--primary); opacity: 0.8; }
+.cs-live-row { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
+.cs-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.cs-section { padding: 100px 0; border-bottom: 1px solid var(--line-dark); }
+.cs-section--alt { background: rgba(255,255,255,0.01); }
+.cs-two-col { display: grid; grid-template-columns: 1fr 2.5fr; gap: 60px; }
+.cs-col-label { font-family: var(--ff-mono); font-size: 13px; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+.cs-col-body p { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.75); margin-bottom: 20px; }
+
+.cs-approach-header { margin-bottom: 40px; }
+.cs-approach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.cs-approach-card { padding: 40px; background: rgba(255,255,255,0.02); border: 1px solid var(--line-dark); border-radius: 20px; }
+.cs-approach-num { font-family: var(--ff-mono); font-size: 14px; color: var(--primary); margin-bottom: 20px; display: block; }
+.cs-approach-card h3 { font-size: 20px; margin-bottom: 15px; }
+.cs-approach-card p { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.6); }
+
+.cs-results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.cs-result-stat { padding: 30px; border-left: 2px solid var(--primary); background: linear-gradient(90deg, rgba(99,102,241,0.05), transparent); }
+.cs-result-value { font-size: 24px; font-weight: 700; margin-bottom: 10px; }
+.cs-verify-link { font-size: 13px; color: var(--primary); text-decoration: none; transition: opacity .2s; }
+.cs-verify-link:hover { opacity: 0.8; }
+
+.cs-nav-section { padding: 60px 0; }
+.cs-nav-row { display: flex; justify-content: space-between; align-items: center; }
+
+@media (max-width: 900px) {
+  .cs-two-col { grid-template-columns: 1fr; gap: 30px; }
+}

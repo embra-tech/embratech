@@ -14,6 +14,7 @@ const SITES = [
   {
     name: 'Tuxford Collision Center',
     domain: 'tuxfordcollision.com',
+    slug: 'tuxford-collision',
     url: 'https://tuxfordcollision.com/',
     image: '/images/tuxford.png',
     industry: 'Auto Body & Collision Repair',
@@ -29,6 +30,7 @@ const SITES = [
   {
     name: 'V Vasquez Handyman LLC',
     domain: 'vvasquezhandymanllc.net',
+    slug: 'vvasquez-handyman',
     url: 'https://vvasquezhandymanllc.net/',
     image: '/images/vvasquez.png',
     industry: 'Handyman Services',
@@ -44,6 +46,7 @@ const SITES = [
   {
     name: 'Alaska Fast Fix Handyman',
     domain: 'alaskafastfixhandyman.com',
+    slug: 'alaska-fast-fix',
     url: 'https://alaskafastfixhandyman.com/',
     image: '/images/alaskahandyman.png',
     industry: 'Handyman Services',
@@ -59,6 +62,7 @@ const SITES = [
   {
     name: 'BestBreaks',
     domain: 'bestbreaks.com.au',
+    slug: 'bestbreaks',
     url: 'https://bestbreaks.com.au/',
     image: '/images/bestbreaks.png',
     industry: 'Travel & Accommodation',
@@ -74,6 +78,7 @@ const SITES = [
   {
     name: 'Sky High Tree Service',
     domain: 'skyhightreeservicechicago.com',
+    slug: 'sky-high-tree',
     url: 'https://skyhightreeservicechicago.com/',
     image: '/images/skyhightreeservice.png',
     industry: 'Tree Service',

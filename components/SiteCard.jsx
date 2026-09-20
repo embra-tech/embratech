@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 function SitePreview({ site }) {
   return (
@@ -75,13 +76,24 @@ export default function SiteCard({ site, index }) {
             </svg>
             {site.location}
           </span>
-          <a href={site.url} target="_blank" rel="noopener noreferrer" className="work-visit">
-            Visit Site
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-              <line x1="7" y1="17" x2="17" y2="7" />
-              <polyline points="7 7 17 7 17 17" />
-            </svg>
-          </a>
+          <div style={{ display: 'flex', gap: '15px' }}>
+            {site.slug && (
+              <Link href={`/portfolio/${site.slug}`} className="work-visit" style={{ color: '#fff' }}>
+                Read Case Study
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </Link>
+            )}
+            <a href={site.url} target="_blank" rel="noopener noreferrer" className="work-visit">
+              Visit Site
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </article>

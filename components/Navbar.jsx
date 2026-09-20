@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/about', label: 'About' },
+  { href: '/blog', label: 'Blog' },
   { href: '/#testimonials', label: 'Reviews' },
   { href: '/contact', label: 'Contact' },
 ];
