@@ -5,7 +5,7 @@ import { gsap } from '../lib/gsap';
 
 import { useTheme } from './ThemeProvider';
 
-const HEADLINE_WORDS = ['Websites', 'that', 'make', 'your', 'business', 'look'];
+const HEADLINE_WORDS = ['Your', 'website.', 'Built', 'before', 'you'];
 
 export default function Hero() {
   const sectionRef = useRef(null);
@@ -116,7 +116,7 @@ export default function Hero() {
         <div className="hero-badge-wrap" ref={badgeRef}>
           <a href="#services" className="section-badge">
             <span className="badge-pill">New</span>
-            <span className="badge-text">Websites &amp; SEO Built for Scale</span>
+            <span className="badge-text">See It Before You Pay</span>
             <svg className="badge-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6" /></svg>
           </a>
         </div>
@@ -125,18 +125,18 @@ export default function Hero() {
           {HEADLINE_WORDS.map((w) => (
             <span className="word" key={w}>{w}</span>
           ))}{' '}
-          <span className="word"><span className="highlight-text">exceptional.</span></span>
+          <span className="word"><span className="highlight-text">buy.</span></span>
         </h1>
 
         <p className="hero-sub" ref={subRef}>
-          We design and build fast, modern websites, improve search rankings, and manage your digital identity — converting more qualified visitors into paying clients.
+          We design a custom homepage for your business for free — no credit card, no commitment. Like what you see? We build the complete site for $500, and it loads in under a second.
         </p>
 
         <div className="hero-actions" ref={actionsRef}>
           <a href="/contact" className="btn-flip btn-primary btn-large">
             <span className="btn-flip-inner">
-              <span className="btn-flip-state">Start Your Project <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span>
-              <span className="btn-flip-state" aria-hidden="true">Start Your Project <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
+              <span className="btn-flip-state">Get My Free Sample <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span>
+              <span className="btn-flip-state" aria-hidden="true">Get My Free Sample <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
             </span>
           </a>
           <a href="/portfolio" className="btn-flip btn-ghost btn-large">

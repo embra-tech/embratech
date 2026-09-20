@@ -76,7 +76,7 @@ export default function Services() {
         <div className="section-head reveal-up">
           <div className="section-badge"><span className="badge-pill">Services</span><span className="badge-text">What We Deliver</span></div>
           <h2 id="services-heading">Everything Your Business Needs to Grow Online.</h2>
-          <p>Custom-engineered digital solutions built to elevate your brand and convert visitors into long-term clients.</p>
+          <p>Four things local businesses actually need to get more calls, bookings, and customers online.</p>
         </div>
 
         <div className="bento-grid">
@@ -154,7 +154,7 @@ export default function Services() {
             <div className="bento-card-body">
               <h3>Custom UI Design</h3>
               <p>Interfaces built for clarity and conversion. Consistent design systems, purposeful micro-interactions, and layouts your customers navigate without thinking — all tested against real usability standards.</p>
-              <div className="bento-card-tags"><span className="bento-tag">Design Systems</span><span className="bento-tag">Motion Language</span><span className="bento-tag">Prototyping</span><span className="bento-tag">Accessibility-First</span></div>
+              <div className="bento-card-tags"><span className="bento-tag">Design Systems</span><span className="bento-tag">Conversion-Focused</span><span className="bento-tag">Layout Strategy</span><span className="bento-tag">Accessibility-First</span></div>
               <a href="#contact" className="btn-flip btn-ghost btn-small"><span className="btn-flip-inner"><span className="btn-flip-state">Design My Interface <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span><span className="btn-flip-state" aria-hidden="true">Design My Interface <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span></span></a>
             </div>
           </article>
@@ -167,8 +167,8 @@ export default function Services() {
             </div>
             <div className="bento-card-body">
               <h3>Launch &amp; Scale</h3>
-              <p>Zero-drama launches, then growth infrastructure. CI/CD, observability, CRO experiments and scaling paths that hold under real traffic.</p>
-              <div className="bento-card-tags"><span className="bento-tag">CI/CD Pipelines</span><span className="bento-tag">Observability</span><span className="bento-tag">CRO Testing</span><span className="bento-tag">Traffic-Ready</span></div>
+              <p>We handle the launch and everything after it — site monitoring, speed checks, lead tracking, and making sure your site keeps working as your business grows.</p>
+              <div className="bento-card-tags"><span className="bento-tag">Fast Deployment</span><span className="bento-tag">Uptime Monitoring</span><span className="bento-tag">Lead Tracking</span><span className="bento-tag">Traffic-Ready</span></div>
               <a href="#contact" className="btn-flip btn-ghost btn-small"><span className="btn-flip-inner"><span className="btn-flip-state">Scale My Business <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span><span className="btn-flip-state" aria-hidden="true">Scale My Business <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span></span></a>
             </div>
           </article>

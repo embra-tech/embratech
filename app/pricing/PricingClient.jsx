@@ -116,6 +116,59 @@ export default function PricingClient() {
         </div>
       </section>
 
+
+      {/* Flexible Payment Options � matching Aston Cook's transparency */}
+      <section className="pricing-payment-section">
+        <div className="wrap">
+          <div className="section-head reveal-up">
+            <div className="section-badge">
+              <span className="badge-pill">Flexibility</span>
+              <span className="badge-text">Pay Your Way</span>
+            </div>
+            <h2>Flexible Payment Options. No Interest. No Credit Check.</h2>
+            <p>Choose the payment structure that works best for your business. Every option gets the same quality, the same timeline, and the same result.</p>
+          </div>
+          <div className="payment-table-wrap reveal-up">
+            <table className="payment-table">
+              <thead>
+                <tr>
+                  <th>Payment Option</th>
+                  <th>One-Time Build ($500)</th>
+                  <th>Build + Care ($500 + $150/mo)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Half now, half at launch</strong><br/><span className="payment-note">Default � most popular</span></td>
+                  <td>$250 to start<br/>$250 on launch day</td>
+                  <td>$250 to start<br/>$250 on launch day + $150/mo</td>
+                </tr>
+                <tr className="payment-highlight">
+                  <td><strong>Pay in full upfront</strong><br/><span className="payment-note">Save $50</span></td>
+                  <td><span className="payment-discount">$450</span> <span className="payment-save">Save $50</span></td>
+                  <td><span className="payment-discount">$450</span> + $150/mo <span className="payment-save">Save $50</span></td>
+                </tr>
+                <tr>
+                  <td><strong>4-month installments</strong><br/><span className="payment-note">No interest, no third-party lender</span></td>
+                  <td>$125/mo � 4 months</td>
+                  <td>$125/mo � 4 months + $150/mo care</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="payment-reassurance">Your site launches on the normal timeline regardless of which payment option you choose. No interest, no credit check, no third-party lender � just a direct agreement between us.</p>
+          </div>
+          <div className="payment-help reveal-up">
+            <p><strong>Not sure which plan fits?</strong> Tell us what your business does and how customers find you today. We&apos;ll recommend the right build � even when it&apos;s the cheaper one.</p>
+            <a href="/contact" className="btn-flip btn-ghost btn-small">
+              <span className="btn-flip-inner">
+                <span className="btn-flip-state">Ask Us <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span>
+                <span className="btn-flip-state" aria-hidden="true">Ask Us <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Why $500 Is Possible — justifies the "100% custom" claim */}
       <section className="pricing-how-section">
         <div className="wrap">
@@ -137,7 +190,7 @@ export default function PricingClient() {
               {
                 n: '02',
                 title: 'Purpose-built component system',
-                body: 'We use a proprietary design system we built and maintain ourselves — not Squarespace, not WordPress, not Webflow. That means zero platform fees and zero template lock-in, and the savings go directly to you.',
+                body: 'We use a proprietary design system we built and maintain ourselves — not Squarespace, not WordPress, not Wix, not Webflow. That means zero platform fees and zero template lock-in, and the savings go directly to you.',
               },
               {
                 n: '03',

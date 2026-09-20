@@ -2,8 +2,8 @@ const VARIANTS = {
   home: {
     badge: 'Ready?',
     badgeText: 'Start Today',
-    heading: 'Your next website should do more than look good. Build something that converts.',
-    sub: 'Partner with Embra Technologies to elevate your digital footprint and accelerate client acquisition.',
+    heading: 'Your website should work while you\'re working. Let\'s build one that actually brings in customers.',
+    sub: 'Tell us about your business and we reply within one business day with a free custom homepage sample — no commitment, no credit card, no obligation.',
     cta: 'Start Your Project',
     href: 'mailto:info@embratechnologies.org',
   },

@@ -72,7 +72,7 @@ export default function ServicesClient() {
             pill="Services"
             badge="What We Deliver"
             title={<>Everything you need to <span className="highlight-text">grow online.</span></>}
-            sub="Custom-engineered digital solutions built to elevate your brand and convert visitors into long-term clients."
+            sub="Exactly what it says: web design, SEO, and digital management built around your business — not a template, not a subscription trap, not a monthly fee you can’t cancel."
           />
         </div>
       </section>

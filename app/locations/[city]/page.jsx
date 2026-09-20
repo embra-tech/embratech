@@ -21,6 +21,7 @@ export function generateMetadata({ params }) {
   if (!loc) return {};
   return {
     title: `Web Design & SEO Agency in ${loc.name}`,
+    alternates: { canonical: `/locations/${params.city}` },
     description: `Embra Technologies builds high-converting, lightning-fast websites for growing businesses in ${loc.name}. Get a free custom homepage sample today.`,
   };
 }

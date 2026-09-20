@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://embratechnologies.org/sitemap.xml
+Sitemap: https://www.embratechnologies.org/sitemap.xml

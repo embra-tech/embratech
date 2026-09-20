@@ -1,4 +1,5 @@
 export const metadata = {
+  alternates: { canonical: '/terms' },
   title: 'Terms of Service',
   description:
     'Read the Terms of Service for Embra Technologies. Covers service scope, payment terms, intellectual property, and our commitment to client satisfaction.',

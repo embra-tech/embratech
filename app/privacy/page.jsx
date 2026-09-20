@@ -1,4 +1,5 @@
 export const metadata = {
+  alternates: { canonical: '/privacy' },
   title: 'Privacy Policy',
   description:
     'Learn how Embra Technologies collects, uses, and protects your personal data. We are committed to transparency and your privacy.',

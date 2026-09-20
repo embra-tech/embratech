@@ -5,6 +5,7 @@ export function middleware(request, event) {
   const ip = request.headers.get('x-forwarded-for') || 'Unknown';
   const country = request.headers.get('x-vercel-ip-country') || 'Unknown';
   const city = request.headers.get('x-vercel-ip-city') || 'Unknown';
+  const userAgent = request.headers.get('user-agent') || '';
   const pathname = request.nextUrl.pathname;
 
   const logData = [{
@@ -13,6 +14,7 @@ export function middleware(request, event) {
     country: country,
     city: city,
     path: pathname,
+    user_agent: userAgent,
     timestamp: new Date().toISOString()
   }];
 

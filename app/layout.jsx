@@ -32,7 +32,15 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata = {
   metadataBase: new URL('https://www.embratechnologies.org'),
-  alternates: { canonical: '/' },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+    },
+  },
   title: {
     default: 'Embra Technologies — Websites, SEO & Digital Identity for Growing Businesses',
     template: '%s — Embra Technologies',
@@ -43,6 +51,7 @@ export const metadata = {
     siteName: 'Embra Technologies',
     type: 'website',
     locale: 'en_US',
+    url: 'https://www.embratechnologies.org',
   },
   twitter: {
     card: 'summary_large_image',

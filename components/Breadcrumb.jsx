@@ -15,13 +15,13 @@ export default function Breadcrumb({ label, href }) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://embratechnologies.org/',
+        item: 'https://www.embratechnologies.org/',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: label,
-        item: `https://embratechnologies.org${href}`,
+        item: `https://www.embratechnologies.org${href}`,
       },
     ],
   };

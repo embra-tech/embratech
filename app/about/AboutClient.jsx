@@ -70,7 +70,7 @@ export default function AboutClient() {
             pill="About"
             badge="Who We Are"
             title={<>Built for businesses that <span className="highlight-text">deserve to be found.</span></>}
-            sub="Embra Technologies designs and builds fast, modern websites, improves search visibility, and manages digital identity for growing businesses across the United States and beyond."
+            sub="Most service businesses lose customers every day to competitors with worse skills but a better online presence. We fix that — with hand-crafted websites, search rankings that bring in real leads, and a team you can actually reach."
           />
         </div>
       </section>
