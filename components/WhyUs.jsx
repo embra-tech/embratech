@@ -11,7 +11,7 @@ const ITEMS = [
   },
   {
     title: 'Blazing Performance',
-    text: '95+ PageSpeed scores, sub-second TTFB, and flawless responsiveness across all devices.',
+    text: 'Sub-second TTFB, and flawless responsiveness across all devices. <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.embratechnologies.org%2F" target="_blank" rel="noopener noreferrer" style="color:var(--primary);text-decoration:underline;">Verify our own live 100/100 score</a>.',
     icon: <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />,
   },
   {

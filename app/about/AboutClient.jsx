@@ -88,6 +88,22 @@ export default function AboutClient() {
         </div>
       </section>
 
+      
+      <section className="about-team">
+        <div className="wrap cs-two-col">
+          <div className="cs-col-label reveal-up">The Team</div>
+          <div className="cs-col-body reveal-up">
+            <h3>A lean team built for impact, not overhead.</h3>
+            <p>
+              When you hire a massive agency, you pay for their downtown office, their account managers, and their ping-pong tables. The actual work is often handed off to junior developers or outsourced entirely.
+            </p>
+            <p>
+              We built Embra Technologies to be different. We are a small, tight-knit team of senior designers and engineers. When you talk to us, you're talking directly to the people building your site. No middlemen. No lost translation. Just fast execution and accountability.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="about-stats">
         <div className="wrap">
           <div className="stats-grid" ref={statsRef}>
