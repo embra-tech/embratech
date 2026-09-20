@@ -61,7 +61,7 @@ export default function PrivacyPage() {
               <h3>Information you provide directly</h3>
               <ul>
                 <li><strong>Contact form submissions</strong> — your name, email address, business name, website URL, and the message you write to us.</li>
-                <li><strong>Email correspondence</strong> — any information you include when emailing us at info@embratechnologies.org or sales@embratechnologies.org.</li>
+                <li><strong>Email correspondence</strong> — any information you include when emailing us at sales@embratechnologies.org.</li>
               </ul>
               <h3>Information collected automatically</h3>
               <ul>
@@ -146,7 +146,7 @@ export default function PrivacyPage() {
               </ul>
               <p>
                 To exercise any of these rights, contact us at{' '}
-                <a href="mailto:info@embratechnologies.org">info@embratechnologies.org</a>. We will respond within 30 days.
+                <a href="mailto:sales@embratechnologies.org">sales@embratechnologies.org</a>. We will respond within 30 days.
               </p>
             </section>
 
@@ -163,7 +163,7 @@ export default function PrivacyPage() {
               <p>If you have questions about this Privacy Policy or our data practices, please contact us:</p>
               <address>
                 <strong>Embra Technologies</strong><br />
-                Email: <a href="mailto:info@embratechnologies.org">info@embratechnologies.org</a><br />
+                Email: <a href="mailto:sales@embratechnologies.org">sales@embratechnologies.org</a><br />
                 Phone: <a href="tel:+12122071152">+1 (212) 207-1152</a><br />
                 Website: <a href="https://embratechnologies.org">embratechnologies.org</a>
               </address>

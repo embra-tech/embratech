@@ -5,7 +5,7 @@ const VARIANTS = {
     heading: 'Your website should work while you\'re working. Let\'s build one that actually brings in customers.',
     sub: 'Tell us about your business and we reply within one business day with a free custom homepage sample — no commitment, no credit card, no obligation.',
     cta: 'Start Your Project',
-    href: 'mailto:info@embratechnologies.org',
+    href: 'mailto:sales@embratechnologies.org',
   },
   pricing: {
     badge: 'Free Sample',
@@ -79,7 +79,7 @@ export default function Cta({ variant = 'home' }) {
         </a>
         {isEmail && (
           <div className="cta-contact-pills">
-            <a href="mailto:info@embratechnologies.org"><span className="prompt-symbol">$</span> info@embratechnologies.org</a>
+            <a href="mailto:sales@embratechnologies.org"><span className="prompt-symbol">$</span> sales@embratechnologies.org</a>
             <a href="tel:+12122071152"><span className="prompt-symbol">$</span> +1 (212) 207-1152</a>
             <a href="https://embratechnologies.org" target="_blank" rel="noopener noreferrer"><span className="prompt-symbol">$</span> embratechnologies.org</a>
           </div>

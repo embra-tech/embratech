@@ -40,11 +40,11 @@ export default function Footer() {
             <div className="footer-contact-list">
               <div className="footer-contact-item" style={{ alignItems: 'flex-start' }}>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" style={{ marginTop: 2 }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <span style={{ lineHeight: 1.4 }}>1309 Coffeen Avenue STE 1200<br/>Sheridan, WY 82801</span>
+                <span style={{ lineHeight: 1.4 }}>1969 51st St, Brooklyn<br/>NY 11204, USA</span>
               </div>
               <div className="footer-contact-item">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>
-                <a href="mailto:info@embratechnologies.org">info@embratechnologies.org</a>
+                <a href="mailto:sales@embratechnologies.org">sales@embratechnologies.org</a>
               </div>
               <div className="footer-contact-item">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>

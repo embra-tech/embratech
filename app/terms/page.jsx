@@ -141,7 +141,7 @@ export default function TermsPage() {
             <section id="care-plan">
               <h2>8. Monthly Care Plan</h2>
               <p>
-                The Care Plan is a rolling monthly subscription. You may cancel at any time by providing written notice to info@embratechnologies.org. Cancellation takes effect at the end of the current billing period — no pro-rated refunds are issued. Upon cancellation, we will transfer all website files, credentials, and hosting access to you within 7 business days.
+                The Care Plan is a rolling monthly subscription. You may cancel at any time by providing written notice to sales@embratechnologies.org. Cancellation takes effect at the end of the current billing period — no pro-rated refunds are issued. Upon cancellation, we will transfer all website files, credentials, and hosting access to you within 7 business days.
               </p>
             </section>
 
@@ -191,7 +191,7 @@ export default function TermsPage() {
               <p>Questions about these Terms? Reach us at:</p>
               <address>
                 <strong>Embra Technologies</strong><br />
-                Email: <a href="mailto:info@embratechnologies.org">info@embratechnologies.org</a><br />
+                Email: <a href="mailto:sales@embratechnologies.org">sales@embratechnologies.org</a><br />
                 Phone: <a href="tel:+12122071152">+1 (212) 207-1152</a>
               </address>
             </section>

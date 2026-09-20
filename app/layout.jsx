@@ -83,10 +83,10 @@ export default function RootLayout({ children }) {
                   "telephone": "+1-212-207-1152",
                   "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "1309 Coffeen Avenue STE 1200",
-                    "addressLocality": "Sheridan",
-                    "addressRegion": "WY",
-                    "postalCode": "82801",
+                    "streetAddress": "1969 51st St",
+                    "addressLocality": "Brooklyn",
+                    "addressRegion": "NY",
+                    "postalCode": "11204",
                     "addressCountry": "US"
                   },
                   "priceRange": "$"
