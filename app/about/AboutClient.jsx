@@ -9,7 +9,7 @@ import Breadcrumb from '../../components/Breadcrumb';
 
 const STATS = [
   { value: 1000, suffix: '+', label: 'Hours of design & development craftsmanship' },
-  { value: 4.8, suffix: '/5', label: 'Average client satisfaction rating', decimals: 1 },
+  { value: 96, suffix: '/100', label: 'Average PageSpeed score across our live builds', decimals: 0 },
   { value: 99, suffix: '/100', label: 'Typical Google PageSpeed performance score' },
   { value: 24, suffix: 'h', label: 'Free homepage sample turnaround time' },
 ];

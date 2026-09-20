@@ -1842,3 +1842,32 @@ section { padding: 90px 0; }
 @media (max-width: 900px) {
   .cs-two-col { grid-template-columns: 1fr; gap: 30px; }
 }
+
+/* ================================================================
+   PERFORMANCE — content-visibility & paint containment
+   ================================================================ */
+
+/* Below-fold sections: browser skips layout/paint until near viewport */
+#showcase, #services, #process, #why, #testimonials, #contact {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
+}
+
+/* Static hero (bot/save-data path) — all text immediately visible */
+.hero-static .word { opacity: 1 !important; transform: none !important; }
+.hero-static .hero-sub,
+.hero-static .hero-actions,
+.hero-static .hero-badge-wrap { opacity: 1 !important; transform: none !important; }
+
+/* Reduce will-change scope — only apply to actively animating elements */
+.reveal-up.revealed { will-change: auto; }
+
+/* Avoid layout shift from lazy-loaded image containers */
+.work-img-wrap { aspect-ratio: 16/10; background: rgba(255,255,255,0.03); }
+
+/* ================================================================
+   FAVICON APPLE TOUCH — ensure icon is black on light backgrounds
+   ================================================================ */
+@media (prefers-color-scheme: light) {
+  :root { color-scheme: dark; }
+}

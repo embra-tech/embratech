@@ -11,7 +11,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const figtree = Figtree({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  weight: ['400', '600', '800'],
   variable: '--font-figtree',
   display: 'swap',
 });
@@ -32,6 +32,13 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata = {
   metadataBase: new URL('https://www.embratechnologies.org'),
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   robots: {
     index: true,
     follow: true,

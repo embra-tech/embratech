@@ -49,7 +49,7 @@ const TIERS = [
       'Inquiry management system',
       'Contract signing with e-signature',
       '1 month of free fixes after launch',
-      'Dedicated project manager',
+      'Direct access to the senior builder doing your work',
     ],
     prices: { standard: 1500, full: 1350, fullSave: 150, monthly: 375 },
     featured: false,
@@ -283,7 +283,7 @@ export default function PricingClient() {
               {
                 n: '04',
                 title: 'Lean, async team',
-                body: 'No downtown office. No account managers. No bloated retainers passed to you. You talk directly to the people doing the work — faster decisions, tighter results.',
+                body: 'No downtown office. No account managers. No bloated retainers passed to you. You talk directly to the people doing the work — faster decisions, tighter results. Your files, domain, and hosting are always yours with or without a Care Plan.',
               },
             ].map((item) => (
               <div className="pricing-how-card reveal-up" key={item.n}>

@@ -6,12 +6,12 @@ const ITEMS = [
   },
   {
     title: 'Custom Engineered',
-    text: 'Not Squarespace. Not Wix. Not a WordPress theme someone else already has. Every page is hand-crafted for your business specifically.',
+    text: "Not Squarespace. Not Wix. Not a WordPress theme someone else already has. Every page is written from scratch in React — built specifically for your business and no one else.",
     icon: <><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></>,
   },
   {
     title: 'Blazing Performance',
-    text: 'Sub-second TTFB, and flawless responsiveness across all devices. <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.embratechnologies.org%2F" target="_blank" rel="noopener noreferrer" style="color:var(--primary);text-decoration:underline;">Verify our own live 100/100 score</a>.',
+    text: 'Sub-second TTFB, and flawless responsiveness across all devices. <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.embratechnologies.org%2F" target="_blank" rel="noopener noreferrer" style="color:var(--primary);text-decoration:underline;">Verify our own live score</a>.',
     icon: <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />,
   },
   {

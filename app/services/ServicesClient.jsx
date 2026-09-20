@@ -11,9 +11,9 @@ import Breadcrumb from '../../components/Breadcrumb';
 const SERVICES = [
   {
     step: '01', title: 'Custom Website Design & Development',
-    desc: 'Bespoke, responsive websites built around your business goals and customer journey — engineered to load in under a second.',
+    desc: 'Written from scratch in React — no WordPress themes, no drag-and-drop builders. Engineered to load in under a second and built around your customers, not a template.',
     points: [
-      'Hand-crafted UI/UX — zero bloated templates',
+      'Written from scratch — no WordPress themes or Wix templates',
       'Mobile-first, flawless on every device',
       'Sub-second loads meeting Core Web Vitals',
       'CMS-ready so your team can edit content',
