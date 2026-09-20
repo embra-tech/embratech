@@ -189,18 +189,43 @@ p { margin: 0; color: var(--muted-inv); font-weight: 400; }
 /* ================================================================
    SECTION BADGES & BUTTONS
    ================================================================ */
+/* Section badge � stacked glassmorphism label, NOT a toggle */
 .section-badge {
-  display: inline-flex; align-items: center; gap: 10px;
-  margin-bottom: 20px; width: fit-content;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 9px 14px;
+  margin-bottom: 24px;
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid var(--primary, #6366f1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 18px -4px rgba(99, 102, 241, 0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+  pointer-events: none; /* never looks or acts like a button */
 }
 .badge-pill {
-  background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff;
-  font-family: var(--ff-mono); font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
-  padding: 3px 9px; border-radius: 999px;
+  /* Category label � plain text, no filled pill */
+  background: transparent;
+  color: var(--primary, #6366f1);
+  font-family: var(--ff-mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0;
+  border-radius: 0;
 }
-.badge-text { font-size: 13px; font-weight: 500; color: #FFFFFF; display: inline-flex; align-items: center; gap: 6px; }
+.badge-text {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  display: block;
+  letter-spacing: 0.01em;
+}
 .badge-arrow { color: var(--primary); transition: transform .25s ease; }
-.section-badge:hover .badge-arrow { transform: translateX(3px); }
 
 .btn-flip {
   position: relative; display: inline-flex; align-items: center; justify-content: center;
@@ -1737,13 +1762,31 @@ section { padding: 90px 0; }
 }
 
 /* Hero badge is an anchor/link � keep the pill container look only there */
+/* Hero badge is a real anchor link � restore interactivity & inline layout */
 .hero-badge-wrap a.section-badge {
-  padding: 5px 14px 5px 7px;
-  background: rgba(20, 24, 34, 0.75); border: 1px solid var(--line-dark); border-radius: 999px;
-  backdrop-filter: blur(12px); cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  pointer-events: auto;
+  cursor: pointer;
   transition: border-color .3s ease, box-shadow .3s ease;
 }
+.hero-badge-wrap a.section-badge .badge-pill {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  font-size: 10px;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+.hero-badge-wrap a.section-badge .badge-text {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.85);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
 .hero-badge-wrap a.section-badge:hover {
-  border-color: var(--line-highlight); box-shadow: 0 8px 24px -6px var(--badge-glow);
+  border-color: rgba(99,102,241,0.7);
+  box-shadow: 0 0 24px -4px rgba(99,102,241,0.35);
 }
 .hero-badge-wrap a.section-badge:hover .badge-arrow { transform: translateX(3px); }
