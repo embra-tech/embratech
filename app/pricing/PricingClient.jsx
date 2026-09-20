@@ -1,18 +1,122 @@
 'use client';
 
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import { useReveal } from '../../lib/useReveal';
 import PageHeader from '../../components/PageHeader';
 import Faq from '../../components/Faq';
 import Cta from '../../components/Cta';
 import Breadcrumb from '../../components/Breadcrumb';
 
+/* ─── Pricing tiers ─────────────────────────────────────── */
+const TIERS = [
+  {
+    name: 'Starter',
+    scope: '3-page website',
+    desc: 'Everything a local business needs to get found, build trust, and start receiving leads.',
+    features: [
+      'Custom homepage + 2 inner pages',
+      '100% mobile responsive',
+      'Contact & quote request forms',
+      'On-page SEO foundation',
+      'Google Analytics setup',
+      'Full ownership — no lock-in',
+    ],
+    prices: { standard: 700, full: 600, fullSave: 100, monthly: 175 },
+    featured: false,
+  },
+  {
+    name: 'Growth',
+    scope: '5–7 page website',
+    desc: 'More pages, more proof, more ways for customers to find and trust you online.',
+    features: [
+      'Everything in Starter',
+      'Up to 7 fully custom pages',
+      'Blog or services directory',
+      'JSON-LD schema markup',
+      'Google Business Profile setup',
+      'Priority support',
+    ],
+    prices: { standard: 1000, full: 900, fullSave: 100, monthly: 250 },
+    featured: true,
+  },
+  {
+    name: 'Pro',
+    scope: 'Full-featured build',
+    desc: 'A complete business platform. Manage leads, sign contracts, and run operations online.',
+    features: [
+      'Everything in Growth',
+      'Admin dashboard',
+      'Inquiry management system',
+      'Contract signing with e-signature',
+      '1 month of free fixes after launch',
+      'Dedicated project manager',
+    ],
+    prices: { standard: 1500, full: 1350, fullSave: 150, monthly: 375 },
+    featured: false,
+  },
+];
+
+/* ─── Payment mode config ────────────────────────────────── */
+const PAY_MODES = [
+  {
+    key: 'half',
+    label: 'Half Now, Half at Launch',
+    sub: 'Pay half to start. The rest when your site goes live. Site launches on schedule either way.',
+  },
+  {
+    key: 'full',
+    label: 'All at Once',
+    badge: 'Best Value',
+    sub: 'One payment, done. Save up to $150 compared to splitting it.',
+  },
+  {
+    key: 'installment',
+    label: 'Over 4 Months',
+    sub: 'Spread the cost across 4 months at no extra charge. No interest, no credit check, no third-party lender.',
+  },
+];
+
+function getDisplayPrice(tier, mode) {
+  const p = tier.prices;
+  if (mode === 'half') {
+    const h = p.standard / 2;
+    return { big: `$${h}`, label: `now + $${h} at launch`, note: null };
+  }
+  if (mode === 'full') {
+    return { big: `$${p.full}`, label: 'paid in full', note: `Save $${p.fullSave}`, noteGreen: true };
+  }
+  return { big: `$${p.monthly}`, label: '/mo × 4 months', note: `Total $${p.monthly * 4}`, noteGreen: false };
+}
+
+const CheckSVG = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+    <polyline points="20 6 9 17 4 12" />
+  </svg>
+);
+
+const ArrowSVG = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+    <line x1="7" y1="17" x2="17" y2="7" />
+    <polyline points="7 7 17 7 17 17" />
+  </svg>
+);
+
+const ArrowRightSVG = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+    <line x1="5" y1="12" x2="19" y2="12" />
+    <polyline points="12 5 19 12 12 19" />
+  </svg>
+);
+
 export default function PricingClient() {
   const ref = useRef(null);
   useReveal(ref);
+  const [payMode, setPayMode] = useState('half');
 
   return (
     <div ref={ref} className="page-shell">
+
+      {/* ── Page hero ───────────────────────────────────────── */}
       <section className="page-hero">
         <div className="wrap">
           <Breadcrumb label="Pricing" href="/pricing" />
@@ -20,156 +124,135 @@ export default function PricingClient() {
             pill="Pricing"
             badge="Simple & Transparent"
             title={<>Honest pricing. <span className="highlight-text">No surprises.</span></>}
-            sub="One clear build price, one clear monthly care plan. See a free custom homepage sample of your own business before you pay a cent."
+            sub="Pick your build size. Pick how you want to pay. Or see your homepage for free first — no deposit, no contract, no obligation."
           />
         </div>
       </section>
 
+      {/* ── Free sample strip — first thing after hero ───────── */}
+      <section className="pricing-sample-strip-section">
+        <div className="wrap">
+          <div className="pricing-sample-strip reveal-up">
+            <div className="pricing-sample-strip-left">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+              <div>
+                <strong>Not ready to commit?</strong>
+                <span> We design a real, custom homepage for your business in 24&nbsp;hours — completely free. See it. Love it. Then decide.</span>
+              </div>
+            </div>
+            <a href="/contact" className="btn-flip btn-primary btn-small pricing-strip-cta">
+              <span className="btn-flip-inner">
+                <span className="btn-flip-state">Get My Free Sample <ArrowSVG /></span>
+                <span className="btn-flip-state" aria-hidden="true">Get My Free Sample <ArrowRightSVG /></span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Payment toggle + Pricing cards ───────────────────── */}
       <section className="pricing-section">
         <div className="wrap">
+
+          {/* Toggle selector */}
+          <div className="pricing-toggle-wrap reveal-up">
+            <p className="pricing-toggle-label">How would you like to pay?</p>
+            <div className="pricing-toggle" role="group" aria-label="Select payment option">
+              {PAY_MODES.map((m) => (
+                <button
+                  key={m.key}
+                  type="button"
+                  className={'pricing-toggle-btn' + (payMode === m.key ? ' active' : '')}
+                  onClick={() => setPayMode(m.key)}
+                  aria-pressed={payMode === m.key}
+                >
+                  {m.label}
+                  {m.badge && <span className="toggle-badge">{m.badge}</span>}
+                </button>
+              ))}
+            </div>
+            <p className="pricing-toggle-sub">
+              {PAY_MODES.find((m) => m.key === payMode)?.sub}
+            </p>
+          </div>
+
+          {/* Cards */}
           <div className="pricing-grid">
-
-            <div className="pricing-card reveal-up">
-              <div className="pricing-card-head">
-                <span className="pricing-label">One-Time Build</span>
-                <div className="pricing-amount">$700<span className="pricing-per"> one-time</span></div>
-                <p>Custom homepage design + complete development</p>
-              </div>
-              <ul className="pricing-list">
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Custom, hand-crafted homepage design</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Complete development &amp; launch</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>100% mobile responsive</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>On-page SEO foundation</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Contact &amp; quote request forms</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Full ownership — no lock-in</li>
-              </ul>
-              <a href="/contact" className="btn-flip btn-ghost btn-large pricing-btn">
-                <span className="btn-flip-inner">
-                  <span className="btn-flip-state">Get Started <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span>
-                  <span className="btn-flip-state" aria-hidden="true">Get Started <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
-                </span>
-              </a>
-            </div>
-
-            <div className="pricing-card pricing-featured reveal-up">
-              <span className="pricing-flag">Most Popular</span>
-              <div className="pricing-card-head">
-                <span className="pricing-label">Build + Care Plan</span>
-                <div className="pricing-amount">$700 + $150<span className="pricing-per">/mo</span></div>
-                <p>Everything in the build, plus ongoing growth management</p>
-              </div>
-              <ul className="pricing-list">
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Everything in the One-Time Build</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Hosting, maintenance &amp; security updates</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Ongoing SEO monitoring &amp; reporting</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Digital identity &amp; social management</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Content updates &amp; backups</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Priority support &amp; uptime monitoring</li>
-              </ul>
-              <a href="/contact" className="btn-flip btn-primary btn-large pricing-btn">
-                <span className="btn-flip-inner">
-                  <span className="btn-flip-state">Start Growing <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span>
-                  <span className="btn-flip-state" aria-hidden="true">Start Growing <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
-                </span>
-              </a>
-            </div>
-
-            <div className="pricing-card reveal-up">
-              <div className="pricing-card-head">
-                <span className="pricing-label">Care Plan Only</span>
-                <div className="pricing-amount">$150<span className="pricing-per">/month</span></div>
-                <p>Already have a site? We&apos;ll maintain, secure &amp; grow it.</p>
-              </div>
-              <ul className="pricing-list">
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Hosting &amp; performance management</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Security patches &amp; daily backups</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Monthly SEO health reports</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Content &amp; social updates</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Analytics &amp; lead tracking</li>
-                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>Cancel anytime</li>
-              </ul>
-              <a href="/contact" className="btn-flip btn-ghost btn-large pricing-btn">
-                <span className="btn-flip-inner">
-                  <span className="btn-flip-state">Get Care Plan <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span>
-                  <span className="btn-flip-state" aria-hidden="true">Get Care Plan <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
-                </span>
-              </a>
-            </div>
-
+            {TIERS.map((tier) => {
+              const dp = getDisplayPrice(tier, payMode);
+              return (
+                <div
+                  key={tier.name}
+                  className={'pricing-card reveal-up' + (tier.featured ? ' pricing-featured' : '')}
+                >
+                  {tier.featured && <span className="pricing-flag">Most Popular</span>}
+                  <div className="pricing-card-head">
+                    <span className="pricing-label">{tier.name}</span>
+                    <span className="pricing-scope-tag">{tier.scope}</span>
+                    <div className="pricing-amount">
+                      {dp.big}
+                      <span className="pricing-per"> {dp.label}</span>
+                    </div>
+                    {dp.note && (
+                      <div className={'pricing-card-note' + (dp.noteGreen ? ' pricing-card-note--green' : '')}>
+                        {dp.note}
+                      </div>
+                    )}
+                    <p>{tier.desc}</p>
+                  </div>
+                  <ul className="pricing-list">
+                    {tier.features.map((f) => (
+                      <li key={f}><CheckSVG />{f}</li>
+                    ))}
+                  </ul>
+                  <a
+                    href="/contact"
+                    className={'btn-flip btn-large pricing-btn ' + (tier.featured ? 'btn-primary' : 'btn-ghost')}
+                  >
+                    <span className="btn-flip-inner">
+                      <span className="btn-flip-state">Get Started <ArrowSVG /></span>
+                      <span className="btn-flip-state" aria-hidden="true">Get Started <ArrowRightSVG /></span>
+                    </span>
+                  </a>
+                </div>
+              );
+            })}
           </div>
 
-          <div className="sample-banner reveal-up">
-            <div className="sample-banner-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>
-            </div>
-            <div>
-              <h3>Free custom homepage sample</h3>
-              <p>We&apos;ll design a custom homepage sample for your business in 24 hours — review it risk-free before committing to anything.</p>
-            </div>
-            <a href="/contact" className="btn-flip btn-primary">
-              <span className="btn-flip-inner">
-                <span className="btn-flip-state">Claim Free Sample <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span>
-                <span className="btn-flip-state" aria-hidden="true">Claim Free Sample <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
-              </span>
-            </a>
+          {/* Reassurance micro-copy */}
+          <div className="pricing-reassurance-row reveal-up">
+            <span>✓ No interest, no credit check</span>
+            <span>✓ Full ownership — no lock-in</span>
+            <span>✓ Add the $150/mo Care Plan anytime</span>
+            <span>✓ 7-day satisfaction guarantee</span>
           </div>
-        </div>
-      </section>
 
-
-      {/* Flexible Payment Options � matching Aston Cook's transparency */}
-      <section className="pricing-payment-section">
-        <div className="wrap">
-          <div className="section-head reveal-up">
-            <div className="section-badge">
-              <span className="badge-pill">Flexibility</span>
-              <span className="badge-text">Pay Your Way</span>
-            </div>
-            <h2>Flexible Payment Options. No Interest. No Credit Check.</h2>
-            <p>Choose the payment structure that works best for your business. Every option gets the same quality, the same timeline, and the same result.</p>
-          </div>
-          <div className="payment-table-wrap reveal-up">
-            <table className="payment-table">
-              <thead>
-                <tr>
-                  <th>Payment Option</th>
-                  <th>One-Time Build ($700)</th>
-                  <th>Build + Care ($700 + $150/mo)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Half now, half at launch</strong><br/><span className="payment-note">Default � most popular</span></td>
-                  <td>$350 to start<br/>$350 on launch day</td>
-                  <td>$350 to start<br/>$350 on launch day + $150/mo</td>
-                </tr>
-                <tr className="payment-highlight">
-                  <td><strong>Pay in full upfront</strong><br/><span className="payment-note">Save $100</span></td>
-                  <td><span className="payment-discount">$600</span> <span className="payment-save">Save $100</span></td>
-                  <td><span className="payment-discount">$600</span> + $150/mo <span className="payment-save">Save $100</span></td>
-                </tr>
-                <tr>
-                  <td><strong>4-month installments</strong><br/><span className="payment-note">No interest, no third-party lender</span></td>
-                  <td>$175/mo � 4 months</td>
-                  <td>$175/mo � 4 months + $150/mo care</td>
-                </tr>
-              </tbody>
-            </table>
-            <p className="payment-reassurance">Your site launches on the normal timeline regardless of which payment option you choose. No interest, no credit check, no third-party lender � just a direct agreement between us.</p>
-          </div>
+          {/* Decision paralysis reducer */}
           <div className="payment-help reveal-up">
-            <p><strong>Not sure which plan fits?</strong> Tell us what your business does and how customers find you today. We&apos;ll recommend the right build � even when it&apos;s the cheaper one.</p>
+            <p>
+              <strong>Not sure which build fits?</strong> Tell us what your business does and how customers find you today.
+              We&apos;ll say which tier fits — even when it&apos;s the cheaper one.
+            </p>
             <a href="/contact" className="btn-flip btn-ghost btn-small">
               <span className="btn-flip-inner">
-                <span className="btn-flip-state">Ask Us <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span>
-                <span className="btn-flip-state" aria-hidden="true">Ask Us <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span>
+                <span className="btn-flip-state">Ask Us <ArrowSVG /></span>
+                <span className="btn-flip-state" aria-hidden="true">Ask Us <ArrowRightSVG /></span>
               </span>
             </a>
           </div>
+
+          {/* Ongoing care plan note */}
+          <div className="pricing-care-note reveal-up">
+            <strong>Already have a website?</strong> Add our <strong>$150/mo Care Plan</strong> to any existing site — hosting, security, SEO monitoring, content updates, and priority support. Cancel anytime.
+            <a href="/contact" className="pricing-care-link">Learn more →</a>
+          </div>
+
         </div>
       </section>
 
-      {/* Why $700 Is Possible — justifies the "100% custom" claim */}
+      {/* ── Why section ─────────────────────────────────────── */}
       <section className="pricing-how-section">
         <div className="wrap">
           <div className="section-head reveal-up">
@@ -177,8 +260,8 @@ export default function PricingClient() {
               <span className="badge-pill">Transparency</span>
               <span className="badge-text">How We Keep Prices Low</span>
             </div>
-            <h2>Why $700 gets you a purpose-built site — not a template.</h2>
-            <p>We hear the question every time. Here's the honest answer.</p>
+            <h2>Why a hand-crafted site from us costs less than you&apos;d expect.</h2>
+            <p>We hear the question every time. Here&apos;s the honest answer.</p>
           </div>
           <div className="pricing-how-grid">
             {[
@@ -190,17 +273,17 @@ export default function PricingClient() {
               {
                 n: '02',
                 title: 'Purpose-built component system',
-                body: 'We use a proprietary design system we built and maintain ourselves — not Squarespace, not WordPress, not Wix, not Webflow. That means zero platform fees and zero template lock-in, and the savings go directly to you.',
+                body: 'We use a proprietary design system we built and maintain ourselves — not Squarespace, not WordPress, not Wix, not Webflow. Zero platform fees, zero template lock-in. The savings go directly to you.',
               },
               {
                 n: '03',
                 title: 'Focused, high-impact scope',
-                body: 'A well-crafted homepage and core pages convert better than a bloated 20-page site. We keep scope focused on what actually wins leads, then add pages only when your data says they\'ll pay off.',
+                body: 'A well-crafted 3-page site converts better than a bloated 20-page site. We keep scope focused on what actually wins leads, then expand only when your data says it will pay off.',
               },
               {
                 n: '04',
                 title: 'Lean, async team',
-                body: 'No downtown office. No account managers. No bloated retainers passed on to you. You communicate directly with the designers and engineers doing the work — which means faster decisions and a tighter result.',
+                body: 'No downtown office. No account managers. No bloated retainers passed to you. You talk directly to the people doing the work — faster decisions, tighter results.',
               },
             ].map((item) => (
               <div className="pricing-how-card reveal-up" key={item.n}>
@@ -218,4 +301,3 @@ export default function PricingClient() {
     </div>
   );
 }
-

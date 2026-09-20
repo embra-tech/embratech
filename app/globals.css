@@ -1545,3 +1545,196 @@ section { padding: 90px 0; }
   flex-wrap: wrap;
   gap: 0.5rem;
 }
+
+/* ====== Pricing Page � Payment Toggle & Redesigned Cards ====== */
+
+/* Free sample strip */
+.pricing-sample-strip-section {
+  padding: 0 0 0.5rem;
+}
+.pricing-sample-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.025);
+  flex-wrap: wrap;
+}
+.pricing-sample-strip-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  flex: 1;
+  min-width: 220px;
+}
+.pricing-sample-strip-left svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--primary, #6366f1);
+}
+.pricing-sample-strip-left strong {
+  color: #fff;
+}
+.pricing-sample-strip-left span {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.88rem;
+}
+.pricing-strip-cta {
+  flex-shrink: 0;
+}
+
+/* Payment toggle */
+.pricing-toggle-wrap {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.pricing-toggle-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 0.85rem;
+}
+.pricing-toggle {
+  display: inline-flex;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 999px;
+  padding: 4px;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pricing-toggle-btn {
+  position: relative;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  white-space: nowrap;
+}
+.pricing-toggle-btn:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.06);
+}
+.pricing-toggle-btn.active {
+  background: var(--primary, #6366f1);
+  color: #fff;
+  font-weight: 600;
+}
+.toggle-badge {
+  display: inline-block;
+  background: rgba(39,201,63,0.15);
+  color: #27C93F;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.pricing-toggle-sub {
+  margin-top: 0.85rem;
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.45);
+  min-height: 1.4em;
+}
+
+/* Scope tag on pricing card */
+.pricing-scope-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary, #6366f1);
+  background: rgba(99,102,241,0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+}
+
+/* Price note */
+.pricing-card-note {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.pricing-card-note--green {
+  color: #27C93F;
+  font-weight: 600;
+}
+
+/* Reassurance row */
+.pricing-reassurance-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+}
+
+/* Care plan note */
+.pricing-care-note {
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  border: 1px dashed rgba(255,255,255,0.1);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+.pricing-care-note strong {
+  color: #fff;
+}
+.pricing-care-link {
+  display: inline-block;
+  margin-left: 0.6rem;
+  color: var(--primary, #6366f1);
+  text-decoration: none;
+  font-weight: 600;
+}
+.pricing-care-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .pricing-toggle {
+    border-radius: 14px;
+    padding: 4px;
+  }
+  .pricing-toggle-btn {
+    border-radius: 10px;
+    font-size: 0.82rem;
+    padding: 0.5rem 0.85rem;
+  }
+  .pricing-sample-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pricing-strip-cta {
+    align-self: stretch;
+    text-align: center;
+  }
+  .pricing-reassurance-row {
+    gap: 0.4rem 1rem;
+    font-size: 0.77rem;
+  }
+}
