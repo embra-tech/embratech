@@ -32,7 +32,7 @@ export default function PricingClient() {
             <div className="pricing-card reveal-up">
               <div className="pricing-card-head">
                 <span className="pricing-label">One-Time Build</span>
-                <div className="pricing-amount">$500<span className="pricing-per"> one-time</span></div>
+                <div className="pricing-amount">$700<span className="pricing-per"> one-time</span></div>
                 <p>Custom homepage design + complete development</p>
               </div>
               <ul className="pricing-list">
@@ -55,7 +55,7 @@ export default function PricingClient() {
               <span className="pricing-flag">Most Popular</span>
               <div className="pricing-card-head">
                 <span className="pricing-label">Build + Care Plan</span>
-                <div className="pricing-amount">$500 + $150<span className="pricing-per">/mo</span></div>
+                <div className="pricing-amount">$700 + $150<span className="pricing-per">/mo</span></div>
                 <p>Everything in the build, plus ongoing growth management</p>
               </div>
               <ul className="pricing-list">
@@ -133,25 +133,25 @@ export default function PricingClient() {
               <thead>
                 <tr>
                   <th>Payment Option</th>
-                  <th>One-Time Build ($500)</th>
-                  <th>Build + Care ($500 + $150/mo)</th>
+                  <th>One-Time Build ($700)</th>
+                  <th>Build + Care ($700 + $150/mo)</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td><strong>Half now, half at launch</strong><br/><span className="payment-note">Default � most popular</span></td>
-                  <td>$250 to start<br/>$250 on launch day</td>
-                  <td>$250 to start<br/>$250 on launch day + $150/mo</td>
+                  <td>$350 to start<br/>$350 on launch day</td>
+                  <td>$350 to start<br/>$350 on launch day + $150/mo</td>
                 </tr>
                 <tr className="payment-highlight">
-                  <td><strong>Pay in full upfront</strong><br/><span className="payment-note">Save $50</span></td>
-                  <td><span className="payment-discount">$450</span> <span className="payment-save">Save $50</span></td>
-                  <td><span className="payment-discount">$450</span> + $150/mo <span className="payment-save">Save $50</span></td>
+                  <td><strong>Pay in full upfront</strong><br/><span className="payment-note">Save $100</span></td>
+                  <td><span className="payment-discount">$600</span> <span className="payment-save">Save $100</span></td>
+                  <td><span className="payment-discount">$600</span> + $150/mo <span className="payment-save">Save $100</span></td>
                 </tr>
                 <tr>
                   <td><strong>4-month installments</strong><br/><span className="payment-note">No interest, no third-party lender</span></td>
-                  <td>$125/mo � 4 months</td>
-                  <td>$125/mo � 4 months + $150/mo care</td>
+                  <td>$175/mo � 4 months</td>
+                  <td>$175/mo � 4 months + $150/mo care</td>
                 </tr>
               </tbody>
             </table>
@@ -169,7 +169,7 @@ export default function PricingClient() {
         </div>
       </section>
 
-      {/* Why $500 Is Possible — justifies the "100% custom" claim */}
+      {/* Why $700 Is Possible — justifies the "100% custom" claim */}
       <section className="pricing-how-section">
         <div className="wrap">
           <div className="section-head reveal-up">
@@ -177,7 +177,7 @@ export default function PricingClient() {
               <span className="badge-pill">Transparency</span>
               <span className="badge-text">How We Keep Prices Low</span>
             </div>
-            <h2>Why $500 gets you a purpose-built site — not a template.</h2>
+            <h2>Why $700 gets you a purpose-built site — not a template.</h2>
             <p>We hear the question every time. Here's the honest answer.</p>
           </div>
           <div className="pricing-how-grid">

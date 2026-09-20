@@ -129,7 +129,7 @@ export default function Hero() {
         </h1>
 
         <p className="hero-sub" ref={subRef}>
-          We design a custom homepage for your business for free — no credit card, no commitment. Like what you see? We build the complete site for $500, and it loads in under a second.
+          We design a custom homepage for your business for free — no credit card, no commitment. Like what you see? We build the complete site for $700 — or $600 if you pay in full. Either way it loads in under a second.
         </p>
 
         <div className="hero-actions" ref={actionsRef}>
