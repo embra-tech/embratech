@@ -129,7 +129,7 @@ export default function Hero() {
         </h1>
 
         <p className="hero-sub" ref={subRef}>
-          We hand-craft a real homepage for your business in 24 hours — free, no deposit, no contract. See something built for your business, not a template someone else already has. Love it? We build the full site: sub-second speed, ranked by Google, designed to convert visitors into paying customers. If it’s not right, you owe us nothing.
+          We build your homepage in 24 hours, for free. No templates, no commitments. See real work built for your business before you spend a cent. Love it and we build the rest. Walk away and you owe us nothing.
         </p>
 
         <div className="hero-actions" ref={actionsRef}>
