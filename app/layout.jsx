@@ -71,6 +71,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@embratech',
+    creator: '@embratech',
     images: ['https://www.embratechnologies.org/opengraph-image.jpg'],
   },
 };
@@ -81,8 +83,11 @@ export default function RootLayout({ children }) {
       <body className={`${figtree.variable} ${inter.variable} ${jetbrains.variable}`}>
         <ThemeProvider>
           <ScrollManager>
+            <a href="#main" className="skip-link">Skip to main content</a>
             <Navbar />
-            {children}
+            <main id="main">
+              {children}
+            </main>
             <Footer />
             <WhatsAppButton />
             <CookieBanner />

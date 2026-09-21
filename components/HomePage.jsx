@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useReveal } from '../lib/useReveal';
 import Hero from './Hero';
 import Showcase from './Showcase';
+import FeaturedWork from './FeaturedWork';
 import Marquee from './Marquee';
 import Services from './Services';
 import Process from './Process';
@@ -19,6 +20,7 @@ export default function HomePage() {
     <div ref={ref}>
       <Hero />
       <Showcase />
+      <FeaturedWork />
       <Marquee />
       <Services />
       <Process />

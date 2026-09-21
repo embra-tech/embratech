@@ -55,8 +55,8 @@ const PAGES = {
     sub: 'From a fast, modern website to full search visibility and digital identity — one team handles it all.',
     sections: [
       { h: 'Website Design', items: ['Custom-built from scratch — no templates, no page builders.', 'Mobile-first responsive design for all screen sizes.', 'Sub-second load times with React 18 architecture.', 'SEO-ready structure, schema markup, and metadata on every page.'] },
-      { h: 'Search Engine Optimization', items: ['On-page SEO — titles, metas, headings, and content structured for Google.', 'Local SEO — Google Business Profile optimisation and local schema.', 'Technical SEO — Core Web Vitals, structured data, canonical tags.', 'Content strategy — blog posts and landing pages that rank.'] },
-      { h: 'Social & Digital Identity', items: ['Google Business Profile setup and optimisation.', 'Social media profile creation and brand consistency.', 'NAP (Name, Address, Phone) alignment across all directories.', 'Review management and reputation monitoring.'] },
+      { h: 'Search Engine Optimization', items: ['On-page SEO — titles, metas, headings, and content structured for Google.', 'Local SEO — Google Business Profile optimization and local schema.', 'Technical SEO — Core Web Vitals, structured data, canonical tags.', 'Content strategy — blog posts and landing pages that rank.'] },
+      { h: 'Social & Digital Identity', items: ['Google Business Profile setup and optimization.', 'Social media profile creation and brand consistency.', 'NAP (Name, Address, Phone) alignment across all directories.', 'Review management and reputation monitoring.'] },
       { h: 'Custom Integrations', items: ['Online booking systems (Calendly, Acuity, custom).', 'Payment processing (Stripe, Square).', 'Lead capture forms and CRM connections.', 'Live chat and WhatsApp contact buttons.'] },
     ],
     schema: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Service', serviceType: 'Web Design, SEO, Digital Identity Management', provider: { '@type': 'Organization', name: 'Embra Technologies', url: 'https://www.embratechnologies.org' }, areaServed: 'US' }),
@@ -68,7 +68,7 @@ const PAGES = {
     h1: 'Honest pricing. No surprises.',
     sub: 'One build price. One optional care plan. Full ownership from day one. And a free 24-hour homepage sample so you can see the work before you commit.',
     sections: [
-      { h: 'Website Build — $700', items: ['Custom-designed, mobile-first website built from scratch.', 'Up to 7 pages (home, services, about, contact, portfolio, blog, terms/privacy).', 'SEO structure, schema markup, and performance optimisation included.', 'Launch support and domain/hosting configuration.', 'Full file and credential transfer on final payment.'] },
+      { h: 'Website Build — $700', items: ['Custom-designed, mobile-first website built from scratch.', 'Up to 7 pages (home, services, about, contact, portfolio, blog, terms/privacy).', 'SEO structure, schema markup, and performance optimization included.', 'Launch support and domain/hosting configuration.', 'Full file and credential transfer on final payment.'] },
       { h: 'Monthly Care Plan — $150/mo (Optional)', items: ['Content updates — text, images, and new pages on request.', 'Performance monitoring and Core Web Vitals maintenance.', 'Security updates and dependency management.', 'Priority support with 24-hour response time.', 'Cancel anytime — full file/credential handover within 7 business days.'] },
       { h: 'Free 24-Hour Homepage Sample', items: ['We design a real, custom homepage for your business in 24 hours — no templates.', 'No deposit, no credit card, no obligation.', 'Love it? We build the full site for $700. Not right? You owe us nothing.'] },
     ],
@@ -79,7 +79,7 @@ const PAGES = {
     description: 'View live, in-production websites built by Embra Technologies for auto body, handyman, tree service, travel, and service businesses across the US and Australia.',
     canonical: 'https://www.embratechnologies.org/portfolio',
     h1: "Websites we've shipped.",
-    sub: 'Real, live websites for real businesses — designed, built, and optimised by Embra Technologies. Every project is in production and serving customers today.',
+    sub: 'Real, live websites for real businesses — designed, built, and optimized by Embra Technologies. Every project is in production and serving customers today.',
     sections: [
       { h: 'Selected Work', items: ['Tuxford Collision Center (tuxfordcollision.com) — Auto Body & Collision Repair, Los Angeles, CA. +280% organic traffic. PageSpeed 97/100.', 'V Vasquez Handyman LLC (vvasquezhandymanllc.net) — Handyman Services, United States. 3.4x quote submissions. PageSpeed 99/100.', 'Alaska Fast Fix Handyman (alaskafastfixhandyman.com) — Handyman Services, Alaska. +190% local calls. PageSpeed 98/100.', 'BestBreaks (bestbreaks.com.au) — Travel & Accommodation, Australia & New Zealand. PageSpeed 96/100. 0.41s TTFB.', 'Sky High Tree Service (skyhightreeservicechicago.com) — Tree Service, Chicago, IL. +215% emergency leads. PageSpeed 95/100.'] },
     ],
@@ -90,7 +90,7 @@ const PAGES = {
     description: 'Learn how Embra Technologies helps US businesses compete online with custom-built websites, local SEO, and transparent pricing.',
     canonical: 'https://www.embratechnologies.org/about',
     h1: 'Who we are.',
-    sub: 'We build websites that work — fast, modern, and optimised for search. No account managers, no templates, no lock-in.',
+    sub: 'We build websites that work — fast, modern, and optimized for search. No account managers, no templates, no lock-in.',
     sections: [
       { h: 'Our Approach', items: ['We work directly with you — no account managers, no middlemen.', 'Every site is built from scratch, not assembled from templates.', 'We transfer full ownership of all files and credentials on final payment.', 'We target sub-second load times and 95+ PageSpeed scores as a baseline.'] },
       { h: 'Our Values', items: ['Transparency — honest pricing, honest timelines, honest results.', 'Speed — we ship fast without cutting corners.', 'Ownership — you own everything we build, forever.', 'Proof — we show results before you pay (free 24-hour homepage sample).'] },
@@ -119,9 +119,21 @@ const PAGES = {
     ],
     schema: null,
   },
+  '/services/care-plan': {
+    title: 'Website Care Plan ($150/mo) — Hosting, Maintenance & SEO — Embra Technologies',
+    description: 'Keep your website fast, secure, and ranking. Our $150/month Care Plan includes high-performance hosting, content updates, security patches, monthly SEO reports, and 24-hour turnaround support. Cancel anytime.',
+    canonical: 'https://www.embratechnologies.org/services/care-plan',
+    h1: 'The $150/mo Website Care Plan.',
+    sub: 'Never worry about updates, security patches, or slow loading speeds again. We keep your website running at peak performance so you can focus on running your business.',
+    sections: [
+      { h: 'What Is Included', items: ['Ultra-Fast Managed Hosting — Global edge CDN routing, automated SSL renewals, 99.99% uptime.', 'Content & Layout Updates — Up to 2 hours of monthly updates, revisions, and announcements completed in 24 hours.', 'Speed & Core Web Vitals Audits — Monthly audits ensuring your 96/100 PageSpeed scores never slip.', 'Security & Dependency Updates — Automated patches, form spam prevention, daily backups.', 'Monthly SEO & Keyword Tracking — Clear reports on Google rankings, local pack visibility, and growth.', 'Priority 24-Hour Support — Direct access to senior engineers via email and WhatsApp.'] },
+      { h: 'SLA & Guarantees', items: ['24-Hour Turnaround — Content updates actioned within one business day.', '100% Asset Ownership — You own your domain, code, and content. We never hold client files hostage.', '7-Day Handover — Cancel anytime; we provide full transfer of files and credentials within 7 business days.'] },
+    ],
+    schema: null,
+  },
 };
 
-const NAV = [['/', 'Home'], ['/services', 'Services'], ['/portfolio', 'Portfolio'], ['/pricing', 'Pricing'], ['/about', 'About'], ['/blog', 'Blog'], ['/contact', 'Contact']];
+const NAV = [['/', 'Home'], ['/services', 'Services'], ['/services/care-plan', 'Care Plan'], ['/portfolio', 'Portfolio'], ['/pricing', 'Pricing'], ['/about', 'About'], ['/blog', 'Blog'], ['/contact', 'Contact']];
 
 function buildHtml(page) {
   const navLinks = NAV.map(([href, label]) => `<a href="${href}">${label}</a>`).join('\n        ');

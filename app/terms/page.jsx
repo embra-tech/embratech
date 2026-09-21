@@ -1,8 +1,22 @@
 export const metadata = {
   alternates: { canonical: '/terms' },
-  title: 'Terms of Service',
+  title: 'Terms of Service — Embra Technologies',
   description:
     'Read the Terms of Service for Embra Technologies. Covers service scope, payment terms, intellectual property, and our commitment to client satisfaction.',
+  openGraph: {
+    title: 'Terms of Service — Embra Technologies',
+    description:
+      'Read the Terms of Service for Embra Technologies. Covers service scope, payment terms, intellectual property, and our commitment to client satisfaction.',
+    url: 'https://www.embratechnologies.org/terms',
+    images: [
+      {
+        url: 'https://www.embratechnologies.org/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Embra Technologies Terms of Service',
+      },
+    ],
+  },
 };
 
 import Link from 'next/link';
@@ -62,7 +76,7 @@ export default function TermsPage() {
               <p>Embra Technologies provides the following services:</p>
               <ul>
                 <li>Custom website design and development</li>
-                <li>Search engine optimisation (SEO)</li>
+                <li>Search engine optimization (SEO)</li>
                 <li>Digital identity and social media management</li>
                 <li>Digital systems integration (payment gateways, CRM, analytics)</li>
                 <li>Ongoing website maintenance and care plans</li>

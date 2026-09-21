@@ -55,9 +55,15 @@ export default function BlogPostPage({ params }) {
     },
     image: 'https://www.embratechnologies.org/opengraph-image.jpg',
     author: {
-      '@type': 'Organization',
+      '@type': 'Person',
       name: post.author,
-      url: 'https://www.embratechnologies.org',
+      jobTitle: 'Lead Technical Architect',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Embra Technologies',
+        url: 'https://www.embratechnologies.org',
+      },
+      url: 'https://www.embratechnologies.org/about',
     },
     publisher: {
       '@type': 'Organization',
@@ -85,7 +91,7 @@ export default function BlogPostPage({ params }) {
             <span aria-hidden="true">›</span>
             <Link href="/blog">Blog</Link>
             <span aria-hidden="true">›</span>
-            <span>Article</span>
+            <span aria-current="page" style={{ maxWidth: '320px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{post.title}</span>
           </nav>
 
           <div

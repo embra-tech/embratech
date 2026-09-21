@@ -18,7 +18,7 @@ const VALUES = [
   { title: 'Clarity over complexity', text: 'We translate technical work into plain language, honest timelines, and transparent pricing — no jargon, no hidden fees.' },
   { title: 'Precision in every build', text: 'Every layout, interaction, and line of code is deliberate and tested — no bloated templates, ever.' },
   { title: 'Results you can measure', text: 'Speed scores, search rankings, inbound leads. We build for outcomes you can verify in Google Analytics and Search Console.' },
-  { title: 'Partnership beyond launch', text: 'We stay on as your digital team — maintaining, optimising, and growing your presence long after go-live.' },
+  { title: 'Partnership beyond launch', text: 'We stay on as your digital team — maintaining, optimizing, and growing your presence long after go-live.' },
 ];
 
 export default function AboutClient() {
@@ -98,7 +98,7 @@ export default function AboutClient() {
               We are a small team of senior designers and engineers based in Brooklyn, NY. When you email us, the person who replies is the same person writing your code and designing your pages. No account managers, no handoffs to junior staff, no work shipped overseas.
             </p>
             <p>
-              We built Embra because great web work was gatekept behind agency retainers most local businesses can't justify. Our answer was to cut the overhead entirely and put the savings back into execution quality — which is why our sites score 95+ on PageSpeed and rank, while costing a fraction of what a full-service agency charges.
+              We built Embra because great web work was gatekept behind agency retainers most local businesses can't justify. Our answer was to cut the overhead entirely and put the savings back into execution quality — which is why our sites average 96/100 on PageSpeed and rank, while costing a fraction of what a full-service agency charges.
             </p>
             <p style={{marginTop: '20px', fontSize: '14px', color: 'rgba(255,255,255,0.5)', fontStyle: 'italic'}}>
               Want to know who you're working with? Reach out directly at sales@embratechnologies.org — we reply within one business day, not a bot.

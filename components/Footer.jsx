@@ -66,9 +66,20 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <div className="footer-locations" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px 16px', padding: '24px 0', borderBottom: '1px solid var(--line-dark)', fontSize: '13px', color: 'var(--muted-inv)' }}>
+          <span style={{ fontWeight: 600, color: 'var(--paper-bright)' }}>Service Areas:</span>
+          <Link href="/locations/los-angeles" style={{ color: 'var(--muted-inv)', transition: 'color 0.2s' }}>Los Angeles, CA</Link>
+          <span aria-hidden="true" style={{ opacity: 0.4 }}>·</span>
+          <Link href="/locations/chicago" style={{ color: 'var(--muted-inv)', transition: 'color 0.2s' }}>Chicago, IL</Link>
+          <span aria-hidden="true" style={{ opacity: 0.4 }}>·</span>
+          <Link href="/locations/alaska" style={{ color: 'var(--muted-inv)', transition: 'color 0.2s' }}>Alaska</Link>
+          <span aria-hidden="true" style={{ opacity: 0.4 }}>·</span>
+          <Link href="/locations/gulf-coast" style={{ color: 'var(--muted-inv)', transition: 'color 0.2s' }}>Gulf Coast</Link>
+        </div>
+
         <div className="footer-bottom">
           <p className="footer-copy">© 2026 Embra Technologies. All rights reserved.</p>
-          <p className="footer-built">Built by <a href="https://embratechnologies.org" target="_blank" rel="noopener noreferrer">Embra Technologies</a></p>
+          <p className="footer-built">Built by <a href="https://www.embratechnologies.org" target="_blank" rel="noopener noreferrer">Embra Technologies</a></p>
           <div className="footer-legal">
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/terms">Terms of Service</Link>

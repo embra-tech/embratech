@@ -31,7 +31,7 @@ const HOME_FAQ_SCHEMA = {
       name: 'Will my website be mobile responsive and fast?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes — every website we build is mobile-first and engineered for sub-second loading, consistently scoring 95+ on Google PageSpeed Insights and meeting Core Web Vitals.',
+        text: 'Yes — every website we build is mobile-first and engineered for sub-second loading, averaging 96/100 on Google PageSpeed Insights and meeting Core Web Vitals.',
       },
     },
     {

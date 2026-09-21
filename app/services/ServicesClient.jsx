@@ -23,12 +23,12 @@ const SERVICES = [
   },
   {
     step: '02', title: 'Search Engine Optimization (SEO)',
-    desc: 'Technical architecture, keyword targeting, and on-page optimisation so your business ranks at the top when customers search.',
+    desc: 'Technical architecture, keyword targeting, and on-page optimization so your business ranks at the top when customers search.',
     points: [
       'Technical SEO audits & semantic HTML structure',
       'JSON-LD structured data & schema markup',
       'High-intent keyword targeting & content strategy',
-      'Local search optimisation & Google Business Profile',
+      'Local search optimization & Google Business Profile',
       'Ongoing ranking & traffic reporting',
     ],
     icon: <><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></>,
@@ -39,7 +39,7 @@ const SERVICES = [
     points: [
       'Cross-platform brand cohesion',
       'Content strategy & scheduled publishing',
-      'Social profile design & optimisation',
+      'Social profile design & optimization',
       'Reputation & review management',
       'Monthly growth reporting',
     ],
@@ -104,7 +104,44 @@ export default function ServicesClient() {
         </div>
       </section>
 
-            <WhyUs />
+            {/* Service Areas */}
+      <section className="services-locations-section" style={{ padding: '60px 0', borderTop: '1px solid var(--line-dark)', borderBottom: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.01)' }}>
+        <div className="wrap">
+          <div className="section-head reveal-up" style={{ textAlign: 'center', marginBottom: '32px' }}>
+            <div className="section-badge"><span className="badge-pill">Coverage</span><span className="badge-text">Service Areas</span></div>
+            <h2>Targeted Local Search &amp; Web Development</h2>
+            <p>We build high-converting websites optimized for local visibility across key US metropolitan and regional markets.</p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
+            {[
+              { name: 'Los Angeles, CA', slug: 'los-angeles', desc: 'Auto body, collision, and service contractor web development & local search.' },
+              { name: 'Chicago, IL', slug: 'chicago', desc: 'Commercial services, emergency tree care, and trade contractor websites.' },
+              { name: 'Alaska', slug: 'alaska', desc: 'Handyman, home repair, and remote contractor digital presence.' },
+              { name: 'Gulf Coast', slug: 'gulf-coast', desc: 'Marine, industrial, hospitality, and coastal contractor platforms.' },
+            ].map((loc) => (
+              <a
+                key={loc.slug}
+                href={`/locations/${loc.slug}`}
+                style={{
+                  padding: '20px',
+                  background: 'rgba(255,255,255,0.03)',
+                  border: '1px solid var(--line-dark)',
+                  borderRadius: '12px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '8px',
+                  transition: 'border-color 0.2s',
+                }}
+              >
+                <strong style={{ color: '#fff', fontSize: '1.1rem' }}>{loc.name} &rarr;</strong>
+                <span style={{ fontSize: '0.85rem', color: 'var(--muted-inv)', lineHeight: 1.5 }}>{loc.desc}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <WhyUs />
       <Faq variant="services" />
       <Cta variant="services" />
     </div>

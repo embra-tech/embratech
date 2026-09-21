@@ -38,7 +38,7 @@ const CASE_STUDIES = {
     challenge: `Handyman businesses are saturated with low-quality online presences — blurry logos, generic template sites, and no clear service listing. V Vasquez Handyman had the skills and reputation but an online presence that didn't reflect either. Homeowners searching on mobile were bouncing before making contact, costing real jobs every week.`,
     approach: [
       { title: 'Structured service catalog', body: 'We built each service its own section with clear scope, pricing signals, and a "Request This Service" CTA — letting visitors find exactly what they need without wading through irrelevant content.' },
-      { title: 'Mobile-first execution', body: 'Over 80% of handyman searches happen on a phone. We designed and tested mobile experience first, then scaled up — not the other way around. Tap targets, font sizes, and form inputs all optimised for thumbs.' },
+      { title: 'Mobile-first execution', body: 'Over 80% of handyman searches happen on a phone. We designed and tested mobile experience first, then scaled up — not the other way around. Tap targets, font sizes, and form inputs all optimized for thumbs.' },
       { title: 'Instant quote flow', body: 'A streamlined quote request form with service selection pre-fills context, reducing back-and-forth and getting jobs booked faster with less friction for both sides.' },
     ],
     results: [
@@ -58,7 +58,7 @@ const CASE_STUDIES = {
     approach: [
       { title: 'Urgency-driven design', body: 'We led with "Fast Response" messaging and placed the phone number at the top of every page — designed for the high-stress "I need this fixed today" search intent. Seconds matter when a pipe is bursting.' },
       { title: 'Service area clarity', body: 'A prominent, early service area section prevents wasted calls from outside the coverage zone and builds trust with customers who specifically want someone local and accountable.' },
-      { title: 'Local search coverage', body: 'Structured data markup, service-area headings optimised for "handyman near me" searches, and Google Business Profile alignment to rank across the service region.' },
+      { title: 'Local search coverage', body: 'Structured data markup, service-area headings optimized for "handyman near me" searches, and Google Business Profile alignment to rank across the service region.' },
     ],
     results: [
       { label: '+190% Local Calls', verified: false },

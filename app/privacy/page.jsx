@@ -1,8 +1,22 @@
 export const metadata = {
   alternates: { canonical: '/privacy' },
-  title: 'Privacy Policy',
+  title: 'Privacy Policy — Embra Technologies',
   description:
     'Learn how Embra Technologies collects, uses, and protects your personal data. We are committed to transparency and your privacy.',
+  openGraph: {
+    title: 'Privacy Policy — Embra Technologies',
+    description:
+      'Learn how Embra Technologies collects, uses, and protects your personal data. We are committed to transparency and your privacy.',
+    url: 'https://www.embratechnologies.org/privacy',
+    images: [
+      {
+        url: 'https://www.embratechnologies.org/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Embra Technologies Privacy Policy',
+      },
+    ],
+  },
 };
 
 import Link from 'next/link';
@@ -49,7 +63,7 @@ export default function PrivacyPage() {
               <p>
                 Embra Technologies (&ldquo;Embra,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates the website{' '}
                 <a href="https://embratechnologies.org" target="_blank" rel="noopener noreferrer">embratechnologies.org</a>{' '}
-                and any sub-sites. We provide website design, search engine optimisation, and digital identity services for growing businesses.
+                and any sub-sites. We provide website design, search engine optimization, and digital identity services for growing businesses.
               </p>
               <p>
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or contact us about our services. Please read this policy carefully.
@@ -118,7 +132,7 @@ export default function PrivacyPage() {
                   <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">Stripe Privacy Policy</a>.
                 </li>
                 <li>
-                  <strong>Google Fonts / Next.js Font Optimisation</strong> — font files are self-hosted via Next.js&rsquo;s built-in font optimisation. No requests are made to Google&rsquo;s servers at runtime.
+                  <strong>Google Fonts / Next.js Font Optimization</strong> — font files are self-hosted via Next.js&rsquo;s built-in font optimization. No requests are made to Google&rsquo;s servers at runtime.
                 </li>
               </ul>
             </section>

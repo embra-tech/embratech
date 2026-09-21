@@ -12,7 +12,7 @@ const FAQ_SETS = {
       q: 'Will my website be mobile responsive and fast?',
       a: (
         <>
-          Yes — every website we build is mobile-first and engineered for sub-second loading, consistently scoring 95+ on Google PageSpeed Insights and meeting Core Web Vitals.{' '}
+          Yes — every website we build is mobile-first and engineered for sub-second loading, averaging 96/100 on Google PageSpeed Insights and meeting Core Web Vitals.{' '}
           <a
             href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.embratechnologies.org%2F"
             target="_blank"
@@ -72,7 +72,7 @@ const FAQ_SETS = {
     },
     {
       q: 'How wide is your local SEO coverage?',
-      a: "We optimise for any US city or service area. We've worked with businesses in Los Angeles, Chicago, Alaska, and across the Gulf Coast. Local SEO strategy is tailored to your specific service radius and competitive landscape.",
+      a: "We optimize for any US city or service area. We've worked with businesses in Los Angeles, Chicago, Alaska, and across the Gulf Coast. Local SEO strategy is tailored to your specific service radius and competitive landscape.",
     },
   ],
 };

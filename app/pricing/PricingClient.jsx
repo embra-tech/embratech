@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import Link from 'next/link';
 import { useReveal } from '../../lib/useReveal';
 import PageHeader from '../../components/PageHeader';
 import Faq from '../../components/Faq';
@@ -246,7 +247,7 @@ export default function PricingClient() {
           {/* Ongoing care plan note */}
           <div className="pricing-care-note reveal-up">
             <strong>Already have a website?</strong> Add our <strong>$150/mo Care Plan</strong> to any existing site — hosting, security, SEO monitoring, content updates, and priority support. Cancel anytime.
-            <a href="/contact" className="pricing-care-link">Learn more →</a>
+            <Link href="/services/care-plan" className="pricing-care-link">Learn more →</Link>
           </div>
 
         </div>

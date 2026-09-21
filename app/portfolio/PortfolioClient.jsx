@@ -106,7 +106,7 @@ export default function PortfolioClient() {
             pill="Portfolio"
             badge="Selected Work"
             title={<>Websites we&apos;ve <span className="highlight-text">shipped.</span></>}
-            sub="Real, live websites for real businesses — designed, built, and optimised by Embra Technologies. Every project below is in production and serving customers today."
+            sub="Real, live websites for real businesses — designed, built, and optimized by Embra Technologies. Every project below is in production and serving customers today."
           />
         </div>
       </section>
@@ -122,7 +122,7 @@ export default function PortfolioClient() {
           <div className="portfolio-note reveal-up">
             <div>
               <h3>Your business could be next.</h3>
-              <p>Every project ships with sub-second load times, search-optimised structure, and a design built to convert. Timeline: under 4 weeks from brief to live.</p>
+              <p>Every project ships with sub-second load times, search-optimized structure, and a design built to convert. Timeline: under 4 weeks from brief to live.</p>
             </div>
             <a href="/contact" className="btn-flip btn-primary btn-large">
               <span className="btn-flip-inner">
