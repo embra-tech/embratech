@@ -96,7 +96,7 @@ export default function Services() {
                   <span className="replay-icon" aria-hidden="true">↻</span>Replay 01/05
                 </button>
               </div>
-              <p>Bespoke, responsive websites built around your business goals and customer journey — engineered to load in under a second.</p>
+              <p>Written from scratch in React around your business goals and customer journey — no templates, no builders, engineered to load in under a second.</p>
               <div className="bento-card-tags"><span className="bento-tag">Custom UI/UX</span><span className="bento-tag">Mobile First</span><span className="bento-tag">Sub-Second Speed</span><span className="bento-tag">CMS Ready</span></div>
               <a href="#contact" className="btn-flip btn-ghost btn-small"><span className="btn-flip-inner"><span className="btn-flip-state">Start Your Project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span><span className="btn-flip-state" aria-hidden="true">Start Your Project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span></span></a>
             </div>

@@ -260,7 +260,7 @@ export default function PricingClient() {
               <span className="badge-pill">Transparency</span>
               <span className="badge-text">How We Keep Prices Low</span>
             </div>
-            <h2>Why a hand-crafted site from us costs less than you&apos;d expect.</h2>
+            <h2>Why a custom-built site from us costs less than you&apos;d expect.</h2>
             <p>We hear the question every time. Here&apos;s the honest answer.</p>
           </div>
           <div className="pricing-how-grid">

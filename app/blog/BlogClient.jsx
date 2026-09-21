@@ -33,7 +33,10 @@ export default function BlogClient() {
               <Link href={`/blog/${post.slug}`} key={post.slug} className="blog-card reveal-up" style={{ animationDelay: `${i * 0.1}s`, display: 'block', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--line-dark)', borderRadius: '16px', padding: '30px', textDecoration: 'none', transition: 'border-color 0.3s' }}>
                 <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)', marginBottom: '12px', display: 'flex', justifyContent: 'space-between' }}>
                   <span>{post.date}</span>
+                  <span>·</span>
                   <span>{post.readTime}</span>
+                  <span>·</span>
+                  <span>By {post.author}</span>
                 </div>
                 <h3 style={{ fontSize: '20px', color: '#fff', marginBottom: '12px', lineHeight: 1.3 }}>{post.title}</h3>
                 <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14.5px', lineHeight: 1.6, marginBottom: '20px' }}>{post.excerpt}</p>

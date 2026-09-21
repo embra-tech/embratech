@@ -55,8 +55,11 @@ export default function BlogPostPage({ params }) {
             <span>Article</span>
           </nav>
           
-          <div style={{ marginTop: '30px', fontSize: '13px', color: 'rgba(255,255,255,0.5)', display: 'flex', gap: '15px' }}>
+          <div style={{ marginTop: '30px', fontSize: '13px', color: 'rgba(255,255,255,0.5)', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <span>{post.date}</span>
+            <span>·</span>
+            <span>By {post.author}</span>
+            <span>·</span>
             <span>{post.readTime}</span>
           </div>
           
