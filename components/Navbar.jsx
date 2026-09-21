@@ -66,9 +66,22 @@ export default function Navbar() {
         </Link>
 
         <nav className={`site-nav ${open ? 'open' : ''}`} id="site-nav" aria-label="Primary">
-          {NAV_ITEMS.map((l) => (
-            <Link key={l.href} href={l.href} onClick={(e) => go(e, l.href)}>{l.label}</Link>
-          ))}
+          {NAV_ITEMS.map((l) => {
+            const linkPath = l.href.split('#')[0] || '/';
+            const isActive = linkPath === '/'
+              ? pathname === '/'
+              : pathname.startsWith(linkPath);
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={(e) => go(e, l.href)}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="header-actions">

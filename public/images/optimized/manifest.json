@@ -1,0 +1,59 @@
+{
+  "portfolio": {
+    "tuxford": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "vvasquez": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "alaskahandyman": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "bestbreaks": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "skyhightreeservice": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    }
+  },
+  "avatars": {
+    "carlos": {
+      "widths": [
+        48,
+        96
+      ]
+    },
+    "victor": {
+      "widths": [
+        48,
+        96
+      ]
+    },
+    "dan": {
+      "widths": [
+        48,
+        96
+      ]
+    }
+  }
+}

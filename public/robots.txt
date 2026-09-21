@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /__bot/
 
 Sitemap: https://www.embratechnologies.org/sitemap.xml

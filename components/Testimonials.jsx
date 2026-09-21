@@ -1,23 +1,27 @@
 'use client';
 
-import Image from 'next/image';
+/**
+ * Avatar images use pre-built static AVIF/WebP/JPEG files.
+ * Rendered at 48px; 96px version serves 2x HiDPI displays.
+ * No /_next/image round-trip needed for 3 tiny avatar files.
+ */
 
 const REVIEWS = [
   {
-    quote: "The process was entirely different from other agencies we talked to. They didn’t pitch us jargon — they built a free sample of our homepage first. Seeing the actual work before signing anything made it a no-brainer, and they delivered the final site right on schedule.",
+    quote: "The process was entirely different from other agencies we talked to. They didn't pitch us jargon — they built a free sample of our homepage first. Seeing the actual work before signing anything made it a no-brainer, and they delivered the final site right on schedule.",
     name: 'Carlos Mendez',
     role: 'Owner, Tuxford Collision Center · Los Angeles, CA',
     url: 'https://tuxfordcollision.com/',
     domain: 'tuxfordcollision.com',
-    avatar: '/images/avatars/carlos.jpg',
+    avatar: 'carlos',
   },
   {
-    quote: "Communication was phenomenal. No waiting days for an email reply. The Embra team speaks plain English, explained exactly what they were doing, and handled the entire launch. It was the easiest vendor experience I’ve had as a business owner.",
+    quote: "Communication was phenomenal. No waiting days for an email reply. The Embra team speaks plain English, explained exactly what they were doing, and handled the entire launch. It was the easiest vendor experience I've had as a business owner.",
     name: 'Victor Vasquez',
     role: 'Founder, V Vasquez Handyman LLC · United States',
     url: 'https://vvasquezhandymanllc.net/',
     domain: 'vvasquezhandymanllc.net',
-    avatar: '/images/avatars/victor.jpg',
+    avatar: 'victor',
   },
   {
     quote: "They are incredibly fast without sacrificing quality. From the initial brief to the live launch, the momentum never stopped. They built a site that brings in real emergency calls, and they still respond immediately whenever we need a quick update.",
@@ -25,9 +29,36 @@ const REVIEWS = [
     role: 'Operations Director, Sky High Tree Service · Chicago, IL',
     url: 'https://skyhightreeservicechicago.com/',
     domain: 'skyhightreeservicechicago.com',
-    avatar: '/images/avatars/dan.jpg',
+    avatar: 'dan',
   },
 ];
+
+function Avatar({ name, alt }) {
+  const base = `/images/optimized/${name}`;
+  return (
+    <picture>
+      <source
+        type="image/avif"
+        srcSet={`${base}-48.avif 1x, ${base}-96.avif 2x`}
+      />
+      <source
+        type="image/webp"
+        srcSet={`${base}-48.webp 1x, ${base}-96.webp 2x`}
+      />
+      <img
+        src={`${base}-48.jpg`}
+        srcSet={`${base}-48.jpg 1x, ${base}-96.jpg 2x`}
+        alt={alt}
+        width={48}
+        height={48}
+        loading="lazy"
+        decoding="async"
+        className="author-avatar-img"
+        style={{ borderRadius: '50%', display: 'block' }}
+      />
+    </picture>
+  );
+}
 
 export default function Testimonials() {
   return (
@@ -43,17 +74,11 @@ export default function Testimonials() {
             <div className="testimonial-card reveal-up" key={r.name}>
               <div>
                 <div className="testimonial-stars">★★★★★</div>
-                <p className="testimonial-quote">"{r.quote}"</p>
+                <p className="testimonial-quote">{'\u201C'}{r.quote}{'\u201D'}</p>
               </div>
               <div className="testimonial-author">
                 <div className="author-avatar author-avatar-photo">
-                  <Image
-                    src={r.avatar}
-                    alt={r.name}
-                    width={48}
-                    height={48}
-                    className="author-avatar-img"
-                  />
+                  <Avatar name={r.avatar} alt={r.name} />
                 </div>
                 <div className="author-info">
                   <h4>{r.name}</h4>

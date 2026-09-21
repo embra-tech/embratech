@@ -1,9 +1,21 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 
+/**
+ * Portfolio screenshot sizes:
+ *   480px  — mobile / single-column card
+ *   720px  — tablet / 2-col grid
+ *   960px  — desktop large
+ *
+ * The container maxes at ~480px in CSS; sizes attr tells browser which to fetch.
+ * Static files at public/images/optimized/ — no /_next/image round-trip.
+ */
 function SitePreview({ site }) {
+  const name = site.image.replace('/images/', '').replace('.webp', '').replace('.png', '');
+  const base = `/images/optimized/${name}`;
+  const sizes = '(max-width: 720px) 100vw, 480px';
+
   return (
     <div className="site-preview" style={{ '--sc1': site.c1, '--sc2': site.c2 }}>
       <div className="sp-browserbar">
@@ -11,13 +23,32 @@ function SitePreview({ site }) {
         <div className="sp-url">{site.domain}</div>
       </div>
       <div className="sp-screenshot">
-        <Image
-          src={site.image}
-          alt={`${site.name} website screenshot`}
-          fill
-          sizes="(max-width: 720px) 100vw, 480px"
-          style={{ objectFit: 'cover', objectPosition: 'top' }}
-        />
+        <picture>
+          {/* AVIF — best compression, Chrome 85+, Firefox 93+, Safari 16+ */}
+          <source
+            type="image/avif"
+            srcSet={`${base}-480.avif 480w, ${base}-720.avif 720w, ${base}-960.avif 960w`}
+            sizes={sizes}
+          />
+          {/* WebP — broad support fallback */}
+          <source
+            type="image/webp"
+            srcSet={`${base}-480.webp 480w, ${base}-720.webp 720w, ${base}-960.webp 960w`}
+            sizes={sizes}
+          />
+          {/* JPEG — universal baseline */}
+          <img
+            src={`${base}-480.jpg`}
+            srcSet={`${base}-480.jpg 480w, ${base}-720.jpg 720w, ${base}-960.jpg 960w`}
+            sizes={sizes}
+            alt={`${site.name} website screenshot`}
+            loading="lazy"
+            decoding="async"
+            width={480}
+            height={320}
+            style={{ objectFit: 'cover', objectPosition: 'top', width: '100%', height: '100%', display: 'block' }}
+          />
+        </picture>
       </div>
     </div>
   );

@@ -5,9 +5,10 @@
   "description": "Embra Technologies — Next.js + GSAP + Lenis + Three.js rebuild",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/generate-images.mjs && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:images": "node scripts/generate-images.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

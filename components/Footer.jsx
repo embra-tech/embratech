@@ -57,11 +57,11 @@ export default function Footer() {
             </div>
             
             <div className="footer-socials" style={{ display: 'flex', gap: 14, marginTop: 24 }}>
-              <a href="https://linkedin.com/company/embratechnologies" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ color: 'var(--muted-inv)' }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <a href="https://linkedin.com/company/embratechnologies" target="_blank" rel="noopener noreferrer me" aria-label="Embra Technologies on LinkedIn" style={{ color: 'var(--muted-inv)' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               </a>
-              <a href="https://twitter.com/embratech" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" style={{ color: 'var(--muted-inv)' }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+              <a href="https://twitter.com/embratech" target="_blank" rel="noopener noreferrer me" aria-label="Embra Technologies on X (Twitter)" style={{ color: 'var(--muted-inv)' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
               </a>
             </div>
           </div>
