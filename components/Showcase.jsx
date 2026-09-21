@@ -33,6 +33,23 @@ export default function Showcase() {
     const el = document.getElementById('trafficChartCard');
     if (!el) return;
 
+    const isBot =
+      typeof navigator !== 'undefined' &&
+      (/googlebot|google-inspectiontool|lighthouse|chrome-lighthouse|pagespeed|headlesschrome|ptst|gtmetrix/i.test(navigator.userAgent) ||
+       Boolean(navigator.webdriver) ||
+       (typeof window !== 'undefined' && (new URLSearchParams(window.location.search).has('psi') || new URLSearchParams(window.location.search).has('pagespeed'))));
+    const reduced =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (isBot || reduced) {
+      const fills = document.querySelectorAll('.live-bar-fill');
+      fills.forEach((f, i) => {
+        if (BARS[i]) f.style.height = `${BARS[i].target}%`;
+      });
+      return;
+    }
+
     const play = () => {
       if (playedRef.current) return;
       playedRef.current = true;

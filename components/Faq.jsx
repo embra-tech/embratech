@@ -10,7 +10,19 @@ const FAQ_SETS = {
     },
     {
       q: 'Will my website be mobile responsive and fast?',
-      a: 'Yes — every website we build is mobile-first and engineered for sub-second loading, consistently scoring 95+ on Google PageSpeed Insights and meeting Core Web Vitals. <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.embratechnologies.org%2F" target="_blank" rel="noopener noreferrer" style="color:var(--primary);text-decoration:underline;">Verify our own live score here</a>.',
+      a: (
+        <>
+          Yes — every website we build is mobile-first and engineered for sub-second loading, consistently scoring 95+ on Google PageSpeed Insights and meeting Core Web Vitals.{' '}
+          <a
+            href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.embratechnologies.org%2F"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'var(--primary)', textDecoration: 'underline' }}
+          >
+            Verify our own live score here
+          </a>.
+        </>
+      ),
     },
     {
       q: 'How do your SEO services help my business?',

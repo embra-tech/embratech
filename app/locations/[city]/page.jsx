@@ -52,7 +52,7 @@ export default function LocationPage({ params }) {
             experiences that meet those exact needs.
           </p>
           <p style={{ marginBottom: '40px' }}>
-            Unlike traditional agencies that use bloated WordPress templates, we engineer hand-crafted Next.js applications that load 
+            Unlike traditional agencies that use bloated WordPress templates, we engineer custom-built Next.js applications that load 
             in under a second. We combine this technical foundation with aggressive Local SEO strategies to ensure you dominate 
             the local search market.
           </p>

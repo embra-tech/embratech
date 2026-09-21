@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import Cta from '../../../components/Cta';
-import Script from 'next/script';
+
+export const dynamicParams = false;
 
 const PAGESPEED = (domain) =>
   `https://pagespeed.web.dev/analysis?url=https%3A%2F%2F${encodeURIComponent(domain)}%2F`;
@@ -124,16 +126,33 @@ export function generateMetadata({ params }) {
 
 export default function CaseStudyPage({ params }) {
   const cs = CASE_STUDIES[params.slug];
-  if (!cs) return null;
+  if (!cs) notFound();
 
-  const schema = {
+  const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: `${cs.name} — Web Design Case Study`,
+    description: `How Embra Technologies built a high-performance website for ${cs.name} in ${cs.location}.`,
+    image: 'https://www.embratechnologies.org/opengraph-image.jpg',
     author: { '@type': 'Organization', name: 'Embra Technologies', url: 'https://www.embratechnologies.org' },
-    publisher: { '@type': 'Organization', name: 'Embra Technologies', url: 'https://www.embratechnologies.org' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Embra Technologies',
+      url: 'https://www.embratechnologies.org',
+      logo: { '@type': 'ImageObject', url: 'https://www.embratechnologies.org/images/logo.png' },
+    },
     about: { '@type': 'Organization', name: cs.name, url: cs.url },
     url: `https://www.embratechnologies.org/portfolio/${params.slug}`,
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.embratechnologies.org/' },
+      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: 'https://www.embratechnologies.org/portfolio' },
+      { '@type': 'ListItem', position: 3, name: cs.name, item: `https://www.embratechnologies.org/portfolio/${params.slug}` },
+    ],
   };
 
   const ArrowUp = () => (
@@ -149,9 +168,14 @@ export default function CaseStudyPage({ params }) {
 
   return (
     <div className="page-shell case-study-shell">
-      <Script id="cs-schema" type="application/ld+json" strategy="beforeInteractive">
-        {JSON.stringify(schema)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="page-hero case-hero">

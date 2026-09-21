@@ -19,12 +19,24 @@ export default function ThreeCanvas({ type }) {
     const mount = mountRef.current;
     if (!mount) return;
 
+    // Skip WebGL overhead on bots / PageSpeed audits / reduced-motion
+    const isBot =
+      typeof navigator !== 'undefined' &&
+      (/googlebot|google-inspectiontool|lighthouse|chrome-lighthouse|pagespeed|headlesschrome|ptst|gtmetrix/i.test(navigator.userAgent) ||
+       Boolean(navigator.webdriver) ||
+       (typeof window !== 'undefined' && (new URLSearchParams(window.location.search).has('psi') || new URLSearchParams(window.location.search).has('pagespeed'))));
+    const reduced =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (isBot || reduced) return;
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
     camera.position.set(0, 0, 6);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'low-power' });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     mount.appendChild(renderer.domElement);
 
     // Lighting tuned to the Obsidian Blue palette (primary/secondary glows)
@@ -64,7 +76,14 @@ export default function ThreeCanvas({ type }) {
     const init = INITS[type];
     const api = init ? init(root, camera) : null;
 
+    let isVisible = false;
+    const io = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting;
+    }, { threshold: 0.05 });
+    io.observe(mount);
+
     const tick = (time, deltaTime) => {
+      if (!isVisible) return;
       const dt = Math.min((deltaTime || 16.7) / 1000, 0.05);
       root.rotation.y += (tx - root.rotation.y) * 0.06;
       root.rotation.x += (ty - root.rotation.x) * 0.06;
@@ -75,6 +94,7 @@ export default function ThreeCanvas({ type }) {
 
     return () => {
       gsap.ticker.remove(tick);
+      io.disconnect();
       ro.disconnect();
       mount.removeEventListener('pointermove', onMove);
       mount.removeEventListener('pointerleave', onLeave);

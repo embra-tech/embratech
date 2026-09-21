@@ -13,16 +13,62 @@ export const metadata = {
 };
 
 import ServicesClient from './ServicesClient';
-import Script from 'next/script';
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Web Design and Development',
+  provider: {
+    '@type': 'ProfessionalService',
+    name: 'Embra Technologies',
+    url: 'https://www.embratechnologies.org',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'United States',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Web Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Custom Website Design & Development',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Search Engine Optimization (SEO)',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Digital Identity Management',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Digital Systems & Seamless Integrations',
+        },
+      },
+    ],
+  },
+};
 
 export default function ServicesPage() {
   return (
     <>
-      <Script
-        id="service-schema"
+      <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@type":"Service","serviceType":"Web Design and Development","provider":{"@type":"ProfessionalService","name":"Embra Technologies","url":"https://www.embratechnologies.org"},"areaServed":{"@type":"Country","name":"United States"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Web Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Custom Website Design & Development"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Search Engine Optimization (SEO)"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Digital Identity Management"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Digital Systems & Seamless Integrations"}}]}}' }}
-        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
       />
       <ServicesClient />
     </>

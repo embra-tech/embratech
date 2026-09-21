@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Script from 'next/script';
 
 /**
  * Breadcrumb — renders a "Home → [label]" trail and emits BreadcrumbList JSON-LD.
@@ -28,11 +27,9 @@ export default function Breadcrumb({ label, href }) {
 
   return (
     <>
-      <Script
-        id={`breadcrumb-${href.replace(/\//g, '-')}`}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        strategy="beforeInteractive"
       />
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <ol>

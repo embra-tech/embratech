@@ -66,7 +66,7 @@ export default function PrivacyPage() {
               <h3>Information collected automatically</h3>
               <ul>
                 <li><strong>Log data</strong> — your IP address, browser type, operating system, referring URL, pages visited, and timestamps. This data is collected by our hosting provider (Vercel) in standard server logs.</li>
-                <li><strong>Analytics data</strong> — aggregated, anonymised traffic and engagement data collected via Google Analytics 4, if analytics are enabled. This includes pages viewed, session duration, and general geographic region (country/state level).</li>
+                <li><strong>Analytics data</strong> — aggregated, anonymised traffic and engagement data collected via privacy-first Vercel Analytics. This includes general page counts, referrer domains, and country-level geographic region. No cross-site tracking or personal identifiers are used.</li>
                 <li><strong>Performance data</strong> — Core Web Vitals and page-load metrics collected by Vercel&rsquo;s edge infrastructure. No personal identifiers are attached to this data.</li>
               </ul>
               <h3>Information we do NOT collect</h3>
@@ -109,8 +109,9 @@ export default function PrivacyPage() {
                   <a href="https://formsubmit.co/privacy" target="_blank" rel="noopener noreferrer">FormSubmit Privacy Policy</a>.
                 </li>
                 <li>
-                  <strong>Google Analytics 4</strong> — used for anonymised website analytics. Data is processed by Google LLC. See{' '}
-                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&rsquo;s Privacy Policy</a>.
+                  <strong>Vercel Analytics &amp; Axiom</strong> — used for anonymised performance monitoring and visitor count statistics. No personal identifiers or cross-site tracking cookies are stored. See the{' '}
+                  <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Vercel Privacy Policy</a> and{' '}
+                  <a href="https://axiom.co/privacy" target="_blank" rel="noopener noreferrer">Axiom Privacy Policy</a>.
                 </li>
                 <li>
                   <strong>Stripe</strong> — used for payment processing on applicable invoices. We never see or store your full card details. See the{' '}

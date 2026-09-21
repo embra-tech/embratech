@@ -54,7 +54,7 @@ export default function SiteCard({ site, index }) {
                   title="View live report"
                 >
                   {r.label}
-                  <span className="cs-chip-verify">Verify ?</span>
+                  <span className="cs-chip-verify">Verify ↗</span>
                 </a>
               ) : (
                 <span key={r.label} className="work-result-badge">

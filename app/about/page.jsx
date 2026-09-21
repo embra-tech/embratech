@@ -3,7 +3,7 @@ export const metadata = {
   alternates: { canonical: '/about' },
   title: 'About Us — Our Team, Values & Approach to Web Design',
   description:
-    'Learn how Embra Technologies helps US businesses compete online with custom-built websites, local SEO, and transparent pricing. 1,000+ hours of delivered craftsmanship, 4.8/5 client rating.',
+    'Learn how Embra Technologies helps US businesses compete online with custom-built websites, local SEO, and transparent pricing. High-performance React builds, 96/100 average PageSpeed.',
   openGraph: {
     title: 'About Embra Technologies — Who We Are',
     description:

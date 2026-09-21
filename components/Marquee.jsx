@@ -1,6 +1,6 @@
 const ITEMS = [
   { icon: 'play',   label: 'NEXT.JS 14' },
-  { icon: 'layers', label: 'REACT & TYPESCRIPT' },
+  { icon: 'layers', label: 'REACT 18 ARCHITECTURE' },
   { icon: 'search', label: 'GOOGLE CORE WEB VITALS' },
   { icon: 'bolt',   label: 'GSAP ANIMATIONS' },
   { icon: 'tri',    label: 'THREE.JS WebGL' },

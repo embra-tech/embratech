@@ -11,7 +11,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const figtree = Figtree({
   subsets: ['latin'],
-  weight: ['400', '600', '800'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
   variable: '--font-figtree',
   display: 'swap',
 });
@@ -35,6 +35,7 @@ export const metadata = {
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
     ],
     shortcut: '/favicon.svg',
     apple: '/favicon.svg',
@@ -59,9 +60,18 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.embratechnologies.org',
+    images: [
+      {
+        url: 'https://www.embratechnologies.org/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Embra Technologies — Websites, SEO & Digital Identity',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
+    images: ['https://www.embratechnologies.org/opengraph-image.jpg'],
   },
 };
 
@@ -76,7 +86,7 @@ export default function RootLayout({ children }) {
             <Footer />
             <WhatsAppButton />
             <CookieBanner />
-                        <script
+            <script
               type="application/ld+json"
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify({
@@ -84,10 +94,11 @@ export default function RootLayout({ children }) {
                   "@type": "ProfessionalService",
                   "name": "Embra Technologies",
                   "url": "https://www.embratechnologies.org",
-                  "logo": "https://www.embratechnologies.org/opengraph-image.png",
-                  "image": "https://www.embratechnologies.org/opengraph-image.png",
+                  "logo": "https://www.embratechnologies.org/images/logo.png",
+                  "image": "https://www.embratechnologies.org/opengraph-image.jpg",
                   "description": "Embra Technologies designs and builds fast, modern websites, improves search visibility, and manages digital identity for growing businesses across the United States.",
                   "telephone": "+1-212-207-1152",
+                  "email": "sales@embratechnologies.org",
                   "address": {
                     "@type": "PostalAddress",
                     "streetAddress": "1969 51st St",
@@ -96,7 +107,15 @@ export default function RootLayout({ children }) {
                     "postalCode": "11204",
                     "addressCountry": "US"
                   },
-                  "priceRange": "$"
+                  "priceRange": "$",
+                  "openingHoursSpecification": [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                      "opens": "09:00",
+                      "closes": "18:00"
+                    }
+                  ]
                 })
               }}
             />
