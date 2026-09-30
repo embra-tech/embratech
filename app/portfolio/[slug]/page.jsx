@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Cta from '../../../components/Cta';
+import siteConfig from '../../../lib/site-config';
 
 export const dynamicParams = false;
 
@@ -133,25 +134,25 @@ export default function CaseStudyPage({ params }) {
     '@type': 'Article',
     headline: `${cs.name} — Web Design Case Study`,
     description: `How Embra Technologies built a high-performance website for ${cs.name} in ${cs.location}.`,
-    image: 'https://www.embratechnologies.org/opengraph-image.jpg',
-    author: { '@type': 'Organization', name: 'Embra Technologies', url: 'https://www.embratechnologies.org' },
+    image: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+    author: { '@type': 'Organization', name: siteConfig.legalName, url: siteConfig.siteUrl },
     publisher: {
       '@type': 'Organization',
-      name: 'Embra Technologies',
-      url: 'https://www.embratechnologies.org',
-      logo: { '@type': 'ImageObject', url: 'https://www.embratechnologies.org/images/logo.png' },
+      name: siteConfig.legalName,
+      url: siteConfig.siteUrl,
+      logo: { '@type': 'ImageObject', url: `${siteConfig.siteUrl}${siteConfig.logo}` },
     },
     about: { '@type': 'Organization', name: cs.name, url: cs.url },
-    url: `https://www.embratechnologies.org/portfolio/${params.slug}`,
+    url: `${siteConfig.siteUrl}/portfolio/${params.slug}`,
   };
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.embratechnologies.org/' },
-      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: 'https://www.embratechnologies.org/portfolio' },
-      { '@type': 'ListItem', position: 3, name: cs.name, item: `https://www.embratechnologies.org/portfolio/${params.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteConfig.siteUrl}/` },
+      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${siteConfig.siteUrl}/portfolio` },
+      { '@type': 'ListItem', position: 3, name: cs.name, item: `${siteConfig.siteUrl}/portfolio/${params.slug}` },
     ],
   };
 

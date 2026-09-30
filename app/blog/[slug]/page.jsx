@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { BLOG_POSTS } from '../../../lib/blogData';
 import Cta from '../../../components/Cta';
+import siteConfig from '../../../lib/site-config';
 
 export const dynamicParams = false;
 
@@ -42,6 +43,9 @@ export default function BlogPostPage({ params }) {
   const post = BLOG_POSTS.find((p) => p.slug === params.slug);
   if (!post) notFound();
 
+  const cleanText = post.content.replace(/<[^>]*>/g, '');
+  const wordCount = cleanText.split(/\s+/).filter(Boolean).length;
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -49,32 +53,33 @@ export default function BlogPostPage({ params }) {
     description: post.excerpt,
     datePublished: post.date,
     dateModified: post.date,
+    wordCount: wordCount,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://www.embratechnologies.org/blog/${params.slug}`,
+      '@id': `${siteConfig.siteUrl}/blog/${params.slug}`,
     },
-    image: 'https://www.embratechnologies.org/opengraph-image.jpg',
+    image: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
     author: {
       '@type': 'Person',
-      name: post.author,
-      jobTitle: 'Lead Technical Architect',
+      name: siteConfig.author.name !== 'TODO_OWNER' ? siteConfig.author.name : post.author,
+      jobTitle: siteConfig.author.role !== 'TODO_OWNER' ? siteConfig.author.role : 'Lead Technical Architect',
       worksFor: {
         '@type': 'Organization',
-        name: 'Embra Technologies',
-        url: 'https://www.embratechnologies.org',
+        name: siteConfig.legalName,
+        url: siteConfig.siteUrl,
       },
-      url: 'https://www.embratechnologies.org/about',
+      url: `${siteConfig.siteUrl}/about`,
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Embra Technologies',
-      url: 'https://www.embratechnologies.org',
+      name: siteConfig.legalName,
+      url: siteConfig.siteUrl,
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.embratechnologies.org/images/logo.png',
+        url: `${siteConfig.siteUrl}${siteConfig.logo}`,
       },
     },
-    url: `https://www.embratechnologies.org/blog/${params.slug}`,
+    url: `${siteConfig.siteUrl}/blog/${params.slug}`,
   };
 
   return (
