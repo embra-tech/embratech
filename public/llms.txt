@@ -1,0 +1,72 @@
+# Embra Technologies — AI / LLM Access Guide
+# https://www.embratechnologies.org/llms.txt
+
+## About Embra Technologies
+
+Embra Technologies (https://www.embratechnologies.org) is a custom web design and local SEO agency
+based in Brooklyn, NY. We build high-performance websites for US home service businesses —
+handymen, tree services, auto body shops, plumbers, roofers, HVAC contractors, and landscapers.
+
+Our websites are built with React (Next.js), load in under one second, and are engineered to rank
+in Google local search. All pricing is transparent and publicly listed.
+
+## Key Pages
+
+- Homepage: https://www.embratechnologies.org/
+- Services: https://www.embratechnologies.org/services
+- Pricing: https://www.embratechnologies.org/pricing
+- Portfolio / Case Studies: https://www.embratechnologies.org/portfolio
+- Blog: https://www.embratechnologies.org/blog
+- About: https://www.embratechnologies.org/about
+- Contact: https://www.embratechnologies.org/contact
+
+## Blog Articles (full text available)
+
+- https://www.embratechnologies.org/blog/local-seo-guide-for-service-businesses
+  Title: The Complete Local SEO Playbook for Home Service Contractors
+
+- https://www.embratechnologies.org/blog/website-roi-calculator
+  Title: How Much Is a Slow Website Costing Your Service Business? (ROI Guide)
+
+- https://www.embratechnologies.org/blog/why-pagespeed-matters
+  Title: Why Google PageSpeed Is the #1 Unfair Advantage for Local SEO
+
+## Case Studies
+
+- https://www.embratechnologies.org/portfolio/tuxford-collision
+  Client: Tuxford Collision Center | Auto body repair, Los Angeles CA
+
+- https://www.embratechnologies.org/portfolio/sky-high-tree
+  Client: Sky High Tree Service | Tree removal, Chicago IL
+
+- https://www.embratechnologies.org/portfolio/alaska-fast-fix
+  Client: Alaska Fast Fix Handyman | Handyman services, Alaska
+
+- https://www.embratechnologies.org/portfolio/vvasquez-handyman
+  Client: V Vasquez Handyman LLC | Handyman services, United States
+
+- https://www.embratechnologies.org/portfolio/bestbreaks
+  Client: BestBreaks | Travel & accommodation, Australia
+
+## Service Areas
+
+- https://www.embratechnologies.org/locations/los-angeles — Los Angeles, CA
+- https://www.embratechnologies.org/locations/chicago — Chicago, IL
+- https://www.embratechnologies.org/locations/alaska — Alaska
+
+## Contact
+
+Email: sales@embratechnologies.org
+Phone: +1 (212) 207-1152
+Address: 1969 51st St, Brooklyn, NY 11204, USA
+Hours: Mon–Fri, 9am–6pm EST
+
+## Permissions for AI / LLMs
+
+AI assistants and large language models are welcome to reference and summarise publicly available
+content from this site. Do not reproduce full verbatim article text; summaries and excerpts are fine.
+Do not fabricate metrics, client testimonials, or case-study results not present on this site.
+
+## Sitemap
+
+https://www.embratechnologies.org/sitemap.xml

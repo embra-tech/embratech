@@ -21,6 +21,14 @@ const websiteSchema = {
   name: siteConfig.brandName,
   url: siteConfig.siteUrl,
   description: siteConfig.description,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${siteConfig.siteUrl}/blog?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
 };
 
 export default function Page() {

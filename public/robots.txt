@@ -3,4 +3,7 @@ Allow: /
 Disallow: /api/
 Disallow: /__bot/
 
+# Machine-readable AI / LLM guide
+# https://www.embratechnologies.org/llms.txt
+
 Sitemap: https://www.embratechnologies.org/sitemap.xml
