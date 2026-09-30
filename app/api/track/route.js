@@ -104,6 +104,11 @@ export async function POST(request) {
       if (!event_type || !session_id) continue;
       if (path && isAssetPath(path)) continue;
 
+      let finalUA = rawUA;
+      if (uaParsed.bot_reason === 'url-in-ua') {
+        finalUA = null;
+      }
+
       const record = {
         type: 'visitor_tracking',
         event_type,
@@ -114,7 +119,7 @@ export async function POST(request) {
         ip_address: ip,
         country,
         city,
-        user_agent: rawUA,
+        user_agent: finalUA,
         ...uaParsed,
         timestamp: new Date().toISOString(),
       };
