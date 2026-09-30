@@ -5,11 +5,12 @@ import { useReveal } from '../../lib/useReveal';
 import PageHeader from '../../components/PageHeader';
 import Breadcrumb from '../../components/Breadcrumb';
 import Link from 'next/link';
+import siteConfig from '../../lib/site-config';
 
 const CHANNELS = [
-  { label: 'Email', value: 'sales@embratechnologies.org', href: 'mailto:sales@embratechnologies.org', icon: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></> },
-  { label: 'Phone', value: '+1 (212) 207-1152', href: 'tel:+12122071152', icon: <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.8 19.8 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1.22h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.62-1.62a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /> },
-  { label: 'Hours', value: 'Mon - Fri, 9:00 AM - 6:00 PM EST', href: null, icon: <><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></> },
+  { label: 'Email', value: siteConfig.email, href: `mailto:${siteConfig.email}`, icon: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></> },
+  { label: 'Phone', value: siteConfig.phoneDisplay, href: `tel:${siteConfig.phone}`, icon: <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.8 19.8 0 0 1 1.61 3.4 2 2 0 0 1 3.58 1.22h3a2 2 0 0 1 2 1.72c.127.96.36 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.62-1.62a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /> },
+  { label: 'Hours', value: siteConfig.hoursDisplay, href: null, icon: <><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></> },
 ];
 
 export default function ContactClient() {

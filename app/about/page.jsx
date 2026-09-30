@@ -1,4 +1,5 @@
 import AboutClient from './AboutClient';
+import JsonLd from '../../components/JsonLd';
 import siteConfig from '../../lib/site-config';
 
 export const metadata = {
@@ -14,6 +15,47 @@ export const metadata = {
   },
 };
 
+const aboutSchema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: `About ${siteConfig.legalName}`,
+    url: `${siteConfig.siteUrl}/about`,
+    description:
+      'Embra Technologies builds custom React websites and local SEO systems for US home service businesses — handymen, tree services, auto body shops, plumbers, roofers, and contractors.',
+    mainEntity: {
+      '@type': 'Organization',
+      '@id': `${siteConfig.siteUrl}/#organization`,
+      name: siteConfig.legalName,
+      url: siteConfig.siteUrl,
+      foundingDate: String(siteConfig.foundingYear),
+      description: siteConfig.description,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: siteConfig.address.street,
+        addressLocality: siteConfig.address.city,
+        addressRegion: siteConfig.address.state,
+        postalCode: siteConfig.address.zip,
+        addressCountry: siteConfig.address.country,
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: siteConfig.phone,
+        email: siteConfig.email,
+        contactType: 'customer service',
+        hoursAvailable: siteConfig.hours,
+        areaServed: 'US',
+      },
+      sameAs: Object.values(siteConfig.social).filter(Boolean),
+    },
+  },
+];
+
 export default function AboutPage() {
-  return <AboutClient />;
+  return (
+    <>
+      <JsonLd data={aboutSchema} />
+      <AboutClient />
+    </>
+  );
 }

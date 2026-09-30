@@ -7,6 +7,7 @@ import WhyUs from '../../components/WhyUs';
 import Cta from '../../components/Cta';
 import Faq from '../../components/Faq';
 import Breadcrumb from '../../components/Breadcrumb';
+import siteConfig from '../../lib/site-config';
 
 const SERVICES = [
   {
@@ -113,30 +114,34 @@ export default function ServicesClient() {
             <p>We build high-converting websites optimized for local visibility across key US metropolitan and regional markets.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
-            {[
-              { name: 'Los Angeles, CA', slug: 'los-angeles', desc: 'Auto body, collision, and service contractor web development & local search.' },
-              { name: 'Chicago, IL', slug: 'chicago', desc: 'Commercial services, emergency tree care, and trade contractor websites.' },
-              { name: 'Alaska', slug: 'alaska', desc: 'Handyman, home repair, and remote contractor digital presence.' },
-              { name: 'Gulf Coast', slug: 'gulf-coast', desc: 'Marine, industrial, hospitality, and coastal contractor platforms.' },
-            ].map((loc) => (
-              <a
-                key={loc.slug}
-                href={`/locations/${loc.slug}`}
-                style={{
-                  padding: '20px',
-                  background: 'rgba(255,255,255,0.03)',
-                  border: '1px solid var(--line-dark)',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '8px',
-                  transition: 'border-color 0.2s',
-                }}
-              >
-                <strong style={{ color: '#fff', fontSize: '1.1rem' }}>{loc.name} &rarr;</strong>
-                <span style={{ fontSize: '0.85rem', color: 'var(--muted-inv)', lineHeight: 1.5 }}>{loc.desc}</span>
-              </a>
-            ))}
+            {siteConfig.serviceAreas.map((loc) => {
+              const descs = {
+                'los-angeles': 'Auto body, collision, and service contractor web development & local search.',
+                'chicago': 'Commercial services, emergency tree care, and trade contractor websites.',
+                'alaska': 'Handyman, home repair, and remote contractor digital presence.',
+                'gulf-coast': 'Marine, industrial, hospitality, and coastal contractor platforms.',
+                'brooklyn': 'Brooklyn & NYC home service businesses, contractors, and tradespeople.',
+              };
+              return (
+                <a
+                  key={loc.slug}
+                  href={`/locations/${loc.slug}`}
+                  style={{
+                    padding: '20px',
+                    background: 'rgba(255,255,255,0.03)',
+                    border: '1px solid var(--line-dark)',
+                    borderRadius: '12px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '8px',
+                    transition: 'border-color 0.2s',
+                  }}
+                >
+                  <strong style={{ color: '#fff', fontSize: '1.1rem' }}>{loc.name} &rarr;</strong>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--muted-inv)', lineHeight: 1.5 }}>{descs[loc.slug] ?? `Local web design & SEO for ${loc.name} businesses.`}</span>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>

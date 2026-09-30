@@ -1,5 +1,7 @@
 'use client';
 
+import siteConfig from '../lib/site-config';
+
 /**
  * Avatar images use pre-built static AVIF/WebP/JPEG files.
  * Rendered at 48px; 96px version serves 2x HiDPI displays.
@@ -14,6 +16,7 @@ const REVIEWS = [
     url: 'https://tuxfordcollision.com/',
     domain: 'tuxfordcollision.com',
     avatar: 'carlos',
+    rating: 5,
   },
   {
     quote: "Communication was phenomenal. No waiting days for an email reply. The Embra team speaks plain English, explained exactly what they were doing, and handled the entire launch. It was the easiest vendor experience I've had as a business owner.",
@@ -22,6 +25,7 @@ const REVIEWS = [
     url: 'https://vvasquezhandymanllc.net/',
     domain: 'vvasquezhandymanllc.net',
     avatar: 'victor',
+    rating: 5,
   },
   {
     quote: "They are incredibly fast without sacrificing quality. From the initial brief to the live launch, the momentum never stopped. They built a site that brings in real emergency calls, and they still respond immediately whenever we need a quick update.",
@@ -30,6 +34,7 @@ const REVIEWS = [
     url: 'https://skyhightreeservicechicago.com/',
     domain: 'skyhightreeservicechicago.com',
     avatar: 'dan',
+    rating: 5,
   },
 ];
 
@@ -61,8 +66,46 @@ function Avatar({ name, alt }) {
 }
 
 export default function Testimonials() {
+  // Review + AggregateRating JSON-LD (no star markup — just data layer)
+  const reviewSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${siteConfig.siteUrl}/#localbusiness`,
+    name: siteConfig.brandName,
+    url: siteConfig.siteUrl,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      reviewCount: String(REVIEWS.length),
+      bestRating: '5',
+      worstRating: '1',
+    },
+    review: REVIEWS.map((r) => ({
+      '@type': 'Review',
+      author: {
+        '@type': 'Person',
+        name: r.name,
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: String(r.rating),
+        bestRating: '5',
+        worstRating: '1',
+      },
+      reviewBody: r.quote,
+      publisher: {
+        '@type': 'Organization',
+        name: r.role.split(',')[1]?.split('·')[0]?.trim() ?? r.role,
+      },
+    })),
+  };
+
   return (
     <section id="testimonials" aria-labelledby="testimonials-heading">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
       <div className="wrap">
         <div className="section-head reveal-up">
           <div className="section-badge"><span className="badge-pill">Reviews</span><span className="badge-text">Client Feedback</span></div>
@@ -73,7 +116,7 @@ export default function Testimonials() {
           {REVIEWS.map((r) => (
             <div className="testimonial-card reveal-up" key={r.name}>
               <div>
-                <div className="testimonial-stars">★★★★★</div>
+                <div className="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
                 <p className="testimonial-quote">{'\u201C'}{r.quote}{'\u201D'}</p>
               </div>
               <div className="testimonial-author">

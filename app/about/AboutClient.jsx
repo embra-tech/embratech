@@ -6,6 +6,7 @@ import { gsap, ScrollTrigger } from '../../lib/gsap';
 import PageHeader from '../../components/PageHeader';
 import Cta from '../../components/Cta';
 import Breadcrumb from '../../components/Breadcrumb';
+import siteConfig from '../../lib/site-config';
 
 const STATS = [
   { value: 5, suffix: '', label: 'Live client websites built and actively ranking on Google' },
@@ -95,13 +96,13 @@ export default function AboutClient() {
           <div className="cs-col-body reveal-up">
             <h3>Senior builders — not account managers.</h3>
             <p>
-              We are a small team of senior designers and engineers based in Brooklyn, NY. When you email us, the person who replies is the same person writing your code and designing your pages. No account managers, no handoffs to junior staff, no work shipped overseas.
+              We are a small team of senior designers and engineers based in {siteConfig.address.city}, {siteConfig.address.state}. When you email us, the person who replies is the same person writing your code and designing your pages. No account managers, no handoffs to junior staff, no work shipped overseas.
             </p>
             <p>
-              We built Embra because great web work was gatekept behind agency retainers most local businesses can't justify. Our answer was to cut the overhead entirely and put the savings back into execution quality — which is why our sites average 96/100 on PageSpeed and rank, while costing a fraction of what a full-service agency charges.
+              We built Embra because great web work was gatekept behind agency retainers most local businesses can&apos;t justify. Our answer was to cut the overhead entirely and put the savings back into execution quality — which is why our sites average 96/100 on PageSpeed and rank, while costing a fraction of what a full-service agency charges.
             </p>
             <p style={{marginTop: '20px', fontSize: '14px', color: 'rgba(255,255,255,0.5)', fontStyle: 'italic'}}>
-              Want to know who you're working with? Reach out directly at sales@embratechnologies.org — we reply within one business day, not a bot.
+              Want to know who you&apos;re working with? Reach out directly at <a href={`mailto:${siteConfig.email}`} style={{ color: 'var(--primary)' }}>{siteConfig.email}</a> — we reply within one business day, not a bot.
             </p>
           </div>
         </div>
