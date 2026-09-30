@@ -33,6 +33,12 @@ const jetbrains = JetBrains_Mono({
   display: 'swap',
 });
 
+export const viewport = {
+  themeColor: '#0b0c10',
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export const metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   icons: {

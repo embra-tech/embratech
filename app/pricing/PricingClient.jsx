@@ -226,7 +226,7 @@ export default function PricingClient() {
           <div className="pricing-reassurance-row reveal-up">
             <span>✓ No interest, no credit check</span>
             <span>✓ Full ownership — no lock-in</span>
-            <span>✓ Add the $150/mo Care Plan anytime</span>
+            <span>✓ Add the <Link href="/services/care-plan" style={{ textDecoration: 'underline', color: 'inherit' }}>$150/mo Care Plan</Link> anytime</span>
             <span>✓ 7-day satisfaction guarantee</span>
           </div>
 

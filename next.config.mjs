@@ -45,6 +45,21 @@ const nextConfig = {
       },
     ];
   },
+
+  async redirects() {
+    return [
+      {
+        source: '/portfolio/skyhightreeservice',
+        destination: '/portfolio/sky-high-tree',
+        permanent: true,
+      },
+      {
+        source: '/care-plan',
+        destination: '/services/care-plan',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -1882,6 +1882,20 @@ section { padding: 90px 0; }
 /* ================================================================
    FAVICON APPLE TOUCH — ensure icon is black on light backgrounds
    ================================================================ */
-@media (prefers-color-scheme: light) {
-  :root { color-scheme: dark; }
+/* ================================================================
+   MOBILE TAP TARGETS & ACCESSIBILITY
+   ================================================================ */
+@media (pointer: coarse), (max-width: 768px) {
+  .btn-flip, .btn-primary, .btn-ghost, .pricing-toggle-btn {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-item, .footer-col a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
 }
+
