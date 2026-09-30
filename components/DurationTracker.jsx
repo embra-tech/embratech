@@ -1,74 +1,169 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 
-export default function DurationTracker() {
-  const pathname = usePathname();
-  const startTimeRef = useRef(Date.now());
-  const currentPathRef = useRef(pathname);
+// ── Asset path filter (mirrors server) ──────────────────────────────────────
+const ASSET_RE = /^\/(_next\/|api\/|images\/|favicon\.|.*\.(svg|png|jpg|jpeg|webp|avif|ico|css|js|map|woff2?|ttf|eot)$)/i;
+const SKIP_PATHS = new Set(['/robots.txt', '/sitemap.xml']);
+function isAssetPath(p) {
+  return ASSET_RE.test(p) || SKIP_PATHS.has(p);
+}
 
-  useEffect(() => {
-    // We only want to set the initial values once on mount
-    startTimeRef.current = Date.now();
-    currentPathRef.current = pathname;
+// ── Helpers ─────────────────────────────────────────────────────────────────
+function getSessionId() {
+  try {
+    const match = document.cookie.match(/(?:^|;\s*)embra_session=([^;]*)/);
+    if (match) return JSON.parse(decodeURIComponent(match[1])).id;
+  } catch (e) {}
+  return null;
+}
+
+function sendTrack(events) {
+  try {
+    const payload = JSON.stringify(Array.isArray(events) ? events : [events]);
+    const blob = new Blob([payload], { type: 'application/json' });
+    if (navigator.sendBeacon && navigator.sendBeacon('/api/track', blob)) return;
+    // Fallback
+    fetch('/api/track', { method: 'POST', body: payload, keepalive: true,
+      headers: { 'Content-Type': 'application/json' } }).catch(() => {});
+  } catch (e) {}
+}
+
+// ── Component ───────────────────────────────────────────────────────────────
+export default function VisitorTracker() {
+  const pathname = usePathname();
+
+  // Refs survive re-renders without triggering them
+  const currentPath = useRef(null);
+  const navSeq = useRef(0);
+  const pageLoadTime = useRef(0);
+  const visibleTime = useRef(0);       // accumulated visible ms for current page
+  const lastVisibleAt = useRef(0);     // timestamp when tab last became visible
+  const lastPageviewTs = useRef(0);    // dedup: last pageview send timestamp
+  const durationSent = useRef(false);  // whether duration was already sent for this page
+
+  // ── Accumulate visible time ───────────────────────────────────────────────
+  const startVisibleTimer = useCallback(() => {
+    if (document.visibilityState === 'visible') {
+      lastVisibleAt.current = Date.now();
+    }
   }, []);
 
-  useEffect(() => {
-    // Helper to send beacon
-    const sendDuration = (path, start) => {
-      const elapsed_ms = Date.now() - start;
-      if (elapsed_ms < 100) return; // Ignore extremely short blips
-      
-      let sessionId = null;
-      try {
-        const match = document.cookie.match(/(?:^|;\s*)embra_session=([^;]*)/);
-        if (match) {
-          const data = JSON.parse(decodeURIComponent(match[1]));
-          sessionId = data.id;
-        }
-      } catch (e) {}
+  const pauseVisibleTimer = useCallback(() => {
+    if (lastVisibleAt.current > 0) {
+      visibleTime.current += Date.now() - lastVisibleAt.current;
+      lastVisibleAt.current = 0;
+    }
+  }, []);
 
-      if (!sessionId) return; 
+  const getAccumulatedMs = useCallback(() => {
+    let total = visibleTime.current;
+    if (lastVisibleAt.current > 0) {
+      total += Date.now() - lastVisibleAt.current;
+    }
+    return total;
+  }, []);
 
-      const payload = {
-        session_id: sessionId,
-        path: path,
-        elapsed_ms: elapsed_ms
-      };
+  // ── Send duration for current page (exactly once) ─────────────────────────
+  const flushDuration = useCallback(() => {
+    if (durationSent.current) return;
+    pauseVisibleTimer();
+    const ms = getAccumulatedMs();
+    // Bounds: 300 ms – 30 min
+    if (ms < 300 || ms > 1_800_000) return;
 
-      const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
-      navigator.sendBeacon('/api/duration', blob);
-    };
+    const sid = getSessionId();
+    if (!sid) return;
 
-    // If pathname changed (SPA navigation)
-    if (currentPathRef.current !== pathname) {
-      sendDuration(currentPathRef.current, startTimeRef.current);
-      currentPathRef.current = pathname;
-      startTimeRef.current = Date.now();
+    durationSent.current = true;
+    sendTrack({
+      event_type: 'page_duration',
+      session_id: sid,
+      path: currentPath.current,
+      nav_sequence: navSeq.current,
+      duration_ms: ms,
+    });
+  }, [pauseVisibleTimer, getAccumulatedMs]);
+
+  // ── Fire pageview (with dedup + visibility gate) ──────────────────────────
+  const firePageview = useCallback((path) => {
+    if (isAssetPath(path)) return;
+    if (document.visibilityState !== 'visible') return;
+
+    const now = Date.now();
+    // Dedup: ignore if same session+path within 1 second
+    if (currentPath.current === path && now - lastPageviewTs.current < 1000) return;
+
+    // Flush duration for previous page first
+    if (currentPath.current !== null) {
+      flushDuration();
     }
 
-    // Handle visibilitychange / pagehide
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'hidden') {
-        sendDuration(currentPathRef.current, startTimeRef.current);
-        // Reset timer so we don't double-count if they come back to the tab
-        startTimeRef.current = Date.now(); 
-      }
-    };
-    
-    const handlePageHide = () => {
-      sendDuration(currentPathRef.current, startTimeRef.current);
+    // Increment nav sequence (stored in sessionStorage for persistence)
+    let seq = 1;
+    try {
+      const stored = sessionStorage.getItem('embra_nav_seq');
+      if (stored) seq = parseInt(stored, 10) + 1;
+    } catch (e) {}
+    try { sessionStorage.setItem('embra_nav_seq', String(seq)); } catch (e) {}
+
+    const prevPath = currentPath.current;
+    currentPath.current = path;
+    navSeq.current = seq;
+    pageLoadTime.current = now;
+    visibleTime.current = 0;
+    lastVisibleAt.current = now;
+    durationSent.current = false;
+    lastPageviewTs.current = now;
+
+    const sid = getSessionId();
+    if (!sid) return;
+
+    sendTrack({
+      event_type: 'pageview',
+      session_id: sid,
+      path,
+      nav_sequence: seq,
+      referrer_path: prevPath,
+    });
+  }, [flushDuration]);
+
+  // ── Visibility change handler ─────────────────────────────────────────────
+  useEffect(() => {
+    const handleVisibility = () => {
+      try {
+        if (document.visibilityState === 'hidden') {
+          // User is leaving — flush duration
+          flushDuration();
+        } else {
+          // User came back — if duration wasn't sent yet, resume timer
+          if (!durationSent.current) {
+            startVisibleTimer();
+          }
+        }
+      } catch (e) {}
     };
 
-    window.addEventListener('visibilitychange', handleVisibilityChange);
+    const handlePageHide = () => {
+      try { flushDuration(); } catch (e) {}
+    };
+
+    document.addEventListener('visibilitychange', handleVisibility);
     window.addEventListener('pagehide', handlePageHide);
 
     return () => {
-      window.removeEventListener('visibilitychange', handleVisibilityChange);
+      document.removeEventListener('visibilitychange', handleVisibility);
       window.removeEventListener('pagehide', handlePageHide);
     };
-  }, [pathname]);
+  }, [flushDuration, startVisibleTimer]);
+
+  // ── React to pathname changes ─────────────────────────────────────────────
+  useEffect(() => {
+    // This effect fires on initial mount AND on every SPA route change.
+    // usePathname() only updates on real navigations, NOT on prefetch.
+    firePageview(pathname);
+  }, [pathname, firePageview]);
 
   return null;
 }
