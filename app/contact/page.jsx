@@ -1,18 +1,18 @@
-// Server component — exports unique metadata, renders the client-side inner component
+import ContactClient from './ContactClient';
+import siteConfig from '../../lib/site-config';
+
 export const metadata = {
   alternates: { canonical: '/contact' },
-  title: 'Contact Us — Start Your Website Project Today',
+  title: 'Contact Us for a Free Homepage Sample | Embra',
   description:
-    'Get in touch with Embra Technologies. Describe your business and goals — we reply within 24 hours with a free custom homepage sample, no obligation.',
+    'Start your project today. Contact Embra Technologies with your business goals and we will reply within 24 hours with a free custom homepage sample.',
   openGraph: {
-    title: 'Contact Embra Technologies — Free Homepage Sample in 24 Hours',
+    title: 'Contact Us for a Free Homepage Sample | Embra',
     description:
-      'Tell us about your business. We\'ll design a custom homepage sample for you within 24 hours — completely free, no commitment needed.',
-    url: 'https://www.embratechnologies.org/contact',
+      'Start your project today. Contact Embra Technologies with your business goals and we will reply within 24 hours with a free custom homepage sample.',
+    url: `${siteConfig.siteUrl}/contact`,
   },
 };
-
-import ContactClient from './ContactClient';
 
 export default function ContactPage() {
   return <ContactClient />;

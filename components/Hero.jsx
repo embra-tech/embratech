@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from '../lib/gsap';
 import { useTheme } from './ThemeProvider';
 
-const HEADLINE_WORDS = ['Your', 'website.', 'Built', 'before', 'you'];
+const HEADLINE_WORDS = ['Custom', 'Websites', 'for', 'Home', 'Service', 'Businesses', '—', 'Built', 'Before', 'You'];
 
 export default function Hero() {
   const sectionRef = useRef(null);
@@ -137,11 +137,11 @@ export default function Hero() {
           </a>
         </div>
 
-        <h1 id="hero-heading" ref={h1Ref}>
-          {HEADLINE_WORDS.map((w) => (
-            <span className="word" key={w}>{w}</span>
-          ))}{' '}
-          <span className="word"><span className="highlight-text">buy.</span></span>
+        <h1 id="hero-heading" ref={h1Ref} aria-label="Custom Websites for Home Service Businesses — Built Before You Buy.">
+          {HEADLINE_WORDS.map((w, i) => (
+            <span key={i}><span className="word">{w}</span> </span>
+          ))}
+          <span className="word"><span className="highlight-text">Buy.</span></span>
         </h1>
 
         <p className="hero-sub" ref={subRef}>

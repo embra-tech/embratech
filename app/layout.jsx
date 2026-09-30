@@ -9,6 +9,8 @@ import CookieBanner from '../components/CookieBanner';
 import DurationTracker from '../components/DurationTracker';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import siteConfig from '../lib/site-config';
+import JsonLd from '../components/JsonLd';
 
 const figtree = Figtree({
   subsets: ['latin'],
@@ -32,7 +34,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://www.embratechnologies.org'),
+  metadataBase: new URL(siteConfig.siteUrl),
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
@@ -51,32 +53,72 @@ export const metadata = {
     },
   },
   title: {
-    default: 'Embra Technologies — Websites, SEO & Digital Identity for Growing Businesses',
-    template: '%s — Embra Technologies',
+    default: `${siteConfig.brandName} | ${siteConfig.tagline}`,
+    template: `%s | ${siteConfig.brandName}`,
   },
-  description:
-    'Embra Technologies designs and builds fast, modern websites, improves search visibility, and manages digital identity for growing businesses across the United States.',
+  description: siteConfig.description,
   openGraph: {
-    siteName: 'Embra Technologies',
+    siteName: siteConfig.brandName,
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.embratechnologies.org',
+    url: siteConfig.siteUrl,
     images: [
       {
-        url: 'https://www.embratechnologies.org/opengraph-image.jpg',
+        url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Embra Technologies — Websites, SEO & Digital Identity',
+        alt: `${siteConfig.brandName} — ${siteConfig.tagline}`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@embratech',
-    creator: '@embratech',
-    images: ['https://www.embratechnologies.org/opengraph-image.jpg'],
+    site: siteConfig.social.twitter ? new URL(siteConfig.social.twitter).pathname : '',
+    creator: siteConfig.social.twitter ? new URL(siteConfig.social.twitter).pathname : '',
+    images: [siteConfig.ogImage],
   },
 };
+
+const globalSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${siteConfig.siteUrl}/#organization`,
+    "name": siteConfig.legalName,
+    "url": siteConfig.siteUrl,
+    "logo": `${siteConfig.siteUrl}${siteConfig.logo}`,
+    "sameAs": Object.values(siteConfig.social).filter(Boolean)
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${siteConfig.siteUrl}/#localbusiness`,
+    "name": siteConfig.brandName,
+    "url": siteConfig.siteUrl,
+    "logo": `${siteConfig.siteUrl}${siteConfig.logo}`,
+    "image": `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+    "description": siteConfig.description,
+    "telephone": siteConfig.phone,
+    "email": siteConfig.email,
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": siteConfig.address.street,
+      "addressLocality": siteConfig.address.city,
+      "addressRegion": siteConfig.address.state,
+      "postalCode": siteConfig.address.zip,
+      "addressCountry": siteConfig.address.country
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ]
+  }
+];
 
 export default function RootLayout({ children }) {
   return (
@@ -93,39 +135,7 @@ export default function RootLayout({ children }) {
             <WhatsAppButton />
             <CookieBanner />
             <DurationTracker />
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  "@context": "https://schema.org",
-                  "@type": "ProfessionalService",
-                  "name": "Embra Technologies",
-                  "url": "https://www.embratechnologies.org",
-                  "logo": "https://www.embratechnologies.org/images/logo.png",
-                  "image": "https://www.embratechnologies.org/opengraph-image.jpg",
-                  "description": "Embra Technologies designs and builds fast, modern websites, improves search visibility, and manages digital identity for growing businesses across the United States.",
-                  "telephone": "+1-212-207-1152",
-                  "email": "sales@embratechnologies.org",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "1969 51st St",
-                    "addressLocality": "Brooklyn",
-                    "addressRegion": "NY",
-                    "postalCode": "11204",
-                    "addressCountry": "US"
-                  },
-                  "priceRange": "$",
-                  "openingHoursSpecification": [
-                    {
-                      "@type": "OpeningHoursSpecification",
-                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                      "opens": "09:00",
-                      "closes": "18:00"
-                    }
-                  ]
-                })
-              }}
-            />
+            <JsonLd data={globalSchema} />
             <Analytics />
             <SpeedInsights />
           </ScrollManager>
@@ -134,7 +144,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-
-
-

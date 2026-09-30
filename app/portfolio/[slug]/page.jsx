@@ -114,7 +114,7 @@ export function generateMetadata({ params }) {
   if (!cs) return {};
   return {
     alternates: { canonical: `/portfolio/${params.slug}` },
-    title: `${cs.name} — Web Design Case Study | Embra Technologies`,
+    title: `${cs.name} Case Study | Embra`,
     description: `How Embra Technologies built a high-performance website for ${cs.name} in ${cs.location}. Results: ${cs.results.map((r) => r.label).join(', ')}.`,
     openGraph: {
       title: `${cs.name} Case Study — Embra Technologies`,

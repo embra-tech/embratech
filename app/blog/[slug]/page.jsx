@@ -13,7 +13,7 @@ export function generateMetadata({ params }) {
   const post = BLOG_POSTS.find((p) => p.slug === params.slug);
   if (!post) return {};
   return {
-    title: `${post.title} | Embra Technologies`,
+    title: `${post.title} | Embra`,
     description: post.excerpt,
     alternates: { canonical: `/blog/${params.slug}` },
     openGraph: {

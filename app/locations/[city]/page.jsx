@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import LocationClient from './LocationClient';
+import siteConfig from '../../../lib/site-config';
 
 const LOCATIONS = [
   { slug: 'los-angeles', name: 'Los Angeles', state: 'CA' },
@@ -17,19 +18,20 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const loc = LOCATIONS.find(l => l.slug === params.city);
   if (!loc) return {};
-  const url = `https://www.embratechnologies.org/locations/${params.city}`;
+  const url = `${siteConfig.siteUrl}/locations/${params.city}`;
   const desc = `Embra Technologies builds high-converting, lightning-fast websites for growing businesses in ${loc.name}. Get a free custom homepage sample today.`;
-  return {
-    title: `Web Design & SEO Agency in ${loc.name} — Embra Technologies`,
+  
+  const meta = {
+    title: `Web Design & SEO Agency in ${loc.name} | Embra`,
     alternates: { canonical: `/locations/${params.city}` },
     description: desc,
     openGraph: {
-      title: `Web Design & SEO Agency in ${loc.name} — Embra Technologies`,
+      title: `Web Design & SEO Agency in ${loc.name} | Embra`,
       description: desc,
       url,
       images: [
         {
-          url: 'https://www.embratechnologies.org/opengraph-image.jpg',
+          url: siteConfig.ogImage,
           width: 1200,
           height: 630,
           alt: `Embra Technologies — Web Design & SEO in ${loc.name}`,
@@ -37,6 +39,12 @@ export function generateMetadata({ params }) {
       ],
     },
   };
+
+  if (params.city === 'gulf-coast') {
+    meta.robots = { index: false, follow: true };
+  }
+
+  return meta;
 }
 
 export default function LocationPage({ params }) {

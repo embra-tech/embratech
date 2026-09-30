@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { gsap, ScrollTrigger } from '../lib/gsap';
+import siteConfig from '../lib/site-config';
 
 const BARS = [
   { target: 36, tooltip: 'Month 1: +45%' },
@@ -134,7 +135,7 @@ export default function Showcase() {
               <div className="chart-header">
                 <div>
                   <div className="chart-title">Organic Traffic &amp; Inbound Leads</div>
-                  <div className="chart-subtitle">Last 90 Days Performance</div>
+                  <div className="chart-subtitle">Sample data — illustrative (Last 90 Days)</div>
                 </div>
                 <div className="chart-metric-wrap">
                   <div className="chart-metric">{metric}</div>
@@ -195,10 +196,12 @@ export default function Showcase() {
                 <span className="metric-name">Structured Schema SEO</span>
                 <span className="metric-val" style={{ color: 'var(--accent)' }}>Validated</span>
               </div>
-              <div className="metric-row">
-                <span className="metric-name">Monthly Inbound Leads</span>
-                <span className="metric-val" style={{ color: '#FFFFFF' }}>{leads}</span>
-              </div>
+              {siteConfig.proof.leads14850 && (
+                <div className="metric-row">
+                  <span className="metric-name">Monthly Inbound Leads</span>
+                  <span className="metric-val" style={{ color: '#FFFFFF' }}>{leads}</span>
+                </div>
+              )}
             </div>
           </div>
         </div>

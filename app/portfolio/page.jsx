@@ -1,18 +1,18 @@
-// Server component — exports unique metadata, renders the client-side inner component
+import PortfolioClient from './PortfolioClient';
+import siteConfig from '../../lib/site-config';
+
 export const metadata = {
   alternates: { canonical: '/portfolio' },
-  title: 'Portfolio — Live Websites We Have Designed & Built',
+  title: 'Web Design Portfolio & Case Studies | Embra',
   description:
-    'View live, in-production websites built by Embra Technologies for auto body, handyman, tree service, travel, and service businesses across the US and Australia.',
+    'View our portfolio of live, high-performance websites built for auto body shops, tree services, and handymen. Designed to convert local search traffic.',
   openGraph: {
-    title: 'Embra Technologies Portfolio — Real Websites, Real Results',
+    title: 'Web Design Portfolio & Case Studies | Embra',
     description:
-      'Five live client websites — each mobile-first, sub-second loading, and built to convert local search traffic into booked jobs.',
-    url: 'https://www.embratechnologies.org/portfolio',
+      'View our portfolio of live, high-performance websites built for auto body shops, tree services, and handymen. Designed to convert local search traffic.',
+    url: `${siteConfig.siteUrl}/portfolio`,
   },
 };
-
-import PortfolioClient from './PortfolioClient';
 
 export default function PortfolioPage() {
   return <PortfolioClient />;

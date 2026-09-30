@@ -1,16 +1,18 @@
+import siteConfig from '../../lib/site-config';
+
 export const metadata = {
   alternates: { canonical: '/privacy' },
-  title: 'Privacy Policy — Embra Technologies',
+  title: 'Privacy Policy | Embra',
   description:
-    'Learn how Embra Technologies collects, uses, and protects your personal data. We are committed to transparency and your privacy.',
+    'Read the Privacy Policy for Embra Technologies. Learn how we collect, use, and protect your personal data and information when you use our website services.',
   openGraph: {
-    title: 'Privacy Policy — Embra Technologies',
+    title: 'Privacy Policy | Embra',
     description:
-      'Learn how Embra Technologies collects, uses, and protects your personal data. We are committed to transparency and your privacy.',
-    url: 'https://www.embratechnologies.org/privacy',
+      'Read the Privacy Policy for Embra Technologies. Learn how we collect, use, and protect your personal data and information when you use our website services.',
+    url: `${siteConfig.siteUrl}/privacy`,
     images: [
       {
-        url: 'https://www.embratechnologies.org/opengraph-image.jpg',
+        url: siteConfig.ogImage,
         width: 1200,
         height: 630,
         alt: 'Embra Technologies Privacy Policy',

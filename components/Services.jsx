@@ -6,6 +6,8 @@ import dynamic from 'next/dynamic';
 const ThreeCanvas = dynamic(() => import('./three/ThreeCanvas'), { ssr: false });
 
 
+import siteConfig from '../lib/site-config';
+
 /* ================= 01/05 — BLUEPRINT GENESIS =================
    A browser interface draws itself into existence, line by line,
    the way an architect's blueprint resolves into a finished
@@ -105,7 +107,12 @@ export default function Services() {
           {/* Card 2 — SEO, featuring Rank Climb (B) */}
           <article className="bento-card reveal-up">
             <div className="card-ui-mockup three-mockup">
-              <div className="ui-seo-stats mockup-overlay"><span className="ui-stat-pill">Rank #1 Google</span><span className="ui-stat-score">+280% Traffic</span></div>
+              <div className="ui-seo-stats mockup-overlay">
+                {siteConfig.proof.rank1Google && <span className="ui-stat-pill">Rank #1 Google</span>}
+                <span className="ui-stat-score">
+                  {siteConfig.proof.traffic280 ? '+280% Traffic' : 'High Search Intent'}
+                </span>
+              </div>
               <ThreeCanvas type='rankClimb' />
               <span className="mockup-tag">Rank Climb</span>
             </div>

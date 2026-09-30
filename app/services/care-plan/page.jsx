@@ -2,20 +2,21 @@ import Link from 'next/link';
 import Breadcrumb from '../../../components/Breadcrumb';
 import PageHeader from '../../../components/PageHeader';
 import Cta from '../../../components/Cta';
+import siteConfig from '../../../lib/site-config';
 
 export const metadata = {
   alternates: { canonical: '/services/care-plan' },
-  title: 'Website Care Plan ($150/mo) — Hosting, Maintenance & SEO — Embra Technologies',
+  title: 'Website Care Plan: Hosting & SEO | Embra',
   description:
-    'Keep your website fast, secure, and ranking. Our $150/month Care Plan includes high-performance hosting, content updates, security patches, monthly SEO reports, and 24-hour turnaround support. Cancel anytime.',
+    'Keep your website fast, secure, and ranking. Our $150/mo Care Plan includes hosting, content updates, monthly local SEO reports, and 24-hour support.',
   openGraph: {
-    title: 'Website Care Plan ($150/mo) — Embra Technologies',
+    title: 'Website Care Plan: Hosting & SEO | Embra',
     description:
-      'Everything needed to keep your business website running at peak speed and ranking on Google. No lock-in contracts, full client ownership.',
-    url: 'https://www.embratechnologies.org/services/care-plan',
+      'Keep your website fast, secure, and ranking. Our $150/mo Care Plan includes hosting, content updates, monthly local SEO reports, and 24-hour support.',
+    url: `${siteConfig.siteUrl}/services/care-plan`,
     images: [
       {
-        url: 'https://www.embratechnologies.org/opengraph-image.jpg',
+        url: siteConfig.ogImage,
         width: 1200,
         height: 630,
         alt: 'Embra Technologies Website Care Plan',

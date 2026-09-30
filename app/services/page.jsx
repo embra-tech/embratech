@@ -1,18 +1,19 @@
-// Server component — exports unique metadata, renders the client-side inner component
+import ServicesClient from './ServicesClient';
+import JsonLd from '../../components/JsonLd';
+import siteConfig from '../../lib/site-config';
+
 export const metadata = {
   alternates: { canonical: '/services' },
-  title: 'Services — Custom Web Design, SEO & Digital Identity Management',
+  title: 'Web Design & SEO Services for Local Businesses | Embra',
   description:
-    'Embra Technologies offers custom website design, search engine optimization, social media identity, payment integrations, and launch & scale services for US small businesses.',
+    'Professional web design, local SEO, and digital identity management services. We help home service businesses rank on Google and book more local jobs.',
   openGraph: {
-    title: 'Embra Technologies Services — Everything to Grow Your Business Online',
+    title: 'Web Design & SEO Services for Local Businesses | Embra',
     description:
-      'From custom UI design to local SEO and Stripe integrations — one agency, every digital service your business needs.',
-    url: 'https://www.embratechnologies.org/services',
+      'Professional web design, local SEO, and digital identity management services. We help home service businesses rank on Google and book more local jobs.',
+    url: `${siteConfig.siteUrl}/services`,
   },
 };
-
-import ServicesClient from './ServicesClient';
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
@@ -20,8 +21,8 @@ const SERVICE_SCHEMA = {
   serviceType: 'Web Design and Development',
   provider: {
     '@type': 'ProfessionalService',
-    name: 'Embra Technologies',
-    url: 'https://www.embratechnologies.org',
+    name: siteConfig.brandName,
+    url: siteConfig.siteUrl,
   },
   areaServed: {
     '@type': 'Country',
@@ -66,10 +67,7 @@ const SERVICE_SCHEMA = {
 export default function ServicesPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }}
-      />
+      <JsonLd data={SERVICE_SCHEMA} />
       <ServicesClient />
     </>
   );

@@ -1,0 +1,32 @@
+{
+  "http://localhost:3000/": {
+    "performance": 87,
+    "accessibility": 95,
+    "bestPractices": 96,
+    "seo": 100
+  },
+  "http://localhost:3000/services": {
+    "performance": 88,
+    "accessibility": 94,
+    "bestPractices": 96,
+    "seo": 100
+  },
+  "http://localhost:3000/pricing": {
+    "performance": 91,
+    "accessibility": 91,
+    "bestPractices": 96,
+    "seo": 100
+  },
+  "http://localhost:3000/portfolio/tuxford-collision": {
+    "performance": 89,
+    "accessibility": 91,
+    "bestPractices": 96,
+    "seo": 100
+  },
+  "http://localhost:3000/blog/website-roi-calculator": {
+    "performance": 89,
+    "accessibility": 94,
+    "bestPractices": 96,
+    "seo": 100
+  }
+}

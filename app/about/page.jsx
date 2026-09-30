@@ -1,18 +1,18 @@
-// Server component — exports unique metadata, renders the client-side inner component
+import AboutClient from './AboutClient';
+import siteConfig from '../../lib/site-config';
+
 export const metadata = {
   alternates: { canonical: '/about' },
-  title: 'About Us — Our Team, Values & Approach to Web Design',
+  title: 'About Our Local SEO & Web Design Agency | Embra',
   description:
-    'Learn how Embra Technologies helps US businesses compete online with custom-built websites, local SEO, and transparent pricing. High-performance React builds, 96/100 average PageSpeed.',
+    'Learn how Embra Technologies helps US service businesses compete online. We build custom React websites engineered for local SEO and sub-second load times.',
   openGraph: {
-    title: 'About Embra Technologies — Who We Are',
+    title: 'About Our Local SEO & Web Design Agency | Embra',
     description:
-      'We give hardworking local businesses fast, modern websites that rank on Google — built from scratch, not templated.',
-    url: 'https://www.embratechnologies.org/about',
+      'Learn how Embra Technologies helps US service businesses compete online. We build custom React websites engineered for local SEO and sub-second load times.',
+    url: `${siteConfig.siteUrl}/about`,
   },
 };
-
-import AboutClient from './AboutClient';
 
 export default function AboutPage() {
   return <AboutClient />;

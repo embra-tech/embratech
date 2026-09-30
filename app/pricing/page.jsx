@@ -1,18 +1,18 @@
-// Server component — exports unique metadata, renders the client-side inner component
+import PricingClient from './PricingClient';
+import siteConfig from '../../lib/site-config';
+
 export const metadata = {
   alternates: { canonical: '/pricing' },
-  title: 'Pricing — Transparent Website Design & Monthly Care Plans',
+  title: 'Web Design Pricing & Monthly Care Plans | Embra',
   description:
-    'One clear build price (\$700), one clear monthly care plan (\$150/mo). See a free custom homepage sample for your business before paying a cent. No lock-in, full ownership.',
+    'Transparent website design pricing. From our $700 full build to the $150/mo Care Plan, we offer honest, no-surprise costs for growing US service businesses.',
   openGraph: {
-    title: 'Embra Technologies Pricing — Honest, No-Surprise Website Costs',
+    title: 'Web Design Pricing & Monthly Care Plans | Embra',
     description:
-      'From \$700 build to \$150/mo care plans. Try risk-free with a custom homepage sample in 24 hours.',
-    url: 'https://www.embratechnologies.org/pricing',
+      'Transparent website design pricing. From our $700 full build to the $150/mo Care Plan, we offer honest, no-surprise costs for growing US service businesses.',
+    url: `${siteConfig.siteUrl}/pricing`,
   },
 };
-
-import PricingClient from './PricingClient';
 
 export default function PricingPage() {
   return <PricingClient />;

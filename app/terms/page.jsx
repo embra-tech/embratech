@@ -1,16 +1,18 @@
+import siteConfig from '../../lib/site-config';
+
 export const metadata = {
   alternates: { canonical: '/terms' },
-  title: 'Terms of Service — Embra Technologies',
+  title: 'Terms of Service | Embra',
   description:
-    'Read the Terms of Service for Embra Technologies. Covers service scope, payment terms, intellectual property, and our commitment to client satisfaction.',
+    'Read the Terms of Service for Embra Technologies. Covers our web design service scope, payment terms, intellectual property, and client commitments.',
   openGraph: {
-    title: 'Terms of Service — Embra Technologies',
+    title: 'Terms of Service | Embra',
     description:
-      'Read the Terms of Service for Embra Technologies. Covers service scope, payment terms, intellectual property, and our commitment to client satisfaction.',
-    url: 'https://www.embratechnologies.org/terms',
+      'Read the Terms of Service for Embra Technologies. Covers our web design service scope, payment terms, intellectual property, and client commitments.',
+    url: `${siteConfig.siteUrl}/terms`,
     images: [
       {
-        url: 'https://www.embratechnologies.org/opengraph-image.jpg',
+        url: siteConfig.ogImage,
         width: 1200,
         height: 630,
         alt: 'Embra Technologies Terms of Service',
