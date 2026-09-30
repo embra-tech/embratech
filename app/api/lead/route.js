@@ -8,9 +8,16 @@ export async function POST(request) {
     const axiomToken = process.env.AXIOM_TOKEN;
     const axiomDataset = process.env.AXIOM_DATASET;
 
+    let session_id = null;
+    try {
+      const cookie = request.cookies.get('embra_session')?.value;
+      if (cookie) session_id = JSON.parse(cookie).id;
+    } catch(e) {}
+
     if (axiomToken && axiomDataset) {
       const logData = [{
         type: 'inbound_lead',
+        session_id,
         ...body,
         timestamp: new Date().toISOString()
       }];

@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 import CookieBanner from '../components/CookieBanner';
+import DurationTracker from '../components/DurationTracker';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
@@ -91,6 +92,7 @@ export default function RootLayout({ children }) {
             <Footer />
             <WhatsAppButton />
             <CookieBanner />
+            <DurationTracker />
             <script
               type="application/ld+json"
               dangerouslySetInnerHTML={{
