@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /__bot/
 
 # Machine-readable AI / LLM guide
 # https://www.embratechnologies.org/llms.txt

@@ -21,14 +21,8 @@ const websiteSchema = {
   name: siteConfig.brandName,
   url: siteConfig.siteUrl,
   description: siteConfig.description,
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: `${siteConfig.siteUrl}/blog?q={search_term_string}`,
-    },
-    'query-input': 'required name=search_term_string',
-  },
+  // SearchAction (sitelinks search box) removed 2026-10-01: Google retired the
+  // feature, and /blog?q= never performed a search. See INDEXING_FIX_CHANGELOG.md
 };
 
 export default function Page() {

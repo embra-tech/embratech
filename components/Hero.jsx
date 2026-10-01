@@ -56,6 +56,15 @@ export default function Hero() {
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     let api = null;
+
+    // Safety net — technical failures only. Normal flow is unchanged: the orb
+    // intro plays first and its onComplete reveals the text. If the WebGL scene
+    // still has not been created after 10s (three.js chunk failed or stalled),
+    // reveal the headline, subtitle and CTAs so the hero is never left empty.
+    const fallbackTimer = setTimeout(() => {
+      if (!sceneRef.current) revealText();
+    }, 10000);
+
     import('./three/HeroScene')
       .then(({ createHeroScene }) => {
         api = createHeroScene(canvas);
@@ -81,9 +90,15 @@ export default function Hero() {
             .to(api.parts.particles.material, { opacity: 0.85, duration: 2.0, ease: 'power1.in' }, 1.0);
         }
       })
-      .catch((err) => console.error('WebGL init error:', err));
+      .catch((err) => {
+        console.error('WebGL init error:', err);
+        // Technical failure (no WebGL support, context creation failed, chunk
+        // failed to load): show the text instead of an empty hero.
+        revealText();
+      });
 
     return () => {
+      clearTimeout(fallbackTimer);
       if (introTl.current) introTl.current.kill();
       if (textTl.current) textTl.current.kill();
       if (api) api.dispose();

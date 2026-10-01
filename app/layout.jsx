@@ -81,8 +81,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: siteConfig.social.twitter ? new URL(siteConfig.social.twitter).pathname : '',
-    creator: siteConfig.social.twitter ? new URL(siteConfig.social.twitter).pathname : '',
+    site: siteConfig.social.twitter ? `@${new URL(siteConfig.social.twitter).pathname.replace(/^\/+|\/+$/g, '')}` : undefined,
+    creator: siteConfig.social.twitter ? `@${new URL(siteConfig.social.twitter).pathname.replace(/^\/+|\/+$/g, '')}` : undefined,
     images: [siteConfig.ogImage],
   },
 };

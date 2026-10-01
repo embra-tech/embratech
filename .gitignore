@@ -7,3 +7,6 @@ dist
 .env*
 
 .next-build/
+
+# Local-only backups of removed/edited files (see INDEXING_FIX_CHANGELOG.md)
+_backup/

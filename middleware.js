@@ -1,37 +1,18 @@
 import { NextResponse } from 'next/server';
 
-// Bot UA regex — same pattern used in Hero.jsx and useReveal.js
-const BOT_UA_RE =
-  /googlebot|google-inspectiontool|lighthouse|chrome-lighthouse|pagespeed|headlesschrome|ptst|gtmetrix|bingbot|slurp|duckduckbot|baiduspider|yandexbot|sogou|exabot|facebot|ia_archiver/i;
-
-function isKnownBot(request) {
-  const ua = request.headers.get('user-agent') || '';
-  const { searchParams } = request.nextUrl;
-  return (
-    BOT_UA_RE.test(ua) ||
-    searchParams.has('psi') ||
-    searchParams.has('pagespeed')
-  );
-}
-
-export function middleware(request, event) {
-  const { pathname } = request.nextUrl;
-
-  // ── Bot-Optimized Serving ──────────────────────────────────────
-  // Rewrite known crawler/auditor requests to the /api/__bot edge route which
-  // returns bare HTML with zero JS/WebGL — identical content, targets 100/100 score.
-  if (isKnownBot(request)) {
-    const botUrl = request.nextUrl.clone();
-    botUrl.pathname = '/api/__bot';
-    botUrl.searchParams.set('p', pathname);
-    return NextResponse.rewrite(botUrl);
-  }
-
-  // ── Session cookie management ─────────────────────────────────
-  // The middleware only manages the session cookie (id + creation time).
-  // Pageview events are fired from the client via /api/track to avoid
-  // prefetch inflation. The server ingest endpoint handles UA parsing,
-  // bot detection, and all field enrichment.
+// ── Session cookie management ───────────────────────────────────
+// The middleware only manages the session cookie (id + creation time).
+// Pageview events are fired from the client via /api/track to avoid
+// prefetch inflation. The server ingest endpoint handles UA parsing,
+// bot detection, and all field enrichment.
+//
+// 2026-10-01: the former "bot-optimized serving" branch was removed.
+// It rewrote search-engine crawlers (Googlebot, Bingbot, Lighthouse…) to
+// /api/__bot, but that route was never built (underscore-prefixed folders
+// are private in the App Router), so every crawler received a 404 and the
+// site could not be indexed. Crawlers now receive exactly the same response
+// as visitors. Details and revert steps: INDEXING_FIX_CHANGELOG.md
+export function middleware(request) {
   const response = NextResponse.next();
 
   let sessionData = null;
@@ -49,6 +30,8 @@ export function middleware(request, event) {
       maxAge: 30 * 60,
       path: '/',
       sameSite: 'lax',
+      // HTTPS-only in production; still readable by DurationTracker (not httpOnly).
+      secure: process.env.NODE_ENV === 'production',
     });
   }
 
