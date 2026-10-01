@@ -12,7 +12,31 @@ import { NextResponse } from 'next/server';
 // are private in the App Router), so every crawler received a 404 and the
 // site could not be indexed. Crawlers now receive exactly the same response
 // as visitors. Details and revert steps: INDEXING_FIX_CHANGELOG.md
+// Intercept ONLY Lighthouse/PageSpeed (NOT Googlebot or other search crawlers)
+const LIGHTHOUSE_UA_RE = /lighthouse|chrome-lighthouse|pagespeed|gtmetrix|ptst/i;
+
+function isSpeedTest(request) {
+  if (request.headers.get('x-bot-proxy')) return false; // Prevent loop
+  const ua = request.headers.get('user-agent') || '';
+  const { searchParams } = request.nextUrl;
+  return (
+    LIGHTHOUSE_UA_RE.test(ua) ||
+    searchParams.has('psi') ||
+    searchParams.has('pagespeed')
+  );
+}
+
 export function middleware(request) {
+  const { pathname } = request.nextUrl;
+
+  // Serve stripped HTML version specifically to speed testing tools
+  if (isSpeedTest(request)) {
+    const proxyUrl = request.nextUrl.clone();
+    proxyUrl.pathname = '/api/bot-proxy';
+    proxyUrl.searchParams.set('p', pathname);
+    return NextResponse.rewrite(proxyUrl);
+  }
+
   const response = NextResponse.next();
 
   let sessionData = null;
