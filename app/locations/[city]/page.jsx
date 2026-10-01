@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import LocationClient from './LocationClient';
 import siteConfig from '../../../lib/site-config';
 
+export const dynamicParams = false;
+
 const LOCATIONS = [
   { slug: 'los-angeles', name: 'Los Angeles', state: 'CA' },
   { slug: 'chicago', name: 'Chicago', state: 'IL' },

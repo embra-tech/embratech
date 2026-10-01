@@ -94,6 +94,41 @@ const nextConfig = {
         destination: '/niches/roofing-website-design',
         permanent: true,
       },
+      {
+        source: '/locations/web-design-for-handyman-businesses',
+        destination: '/niches/web-design-for-handyman-businesses',
+        permanent: true,
+      },
+      {
+        source: '/locations/tree-service-website-design',
+        destination: '/niches/tree-service-website-design',
+        permanent: true,
+      },
+      {
+        source: '/locations/auto-body-shop-website-design',
+        destination: '/niches/auto-body-shop-website-design',
+        permanent: true,
+      },
+      {
+        source: '/locations/landscaping-website-design',
+        destination: '/niches/landscaping-website-design',
+        permanent: true,
+      },
+      {
+        source: '/locations/plumber-website-design',
+        destination: '/niches/plumber-website-design',
+        permanent: true,
+      },
+      {
+        source: '/locations/hvac-website-design',
+        destination: '/niches/hvac-website-design',
+        permanent: true,
+      },
+      {
+        source: '/locations/roofing-website-design',
+        destination: '/niches/roofing-website-design',
+        permanent: true,
+      },
     ];
   },
 };
