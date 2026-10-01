@@ -13,9 +13,9 @@ import Link from 'next/link';
 const SERVICES = [
   {
     step: '01', title: 'Custom Website Design & Development',
-    desc: 'Written from scratch in React — no WordPress themes, no drag-and-drop builders. Engineered to load in under a second and built around your customers, not a template.',
+    desc: 'Written from scratch in React, no WordPress themes, no drag-and-drop builders. Engineered to load in under a second and built around your customers, not a template.',
     points: [
-      'Written from scratch — no WordPress themes or Wix templates',
+      'Written from scratch, no WordPress themes or Wix templates',
       'Mobile-first, flawless on every device',
       'Sub-second loads meeting Core Web Vitals',
       'CMS-ready so your team can edit content',
@@ -39,7 +39,7 @@ const SERVICES = [
   },
   {
     step: '03', title: 'Digital Identity Management',
-    desc: 'Consistent, professional social media content and brand voice across platforms — building trust wherever clients find you.',
+    desc: 'Consistent, professional social media content and brand voice across platforms, building trust wherever clients find you.',
     points: [
       'Cross-platform brand cohesion',
       'Content strategy & scheduled publishing',
@@ -77,7 +77,7 @@ export default function ServicesClient() {
             pill="Services"
             badge="What We Deliver"
             title={<>Everything you need to <span className="highlight-text">grow online.</span></>}
-            sub="Exactly what it says: web design, SEO, and digital management built around your business — not a template, not a subscription trap, not a monthly fee you can’t cancel."
+            sub="Exactly what it says: web design, SEO, and digital management built around your business, not a template, not a subscription trap, not a monthly fee you can’t cancel."
           />
         </div>
       </section>

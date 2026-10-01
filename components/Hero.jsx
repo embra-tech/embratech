@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from '../lib/gsap';
 import { useTheme } from './ThemeProvider';
 
-const HEADLINE_WORDS = ['Custom', 'Websites', 'for', 'Home', 'Service', 'Businesses', '—', 'Built', 'Before', 'You'];
+const HEADLINE_WORDS = ['Custom', 'Websites', 'for', 'Home', 'Service', 'Businesses,', 'Built', 'Before', 'You'];
 
 export default function Hero() {
   const sectionRef = useRef(null);
@@ -57,7 +57,7 @@ export default function Hero() {
 
     let api = null;
 
-    // Safety net — technical failures only. Normal flow is unchanged: the orb
+    // Safety net, technical failures only. Normal flow is unchanged: the orb
     // intro plays first and its onComplete reveals the text. If the WebGL scene
     // still has not been created after 10s (three.js chunk failed or stalled),
     // reveal the headline, subtitle and CTAs so the hero is never left empty.
@@ -152,7 +152,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <h1 id="hero-heading" ref={h1Ref} aria-label="Custom Websites for Home Service Businesses — Built Before You Buy.">
+        <h1 id="hero-heading" ref={h1Ref} aria-label="Custom Websites for Home Service Businesses, Built Before You Buy.">
           {HEADLINE_WORDS.map((w, i) => (
             <span key={i}><span className="word">{w}</span> </span>
           ))}

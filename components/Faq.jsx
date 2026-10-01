@@ -12,7 +12,7 @@ const FAQ_SETS = {
       q: 'Will my website be mobile responsive and fast?',
       a: (
         <>
-          Yes — every website we build is mobile-first and engineered for sub-second loading, averaging 96/100 on Google PageSpeed Insights and meeting Core Web Vitals.{' '}
+          Yes, every website we build is mobile-first and engineered for sub-second loading, averaging 96/100 on Google PageSpeed Insights and meeting Core Web Vitals.{' '}
           <a
             href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.embratechnologies.org%2F"
             target="_blank"
@@ -30,14 +30,14 @@ const FAQ_SETS = {
     },
     {
       q: 'Do you provide maintenance and ongoing support?',
-      a: 'Yes — our $150/mo Care Plan covers hosting, security monitoring, monthly SEO health reports, content updates, and digital identity management. Cancel anytime.',
+      a: 'Yes, our $150/mo Care Plan covers hosting, security monitoring, monthly SEO health reports, content updates, and digital identity management. Cancel anytime.',
     },
   ],
 
   pricing: [
     {
       q: 'What exactly is the free homepage sample?',
-      a: "We design a fully custom homepage mockup for your business — styled with your brand colours and content — within 24 hours. It's a real design, not a template, and you review it at no cost before deciding anything.",
+      a: "We design a fully custom homepage mockup for your business, styled with your brand colours and content, within 24 hours. It's a real design, not a template, and you review it at no cost before deciding anything.",
     },
     {
       q: 'What if I need more than just a homepage?',
@@ -49,11 +49,11 @@ const FAQ_SETS = {
     },
     {
       q: 'Do I own the website after the build?',
-      a: 'Absolutely — full ownership transfers to you upon final payment. No proprietary systems, no lock-in. You get the code, the design files, and all credentials.',
+      a: 'Absolutely, full ownership transfers to you upon final payment. No proprietary systems, no lock-in. You get the code, the design files, and all credentials.',
     },
     {
       q: "What's your refund policy?",
-      a: "If you're unsatisfied within 7 days of launch, contact us and we'll make it right. Because every build is custom, refunds after launch aren't available — but we're committed to your satisfaction throughout the project.",
+      a: "If you're unsatisfied within 7 days of launch, contact us and we'll make it right. Because every build is custom, refunds after launch aren't available, but we're committed to your satisfaction throughout the project.",
     },
   ],
 
@@ -68,7 +68,7 @@ const FAQ_SETS = {
     },
     {
       q: 'Do you build e-commerce sites?',
-      a: 'Yes — we integrate Stripe and other payment gateways for product sales, quote-request flows, and booking deposits. For large product catalogues, we discuss the right platform fit in discovery.',
+      a: 'Yes, we integrate Stripe and other payment gateways for product sales, quote-request flows, and booking deposits. For large product catalogues, we discuss the right platform fit in discovery.',
     },
     {
       q: 'How wide is your local SEO coverage?',

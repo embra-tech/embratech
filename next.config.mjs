@@ -129,6 +129,16 @@ const nextConfig = {
         destination: '/niches/roofing-website-design',
         permanent: true,
       },
+      {
+        source: '/locations/ny',
+        destination: '/locations/brooklyn',
+        permanent: true,
+      },
+      {
+        source: '/locations/new-york',
+        destination: '/locations/brooklyn',
+        permanent: true,
+      },
     ];
   },
 };

@@ -10,7 +10,7 @@ import siteConfig from '../lib/site-config';
 
 const REVIEWS = [
   {
-    quote: "The process was entirely different from other agencies we talked to. They didn't pitch us jargon — they built a free sample of our homepage first. Seeing the actual work before signing anything made it a no-brainer, and they delivered the final site right on schedule.",
+    quote: "The process was entirely different from other agencies we talked to. They didn't pitch us jargon, they built a free sample of our homepage first. Seeing the actual work before signing anything made it a no-brainer, and they delivered the final site right on schedule.",
     name: 'Carlos Mendez',
     role: 'Owner, Tuxford Collision Center · Los Angeles, CA',
     url: 'https://tuxfordcollision.com/',

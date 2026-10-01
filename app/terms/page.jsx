@@ -168,7 +168,7 @@ export default function TermsPage() {
             <section id="care-plan">
               <h2>8. Monthly Care Plan</h2>
               <p>
-                The Care Plan is a rolling monthly subscription. You may cancel at any time by providing written notice to sales@embratechnologies.org. Cancellation takes effect at the end of the current billing period — no pro-rated refunds are issued. Upon cancellation, we will transfer all website files, credentials, and hosting access to you within 7 business days.
+                The Care Plan is a rolling monthly subscription. You may cancel at any time by providing written notice to sales@embratechnologies.org. Cancellation takes effect at the end of the current billing period, no pro-rated refunds are issued. Upon cancellation, we will transfer all website files, credentials, and hosting access to you within 7 business days.
               </p>
             </section>
 
@@ -185,7 +185,7 @@ export default function TermsPage() {
             <section id="liability">
               <h2>10. Limitation of Liability</h2>
               <p>
-                To the maximum extent permitted by applicable law, Embra Technologies shall not be liable for any indirect, incidental, special, consequential, or punitive damages — including loss of profits, data, or goodwill — arising from or related to your use of our services, even if we have been advised of the possibility of such damages.
+                To the maximum extent permitted by applicable law, Embra Technologies shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising from or related to your use of our services, even if we have been advised of the possibility of such damages.
               </p>
               <p>
                 Our total liability to you for any claim arising from these Terms or our services shall not exceed the total fees paid by you to Embra Technologies in the 3 months preceding the claim.

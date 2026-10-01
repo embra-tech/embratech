@@ -108,7 +108,7 @@ export default function NichePage() {
               />
             </picture>
             <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
-              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Auto Body Project: Tuxford Collision Center Los Angeles — Trust-first hierarchy & 97/100 PageSpeed.</span>
+              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Auto Body Project: Tuxford Collision Center Los Angeles, Trust-first hierarchy & 97/100 PageSpeed.</span>
               <Link href="/portfolio/tuxford-collision" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Read Tuxford Case Study &rarr;</Link>
             </div>
           </div>

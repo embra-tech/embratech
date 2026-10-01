@@ -22,7 +22,7 @@ const aboutSchema = [
     name: `About ${siteConfig.legalName}`,
     url: `${siteConfig.siteUrl}/about`,
     description:
-      'Embra Technologies builds custom React websites and local SEO systems for US home service businesses — handymen, tree services, auto body shops, plumbers, roofers, and contractors.',
+      'Embra Technologies builds custom React websites and local SEO systems for US home service businesses, handymen, tree services, auto body shops, plumbers, roofers, and contractors.',
     mainEntity: {
       '@type': 'Organization',
       '@id': `${siteConfig.siteUrl}/#organization`,

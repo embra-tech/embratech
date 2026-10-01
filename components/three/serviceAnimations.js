@@ -6,10 +6,10 @@ import * as THREE from 'three';
  * part of the same brand as the rest of the site (see HeroScene.js
  * SCENE_THEMES.obsidian and app/globals.css --primary/--secondary/--accent).
  *
- *   PRIMARY   #6FA8F5  — was cyan
- *   SECONDARY #1E56B0  — was violet
- *   ACCENT    #A9D2FF  — was amber/white accents
- *   WHITE     #FFFFFF  — highlights only, unchanged
+ *   PRIMARY   #6FA8F5 , was cyan
+ *   SECONDARY #1E56B0 , was violet
+ *   ACCENT    #A9D2FF , was amber/white accents
+ *   WHITE     #FFFFFF , highlights only, unchanged
  */
 const PRIMARY = 0x6fa8f5;
 const SECONDARY = 0x1e56b0;
@@ -23,7 +23,7 @@ const smooth = (x) => { x = clamp01(x); return x * x * (3 - 2 * x); };
 const rnd = (seed) => () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };
 
 /* ============================================================
-   SEO — RANK CLIMB
+   SEO, RANK CLIMB
    Bars ascending toward position #1, a marker riding the leader.
    ============================================================ */
 export function initRankClimb(root) {
@@ -79,7 +79,7 @@ export function initRankClimb(root) {
 }
 
 /* ============================================================
-   DIGITAL IDENTITY — CONSTELLATION
+   DIGITAL IDENTITY, CONSTELLATION
    Connected reputation nodes across a sphere.
    ============================================================ */
 export function initConstellation(root) {
@@ -134,7 +134,7 @@ export function initConstellation(root) {
 }
 
 /* ============================================================
-   DIGITAL SYSTEMS & INTEGRATIONS — DATA STREAMS
+   DIGITAL SYSTEMS & INTEGRATIONS, DATA STREAMS
    Packets flowing through curved pipes between two systems.
    ============================================================ */
 export function initDataStreams(root) {
@@ -203,7 +203,7 @@ export function initDataStreams(root) {
 }
 
 /* ============================================================
-   CUSTOM UI DESIGN — LAYER STACK
+   CUSTOM UI DESIGN, LAYER STACK
    Artboards floating in depth, a cursor gliding on top.
    ============================================================ */
 export function initLayerStack(root) {
@@ -258,7 +258,7 @@ export function initLayerStack(root) {
 }
 
 /* ============================================================
-   LAUNCH & SCALE — ROCKET ARC
+   LAUNCH & SCALE, ROCKET ARC
    A launch climbing its trajectory, trail burning behind it.
    ============================================================ */
 export function initRocketArc(root) {

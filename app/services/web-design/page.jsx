@@ -39,7 +39,7 @@ const DESIGN_FEATURES = [
   },
   {
     title: 'Trust Signals Displayed Above the Fold',
-    desc: 'When a homeowner lands on your website, they are looking for reasons to trust you with their property. We strategically place critical trust signals—such as your license numbers, insurance details, years in business, verified customer ratings, and guarantees—"above the fold" (visible without scrolling). This immediately establishes credibility and sets you apart from fly-by-night operators. Trust is the currency of home services, and displaying it prominently is one of the most effective ways to increase your conversion rate from visitor to paying customer.',
+    desc: 'When a homeowner lands on your website, they are looking for reasons to trust you with their property. We strategically place critical trust signals-such as your license numbers, insurance details, years in business, verified customer ratings, and guarantees-"above the fold" (visible without scrolling). This immediately establishes credibility and sets you apart from fly-by-night operators. Trust is the currency of home services, and displaying it prominently is one of the most effective ways to increase your conversion rate from visitor to paying customer.',
     points: ['License & insurance badges', 'Verified Google reviews', 'Satisfaction guarantees highlighted', 'Professional affiliations displayed'],
   },
   {

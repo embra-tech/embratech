@@ -108,7 +108,7 @@ export default function NichePage() {
               />
             </picture>
             <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
-              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Landscaping & Concrete Project: V Vasquez LLC Merced, CA — 99/100 PageSpeed & instant quote flow.</span>
+              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Landscaping & Concrete Project: V Vasquez LLC Merced, CA, 99/100 PageSpeed & instant quote flow.</span>
               <Link href="/portfolio/vvasquez-handyman" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Read V Vasquez Case Study &rarr;</Link>
             </div>
           </div>

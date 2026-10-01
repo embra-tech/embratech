@@ -25,7 +25,7 @@ const BARS = PROOF_TRAFFIC ? [
 const TABS = ['Overview', 'SEO Live', 'Speed 99'];
 
 // Final, real values the counters animate toward. Rendered as the DEFAULT
-// state (not 0) so the numbers are correct immediately on load/SSR — the
+// state (not 0) so the numbers are correct immediately on load/SSR, the
 // count-up is a bonus animation for users who scroll to this section, never
 // the only way the real numbers get shown.
 const FINAL_METRIC = PROOF_TRAFFIC ? 280.4 : 100;
@@ -105,9 +105,9 @@ export default function Showcase() {
         once: true,
         onEnter: play,
       });
-      // If the widget is already in (or past) the trigger zone at mount —
+      // If the widget is already in (or past) the trigger zone at mount -
       // e.g. a short viewport, a deep link, or a stale ScrollTrigger
-      // measurement from client-side navigation — fire immediately instead
+      // measurement from client-side navigation, fire immediately instead
       // of waiting for a scroll event that may never come.
       if (st.progress > 0 || ScrollTrigger.isInViewport(el, 0.05)) play();
     }, sectionRef);
@@ -150,7 +150,7 @@ export default function Showcase() {
               <div className="chart-header">
                 <div>
                   <div className="chart-title">Organic Traffic &amp; Inbound Leads</div>
-                  <div className="chart-subtitle">Sample data — illustrative (Last 90 Days)</div>
+                  <div className="chart-subtitle">Sample data, illustrative (Last 90 Days)</div>
                 </div>
                 <div className="chart-metric-wrap">
                   <div className="chart-metric">{metric}</div>

@@ -1,12 +1,12 @@
 const ITEMS = [
   {
     title: 'Strategy First',
-    text: 'We ask about your customers, your competitors, and how you currently get leads — before we design a single pixel.',
+    text: 'We ask about your customers, your competitors, and how you currently get leads, before we design a single pixel.',
     icon: <><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></>,
   },
   {
     title: 'Custom Engineered',
-    text: "Not Squarespace. Not Wix. Not a WordPress theme someone else already has. Every page is written from scratch in React — built specifically for your business and no one else.",
+    text: "Not Squarespace. Not Wix. Not a WordPress theme someone else already has. Every page is written from scratch in React, built specifically for your business and no one else.",
     icon: <><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></>,
   },
   {
@@ -28,7 +28,7 @@ const ITEMS = [
   },
   {
     title: 'Long-Term Partnership',
-    text: 'You get a real reply within one business day — not a ticket, not a bot. We stand by every site we ship, long after launch.',
+    text: 'You get a real reply within one business day, not a ticket, not a bot. We stand by every site we ship, long after launch.',
     icon: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />,
   },
 ];

@@ -134,10 +134,10 @@ export default function VisitorTracker() {
     const handleVisibility = () => {
       try {
         if (document.visibilityState === 'hidden') {
-          // User is leaving — flush duration
+          // User is leaving, flush duration
           flushDuration();
         } else {
-          // User came back — if duration wasn't sent yet, resume timer
+          // User came back, if duration wasn't sent yet, resume timer
           if (!durationSent.current) {
             startVisibleTimer();
           }

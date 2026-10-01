@@ -8,7 +8,7 @@ const ThreeCanvas = dynamic(() => import('./three/ThreeCanvas'), { ssr: false })
 
 import siteConfig from '../lib/site-config';
 
-/* ================= 01/05 — BLUEPRINT GENESIS =================
+/* ================= 01/05, BLUEPRINT GENESIS =================
    A browser interface draws itself into existence, line by line,
    the way an architect's blueprint resolves into a finished
    structure. Auto-plays when scrolled into view; replayable. */
@@ -83,7 +83,7 @@ export default function Services() {
 
         <div className="bento-grid">
 
-          {/* Card 1 — Web development, featuring Blueprint Genesis 01/05 */}
+          {/* Card 1, Web development, featuring Blueprint Genesis 01/05 */}
           <article className="bento-card reveal-up">
             <div className="card-ui-mockup">
               <BlueprintStage />
@@ -98,13 +98,13 @@ export default function Services() {
                   <span className="replay-icon" aria-hidden="true">↻</span>Replay 01/05
                 </button>
               </div>
-              <p>Written from scratch in React around your business goals and customer journey — no templates, no builders, engineered to load in under a second.</p>
+              <p>Written from scratch in React around your business goals and customer journey, no templates, no builders, engineered to load in under a second.</p>
               <div className="bento-card-tags"><span className="bento-tag">Custom UI/UX</span><span className="bento-tag">Mobile First</span><span className="bento-tag">Sub-Second Speed</span><span className="bento-tag">CMS Ready</span></div>
               <a href="/contact" className="btn-flip btn-ghost btn-small"><span className="btn-flip-inner"><span className="btn-flip-state">Get My Free Sample <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span><span className="btn-flip-state" aria-hidden="true">Get My Free Sample <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span></span></a>
             </div>
           </article>
 
-          {/* Card 2 — SEO, featuring Rank Climb (B) */}
+          {/* Card 2, SEO, featuring Rank Climb (B) */}
           <article className="bento-card reveal-up">
             <div className="card-ui-mockup three-mockup">
               <div className="ui-seo-stats mockup-overlay">
@@ -124,7 +124,7 @@ export default function Services() {
             </div>
           </article>
 
-          {/* Card 3 — Digital Identity, featuring Constellation (C) */}
+          {/* Card 3, Digital Identity, featuring Constellation (C) */}
           <article className="bento-card reveal-up">
             <div className="card-ui-mockup three-mockup">
               <ThreeCanvas type='constellation' />
@@ -132,13 +132,13 @@ export default function Services() {
             </div>
             <div className="bento-card-body">
               <h3>Digital Identity Management</h3>
-              <p>Consistent, professional social media content and brand voice across platforms — building trust wherever clients find you.</p>
+              <p>Consistent, professional social media content and brand voice across platforms, building trust wherever clients find you.</p>
               <div className="bento-card-tags"><span className="bento-tag">Brand Cohesion</span><span className="bento-tag">Content Strategy</span><span className="bento-tag">Social Growth</span><span className="bento-tag">Multi-Platform</span></div>
               <a href="/contact" className="btn-flip btn-ghost btn-small"><span className="btn-flip-inner"><span className="btn-flip-state">Get My Free Sample <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span><span className="btn-flip-state" aria-hidden="true">Get My Free Sample <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span></span></a>
             </div>
           </article>
 
-          {/* Card 4 — Digital Systems & Integrations, featuring Data Streams (B) */}
+          {/* Card 4, Digital Systems & Integrations, featuring Data Streams (B) */}
           <article className="bento-card reveal-up">
             <div className="card-ui-mockup three-mockup">
               <ThreeCanvas type='dataStreams' />
@@ -152,7 +152,7 @@ export default function Services() {
             </div>
           </article>
 
-          {/* Card 5 — Custom UI Design, featuring Layer Stack (C) */}
+          {/* Card 5, Custom UI Design, featuring Layer Stack (C) */}
           <article className="bento-card reveal-up">
             <div className="card-ui-mockup three-mockup">
               <ThreeCanvas type='layerStack' />
@@ -160,13 +160,13 @@ export default function Services() {
             </div>
             <div className="bento-card-body">
               <h3>Custom UI Design</h3>
-              <p>Interfaces built for clarity and conversion. Consistent design systems, purposeful micro-interactions, and layouts your customers navigate without thinking — all tested against real usability standards.</p>
+              <p>Interfaces built for clarity and conversion. Consistent design systems, purposeful micro-interactions, and layouts your customers navigate without thinking, all tested against real usability standards.</p>
               <div className="bento-card-tags"><span className="bento-tag">Design Systems</span><span className="bento-tag">Conversion-Focused</span><span className="bento-tag">Layout Strategy</span><span className="bento-tag">Accessibility-First</span></div>
               <a href="/contact" className="btn-flip btn-ghost btn-small"><span className="btn-flip-inner"><span className="btn-flip-state">Get My Free Sample <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span><span className="btn-flip-state" aria-hidden="true">Get My Free Sample <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span></span></a>
             </div>
           </article>
 
-          {/* Card 6 — Launch & Scale, featuring Rocket Arc (A) */}
+          {/* Card 6, Launch & Scale, featuring Rocket Arc (A) */}
           <article className="bento-card reveal-up">
             <div className="card-ui-mockup three-mockup">
               <ThreeCanvas type='rocketArc' />
@@ -174,7 +174,7 @@ export default function Services() {
             </div>
             <div className="bento-card-body">
               <h3>Launch &amp; Scale</h3>
-              <p>We handle the launch and everything after it — site monitoring, speed checks, lead tracking, and making sure your site keeps working as your business grows.</p>
+              <p>We handle the launch and everything after it, site monitoring, speed checks, lead tracking, and making sure your site keeps working as your business grows.</p>
               <div className="bento-card-tags"><span className="bento-tag">Fast Deployment</span><span className="bento-tag">Uptime Monitoring</span><span className="bento-tag">Lead Tracking</span><span className="bento-tag">Traffic-Ready</span></div>
               <a href="/contact" className="btn-flip btn-ghost btn-small"><span className="btn-flip-inner"><span className="btn-flip-state">Get My Free Sample <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg></span><span className="btn-flip-state" aria-hidden="true">Get My Free Sample <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></span></span></a>
             </div>

@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 /**
  * Portfolio screenshot sizes:
- *   480px  — mobile / single-column card
- *   720px  — tablet / 2-col grid
- *   960px  — desktop large
+ *   480px , mobile / single-column card
+ *   720px , tablet / 2-col grid
+ *   960px , desktop large
  *
  * The container maxes at ~480px in CSS; sizes attr tells browser which to fetch.
- * Static files at public/images/optimized/ — no /_next/image round-trip.
+ * Static files at public/images/optimized/, no /_next/image round-trip.
  */
 function SitePreview({ site }) {
   const name = site.image.replace('/images/', '').replace('.webp', '').replace('.png', '');
@@ -24,19 +24,19 @@ function SitePreview({ site }) {
       </div>
       <div className="sp-screenshot">
         <picture>
-          {/* AVIF — best compression, Chrome 85+, Firefox 93+, Safari 16+ */}
+          {/* AVIF, best compression, Chrome 85+, Firefox 93+, Safari 16+ */}
           <source
             type="image/avif"
             srcSet={`${base}-480.avif 480w, ${base}-720.avif 720w, ${base}-960.avif 960w`}
             sizes={sizes}
           />
-          {/* WebP — broad support fallback */}
+          {/* WebP, broad support fallback */}
           <source
             type="image/webp"
             srcSet={`${base}-480.webp 480w, ${base}-720.webp 720w, ${base}-960.webp 960w`}
             sizes={sizes}
           />
-          {/* JPEG — universal baseline */}
+          {/* JPEG, universal baseline */}
           <img
             src={`${base}-480.jpg`}
             srcSet={`${base}-480.jpg 480w, ${base}-720.jpg 720w, ${base}-960.jpg 960w`}
@@ -71,7 +71,7 @@ export default function SiteCard({ site, index }) {
         </div>
         <p>{site.desc}</p>
 
-        {/* Optional measurable-results badges — linked to live PageSpeed reports where available */}
+        {/* Optional measurable-results badges, linked to live PageSpeed reports where available */}
         {site.results && site.results.length > 0 && (
           <div className="work-results" aria-label="Verified results">
             {site.results.map((r) =>

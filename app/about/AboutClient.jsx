@@ -10,16 +10,16 @@ import siteConfig from '../../lib/site-config';
 
 const STATS = [
   { value: 5, suffix: '', label: 'Live client websites built and actively ranking on Google' },
-  { value: 96, suffix: '/100', label: 'Average PageSpeed score across our 5 live builds — verify any of them', decimals: 0 },
+  { value: 96, suffix: '/100', label: 'Average PageSpeed score across our 5 live builds, verify any of them', decimals: 0 },
   { value: 24, suffix: 'h', label: 'Hours to your free custom homepage sample, no deposit required' },
-  { value: 7, suffix: '-day', label: 'Satisfaction window — if the full build is not right, you walk away' },
+  { value: 7, suffix: '-day', label: 'Satisfaction window, if the full build is not right, you walk away' },
 ];
 
 const VALUES = [
-  { title: 'Clarity over complexity', text: 'We translate technical work into plain language, honest timelines, and transparent pricing — no jargon, no hidden fees.' },
-  { title: 'Precision in every build', text: 'Every layout, interaction, and line of code is deliberate and tested — no bloated templates, ever.' },
+  { title: 'Clarity over complexity', text: 'We translate technical work into plain language, honest timelines, and transparent pricing, no jargon, no hidden fees.' },
+  { title: 'Precision in every build', text: 'Every layout, interaction, and line of code is deliberate and tested, no bloated templates, ever.' },
   { title: 'Results you can measure', text: 'Speed scores, search rankings, inbound leads. We build for outcomes you can verify in Google Analytics and Search Console.' },
-  { title: 'Partnership beyond launch', text: 'We stay on as your digital team — maintaining, optimizing, and growing your presence long after go-live.' },
+  { title: 'Partnership beyond launch', text: 'We stay on as your digital team, maintaining, optimizing, and growing your presence long after go-live.' },
 ];
 
 export default function AboutClient() {
@@ -71,7 +71,7 @@ export default function AboutClient() {
             pill="About"
             badge="Who We Are"
             title={<>Built for businesses that <span className="highlight-text">deserve to be found.</span></>}
-            sub="Most service businesses lose customers every day to competitors with worse skills but a better-looking site. We fix that — with websites written from scratch in React, search rankings that bring in real leads, and a team you can actually reach."
+            sub="Most service businesses lose customers every day to competitors with worse skills but a better-looking site. We fix that, with websites written from scratch in React, search rankings that bring in real leads, and a team you can actually reach."
           />
         </div>
       </section>
@@ -94,15 +94,15 @@ export default function AboutClient() {
         <div className="wrap cs-two-col">
           <div className="cs-col-label reveal-up">The Team</div>
           <div className="cs-col-body reveal-up">
-            <h3>Senior builders — not account managers.</h3>
+            <h3>Senior builders, not account managers.</h3>
             <p>
               We are a small team of senior designers and engineers based in {siteConfig.address.city}, {siteConfig.address.state}. When you email us, the person who replies is the same person writing your code and designing your pages. No account managers, no handoffs to junior staff, no work shipped overseas.
             </p>
             <p>
-              We built Embra because great web work was gatekept behind agency retainers most local businesses can&apos;t justify. Our answer was to cut the overhead entirely and put the savings back into execution quality — which is why our sites average 96/100 on PageSpeed and rank, while costing a fraction of what a full-service agency charges.
+              We built Embra because great web work was gatekept behind agency retainers most local businesses can&apos;t justify. Our answer was to cut the overhead entirely and put the savings back into execution quality, which is why our sites average 96/100 on PageSpeed and rank, while costing a fraction of what a full-service agency charges.
             </p>
             <p style={{marginTop: '20px', fontSize: '14px', color: 'rgba(255,255,255,0.5)', fontStyle: 'italic'}}>
-              Want to know who you&apos;re working with? Reach out directly at <a href={`mailto:${siteConfig.email}`} style={{ color: 'var(--primary)' }}>{siteConfig.email}</a> — we reply within one business day, not a bot.
+              Want to know who you&apos;re working with? Reach out directly at <a href={`mailto:${siteConfig.email}`} style={{ color: 'var(--primary)' }}>{siteConfig.email}</a>, we reply within one business day, not a bot.
             </p>
           </div>
         </div>

@@ -87,14 +87,14 @@ export default function PrivacyPage() {
               <h2>2. Data We Collect</h2>
               <h3>Information you provide directly</h3>
               <ul>
-                <li><strong>Contact form submissions</strong> — your name, email address, business name, website URL, and the message you write to us.</li>
-                <li><strong>Email correspondence</strong> — any information you include when emailing us at sales@embratechnologies.org.</li>
+                <li><strong>Contact form submissions</strong>, your name, email address, business name, website URL, and the message you write to us.</li>
+                <li><strong>Email correspondence</strong>, any information you include when emailing us at sales@embratechnologies.org.</li>
               </ul>
               <h3>Information collected automatically</h3>
               <ul>
-                <li><strong>Log data</strong> — your IP address, browser type, operating system, referring URL, pages visited, and timestamps. This data is collected by our hosting provider (Vercel) in standard server logs.</li>
-                <li><strong>Analytics data</strong> — aggregated, anonymised traffic and engagement data collected via privacy-first Vercel Analytics. This includes general page counts, referrer domains, and country-level geographic region. No cross-site tracking or personal identifiers are used.</li>
-                <li><strong>Performance data</strong> — Core Web Vitals and page-load metrics collected by Vercel&rsquo;s edge infrastructure. No personal identifiers are attached to this data.</li>
+                <li><strong>Log data</strong>, your IP address, browser type, operating system, referring URL, pages visited, and timestamps. This data is collected by our hosting provider (Vercel) in standard server logs.</li>
+                <li><strong>Analytics data</strong>, aggregated, anonymised traffic and engagement data collected via privacy-first Vercel Analytics. This includes general page counts, referrer domains, and country-level geographic region. No cross-site tracking or personal identifiers are used.</li>
+                <li><strong>Performance data</strong>, Core Web Vitals and page-load metrics collected by Vercel&rsquo;s edge infrastructure. No personal identifiers are attached to this data.</li>
               </ul>
               <h3>Information we do NOT collect</h3>
               <p>We do not collect payment card details (all payments are processed by Stripe, directly). We do not knowingly collect personal information from children under 13.</p>
@@ -104,11 +104,11 @@ export default function PrivacyPage() {
               <h2>3. How We Use Your Data</h2>
               <p>We use the information we collect for the following purposes:</p>
               <ul>
-                <li><strong>Responding to enquiries</strong> — to reply to contact form submissions and email messages.</li>
-                <li><strong>Providing services</strong> — to deliver the website design, SEO, and digital identity services you have engaged us for.</li>
-                <li><strong>Sending project updates</strong> — to communicate progress, milestones, and deliverables related to your active project.</li>
-                <li><strong>Improving our website</strong> — to understand which pages are most useful and where visitors encounter difficulties, using anonymised analytics data.</li>
-                <li><strong>Legal compliance</strong> — to comply with applicable laws and enforce our Terms of Service.</li>
+                <li><strong>Responding to enquiries</strong>, to reply to contact form submissions and email messages.</li>
+                <li><strong>Providing services</strong>, to deliver the website design, SEO, and digital identity services you have engaged us for.</li>
+                <li><strong>Sending project updates</strong>, to communicate progress, milestones, and deliverables related to your active project.</li>
+                <li><strong>Improving our website</strong>, to understand which pages are most useful and where visitors encounter difficulties, using anonymised analytics data.</li>
+                <li><strong>Legal compliance</strong>, to comply with applicable laws and enforce our Terms of Service.</li>
               </ul>
               <p>We do <strong>not</strong> sell, rent, or trade your personal information to third parties. We do not use your data for automated decision-making or profiling that produces legal effects.</p>
             </section>
@@ -117,8 +117,8 @@ export default function PrivacyPage() {
               <h2>4. Cookies &amp; Tracking</h2>
               <p>Our website may use the following types of cookies and local storage:</p>
               <ul>
-                <li><strong>Strictly necessary</strong> — cookies required for the website to function (e.g., CSRF tokens, session identifiers). These cannot be disabled.</li>
-                <li><strong>Analytics</strong> — Google Analytics 4 may set cookies to track anonymous usage patterns. You can opt out via your browser settings or by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</li>
+                <li><strong>Strictly necessary</strong>, cookies required for the website to function (e.g., CSRF tokens, session identifiers). These cannot be disabled.</li>
+                <li><strong>Analytics</strong>, Google Analytics 4 may set cookies to track anonymous usage patterns. You can opt out via your browser settings or by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</li>
                 </ul>
               <p>You can control cookie settings through your browser. Disabling cookies may affect website functionality.</p>
             </section>
@@ -128,24 +128,24 @@ export default function PrivacyPage() {
               <p>We use the following third-party services that may process your data:</p>
               <ul>
                 <li>
-                  <strong>Vercel</strong> — our hosting and edge-delivery provider. Vercel processes server logs and performance data. See the{' '}
+                  <strong>Vercel</strong>, our hosting and edge-delivery provider. Vercel processes server logs and performance data. See the{' '}
                   <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Vercel Privacy Policy</a>.
                 </li>
                 <li>
-                  <strong>FormSubmit</strong> — we use FormSubmit (formsubmit.co) to route contact form submissions to our email. Your form data (name, email, message) is transmitted to FormSubmit and forwarded to our inbox. See the{' '}
+                  <strong>FormSubmit</strong>, we use FormSubmit (formsubmit.co) to route contact form submissions to our email. Your form data (name, email, message) is transmitted to FormSubmit and forwarded to our inbox. See the{' '}
                   <a href="https://formsubmit.co/privacy" target="_blank" rel="noopener noreferrer">FormSubmit Privacy Policy</a>.
                 </li>
                 <li>
-                  <strong>Vercel Analytics &amp; Axiom</strong> — used for anonymised performance monitoring and visitor count statistics. No personal identifiers or cross-site tracking cookies are stored. See the{' '}
+                  <strong>Vercel Analytics &amp; Axiom</strong>, used for anonymised performance monitoring and visitor count statistics. No personal identifiers or cross-site tracking cookies are stored. See the{' '}
                   <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Vercel Privacy Policy</a> and{' '}
                   <a href="https://axiom.co/privacy" target="_blank" rel="noopener noreferrer">Axiom Privacy Policy</a>.
                 </li>
                 <li>
-                  <strong>Stripe</strong> — used for payment processing on applicable invoices. We never see or store your full card details. See the{' '}
+                  <strong>Stripe</strong>, used for payment processing on applicable invoices. We never see or store your full card details. See the{' '}
                   <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">Stripe Privacy Policy</a>.
                 </li>
                 <li>
-                  <strong>Google Fonts / Next.js Font Optimization</strong> — font files are self-hosted via Next.js&rsquo;s built-in font optimization. No requests are made to Google&rsquo;s servers at runtime.
+                  <strong>Google Fonts / Next.js Font Optimization</strong>, font files are self-hosted via Next.js&rsquo;s built-in font optimization. No requests are made to Google&rsquo;s servers at runtime.
                 </li>
               </ul>
             </section>
@@ -154,10 +154,10 @@ export default function PrivacyPage() {
               <h2>6. Data Retention</h2>
               <p>We retain personal data only as long as necessary for the purposes described in this policy:</p>
               <ul>
-                <li><strong>Contact form submissions</strong> — retained in our email for up to 3 years from the date of submission, or until you request deletion.</li>
-                <li><strong>Active client project data</strong> — retained for the duration of the project plus 2 years.</li>
-                <li><strong>Analytics data</strong> — Google Analytics retains data per your browser&rsquo;s GA settings (default 14 months).</li>
-                <li><strong>Server logs</strong> — Vercel retains server logs for up to 30 days.</li>
+                <li><strong>Contact form submissions</strong>, retained in our email for up to 3 years from the date of submission, or until you request deletion.</li>
+                <li><strong>Active client project data</strong>, retained for the duration of the project plus 2 years.</li>
+                <li><strong>Analytics data</strong>, Google Analytics retains data per your browser&rsquo;s GA settings (default 14 months).</li>
+                <li><strong>Server logs</strong>, Vercel retains server logs for up to 30 days.</li>
               </ul>
             </section>
 
@@ -165,12 +165,12 @@ export default function PrivacyPage() {
               <h2>7. Your Rights</h2>
               <p>Depending on your jurisdiction, you may have the following rights regarding your personal data:</p>
               <ul>
-                <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
-                <li><strong>Rectification</strong> — ask us to correct inaccurate data.</li>
-                <li><strong>Erasure</strong> — request that we delete your personal data, subject to legal obligations.</li>
-                <li><strong>Restriction</strong> — ask us to limit how we process your data.</li>
-                <li><strong>Portability</strong> — request your data in a structured, machine-readable format.</li>
-                <li><strong>Objection</strong> — object to our processing of your data for marketing or profiling purposes.</li>
+                <li><strong>Access</strong>, request a copy of the personal data we hold about you.</li>
+                <li><strong>Rectification</strong>, ask us to correct inaccurate data.</li>
+                <li><strong>Erasure</strong>, request that we delete your personal data, subject to legal obligations.</li>
+                <li><strong>Restriction</strong>, ask us to limit how we process your data.</li>
+                <li><strong>Portability</strong>, request your data in a structured, machine-readable format.</li>
+                <li><strong>Objection</strong>, object to our processing of your data for marketing or profiling purposes.</li>
               </ul>
               <p>
                 To exercise any of these rights, contact us at{' '}

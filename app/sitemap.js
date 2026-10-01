@@ -30,7 +30,7 @@ export default function sitemap() {
     { url: `${baseUrl}/locations/los-angeles`,         lastModified: staticLastMod, changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/chicago`,             lastModified: staticLastMod, changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/alaska`,              lastModified: staticLastMod, changeFrequency: 'monthly',  priority: 0.7 },
-    // /locations/gulf-coast is noindex — excluded from sitemap intentionally
+    // /locations/gulf-coast is noindex, excluded from sitemap intentionally
   ];
 
   const nichePages = [

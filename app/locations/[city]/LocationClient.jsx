@@ -14,7 +14,7 @@ function LosAngelesContent() {
         In a market as vast and competitive as Los Angeles, simply having a website is no longer enough. Home service businesses, auto repair shops, plumbers, and contractors face an incredibly dense digital landscape. When an LA resident searches for an "auto body shop near me" or an "emergency plumber," they expect a lightning-fast mobile experience, clear trust signals, and an effortless way to get in touch. Embra Technologies specializes in engineering these exact high-performance websites for Los Angeles businesses, turning raw search traffic into booked local jobs.
       </p>
       <p style={{ marginBottom: '40px' }}>
-        Traditional agencies often rely on bloated WordPress templates that load slowly, particularly on mobile networks across Southern California. This slow loading speed directly hurts your Google rankings and causes potential customers to bounce to your competitors. We take a different approach. By utilizing the modern Next.js framework, we build custom web applications that load in under a second. We pair this raw speed with aggressive local SEO strategies designed specifically for the LA market—targeting high-value neighborhood searches from Santa Monica to Pasadena, and Silver Lake to the San Fernando Valley.
+        Traditional agencies often rely on bloated WordPress templates that load slowly, particularly on mobile networks across Southern California. This slow loading speed directly hurts your Google rankings and causes potential customers to bounce to your competitors. We take a different approach. By utilizing the modern Next.js framework, we build custom web applications that load in under a second. We pair this raw speed with aggressive local SEO strategies designed specifically for the LA market-targeting high-value neighborhood searches from Santa Monica to Pasadena, and Silver Lake to the San Fernando Valley.
       </p>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Case Study: Tuxford Collision Center</h2>
@@ -55,10 +55,10 @@ function ChicagoContent() {
   return (
     <>
       <p style={{ marginBottom: '24px' }}>
-        Chicago is a tough, hard-working market, and local businesses here need an online presence that reflects that same reliability. Whether you run a tree service navigating harsh Midwestern storms, a plumbing company, or a roofing business, your customers need to know they can count on you. When a Chicago homeowner has an emergency, they don't browse five different websites—they call the first business that looks professional, local, and fast. At Embra Technologies, we engineer websites that convert these high-intent local searches into booked jobs.
+        Chicago is a tough, hard-working market, and local businesses here need an online presence that reflects that same reliability. Whether you run a tree service navigating harsh Midwestern storms, a plumbing company, or a roofing business, your customers need to know they can count on you. When a Chicago homeowner has an emergency, they don't browse five different websites-they call the first business that looks professional, local, and fast. At Embra Technologies, we engineer websites that convert these high-intent local searches into booked jobs.
       </p>
       <p style={{ marginBottom: '40px' }}>
-        A slow, bloated website built on an outdated template will cost you leads. Google specifically rewards fast-loading sites, especially for mobile searches. By utilizing Next.js, we build custom applications that load almost instantly. We combine this technical superiority with localized SEO strategies targeting Chicagoland—from the Loop out to the suburbs—ensuring your business appears exactly when customers are searching for your services.
+        A slow, bloated website built on an outdated template will cost you leads. Google specifically rewards fast-loading sites, especially for mobile searches. By utilizing Next.js, we build custom applications that load almost instantly. We combine this technical superiority with localized SEO strategies targeting Chicagoland-from the Loop out to the suburbs-ensuring your business appears exactly when customers are searching for your services.
       </p>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Case Study: Sky High Tree Service</h2>
@@ -66,7 +66,7 @@ function ChicagoContent() {
         Tree service is a high-urgency, high-ticket industry. When severe storms hit Chicago, homeowners need emergency tree removal immediately. They don't have time to navigate a confusing website. <strong>Sky High Tree Service</strong> needed an online presence that captured these emergency searches instantly and built a sustainable organic presence year-round.
       </p>
       <p style={{ marginBottom: '24px' }}>
-        Our approach was to implement an emergency CTA (Call to Action) architecture. We placed high-visibility emergency contact options above the fold on every single page, including click-to-call buttons and a "24/7 Emergency Service" badge. We front-loaded their credibility signals—insurance verification, license numbers, and before-and-after imagery—so stressed homeowners knew they were dealing with true professionals immediately.
+        Our approach was to implement an emergency CTA (Call to Action) architecture. We placed high-visibility emergency contact options above the fold on every single page, including click-to-call buttons and a "24/7 Emergency Service" badge. We front-loaded their credibility signals-insurance verification, license numbers, and before-and-after imagery-so stressed homeowners knew they were dealing with true professionals immediately.
       </p>
       <p style={{ marginBottom: '24px' }}>
         On the SEO side, we created dedicated service-area pages for key Chicago neighborhoods and suburbs, enriched with LocalBusiness schema targeting queries like "tree removal [neighborhood]." This aggressive strategy paid off: Sky High Tree Service saw a <strong>215% increase in emergency leads</strong> and maintains a 95/100 Google PageSpeed score.
@@ -102,12 +102,12 @@ function AlaskaContent() {
         Operating a business in Alaska presents unique geographical and logistical challenges. Your customers are often spread out across vast areas, and when they need a home service, they need to know you actually serve their specific region. For handymen, repair services, and contractors in Alaska, your website serves as your digital storefront, dispatcher, and trust-builder all rolled into one. At Embra Technologies, we build rugged, reliable, high-performance websites tailored to the unique demands of Alaskan businesses.
       </p>
       <p style={{ marginBottom: '40px' }}>
-        A generic website template won't cut it when your customers are dealing with harsh weather emergencies or urgent home repairs. They need a site that loads instantly on a smartphone—even on spotty cellular connections—and immediately shows them you are local, available, and capable. We utilize modern React architecture to deliver sub-second load times, paired with precise local SEO to ensure your business ranks prominently when Alaskans search for services "near me."
+        A generic website template won't cut it when your customers are dealing with harsh weather emergencies or urgent home repairs. They need a site that loads instantly on a smartphone-even on spotty cellular connections-and immediately shows them you are local, available, and capable. We utilize modern React architecture to deliver sub-second load times, paired with precise local SEO to ensure your business ranks prominently when Alaskans search for services "near me."
       </p>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Case Study: Alaska Fast Fix Handyman</h2>
       <p style={{ marginBottom: '24px' }}>
-        Emergency repair requests in Alaska—like burst pipes, broken heating systems, or severe storm damage—require immediate response. When <strong>Alaska Fast Fix Handyman</strong> approached us, they needed a website that communicated urgency and local expertise the moment a stressed customer landed on the page late at night.
+        Emergency repair requests in Alaska-like burst pipes, broken heating systems, or severe storm damage-require immediate response. When <strong>Alaska Fast Fix Handyman</strong> approached us, they needed a website that communicated urgency and local expertise the moment a stressed customer landed on the page late at night.
       </p>
       <p style={{ marginBottom: '24px' }}>
         We completely redesigned their user experience around an urgency-driven layout. We placed "Fast Response" messaging and the primary phone number at the absolute top of every page. Knowing that seconds matter when a pipe bursts, we optimized the site to load almost instantly. We also built a prominent service area section to prevent wasted calls from outside their coverage zone, building trust with locals who specifically want accountable, regional experts.
@@ -143,10 +143,10 @@ function BrooklynContent() {
   return (
     <>
       <p style={{ marginBottom: '24px' }}>
-        Embra Technologies is based in <strong>Brooklyn, NY</strong> — at 1969 51st St, Brooklyn, NY 11204. We are a Brooklyn-based studio that builds high-performance custom websites and local SEO systems for home service businesses across the United States. While we are rooted in New York, our clients are everywhere: Los Angeles, Chicago, Alaska, Merced, and beyond. We work fully remotely, which means geography never limits who we can help.
+        Embra Technologies is based in <strong>Brooklyn, NY</strong>, at 1969 51st St, Brooklyn, NY 11204. We are a Brooklyn-based studio that builds high-performance custom websites and local SEO systems for home service businesses across the United States. While we are rooted in New York, our clients are everywhere: Los Angeles, Chicago, Alaska, Merced, and beyond. We work fully remotely, which means geography never limits who we can help.
       </p>
       <p style={{ marginBottom: '24px' }}>
-        If you run a home service business — a handyman operation, a plumbing company, a tree service, a roofing contractor, an HVAC business, or a landscaping company — you know that most of your customers find you online first. And what they find determines whether they call you or your competitor. A slow, generic website built on an outdated WordPress template will cost you leads every single day. At Embra Technologies, we build custom websites using the modern Next.js (React) framework, engineered to load in under one second and designed to convert first-time visitors into booked jobs.
+        If you run a home service business, a handyman operation, a plumbing company, a tree service, a roofing contractor, an HVAC business, or a landscaping company, you know that most of your customers find you online first. And what they find determines whether they call you or your competitor. A slow, generic website built on an outdated WordPress template will cost you leads every single day. At Embra Technologies, we build custom websites using the modern Next.js (React) framework, engineered to load in under one second and designed to convert first-time visitors into booked jobs.
       </p>
       <p style={{ marginBottom: '40px' }}>
         We started in Brooklyn because it is a market that rewards authenticity and punishes fluff. That same directness shapes how we approach every project: honest pricing, real timelines, and a 24-hour custom homepage sample so you can see what we build before you commit to anything. No retainers, no lock-in, no surprises.
@@ -154,23 +154,23 @@ function BrooklynContent() {
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>What We Build for US Home Service Businesses</h2>
       <p style={{ marginBottom: '24px' }}>
-        Our clients come from every trade. We have built websites for tree services, auto body shops, handymen, and lawn care and irrigation contractors. Each project is custom — tailored to the specific services, geography, and customer psychology of that business. Below are some of the real results we have delivered for clients across the country.
+        Our clients come from every trade. We have built websites for tree services, auto body shops, handymen, and lawn care and irrigation contractors. Each project is custom, tailored to the specific services, geography, and customer psychology of that business. Below are some of the real results we have delivered for clients across the country.
       </p>
       <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '24px' }}>
         <li><strong>Sky High Tree Service (Chicago, IL):</strong> Emergency tree removal and storm damage services. We built an urgency-driven site with 24/7 emergency CTAs and neighborhood-level local SEO. <Link href="/portfolio/sky-high-tree" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the case study &rarr;</Link></li>
-        <li><strong>Tuxford Collision Center (Los Angeles, CA):</strong> Auto body and collision repair. We built a trust-first website with licensing credentials, Google rating, and free towing guarantee above the fold — designed for the 11 PM accident scenario. <Link href="/portfolio/tuxford-collision" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the case study &rarr;</Link></li>
+        <li><strong>Tuxford Collision Center (Los Angeles, CA):</strong> Auto body and collision repair. We built a trust-first website with licensing credentials, Google rating, and free towing guarantee above the fold, designed for the 11 PM accident scenario. <Link href="/portfolio/tuxford-collision" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the case study &rarr;</Link></li>
         <li><strong>Alaska Fast Fix Handyman (Alaska):</strong> Emergency handyman services across a geographically spread-out market. We led with fast response messaging, instant tap-to-call, and a clear service area map. <Link href="/portfolio/alaska-fast-fix" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the case study &rarr;</Link></li>
         <li><strong>V Vasquez Handyman LLC (Merced, CA):</strong> Lawn care, concrete, and irrigation services. We structured each service into its own clear section with quote request CTAs and optimized for mobile-first local search. <Link href="/portfolio/vvasquez-handyman" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the case study &rarr;</Link></li>
       </ul>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why Partner With a Brooklyn-Based Studio?</h2>
       <p style={{ marginBottom: '24px' }}>
-        Working with a Brooklyn studio means you get the technical rigor and design sensibility of a New York digital firm, without the bloated agency overhead. We are a focused team with a narrow specialization: home service businesses. We are not trying to serve everyone. We build websites for contractors, tradespeople, and service businesses — and we are very good at it.
+        Working with a Brooklyn studio means you get the technical rigor and design sensibility of a New York digital firm, without the bloated agency overhead. We are a focused team with a narrow specialization: home service businesses. We are not trying to serve everyone. We build websites for contractors, tradespeople, and service businesses, and we are very good at it.
       </p>
       <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
-        <li><strong>Sub-Second Load Times:</strong> Our Next.js builds average 96/100+ on Google PageSpeed Insights. Speed is a ranking factor — and a conversion factor.</li>
+        <li><strong>Sub-Second Load Times:</strong> Our Next.js builds average 96/100+ on Google PageSpeed Insights. Speed is a ranking factor, and a conversion factor.</li>
         <li><strong>Honest, Flat-Rate Pricing:</strong> Our <Link href="/pricing" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>pricing</Link> starts at $700 for a complete starter site. No retainers, no hidden fees.</li>
-        <li><strong>24-Hour Free Sample:</strong> We build a fully custom homepage mockup for your business within 24 hours — at no cost. You review it before you sign anything.</li>
+        <li><strong>24-Hour Free Sample:</strong> We build a fully custom homepage mockup for your business within 24 hours, at no cost. You review it before you sign anything.</li>
         <li><strong>National Reach, Local Focus:</strong> We serve businesses coast to coast. Every site we build is optimized for the local search intent of the specific cities and neighborhoods your customers live in.</li>
       </ul>
 

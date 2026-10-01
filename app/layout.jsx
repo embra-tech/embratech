@@ -75,7 +75,7 @@ export const metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.brandName} — ${siteConfig.tagline}`,
+        alt: `${siteConfig.brandName}, ${siteConfig.tagline}`,
       },
     ],
   },

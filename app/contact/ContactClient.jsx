@@ -36,7 +36,7 @@ export default function ContactClient() {
     setError('');
 
     const payload = {
-      _subject: 'New Lead — Embra Technologies Website',
+      _subject: 'New Lead, Embra Technologies Website',
       _gotcha: form._gotcha,
       Name: form.name,
       Email: form.email,
@@ -85,7 +85,7 @@ export default function ContactClient() {
             pill="Contact"
             badge="Let's Talk"
             title={<>Start your project <span className="highlight-text">today.</span></>}
-            sub="Tell us about your business and goals. We'll reply with a plan — and a free custom homepage sample within 24 hours."
+            sub="Tell us about your business and goals. We'll reply with a plan, and a free custom homepage sample within 24 hours."
           />
         </div>
       </section>
@@ -101,7 +101,7 @@ export default function ContactClient() {
                   <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><polyline points="20 6 9 17 4 12" /></svg>
                 </div>
                 <h3>Message received</h3>
-                <p>Thanks, {form.name || 'friend'} — we&apos;ll get back to you within 24 hours with your free homepage sample plan.</p>
+                <p>Thanks, {form.name || 'friend'}, we&apos;ll get back to you within 24 hours with your free homepage sample plan.</p>
                 <button type="button" className="btn-flip btn-ghost btn-small" onClick={() => { setSent(false); setForm({ name: '', email: '', phone: '', business: '', message: '', _gotcha: '', consent: false }); }}>
                   <span className="btn-flip-inner">
                     <span className="btn-flip-state">Send Another Message</span>
@@ -114,7 +114,7 @@ export default function ContactClient() {
                 <div aria-live="polite" className="sr-only">
                   {error && "Error sending message"}
                 </div>
-                {/* Honeypot — invisible to humans, bots fill it and get rejected */}
+                {/* Honeypot, invisible to humans, bots fill it and get rejected */}
                 <input
                   type="text"
                   name="_gotcha"
@@ -127,7 +127,7 @@ export default function ContactClient() {
                 />
                 {/* Next route disabled so we can do ajax properly */}
                 <input type="hidden" name="_next" value="https://www.embratechnologies.org/contact?success=true" />
-                <input type="hidden" name="_subject" value="New Lead — Embra Technologies Website" />
+                <input type="hidden" name="_subject" value="New Lead, Embra Technologies Website" />
                 
                 <div className="form-row">
                   <div className="form-field">
@@ -147,13 +147,13 @@ export default function ContactClient() {
                   </div>
                   <div className="form-field">
                     <label htmlFor="cf-business">Business Name &amp; Website</label>
-                    <input id="cf-business" name="Business" type="text" placeholder="Smith Plumbing — smithplumbing.com" autoComplete="organization" value={form.business} onChange={update('business')} />
+                    <input id="cf-business" name="Business" type="text" placeholder="Smith Plumbing, smithplumbing.com" autoComplete="organization" value={form.business} onChange={update('business')} />
                   </div>
                 </div>
 
                 <div className="form-field">
                   <label htmlFor="cf-message">What do you need?</label>
-                  <textarea id="cf-message" name="Message" rows="5" required placeholder="Tell us about your goals — a new website, better Google rankings, more leads..." value={form.message} onChange={update('message')} />
+                  <textarea id="cf-message" name="Message" rows="5" required placeholder="Tell us about your goals, a new website, better Google rankings, more leads..." value={form.message} onChange={update('message')} />
                 </div>
 
                 <div className="form-consent">
@@ -200,9 +200,9 @@ export default function ContactClient() {
             <div className="contact-promise reveal-up">
               <h3>What happens next?</h3>
               <ol>
-                <li><strong>Within 24 hours</strong> — a free custom homepage sample designed for your business.</li>
-                <li><strong>Free consultation</strong> — we walk you through the design and our growth plan.</li>
-                <li><strong>You decide</strong> — no pressure, no obligation. Start only if you love it.</li>
+                <li><strong>Within 24 hours</strong>, a free custom homepage sample designed for your business.</li>
+                <li><strong>Free consultation</strong>, we walk you through the design and our growth plan.</li>
+                <li><strong>You decide</strong>, no pressure, no obligation. Start only if you love it.</li>
               </ol>
             </div>
           </div>

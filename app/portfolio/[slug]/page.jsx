@@ -11,7 +11,7 @@ const PAGESPEED = (domain) =>
 const CASE_STUDIES = {
   'tuxford-collision': {
     name: 'Tuxford Collision Center',
-    metaTitle: 'Auto Body Shop Website Design — Tuxford | Embra',
+    metaTitle: 'Auto Body Shop Website Design, Tuxford | Embra',
     domain: 'tuxfordcollision.com',
     url: 'https://tuxfordcollision.com/',
     industry: 'Auto Body & Collision Repair',
@@ -19,7 +19,7 @@ const CASE_STUDIES = {
     timeline: '3 weeks',
     tags: ['Web Design', 'Local SEO', 'Quote Forms'],
     stack: 'Next.js · React · Vercel · FormSubmit',
-    challenge: `Tuxford Collision Center serves Los Angeles drivers who need fast, trustworthy auto body repair — often in highly stressful post-accident situations. Their previous online presence did absolutely nothing to build trust when it mattered most: when someone was frantically searching at 11 PM after a collision, phone in hand, desperately trying to decide who to call for help. The site was incredibly slow to load, making frustrated users wait. It was extremely hard to navigate on mobile devices, which is where the vast majority of these urgent searches occur.
+    challenge: `Tuxford Collision Center serves Los Angeles drivers who need fast, trustworthy auto body repair, often in highly stressful post-accident situations. Their previous online presence did absolutely nothing to build trust when it mattered most: when someone was frantically searching at 11 PM after a collision, phone in hand, desperately trying to decide who to call for help. The site was incredibly slow to load, making frustrated users wait. It was extremely hard to navigate on mobile devices, which is where the vast majority of these urgent searches occur.
 
 Most importantly, it gave no immediate reason to trust a stranger with a heavily damaged car. In the competitive Los Angeles auto body repair market, a slow, outdated website means lost business. Potential customers were bouncing to competitors simply because the website failed to communicate professionalism, reliability, and clear next steps during a moment of crisis.`,
     approach: [
@@ -35,7 +35,7 @@ Most importantly, it gave no immediate reason to trust a stranger with a heavily
   },
   'vvasquez-handyman': {
     name: 'V Vasquez Handyman LLC',
-    metaTitle: 'Lawn Care Website Design — V Vasquez | Embra',
+    metaTitle: 'Lawn Care Website Design, V Vasquez | Embra',
     domain: 'vvasquezhandymanllc.net',
     url: 'https://vvasquezhandymanllc.net/',
     industry: 'Lawn Care, Concrete & Irrigation',
@@ -47,8 +47,8 @@ Most importantly, it gave no immediate reason to trust a stranger with a heavily
 
 Homeowners actively searching for help on their mobile devices were quickly bouncing away before ever making contact, which was directly costing the business real, lucrative jobs every single week. The lack of a clear service catalog meant potential clients could not easily determine if V Vasquez handled their specific needs. They desperately required a digital platform that matched the quality of their physical work and clearly communicated their exact service offerings to the local Merced community.`,
     approach: [
-      { title: 'Structured service catalog', body: 'We completely overhauled their offering presentation by building a highly structured service catalog. Instead of a single crowded page, we built each distinct service — lawn care, concrete work, and irrigation — its very own dedicated section. Every section features a crystal-clear description of the exact scope of work, helpful pricing signals to qualify leads, and a prominent, specific "Request This Service" call-to-action button. This strategic organization empowers website visitors to rapidly find exactly what they need without frustratingly wading through completely irrelevant content, significantly streamlining their path from initial interest to direct inquiry.' },
-      { title: 'Mobile-first execution', body: 'We prioritized a strict mobile-first execution strategy throughout the entire two-week project. We meticulously designed and rigorously tested the entire mobile experience first, explicitly ensuring flawless operation on small screens, before ever scaling the design up for desktop users — not the other way around. Every single interactive element was refined: tap targets were enlarged for easy pressing, font sizes were optimized for maximum legibility without zooming, and all form inputs were specifically optimized for quick thumb typing. This was essential because the vast majority of all local service searches happen directly on smartphones.' },
+      { title: 'Structured service catalog', body: 'We completely overhauled their offering presentation by building a highly structured service catalog. Instead of a single crowded page, we built each distinct service, lawn care, concrete work, and irrigation, its very own dedicated section. Every section features a crystal-clear description of the exact scope of work, helpful pricing signals to qualify leads, and a prominent, specific "Request This Service" call-to-action button. This strategic organization empowers website visitors to rapidly find exactly what they need without frustratingly wading through completely irrelevant content, significantly streamlining their path from initial interest to direct inquiry.' },
+      { title: 'Mobile-first execution', body: 'We prioritized a strict mobile-first execution strategy throughout the entire two-week project. We meticulously designed and rigorously tested the entire mobile experience first, explicitly ensuring flawless operation on small screens, before ever scaling the design up for desktop users, not the other way around. Every single interactive element was refined: tap targets were enlarged for easy pressing, font sizes were optimized for maximum legibility without zooming, and all form inputs were specifically optimized for quick thumb typing. This was essential because the vast majority of all local service searches happen directly on smartphones.' },
       { title: 'Instant quote flow', body: 'To maximize lead generation, we developed and integrated an incredibly streamlined instant quote flow. This highly efficient quote request form features smart service selection pre-fills that automatically carry over context based on what the user was just viewing. By intelligently capturing the exact service the user is interested in immediately, this substantially reduces frustrating back-and-forth communication. The dramatically simplified process actively encourages users to submit their details, effectively getting lucrative jobs booked much faster and with significantly less friction for both the business owner and the homeowner.' },
     ],
     deepDive: `<p>For V Vasquez Handyman LLC, the primary focus was establishing a clear, professional, and highly actionable digital storefront for their Merced, CA based lawn care, concrete, and irrigation services. The previous generic template completely failed to differentiate their offerings or guide users toward making a practical inquiry. Our solution completely restructured their content architecture, creating distinct, easily navigable pathways for each specific service they provide. This clarity allows homeowners to immediately verify that V Vasquez is the right contractor for their specific project needs.</p><p>A critical component of this rebuild was the uncompromising commitment to a mobile-first design philosophy. Recognizing that nearly all their potential leads originate from mobile searches, every tap target, form field, and text block was explicitly engineered for smartphone usability. Leveraging the power of Next.js and React, deployed seamlessly on Vercel, we ensured the site not only looked professional but performed exceptionally well, achieving a near-perfect verified PageSpeed score of 99/100. This ensures no potential customer is ever lost to frustratingly slow loading times.</p><p>The integration of FormSubmit powered a seamless, context-aware instant quote flow. By allowing the service selection to pre-fill the form, we removed significant user friction. This highly optimized conversion funnel is designed to turn casual local mobile browsing into concrete job inquiries, supporting the unverified but reported 3.4x increase in quote submissions.</p>`,
@@ -59,7 +59,7 @@ Homeowners actively searching for help on their mobile devices were quickly boun
   },
   'alaska-fast-fix': {
     name: 'Alaska Fast Fix Handyman',
-    metaTitle: 'Handyman Website Design — Alaska Fast Fix | Embra',
+    metaTitle: 'Handyman Website Design, Alaska Fast Fix | Embra',
     domain: 'alaskafastfixhandyman.com',
     url: 'https://alaskafastfixhandyman.com/',
     industry: 'Handyman Services',
@@ -67,11 +67,11 @@ Homeowners actively searching for help on their mobile devices were quickly boun
     timeline: '2 weeks',
     tags: ['Web Design', 'Local SEO', 'Lead Capture'],
     stack: 'Next.js · React · Vercel · FormSubmit',
-    challenge: `Operating a service business in Alaska means actively serving a massive, geographically spread-out market where customers frequently simply cannot afford to wait. Emergency repair requests — such as rapidly bursting pipes, completely broken heating systems in freezing temperatures, or severe storm damage — fundamentally demand an immediate, reliable response. Their existing online presence failed to convey this necessary speed.
+    challenge: `Operating a service business in Alaska means actively serving a massive, geographically spread-out market where customers frequently simply cannot afford to wait. Emergency repair requests, such as rapidly bursting pipes, completely broken heating systems in freezing temperatures, or severe storm damage, fundamentally demand an immediate, reliable response. Their existing online presence failed to convey this necessary speed.
 
 The business desperately needed a high-performance website that instantly communicated extreme urgency, rock-solid reliability, and deep local expertise the very moment someone landed on it directly from a highly stressed, late-night search. When a homeowner is facing an active emergency in harsh conditions, they do not have the patience to hunt for contact information or wonder if the contractor even serves their specific, remote area. Clarity and speed were absolutely paramount.`,
     approach: [
-      { title: 'Urgency-driven design', body: 'We implemented an aggressively urgency-driven design tailored specifically for emergency situations. We led the visual hierarchy with prominent "Fast Response" messaging and strategically placed the primary contact phone number directly at the very top of absolutely every single page. The entire interface was explicitly designed for the incredibly high-stress, "I need this completely fixed today" search intent. Because crucial seconds absolutely matter when a pipe is actively bursting, we ensured that the fastest way to get help — a direct phone call — was never more than a single, immediate tap away.' },
+      { title: 'Urgency-driven design', body: 'We implemented an aggressively urgency-driven design tailored specifically for emergency situations. We led the visual hierarchy with prominent "Fast Response" messaging and strategically placed the primary contact phone number directly at the very top of absolutely every single page. The entire interface was explicitly designed for the incredibly high-stress, "I need this completely fixed today" search intent. Because crucial seconds absolutely matter when a pipe is actively bursting, we ensured that the fastest way to get help, a direct phone call, was never more than a single, immediate tap away.' },
       { title: 'Service area clarity', body: 'We established absolute service area clarity right from the moment a user arrives. A highly prominent, extremely early service area section clearly defines exactly where they operate. This strategic placement actively prevents frustrating, wasted calls from desperate customers located outside the actual coverage zone. Furthermore, it immediately builds strong trust with local customers who specifically want to hire someone local, accountable, and genuinely capable of reaching their Alaskan property quickly during a severe home maintenance emergency.' },
       { title: 'Local search coverage', body: 'We executed a comprehensive local search coverage strategy to dominate their specific region. This involved implementing highly detailed structured data markup across the site. We carefully crafted and optimized service-area headings specifically targeting vital "handyman near me" local searches. Finally, we ensured perfect alignment with their Google Business Profile to strongly reinforce their geographic relevance. This robust local SEO foundation is designed to help them rank prominently across their entire specific service region whenever an Alaskan homeowner urgently needs professional repair assistance.' },
     ],
@@ -83,7 +83,7 @@ The business desperately needed a high-performance website that instantly commun
   },
   'bestbreaks': {
     name: 'BestBreaks',
-    metaTitle: 'Travel Website Design — BestBreaks | Embra',
+    metaTitle: 'Travel Website Design, BestBreaks | Embra',
     domain: 'bestbreaks.com.au',
     url: 'https://bestbreaks.com.au/',
     industry: 'Travel & Accommodation',
@@ -91,13 +91,13 @@ The business desperately needed a high-performance website that instantly commun
     timeline: '4 weeks',
     tags: ['Web Design', 'E-Commerce Flow', 'Booking UX'],
     stack: 'Next.js · React · Vercel',
-    challenge: `Selling premium holiday accommodation vouchers online successfully requires exceptional visual polish and absolute booking confidence — qualities that most small travel businesses heavily struggle to achieve. BestBreaks urgently needed to present their extensive range of multi-night packages, spanning across dozens of beautiful properties in Australia and New Zealand, in a way that felt highly premium, completely clear, and fundamentally trustworthy.
+    challenge: `Selling premium holiday accommodation vouchers online successfully requires exceptional visual polish and absolute booking confidence, qualities that most small travel businesses heavily struggle to achieve. BestBreaks urgently needed to present their extensive range of multi-night packages, spanning across dozens of beautiful properties in Australia and New Zealand, in a way that felt highly premium, completely clear, and fundamentally trustworthy.
 
 They had to accomplish this ambitious goal without possessing the massive development budget of an industry giant like Booking.com. Unfortunately, their existing website was severely underperforming. Eager visitors were landing on the site, browsing the various holiday options, but ultimately leaving without ever converting into paying customers. The confusing layout and slow performance were actively destroying the vital trust required to secure high-value travel bookings online.`,
     approach: [
       { title: 'Booking-confidence UX', body: 'We completely redesigned the platform focusing intensely on a booking-confidence UX. We meticulously structured the presentation of each individual holiday package to prominently feature totally clear inclusions, the exact stay duration, transparent pricing, and the most compelling property highlights. By systematically providing highly detailed, easily accessible information, we successfully gave website visitors more than enough comprehensive detail to feel entirely confident purchasing their expensive travel vouchers directly online, without ever feeling the need to call for clarification.' },
       { title: 'Performance engineering', body: 'We prioritized rigorous performance engineering because online travel sites absolutely live and die by their page load speed. Through careful optimization of the modern tech stack, we successfully achieved an incredibly fast 0.41s Time to First Byte (TTFB) and a stellar 96/100 PageSpeed score. These highly optimized metrics are absolutely critical for maximizing conversions and securing top Google rankings in a fiercely competitive travel market, where absolutely every single second of load time directly costs the business valuable bookings.' },
-      { title: 'Visual hierarchy for packages', body: 'We implemented a highly effective visual hierarchy specifically for their complex packages. The various multi-night holiday packages — encompassing 7, 10, 14, and 21 nights — are now clearly presented as highly scannable, visually appealing cards. Each card instantly communicates clear duration, the exact destination, and strong value signals. This smart design choice significantly reduces the heavy cognitive load previously required when users were trying to compare multiple different holiday options, making the final purchase decision much easier.' },
+      { title: 'Visual hierarchy for packages', body: 'We implemented a highly effective visual hierarchy specifically for their complex packages. The various multi-night holiday packages, encompassing 7, 10, 14, and 21 nights, are now clearly presented as highly scannable, visually appealing cards. Each card instantly communicates clear duration, the exact destination, and strong value signals. This smart design choice significantly reduces the heavy cognitive load previously required when users were trying to compare multiple different holiday options, making the final purchase decision much easier.' },
     ],
     deepDive: `<p>The ambitious four-week project for BestBreaks centered entirely on elevating a small travel business's digital presence to rival major booking platforms in terms of user trust and pure technical performance. The core challenge was presenting complex, high-value multi-night accommodation packages across Australia and New Zealand in a highly digestible, trustworthy format. The previous experience was entirely too confusing, leading to high bounce rates and massive lost revenue. Our complete redesign focused heavily on establishing total booking confidence through absolute clarity and premium visual presentation.</p><p>We thoroughly transformed the browsing experience by implementing a highly scannable card-based interface for their core 7, 10, 14, and 21-night packages. This intuitive visual hierarchy allows users to effortlessly compare destinations, clear inclusions, and exact pricing. By leveraging the immense power of Next.js and React, and deploying robustly on Vercel, we built a rock-solid, highly responsive frontend that handles complex property data effortlessly while maintaining an incredibly premium feel throughout the entire user journey.</p><p>Technical excellence was just as crucial as the visual design. We achieved a verified 0.41s TTFB and a 96/100 PageSpeed score, ensuring the site feels instantly responsive. In the highly competitive online travel sector, this blistering speed is a massive competitive advantage, directly contributing to higher engagement and vastly improved conversion rates by never keeping a potential traveler waiting.</p>`,
     results: [
@@ -107,7 +107,7 @@ They had to accomplish this ambitious goal without possessing the massive develo
   },
   'sky-high-tree': {
     name: 'Sky High Tree Service',
-    metaTitle: 'Tree Service Website Design — Sky High | Embra',
+    metaTitle: 'Tree Service Website Design, Sky High | Embra',
     domain: 'skyhightreeservicechicago.com',
     url: 'https://skyhightreeservicechicago.com/',
     industry: 'Tree Service',
@@ -143,7 +143,7 @@ export function generateMetadata({ params }) {
     title: cs.metaTitle,
     description: `How Embra Technologies built a high-performance website for \${cs.name} in \${cs.location}. Results: \${cs.results.map((r) => r.label).join(', ')}.`,
     openGraph: {
-      title: `${cs.name} Case Study — Embra Technologies`,
+      title: `${cs.name} Case Study, Embra Technologies`,
       description: `Web design & SEO results for \${cs.name}: \${cs.results.map((r) => r.label).join(', ')}.`,
       url: `https://www.embratechnologies.org/portfolio/\${params.slug}`,
     },
@@ -157,7 +157,7 @@ export default function CaseStudyPage({ params }) {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: `\${cs.name} — Web Design Case Study`,
+    headline: `\${cs.name}, Web Design Case Study`,
     description: `How Embra Technologies built a high-performance website for \${cs.name} in \${cs.location}.`,
     image: `\${siteConfig.siteUrl}\${siteConfig.ogImage}`,
     datePublished: '2026-09-30',

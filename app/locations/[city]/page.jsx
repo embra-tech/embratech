@@ -41,7 +41,7 @@ export function generateMetadata({ params }) {
           url: siteConfig.ogImage,
           width: 1200,
           height: 630,
-          alt: `Embra Technologies — Web Design & SEO in ${loc.name}`,
+          alt: `Embra Technologies, Web Design & SEO in ${loc.name}`,
         },
       ],
     },

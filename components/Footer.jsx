@@ -16,7 +16,7 @@ export default function Footer() {
             <p>{siteConfig.description}</p>
             <div className="footer-status">
               <span className="status-dot"></span>
-              <span>All Systems Live — Accepting New Projects</span>
+              <span>All Systems Live, Accepting New Projects</span>
             </div>
           </div>
 

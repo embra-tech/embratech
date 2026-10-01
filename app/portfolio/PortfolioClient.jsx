@@ -106,7 +106,7 @@ export default function PortfolioClient() {
             pill="Portfolio"
             badge="Selected Work"
             title={<>Websites we&apos;ve <span className="highlight-text">shipped.</span></>}
-            sub="Real, live websites for real businesses — designed, built, and optimized by Embra Technologies. Every project below is in production and serving customers today."
+            sub="Real, live websites for real businesses, designed, built, and optimized by Embra Technologies. Every project below is in production and serving customers today."
           />
         </div>
       </section>

@@ -65,7 +65,7 @@ export default function FeaturedWork() {
           <div>
             <div className="section-badge"><span className="badge-pill">Proof</span><span className="badge-text">Selected Work</span></div>
             <h2>Websites We&apos;ve Built &amp; Ranked.</h2>
-            <p>Real client sites in production — sub-second speeds, custom design, and verified performance.</p>
+            <p>Real client sites in production, sub-second speeds, custom design, and verified performance.</p>
           </div>
           <Link href="/portfolio" className="btn-flip btn-ghost btn-small">
             <span className="btn-flip-inner">

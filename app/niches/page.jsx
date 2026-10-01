@@ -20,7 +20,7 @@ export const metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Embra Technologies — Industry-Specific Website Design',
+        alt: 'Embra Technologies, Industry-Specific Website Design',
       },
     ],
   },
@@ -135,7 +135,7 @@ export default function NichesPage() {
             pill="By Industry"
             badge="Specialist Sites"
             title={<>Website design built for <span className="highlight-text">your trade.</span></>}
-            sub="Generic template websites don't convert trade leads. We build conversion-engineered sites specifically for each home service niche — with the right trust signals, CTAs, and local SEO structure for that industry."
+            sub="Generic template websites don't convert trade leads. We build conversion-engineered sites specifically for each home service niche, with the right trust signals, CTAs, and local SEO structure for that industry."
           />
         </div>
       </section>
@@ -207,13 +207,13 @@ export default function NichesPage() {
             <div className="section-badge"><span className="badge-pill">Methodology</span><span className="badge-text">Why Industry-Specific</span></div>
             <h2 style={{ marginTop: '16px' }}>A plumber's website needs different trust signals than a roofer's</h2>
             <p style={{ color: 'var(--text-muted)', marginTop: '12px', lineHeight: 1.7 }}>
-              Generic web agencies build the same template for every trade. We study how customers behave when searching for each niche — what makes them trust a handyman versus an auto body shop — and engineer every conversion element around that psychology.
+              Generic web agencies build the same template for every trade. We study how customers behave when searching for each niche, what makes them trust a handyman versus an auto body shop, and engineer every conversion element around that psychology.
             </p>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {[
-              { q: 'Emergency trades (plumbers, HVAC, tree service)', a: 'Tap-to-call dominates the fold. Dispatch availability badges. Average response time displayed. Insurance proof. The customer is panicking — every extra second loses the job.' },
+              { q: 'Emergency trades (plumbers, HVAC, tree service)', a: 'Tap-to-call dominates the fold. Dispatch availability badges. Average response time displayed. Insurance proof. The customer is panicking, every extra second loses the job.' },
               { q: 'High-trust trades (auto body, roofing)', a: 'License numbers, manufacturer certifications, and free estimate guarantees lead. Before/after imagery. Insurance claim walkthrough pages. The customer is spending $3,000+ and needs confidence.' },
               { q: 'Seasonal trades (landscaping, HVAC)', a: 'Season-specific landing pages, service-area SEO clusters, and off-season content strategies to maintain rankings when searches dip.' },
             ].map((item) => (

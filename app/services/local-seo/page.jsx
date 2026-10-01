@@ -39,7 +39,7 @@ const SEO_FEATURES = [
   },
   {
     title: 'NAP Consistency & Digital Identity',
-    desc: 'NAP stands for Name, Address, and Phone number. For local SEO to be effective, your NAP must be perfectly consistent across the entire web—on your website, your GBP, Yelp, Angi, local directories, and social media. Inconsistent information confuses search engines and degrades trust, severely harming your rankings. We conduct a thorough audit of your digital identity, claiming profiles on relevant directories and correcting any mismatched data. This solidifies your digital footprint and establishes undeniable local authority.',
+    desc: 'NAP stands for Name, Address, and Phone number. For local SEO to be effective, your NAP must be perfectly consistent across the entire web-on your website, your GBP, Yelp, Angi, local directories, and social media. Inconsistent information confuses search engines and degrades trust, severely harming your rankings. We conduct a thorough audit of your digital identity, claiming profiles on relevant directories and correcting any mismatched data. This solidifies your digital footprint and establishes undeniable local authority.',
     points: ['Comprehensive directory audits', 'Correction of mismatched data', 'Citation building in niche directories', 'Unified digital identity management'],
   },
   {
@@ -104,7 +104,7 @@ export default function LocalSeoPage() {
       <section style={{ padding: '60px 0', borderBottom: '1px solid var(--line-dark)' }}>
         <div className="wrap" style={{ maxWidth: 800, margin: '0 auto', color: 'var(--muted-inv)', fontSize: '1.05rem', lineHeight: 1.7 }}>
           <p style={{ marginBottom: '20px' }}>
-            When a pipe bursts, a roof leaks, or an AC unit breaks down in the middle of summer, homeowners don't spend hours researching—they pull out their phones and search for a local professional right away. If your business doesn't appear at the top of those local search results, specifically in the Google Map Pack, you are losing out on the highest-intent, most profitable leads available. Local SEO (Search Engine Optimization) is the systematic process of improving your visibility for these exact, location-based searches.
+            When a pipe bursts, a roof leaks, or an AC unit breaks down in the middle of summer, homeowners don't spend hours researching-they pull out their phones and search for a local professional right away. If your business doesn't appear at the top of those local search results, specifically in the Google Map Pack, you are losing out on the highest-intent, most profitable leads available. Local SEO (Search Engine Optimization) is the systematic process of improving your visibility for these exact, location-based searches.
           </p>
           <p style={{ marginBottom: '20px' }}>
             For home service businesses, local SEO is not just about sprinkling keywords on your homepage. It requires a holistic approach that connects your website, your Google Business Profile, and your overall digital identity across the web. We focus heavily on on-page SEO, ensuring your title tags, meta descriptions, and heading hierarchy accurately reflect your services and locations. This clear structure tells Google exactly what queries you should rank for.

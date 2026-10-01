@@ -108,7 +108,7 @@ export default function NichePage() {
               />
             </picture>
             <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
-              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Tree Care Project: Sky High Tree Service Chicago — Emergency CTA architecture & local SEO.</span>
+              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Tree Care Project: Sky High Tree Service Chicago, Emergency CTA architecture & local SEO.</span>
               <Link href="/portfolio/sky-high-tree" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Read Sky High Case Study &rarr;</Link>
             </div>
           </div>

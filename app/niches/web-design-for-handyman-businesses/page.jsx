@@ -77,7 +77,7 @@ export default function NichePage() {
           
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>The Core Challenge in Handyman Web Design: Overcoming Low-Trust Perceptions</h2>
           <p style={{ marginBottom: '20px' }}>Homeowners face a difficult dilemma whenever they need minor home repairs, carpentry, drywall patching, or fixture replacement: should they call a high-priced specialized contractor, or hire an independent handyman? In most cases, homeowners want the affordability, responsiveness, and versatility of a local handyman. However, their single greatest hesitation is trust. Handyman services require inviting an unfamiliar tradesperson directly into someone's home, often around their family and valuable property.</p>
-          <p style={{ marginBottom: '20px' }}>When an independent handyman relies on a generic, outdated template or an incomplete Facebook business page, potential clients subconsciously assume the worst—unreliable scheduling, poor communication, or lack of proper insurance. Conversely, a custom-engineered, lightning-fast digital storefront immediately establishes the credibility of an established, professional operation.</p>
+          <p style={{ marginBottom: '20px' }}>When an independent handyman relies on a generic, outdated template or an incomplete Facebook business page, potential clients subconsciously assume the worst-unreliable scheduling, poor communication, or lack of proper insurance. Conversely, a custom-engineered, lightning-fast digital storefront immediately establishes the credibility of an established, professional operation.</p>
           <p style={{ marginBottom: '20px' }}>At Embra Technologies, we build custom Next.js websites tailored specifically to the operational realities of handyman businesses. We engineer every page to alleviate homeowner skepticism, showcase verified craftsmanship through high-resolution galleries, and eliminate every barrier standing between a homeowner with a broken fixture and your phone line.</p>
   
 
@@ -108,13 +108,13 @@ export default function NichePage() {
               />
             </picture>
             <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
-              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Handyman Project: Alaska Fast Fix Handyman LLC — Sub-second mobile conversion architecture.</span>
+              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Handyman Project: Alaska Fast Fix Handyman LLC, Sub-second mobile conversion architecture.</span>
               <Link href="/portfolio/alaska-fast-fix" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Read Alaska Fast Fix Case Study &rarr;</Link>
             </div>
           </div>
 
 <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Conversion Architecture: How We Structure Handyman Websites for Maximum Calls</h2>
-          <p style={{ marginBottom: '20px' }}>A successful handyman website cannot simply be an online business card; it must function as a relentless lead-generation engine. Most homeowners searching for repair work are dealing with an active inconvenience—a door that won't latch, a running toilet, rotted exterior trim, or a drywall hole left by a plumbing leak. They want immediate answers, transparent expectations, and effortless ways to get on your schedule.</p>
+          <p style={{ marginBottom: '20px' }}>A successful handyman website cannot simply be an online business card; it must function as a relentless lead-generation engine. Most homeowners searching for repair work are dealing with an active inconvenience-a door that won't latch, a running toilet, rotted exterior trim, or a drywall hole left by a plumbing leak. They want immediate answers, transparent expectations, and effortless ways to get on your schedule.</p>
           <p style={{ marginBottom: '20px' }}>To maximize lead generation, we implement a conversion-focused architecture built around three core structural pillars:</p>
           <p style={{ marginBottom: '20px' }}>1. **Categorized Service Silos with Scope Clarity:** Instead of an overwhelming, unreadable bulleted list of fifty random chores, we organize your skills into clean, logical categories (e.g., Carpentry & Trim, Drywall & Paint Repair, Fixture & Hardware Installation, Minor Plumbing & Electrical Repairs, and Exterior Maintenance). Each category features clear scope descriptions and dedicated quote request CTAs.</p>
           <p style={{ marginBottom: '20px' }}>2. **Thumb-First Mobile Design:** Over 65% of local repair searches happen on mobile devices. We design sticky contact headers, prominent click-to-call buttons, and direct WhatsApp messaging triggers where users' thumbs naturally rest.</p>
@@ -124,7 +124,7 @@ export default function NichePage() {
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Real-World Proof: Case Studies from Our Client Portfolio</h2>
           <p style={{ marginBottom: '20px' }}>We have partnered with tradespeople across the country to transform their digital presence from an overlooked expense into their primary source of profitable revenue.</p>
           <p style={{ marginBottom: '20px' }}>For example, when we engineered the digital platform for <Link href="/portfolio/alaska-fast-fix" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Alaska Fast Fix Handyman</Link>, the challenge was addressing a vast geographic service territory where clients needed rapid response times. We built an urgency-driven layout with instant tap-to-call functionality and clear service-boundary maps, achieving a verified 98/100 Google PageSpeed score.</p>
-          <p style={{ marginBottom: '20px' }}>Similarly, for <Link href="/portfolio/vvasquez-handyman" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>V Vasquez Handyman LLC</Link>—a specialist providing lawn care, concrete, and irrigation services in Merced, CA—we replaced a generic template with a structured multi-service catalog that pre-fills quote parameters, delivering a verified 99/100 PageSpeed benchmark.</p>
+          <p style={{ marginBottom: '20px' }}>Similarly, for <Link href="/portfolio/vvasquez-handyman" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>V Vasquez Handyman LLC</Link>-a specialist providing lawn care, concrete, and irrigation services in Merced, CA-we replaced a generic template with a structured multi-service catalog that pre-fills quote parameters, delivering a verified 99/100 PageSpeed benchmark.</p>
   
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Local SEO Strategy: Dominating "Handyman Near Me" Searches</h2>
@@ -151,7 +151,7 @@ export default function NichePage() {
           }}>
             <span className="badge-pill" style={{ marginBottom: '16px', display: 'inline-block' }}>24-Hour Free Sample</span>
             <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '12px', fontWeight: 700 }}>Get More Local Handyman Inquiries Every Week</h3>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '620px', margin: '0 auto 24px', lineHeight: 1.6 }}>Don't let slow, outdated template websites cost you jobs. We design a custom homepage mockup for your handyman business in 24 hours — free with zero commitment.</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '620px', margin: '0 auto 24px', lineHeight: 1.6 }}>Don't let slow, outdated template websites cost you jobs. We design a custom homepage mockup for your handyman business in 24 hours, free with zero commitment.</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', alignItems: 'center' }}>
               <Link href="/contact" className="btn-flip btn-primary btn-large">
                 <span className="btn-flip-inner">

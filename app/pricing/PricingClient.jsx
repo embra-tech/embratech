@@ -20,7 +20,7 @@ const TIERS = [
       'Contact & quote request forms',
       'On-page SEO foundation',
       'Google Analytics setup',
-      'Full ownership — no lock-in',
+      'Full ownership, no lock-in',
     ],
     prices: { standard: 700, full: 600, fullSave: 100, monthly: 175 },
     featured: false,
@@ -125,12 +125,12 @@ export default function PricingClient() {
             pill="Pricing"
             badge="Simple & Transparent"
             title={<>Honest pricing. <span className="highlight-text">No surprises.</span></>}
-            sub="Pick your build size. Pick how you want to pay. Or see your homepage for free first — no deposit, no contract, no obligation."
+            sub="Pick your build size. Pick how you want to pay. Or see your homepage for free first, no deposit, no contract, no obligation."
           />
         </div>
       </section>
 
-      {/* ── Free sample strip — first thing after hero ───────── */}
+      {/* ── Free sample strip, first thing after hero ───────── */}
       <section className="pricing-sample-strip-section">
         <div className="wrap">
           <div className="pricing-sample-strip reveal-up">
@@ -140,7 +140,7 @@ export default function PricingClient() {
               </svg>
               <div>
                 <strong>Not ready to commit?</strong>
-                <span> We design a real, custom homepage for your business in 24&nbsp;hours — completely free. See it. Love it. Then decide.</span>
+                <span> We design a real, custom homepage for your business in 24&nbsp;hours, completely free. See it. Love it. Then decide.</span>
               </div>
             </div>
             <a href="/contact" className="btn-flip btn-primary btn-small pricing-strip-cta">
@@ -225,7 +225,7 @@ export default function PricingClient() {
           {/* Reassurance micro-copy */}
           <div className="pricing-reassurance-row reveal-up">
             <span>✓ No interest, no credit check</span>
-            <span>✓ Full ownership — no lock-in</span>
+            <span>✓ Full ownership, no lock-in</span>
             <span>✓ Add the <Link href="/services/care-plan" style={{ textDecoration: 'underline', color: 'inherit' }}>$150/mo Care Plan</Link> anytime</span>
             <span>✓ 7-day satisfaction guarantee</span>
           </div>
@@ -234,7 +234,7 @@ export default function PricingClient() {
           <div className="payment-help reveal-up">
             <p>
               <strong>Not sure which build fits?</strong> Tell us what your business does and how customers find you today.
-              We&apos;ll say which tier fits — even when it&apos;s the cheaper one.
+              We&apos;ll say which tier fits, even when it&apos;s the cheaper one.
             </p>
             <a href="/contact" className="btn-flip btn-ghost btn-small">
               <span className="btn-flip-inner">
@@ -246,7 +246,7 @@ export default function PricingClient() {
 
           {/* Ongoing care plan note */}
           <div className="pricing-care-note reveal-up">
-            <strong>Already have a website?</strong> Add our <strong>$150/mo Care Plan</strong> to any existing site — hosting, security, SEO monitoring, content updates, and priority support. Cancel anytime.
+            <strong>Already have a website?</strong> Add our <strong>$150/mo Care Plan</strong> to any existing site, hosting, security, SEO monitoring, content updates, and priority support. Cancel anytime.
             <Link href="/services/care-plan" className="pricing-care-link">Learn more →</Link>
           </div>
 
@@ -269,12 +269,12 @@ export default function PricingClient() {
               {
                 n: '01',
                 title: 'Discovery before pixels',
-                body: 'Every project starts with a deep intake: your industry, your competitors, your target customer, and your #1 conversion goal. That research drives every design decision — so we never guess.',
+                body: 'Every project starts with a deep intake: your industry, your competitors, your target customer, and your #1 conversion goal. That research drives every design decision, so we never guess.',
               },
               {
                 n: '02',
                 title: 'Purpose-built component system',
-                body: 'We use a proprietary design system we built and maintain ourselves — not Squarespace, not WordPress, not Wix, not Webflow. Zero platform fees, zero template lock-in. The savings go directly to you.',
+                body: 'We use a proprietary design system we built and maintain ourselves, not Squarespace, not WordPress, not Wix, not Webflow. Zero platform fees, zero template lock-in. The savings go directly to you.',
               },
               {
                 n: '03',
@@ -284,7 +284,7 @@ export default function PricingClient() {
               {
                 n: '04',
                 title: 'Lean, async team',
-                body: 'No downtown office. No account managers. No bloated retainers passed to you. You talk directly to the people doing the work — faster decisions, tighter results. Your files, domain, and hosting are always yours with or without a Care Plan.',
+                body: 'No downtown office. No account managers. No bloated retainers passed to you. You talk directly to the people doing the work, faster decisions, tighter results. Your files, domain, and hosting are always yours with or without a Care Plan.',
               },
             ].map((item) => (
               <div className="pricing-how-card reveal-up" key={item.n}>

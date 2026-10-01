@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 /**
- * Breadcrumb — renders a "Home → [label]" trail and emits BreadcrumbList JSON-LD.
- * @param {string} label  — The current page's display label (e.g. "About")
- * @param {string} href   — The current page's canonical path (e.g. "/about")
+ * Breadcrumb, renders a "Home → [label]" trail and emits BreadcrumbList JSON-LD.
+ * @param {string} label , The current page's display label (e.g. "About")
+ * @param {string} href  , The current page's canonical path (e.g. "/about")
  */
 export default function Breadcrumb({ label, href }) {
   const schema = {
