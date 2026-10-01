@@ -34,6 +34,27 @@
         720,
         960
       ]
+    },
+    "plumbing-mockup": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "hvac-mockup": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "roofing-mockup": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
     }
   },
   "avatars": {

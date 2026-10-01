@@ -81,7 +81,39 @@ export default function NichePage() {
           <p style={{ marginBottom: '20px' }}>At Embra Technologies, we build custom Next.js websites tailored specifically to the operational realities of handyman businesses. We engineer every page to alleviate homeowner skepticism, showcase verified craftsmanship through high-resolution galleries, and eliminate every barrier standing between a homeowner with a broken fixture and your phone line.</p>
   
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Conversion Architecture: How We Structure Handyman Websites for Maximum Calls</h2>
+          
+          {/* Visual Showcase Card */}
+          <div data-preview-card="true" style={{ margin: '48px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.02)' }}>
+            <div style={{ background: 'rgba(0,0,0,0.5)', padding: '12px 18px', display: 'flex', alignItems: 'center', gap: '12px', borderBottom: '1px solid var(--line-dark)' }}>
+              <div style={{ display: 'flex', gap: '6px' }}>
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ff5f56', display: 'inline-block' }} />
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ffbd2e', display: 'inline-block' }} />
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#27c93f', display: 'inline-block' }} />
+              </div>
+              <div style={{ flex: 1, background: 'rgba(255,255,255,0.06)', borderRadius: '6px', padding: '4px 12px', fontSize: '0.82rem', color: 'var(--muted-inv)', fontFamily: 'monospace' }}>
+                alaskafastfix.com
+              </div>
+            </div>
+            <picture>
+              <source type="image/avif" srcSet="/images/optimized/alaskahandyman-480.avif 480w, /images/optimized/alaskahandyman-720.avif 720w, /images/optimized/alaskahandyman-960.avif 960w" sizes="(max-width: 840px) 100vw, 840px" />
+              <source type="image/webp" srcSet="/images/optimized/alaskahandyman-480.webp 480w, /images/optimized/alaskahandyman-720.webp 720w, /images/optimized/alaskahandyman-960.webp 960w" sizes="(max-width: 840px) 100vw, 840px" />
+              <img
+                src="/images/optimized/alaskahandyman-720.jpg"
+                alt="Alaska Fast Fix Handyman website preview designed by Embra Technologies"
+                loading="lazy"
+                decoding="async"
+                width={840}
+                height={480}
+                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+              />
+            </picture>
+            <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
+              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Handyman Project: Alaska Fast Fix Handyman LLC — Sub-second mobile conversion architecture.</span>
+              <Link href="/portfolio/alaska-fast-fix" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Read Alaska Fast Fix Case Study &rarr;</Link>
+            </div>
+          </div>
+
+<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Conversion Architecture: How We Structure Handyman Websites for Maximum Calls</h2>
           <p style={{ marginBottom: '20px' }}>A successful handyman website cannot simply be an online business card; it must function as a relentless lead-generation engine. Most homeowners searching for repair work are dealing with an active inconvenience—a door that won't latch, a running toilet, rotted exterior trim, or a drywall hole left by a plumbing leak. They want immediate answers, transparent expectations, and effortless ways to get on your schedule.</p>
           <p style={{ marginBottom: '20px' }}>To maximize lead generation, we implement a conversion-focused architecture built around three core structural pillars:</p>
           <p style={{ marginBottom: '20px' }}>1. **Categorized Service Silos with Scope Clarity:** Instead of an overwhelming, unreadable bulleted list of fifty random chores, we organize your skills into clean, logical categories (e.g., Carpentry & Trim, Drywall & Paint Repair, Fixture & Hardware Installation, Minor Plumbing & Electrical Repairs, and Exterior Maintenance). Each category features clear scope descriptions and dedicated quote request CTAs.</p>
@@ -107,7 +139,36 @@ export default function NichePage() {
           <p style={{ marginBottom: '20px' }}>Review all package inclusions and options on our comprehensive <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
+          
+          {/* Mid-Content Conversion CTA Box */}
+          <div data-mid-cta="true" style={{
+            margin: '56px 0',
+            padding: '40px 32px',
+            borderRadius: '16px',
+            background: 'linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(16,185,129,0.05) 100%)',
+            border: '1px solid var(--line-dark)',
+            textAlign: 'center'
+          }}>
+            <span className="badge-pill" style={{ marginBottom: '16px', display: 'inline-block' }}>24-Hour Free Sample</span>
+            <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '12px', fontWeight: 700 }}>Get More Local Handyman Inquiries Every Week</h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '620px', margin: '0 auto 24px', lineHeight: 1.6 }}>Don't let slow, outdated template websites cost you jobs. We design a custom homepage mockup for your handyman business in 24 hours — free with zero commitment.</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', alignItems: 'center' }}>
+              <Link href="/contact" className="btn-flip btn-primary btn-large">
+                <span className="btn-flip-inner">
+                  <span className="btn-flip-state">Claim Free Homepage Sample &rarr;</span>
+                  <span className="btn-flip-state" aria-hidden="true">Claim Free Homepage Sample &rarr;</span>
+                </span>
+              </Link>
+              <a href={`tel:${siteConfig.phone}`} className="btn-flip btn-ghost btn-large">
+                <span className="btn-flip-inner">
+                  <span className="btn-flip-state">Call {siteConfig.phoneDisplay}</span>
+                  <span className="btn-flip-state" aria-hidden="true">Call {siteConfig.phoneDisplay}</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
           <div style={{ marginTop: '24px', marginBottom: '40px' }}>
             
             <div style={{ marginBottom: '28px' }}>

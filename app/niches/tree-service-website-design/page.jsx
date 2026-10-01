@@ -81,7 +81,39 @@ export default function NichePage() {
           <p style={{ marginBottom: '20px' }}>If your website takes five seconds to load, buries your phone number behind multiple navigation clicks, or looks abandoned, that homeowner instantly bounces and awards a $2,500 tree removal contract to your local competitor. At Embra Technologies, we build custom Next.js websites designed specifically to capture and convert high-ticket tree service leads.</p>
   
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Emergency CTA Architecture & Above-the-Fold Credibility</h2>
+          
+          {/* Visual Showcase Card */}
+          <div data-preview-card="true" style={{ margin: '48px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.02)' }}>
+            <div style={{ background: 'rgba(0,0,0,0.5)', padding: '12px 18px', display: 'flex', alignItems: 'center', gap: '12px', borderBottom: '1px solid var(--line-dark)' }}>
+              <div style={{ display: 'flex', gap: '6px' }}>
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ff5f56', display: 'inline-block' }} />
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ffbd2e', display: 'inline-block' }} />
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#27c93f', display: 'inline-block' }} />
+              </div>
+              <div style={{ flex: 1, background: 'rgba(255,255,255,0.06)', borderRadius: '6px', padding: '4px 12px', fontSize: '0.82rem', color: 'var(--muted-inv)', fontFamily: 'monospace' }}>
+                skyhightreeservice.com
+              </div>
+            </div>
+            <picture>
+              <source type="image/avif" srcSet="/images/optimized/skyhightreeservice-480.avif 480w, /images/optimized/skyhightreeservice-720.avif 720w, /images/optimized/skyhightreeservice-960.avif 960w" sizes="(max-width: 840px) 100vw, 840px" />
+              <source type="image/webp" srcSet="/images/optimized/skyhightreeservice-480.webp 480w, /images/optimized/skyhightreeservice-720.webp 720w, /images/optimized/skyhightreeservice-960.webp 960w" sizes="(max-width: 840px) 100vw, 840px" />
+              <img
+                src="/images/optimized/skyhightreeservice-720.jpg"
+                alt="Sky High Tree Service website preview designed by Embra Technologies"
+                loading="lazy"
+                decoding="async"
+                width={840}
+                height={480}
+                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+              />
+            </picture>
+            <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
+              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Tree Care Project: Sky High Tree Service Chicago — Emergency CTA architecture & local SEO.</span>
+              <Link href="/portfolio/sky-high-tree" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Read Sky High Case Study &rarr;</Link>
+            </div>
+          </div>
+
+<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Emergency CTA Architecture & Above-the-Fold Credibility</h2>
           <p style={{ marginBottom: '20px' }}>We engineer every tree service website with an emergency-first conversion architecture designed to guide stressed property owners directly toward immediate contact:</p>
           <p style={{ marginBottom: '20px' }}>1. **Persistent 24/7 Emergency Header:** A prominent, high-contrast banner featuring instant click-to-call buttons, emergency availability badges, and average dispatch response times displayed across every viewport.</p>
           <p style={{ marginBottom: '20px' }}>2. **Crucial Trust Signals Above the Fold:** Tree removal involves dangerous physical liability. We prominently showcase proof of comprehensive general liability insurance ($2M+ coverage), workman's compensation protection, ISA Certified Arborist credentials, and municipal licensing before the visitor has to scroll.</p>
@@ -105,7 +137,36 @@ export default function NichePage() {
           <p style={{ marginBottom: '20px' }}>Learn more on our dedicated <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
+          
+          {/* Mid-Content Conversion CTA Box */}
+          <div data-mid-cta="true" style={{
+            margin: '56px 0',
+            padding: '40px 32px',
+            borderRadius: '16px',
+            background: 'linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(16,185,129,0.05) 100%)',
+            border: '1px solid var(--line-dark)',
+            textAlign: 'center'
+          }}>
+            <span className="badge-pill" style={{ marginBottom: '16px', display: 'inline-block' }}>24-Hour Free Sample</span>
+            <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '12px', fontWeight: 700 }}>Win High-Ticket Tree Removals & Emergency Calls</h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '620px', margin: '0 auto 24px', lineHeight: 1.6 }}>When storms hit, homeowners call the first trustworthy contractor they find. Get a sub-second, emergency-optimized tree service website designed to convert.</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', alignItems: 'center' }}>
+              <Link href="/contact" className="btn-flip btn-primary btn-large">
+                <span className="btn-flip-inner">
+                  <span className="btn-flip-state">Claim Free Homepage Sample &rarr;</span>
+                  <span className="btn-flip-state" aria-hidden="true">Claim Free Homepage Sample &rarr;</span>
+                </span>
+              </Link>
+              <a href={`tel:${siteConfig.phone}`} className="btn-flip btn-ghost btn-large">
+                <span className="btn-flip-inner">
+                  <span className="btn-flip-state">Call {siteConfig.phoneDisplay}</span>
+                  <span className="btn-flip-state" aria-hidden="true">Call {siteConfig.phoneDisplay}</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
           <div style={{ marginTop: '24px', marginBottom: '40px' }}>
             
             <div style={{ marginBottom: '28px' }}>

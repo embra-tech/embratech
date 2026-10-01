@@ -81,7 +81,39 @@ export default function NichePage() {
           <p style={{ marginBottom: '20px' }}>Embra Technologies builds custom Next.js websites for independent auto body shops and multi-location collision centers. We design digital experiences that instantly communicate stability, certifications, lifetime warranties, and streamlined claims assistance.</p>
   
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Critical Trust Signals & Mobile Photo Estimate Architecture</h2>
+          
+          {/* Visual Showcase Card */}
+          <div data-preview-card="true" style={{ margin: '48px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.02)' }}>
+            <div style={{ background: 'rgba(0,0,0,0.5)', padding: '12px 18px', display: 'flex', alignItems: 'center', gap: '12px', borderBottom: '1px solid var(--line-dark)' }}>
+              <div style={{ display: 'flex', gap: '6px' }}>
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ff5f56', display: 'inline-block' }} />
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ffbd2e', display: 'inline-block' }} />
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#27c93f', display: 'inline-block' }} />
+              </div>
+              <div style={{ flex: 1, background: 'rgba(255,255,255,0.06)', borderRadius: '6px', padding: '4px 12px', fontSize: '0.82rem', color: 'var(--muted-inv)', fontFamily: 'monospace' }}>
+                tuxfordcollision.com
+              </div>
+            </div>
+            <picture>
+              <source type="image/avif" srcSet="/images/optimized/tuxford-480.avif 480w, /images/optimized/tuxford-720.avif 720w, /images/optimized/tuxford-960.avif 960w" sizes="(max-width: 840px) 100vw, 840px" />
+              <source type="image/webp" srcSet="/images/optimized/tuxford-480.webp 480w, /images/optimized/tuxford-720.webp 720w, /images/optimized/tuxford-960.webp 960w" sizes="(max-width: 840px) 100vw, 840px" />
+              <img
+                src="/images/optimized/tuxford-720.jpg"
+                alt="Tuxford Collision Center website preview designed by Embra Technologies"
+                loading="lazy"
+                decoding="async"
+                width={840}
+                height={480}
+                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+              />
+            </picture>
+            <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
+              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Auto Body Project: Tuxford Collision Center Los Angeles — Trust-first hierarchy & 97/100 PageSpeed.</span>
+              <Link href="/portfolio/tuxford-collision" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Read Tuxford Case Study &rarr;</Link>
+            </div>
+          </div>
+
+<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Critical Trust Signals & Mobile Photo Estimate Architecture</h2>
           <p style={{ marginBottom: '20px' }}>To convert stressed vehicle owners into booked repair jobs, our custom auto body web architecture incorporates essential trust elements:</p>
           <p style={{ marginBottom: '20px' }}>1. **Insurance Advocacy Messaging:** We explicitly clarify above the fold that vehicle owners have the legal right under state law to choose their own repair facility, regardless of which direct-repair network their insurer recommends. We showcase badges for all major insurance carriers.</p>
           <p style={{ marginBottom: '20px' }}>2. **I-CAR Gold Class & OEM Certifications:** Collision repair today involves complex ADAS calibration, lightweight aluminum structures, and electronic sensor alignments. Prominently displaying I-CAR certifications and manufacturer approvals (such as Ford, GM, Honda, Toyota, or Tesla) proves you possess factory-grade equipment.</p>
@@ -105,7 +137,36 @@ export default function NichePage() {
           <p style={{ marginBottom: '20px' }}>Review all details on our <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
+          
+          {/* Mid-Content Conversion CTA Box */}
+          <div data-mid-cta="true" style={{
+            margin: '56px 0',
+            padding: '40px 32px',
+            borderRadius: '16px',
+            background: 'linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(16,185,129,0.05) 100%)',
+            border: '1px solid var(--line-dark)',
+            textAlign: 'center'
+          }}>
+            <span className="badge-pill" style={{ marginBottom: '16px', display: 'inline-block' }}>24-Hour Free Sample</span>
+            <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '12px', fontWeight: 700 }}>Turn 11 PM Accident Searches into Booked Repairs</h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '620px', margin: '0 auto 24px', lineHeight: 1.6 }}>Drivers in need of collision repair demand immediate trust and clarity. Claim a custom auto body homepage mockup tailored to your shop in 24 hours.</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', alignItems: 'center' }}>
+              <Link href="/contact" className="btn-flip btn-primary btn-large">
+                <span className="btn-flip-inner">
+                  <span className="btn-flip-state">Claim Free Homepage Sample &rarr;</span>
+                  <span className="btn-flip-state" aria-hidden="true">Claim Free Homepage Sample &rarr;</span>
+                </span>
+              </Link>
+              <a href={`tel:${siteConfig.phone}`} className="btn-flip btn-ghost btn-large">
+                <span className="btn-flip-inner">
+                  <span className="btn-flip-state">Call {siteConfig.phoneDisplay}</span>
+                  <span className="btn-flip-state" aria-hidden="true">Call {siteConfig.phoneDisplay}</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
           <div style={{ marginTop: '24px', marginBottom: '40px' }}>
             
             <div style={{ marginBottom: '28px' }}>

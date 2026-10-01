@@ -81,7 +81,39 @@ export default function NichePage() {
           <p style={{ marginBottom: '20px' }}>At Embra Technologies, we build custom Next.js websites for landscaping contractors, grounds maintenance specialists, and hardscape artisans. We engineer fast, responsive photo galleries, clear service tier breakdowns, and localized search frameworks that keep your crews booked through spring, summer, and fall.</p>
   
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Overcoming Seasonality with Multi-Service Conversion Architecture</h2>
+          
+          {/* Visual Showcase Card */}
+          <div data-preview-card="true" style={{ margin: '48px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.02)' }}>
+            <div style={{ background: 'rgba(0,0,0,0.5)', padding: '12px 18px', display: 'flex', alignItems: 'center', gap: '12px', borderBottom: '1px solid var(--line-dark)' }}>
+              <div style={{ display: 'flex', gap: '6px' }}>
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ff5f56', display: 'inline-block' }} />
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ffbd2e', display: 'inline-block' }} />
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#27c93f', display: 'inline-block' }} />
+              </div>
+              <div style={{ flex: 1, background: 'rgba(255,255,255,0.06)', borderRadius: '6px', padding: '4px 12px', fontSize: '0.82rem', color: 'var(--muted-inv)', fontFamily: 'monospace' }}>
+                vvasquezhandymanllc.net
+              </div>
+            </div>
+            <picture>
+              <source type="image/avif" srcSet="/images/optimized/vvasquez-480.avif 480w, /images/optimized/vvasquez-720.avif 720w, /images/optimized/vvasquez-960.avif 960w" sizes="(max-width: 840px) 100vw, 840px" />
+              <source type="image/webp" srcSet="/images/optimized/vvasquez-480.webp 480w, /images/optimized/vvasquez-720.webp 720w, /images/optimized/vvasquez-960.webp 960w" sizes="(max-width: 840px) 100vw, 840px" />
+              <img
+                src="/images/optimized/vvasquez-720.jpg"
+                alt="V Vasquez LLC website preview designed by Embra Technologies"
+                loading="lazy"
+                decoding="async"
+                width={840}
+                height={480}
+                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+              />
+            </picture>
+            <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
+              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Landscaping & Concrete Project: V Vasquez LLC Merced, CA — 99/100 PageSpeed & instant quote flow.</span>
+              <Link href="/portfolio/vvasquez-handyman" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Read V Vasquez Case Study &rarr;</Link>
+            </div>
+          </div>
+
+<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Overcoming Seasonality with Multi-Service Conversion Architecture</h2>
           <p style={{ marginBottom: '20px' }}>A major challenge facing landscaping businesses is revenue seasonality. A company that focuses heavily on spring cleanups and summer lawn maintenance often experiences revenue lulls in autumn and winter unless their website strategically pivots:</p>
           <p style={{ marginBottom: '20px' }}>1. **Year-Round Service Silos:** We build persistent, dedicated landing pages for both warm-weather services (Aeration, Mowing, Irrigation Installation, Patio Construction) and cold-weather services (Fall Leaf Removal, Mulching, Winterization, Snow & Ice Management). Because these pages remain live year-round, they accumulate continuous organic search equity.</p>
           <p style={{ marginBottom: '20px' }}>2. **Performance-Optimized Before-and-After Galleries:** We implement next-generation image optimization (WebP/AVIF formats with responsive srcset attributes), allowing visitors to inspect high-resolution before-and-after transformations instantly without penalizing Core Web Vitals.</p>
@@ -105,7 +137,36 @@ export default function NichePage() {
           <p style={{ marginBottom: '20px' }}>Visit our comprehensive <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link> for complete details.</p>
   
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
+          
+          {/* Mid-Content Conversion CTA Box */}
+          <div data-mid-cta="true" style={{
+            margin: '56px 0',
+            padding: '40px 32px',
+            borderRadius: '16px',
+            background: 'linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(16,185,129,0.05) 100%)',
+            border: '1px solid var(--line-dark)',
+            textAlign: 'center'
+          }}>
+            <span className="badge-pill" style={{ marginBottom: '16px', display: 'inline-block' }}>24-Hour Free Sample</span>
+            <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '12px', fontWeight: 700 }}>Book High-Margin Landscaping, Irrigation & Hardscape Jobs</h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '620px', margin: '0 auto 24px', lineHeight: 1.6 }}>Showcase your seasonal services, before-and-after projects, and transparent estimates with a lightning-fast custom website.</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', alignItems: 'center' }}>
+              <Link href="/contact" className="btn-flip btn-primary btn-large">
+                <span className="btn-flip-inner">
+                  <span className="btn-flip-state">Claim Free Homepage Sample &rarr;</span>
+                  <span className="btn-flip-state" aria-hidden="true">Claim Free Homepage Sample &rarr;</span>
+                </span>
+              </Link>
+              <a href={`tel:${siteConfig.phone}`} className="btn-flip btn-ghost btn-large">
+                <span className="btn-flip-inner">
+                  <span className="btn-flip-state">Call {siteConfig.phoneDisplay}</span>
+                  <span className="btn-flip-state" aria-hidden="true">Call {siteConfig.phoneDisplay}</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
           <div style={{ marginTop: '24px', marginBottom: '40px' }}>
             
             <div style={{ marginBottom: '28px' }}>
