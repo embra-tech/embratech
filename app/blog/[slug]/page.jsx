@@ -52,7 +52,7 @@ export default function BlogPostPage({ params }) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.dateModified || post.date,
     wordCount: wordCount,
     mainEntityOfPage: {
       '@type': 'WebPage',

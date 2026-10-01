@@ -22,12 +22,16 @@ export function generateMetadata({ params }) {
   const url = `${siteConfig.siteUrl}/locations/${params.city}`;
   const desc = `Embra Technologies builds high-converting, lightning-fast websites for growing businesses in ${loc.name}. Get a free custom homepage sample today.`;
   
+  const titleText = loc.slug === 'brooklyn'
+    ? 'Web Design & SEO Agency in Brooklyn, NY | Embra'
+    : `Web Design & SEO Agency in ${loc.name} | Embra`;
+
   const meta = {
-    title: `Web Design & SEO Agency in ${loc.name} | Embra`,
+    title: titleText,
     alternates: { canonical: `/locations/${params.city}` },
     description: desc,
     openGraph: {
-      title: `Web Design & SEO Agency in ${loc.name} | Embra`,
+      title: titleText,
       description: desc,
       url,
       images: [

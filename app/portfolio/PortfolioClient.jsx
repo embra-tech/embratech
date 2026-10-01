@@ -33,9 +33,9 @@ const SITES = [
     slug: 'vvasquez-handyman',
     url: 'https://vvasquezhandymanllc.net/',
     image: '/images/vvasquez.webp',
-    industry: 'Handyman Services',
-    location: 'United States',
-    desc: 'A professional handyman brand with a clean service catalog, instant quote calls-to-action, and a mobile-first layout that turns searches into scheduled jobs.',
+    industry: 'Lawn Care, Concrete & Irrigation',
+    location: 'Merced, CA',
+    desc: 'Lawn care, concrete, and irrigation contractor in Merced, CA, with a structured service catalog, instant quote calls-to-action, and a mobile-first layout that turns searches into scheduled jobs.',
     c1: '#E8A552', c2: '#6E4517',
     tags: ['Web Design', 'Service Pages', 'Mobile First'],
     results: [

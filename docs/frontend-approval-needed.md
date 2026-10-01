@@ -21,3 +21,8 @@ Each item is logged here with a one-line reason for blocking.
 
 ### FE-05 — Favicon PNG/ICO Addition
 **Reason:** Adding 48×48 PNG and ICO files and wiring them in metadata icons requires verifying no layout shift occurs with the existing SVG. Needs screenshot diff review before shipping.
+
+### FE-06 � Interactive ROI Calculator Widget
+**Page:** /blog/website-roi-calculator
+**Issue:** The blog post contains a text-based ROI worksheet. An interactive calculator widget with live inputs would significantly improve engagement and time-on-page.
+**Blocked by:** Requires new UI component (JavaScript calculator with styled inputs and live output).

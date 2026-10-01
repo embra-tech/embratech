@@ -59,6 +59,41 @@ const nextConfig = {
         destination: '/services/care-plan',
         permanent: true,
       },
+      {
+        source: '/web-design-for-handyman-businesses',
+        destination: '/niches/web-design-for-handyman-businesses',
+        permanent: true,
+      },
+      {
+        source: '/tree-service-website-design',
+        destination: '/niches/tree-service-website-design',
+        permanent: true,
+      },
+      {
+        source: '/auto-body-shop-website-design',
+        destination: '/niches/auto-body-shop-website-design',
+        permanent: true,
+      },
+      {
+        source: '/landscaping-website-design',
+        destination: '/niches/landscaping-website-design',
+        permanent: true,
+      },
+      {
+        source: '/plumber-website-design',
+        destination: '/niches/plumber-website-design',
+        permanent: true,
+      },
+      {
+        source: '/hvac-website-design',
+        destination: '/niches/hvac-website-design',
+        permanent: true,
+      },
+      {
+        source: '/roofing-website-design',
+        destination: '/niches/roofing-website-design',
+        permanent: true,
+      },
     ];
   },
 };

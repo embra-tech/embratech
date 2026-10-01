@@ -21,7 +21,7 @@ const REVIEWS = [
   {
     quote: "Communication was phenomenal. No waiting days for an email reply. The Embra team speaks plain English, explained exactly what they were doing, and handled the entire launch. It was the easiest vendor experience I've had as a business owner.",
     name: 'Victor Vasquez',
-    role: 'Founder, V Vasquez Handyman LLC · United States',
+    role: 'Founder, V Vasquez Handyman LLC · Merced, CA',
     url: 'https://vvasquezhandymanllc.net/',
     domain: 'vvasquezhandymanllc.net',
     avatar: 'victor',

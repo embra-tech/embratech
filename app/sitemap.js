@@ -62,7 +62,7 @@ export default function sitemap() {
 
   const blogPages = BLOG_POSTS.map(post => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: post.date,
+    lastModified: post.dateModified || post.date,
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
