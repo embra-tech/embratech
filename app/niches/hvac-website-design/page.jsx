@@ -73,7 +73,7 @@ export default function NichePage() {
       </section>
 
       <section className="location-content" style={{ padding: '80px 0' }}>
-        <div className="wrap text-content reveal-up" style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
+        <div className="wrap text-content " style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
           
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>The Seasonal Volatility of HVAC Contractor Marketing</h2>
           <p style={{ marginBottom: '20px' }}>Heating, Ventilation, and Air Conditioning (HVAC) contracting is characterized by intense seasonal swings. During the first blistering heatwave of July or the first sub-zero freeze of January, HVAC companies experience explosive surges in emergency repair calls. In contrast, the spring and autumn "shoulder seasons" often witness dramatic drops in inbound service volume.</p>

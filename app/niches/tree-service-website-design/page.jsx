@@ -73,7 +73,7 @@ export default function NichePage() {
       </section>
 
       <section className="location-content" style={{ padding: '80px 0' }}>
-        <div className="wrap text-content reveal-up" style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
+        <div className="wrap text-content " style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
           
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>The High-Urgency Nature of Tree Service Purchases</h2>
           <p style={{ marginBottom: '20px' }}>Tree care and tree removal represent one of the highest-ticket and most urgency-driven sectors in the entire home service industry. When a homeowner searches for a tree service company, they rarely engage in casual comparison shopping over several weeks. Instead, they are usually facing one of two urgent scenarios: an emergency storm event where a heavy oak or pine has collapsed onto their roof or driveway, or a hazardous dead tree threatening power lines.</p>

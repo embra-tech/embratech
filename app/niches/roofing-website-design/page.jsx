@@ -73,7 +73,7 @@ export default function NichePage() {
       </section>
 
       <section className="location-content" style={{ padding: '80px 0' }}>
-        <div className="wrap text-content reveal-up" style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
+        <div className="wrap text-content " style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
           
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>The High-Stakes Trust Barrier in Roofing Contractor Web Design</h2>
           <p style={{ marginBottom: '20px' }}>Roofing is universally recognized as one of the highest-ticket and highest-skepticism categories in residential construction. A complete roof replacement represents a major structural investment ranging anywhere from $10,000 to upwards of $40,000. Compounding this financial gravity is the pervasive homeowner fear of transient "storm chasers"—unlicensed, uninsured operators who descend upon hail-damaged neighborhoods, collect insurance deposits, perform shoddy work, and vanish before warranties can be claimed.</p>

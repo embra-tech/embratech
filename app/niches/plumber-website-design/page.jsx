@@ -73,7 +73,7 @@ export default function NichePage() {
       </section>
 
       <section className="location-content" style={{ padding: '80px 0' }}>
-        <div className="wrap text-content reveal-up" style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
+        <div className="wrap text-content " style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
           
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>The Emergency Reality of Modern Plumbing Searches</h2>
           <p style={{ marginBottom: '20px' }}>Plumbing problems are notorious for striking without warning. A water heater ruptures in a basement, a main sewer line backs up into a ground-floor bathroom, or a frozen pipe bursts behind a drywall partition. In these moments of domestic crisis, homeowners do not browse social media or evaluate design aesthetics—they grab their smartphones and search for an immediate, trustworthy solution.</p>

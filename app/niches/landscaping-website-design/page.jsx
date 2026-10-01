@@ -73,7 +73,7 @@ export default function NichePage() {
       </section>
 
       <section className="location-content" style={{ padding: '80px 0' }}>
-        <div className="wrap text-content reveal-up" style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
+        <div className="wrap text-content " style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
           
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>The Visual Psychology of High-End Landscaping & Lawn Care</h2>
           <p style={{ marginBottom: '20px' }}>Landscaping, hardscaping, and lawn care are deeply visual, aspirational investments. Whether a residential homeowner is seeking routine weekly mowing, an elaborate backyard patio installation, a modern retaining wall, or a smart irrigation system, they make their purchasing decisions based on visible evidence of quality craftsmanship.</p>

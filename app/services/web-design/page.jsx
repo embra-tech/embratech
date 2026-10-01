@@ -138,7 +138,7 @@ export default function WebDesignPage() {
       {/* What is included */}
       <section style={{ padding: '80px 0' }}>
         <div className="wrap">
-          <div className="section-head reveal-up" style={{ textAlign: 'center', marginBottom: '56px' }}>
+          <div className="section-head " style={{ textAlign: 'center', marginBottom: '56px' }}>
             <div className="section-badge"><span className="badge-pill">Features</span><span className="badge-text">How We Build</span></div>
             <h2>Engineering Trust and Maximizing Conversions</h2>
             <p>Every aspect of our custom builds is designed to outperform your competition.</p>
@@ -177,7 +177,7 @@ export default function WebDesignPage() {
       {/* FAQ Section */}
       <section style={{ padding: '80px 0', borderTop: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.015)' }}>
         <div className="wrap" style={{ maxWidth: 800, margin: '0 auto' }}>
-          <div className="section-head reveal-up" style={{ textAlign: 'center', marginBottom: '48px' }}>
+          <div className="section-head " style={{ textAlign: 'center', marginBottom: '48px' }}>
             <h2>Web Design Frequently Asked Questions</h2>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>

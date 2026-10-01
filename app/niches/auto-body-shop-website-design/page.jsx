@@ -73,7 +73,7 @@ export default function NichePage() {
       </section>
 
       <section className="location-content" style={{ padding: '80px 0' }}>
-        <div className="wrap text-content reveal-up" style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
+        <div className="wrap text-content " style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
           
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>The 11 PM Accident Scenario: Understanding Stressed Driver Psychology</h2>
           <p style={{ marginBottom: '20px' }}>Collision repair is rarely a planned purchase. The majority of prospective auto body clients search for a shop under immense stress: immediately following a vehicular collision on the side of a highway, or late at night after filing an insurance claim. In these anxious moments, vehicle owners are overwhelmed by questions about towing logistics, deductible costs, OEM parts quality, rental car coordination, and whether their chosen repair facility will advocate on their behalf against aggressive insurance adjusters.</p>

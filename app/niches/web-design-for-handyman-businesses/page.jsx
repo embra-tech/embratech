@@ -73,7 +73,7 @@ export default function NichePage() {
       </section>
 
       <section className="location-content" style={{ padding: '80px 0' }}>
-        <div className="wrap text-content reveal-up" style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
+        <div className="wrap text-content " style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
           
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>The Core Challenge in Handyman Web Design: Overcoming Low-Trust Perceptions</h2>
           <p style={{ marginBottom: '20px' }}>Homeowners face a difficult dilemma whenever they need minor home repairs, carpentry, drywall patching, or fixture replacement: should they call a high-priced specialized contractor, or hire an independent handyman? In most cases, homeowners want the affordability, responsiveness, and versatility of a local handyman. However, their single greatest hesitation is trust. Handyman services require inviting an unfamiliar tradesperson directly into someone's home, often around their family and valuable property.</p>

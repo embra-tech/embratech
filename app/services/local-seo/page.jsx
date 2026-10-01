@@ -118,7 +118,7 @@ export default function LocalSeoPage() {
       {/* What is included */}
       <section style={{ padding: '80px 0' }}>
         <div className="wrap">
-          <div className="section-head reveal-up" style={{ textAlign: 'center', marginBottom: '56px' }}>
+          <div className="section-head " style={{ textAlign: 'center', marginBottom: '56px' }}>
             <div className="section-badge"><span className="badge-pill">Methodology</span><span className="badge-text">How We Rank You</span></div>
             <h2>Comprehensive Local SEO Strategies</h2>
             <p>We handle the technical details so you can focus on serving your customers.</p>
@@ -157,7 +157,7 @@ export default function LocalSeoPage() {
       {/* FAQ Section */}
       <section style={{ padding: '80px 0', borderTop: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.015)' }}>
         <div className="wrap" style={{ maxWidth: 800, margin: '0 auto' }}>
-          <div className="section-head reveal-up" style={{ textAlign: 'center', marginBottom: '48px' }}>
+          <div className="section-head " style={{ textAlign: 'center', marginBottom: '48px' }}>
             <h2>Local SEO Frequently Asked Questions</h2>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
