@@ -12,6 +12,7 @@ export default function sitemap() {
     { url: baseUrl,                                    lastModified: staticLastMod, changeFrequency: 'weekly',   priority: 1.0 },
     { url: `${baseUrl}/services`,                      lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/services/care-plan`,            lastModified: staticLastMod, changeFrequency: 'monthly',  priority: 0.85 },
+    { url: `${baseUrl}/niches`,                        lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/services/web-design`,           lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/services/local-seo`,            lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/services/website-integrations`, lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.85 },

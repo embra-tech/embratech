@@ -160,6 +160,46 @@ export default function ServicesClient() {
       <WhyUs />
       <Faq variant="services" />
       
+      {/* Industries We Serve */}
+      <section style={{ padding: '60px 0', borderTop: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.01)' }}>
+        <div className="wrap">
+          <div className="section-head reveal-up" style={{ textAlign: 'center', marginBottom: '32px' }}>
+            <div className="section-badge"><span className="badge-pill">By Trade</span><span className="badge-text">Industries We Serve</span></div>
+            <h2>Specialist websites for every home service trade</h2>
+            <p>Each trade has unique trust signals, search intent, and conversion patterns. <Link href="/niches">Explore our industry-specific guides →</Link></p>
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
+            {[
+              { label: 'Handyman', href: '/niches/web-design-for-handyman-businesses' },
+              { label: 'Tree Service', href: '/niches/tree-service-website-design' },
+              { label: 'Auto Body', href: '/niches/auto-body-shop-website-design' },
+              { label: 'Landscaping', href: '/niches/landscaping-website-design' },
+              { label: 'Plumbing', href: '/niches/plumber-website-design' },
+              { label: 'HVAC', href: '/niches/hvac-website-design' },
+              { label: 'Roofing', href: '/niches/roofing-website-design' },
+            ].map((n) => (
+              <Link
+                key={n.href}
+                href={n.href}
+                style={{
+                  padding: '10px 20px',
+                  background: 'rgba(255,255,255,0.04)',
+                  border: '1px solid var(--line-dark)',
+                  borderRadius: '8px',
+                  color: 'var(--paper-bright)',
+                  fontWeight: 500,
+                  fontSize: '0.9rem',
+                  textDecoration: 'none',
+                  transition: 'border-color 0.2s',
+                }}
+              >
+                {n.label} →
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section style={{ padding: '40px 0', borderTop: '1px solid var(--line-dark)' }}>
         <div className="wrap" style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a href="/pricing" className="btn-secondary" style={{ padding: '12px 24px', borderRadius: '8px', border: '1px solid var(--line-dark)' }}>View Pricing Plans &rarr;</a>

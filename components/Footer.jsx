@@ -35,10 +35,23 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Services</h4>
             <ul>
-              <li><Link href="/services">Website Design</Link></li>
-              <li><Link href="/services">Search Optimization</Link></li>
-              <li><Link href="/services">Care Plan ($150/mo)</Link></li>
-              <li><Link href="/services">Custom Integrations</Link></li>
+              <li><Link href="/services/web-design">Website Design</Link></li>
+              <li><Link href="/services/local-seo">Local SEO</Link></li>
+              <li><Link href="/services/website-integrations">Integrations</Link></li>
+              <li><Link href="/services/care-plan">Care Plan ($150/mo)</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4>Industries</h4>
+            <ul>
+              <li><Link href="/niches/web-design-for-handyman-businesses">Handyman</Link></li>
+              <li><Link href="/niches/tree-service-website-design">Tree Service</Link></li>
+              <li><Link href="/niches/plumber-website-design">Plumbing</Link></li>
+              <li><Link href="/niches/hvac-website-design">HVAC</Link></li>
+              <li><Link href="/niches/roofing-website-design">Roofing</Link></li>
+              <li><Link href="/niches/auto-body-shop-website-design">Auto Body</Link></li>
+              <li><Link href="/niches/landscaping-website-design">Landscaping</Link></li>
             </ul>
           </div>
 

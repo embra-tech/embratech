@@ -66,7 +66,7 @@ export default function Cta({ variant = 'home' }) {
 
   return (
     <section className="final-cta" id="contact" aria-labelledby="cta-heading">
-      <div className="wrap cta-box reveal-up">
+      <div className="wrap cta-box">
         <div className="section-badge">
           <span className="badge-pill">{v.badge}</span>
           <span className="badge-text">{v.badgeText}</span>
