@@ -66,46 +66,8 @@ function Avatar({ name, alt }) {
 }
 
 export default function Testimonials() {
-  // Review + AggregateRating JSON-LD (no star markup — just data layer)
-  const reviewSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': `${siteConfig.siteUrl}/#localbusiness`,
-    name: siteConfig.brandName,
-    url: siteConfig.siteUrl,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: String(REVIEWS.length),
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: REVIEWS.map((r) => ({
-      '@type': 'Review',
-      author: {
-        '@type': 'Person',
-        name: r.name,
-      },
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: String(r.rating),
-        bestRating: '5',
-        worstRating: '1',
-      },
-      reviewBody: r.quote,
-      publisher: {
-        '@type': 'Organization',
-        name: r.role.split(',')[1]?.split('·')[0]?.trim() ?? r.role,
-      },
-    })),
-  };
-
   return (
     <section id="testimonials" aria-labelledby="testimonials-heading">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
-      />
       <div className="wrap">
         <div className="section-head reveal-up">
           <div className="section-badge"><span className="badge-pill">Reviews</span><span className="badge-text">Client Feedback</span></div>

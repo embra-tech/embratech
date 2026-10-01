@@ -6,7 +6,8 @@ const LOCATIONS = [
   { slug: 'los-angeles', name: 'Los Angeles', state: 'CA' },
   { slug: 'chicago', name: 'Chicago', state: 'IL' },
   { slug: 'alaska', name: 'Alaska', state: 'AK' },
-  { slug: 'gulf-coast', name: 'the Gulf Coast', state: 'Region' }
+  { slug: 'gulf-coast', name: 'the Gulf Coast', state: 'Region' },
+  { slug: 'brooklyn', name: 'Brooklyn', state: 'NY' }
 ];
 
 export function generateStaticParams() {

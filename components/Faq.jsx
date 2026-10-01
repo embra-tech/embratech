@@ -72,7 +72,7 @@ const FAQ_SETS = {
     },
     {
       q: 'How wide is your local SEO coverage?',
-      a: "We optimize for any US city or service area. We've worked with businesses in Los Angeles, Chicago, Alaska, and across the Gulf Coast. Local SEO strategy is tailored to your specific service radius and competitive landscape.",
+      a: "We optimize for any US city or service area. We work with businesses across the US, including Los Angeles, Chicago and Alaska. Local SEO strategy is tailored to your specific service radius and competitive landscape.",
     },
   ],
 };

@@ -4,13 +4,22 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap, ScrollTrigger } from '../lib/gsap';
 import siteConfig from '../lib/site-config';
 
-const BARS = [
+const PROOF_TRAFFIC = siteConfig.proof.traffic280;
+
+const BARS = PROOF_TRAFFIC ? [
   { target: 36, tooltip: 'Month 1: +45%' },
   { target: 52, tooltip: 'Month 1.5: +92%' },
   { target: 68, tooltip: 'Month 2: +145%' },
   { target: 82, tooltip: 'Month 2.5: +210%' },
   { target: 92, tooltip: 'Month 3: +255%' },
   { target: 100, tooltip: 'Record High: +280.4%' },
+] : [
+  { target: 36, tooltip: 'Month 1: Initial Growth' },
+  { target: 52, tooltip: 'Month 1.5: Scaling Up' },
+  { target: 68, tooltip: 'Month 2: Accelerating' },
+  { target: 82, tooltip: 'Month 2.5: High Volume' },
+  { target: 92, tooltip: 'Month 3: Record Traffic' },
+  { target: 100, tooltip: 'Illustrative Trajectory' },
 ];
 
 const TABS = ['Overview', 'SEO Live', 'Speed 99'];
@@ -19,13 +28,13 @@ const TABS = ['Overview', 'SEO Live', 'Speed 99'];
 // state (not 0) so the numbers are correct immediately on load/SSR — the
 // count-up is a bonus animation for users who scroll to this section, never
 // the only way the real numbers get shown.
-const FINAL_METRIC = 280.4;
+const FINAL_METRIC = PROOF_TRAFFIC ? 280.4 : 100;
 const FINAL_LEADS = 14850;
 const PAGESPEED_REPORT_URL = 'https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fembratechnologies.org%2F';
 
 export default function Showcase() {
   const sectionRef = useRef(null);
-  const [metric, setMetric] = useState(`+${FINAL_METRIC.toFixed(1)}%`);
+  const [metric, setMetric] = useState(PROOF_TRAFFIC ? `+${FINAL_METRIC.toFixed(1)}%` : 'Accelerated Growth');
   const [leads, setLeads] = useState(`${FINAL_LEADS.toLocaleString('en-US')}+`);
   const [tab, setTab] = useState(0);
   const playedRef = useRef(false);
@@ -71,7 +80,13 @@ export default function Showcase() {
         v: FINAL_METRIC,
         duration: 1.8,
         ease: 'power3.out',
-        onUpdate: () => setMetric(`+${counter.v.toFixed(1)}%`),
+        onUpdate: () => {
+          if (PROOF_TRAFFIC) {
+            setMetric(`+${counter.v.toFixed(1)}%`);
+          } else {
+            setMetric('Accelerated Growth');
+          }
+        },
       });
 
       const leadsObj = { v: 0 };

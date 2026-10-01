@@ -32,14 +32,14 @@ const CASE_STUDIES = {
     name: 'V Vasquez Handyman LLC',
     domain: 'vvasquezhandymanllc.net',
     url: 'https://vvasquezhandymanllc.net/',
-    industry: 'Handyman Services',
-    location: 'United States',
+    industry: 'Lawn Care, Concrete & Irrigation',
+    location: 'Merced, CA',
     timeline: '2 weeks',
     tags: ['Web Design', 'Service Pages', 'Mobile First'],
-    challenge: `Handyman businesses are saturated with low-quality online presences — blurry logos, generic template sites, and no clear service listing. V Vasquez Handyman had the skills and reputation but an online presence that didn't reflect either. Homeowners searching on mobile were bouncing before making contact, costing real jobs every week.`,
+    challenge: `V Vasquez Handyman LLC offers lawn care, concrete work, and irrigation services in Merced, CA. Despite strong skills and a solid local reputation, their online presence did not reflect either — blurry branding, a generic template site, and no clear service listing. Homeowners searching on mobile were bouncing before making contact, costing real jobs every week.`,
     approach: [
       { title: 'Structured service catalog', body: 'We built each service its own section with clear scope, pricing signals, and a "Request This Service" CTA — letting visitors find exactly what they need without wading through irrelevant content.' },
-      { title: 'Mobile-first execution', body: 'Over 80% of handyman searches happen on a phone. We designed and tested mobile experience first, then scaled up — not the other way around. Tap targets, font sizes, and form inputs all optimized for thumbs.' },
+      { title: 'Mobile-first execution', body: 'We designed and tested the mobile experience first, then scaled up — not the other way around. Tap targets, font sizes, and form inputs all optimized for thumbs, because most local service searches happen on smartphones.' },
       { title: 'Instant quote flow', body: 'A streamlined quote request form with service selection pre-fills context, reducing back-and-forth and getting jobs booked faster with less friction for both sides.' },
     ],
     results: [
@@ -135,6 +135,8 @@ export default function CaseStudyPage({ params }) {
     headline: `${cs.name} — Web Design Case Study`,
     description: `How Embra Technologies built a high-performance website for ${cs.name} in ${cs.location}.`,
     image: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
+    datePublished: '2026-09-30',
+    dateModified: '2026-09-30',
     author: { '@type': 'Organization', name: siteConfig.legalName, url: siteConfig.siteUrl },
     publisher: {
       '@type': 'Organization',

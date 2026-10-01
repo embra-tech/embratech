@@ -8,6 +8,7 @@ import Cta from '../../components/Cta';
 import Faq from '../../components/Faq';
 import Breadcrumb from '../../components/Breadcrumb';
 import siteConfig from '../../lib/site-config';
+import Link from 'next/link';
 
 const SERVICES = [
   {
@@ -20,6 +21,7 @@ const SERVICES = [
       'CMS-ready so your team can edit content',
       'Conversion-focused layouts and CTAs',
     ],
+    link: '/services/web-design',
     icon: <><rect x="3" y="3" width="18" height="18" rx="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></>,
   },
   {
@@ -32,6 +34,7 @@ const SERVICES = [
       'Local search optimization & Google Business Profile',
       'Ongoing ranking & traffic reporting',
     ],
+    link: '/services/local-seo',
     icon: <><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></>,
   },
   {
@@ -56,6 +59,7 @@ const SERVICES = [
       'Analytics & conversion tracking setup',
       'Third-party API integrations',
     ],
+    link: '/services/website-integrations',
     icon: <><rect x="3" y="3" width="7.5" height="7.5" rx="1.5" /><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5" /><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5" /><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5" /></>,
   },
 ];
@@ -98,6 +102,13 @@ export default function ServicesClient() {
                       </li>
                     ))}
                   </ul>
+                  {s.link && (
+                    <div style={{ marginTop: '20px' }}>
+                      <Link href={s.link} style={{ color: 'var(--primary-bright)', textDecoration: 'underline', fontWeight: 500 }}>
+                        Learn more about {s.title.split(' ')[0]} &rarr;
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -148,6 +159,14 @@ export default function ServicesClient() {
 
       <WhyUs />
       <Faq variant="services" />
+      
+      <section style={{ padding: '40px 0', borderTop: '1px solid var(--line-dark)' }}>
+        <div className="wrap" style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <a href="/pricing" className="btn-secondary" style={{ padding: '12px 24px', borderRadius: '8px', border: '1px solid var(--line-dark)' }}>View Pricing Plans &rarr;</a>
+          <a href="/portfolio" className="btn-secondary" style={{ padding: '12px 24px', borderRadius: '8px', border: '1px solid var(--line-dark)' }}>See Our Work &rarr;</a>
+        </div>
+      </section>
+
       <Cta variant="services" />
     </div>
   );

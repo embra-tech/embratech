@@ -22,13 +22,24 @@ export const metadata = {
 };
 
 import Link from 'next/link';
+import JsonLd from '../../components/JsonLd';
 import Breadcrumb from '../../components/Breadcrumb';
 
 const LAST_UPDATED = 'September 14, 2026';
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteConfig.siteUrl}/` },
+    { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: `${siteConfig.siteUrl}/privacy` },
+  ],
+};
+
 export default function PrivacyPage() {
   return (
     <div className="page-shell">
+      <JsonLd data={breadcrumbSchema} />
       <section className="page-hero">
         <div className="wrap">
           <Breadcrumb label="Privacy Policy" href="/privacy" />

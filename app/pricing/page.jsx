@@ -14,6 +14,22 @@ export const metadata = {
   },
 };
 
+import JsonLd from '../../components/JsonLd';
+
 export default function PricingPage() {
-  return <PricingClient />;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteConfig.siteUrl}/` },
+      { '@type': 'ListItem', position: 2, name: 'Pricing', item: `${siteConfig.siteUrl}/pricing` },
+    ],
+  };
+
+  return (
+    <>
+      <JsonLd data={schema} />
+      <PricingClient />
+    </>
+  );
 }

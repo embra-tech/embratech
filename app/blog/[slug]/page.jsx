@@ -82,11 +82,21 @@ export default function BlogPostPage({ params }) {
     url: `${siteConfig.siteUrl}/blog/${params.slug}`,
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteConfig.siteUrl}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteConfig.siteUrl}/blog` },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `${siteConfig.siteUrl}/blog/${params.slug}` },
+    ],
+  };
+
   return (
     <div className="page-shell">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([schema, breadcrumbSchema]) }}
       />
 
       <section className="page-hero" style={{ paddingBottom: '40px' }}>

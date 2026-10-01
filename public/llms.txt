@@ -4,8 +4,9 @@
 ## About Embra Technologies
 
 Embra Technologies (https://www.embratechnologies.org) is a custom web design and local SEO agency
-based in Brooklyn, NY. We build high-performance websites for US home service businesses —
-handymen, tree services, auto body shops, plumbers, roofers, HVAC contractors, and landscapers.
+based in Brooklyn, NY (1969 51st St, Brooklyn, NY 11204). We build high-performance websites for
+US home service businesses — handymen, tree services, auto body shops, plumbers, roofers, HVAC
+contractors, and landscapers.
 
 Our websites are built with React (Next.js), load in under one second, and are engineered to rank
 in Google local search. All pricing is transparent and publicly listed.
@@ -14,6 +15,10 @@ in Google local search. All pricing is transparent and publicly listed.
 
 - Homepage: https://www.embratechnologies.org/
 - Services: https://www.embratechnologies.org/services
+- Web Design Service: https://www.embratechnologies.org/services/web-design
+- Local SEO Service: https://www.embratechnologies.org/services/local-seo
+- Website Integrations: https://www.embratechnologies.org/services/website-integrations
+- Care Plan ($150/mo): https://www.embratechnologies.org/services/care-plan
 - Pricing: https://www.embratechnologies.org/pricing
 - Portfolio / Case Studies: https://www.embratechnologies.org/portfolio
 - Blog: https://www.embratechnologies.org/blog
@@ -43,13 +48,37 @@ in Google local search. All pricing is transparent and publicly listed.
   Client: Alaska Fast Fix Handyman | Handyman services, Alaska
 
 - https://www.embratechnologies.org/portfolio/vvasquez-handyman
-  Client: V Vasquez Handyman LLC | Handyman services, United States
+  Client: V Vasquez Handyman LLC | Lawn care, concrete & irrigation, Merced CA
 
 - https://www.embratechnologies.org/portfolio/bestbreaks
   Client: BestBreaks | Travel & accommodation, Australia
 
+## Niche Service Pages
+
+- https://www.embratechnologies.org/niches/web-design-for-handyman-businesses
+  Handyman website design
+
+- https://www.embratechnologies.org/niches/tree-service-website-design
+  Tree service website design
+
+- https://www.embratechnologies.org/niches/auto-body-shop-website-design
+  Auto body shop website design
+
+- https://www.embratechnologies.org/niches/landscaping-website-design
+  Landscaping website design
+
+- https://www.embratechnologies.org/niches/plumber-website-design
+  Plumber website design
+
+- https://www.embratechnologies.org/niches/hvac-website-design
+  HVAC contractor website design
+
+- https://www.embratechnologies.org/niches/roofing-website-design
+  Roofing contractor website design
+
 ## Service Areas
 
+- https://www.embratechnologies.org/locations/brooklyn — Brooklyn, NY (headquarters)
 - https://www.embratechnologies.org/locations/los-angeles — Los Angeles, CA
 - https://www.embratechnologies.org/locations/chicago — Chicago, IL
 - https://www.embratechnologies.org/locations/alaska — Alaska

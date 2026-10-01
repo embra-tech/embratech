@@ -139,6 +139,54 @@ function AlaskaContent() {
   );
 }
 
+function BrooklynContent() {
+  return (
+    <>
+      <p style={{ marginBottom: '24px' }}>
+        Embra Technologies is based in <strong>Brooklyn, NY</strong> — at 1969 51st St, Brooklyn, NY 11204. We are a Brooklyn-based studio that builds high-performance custom websites and local SEO systems for home service businesses across the United States. While we are rooted in New York, our clients are everywhere: Los Angeles, Chicago, Alaska, Merced, and beyond. We work fully remotely, which means geography never limits who we can help.
+      </p>
+      <p style={{ marginBottom: '24px' }}>
+        If you run a home service business — a handyman operation, a plumbing company, a tree service, a roofing contractor, an HVAC business, or a landscaping company — you know that most of your customers find you online first. And what they find determines whether they call you or your competitor. A slow, generic website built on an outdated WordPress template will cost you leads every single day. At Embra Technologies, we build custom websites using the modern Next.js (React) framework, engineered to load in under one second and designed to convert first-time visitors into booked jobs.
+      </p>
+      <p style={{ marginBottom: '40px' }}>
+        We started in Brooklyn because it is a market that rewards authenticity and punishes fluff. That same directness shapes how we approach every project: honest pricing, real timelines, and a 24-hour custom homepage sample so you can see what we build before you commit to anything. No retainers, no lock-in, no surprises.
+      </p>
+
+      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>What We Build for US Home Service Businesses</h2>
+      <p style={{ marginBottom: '24px' }}>
+        Our clients come from every trade. We have built websites for tree services, auto body shops, handymen, and lawn care and irrigation contractors. Each project is custom — tailored to the specific services, geography, and customer psychology of that business. Below are some of the real results we have delivered for clients across the country.
+      </p>
+      <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '24px' }}>
+        <li><strong>Sky High Tree Service (Chicago, IL):</strong> Emergency tree removal and storm damage services. We built an urgency-driven site with 24/7 emergency CTAs and neighborhood-level local SEO. <Link href="/portfolio/sky-high-tree" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the case study &rarr;</Link></li>
+        <li><strong>Tuxford Collision Center (Los Angeles, CA):</strong> Auto body and collision repair. We built a trust-first website with licensing credentials, Google rating, and free towing guarantee above the fold — designed for the 11 PM accident scenario. <Link href="/portfolio/tuxford-collision" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the case study &rarr;</Link></li>
+        <li><strong>Alaska Fast Fix Handyman (Alaska):</strong> Emergency handyman services across a geographically spread-out market. We led with fast response messaging, instant tap-to-call, and a clear service area map. <Link href="/portfolio/alaska-fast-fix" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the case study &rarr;</Link></li>
+        <li><strong>V Vasquez Handyman LLC (Merced, CA):</strong> Lawn care, concrete, and irrigation services. We structured each service into its own clear section with quote request CTAs and optimized for mobile-first local search. <Link href="/portfolio/vvasquez-handyman" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the case study &rarr;</Link></li>
+      </ul>
+
+      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why Partner With a Brooklyn-Based Studio?</h2>
+      <p style={{ marginBottom: '24px' }}>
+        Working with a Brooklyn studio means you get the technical rigor and design sensibility of a New York digital firm, without the bloated agency overhead. We are a focused team with a narrow specialization: home service businesses. We are not trying to serve everyone. We build websites for contractors, tradespeople, and service businesses — and we are very good at it.
+      </p>
+      <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
+        <li><strong>Sub-Second Load Times:</strong> Our Next.js builds average 96/100+ on Google PageSpeed Insights. Speed is a ranking factor — and a conversion factor.</li>
+        <li><strong>Honest, Flat-Rate Pricing:</strong> Our <Link href="/pricing" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>pricing</Link> starts at $700 for a complete starter site. No retainers, no hidden fees.</li>
+        <li><strong>24-Hour Free Sample:</strong> We build a fully custom homepage mockup for your business within 24 hours — at no cost. You review it before you sign anything.</li>
+        <li><strong>National Reach, Local Focus:</strong> We serve businesses coast to coast. Every site we build is optimized for the local search intent of the specific cities and neighborhoods your customers live in.</li>
+      </ul>
+
+      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Brooklyn Web Design FAQs</h2>
+      <div style={{ marginBottom: '24px' }}>
+        <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>Do I need to be in Brooklyn (or New York) to work with you?</h3>
+        <p>No. We are based in Brooklyn, but we work fully remote with clients across the United States. All discovery calls, design reviews, and project communication happen over video, email, and shared documents. We have delivered projects in California, Illinois, Alaska, and beyond.</p>
+      </div>
+      <div style={{ marginBottom: '40px' }}>
+        <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>How long does a project take?</h3>
+        <p>Most projects take between 2 to 4 weeks from our initial discovery call to final launch, depending on scope. We share a clear timeline before any work begins, and nothing is billed without your approval. We also offer a 24-hour free homepage sample so you can see the quality of our work before committing.</p>
+      </div>
+    </>
+  );
+}
+
 export default function LocationClient({ loc }) {
   const ref = useRef(null);
   useReveal(ref);
@@ -167,6 +215,8 @@ export default function LocationClient({ loc }) {
             <ChicagoContent />
           ) : loc.slug === 'alaska' ? (
             <AlaskaContent />
+          ) : loc.slug === 'brooklyn' ? (
+            <BrooklynContent />
           ) : (
             <>
               <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Custom Web Development for {displayLocName} Businesses</h2>

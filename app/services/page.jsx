@@ -64,10 +64,19 @@ const SERVICE_SCHEMA = {
   },
 };
 
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteConfig.siteUrl}/` },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${siteConfig.siteUrl}/services` },
+  ],
+};
+
 export default function ServicesPage() {
   return (
     <>
-      <JsonLd data={SERVICE_SCHEMA} />
+      <JsonLd data={[SERVICE_SCHEMA, BREADCRUMB_SCHEMA]} />
       <ServicesClient />
     </>
   );
