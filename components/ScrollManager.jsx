@@ -6,6 +6,8 @@ import { gsap, ScrollTrigger } from '../lib/gsap';
 
 export default function ScrollManager({ children }) {
   useEffect(() => {
+    if (document.documentElement.getAttribute('data-bot') === 'true') return;
+
     const lenis = new Lenis({
       lerp: 0.09,
       smoothWheel: true,

@@ -38,11 +38,7 @@ export default function Hero() {
     };
 
     // Bot / Lighthouse / PageSpeed detection (instant reveal for audits)
-    const isBot =
-      typeof navigator !== 'undefined' &&
-      (/googlebot|google-inspectiontool|lighthouse|pagespeed|chrome-lighthouse|headlesschrome|ptst|gtmetrix/i.test(navigator.userAgent) ||
-       Boolean(navigator.webdriver) ||
-       (typeof window !== 'undefined' && (new URLSearchParams(window.location.search).has('psi') || new URLSearchParams(window.location.search).has('pagespeed'))));
+    const isBot = document.documentElement.getAttribute('data-bot') === 'true';
 
     if (isBot) {
       const words = h1Ref.current ? h1Ref.current.querySelectorAll('.word') : [];

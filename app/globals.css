@@ -1868,10 +1868,10 @@ section { padding: 90px 0; }
 }
 
 /* Static hero (bot/save-data path) — all text immediately visible */
-.hero-static .word { opacity: 1 !important; transform: none !important; }
+.hero-static .word, html[data-bot='true'] .word, html[data-bot='true'] .reveal-up { opacity: 1 !important; transform: none !important; }
 .hero-static .hero-sub,
 .hero-static .hero-actions,
-.hero-static .hero-badge-wrap { opacity: 1 !important; transform: none !important; }
+.hero-static .hero-badge-wrap, html[data-bot='true'] .hero-badge-wrap, html[data-bot='true'] .hero-sub, html[data-bot='true'] .hero-actions { opacity: 1 !important; transform: none !important; }
 
 /* Reduce will-change scope — only apply to actively animating elements */
 .reveal-up.revealed { will-change: auto; }

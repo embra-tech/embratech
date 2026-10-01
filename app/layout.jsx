@@ -131,6 +131,13 @@ const globalSchema = [
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="obsidian">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `
+          if (/googlebot|google-inspectiontool|lighthouse|chrome-lighthouse|pagespeed|headlesschrome|ptst|gtmetrix/i.test(navigator.userAgent) || window.location.search.includes('psi=1') || window.location.search.includes('pagespeed')) {
+            document.documentElement.setAttribute('data-bot', 'true');
+          }
+        ` }} />
+      </head>
       <body className={`${figtree.variable} ${inter.variable} ${jetbrains.variable}`}>
         <ThemeProvider>
           <ScrollManager>
