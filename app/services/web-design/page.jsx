@@ -7,7 +7,7 @@ import siteConfig from '../../../lib/site-config';
 
 export const metadata = {
   alternates: { canonical: '/services/web-design' },
-  title: 'Custom Web Design for Home Service Businesses | Embra',
+  title: 'Custom Web Design for Home Service Businesses',
   description:
     'We build custom Next.js websites tailored to home service businesses. Get mobile-first design, conversion optimization, and a 24-hour free sample offer.',
   openGraph: {
@@ -18,8 +18,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'Embra Technologies Custom Web Design',
       },
     ],

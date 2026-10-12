@@ -2,7 +2,7 @@ import siteConfig from '../../lib/site-config';
 
 export const metadata = {
   alternates: { canonical: '/privacy' },
-  title: 'Privacy Policy | Embra',
+  title: 'Privacy Policy',
   description:
     'Read the Privacy Policy for Embra Technologies. Learn how we collect, use, and protect your personal data and information when you use our website services.',
   openGraph: {
@@ -13,8 +13,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'Embra Technologies Privacy Policy',
       },
     ],

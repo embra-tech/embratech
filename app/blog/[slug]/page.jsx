@@ -14,7 +14,7 @@ export function generateMetadata({ params }) {
   const post = BLOG_POSTS.find((p) => p.slug === params.slug);
   if (!post) return {};
   return {
-    title: `${post.title} | Embra`,
+    title: post.title,
     description: post.excerpt,
     alternates: { canonical: `/blog/${params.slug}` },
     openGraph: {
@@ -26,8 +26,8 @@ export function generateMetadata({ params }) {
       images: [
         {
           url: 'https://www.embratechnologies.org/opengraph-image.jpg',
-          width: 1200,
-          height: 630,
+          width: siteConfig.ogImageWidth,
+          height: siteConfig.ogImageHeight,
           alt: post.title,
         },
       ],

@@ -4,7 +4,7 @@ import siteConfig from '../../lib/site-config';
 
 export const metadata = {
   alternates: { canonical: '/about' },
-  title: 'About Our Local SEO & Web Design Agency | Embra',
+  title: 'About Our Local SEO & Web Design Agency',
   description:
     'Learn how Embra Technologies helps US service businesses compete online. We build custom React websites engineered for local SEO and sub-second load times.',
   openGraph: {
@@ -12,6 +12,14 @@ export const metadata = {
     description:
       'Learn how Embra Technologies helps US service businesses compete online. We build custom React websites engineered for local SEO and sub-second load times.',
     url: `${siteConfig.siteUrl}/about`,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
+        alt: 'About Embra Technologies',
+      },
+    ],
   },
 };
 

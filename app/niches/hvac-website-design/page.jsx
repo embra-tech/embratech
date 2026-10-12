@@ -6,7 +6,7 @@ import JsonLd from '../../../components/JsonLd';
 import siteConfig from '../../../lib/site-config';
 
 export const metadata = {
-  title: 'HVAC Website Design for Contractors | Embra',
+  title: 'HVAC Website Design for Contractors',
   alternates: { canonical: '/niches/hvac-website-design' },
   description: 'Custom-coded Next.js websites built to capture emergency AC repair surges, high-ticket furnace replacements, and year-round maintenance agreements.',
   openGraph: {
@@ -16,8 +16,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'HVAC Website Design for Contractors | Embra',
       },
     ],
@@ -25,16 +25,9 @@ export const metadata = {
 };
 
 export default function NichePage() {
+  // 2026-10-13 Phase 1: removed a second BreadcrumbList (Home > Services > page) that
+  // contradicted the visible breadcrumb. <Breadcrumb> below already outputs the matching one.
   const jsonLdData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": siteConfig.siteUrl },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": `${siteConfig.siteUrl}/services` },
-        { "@type": "ListItem", "position": 3, "name": "HVAC Website Design Built for Seasonal Demand", "item": `${siteConfig.siteUrl}/niches/hvac-website-design` }
-      ]
-    },
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -115,9 +108,9 @@ export default function NichePage() {
 
 <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Financing Displays & High-Ticket Replacement Conversion</h2>
           <p style={{ marginBottom: '20px' }}>A complete central heat pump or furnace replacement often represents an unplanned $8,000 to $15,000 expenditure for a homeowner. Converting these high-ticket replacements requires distinct digital trust signals:</p>
-          <p style={{ marginBottom: '20px' }}>1. **Prominent Financing Options:** Homeowners facing unexpected equipment failure are actively looking for payment flexibility. Highlighting "$0 Down, Low Monthly Payments" and pre-qualification links prominently above the fold dramatically increases replacement conversion rates.</p>
-          <p style={{ marginBottom: '20px' }}>2. **Manufacturer & NATE Certifications:** We showcase prominent partnerships with leading equipment manufacturers (Trane, Carrier, Lennox, Goodman, Daikin) alongside NATE certifications and EPA refrigerant licenses to validate your installation craftsmanship.</p>
-          <p style={{ marginBottom: '20px' }}>3. **Maintenance Agreement Promotion:** To smooth out seasonal cash flow, we build dedicated membership club sections that educate homeowners on the energy-saving benefits of annual tune-up plans, driving recurring service contract signups.</p>
+          <p style={{ marginBottom: '20px' }}>1. <strong>Prominent Financing Options:</strong> Homeowners facing unexpected equipment failure are actively looking for payment flexibility. Highlighting "$0 Down, Low Monthly Payments" and pre-qualification links prominently above the fold dramatically increases replacement conversion rates.</p>
+          <p style={{ marginBottom: '20px' }}>2. <strong>Manufacturer & NATE Certifications:</strong> We showcase prominent partnerships with leading equipment manufacturers (Trane, Carrier, Lennox, Goodman, Daikin) alongside NATE certifications and EPA refrigerant licenses to validate your installation craftsmanship.</p>
+          <p style={{ marginBottom: '20px' }}>3. <strong>Maintenance Agreement Promotion:</strong> To smooth out seasonal cash flow, we build dedicated membership club sections that educate homeowners on the energy-saving benefits of annual tune-up plans, driving recurring service contract signups.</p>
   
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Local SEO Strategy for Heating & Cooling Contractors</h2>
@@ -132,8 +125,8 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent, Flat-Rate Pricing for HVAC Contractors</h2>
           <p style={{ marginBottom: '20px' }}>We provide straightforward, transparent pricing designed to maximize return on investment without recurring marketing agency contracts:</p>
-          <p style={{ marginBottom: '20px' }}>• **Starter Custom Build ($700 one-time):** A custom Next.js responsive website with core pages (AC Repair, Heating, System Replacements, Maintenance Plans), mobile click-to-call architecture, financing integration callouts, and complete LocalBusiness schema markup.</p>
-          <p style={{ marginBottom: '20px' }}>• **Website Care Plan ($150/mo):** Enterprise edge hosting on Vercel, automated SSL management, seasonal banner adjustments, and continuous search performance audits.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom Next.js responsive website with core pages (AC Repair, Heating, System Replacements, Maintenance Plans), mobile click-to-call architecture, financing integration callouts, and complete LocalBusiness schema markup.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Enterprise edge hosting on Vercel, automated SSL management, seasonal banner adjustments, and continuous search performance audits.</p>
           <p style={{ marginBottom: '20px' }}>Review all details on our <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   
 

@@ -7,7 +7,7 @@ import siteConfig from '../../../lib/site-config';
 
 export const metadata = {
   alternates: { canonical: '/services/website-integrations' },
-  title: 'Website Integrations & Digital Systems | Embra',
+  title: 'Website Integrations & Digital Systems',
   description:
     'Connect your website to the tools you use every day. We integrate quote forms, Vercel Analytics, WhatsApp, Google Maps, and booking systems seamlessly.',
   openGraph: {
@@ -18,8 +18,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'Embra Technologies Website Integrations',
       },
     ],

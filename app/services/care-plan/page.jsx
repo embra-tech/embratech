@@ -6,7 +6,7 @@ import siteConfig from '../../../lib/site-config';
 
 export const metadata = {
   alternates: { canonical: '/services/care-plan' },
-  title: 'Website Care Plan: Hosting & SEO | Embra',
+  title: 'Website Care Plan: Hosting & SEO',
   description:
     'Keep your website fast, secure, and ranking. Our $150/mo Care Plan includes hosting, content updates, monthly local SEO reports, and 24-hour support.',
   openGraph: {
@@ -17,8 +17,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'Embra Technologies Website Care Plan',
       },
     ],

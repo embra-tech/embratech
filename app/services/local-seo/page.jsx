@@ -7,7 +7,7 @@ import siteConfig from '../../../lib/site-config';
 
 export const metadata = {
   alternates: { canonical: '/services/local-seo' },
-  title: 'Local SEO Services for Home Service Businesses | Embra',
+  title: 'Local SEO Services for Home Service Businesses',
   description:
     'Dominate local search results. We optimize your Google Business Profile, fix NAP consistency, and build service-area pages to generate more leads.',
   openGraph: {
@@ -18,8 +18,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'Embra Technologies Local SEO',
       },
     ],

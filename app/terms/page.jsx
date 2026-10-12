@@ -2,7 +2,7 @@ import siteConfig from '../../lib/site-config';
 
 export const metadata = {
   alternates: { canonical: '/terms' },
-  title: 'Terms of Service | Embra',
+  title: 'Terms of Service',
   description:
     'Read the Terms of Service for Embra Technologies. Covers our web design service scope, payment terms, intellectual property, and client commitments.',
   openGraph: {
@@ -13,8 +13,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'Embra Technologies Terms of Service',
       },
     ],

@@ -6,7 +6,7 @@ import JsonLd from '../../../components/JsonLd';
 import siteConfig from '../../../lib/site-config';
 
 export const metadata = {
-  title: 'Roofing Website Design for Contractors | Embra',
+  title: 'Roofing Website Design for Contractors',
   alternates: { canonical: '/niches/roofing-website-design' },
   description: 'Institutional-grade, high-trust websites built to establish unshakeable local credibility, educate insurance claimants, and capture high-ticket roof replacements.',
   openGraph: {
@@ -16,8 +16,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'Roofing Website Design for Contractors | Embra',
       },
     ],
@@ -25,16 +25,9 @@ export const metadata = {
 };
 
 export default function NichePage() {
+  // 2026-10-13 Phase 1: removed a second BreadcrumbList (Home > Services > page) that
+  // contradicted the visible breadcrumb. <Breadcrumb> below already outputs the matching one.
   const jsonLdData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": siteConfig.siteUrl },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": `${siteConfig.siteUrl}/services` },
-        { "@type": "ListItem", "position": 3, "name": "Roofing Website Design Built to Get Storm Damage Leads", "item": `${siteConfig.siteUrl}/niches/roofing-website-design` }
-      ]
-    },
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -115,9 +108,9 @@ export default function NichePage() {
 
 <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Insurance Claim Guidance & High-Trust Credibility Architecture</h2>
           <p style={{ marginBottom: '20px' }}>To win high-ticket residential and commercial roofing contracts, your website must remove friction across the entire homeowner evaluation journey:</p>
-          <p style={{ marginBottom: '20px' }}>1. **Step-by-Step Insurance Claims Roadmap:** Most homeowners have never filed a major property casualty claim. We build clear, educational roadmaps explaining your free drone/on-site damage inspection, adjuster meeting representation, scope verification, and final installation process.</p>
-          <p style={{ marginBottom: '20px' }}>2. **Manufacturer Credential Showcases:** We prominently display factory-certified contractor badges (such as GAF Master Elite, Owens Corning Platinum Preferred, CertainTeed SELECT ShingleMaster), proving your crew can offer extended manufacturer warranties.</p>
-          <p style={{ marginBottom: '20px' }}>3. **High-Resolution Drone Imagery & Video:** Nothing proves roofing expertise like crisp before-and-after aerial drone photography showing clean valleys, flashing alignments, and architectural shingle textures.</p>
+          <p style={{ marginBottom: '20px' }}>1. <strong>Step-by-Step Insurance Claims Roadmap:</strong> Most homeowners have never filed a major property casualty claim. We build clear, educational roadmaps explaining your free drone/on-site damage inspection, adjuster meeting representation, scope verification, and final installation process.</p>
+          <p style={{ marginBottom: '20px' }}>2. <strong>Manufacturer Credential Showcases:</strong> We prominently display factory-certified contractor badges (such as GAF Master Elite, Owens Corning Platinum Preferred, CertainTeed SELECT ShingleMaster), proving your crew can offer extended manufacturer warranties.</p>
+          <p style={{ marginBottom: '20px' }}>3. <strong>High-Resolution Drone Imagery & Video:</strong> Nothing proves roofing expertise like crisp before-and-after aerial drone photography showing clean valleys, flashing alignments, and architectural shingle textures.</p>
   
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Local SEO Strategy: Capturing Hail & Wind Damage Searches</h2>
@@ -132,8 +125,8 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Pricing for Professional Roofing Contractors</h2>
           <p style={{ marginBottom: '20px' }}>We offer clear, honest pricing designed to deliver superior digital performance without agency retainer markups:</p>
-          <p style={{ marginBottom: '20px' }}>• **Starter Custom Build ($700 one-time):** A custom-coded Next.js website with up to 5 core pages (Roof Replacement, Storm Damage, Inspections, Commercial Roofing), insurance claim guidance sections, aerial project galleries, and complete LocalBusiness schema markup.</p>
-          <p style={{ marginBottom: '20px' }}>• **Website Care Plan ($150/mo):** Global managed edge hosting on Vercel, automated SSL security, rapid project gallery additions, and ongoing local search ranking tracking.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom-coded Next.js website with up to 5 core pages (Roof Replacement, Storm Damage, Inspections, Commercial Roofing), insurance claim guidance sections, aerial project galleries, and complete LocalBusiness schema markup.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Global managed edge hosting on Vercel, automated SSL security, rapid project gallery additions, and ongoing local search ranking tracking.</p>
           <p style={{ marginBottom: '20px' }}>Review all package details on our <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   
 

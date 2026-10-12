@@ -6,7 +6,7 @@ import JsonLd from '../../../components/JsonLd';
 import siteConfig from '../../../lib/site-config';
 
 export const metadata = {
-  title: 'Auto Body Shop Website Design That Builds Trust | Embra',
+  title: 'Auto Body Shop Website Design That Builds Trust',
   alternates: { canonical: '/niches/auto-body-shop-website-design' },
   description: 'Modern, high-trust digital storefronts designed to assist post-accident drivers, streamline estimate uploads, and capture insurance repair jobs.',
   openGraph: {
@@ -16,8 +16,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'Auto Body Shop Website Design That Builds Trust | Embra',
       },
     ],
@@ -25,16 +25,9 @@ export const metadata = {
 };
 
 export default function NichePage() {
+  // 2026-10-13 Phase 1: removed a second BreadcrumbList (Home > Services > page) that
+  // contradicted the visible breadcrumb. <Breadcrumb> below already outputs the matching one.
   const jsonLdData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": siteConfig.siteUrl },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": `${siteConfig.siteUrl}/services` },
-        { "@type": "ListItem", "position": 3, "name": "Auto Body Shop Website Design That Converts at 11 PM", "item": `${siteConfig.siteUrl}/niches/auto-body-shop-website-design` }
-      ]
-    },
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -115,9 +108,9 @@ export default function NichePage() {
 
 <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Critical Trust Signals & Mobile Photo Estimate Architecture</h2>
           <p style={{ marginBottom: '20px' }}>To convert stressed vehicle owners into booked repair jobs, our custom auto body web architecture incorporates essential trust elements:</p>
-          <p style={{ marginBottom: '20px' }}>1. **Insurance Advocacy Messaging:** We explicitly clarify above the fold that vehicle owners have the legal right under state law to choose their own repair facility, regardless of which direct-repair network their insurer recommends. We showcase badges for all major insurance carriers.</p>
-          <p style={{ marginBottom: '20px' }}>2. **I-CAR Gold Class & OEM Certifications:** Collision repair today involves complex ADAS calibration, lightweight aluminum structures, and electronic sensor alignments. Prominently displaying I-CAR certifications and manufacturer approvals (such as Ford, GM, Honda, Toyota, or Tesla) proves you possess factory-grade equipment.</p>
-          <p style={{ marginBottom: '20px' }}>3. **Mobile Damage Photo Upload Tool:** Rather than requiring drivers to take time off work to visit your facility for an initial assessment, we integrate seamless mobile estimate forms where users can photograph their vehicle's VIN and damaged panels directly from their phone camera.</p>
+          <p style={{ marginBottom: '20px' }}>1. <strong>Insurance Advocacy Messaging:</strong> We explicitly clarify above the fold that vehicle owners have the legal right under state law to choose their own repair facility, regardless of which direct-repair network their insurer recommends. We showcase badges for all major insurance carriers.</p>
+          <p style={{ marginBottom: '20px' }}>2. <strong>I-CAR Gold Class & OEM Certifications:</strong> Collision repair today involves complex ADAS calibration, lightweight aluminum structures, and electronic sensor alignments. Prominently displaying I-CAR certifications and manufacturer approvals (such as Ford, GM, Honda, Toyota, or Tesla) proves you possess factory-grade equipment.</p>
+          <p style={{ marginBottom: '20px' }}>3. <strong>Mobile Damage Photo Upload Tool:</strong> Rather than requiring drivers to take time off work to visit your facility for an initial assessment, we integrate seamless mobile estimate forms where users can photograph their vehicle's VIN and damaged panels directly from their phone camera.</p>
   
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Real-World Proof: The Tuxford Collision Center Case Study</h2>
@@ -132,8 +125,8 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Pricing for Collision Centers</h2>
           <p style={{ marginBottom: '20px' }}>We provide transparent, flat-rate pricing designed to deliver superior digital performance without lock-in contracts:</p>
-          <p style={{ marginBottom: '20px' }}>• **Starter Custom Build ($700 one-time):** A custom-coded Next.js responsive website with up to 5 core pages, photo estimate form integration, insurance claims guidance sections, warranty declarations, and structured SEO schema.</p>
-          <p style={{ marginBottom: '20px' }}>• **Website Care Plan ($150/mo):** Managed edge hosting on Vercel, automated SSL security renewals, photo gallery updates, Google PageSpeed maintenance, and continuous local search rank tracking.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom-coded Next.js responsive website with up to 5 core pages, photo estimate form integration, insurance claims guidance sections, warranty declarations, and structured SEO schema.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Managed edge hosting on Vercel, automated SSL security renewals, photo gallery updates, Google PageSpeed maintenance, and continuous local search rank tracking.</p>
           <p style={{ marginBottom: '20px' }}>Review all details on our <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   
 

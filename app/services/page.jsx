@@ -4,7 +4,7 @@ import siteConfig from '../../lib/site-config';
 
 export const metadata = {
   alternates: { canonical: '/services' },
-  title: 'Web Design & SEO Services for Local Businesses | Embra',
+  title: 'Web Design & SEO Services for Local Businesses',
   description:
     'Professional web design, local SEO, and digital identity management services. We help home service businesses rank on Google and book more local jobs.',
   openGraph: {
@@ -12,6 +12,14 @@ export const metadata = {
     description:
       'Professional web design, local SEO, and digital identity management services. We help home service businesses rank on Google and book more local jobs.',
     url: `${siteConfig.siteUrl}/services`,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
+        alt: 'Embra Technologies web design and SEO services',
+      },
+    ],
   },
 };
 

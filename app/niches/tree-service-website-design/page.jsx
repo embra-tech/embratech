@@ -6,7 +6,7 @@ import JsonLd from '../../../components/JsonLd';
 import siteConfig from '../../../lib/site-config';
 
 export const metadata = {
-  title: 'Tree Service Website Design for More Calls | Embra',
+  title: 'Tree Service Website Design for More Calls',
   alternates: { canonical: '/niches/tree-service-website-design' },
   description: 'High-performance websites engineered for emergency storm response, large removals, and dominant local Google map rankings.',
   openGraph: {
@@ -16,8 +16,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'Tree Service Website Design for More Calls | Embra',
       },
     ],
@@ -25,16 +25,9 @@ export const metadata = {
 };
 
 export default function NichePage() {
+  // 2026-10-13 Phase 1: removed a second BreadcrumbList (Home > Services > page) that
+  // contradicted the visible breadcrumb. <Breadcrumb> below already outputs the matching one.
   const jsonLdData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": siteConfig.siteUrl },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": `${siteConfig.siteUrl}/services` },
-        { "@type": "ListItem", "position": 3, "name": "Tree Service Website Design Built for Emergency Calls", "item": `${siteConfig.siteUrl}/niches/tree-service-website-design` }
-      ]
-    },
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -115,9 +108,9 @@ export default function NichePage() {
 
 <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Emergency CTA Architecture & Above-the-Fold Credibility</h2>
           <p style={{ marginBottom: '20px' }}>We engineer every tree service website with an emergency-first conversion architecture designed to guide stressed property owners directly toward immediate contact:</p>
-          <p style={{ marginBottom: '20px' }}>1. **Persistent 24/7 Emergency Header:** A prominent, high-contrast banner featuring instant click-to-call buttons, emergency availability badges, and average dispatch response times displayed across every viewport.</p>
-          <p style={{ marginBottom: '20px' }}>2. **Crucial Trust Signals Above the Fold:** Tree removal involves dangerous physical liability. We prominently showcase proof of comprehensive general liability insurance ($2M+ coverage), workman's compensation protection, ISA Certified Arborist credentials, and municipal licensing before the visitor has to scroll.</p>
-          <p style={{ marginBottom: '20px' }}>3. **Equipment & Capability Demonstrations:** Homeowners want to know you have the bucket trucks, cranes, spider lifts, and commercial stump grinders required for hazardous removals. We integrate lightweight, high-performance photo reels showcasing your crew and machinery in action without degrading mobile page speed.</p>
+          <p style={{ marginBottom: '20px' }}>1. <strong>Persistent 24/7 Emergency Header:</strong> A prominent, high-contrast banner featuring instant click-to-call buttons, emergency availability badges, and average dispatch response times displayed across every viewport.</p>
+          <p style={{ marginBottom: '20px' }}>2. <strong>Crucial Trust Signals Above the Fold:</strong> Tree removal involves dangerous physical liability. We prominently showcase proof of comprehensive general liability insurance ($2M+ coverage), workman's compensation protection, ISA Certified Arborist credentials, and municipal licensing before the visitor has to scroll.</p>
+          <p style={{ marginBottom: '20px' }}>3. <strong>Equipment & Capability Demonstrations:</strong> Homeowners want to know you have the bucket trucks, cranes, spider lifts, and commercial stump grinders required for hazardous removals. We integrate lightweight, high-performance photo reels showcasing your crew and machinery in action without degrading mobile page speed.</p>
   
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Real-World Proof: The Sky High Tree Service Case Study</h2>
@@ -132,8 +125,8 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Pricing for Tree Care Professionals</h2>
           <p style={{ marginBottom: '20px' }}>Our transparent pricing structure ensures that independent arborists and established tree care firms receive an institutional-quality website without monthly agency retainers:</p>
-          <p style={{ marginBottom: '20px' }}>• **Starter Custom Build ($700 one-time):** A custom-coded, responsive Next.js web application including core service pages (Tree Removal, Trimming, Stump Grinding, Emergency Response), emergency call integration, photo galleries, and complete LocalBusiness structured data.</p>
-          <p style={{ marginBottom: '20px' }}>• **Website Care Plan ($150/mo):** Ultra-fast managed edge hosting on Vercel, automated SSL maintenance, priority 24-hour turnaround for storm season announcements or photo updates, and continuous Core Web Vitals monitoring.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom-coded, responsive Next.js web application including core service pages (Tree Removal, Trimming, Stump Grinding, Emergency Response), emergency call integration, photo galleries, and complete LocalBusiness structured data.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Ultra-fast managed edge hosting on Vercel, automated SSL maintenance, priority 24-hour turnaround for storm season announcements or photo updates, and continuous Core Web Vitals monitoring.</p>
           <p style={{ marginBottom: '20px' }}>Learn more on our dedicated <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   
 

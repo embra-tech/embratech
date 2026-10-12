@@ -6,7 +6,7 @@ import JsonLd from '../../../components/JsonLd';
 import siteConfig from '../../../lib/site-config';
 
 export const metadata = {
-  title: 'Landscaping Website Design for More Local Jobs | Embra',
+  title: 'Landscaping Website Design for More Local Jobs',
   alternates: { canonical: '/niches/landscaping-website-design' },
   description: 'Visually compelling, high-converting websites designed to showcase hardscaping, lawn maintenance, and irrigation systems across all seasons.',
   openGraph: {
@@ -16,8 +16,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'Landscaping Website Design for More Local Jobs | Embra',
       },
     ],
@@ -25,16 +25,9 @@ export const metadata = {
 };
 
 export default function NichePage() {
+  // 2026-10-13 Phase 1: removed a second BreadcrumbList (Home > Services > page) that
+  // contradicted the visible breadcrumb. <Breadcrumb> below already outputs the matching one.
   const jsonLdData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": siteConfig.siteUrl },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": `${siteConfig.siteUrl}/services` },
-        { "@type": "ListItem", "position": 3, "name": "Landscaping Website Design Built to Rank Locally", "item": `${siteConfig.siteUrl}/niches/landscaping-website-design` }
-      ]
-    },
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -115,9 +108,9 @@ export default function NichePage() {
 
 <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Overcoming Seasonality with Multi-Service Conversion Architecture</h2>
           <p style={{ marginBottom: '20px' }}>A major challenge facing landscaping businesses is revenue seasonality. A company that focuses heavily on spring cleanups and summer lawn maintenance often experiences revenue lulls in autumn and winter unless their website strategically pivots:</p>
-          <p style={{ marginBottom: '20px' }}>1. **Year-Round Service Silos:** We build persistent, dedicated landing pages for both warm-weather services (Aeration, Mowing, Irrigation Installation, Patio Construction) and cold-weather services (Fall Leaf Removal, Mulching, Winterization, Snow & Ice Management). Because these pages remain live year-round, they accumulate continuous organic search equity.</p>
-          <p style={{ marginBottom: '20px' }}>2. **Performance-Optimized Before-and-After Galleries:** We implement next-generation image optimization (WebP/AVIF formats with responsive srcset attributes), allowing visitors to inspect high-resolution before-and-after transformations instantly without penalizing Core Web Vitals.</p>
-          <p style={{ marginBottom: '20px' }}>3. **Commercial vs. Residential Portals:** If your company services commercial HOA properties alongside residential homeowners, we build distinct user pathways that present tailored capabilities, insurance credentials, and quote workflows for property managers.</p>
+          <p style={{ marginBottom: '20px' }}>1. <strong>Year-Round Service Silos:</strong> We build persistent, dedicated landing pages for both warm-weather services (Aeration, Mowing, Irrigation Installation, Patio Construction) and cold-weather services (Fall Leaf Removal, Mulching, Winterization, Snow & Ice Management). Because these pages remain live year-round, they accumulate continuous organic search equity.</p>
+          <p style={{ marginBottom: '20px' }}>2. <strong>Performance-Optimized Before-and-After Galleries:</strong> We implement next-generation image optimization (WebP/AVIF formats with responsive srcset attributes), allowing visitors to inspect high-resolution before-and-after transformations instantly without penalizing Core Web Vitals.</p>
+          <p style={{ marginBottom: '20px' }}>3. <strong>Commercial vs. Residential Portals:</strong> If your company services commercial HOA properties alongside residential homeowners, we build distinct user pathways that present tailored capabilities, insurance credentials, and quote workflows for property managers.</p>
   
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Real-World Proof: The V Vasquez Handyman Case Study</h2>
@@ -132,8 +125,8 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Pricing for Landscaping Professionals</h2>
           <p style={{ marginBottom: '20px' }}>Our transparent pricing model ensures your outdoor service business gets an enterprise-grade digital foundation at an accessible investment level:</p>
-          <p style={{ marginBottom: '20px' }}>• **Starter Custom Build ($700 one-time):** A custom React/Next.js website with up to 5 core pages, responsive before-and-after photo galleries, seasonal service showcases, quote request forms, and full schema markup.</p>
-          <p style={{ marginBottom: '20px' }}>• **Website Care Plan ($150/mo):** Global edge hosting on Vercel, automated SSL certificates, seasonal gallery and banner updates, and monthly local search ranking monitoring.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom React/Next.js website with up to 5 core pages, responsive before-and-after photo galleries, seasonal service showcases, quote request forms, and full schema markup.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Global edge hosting on Vercel, automated SSL certificates, seasonal gallery and banner updates, and monthly local search ranking monitoring.</p>
           <p style={{ marginBottom: '20px' }}>Visit our comprehensive <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link> for complete details.</p>
   
 

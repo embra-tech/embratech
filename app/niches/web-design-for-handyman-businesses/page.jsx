@@ -6,7 +6,7 @@ import JsonLd from '../../../components/JsonLd';
 import siteConfig from '../../../lib/site-config';
 
 export const metadata = {
-  title: 'Handyman Website Design That Wins More Jobs | Embra',
+  title: 'Handyman Website Design That Wins More Jobs',
   alternates: { canonical: '/niches/web-design-for-handyman-businesses' },
   description: 'Custom-coded Next.js websites built to establish instant trust, showcase versatile trades, and convert local homeowners into booked jobs.',
   openGraph: {
@@ -16,8 +16,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'Handyman Website Design That Wins More Jobs | Embra',
       },
     ],
@@ -25,16 +25,9 @@ export const metadata = {
 };
 
 export default function NichePage() {
+  // 2026-10-13 Phase 1: removed a second BreadcrumbList (Home > Services > page) that
+  // contradicted the visible breadcrumb. <Breadcrumb> below already outputs the matching one.
   const jsonLdData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": siteConfig.siteUrl },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": `${siteConfig.siteUrl}/services` },
-        { "@type": "ListItem", "position": 3, "name": "Web Design for Handyman Businesses", "item": `${siteConfig.siteUrl}/niches/web-design-for-handyman-businesses` }
-      ]
-    },
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -116,9 +109,9 @@ export default function NichePage() {
 <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Conversion Architecture: How We Structure Handyman Websites for Maximum Calls</h2>
           <p style={{ marginBottom: '20px' }}>A successful handyman website cannot simply be an online business card; it must function as a relentless lead-generation engine. Most homeowners searching for repair work are dealing with an active inconvenience-a door that won't latch, a running toilet, rotted exterior trim, or a drywall hole left by a plumbing leak. They want immediate answers, transparent expectations, and effortless ways to get on your schedule.</p>
           <p style={{ marginBottom: '20px' }}>To maximize lead generation, we implement a conversion-focused architecture built around three core structural pillars:</p>
-          <p style={{ marginBottom: '20px' }}>1. **Categorized Service Silos with Scope Clarity:** Instead of an overwhelming, unreadable bulleted list of fifty random chores, we organize your skills into clean, logical categories (e.g., Carpentry & Trim, Drywall & Paint Repair, Fixture & Hardware Installation, Minor Plumbing & Electrical Repairs, and Exterior Maintenance). Each category features clear scope descriptions and dedicated quote request CTAs.</p>
-          <p style={{ marginBottom: '20px' }}>2. **Thumb-First Mobile Design:** Over 65% of local repair searches happen on mobile devices. We design sticky contact headers, prominent click-to-call buttons, and direct WhatsApp messaging triggers where users' thumbs naturally rest.</p>
-          <p style={{ marginBottom: '20px' }}>3. **Frictionless Photo-Upload Estimate Forms:** Many homeowners struggle to articulate what needs repair. Our quote forms allow prospective clients to snap a photo on their phone and upload it directly with their inquiry, allowing you to estimate job scopes accurately before ever getting in your truck.</p>
+          <p style={{ marginBottom: '20px' }}>1. <strong>Categorized Service Silos with Scope Clarity:</strong> Instead of an overwhelming, unreadable bulleted list of fifty random chores, we organize your skills into clean, logical categories (e.g., Carpentry & Trim, Drywall & Paint Repair, Fixture & Hardware Installation, Minor Plumbing & Electrical Repairs, and Exterior Maintenance). Each category features clear scope descriptions and dedicated quote request CTAs.</p>
+          <p style={{ marginBottom: '20px' }}>2. <strong>Thumb-First Mobile Design:</strong> Over 65% of local repair searches happen on mobile devices. We design sticky contact headers, prominent click-to-call buttons, and direct WhatsApp messaging triggers where users' thumbs naturally rest.</p>
+          <p style={{ marginBottom: '20px' }}>3. <strong>Frictionless Photo-Upload Estimate Forms:</strong> Many homeowners struggle to articulate what needs repair. Our quote forms allow prospective clients to snap a photo on their phone and upload it directly with their inquiry, allowing you to estimate job scopes accurately before ever getting in your truck.</p>
   
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Real-World Proof: Case Studies from Our Client Portfolio</h2>
@@ -134,8 +127,8 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent, Flat-Rate Pricing for Handyman Contractors</h2>
           <p style={{ marginBottom: '20px' }}>We believe in straightforward, honest pricing with zero hidden fees, arbitrary retainers, or proprietary platform lock-in. Our website solutions are designed to deliver rapid return on investment for growing home service businesses:</p>
-          <p style={{ marginBottom: '20px' }}>• **Starter Custom Build ($700 one-time):** A complete, custom-coded Next.js website featuring up to 5 core pages, mobile-first responsive layout, sub-second load times, structured schema markup, and integrated lead-capture quote forms.</p>
-          <p style={{ marginBottom: '20px' }}>• **Monthly Care Plan ($150/mo):** Enterprise-grade global edge hosting on Vercel, automated SSL security renewals, regular content and photo updates, monthly Core Web Vitals audits, and local keyword tracking.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A complete, custom-coded Next.js website featuring up to 5 core pages, mobile-first responsive layout, sub-second load times, structured schema markup, and integrated lead-capture quote forms.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Monthly Care Plan ($150/mo):</strong> Enterprise-grade global edge hosting on Vercel, automated SSL security renewals, regular content and photo updates, monthly Core Web Vitals audits, and local keyword tracking.</p>
           <p style={{ marginBottom: '20px' }}>Review all package inclusions and options on our comprehensive <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   
 

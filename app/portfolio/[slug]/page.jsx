@@ -11,7 +11,7 @@ const PAGESPEED = (domain) =>
 const CASE_STUDIES = {
   'tuxford-collision': {
     name: 'Tuxford Collision Center',
-    metaTitle: 'Auto Body Shop Website Design, Tuxford | Embra',
+    metaTitle: 'Auto Body Shop Website Design, Tuxford',
     domain: 'tuxfordcollision.com',
     url: 'https://tuxfordcollision.com/',
     industry: 'Auto Body & Collision Repair',
@@ -35,7 +35,7 @@ Most importantly, it gave no immediate reason to trust a stranger with a heavily
   },
   'vvasquez-handyman': {
     name: 'V Vasquez Handyman LLC',
-    metaTitle: 'Lawn Care Website Design, V Vasquez | Embra',
+    metaTitle: 'Lawn Care Website Design, V Vasquez',
     domain: 'vvasquezhandymanllc.net',
     url: 'https://vvasquezhandymanllc.net/',
     industry: 'Lawn Care, Concrete & Irrigation',
@@ -59,7 +59,7 @@ Homeowners actively searching for help on their mobile devices were quickly boun
   },
   'alaska-fast-fix': {
     name: 'Alaska Fast Fix Handyman',
-    metaTitle: 'Handyman Website Design, Alaska Fast Fix | Embra',
+    metaTitle: 'Handyman Website Design, Alaska Fast Fix',
     domain: 'alaskafastfixhandyman.com',
     url: 'https://alaskafastfixhandyman.com/',
     industry: 'Handyman Services',
@@ -83,7 +83,7 @@ The business desperately needed a high-performance website that instantly commun
   },
   'bestbreaks': {
     name: 'BestBreaks',
-    metaTitle: 'Travel Website Design, BestBreaks | Embra',
+    metaTitle: 'Travel Website Design, BestBreaks',
     domain: 'bestbreaks.com.au',
     url: 'https://bestbreaks.com.au/',
     industry: 'Travel & Accommodation',
@@ -107,7 +107,7 @@ They had to accomplish this ambitious goal without possessing the massive develo
   },
   'sky-high-tree': {
     name: 'Sky High Tree Service',
-    metaTitle: 'Tree Service Website Design, Sky High | Embra',
+    metaTitle: 'Tree Service Website Design, Sky High',
     domain: 'skyhightreeservicechicago.com',
     url: 'https://skyhightreeservicechicago.com/',
     industry: 'Tree Service',
@@ -138,14 +138,26 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const cs = CASE_STUDIES[params.slug];
   if (!cs) return {};
+  // 2026-10-13 Phase 1: these strings used escaped placeholders (\${...}), so Google
+  // received a literal "/portfolio/${params.slug}" canonical for every case study.
+  // Search snippets now use verified results only (unverified claims wait for Phase 2 evidence).
+  const verifiedResults = cs.results.filter((r) => r.verified).map((r) => r.label).join(', ');
   return {
-    alternates: { canonical: `/portfolio/\${params.slug}` },
+    alternates: { canonical: `/portfolio/${params.slug}` },
     title: cs.metaTitle,
-    description: `How Embra Technologies built a high-performance website for \${cs.name} in \${cs.location}. Results: \${cs.results.map((r) => r.label).join(', ')}.`,
+    description: `How Embra Technologies designed and built a fast, mobile-first website for ${cs.name} in ${cs.location}. Verified result: ${verifiedResults}.`,
     openGraph: {
       title: `${cs.name} Case Study, Embra Technologies`,
-      description: `Web design & SEO results for \${cs.name}: \${cs.results.map((r) => r.label).join(', ')}.`,
-      url: `https://www.embratechnologies.org/portfolio/\${params.slug}`,
+      description: `Web design case study for ${cs.name} (${cs.industry}, ${cs.location}). Verified: ${verifiedResults}.`,
+      url: `${siteConfig.siteUrl}/portfolio/${params.slug}`,
+      images: [
+        {
+          url: siteConfig.ogImage,
+          width: siteConfig.ogImageWidth,
+          height: siteConfig.ogImageHeight,
+          alt: `${cs.name} Case Study, Embra Technologies`,
+        },
+      ],
     },
   };
 }
@@ -157,9 +169,9 @@ export default function CaseStudyPage({ params }) {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: `\${cs.name}, Web Design Case Study`,
-    description: `How Embra Technologies built a high-performance website for \${cs.name} in \${cs.location}.`,
-    image: `\${siteConfig.siteUrl}\${siteConfig.ogImage}`,
+    headline: `${cs.name}, Web Design Case Study`,
+    description: `How Embra Technologies built a high-performance website for ${cs.name} in ${cs.location}.`,
+    image: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
     datePublished: '2026-09-30',
     dateModified: '2026-10-01',
     author: { '@type': 'Organization', name: siteConfig.legalName, url: siteConfig.siteUrl },
@@ -167,19 +179,19 @@ export default function CaseStudyPage({ params }) {
       '@type': 'Organization',
       name: siteConfig.legalName,
       url: siteConfig.siteUrl,
-      logo: { '@type': 'ImageObject', url: `\${siteConfig.siteUrl}\${siteConfig.logo}` },
+      logo: { '@type': 'ImageObject', url: `${siteConfig.siteUrl}${siteConfig.logo}` },
     },
     about: { '@type': 'Organization', name: cs.name, url: cs.url },
-    url: `\${siteConfig.siteUrl}/portfolio/\${params.slug}`,
+    url: `${siteConfig.siteUrl}/portfolio/${params.slug}`,
   };
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `\${siteConfig.siteUrl}/` },
-      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `\${siteConfig.siteUrl}/portfolio` },
-      { '@type': 'ListItem', position: 3, name: cs.name, item: `\${siteConfig.siteUrl}/portfolio/\${params.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteConfig.siteUrl}/` },
+      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${siteConfig.siteUrl}/portfolio` },
+      { '@type': 'ListItem', position: 3, name: cs.name, item: `${siteConfig.siteUrl}/portfolio/${params.slug}` },
     ],
   };
 
@@ -269,7 +281,7 @@ export default function CaseStudyPage({ params }) {
         <div className="wrap cs-two-col">
           <div className="cs-col-label">The Challenge</div>
           <div className="cs-col-body">
-            {cs.challenge.split('\\n\\n').map((paragraph, index) => (
+            {cs.challenge.split(/\n\s*\n/).map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
           </div>

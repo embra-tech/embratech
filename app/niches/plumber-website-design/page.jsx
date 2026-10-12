@@ -6,7 +6,7 @@ import JsonLd from '../../../components/JsonLd';
 import siteConfig from '../../../lib/site-config';
 
 export const metadata = {
-  title: 'Plumber Website Design That Gets Emergency Calls | Embra',
+  title: 'Plumber Website Design That Gets Emergency Calls',
   alternates: { canonical: '/niches/plumber-website-design' },
   description: 'Sub-second mobile websites engineered for burst pipes, drain cleanings, water heater replacements, and urgent phone call conversions.',
   openGraph: {
@@ -16,8 +16,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'Plumber Website Design That Gets Emergency Calls | Embra',
       },
     ],
@@ -25,16 +25,9 @@ export const metadata = {
 };
 
 export default function NichePage() {
+  // 2026-10-13 Phase 1: removed a second BreadcrumbList (Home > Services > page) that
+  // contradicted the visible breadcrumb. <Breadcrumb> below already outputs the matching one.
   const jsonLdData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": siteConfig.siteUrl },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": `${siteConfig.siteUrl}/services` },
-        { "@type": "ListItem", "position": 3, "name": "Plumber Website Design Built for Emergency Searches", "item": `${siteConfig.siteUrl}/niches/plumber-website-design` }
-      ]
-    },
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -115,9 +108,9 @@ export default function NichePage() {
 
 <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Conversion Architecture for High-Volume Plumbing Operations</h2>
           <p style={{ marginBottom: '20px' }}>To consistently convert emergency distress calls into booked dispatch appointments, we architect plumbing websites around speed, clarity, and instant accessibility:</p>
-          <p style={{ marginBottom: '20px' }}>1. **Thumb-Targeted Click-to-Call Navigation:** We place bold, tap-to-call phone buttons and dispatch indicators in persistent mobile headers and bottom floating navigation bars, ensuring emergency assistance is always one tap away.</p>
-          <p style={{ marginBottom: '20px' }}>2. **Prominent Licensing and Master Plumber Credentials:** Homeowners are terrified of unlicensed handymen botching complex plumbing infrastructure. We showcase your state license numbers, master plumber credentials, bonded status, and full liability coverage above the fold.</p>
-          <p style={{ marginBottom: '20px' }}>3. **Categorized Emergency vs. Scheduled Service Silos:** We separate urgent emergency calls (Burst Pipes, Slab Leaks, Sewer Backups) from high-ticket scheduled installations (Tankless Water Heaters, Whole-Home Repiping, Water Filtration Systems, Bathroom Remodels), optimizing each pathway for its specific customer intent.</p>
+          <p style={{ marginBottom: '20px' }}>1. <strong>Thumb-Targeted Click-to-Call Navigation:</strong> We place bold, tap-to-call phone buttons and dispatch indicators in persistent mobile headers and bottom floating navigation bars, ensuring emergency assistance is always one tap away.</p>
+          <p style={{ marginBottom: '20px' }}>2. <strong>Prominent Licensing and Master Plumber Credentials:</strong> Homeowners are terrified of unlicensed handymen botching complex plumbing infrastructure. We showcase your state license numbers, master plumber credentials, bonded status, and full liability coverage above the fold.</p>
+          <p style={{ marginBottom: '20px' }}>3. <strong>Categorized Emergency vs. Scheduled Service Silos:</strong> We separate urgent emergency calls (Burst Pipes, Slab Leaks, Sewer Backups) from high-ticket scheduled installations (Tankless Water Heaters, Whole-Home Repiping, Water Filtration Systems, Bathroom Remodels), optimizing each pathway for its specific customer intent.</p>
   
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Dominating Local Search: The "Plumber Near Me" Playbook</h2>
@@ -132,8 +125,8 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Flat-Rate Pricing for Plumbing Contractors</h2>
           <p style={{ marginBottom: '20px' }}>We offer honest, upfront pricing designed to give independent plumbing companies an institutional-quality website without monthly retainers or long-term contracts:</p>
-          <p style={{ marginBottom: '20px' }}>• **Starter Custom Build ($700 one-time):** A custom-coded, responsive Next.js website featuring up to 5 core pages, emergency click-to-call architecture, water heater and drain cleaning service silos, quote request forms, and complete LocalBusiness schema markup.</p>
-          <p style={{ marginBottom: '20px' }}>• **Website Care Plan ($150/mo):** Ultra-fast managed edge hosting on Vercel, automated SSL renewals, 24-hour turnaround on text and coupon updates, and ongoing Core Web Vitals performance assurance.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom-coded, responsive Next.js website featuring up to 5 core pages, emergency click-to-call architecture, water heater and drain cleaning service silos, quote request forms, and complete LocalBusiness schema markup.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Ultra-fast managed edge hosting on Vercel, automated SSL renewals, 24-hour turnaround on text and coupon updates, and ongoing Core Web Vitals performance assurance.</p>
           <p style={{ marginBottom: '20px' }}>Discover all options on our <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   
 

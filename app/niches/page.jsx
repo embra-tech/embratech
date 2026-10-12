@@ -6,7 +6,7 @@ import JsonLd from '../../components/JsonLd';
 import siteConfig from '../../lib/site-config';
 
 export const metadata = {
-  title: 'Industry Website Design for Home Service Contractors | Embra',
+  title: 'Industry Website Design for Home Service Contractors',
   description:
     'Specialist website design and local SEO for handymen, tree services, auto body shops, plumbers, HVAC contractors, landscapers, and roofers. Custom Next.js builds starting at $700.',
   alternates: { canonical: '/niches' },
@@ -18,8 +18,8 @@ export const metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: siteConfig.ogImageWidth,
+        height: siteConfig.ogImageHeight,
         alt: 'Embra Technologies, Industry-Specific Website Design',
       },
     ],
