@@ -33,20 +33,8 @@ export default function NichePage() {
       "@type": "Service",
       "name": "Plumber Website Design Built for Emergency Searches",
       "serviceType": "Plumber Website Design Built for Emergency Searches",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": siteConfig.legalName,
-        "url": siteConfig.siteUrl,
-        "telephone": siteConfig.phone,
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": siteConfig.address.street,
-          "addressLocality": siteConfig.address.city,
-          "addressRegion": siteConfig.address.state,
-          "postalCode": siteConfig.address.zip,
-          "addressCountry": siteConfig.address.country
-        }
-      },
+      "provider": { "@id": `${siteConfig.siteUrl}/#localbusiness` },
+      "areaServed": { "@type": "Country", "name": "United States" },
       "description": "Sub-second mobile websites engineered for burst pipes, drain cleanings, water heater replacements, and urgent phone call conversions."
     }
   ];
@@ -84,7 +72,7 @@ export default function NichePage() {
                 <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#27c93f', display: 'inline-block' }} />
               </div>
               <div style={{ flex: 1, background: 'rgba(255,255,255,0.06)', borderRadius: '6px', padding: '4px 12px', fontSize: '0.82rem', color: 'var(--muted-inv)', fontFamily: 'monospace' }}>
-                apexplumbingchicago.com (Interactive Prototype)
+                Concept design: Apex Plumbing (sample brand, not a client)
               </div>
             </div>
             <picture>
@@ -92,7 +80,7 @@ export default function NichePage() {
               <source type="image/webp" srcSet="/images/optimized/plumbing-mockup-480.webp 480w, /images/optimized/plumbing-mockup-720.webp 720w, /images/optimized/plumbing-mockup-960.webp 960w" sizes="(max-width: 840px) 100vw, 840px" />
               <img
                 src="/images/optimized/plumbing-mockup-720.jpg"
-                alt="Apex Plumbing Co. custom emergency plumbing website preview designed by Embra Technologies"
+                alt="Concept design for Apex Plumbing, a sample brand (not a real client), by Embra Technologies"
                 loading="lazy"
                 decoding="async"
                 width={840}
@@ -101,7 +89,7 @@ export default function NichePage() {
               />
             </picture>
             <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
-              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>High-Converting Plumbing Architecture: Tap-to-call mobile header, instant quote form, and 24/7 emergency dispatch callouts.</span>
+              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Concept design. Apex Plumbing is a sample brand we created to show the layout: tap-to-call mobile header, instant quote form and 24/7 emergency callouts.</span>
               <Link href="/services/web-design" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Explore Custom Web Design Services &rarr;</Link>
             </div>
           </div>
@@ -125,7 +113,7 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Flat-Rate Pricing for Plumbing Contractors</h2>
           <p style={{ marginBottom: '20px' }}>We offer honest, upfront pricing designed to give independent plumbing companies an institutional-quality website without monthly retainers or long-term contracts:</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom-coded, responsive Next.js website featuring up to 5 core pages, emergency click-to-call architecture, water heater and drain cleaning service silos, quote request forms, and complete LocalBusiness schema markup.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a quote request form and on-page SEO basics. Need more pages, such as separate water heater and drain cleaning pages? Our Growth plan ($1,000) covers up to 7 pages, plus schema markup and Google Business Profile setup.</p>
           <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Ultra-fast managed edge hosting on Vercel, automated SSL renewals, 24-hour turnaround on text and coupon updates, and ongoing Core Web Vitals performance assurance.</p>
           <p style={{ marginBottom: '20px' }}>Discover all options on our <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   

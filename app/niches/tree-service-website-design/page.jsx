@@ -33,20 +33,8 @@ export default function NichePage() {
       "@type": "Service",
       "name": "Tree Service Website Design Built for Emergency Calls",
       "serviceType": "Tree Service Website Design Built for Emergency Calls",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": siteConfig.legalName,
-        "url": siteConfig.siteUrl,
-        "telephone": siteConfig.phone,
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": siteConfig.address.street,
-          "addressLocality": siteConfig.address.city,
-          "addressRegion": siteConfig.address.state,
-          "postalCode": siteConfig.address.zip,
-          "addressCountry": siteConfig.address.country
-        }
-      },
+      "provider": { "@id": `${siteConfig.siteUrl}/#localbusiness` },
+      "areaServed": { "@type": "Country", "name": "United States" },
       "description": "High-performance websites engineered for emergency storm response, large removals, and dominant local Google map rankings."
     }
   ];
@@ -125,7 +113,7 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Pricing for Tree Care Professionals</h2>
           <p style={{ marginBottom: '20px' }}>Our transparent pricing structure ensures that independent arborists and established tree care firms receive an institutional-quality website without monthly agency retainers:</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom-coded, responsive Next.js web application including core service pages (Tree Removal, Trimming, Stump Grinding, Emergency Response), emergency call integration, photo galleries, and complete LocalBusiness structured data.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a quote request form, photo galleries and on-page SEO basics. Want separate pages for removal, trimming, stump grinding and emergency work? Our Growth plan ($1,000) covers up to 7 pages, plus schema markup and Google Business Profile setup.</p>
           <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Ultra-fast managed edge hosting on Vercel, automated SSL maintenance, priority 24-hour turnaround for storm season announcements or photo updates, and continuous Core Web Vitals monitoring.</p>
           <p style={{ marginBottom: '20px' }}>Learn more on our dedicated <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   

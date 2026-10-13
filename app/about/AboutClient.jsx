@@ -11,8 +11,8 @@ import siteConfig from '../../lib/site-config';
 const STATS = [
   { value: 5, suffix: '', label: 'Live client websites built and actively ranking on Google' },
   { value: 96, suffix: '/100', label: 'Average PageSpeed score across our 5 live builds, verify any of them', decimals: 0 },
-  { value: 24, suffix: 'h', label: 'Hours to your free custom homepage sample, no deposit required' },
-  { value: 7, suffix: '-day', label: 'Satisfaction window, if the full build is not right, you walk away' },
+  { value: 24, suffix: 'h', label: 'Hours to your free custom homepage sample. No deposit, and if it is not right, you walk away and owe nothing' },
+  { value: 100, suffix: '%', label: 'Yours to keep. Once your website is paid for and live, you own the code, content and domain' },
 ];
 
 const VALUES = [
@@ -96,7 +96,7 @@ export default function AboutClient() {
           <div className="cs-col-body reveal-up">
             <h3>Senior builders, not account managers.</h3>
             <p>
-              We are a small team of senior designers and engineers based in {siteConfig.address.city}, {siteConfig.address.state}. When you email us, the person who replies is the same person writing your code and designing your pages. No account managers, no handoffs to junior staff, no work shipped overseas.
+              We are a small, remote team of senior designers and engineers serving home service businesses across the United States, with support on US business hours ({siteConfig.hoursDisplay}). When you email us, the person who replies is the same person writing your code and designing your pages. No account managers, no handoffs to junior staff.
             </p>
             <p>
               We built Embra because great web work was gatekept behind agency retainers most local businesses can&apos;t justify. Our answer was to cut the overhead entirely and put the savings back into execution quality, which is why our sites average 96/100 on PageSpeed and rank, while costing a fraction of what a full-service agency charges.

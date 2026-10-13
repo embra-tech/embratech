@@ -25,9 +25,10 @@ export function generateMetadata({ params }) {
   const desc = `Embra Technologies builds high-converting, lightning-fast websites for growing businesses in ${loc.name}. Get a free custom homepage sample today.`;
   
   // 2026-10-13 Phase 1: "| Embra" removed here; the root layout's title template adds it.
+  // 2026-10-13 (option B): "Agency in X" implied an office there; now "for X businesses".
   const titleText = loc.slug === 'brooklyn'
-    ? 'Web Design & SEO Agency in Brooklyn, NY'
-    : `Web Design & SEO Agency in ${loc.name}`;
+    ? 'Website Design & SEO for Brooklyn, NY Businesses'
+    : `Website Design & SEO for ${loc.name} Businesses`;
 
   const meta = {
     title: titleText,

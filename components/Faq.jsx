@@ -41,7 +41,7 @@ const FAQ_SETS = {
     },
     {
       q: 'What if I need more than just a homepage?',
-      a: 'Our base build includes a complete homepage. Additional pages (Services, About, Contact, Blog, etc.) can be added at a transparent per-page rate quoted before we start. Nothing is billed without your approval.',
+      a: 'Every plan includes more than a homepage. Starter covers your homepage plus 2 inner pages, Growth covers up to 7 pages, and Pro adds an admin dashboard and online contract signing. Need extra pages later? We quote them before we start, and nothing is billed without your approval.',
     },
     {
       q: 'Can I cancel the Care Plan at any time?',
@@ -53,7 +53,7 @@ const FAQ_SETS = {
     },
     {
       q: "What's your refund policy?",
-      a: "If you're unsatisfied within 7 days of launch, contact us and we'll make it right. Because every build is custom, refunds after launch aren't available, but we're committed to your satisfaction throughout the project.",
+      a: "Your homepage sample is free. If it isn't right for you, walk away and you owe nothing. Once your full website is paid for and live, payments are non-refundable, because every build is made from scratch for your business. Have a concern at any stage? Email us and we'll talk it through.",
     },
   ],
 

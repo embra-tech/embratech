@@ -58,18 +58,18 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Contact &amp; Legal</h4>
             <div className="footer-contact-list">
-              {siteConfig.address && (
-                <div className="footer-contact-item" style={{ alignItems: 'flex-start' }}>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" style={{ marginTop: 2 }}>
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
-                  <span style={{ lineHeight: 1.4 }}>
-                    {siteConfig.address.street}, {siteConfig.address.city}<br />
-                    {siteConfig.address.state} {siteConfig.address.zip}, {siteConfig.address.countryName}
-                  </span>
-                </div>
-              )}
+              {/* 2026-10-13: street address removed (option B, owner approved). Embra is a remote team;
+                  add a real, staffed US address here once the US entity is registered. */}
+              <div className="footer-contact-item" style={{ alignItems: 'flex-start' }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" style={{ marginTop: 2 }}>
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span style={{ lineHeight: 1.4 }}>
+                  Remote team serving home service<br />
+                  businesses across the United States
+                </span>
+              </div>
               <div className="footer-contact-item">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <rect x="3" y="5" width="18" height="14" rx="2" />

@@ -227,7 +227,7 @@ export default function PricingClient() {
             <span>✓ No interest, no credit check</span>
             <span>✓ Full ownership, no lock-in</span>
             <span>✓ Add the <Link href="/services/care-plan" style={{ textDecoration: 'underline', color: 'inherit' }}>$150/mo Care Plan</Link> anytime</span>
-            <span>✓ 7-day satisfaction guarantee</span>
+            <span>✓ Free homepage sample. Not right? Walk away, owe nothing</span>
           </div>
 
           {/* Decision paralysis reducer */}

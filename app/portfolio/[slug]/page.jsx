@@ -9,6 +9,34 @@ const PAGESPEED = (domain) =>
   `https://pagespeed.web.dev/analysis?url=https%3A%2F%2F${encodeURIComponent(domain)}%2F`;
 
 const CASE_STUDIES = {
+  // 2026-10-13: added with the client's permission. Every number below comes from the client's
+  // Google Search Console (property https://pndlaundry.com/), pulled on 2026-10-13.
+  'pnd-laundry': {
+    name: 'Pick N Drop Laundry',
+    metaTitle: 'Local SEO Case Study, Pick N Drop Laundry',
+    metaDescription: 'How we grew Google clicks 133% for Pick N Drop Laundry in Los Angeles with 30 neighborhood pages, schema fixes and Business Profile work (Search Console data).',
+    domain: 'pndlaundry.com',
+    url: 'https://pndlaundry.com/',
+    industry: 'Laundry Pickup & Dry Cleaning',
+    location: 'Los Angeles, CA',
+    timeline: 'Ongoing',
+    tags: ['Local SEO', 'Neighborhood Pages', 'Google Business Profile'],
+    stack: 'WordPress · Rank Math SEO · WP Rocket · Google Search Console',
+    challenge: `Pick N Drop Laundry offers laundry pickup and delivery and dry cleaning across Los Angeles. Its customers search by neighborhood, for example "dry cleaners Brentwood" or "laundry pickup Van Nuys", but the site did not have pages for the individual neighborhoods it serves.
+
+The site's structured data needed fixing, pages had no breadcrumb navigation, and the Google Business Profile needed work. Together, these made it harder for Google to understand where the business operates and which searches it should appear for.`,
+    approach: [
+      { title: '30 neighborhood pages', body: 'We added 30 neighborhood pages, so the site can appear when people search for laundry pickup and dry cleaning in specific parts of Los Angeles, such as Brentwood, Beverly Hills and Van Nuys. Each page targets the searches customers in that area actually make.' },
+      { title: 'Schema and breadcrumb fixes', body: 'We fixed the site\'s structured data so Google reads the business details correctly, and added breadcrumbs so visitors and search engines can see how the neighborhood and service pages fit together.' },
+      { title: 'Business Profile and technical fixes', body: 'We optimized the Google Business Profile and made a range of technical SEO fixes across the site, so the listing and the website send Google consistent signals about the business.' },
+    ],
+    deepDive: `<p>All figures on this page come from Pick N Drop Laundry\'s own Google Search Console account, shared with the owner\'s permission. We compared the first 30 days of data in the account (March 15 to April 13, 2026) with the most recent 30 days available when we published this case study (September 11 to October 10, 2026).</p><p>Over that time, clicks from Google search grew from 9 to 21 (up 133%), and the number of times the site appeared in Google results grew from 471 to 1,399 (up 197%). Growth sped up in early October: on most days between October 4 and 10, the site appeared in Google results 75 to 156 times a day, compared with roughly 15 to 50 a day over the summer.</p><p>These are early-stage numbers for a local business, and we report them exactly as they are. Based on average position in Search Console for September 11 to October 10, 2026, the site now appears on the first page of Google for searches such as "dry cleaners van nuys" and "drop off laundry service near me".</p>`,
+    results: [
+      { label: '+133% Google Clicks', verified: false, source: 'Google Search Console' },
+      { label: '+197% Search Impressions', verified: false, source: 'Google Search Console' },
+      { label: 'Page 1: "dry cleaners van nuys"', verified: false, source: 'Google Search Console' },
+    ],
+  },
   'tuxford-collision': {
     name: 'Tuxford Collision Center',
     metaTitle: 'Auto Body Shop Website Design, Tuxford',
@@ -141,14 +169,14 @@ export function generateMetadata({ params }) {
   // 2026-10-13 Phase 1: these strings used escaped placeholders (\${...}), so Google
   // received a literal "/portfolio/${params.slug}" canonical for every case study.
   // Search snippets now use verified results only (unverified claims wait for Phase 2 evidence).
-  const verifiedResults = cs.results.filter((r) => r.verified).map((r) => r.label).join(', ');
+  const verifiedResults = cs.results.filter((r) => r.verified || r.source).map((r) => r.label).join(', ');
   return {
     alternates: { canonical: `/portfolio/${params.slug}` },
     title: cs.metaTitle,
-    description: `How Embra Technologies designed and built a fast, mobile-first website for ${cs.name} in ${cs.location}. Verified result: ${verifiedResults}.`,
+    description: cs.metaDescription || `How Embra Technologies designed and built a fast, mobile-first website for ${cs.name} in ${cs.location}. Verified result: ${verifiedResults}.`,
     openGraph: {
       title: `${cs.name} Case Study, Embra Technologies`,
-      description: `Web design case study for ${cs.name} (${cs.industry}, ${cs.location}). Verified: ${verifiedResults}.`,
+      description: cs.metaDescription || `Web design case study for ${cs.name} (${cs.industry}, ${cs.location}). Verified: ${verifiedResults}.`,
       url: `${siteConfig.siteUrl}/portfolio/${params.slug}`,
       images: [
         {

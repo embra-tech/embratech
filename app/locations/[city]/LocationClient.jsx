@@ -143,13 +143,13 @@ function BrooklynContent() {
   return (
     <>
       <p style={{ marginBottom: '24px' }}>
-        Embra Technologies is based in <strong>Brooklyn, NY</strong>, at 1969 51st St, Brooklyn, NY 11204. We are a Brooklyn-based studio that builds high-performance custom websites and local SEO systems for home service businesses across the United States. While we are rooted in New York, our clients are everywhere: Los Angeles, Chicago, Alaska, Merced, and beyond. We work fully remotely, which means geography never limits who we can help.
+        Embra Technologies builds high-performance custom websites and local SEO systems for home service businesses across the United States, including Brooklyn and the rest of New York City. We are a fully remote team with support on US business hours, so your location never limits whether we can help. Our clients are in Los Angeles, Chicago, Alaska, Merced, and beyond.
       </p>
       <p style={{ marginBottom: '24px' }}>
         If you run a home service business, a handyman operation, a plumbing company, a tree service, a roofing contractor, an HVAC business, or a landscaping company, you know that most of your customers find you online first. And what they find determines whether they call you or your competitor. A slow, generic website built on an outdated WordPress template will cost you leads every single day. At Embra Technologies, we build custom websites using the modern Next.js (React) framework, engineered to load in under one second and designed to convert first-time visitors into booked jobs.
       </p>
       <p style={{ marginBottom: '40px' }}>
-        We started in Brooklyn because it is a market that rewards authenticity and punishes fluff. That same directness shapes how we approach every project: honest pricing, real timelines, and a 24-hour custom homepage sample so you can see what we build before you commit to anything. No retainers, no lock-in, no surprises.
+        Brooklyn rewards businesses that are direct and dependable, and that is how we approach every project: honest pricing, real timelines, and a 24-hour custom homepage sample so you can see what we build before you commit to anything. No retainers, no lock-in, no surprises.
       </p>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>What We Build for US Home Service Businesses</h2>
@@ -163,9 +163,9 @@ function BrooklynContent() {
         <li><strong>V Vasquez Handyman LLC (Merced, CA):</strong> Lawn care, concrete, and irrigation services. We structured each service into its own clear section with quote request CTAs and optimized for mobile-first local search. <Link href="/portfolio/vvasquez-handyman" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the case study &rarr;</Link></li>
       </ul>
 
-      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why Partner With a Brooklyn-Based Studio?</h2>
+      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why Brooklyn Home Service Businesses Work With Us</h2>
       <p style={{ marginBottom: '24px' }}>
-        Working with a Brooklyn studio means you get the technical rigor and design sensibility of a New York digital firm, without the bloated agency overhead. We are a focused team with a narrow specialization: home service businesses. We are not trying to serve everyone. We build websites for contractors, tradespeople, and service businesses, and we are very good at it.
+        You get custom design and engineering without the overhead of a big agency. We are a focused team with a narrow specialization: home service businesses. We are not trying to serve everyone. We build websites for contractors, tradespeople, and service businesses, and we are very good at it.
       </p>
       <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
         <li><strong>Sub-Second Load Times:</strong> Our Next.js builds average 96/100+ on Google PageSpeed Insights. Speed is a ranking factor, and a conversion factor.</li>
@@ -176,8 +176,8 @@ function BrooklynContent() {
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Brooklyn Web Design FAQs</h2>
       <div style={{ marginBottom: '24px' }}>
-        <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>Do I need to be in Brooklyn (or New York) to work with you?</h3>
-        <p>No. We are based in Brooklyn, but we work fully remote with clients across the United States. All discovery calls, design reviews, and project communication happen over video, email, and shared documents. We have delivered projects in California, Illinois, Alaska, and beyond.</p>
+        <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>Do you meet clients in person in Brooklyn?</h3>
+        <p>We work fully remotely with clients across the United States. Discovery calls, design reviews, and project updates happen over video, email, and shared documents during US business hours. We have delivered projects in California, Illinois, Alaska, and beyond.</p>
       </div>
       <div style={{ marginBottom: '40px' }}>
         <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>How long does a project take?</h3>

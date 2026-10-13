@@ -33,20 +33,8 @@ export default function NichePage() {
       "@type": "Service",
       "name": "Auto Body Shop Website Design That Converts at 11 PM",
       "serviceType": "Auto Body Shop Website Design That Converts at 11 PM",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": siteConfig.legalName,
-        "url": siteConfig.siteUrl,
-        "telephone": siteConfig.phone,
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": siteConfig.address.street,
-          "addressLocality": siteConfig.address.city,
-          "addressRegion": siteConfig.address.state,
-          "postalCode": siteConfig.address.zip,
-          "addressCountry": siteConfig.address.country
-        }
-      },
+      "provider": { "@id": `${siteConfig.siteUrl}/#localbusiness` },
+      "areaServed": { "@type": "Country", "name": "United States" },
       "description": "Modern, high-trust digital storefronts designed to assist post-accident drivers, streamline estimate uploads, and capture insurance repair jobs."
     }
   ];
@@ -125,7 +113,7 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Pricing for Collision Centers</h2>
           <p style={{ marginBottom: '20px' }}>We provide transparent, flat-rate pricing designed to deliver superior digital performance without lock-in contracts:</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom-coded Next.js responsive website with up to 5 core pages, photo estimate form integration, insurance claims guidance sections, warranty declarations, and structured SEO schema.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom homepage plus 2 inner pages, built mobile-first with a tap-to-call button, a photo estimate form and on-page SEO basics. Want separate pages for collision repair, paint, dent repair and insurance claims? Our Growth plan ($1,000) covers up to 7 pages, plus schema markup and Google Business Profile setup.</p>
           <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Managed edge hosting on Vercel, automated SSL security renewals, photo gallery updates, Google PageSpeed maintenance, and continuous local search rank tracking.</p>
           <p style={{ marginBottom: '20px' }}>Review all details on our <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   

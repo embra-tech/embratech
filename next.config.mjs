@@ -49,6 +49,18 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // 2026-10-13 Phase 1: addresses from the previous static site. Search Console showed
+      // /pricing.html as "Crawled, not indexed"; all of these returned 404 before this fix.
+      { source: '/index.html',     destination: '/',                   permanent: true },
+      { source: '/pricing.html',   destination: '/pricing',            permanent: true },
+      { source: '/about.html',     destination: '/about',              permanent: true },
+      { source: '/contact.html',   destination: '/contact',            permanent: true },
+      { source: '/services.html',  destination: '/services',           permanent: true },
+      { source: '/portfolio.html', destination: '/portfolio',          permanent: true },
+      { source: '/blog.html',      destination: '/blog',               permanent: true },
+      { source: '/care-plan.html', destination: '/services/care-plan', permanent: true },
+      { source: '/privacy.html',   destination: '/privacy',            permanent: true },
+      { source: '/terms.html',     destination: '/terms',              permanent: true },
       {
         source: '/portfolio/skyhightreeservice',
         destination: '/portfolio/sky-high-tree',

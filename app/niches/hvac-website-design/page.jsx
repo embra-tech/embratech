@@ -33,20 +33,8 @@ export default function NichePage() {
       "@type": "Service",
       "name": "HVAC Website Design Built for Seasonal Demand",
       "serviceType": "HVAC Website Design Built for Seasonal Demand",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": siteConfig.legalName,
-        "url": siteConfig.siteUrl,
-        "telephone": siteConfig.phone,
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": siteConfig.address.street,
-          "addressLocality": siteConfig.address.city,
-          "addressRegion": siteConfig.address.state,
-          "postalCode": siteConfig.address.zip,
-          "addressCountry": siteConfig.address.country
-        }
-      },
+      "provider": { "@id": `${siteConfig.siteUrl}/#localbusiness` },
+      "areaServed": { "@type": "Country", "name": "United States" },
       "description": "Custom-coded Next.js websites built to capture emergency AC repair surges, high-ticket furnace replacements, and year-round maintenance agreements."
     }
   ];
@@ -125,7 +113,7 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent, Flat-Rate Pricing for HVAC Contractors</h2>
           <p style={{ marginBottom: '20px' }}>We provide straightforward, transparent pricing designed to maximize return on investment without recurring marketing agency contracts:</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom Next.js responsive website with core pages (AC Repair, Heating, System Replacements, Maintenance Plans), mobile click-to-call architecture, financing integration callouts, and complete LocalBusiness schema markup.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, financing callouts, a quote request form and on-page SEO basics. Want separate pages for AC, heating, replacements and maintenance plans? Our Growth plan ($1,000) covers up to 7 pages, plus schema markup and Google Business Profile setup.</p>
           <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Enterprise edge hosting on Vercel, automated SSL management, seasonal banner adjustments, and continuous search performance audits.</p>
           <p style={{ marginBottom: '20px' }}>Review all details on our <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   

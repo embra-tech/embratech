@@ -38,14 +38,8 @@ const aboutSchema = [
       url: siteConfig.siteUrl,
       foundingDate: String(siteConfig.foundingYear),
       description: siteConfig.description,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: siteConfig.address.street,
-        addressLocality: siteConfig.address.city,
-        addressRegion: siteConfig.address.state,
-        postalCode: siteConfig.address.zip,
-        addressCountry: siteConfig.address.country,
-      },
+      // 2026-10-13 (option B, owner approved): no street address; remote team serving the US.
+      areaServed: { '@type': 'Country', name: 'United States' },
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: siteConfig.phone,

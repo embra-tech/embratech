@@ -88,6 +88,65 @@ git add lib/blog lib/blogData.js
 
 ---
 
+## F. Owner decisions applied (2026-10-13, round 3)
+
+All visible text changes below were approved by the owner. No design, layout or animation changes.
+
+| # | Owner decision | Change | Files |
+|---|---|---|---|
+| F1 | Founded in 2026 | `foundingYear: 2026` (feeds schema) | `lib/site-config.js` |
+| F2 | Starter = 3 pages | All 7 industry pages: Starter now reads "custom homepage plus 2 inner pages", pointing to Growth ($1,000, up to 7 pages, schema, GBP setup) for more. Matches `/pricing`. | `app/niches/*/page.jsx` (7) |
+| F3 | Free sample, walk away; no refund once paid in full and live | About stats: "7-day satisfaction window" replaced with free-sample walk-away + 100% ownership. Pricing badge "7-day satisfaction guarantee" replaced. Pricing FAQ refund answer and "more than a homepage" answer rewritten. Terms > Refunds aligned; Terms "Last updated" set to October 13, 2026. | `app/about/AboutClient.jsx`, `app/pricing/PricingClient.jsx`, `components/Faq.jsx`, `app/terms/page.jsx` |
+| F4 | Apex Plumbing = concept | Plumber page showcase: browser-bar text, image alt and caption now say it's a concept design with a sample brand, not a client. | `app/niches/plumber-website-design/page.jsx` |
+
+**Deploy this round:**
+```
+git add lib/site-config.js app/niches app/about/AboutClient.jsx app/pricing/PricingClient.jsx components/Faq.jsx app/terms/page.jsx PHASE1_CHANGELOG.md
+```
+
+**Not done, pending owner reply:**
+- Location and company wording (About "Team" section, footer address, LocalBusiness schema address, Brooklyn location page). Claude will not present the company as US-based; an honest alternative has been proposed to the owner.
+- PND Laundry case study: needs owner confirmation that Embra did the work (and when), plus client permission.
+- Unverified +280% / +190% / +215% claims on case studies: still live; remove or substantiate.
+- Terms name "Embra Technologies" and New York governing law; the legal entity is Embra Technologies Private Limited. Have a lawyer review.
+
+---
+
+## G. Location wording (option B) and Pick N Drop Laundry case study (2026-10-13, round 4)
+
+Owner chose option B: present Embra honestly as a remote team serving US businesses, without naming a country. Owner confirmed client permission for the PND case study. Only text and data changed: no layout, design or animation changes. The existing +280% / +190% / +215% claims were left as they are, by owner decision.
+
+**Location wording (option B)**
+| Where | Was | Now |
+|---|---|---|
+| About > The Team | "based in Brooklyn, NY ... no work shipped overseas" | "a small, remote team ... serving home service businesses across the United States, with support on US business hours" |
+| Footer (every page) | 1969 51st St, Brooklyn, NY 11204 | "Remote team serving home service businesses across the United States" |
+| Contact page card | "Address: 1969 51st St, Brooklyn" + map link | "Where we work: Remote, serving businesses across the US" |
+| Brooklyn location page | "Embra Technologies is based in Brooklyn ... Brooklyn-based studio"; FAQ "We are based in Brooklyn" | Serves Brooklyn businesses as a remote team; FAQ rewritten |
+| Location page titles | "Web Design & SEO Agency in [city]" | "Website Design & SEO for [city] Businesses" |
+| Google data (root, About, 7 industry pages) | PostalAddress in Brooklyn | No address; `areaServed: United States`; `foundingDate: 2026`; industry pages reference the site-wide business entry |
+
+`lib/site-config.js` still holds the old `address` object but nothing displays it any more. Replace it with a real, staffed US address once the US entity is registered.
+
+**Pick N Drop Laundry case study** (`/portfolio/pnd-laundry`)
+- Source: client's Google Search Console (https://pndlaundry.com/), pulled 2026-10-13.
+- Mar 15–Apr 13, 2026 vs Sep 11–Oct 10, 2026: clicks 9 → 21 (+133%), impressions 471 → 1,399 (+197%). Page 1 average position for "dry cleaners van nuys" and "drop off laundry service near me".
+- Work described (from owner): 30 neighborhood pages, schema fixes, breadcrumbs, Google Business Profile, technical fixes.
+- `timeline: 'Ongoing'` is a placeholder. **Owner: confirm or give the real duration.**
+- Added as the first portfolio card; screenshot `public/images/pndlaundry.png` is added to `scripts/generate-images.mjs` (resized copies are created at build time).
+- Results without a public link show as plain labels; a new optional `source` field keeps them in the page's search description.
+- Sitemap: case study added; "last changed" dates set to 2026-10-13 for every page edited today.
+
+**Deploy this round:**
+```
+git add app/about app/contact/ContactClient.jsx components/Footer.jsx app/layout.jsx app/niches "app/locations/[city]" "app/portfolio/[slug]/page.jsx" app/portfolio/PortfolioClient.jsx app/sitemap.js scripts/generate-images.mjs public/images/pndlaundry.png PHASE1_CHANGELOG.md
+```
+If round 3 (pricing and refund wording) isn't deployed yet, also stage: `lib/site-config.js app/pricing/PricingClient.jsx components/Faq.jsx app/terms/page.jsx`.
+
+**After deploy:** request indexing for `/portfolio/pnd-laundry`, `/portfolio`, `/about`, `/contact`, and `/locations/brooklyn`.
+
+---
+
 ## Files changed (26)
 
 ```

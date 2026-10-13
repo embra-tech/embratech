@@ -33,20 +33,8 @@ export default function NichePage() {
       "@type": "Service",
       "name": "Web Design for Handyman Businesses",
       "serviceType": "Web Design for Handyman Businesses",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": siteConfig.legalName,
-        "url": siteConfig.siteUrl,
-        "telephone": siteConfig.phone,
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": siteConfig.address.street,
-          "addressLocality": siteConfig.address.city,
-          "addressRegion": siteConfig.address.state,
-          "postalCode": siteConfig.address.zip,
-          "addressCountry": siteConfig.address.country
-        }
-      },
+      "provider": { "@id": `${siteConfig.siteUrl}/#localbusiness` },
+      "areaServed": { "@type": "Country", "name": "United States" },
       "description": "Custom-coded Next.js websites built to establish instant trust, showcase versatile trades, and convert local homeowners into booked jobs."
     }
   ];
@@ -127,7 +115,7 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent, Flat-Rate Pricing for Handyman Contractors</h2>
           <p style={{ marginBottom: '20px' }}>We believe in straightforward, honest pricing with zero hidden fees, arbitrary retainers, or proprietary platform lock-in. Our website solutions are designed to deliver rapid return on investment for growing home service businesses:</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A complete, custom-coded Next.js website featuring up to 5 core pages, mobile-first responsive layout, sub-second load times, structured schema markup, and integrated lead-capture quote forms.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a quote request form and on-page SEO basics. Offer lots of different jobs? Our Growth plan ($1,000) covers up to 7 pages, plus schema markup and Google Business Profile setup.</p>
           <p style={{ marginBottom: '20px' }}>• <strong>Monthly Care Plan ($150/mo):</strong> Enterprise-grade global edge hosting on Vercel, automated SSL security renewals, regular content and photo updates, monthly Core Web Vitals audits, and local keyword tracking.</p>
           <p style={{ marginBottom: '20px' }}>Review all package inclusions and options on our comprehensive <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   

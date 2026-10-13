@@ -33,20 +33,8 @@ export default function NichePage() {
       "@type": "Service",
       "name": "Roofing Website Design Built to Get Storm Damage Leads",
       "serviceType": "Roofing Website Design Built to Get Storm Damage Leads",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": siteConfig.legalName,
-        "url": siteConfig.siteUrl,
-        "telephone": siteConfig.phone,
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": siteConfig.address.street,
-          "addressLocality": siteConfig.address.city,
-          "addressRegion": siteConfig.address.state,
-          "postalCode": siteConfig.address.zip,
-          "addressCountry": siteConfig.address.country
-        }
-      },
+      "provider": { "@id": `${siteConfig.siteUrl}/#localbusiness` },
+      "areaServed": { "@type": "Country", "name": "United States" },
       "description": "Institutional-grade, high-trust websites built to establish unshakeable local credibility, educate insurance claimants, and capture high-ticket roof replacements."
     }
   ];
@@ -125,7 +113,7 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Pricing for Professional Roofing Contractors</h2>
           <p style={{ marginBottom: '20px' }}>We offer clear, honest pricing designed to deliver superior digital performance without agency retainer markups:</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom-coded Next.js website with up to 5 core pages (Roof Replacement, Storm Damage, Inspections, Commercial Roofing), insurance claim guidance sections, aerial project galleries, and complete LocalBusiness schema markup.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, project galleries, a quote request form and on-page SEO basics. Want separate pages for roof replacement, storm damage, inspections and commercial roofing? Our Growth plan ($1,000) covers up to 7 pages, plus schema markup and Google Business Profile setup.</p>
           <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Global managed edge hosting on Vercel, automated SSL security, rapid project gallery additions, and ongoing local search ranking tracking.</p>
           <p style={{ marginBottom: '20px' }}>Review all package details on our <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   

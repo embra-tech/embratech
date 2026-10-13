@@ -25,7 +25,7 @@ import Link from 'next/link';
 import JsonLd from '../../components/JsonLd';
 import Breadcrumb from '../../components/Breadcrumb';
 
-const LAST_UPDATED = 'January 1, 2026';
+const LAST_UPDATED = 'October 13, 2026';
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -128,7 +128,7 @@ export default function TermsPage() {
               </p>
               <h3>Refunds</h3>
               <p>
-                If you are unsatisfied with the final delivered website, notify us within 7 days of launch and we will work with you to resolve the issue. Due to the custom nature of our work, refunds are not available once a project has been launched and final payment received. Monthly care plan fees are non-refundable for the current billing period but you may cancel at any time (see Section 8).
+                Your custom homepage sample is free and carries no obligation: if it isn&rsquo;t right for you, you can walk away and owe nothing. Due to the custom nature of our work, payments are non-refundable once your website has been launched and final payment received. Monthly care plan fees are non-refundable for the current billing period but you may cancel at any time (see Section 8).
               </p>
             </section>
 

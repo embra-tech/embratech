@@ -109,14 +109,10 @@ const globalSchema = [
     "telephone": siteConfig.phone,
     "email": siteConfig.email,
     "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": siteConfig.address.street,
-      "addressLocality": siteConfig.address.city,
-      "addressRegion": siteConfig.address.state,
-      "postalCode": siteConfig.address.zip,
-      "addressCountry": siteConfig.address.country
-    },
+    "foundingDate": String(siteConfig.foundingYear),
+    // 2026-10-13 (option B, owner approved): no street address. Embra is a remote team serving the US.
+    // Add a real, staffed US address here once the US entity is registered.
+    "areaServed": { "@type": "Country", "name": "United States" },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",

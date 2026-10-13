@@ -33,20 +33,8 @@ export default function NichePage() {
       "@type": "Service",
       "name": "Landscaping Website Design Built to Rank Locally",
       "serviceType": "Landscaping Website Design Built to Rank Locally",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": siteConfig.legalName,
-        "url": siteConfig.siteUrl,
-        "telephone": siteConfig.phone,
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": siteConfig.address.street,
-          "addressLocality": siteConfig.address.city,
-          "addressRegion": siteConfig.address.state,
-          "postalCode": siteConfig.address.zip,
-          "addressCountry": siteConfig.address.country
-        }
-      },
+      "provider": { "@id": `${siteConfig.siteUrl}/#localbusiness` },
+      "areaServed": { "@type": "Country", "name": "United States" },
       "description": "Visually compelling, high-converting websites designed to showcase hardscaping, lawn maintenance, and irrigation systems across all seasons."
     }
   ];
@@ -125,7 +113,7 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Pricing for Landscaping Professionals</h2>
           <p style={{ marginBottom: '20px' }}>Our transparent pricing model ensures your outdoor service business gets an enterprise-grade digital foundation at an accessible investment level:</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom React/Next.js website with up to 5 core pages, responsive before-and-after photo galleries, seasonal service showcases, quote request forms, and full schema markup.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom homepage plus 2 inner pages, built mobile-first with before-and-after photo galleries, a quote request form and on-page SEO basics. Want separate pages for lawn care, hardscaping, irrigation and seasonal services? Our Growth plan ($1,000) covers up to 7 pages, plus schema markup and Google Business Profile setup.</p>
           <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Global edge hosting on Vercel, automated SSL certificates, seasonal gallery and banner updates, and monthly local search ranking monitoring.</p>
           <p style={{ marginBottom: '20px' }}>Visit our comprehensive <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link> for complete details.</p>
   

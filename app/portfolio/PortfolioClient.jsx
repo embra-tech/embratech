@@ -12,6 +12,23 @@ const PAGESPEED = (domain) =>
 
 const SITES = [
   {
+    // 2026-10-13: added with the client's permission; numbers from the client's Google Search Console.
+    name: 'Pick N Drop Laundry',
+    domain: 'pndlaundry.com',
+    slug: 'pnd-laundry',
+    url: 'https://pndlaundry.com/',
+    image: '/images/pndlaundry.png',
+    industry: 'Laundry Pickup & Dry Cleaning',
+    location: 'Los Angeles, CA',
+    desc: 'Laundry pickup, delivery and dry cleaning across Los Angeles. We added 30 neighborhood pages, fixed the schema and breadcrumbs, and optimized the Google Business Profile.',
+    c1: '#4FA3E8', c2: '#163A5C',
+    tags: ['Local SEO', 'Neighborhood Pages', 'Business Profile'],
+    results: [
+      { label: '+133% Google clicks', href: null },
+      { label: '+197% search impressions', href: null },
+    ],
+  },
+  {
     name: 'Tuxford Collision Center',
     domain: 'tuxfordcollision.com',
     slug: 'tuxford-collision',

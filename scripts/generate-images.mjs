@@ -34,6 +34,7 @@ const PORTFOLIO_IMAGES = [
   { name: 'alaskahandyman',     src: 'alaskahandyman.webp' },
   { name: 'bestbreaks',         src: 'bestbreaks.webp' },
   { name: 'skyhightreeservice', src: 'skyhightreeservice.webp' },
+  { name: 'pndlaundry',         src: 'pndlaundry.png' },        // 2026-10-13: Pick N Drop Laundry case study
   { name: 'plumbing-mockup',    src: 'plumbing-mockup.jpg' },
   { name: 'hvac-mockup',        src: 'hvac-mockup.jpg' },
   { name: 'roofing-mockup',     src: 'roofing-mockup.jpg' },
