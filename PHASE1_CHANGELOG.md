@@ -168,6 +168,41 @@ git add lib/site-config.js app/pricing/PricingClient.jsx components/Faq.jsx app/
 
 ---
 
+## I. Phase 4 start: schema cleanup (2026-10-13, round 6)
+
+Rounds 3–5 verified live on 2026-10-13: Brooklyn address gone from all 38 pages, PND case study live (page, card, image, sitemap), /pricing.html redirects to /pricing, pricing/refund/About/Contact/plumber wording correct.
+
+Invisible changes this round:
+| Page | Was | Now |
+|---|---|---|
+| /services/web-design, /services/local-seo, /services/website-integrations | Two conflicting breadcrumb schemas (Home > Services > X vs Home > X); `areaServed` = "Brooklyn" (from the old address) | Page-level copy removed (visible breadcrumb's copy stays); `areaServed` = United States |
+
+Left as is: 7 pages (services, niches, pricing, contact, about, privacy, terms) output two **identical** breadcrumb schemas. Harmless; Google ignores the repeat.
+
+Finding: 13 pages are "Discovered, not indexed", but several of them (Tuxford, Alaska Fast Fix, landscaping, care plan) are already linked from the homepage. Internal links help, but crawling of a young site mainly speeds up with links from other websites (Phase 6).
+
+**Deploy this round:** `git add app/services/web-design/page.jsx app/services/local-seo/page.jsx app/services/website-integrations/page.jsx PHASE1_CHANGELOG.md`
+
+---
+
+## J. Menu and footer links (2026-10-13, round 7, owner approved)
+
+Visible, approved by owner. No new design: existing menu style and the existing footer "Service Areas" row style are reused.
+
+| Where | Was | Now |
+|---|---|---|
+| Main menu (every page, desktop and mobile) | Showcase (/#showcase), Services, Portfolio, Pricing, About, Blog, Reviews (/#testimonials), Contact | **Industries (/niches)**, Services, Portfolio, Pricing, About, Blog, Contact |
+| Footer (every page) | Columns + "Service Areas" row | Two new rows above Service Areas: **Case Studies** (all 6) and **Guides** (4 articles) |
+
+Why: 7 key pages weren't linked from the homepage (3 case studies, the Industries hub, 3 blog posts). The footer is on all 38 pages, so each now gets sitewide internal links.
+
+**Deploy rounds 6 + 7 together:**
+```
+git add components/Navbar.jsx components/Footer.jsx app/services/web-design/page.jsx app/services/local-seo/page.jsx app/services/website-integrations/page.jsx PHASE1_CHANGELOG.md
+```
+
+---
+
 ## Files changed (26)
 
 ```

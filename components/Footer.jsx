@@ -4,6 +4,39 @@ import Link from 'next/link';
 import Logo from './Logo';
 import siteConfig from '../lib/site-config';
 
+// 2026-10-13 (owner approved): sitewide links so every case study and key guide is linked from
+// all pages. Rendered in the same style as the existing "Service Areas" row.
+const CASE_STUDY_LINKS = [
+  { href: '/portfolio/pnd-laundry', label: 'Pick N Drop Laundry' },
+  { href: '/portfolio/tuxford-collision', label: 'Tuxford Collision' },
+  { href: '/portfolio/sky-high-tree', label: 'Sky High Tree Service' },
+  { href: '/portfolio/alaska-fast-fix', label: 'Alaska Fast Fix' },
+  { href: '/portfolio/vvasquez-handyman', label: 'V Vasquez' },
+  { href: '/portfolio/bestbreaks', label: 'BestBreaks' },
+];
+const GUIDE_LINKS = [
+  { href: '/blog/local-seo-guide-for-service-businesses', label: 'Local SEO guide' },
+  { href: '/blog/website-cost-for-home-service-businesses', label: 'Website cost guide' },
+  { href: '/blog/website-roi-calculator', label: 'Website ROI calculator' },
+  { href: '/blog/why-pagespeed-matters', label: 'Does speed affect SEO?' },
+];
+
+function FooterLinkRow({ title, links }) {
+  return (
+    <div className="footer-locations" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px 16px', padding: '24px 0', borderBottom: '1px solid var(--line-dark)', fontSize: '13px', color: 'var(--muted-inv)' }}>
+      <span style={{ fontWeight: 600, color: 'var(--paper-bright)' }}>{title}:</span>
+      {links.map((l, index) => (
+        <span key={l.href} style={{ display: 'inline-flex', alignItems: 'center', gap: '16px' }}>
+          <Link href={l.href} style={{ color: 'var(--muted-inv)', transition: 'color 0.2s' }}>{l.label}</Link>
+          {index < links.length - 1 && (
+            <span aria-hidden="true" style={{ opacity: 0.4 }}>·</span>
+          )}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -106,6 +139,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
+
+        <FooterLinkRow title="Case Studies" links={CASE_STUDY_LINKS} />
+        <FooterLinkRow title="Guides" links={GUIDE_LINKS} />
 
         <div className="footer-locations" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px 16px', padding: '24px 0', borderBottom: '1px solid var(--line-dark)', fontSize: '13px', color: 'var(--muted-inv)' }}>
           <span style={{ fontWeight: 600, color: 'var(--paper-bright)' }}>Service Areas:</span>

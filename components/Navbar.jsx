@@ -6,14 +6,15 @@ import { usePathname } from 'next/navigation';
 import Logo from './Logo';
 
 // Anchor links scroll on the home page; page links use Next routing
+// 2026-10-13 (owner approved): "Showcase" (/#showcase) replaced by "Industries" (/niches) and
+// "Reviews" (/#testimonials) removed, so the menu links to real pages Google can crawl.
 const NAV_ITEMS = [
-  { href: '/#showcase', label: 'Showcase' },
+  { href: '/niches', label: 'Industries' },
   { href: '/services', label: 'Services' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog' },
-  { href: '/#testimonials', label: 'Reviews' },
   { href: '/contact', label: 'Contact' },
 ];
 

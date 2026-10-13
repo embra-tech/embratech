@@ -64,14 +64,8 @@ export default function LocalSeoPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.siteUrl },
-          { '@type': 'ListItem', position: 2, name: 'Services', item: `${siteConfig.siteUrl}/services` },
-          { '@type': 'ListItem', position: 3, name: 'Local SEO', item: `${siteConfig.siteUrl}/services/local-seo` },
-        ],
-      },
+      // 2026-10-13: removed a second BreadcrumbList (Home > Services > Local SEO) that contradicted
+      // the visible breadcrumb; <Breadcrumb> below already outputs the matching one.
       {
         '@type': 'Service',
         serviceType: 'Local SEO',
@@ -81,7 +75,7 @@ export default function LocalSeoPage() {
           url: siteConfig.siteUrl,
         },
         description: 'Local SEO services including Google Business Profile optimization, LocalBusiness schema, and NAP consistency.',
-        areaServed: siteConfig.address ? siteConfig.address.city : 'Nationwide',
+        areaServed: { '@type': 'Country', name: 'United States' }, // 2026-10-13 option B: was the old Brooklyn address city
       }
     ]
   };

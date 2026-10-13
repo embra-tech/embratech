@@ -64,14 +64,8 @@ export default function WebDesignPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.siteUrl },
-          { '@type': 'ListItem', position: 2, name: 'Services', item: `${siteConfig.siteUrl}/services` },
-          { '@type': 'ListItem', position: 3, name: 'Web Design', item: `${siteConfig.siteUrl}/services/web-design` },
-        ],
-      },
+      // 2026-10-13: removed a second BreadcrumbList (Home > Services > Web Design) that contradicted
+      // the visible breadcrumb; <Breadcrumb> below already outputs the matching one.
       {
         '@type': 'Service',
         serviceType: 'Custom Web Design and Development',
@@ -81,7 +75,7 @@ export default function WebDesignPage() {
           url: siteConfig.siteUrl,
         },
         description: 'Custom React/Next.js web design built to convert for home service businesses. Mobile-first, fast loading, and optimized for trust and local SEO.',
-        areaServed: siteConfig.address ? siteConfig.address.city : 'Nationwide',
+        areaServed: { '@type': 'Country', name: 'United States' }, // 2026-10-13 option B: was the old Brooklyn address city
       }
     ]
   };
