@@ -203,6 +203,29 @@ git add components/Navbar.jsx components/Footer.jsx app/services/web-design/page
 
 ---
 
+## K. Phase 3 start: faster hero intro (2026-10-13, round 8, owner approved)
+
+Rounds 6 + 7 verified live: menu shows Industries; footer Case Studies and Guides rows on every page; all 14 footer links return 200.
+
+Owner asked: keep the orb-first, text-second sequence, just a little faster. Only `components/Hero.jsx` changed.
+
+| Setting | Was | Now |
+|---|---|---|
+| Delay before orb starts | 0.3s | 0.15s |
+| Orb intro length | ~3.4s (scale 3.0, camera 3.4, rings 3.2, glow 2.2 @0.6, particles 2.0 @1.0) | ~2.0s (1.8 / 2.0 / 1.9 / 1.3 @0.35 / 1.2 @0.6). Same movements, easing and end position |
+| Headline starts | After the intro finishes (~3.7s) | At 1.5s into the intro, as the orb settles (~1.65s) |
+| Time between words | 0.085s | 0.065s |
+| Badge / subtitle / buttons after last word | +0.05 / +0.22 / +0.40s | +0.05 / +0.17 / +0.30s |
+| 3D scene download | Starts after the page finishes hydrating | Starts as soon as the Hero code loads (invisible) |
+
+Times are measured from when the 3D scene is ready. The CSS fade on each word (globals.css `.word`) is unchanged. Reduced-motion and bot paths are unchanged.
+
+Real-browser check before this change: homepage loads ~1.2 MB of unpacked JavaScript (24 files); largest file 520 KB (the 3D library). The headline is the page's Largest Contentful Paint element, so this change should directly improve real-visitor LCP. Measure with Vercel Speed Insights.
+
+**Deploy:** `git add components/Hero.jsx PHASE1_CHANGELOG.md`
+
+---
+
 ## Files changed (26)
 
 ```

@@ -6,6 +6,13 @@ import { useTheme } from './ThemeProvider';
 
 const HEADLINE_WORDS = ['Custom', 'Websites', 'for', 'Home', 'Service', 'Businesses,', 'Built', 'Before', 'You'];
 
+// 2026-10-13 (owner approved): start downloading the 3D scene as soon as this file loads, instead
+// of waiting until the page has finished hydrating. Same scene and animation; it just arrives sooner.
+const heroScenePromise = typeof window !== 'undefined' ? import('./three/HeroScene') : null;
+// Failures are still handled inside the component (it shows the text); this only prevents an
+// "unhandled rejection" console warning if the early download fails before the component mounts.
+if (heroScenePromise) heroScenePromise.catch(() => {});
+
 export default function Hero() {
   const sectionRef = useRef(null);
   const canvasRef = useRef(null);
@@ -28,13 +35,15 @@ export default function Hero() {
       revealedRef.current = true;
       const words = h1Ref.current ? h1Ref.current.querySelectorAll('.word') : [];
       textTl.current = gsap.timeline();
+      // 2026-10-13 (owner approved): same word-by-word reveal, slightly quicker (was 0.085s per word,
+      // then 0.05 / 0.22 / 0.4s for badge, subtitle and buttons).
       words.forEach((w, i) => {
-        textTl.current.add(() => w.classList.add('revealed'), i * 0.085);
+        textTl.current.add(() => w.classList.add('revealed'), i * 0.065);
       });
-      const base = words.length * 0.085;
+      const base = words.length * 0.065;
       textTl.current.add(() => badgeRef.current && badgeRef.current.classList.add('revealed'), base + 0.05);
-      textTl.current.add(() => subRef.current && subRef.current.classList.add('revealed'), base + 0.22);
-      textTl.current.add(() => actionsRef.current && actionsRef.current.classList.add('revealed'), base + 0.4);
+      textTl.current.add(() => subRef.current && subRef.current.classList.add('revealed'), base + 0.17);
+      textTl.current.add(() => actionsRef.current && actionsRef.current.classList.add('revealed'), base + 0.3);
     };
 
     // Bot / Lighthouse / PageSpeed detection (instant reveal for audits)
@@ -61,7 +70,7 @@ export default function Hero() {
       if (!sceneRef.current) revealText();
     }, 10000);
 
-    import('./three/HeroScene')
+    (heroScenePromise || import('./three/HeroScene'))
       .then(({ createHeroScene }) => {
         api = createHeroScene(canvas);
         sceneRef.current = api;
@@ -76,14 +85,17 @@ export default function Hero() {
           words.forEach((w) => w.classList.add('revealed'));
           [badgeRef, subRef, actionsRef].forEach((r) => r.current && r.current.classList.add('revealed'));
         } else {
-          // 1) The orb system plays alone for ~3.2s
-          introTl.current = gsap.timeline({ delay: 0.3, onComplete: revealText });
+          // 1) The orb system plays first, then the text appears (owner approved 2026-10-13: same
+          //    sequence, compressed). Was: 0.3s delay, ~3.4s intro, text after the intro finished.
+          //    Now: 0.15s delay, ~2.0s intro, text starts at 1.5s as the orb settles.
+          introTl.current = gsap.timeline({ delay: 0.15, onComplete: revealText });
           introTl.current
-            .to(api.parts.root.scale, { x: 1, y: 1, z: 1, duration: 3.0, ease: 'expo.inOut' }, 0)
-            .to(api.parts.camera.position, { z: 5.8, duration: 3.4, ease: 'power2.inOut' }, 0)
-            .to(api.parts.rings.map((r) => r.rotation), { z: '+=2.6', duration: 3.2, ease: 'power2.inOut' }, 0)
-            .to(api.parts.glow.material, { opacity: 0.5, duration: 2.2, ease: 'power1.inOut' }, 0.6)
-            .to(api.parts.particles.material, { opacity: 0.85, duration: 2.0, ease: 'power1.in' }, 1.0);
+            .to(api.parts.root.scale, { x: 1, y: 1, z: 1, duration: 1.8, ease: 'expo.inOut' }, 0)
+            .to(api.parts.camera.position, { z: 5.8, duration: 2.0, ease: 'power2.inOut' }, 0)
+            .to(api.parts.rings.map((r) => r.rotation), { z: '+=2.6', duration: 1.9, ease: 'power2.inOut' }, 0)
+            .to(api.parts.glow.material, { opacity: 0.5, duration: 1.3, ease: 'power1.inOut' }, 0.35)
+            .to(api.parts.particles.material, { opacity: 0.85, duration: 1.2, ease: 'power1.in' }, 0.6)
+            .add(revealText, 1.5);
         }
       })
       .catch((err) => {
