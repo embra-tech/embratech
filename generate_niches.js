@@ -1,3 +1,10 @@
+// RETIRED 2026-10-13 (Phase 1). Do not run.
+// This script is out of date: running it would overwrite all 7 industry pages in app/niches
+// with old text and undo the Phase 1 fixes (titles, schema, pricing, bold text).
+// Kept for reference only. See PHASE1_CHANGELOG.md.
+console.error('generate_niches.js is retired (see the comment at the top of the file). Exiting without changing anything.');
+process.exit(1);
+
 const fs = require('fs');
 const path = require('path');
 

@@ -1,3 +1,11 @@
+// RETIRED 2026-10-13 (Phase 1). Do not run.
+// This script overwrites pages in the project, and its makeFluff() function pads pages with
+// stock filler sentences to hit word counts. Google's spam policies treat padded, mass-produced
+// text as low-quality content. A scan of all 37 live pages on 2026-10-13 found none of this
+// filler live; this stop keeps it that way. Kept for reference only. See PHASE1_CHANGELOG.md.
+console.error('generate_pages.js is retired (see the comment at the top of the file). Exiting without changing anything.');
+process.exit(1);
+
 const fs = require('fs');
 const path = require('path');
 

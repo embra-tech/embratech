@@ -147,6 +147,27 @@ If round 3 (pricing and refund wording) isn't deployed yet, also stage: `lib/sit
 
 ---
 
+## H. Phase 1 leftovers (2026-10-13, round 5). Phase 1 complete.
+
+All invisible to visitors.
+
+| # | Item | Result | Files |
+|---|---|---|---|
+| H1 | Old .html addresses returned 404 (Search Console: /pricing.html "Crawled, not indexed") | 301 redirects for /index, /pricing, /about, /contact, /services, /portfolio, /blog, /care-plan, /privacy, /terms (.html) to the new pages | `next.config.mjs` |
+| H2 | Duplicate button labels read twice by screen readers | **No change needed.** A scan of all 125 buttons on all 37 live pages found every duplicate label already hidden (`aria-hidden`). | none |
+| H3 | Out-of-date generator scripts | Both now exit immediately with a warning. `generate_pages.js` also contains `makeFluff()`, which pads pages with stock filler sentences; a scan of all 37 live pages found none of that filler live. Neither script is part of `npm run build`. | `generate_niches.js`, `generate_pages.js` |
+
+**Audit correction:** the audit said `next.config.mjs` had no security headers or AVIF/WebP setup. That was based on the old `kimi2 - working` copy; the live project already has both.
+
+**One deploy for everything not yet live (rounds 3, 4 and 5):**
+```
+git add lib/site-config.js app/pricing/PricingClient.jsx components/Faq.jsx app/terms/page.jsx app/about app/contact/ContactClient.jsx components/Footer.jsx app/layout.jsx app/niches "app/locations/[city]" "app/portfolio/[slug]/page.jsx" app/portfolio/PortfolioClient.jsx app/sitemap.js scripts/generate-images.mjs public/images/pndlaundry.png next.config.mjs generate_niches.js generate_pages.js PHASE1_CHANGELOG.md
+```
+
+**Check after deploy:** https://www.embratechnologies.org/pricing.html should land on /pricing.
+
+---
+
 ## Files changed (26)
 
 ```
