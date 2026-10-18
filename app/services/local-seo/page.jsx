@@ -88,8 +88,8 @@ export default function LocalSeoPage() {
           <Breadcrumb label="Local SEO" href="/services/local-seo" />
           <PageHeader
             pill="Local Search Optimization"
-            title={<>Local SEO That <span className="highlight-text">Gets You Found</span> on Google</>}
-            sub="Stop letting competitors steal your local leads. We optimize your digital presence to dominate the Google Map Pack and local search results."
+            title={<>Local SEO for <span className="highlight-text">Home Service Businesses</span></>}
+            sub="Help local customers find your plumbing, HVAC, roofing, tree service or handyman business. We improve your Google Business Profile, service pages and business information around the services and areas you actually cover."
           />
         </div>
       </section>
@@ -104,7 +104,7 @@ export default function LocalSeoPage() {
             For home service businesses, local SEO is not just about sprinkling keywords on your homepage. It requires a holistic approach that connects your website, your Google Business Profile, and your overall digital identity across the web. We focus heavily on on-page SEO, ensuring your title tags, meta descriptions, and heading hierarchy accurately reflect your services and locations. This clear structure tells Google exactly what queries you should rank for.
           </p>
           <p>
-            Whether you are looking to dominate your immediate neighborhood or expand your reach across multiple counties, our local SEO services provide a scalable blueprint for growth. We integrate seamlessly with our <Link href="/services" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>other services</Link> like custom web design to ensure your underlying technical platform is flawless. Ready to climb the rankings? View our <Link href="/pricing" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>pricing</Link> or <Link href="/contact" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>contact us</Link> for a free audit of your current local search visibility.
+            Start with a free review of your local search visibility. We look at your website, Google Business Profile and target service area to identify practical next steps. <Link href="/contact" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>Request your local SEO review</Link>. If you also need a new website, explore our <Link href="/services/web-design" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>website design for home service businesses</Link>.
           </p>
         </div>
       </section>

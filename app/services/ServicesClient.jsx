@@ -22,6 +22,7 @@ const SERVICES = [
       'Conversion-focused layouts and CTAs',
     ],
     link: '/services/web-design',
+    linkLabel: 'Explore custom website design',
     icon: <><rect x="3" y="3" width="18" height="18" rx="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></>,
   },
   {
@@ -35,6 +36,7 @@ const SERVICES = [
       'Ongoing ranking & traffic reporting',
     ],
     link: '/services/local-seo',
+    linkLabel: 'Explore local SEO services',
     icon: <><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></>,
   },
   {
@@ -60,6 +62,7 @@ const SERVICES = [
       'Third-party API integrations',
     ],
     link: '/services/website-integrations',
+    linkLabel: 'Explore website integrations',
     icon: <><rect x="3" y="3" width="7.5" height="7.5" rx="1.5" /><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5" /><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5" /><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5" /></>,
   },
 ];
@@ -105,7 +108,7 @@ export default function ServicesClient() {
                   {s.link && (
                     <div style={{ marginTop: '20px' }}>
                       <Link href={s.link} style={{ color: 'var(--primary-bright)', textDecoration: 'underline', fontWeight: 500 }}>
-                        Learn more about {s.title.split(' ')[0]} &rarr;
+                        {s.linkLabel} &rarr;
                       </Link>
                     </div>
                   )}

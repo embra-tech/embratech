@@ -88,8 +88,8 @@ export default function WebDesignPage() {
           <Breadcrumb label="Web Design" href="/services/web-design" />
           <PageHeader
             pill="Custom Web Design"
-            title={<>Custom Web Design <span className="highlight-text">Built to Convert</span></>}
-            sub="We build high-performance, mobile-first websites tailored for home service businesses. Stop losing leads to slow WordPress templates and start turning visitors into booked jobs with a custom-engineered digital storefront."
+            title={<>Website Design for <span className="highlight-text">Home Service Businesses</span></>}
+            sub="Custom websites for US plumbers, roofers, HVAC companies, tree services and other home service businesses. Give customers a clear way to explore your services, call your team and request an estimate. See a free custom homepage sample before you decide to buy."
           />
         </div>
       </section>
@@ -123,8 +123,11 @@ export default function WebDesignPage() {
           <p style={{ marginBottom: '20px' }}>
             We invite you to experience the difference with our <strong>24-hour free custom homepage sample</strong>. With no commitment and no upfront cost, we will design a custom homepage mockup for your business within one day. This allows you to see our quality of work and envision how your new brand presence will look before you sign any contracts. If you love it, we can move forward with a full build. Check out our <Link href="/portfolio" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>portfolio</Link> to see what we've built for others, and contact us to claim your free sample.
           </p>
-          <p>
+          <p style={{ marginBottom: '20px' }}>
             Our pricing is transparent and designed to fit businesses at different stages of growth. Our Starter package begins at a highly accessible $700 one-time fee, providing a rock-solid foundation. For businesses looking for ongoing support, hosting, and continuous improvements, our $150/mo Care Plan offers unparalleled value, ensuring your site remains secure, fast, and up-to-date long after launch.
+          </p>
+          <p>
+            Need help getting found after launch? Explore our <Link href="/services/local-seo" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>local SEO services for home service businesses</Link>, including Google Business Profile optimization and service-page planning.
           </p>
         </div>
       </section>
