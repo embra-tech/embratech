@@ -25,7 +25,7 @@ function LosAngelesContent() {
         We completely rebuilt their digital identity. We engineered a trust-first hierarchy, placing licensing credentials, their glowing Google rating, and a clear "Free Towing + Free Estimate" guarantee above the fold. We built a conversion-engineered layout where every page fold includes a phone number and an instant quote form, eliminating all decision friction.
       </p>
       <p style={{ marginBottom: '24px' }}>
-        Furthermore, we implemented a robust local SEO structure using LocalBusiness JSON-LD schema markup and neighborhood-specific metadata targeting "auto body repair Los Angeles." The results? Tuxford Collision Center saw a <strong>280% increase in organic traffic</strong> and achieved a flawless 97/100 on Google PageSpeed Insights.
+        We also set up the local search basics: LocalBusiness structured data and page titles focused on auto body repair in Los Angeles, so Google understands where the shop works. The site's current speed can be checked at any time through the PageSpeed report linked from the case study.
       </p>
       <p style={{ marginBottom: '40px' }}>
         <Link href="/portfolio/tuxford-collision" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the full Los Angeles auto body case study &rarr;</Link>
@@ -33,7 +33,7 @@ function LosAngelesContent() {
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why Choose Embra for Your LA Business?</h2>
       <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
-        <li><strong>Sub-Second Load Times:</strong> Speed is a ranking factor. Our custom builds average 96/100 on PageSpeed, ensuring you never lose an impatient customer.</li>
+        <li><strong>Fast on Phones:</strong> Speed matters to visitors and is one of the signals Google uses. Each case study links to the client site's live PageSpeed report, so you can check it yourself.</li>
         <li><strong>Hyper-Local Focus:</strong> We don't just target "Los Angeles." We build service-area clusters that target the specific neighborhoods and zip codes where your best customers live.</li>
         <li><strong>Transparent, Flat-Rate Pricing:</strong> We don't hide our fees. Our comprehensive <Link href="/pricing" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>pricing plans</Link> start at a flat rate of $700 for a starter build, with no surprise agency retainers.</li>
       </ul>
@@ -66,10 +66,10 @@ function ChicagoContent() {
         Tree service is a high-urgency, high-ticket industry. When severe storms hit Chicago, homeowners need emergency tree removal immediately. They don't have time to navigate a confusing website. <strong>Sky High Tree Service</strong> needed an online presence that captured these emergency searches instantly and built a sustainable organic presence year-round.
       </p>
       <p style={{ marginBottom: '24px' }}>
-        Our approach was to implement an emergency CTA (Call to Action) architecture. We placed high-visibility emergency contact options above the fold on every single page, including click-to-call buttons and a "24/7 Emergency Service" badge. We front-loaded their credibility signals-insurance verification, license numbers, and before-and-after imagery-so stressed homeowners knew they were dealing with true professionals immediately.
+        The site gives homeowners two clear ways to get in touch, phone links and a free-estimate form, alongside service descriptions, project photos and a service-area section, so they can check the work and the coverage before they call.
       </p>
       <p style={{ marginBottom: '24px' }}>
-        On the SEO side, we created dedicated service-area pages for key Chicago neighborhoods and suburbs, enriched with LocalBusiness schema targeting queries like "tree removal [neighborhood]." This aggressive strategy paid off: Sky High Tree Service saw a <strong>215% increase in emergency leads</strong> and maintains a 95/100 Google PageSpeed score.
+        The case study describes these website features. It does not claim a measured increase in leads; outcome numbers will be added only with a dated source.
       </p>
       <p style={{ marginBottom: '40px' }}>
         <Link href="/portfolio/sky-high-tree" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the full Chicago tree service case study &rarr;</Link>
@@ -113,7 +113,7 @@ function AlaskaContent() {
         We completely redesigned their user experience around an urgency-driven layout. We placed "Fast Response" messaging and the primary phone number at the absolute top of every page. Knowing that seconds matter when a pipe bursts, we optimized the site to load almost instantly. We also built a prominent service area section to prevent wasted calls from outside their coverage zone, building trust with locals who specifically want accountable, regional experts.
       </p>
       <p style={{ marginBottom: '24px' }}>
-        By implementing structured data markup and optimizing service-area headings for "handyman near me" searches, we aligned their site perfectly with their Google Business Profile. As a result, Alaska Fast Fix saw a <strong>190% increase in local calls</strong> and secured a 98/100 score on Google PageSpeed Insights.
+        We added structured data and service-area headings, and matched the site's business details to their Google Business Profile, so Google understands where they work. The site's current speed can be checked through the PageSpeed report linked from the case study.
       </p>
       <p style={{ marginBottom: '40px' }}>
         <Link href="/portfolio/alaska-fast-fix" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the full Alaska handyman case study &rarr;</Link>
@@ -168,7 +168,7 @@ function BrooklynContent() {
         You get custom design and engineering without the overhead of a big agency. We are a focused team with a narrow specialization: home service businesses. We are not trying to serve everyone. We build websites for contractors, tradespeople, and service businesses, and we are very good at it.
       </p>
       <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
-        <li><strong>Sub-Second Load Times:</strong> Our Next.js builds average 96/100+ on Google PageSpeed Insights. Speed is a ranking factor, and a conversion factor.</li>
+        <li><strong>Fast on Phones:</strong> Speed matters to visitors and is one of the signals Google uses. Each case study links to the client site's live PageSpeed report, so you can check it yourself.</li>
         <li><strong>Honest, Flat-Rate Pricing:</strong> Our <Link href="/pricing" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>pricing</Link> starts at $700 for a complete starter site. No retainers, no hidden fees.</li>
         <li><strong>24-Hour Free Sample:</strong> We build a fully custom homepage mockup for your business within 24 hours, at no cost. You review it before you sign anything.</li>
         <li><strong>National Reach, Local Focus:</strong> We serve businesses coast to coast. Every site we build is optimized for the local search intent of the specific cities and neighborhoods your customers live in.</li>

@@ -99,7 +99,7 @@ export default function AboutClient() {
               We are a small, remote team of senior designers and engineers serving home service businesses across the United States, with support on US business hours ({siteConfig.hoursDisplay}). When you email us, the person who replies is the same person writing your code and designing your pages. No account managers, no handoffs to junior staff.
             </p>
             <p>
-              We built Embra because great web work was gatekept behind agency retainers most local businesses can&apos;t justify. Our answer was to cut the overhead entirely and put the savings back into execution quality, which is why our sites average 96/100 on PageSpeed and rank, while costing a fraction of what a full-service agency charges.
+              We built Embra because great web work was gatekept behind agency retainers most local businesses can&apos;t justify. Our answer was to cut the overhead entirely and put the savings back into execution quality: fast, mobile-first sites (each case study links to a live PageSpeed report you can check), at a fraction of what a full-service agency charges.
             </p>
             <p style={{marginTop: '20px', fontSize: '14px', color: 'rgba(255,255,255,0.5)', fontStyle: 'italic'}}>
               Want to know who you&apos;re working with? Reach out directly at <a href={`mailto:${siteConfig.email}`} style={{ color: 'var(--primary)' }}>{siteConfig.email}</a>, we reply within one business day, not a bot.

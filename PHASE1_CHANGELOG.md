@@ -323,3 +323,35 @@ Made in the `embra-live` worktree on top of live `main` (da47749).
 - LINK-1: linking the tree, auto body and HVAC guides from their industry pages.
 - PageSpeed badge numbers not re-measured; the PageSpeed service needs a Chrome permission.
 - Handyman page rework (CONT-1).
+
+---
+
+## N. Remaining outcome claims (2026-10-19, after f7b6d18 went live)
+
+Live check of f7b6d18 passed: 38/38 pages OK, 0 hype words on all 6 case studies, 7 blog search titles at 44–59 characters, homepage "View All 6 Projects" and the DesignRush link live. A broader scan (claims written as "280% increase", "average 96/100" and so on) found five more claims:
+
+| Page | Was | Now |
+|---|---|---|
+| /locations/los-angeles | "Tuxford … saw a 280% increase in organic traffic and achieved a flawless 97/100"; "Our custom builds average 96/100" | Local-search basics described plainly; speed points to the live PageSpeed report on the case study |
+| /locations/chicago | Sky High "24/7 Emergency Service badge", "license numbers", "215% increase in emergency leads", "95/100" | The features found on the live site (phone links, estimate form, service descriptions, project photos, service area); no outcome claim |
+| /locations/alaska | "Alaska Fast Fix saw a 190% increase in local calls and secured a 98/100" | Structured data and Business Profile alignment described; speed points to the live report |
+| /locations/brooklyn | "Our Next.js builds average 96/100+" | "Fast on Phones": live PageSpeed report on each case study |
+| /about | "our sites average 96/100 on PageSpeed and rank" | Fast, mobile-first sites, with a live PageSpeed report on each case study |
+
+The project now uses a single working folder: `embra-next` on `main` (the `embra-live` worktree was removed after f7b6d18). Analytics work remains on the local `analytics-wip` branch, unpublished.
+
+**Deploy:** `git add app/locations/[city]/LocationClient.jsx app/about/AboutClient.jsx PHASE1_CHANGELOG.md`
+
+---
+
+## O. Font fix (2026-10-20)
+
+Found by the 20 Oct "Verified master SEO review" and confirmed live: the computed font on body, H1 and paragraphs was Times New Roman. `next/font` registered Figtree, but the files showed as "unloaded".
+
+Cause: `app/layout.jsx` put the `next/font` variable classes (`--font-figtree`, `--font-inter`, `--font-jetbrains`) on `<body>`, while `globals.css` uses them inside `:root` (`--ff-display`, `--ff-body`, `--ff-mono`). `:root` can't see variables defined on `<body>`, so those declarations became invalid and the browser fell back to its default serif.
+
+Fix: the classes are now on `<html>`. Nothing else changed. `ThemeProvider` only sets `data-theme`, and Lenis adds its class with `classList`, so neither removes them.
+
+**Deploy (with section N):** `git add app/layout.jsx "app/locations/[city]/LocationClient.jsx" app/about/AboutClient.jsx PHASE1_CHANGELOG.md`
+
+Also found 20 Oct in Search Console URL Inspection: `/services/web-design` is "Discovered, currently not indexed" (never crawled) and `/services/local-seo` is "URL is unknown to Google". Request indexing for both after this deploy.

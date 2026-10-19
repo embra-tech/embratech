@@ -126,7 +126,10 @@ const globalSchema = [
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="obsidian">
+    // 2026-10-20: font variable classes moved from <body> to <html>. globals.css reads them in :root
+    // (--ff-display / --ff-body), which can't see variables defined on <body>, so every page was
+    // rendering in the browser's default serif (Times New Roman) instead of Figtree/Inter.
+    <html lang="en" data-theme="obsidian" className={`${figtree.variable} ${inter.variable} ${jetbrains.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: `
           if (/googlebot|google-inspectiontool|lighthouse|chrome-lighthouse|pagespeed|headlesschrome|ptst|gtmetrix/i.test(navigator.userAgent) || window.location.search.includes('psi=1') || window.location.search.includes('pagespeed')) {
@@ -134,7 +137,7 @@ export default function RootLayout({ children }) {
           }
         ` }} />
       </head>
-      <body className={`${figtree.variable} ${inter.variable} ${jetbrains.variable}`}>
+      <body>
         <ThemeProvider>
           <ScrollManager>
             <a href="#main" className="skip-link">Skip to main content</a>
