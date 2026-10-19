@@ -286,3 +286,17 @@ Note: `git add app/services` also stages `ServicesClient.jsx` if it has uncommit
 3. Resubmit `sitemap.xml`.
 4. Pages report: watch "Alternate page with proper canonical tag" and "Duplicate, Google chose different canonical" shrink over 1 to 3 weeks.
 5. Spot-check titles with a site: search after recrawl (no more "| Embra | Embra").
+
+---
+
+## L. DesignRush listing link (2026-10-19, owner approved)
+
+Made on branch `designrush-link`, created from `origin/main` (f543429) in a separate worktree (`..\embra-live`). This keeps the unpublished analytics commit (dcb2c7f, saved as `analytics-wip`) out of this release.
+
+| Where | Change |
+|---|---|
+| Homepage reviews section (`components/Testimonials.jsx`, used only on `/`) | One centered line under the review cards: "Listed on DesignRush", linking to https://www.designrush.com/agency/website-design-development, in the existing review-link style. Opens in a new tab. |
+
+- `rel="nofollow noopener noreferrer"`: DesignRush requested the link in exchange for a complimentary 60-day promoted listing. Google's spam policies treat exchanged links as link schemes unless they are qualified with nofollow or sponsored.
+- Push: `git push origin designrush-link:main` (fast-forward from f543429).
+- After deploy, confirm the link on the live homepage, then reply to DesignRush.

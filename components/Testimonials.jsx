@@ -106,6 +106,24 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
+        {/* 2026-10-19 (owner approved): DesignRush listing link, homepage only.
+            rel="nofollow" because DesignRush asked for this link in exchange for a complimentary
+            promoted listing; Google's spam policies treat exchanged links as link schemes unless
+            they are qualified with nofollow or sponsored. Reuses the existing review-link style. */}
+        <p style={{ textAlign: 'center', marginTop: '32px' }}>
+          <a
+            href="https://www.designrush.com/agency/website-design-development"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            className="testimonial-site-link"
+          >
+            <span>Listed on DesignRush</span>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </a>
+        </p>
       </div>
     </section>
   );
