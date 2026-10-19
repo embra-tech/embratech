@@ -1,0 +1,3 @@
+Browser tab: 2018927907, Title: "Web Design & Local SEO for Home Service Businesses | Embra", URL: "https://www.embratechnologies.org/".
+There has been no change in the accessibility tree.
+The focused UI element is 0 AXWebArea Web Design & Local SEO for Home Service Businesses | Embra, URL: embratechnologies.org/

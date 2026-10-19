@@ -1,0 +1,18 @@
+{
+  "fonts": [
+    {
+      "font": "\"Times New Roman\"",
+      "selector": "body"
+    },
+    {
+      "font": "\"Times New Roman\"",
+      "selector": "h1"
+    },
+    {
+      "font": "\"Times New Roman\"",
+      "selector": "p"
+    }
+  ],
+  "has215": false,
+  "has99": true
+}

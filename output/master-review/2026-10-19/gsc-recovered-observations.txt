@@ -1,0 +1,1480 @@
+Wall time: 0.5048 seconds
+Output:
+Browser tab: 2018925064, Title: "URL Inspection", URL: "https://search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&id=3c_XHL3YDRpeifeMS9qqUQ".
+0 AXWebArea URL Inspection, URL: search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&id=3c_XHL3YDRpeifeMS9qqUQ
+	1 container
+		2 container yDmH0d
+			3 container gb
+				4 container
+					5 button (collapsed) Description: Main menu, Secondary Actions: Expand
+						6 image
+					7 link Description: Google Search Console, Value: search.google.com/search-console?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F, ID: sdgBod
+					8 container
+						9 combo box (collapsed, settable) Description: Inspect any URL in https://www.embratechnologies.org/, Secondary Actions: Expand
+					10 button Search
+						11 image
+					12 button Help
+					13 button User settings
+					14 container
+						15 button Unread messages: 9
+						16 text 9
+					17 button (collapsed) Description: Google apps, Secondary Actions: Expand
+					18 button (collapsed) Description: Google Account: Harvey murphy (harveymmurphy@gmail.com), Google membership, Secondary Actions: Expand
+			19 container navigational drawer
+				20 container
+					21 container Primary
+						22 pop up button (collapsed) Description: Search property, Secondary Actions: Expand
+							23 image favicon
+							24 combo box (collapsed, settable) Description: https://www.embratechnologies.org/, Secondary Actions: Expand
+						25 container
+							26 link Description: Overview, Value: search.google.com/search-console?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							27 link Description: Insights, Value: search.google.com/search-console/performance/insights?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							28 container
+								29 link Description: Performance, Value: search.google.com/search-console/performance/search-analytics?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+								30 button (collapsed) Description: Performance report section, Secondary Actions: Expand
+							31 button URL inspection
+								32 text URL inspection
+							33 container
+								34 text Indexing
+								35 button (expanded) Description: Indexing report section, Secondary Actions: Collapse
+								36 link Description: Pages, Value: search.google.com/search-console/index?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+								37 link Description: Sitemaps, Value: search.google.com/search-console/sitemaps?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+								38 link Description: Removals, Value: search.google.com/search-console/removals?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							39 container
+								40 text Experience
+								41 button (expanded) Description: Experience report section, Secondary Actions: Collapse
+								42 link Description: Core Web Vitals, Value: search.google.com/search-console/core-web-vitals?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+								43 link Description: HTTPS, Value: search.google.com/search-console/https?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							44 container
+								45 text Enhancements
+								46 button (expanded) Description: Enhancements report section, Secondary Actions: Collapse
+								47 link Description: Breadcrumbs, Value: search.google.com/search-console/r/breadcrumbs?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+								48 link Description: Review snippets, Value: search.google.com/search-console/r/review-snippet?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							49 container
+								50 text Security & Manual Actions
+								51 button (collapsed) Description: Security & Manual Actions report section, Secondary Actions: Expand
+							52 link Description: Links report, Value: search.google.com/search-console/links?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							53 link Description: Achievements, Value: search.google.com/search-console/achievements?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							54 link Description: Settings, Value: search.google.com/search-console/settings?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							55 button Submit feedback
+								56 text Submit feedback
+							57 button About Search Console
+								58 text About Search Console
+							59 link Description: Privacy, Value: myaccount.google.com/privacypolicy?hl=en
+							60 link Description: Terms, Value: myaccount.google.com/termsofservice?hl=en
+			61 container
+				62 text https://www.embratechnologies.org/services/local-seo
+				63 container
+					64 container Breadcrumbs
+						65 heading URL Inspection, Value: 1
+							66 text URL Inspection
+					67 button TEST LIVE URL
+						68 text TEST LIVE URL
+				69 container
+					70 container
+						71 text URL is not on Google This page is not indexed. Pages that aren't indexed can't be served on Google. See the details below to learn why it wasn't indexed. 
+						72 link Description: Learn more, Value: support.google.com/webmasters/answer/9012289#url_not_on_google
+					73 button (disabled) View crawled page
+						74 text VIEW CRAWLED PAGE
+					75 container
+						76 text Page changed?
+						77 button Request indexingRequest again
+							78 text REQUEST INDEXING
+					79 button (expanded) Page indexing Page is not indexed: Discovered - currently not indexed, Secondary Actions: Collapse
+						80 text Page indexing
+						81 container
+							82 text Page is not indexed:  Discovered - currently not indexed
+					83 container
+						84 text Discovery Sitemaps https://www.embratechnologies.org/sitemap.xml Referring page https://www.embratechnologies.org/sitemap.xml Crawl Last crawl N/A Crawled as N/A Crawl allowed? N/A Page fetch N/A Indexing allowed? N/A Indexing User-declared canonical N/A Google-selected canonical
+						85 button (collapsed) Description: null, Secondary Actions: Expand
+						86 text N/A
+						87 link Description: Link to more extensive documentation, Value: support.google.com/webmasters/answer/7440203#discovered__unclear_status
+						88 link Description: OPEN REPORT, Value: search.google.com/search-console/index/drilldown?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&item_key=CAMYFiAC
+					89 text Enhancements & Experience Only indexed URLs can have enhancements
+		90 text URL Inspection
+
+The focused UI element is 0 AXWebArea URL Inspection, URL: search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&id=3c_XHL3YDRpeifeMS9qqUQ
+
+Wall time: 0.5437 seconds
+Output:
+Browser tab: 2018925064, Title: "URL Inspection", URL: "https://search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&id=u20yp6jHXCty9khgC4H2iQ".
+0 AXWebArea URL Inspection, URL: search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&id=u20yp6jHXCty9khgC4H2iQ
+	1 container
+		2 container yDmH0d
+			3 container gb
+				4 container
+					5 button (collapsed) Description: Main menu, Secondary Actions: Expand
+						6 image
+					7 link Description: Google Search Console, Value: search.google.com/search-console?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F, ID: sdgBod
+					8 container
+						9 combo box (collapsed, settable) Description: Inspect any URL in https://www.embratechnologies.org/, Secondary Actions: Expand
+					10 button Search
+						11 image
+					12 button Help
+					13 button User settings
+					14 container
+						15 button Unread messages: 9
+						16 text 9
+					17 button (collapsed) Description: Google apps, Secondary Actions: Expand
+					18 button (collapsed) Description: Google Account: Harvey murphy (harveymmurphy@gmail.com), Google membership, Secondary Actions: Expand
+			19 container navigational drawer
+				20 container
+					21 container Primary
+						22 pop up button (collapsed) Description: Search property, Secondary Actions: Expand
+							23 image favicon
+							24 combo box (collapsed, settable) Description: https://www.embratechnologies.org/, Secondary Actions: Expand
+						25 container
+							26 link Description: Overview, Value: search.google.com/search-console?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							27 link Description: Insights, Value: search.google.com/search-console/performance/insights?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							28 container
+								29 link Description: Performance, Value: search.google.com/search-console/performance/search-analytics?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+								30 button (collapsed) Description: Performance report section, Secondary Actions: Expand
+							31 button URL inspection
+								32 text URL inspection
+							33 container
+								34 text Indexing
+								35 button (expanded) Description: Indexing report section, Secondary Actions: Collapse
+								36 link Description: Pages, Value: search.google.com/search-console/index?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+								37 link Description: Sitemaps, Value: search.google.com/search-console/sitemaps?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+								38 link Description: Removals, Value: search.google.com/search-console/removals?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							39 container
+								40 text Experience
+								41 button (expanded) Description: Experience report section, Secondary Actions: Collapse
+								42 link Description: Core Web Vitals, Value: search.google.com/search-console/core-web-vitals?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+								43 link Description: HTTPS, Value: search.google.com/search-console/https?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							44 container
+								45 text Enhancements
+								46 button (expanded) Description: Enhancements report section, Secondary Actions: Collapse
+								47 link Description: Breadcrumbs, Value: search.google.com/search-console/r/breadcrumbs?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+								48 link Description: Review snippets, Value: search.google.com/search-console/r/review-snippet?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							49 container
+								50 text Security & Manual Actions
+								51 button (collapsed) Description: Security & Manual Actions report section, Secondary Actions: Expand
+							52 link Description: Links report, Value: search.google.com/search-console/links?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							53 link Description: Achievements, Value: search.google.com/search-console/achievements?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							54 link Description: Settings, Value: search.google.com/search-console/settings?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							55 button Submit feedback
+								56 text Submit feedback
+							57 button About Search Console
+								58 text About Search Console
+							59 link Description: Privacy, Value: myaccount.google.com/privacypolicy?hl=en
+							60 link Description: Terms, Value: myaccount.google.com/termsofservice?hl=en
+			61 container
+				62 text https://www.embratechnologies.org/services/web-design
+				63 container
+					64 container Breadcrumbs
+						65 heading URL Inspection, Value: 1
+							66 text URL Inspection
+					67 button TEST LIVE URL
+						68 text TEST LIVE URL
+				69 container
+					70 container
+						71 text URL is not on Google This page is not indexed. Pages that aren't indexed can't be served on Google. See the details below to learn why it wasn't indexed. 
+						72 link Description: Learn more, Value: support.google.com/webmasters/answer/9012289#url_not_on_google
+					73 button (disabled) View crawled page
+						74 text VIEW CRAWLED PAGE
+					75 container
+						76 text Page changed?
+						77 button Request indexingRequest again
+							78 text REQUEST INDEXING
+					79 button (expanded) Page indexing Page is not indexed: Discovered - currently not indexed, Secondary Actions: Collapse
+						80 text Page indexing
+						81 container
+							82 text Page is not indexed:  Discovered - currently not indexed
+					83 container
+						84 text Discovery Sitemaps https://www.embratechnologies.org/sitemap.xml Referring page https://www.embratechnologies.org/services/website-integrations https://www.embratechnologies.org/sitemap.xml Crawl Last crawl N/A Crawled as N/A Crawl allowed? N/A Page fetch N/A Indexing allowed? N/A Indexing User-declared canonical N/A Google-selected canonical
+						85 button (collapsed) Description: null, Secondary Actions: Expand
+						86 text N/A
+						87 link Description: Link to more extensive documentation, Value: support.google.com/webmasters/answer/7440203#discovered__unclear_status
+						88 link Description: OPEN REPORT, Value: search.google.com/search-console/index/drilldown?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&item_key=CAMYFiAC
+					89 text Enhancements & Experience Only indexed URLs can have enhancements
+		90 text URL Inspection
+
+The focused UI element is 0 AXWebArea URL Inspection, URL: search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&id=u20yp6jHXCty9khgC4H2iQ
+
+Wall time: 3.6478 seconds
+Output:
+Browser tab: 2018925064, Title: "Page indexing", URL: "https://search.google.com/search-console/index?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 16, 61
+~0 AXWebArea Page indexing, URL: search.google.com/search-console/index?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
++						61 text 9
++			62 container
++				63 container Breadcrumbs
++					64 heading Page indexing, Value: 1
++						65 text Page indexing
++				66 pop up button (collapsed) Description: EXPORT, Secondary Actions: Expand
++				67 list
++					68 (selected) All known pages
++					69 All submitted pages
++					70 Unsubmitted pages only
++					71 /sitemap.xml
++				72 container
++					73 text Last update:  10/12/26
++				74 container
++					75 container
++						76 button Not indexed 17 4 reasons
++							77 text Not indexed
++							78 text 17
++							79 text 4 reasons
++						80 container
++							81 button (collapsed) Description: null, Secondary Actions: Expand
++						82 button Indexed 21
++							83 text Indexed
++							84 text 21
++						85 container
++							86 button (collapsed) Description: null, Secondary Actions: Expand
++						87 checkbox Description: Impressions, Value: 0, ID: c216
++						88 text Impressions
++					89 link Description: View data about indexed pages, Value: search.google.com/search-console/index/drilldown?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&pages=ALL_URLS
++					90 text Why pages aren’t indexed
++					91 text Pages that aren’t indexed can’t be served on Google
++					92 pop up button (collapsed) Description: Filter table rows, Secondary Actions: Expand
++					93 table
++						94 row
++							95 cell
++								96 text Reason
++							97 cell
++								98 text Source
++								99 container
++									100 button (collapsed) Description: null, Secondary Actions: Expand
++							101 cell
++								102 text Validation
++							103 cell
++								104 text Trend
++							105 cell
++								106 text Pages
++						107 row
++							108 cell
++								109 text Duplicate without user-selected canonical
++							110 cell
++								111 text Website
++							112 cell
++								113 text Started
++							114 cell
++								115 text 2
++						116 row
++							117 cell
++								118 text Not found (404)
++							119 cell
++								120 text Website
++							121 cell
++								122 text Started
++							123 cell
++								124 text 1
++						125 row
++							126 cell
++								127 text Discovered - currently not indexed
++							128 cell
++								129 text Google systems
++							130 cell
++								131 text Started
++							132 cell
++								133 text 13
++						134 row
++							135 cell
++								136 text Crawled - currently not indexed
++							137 cell
++								138 text Google systems
++							139 cell
++								140 text Started
++							141 cell
++								142 text 1
++					143 text Rows per page:
++					144 list Number of rows per page
++						145 5
++						146 (selected) 10
++						147 25
++						148 50
++						149 100
++						150 250
++						151 500
++					152 text 1-4 of 4
+The focused UI element is 36 link Description: Pages, URL: search.google.com/search-console/index?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+
+Wall time: 0.5446 seconds
+Output:
+Browser tab: 2018925064, Title: "Page indexing", URL: "https://search.google.com/search-console/index/drilldown?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&item_key=CAMYFiAC".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 62
++			62 container
++				63 container Breadcrumbs
++					64 link Description: Page indexing, Value: search.google.com/search-console/index?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&pages=ALL_URLS
++					65 heading Discovered - currently not indexed, Value: 1
++						66 text Discovered - currently not indexed
++				67 pop up button (collapsed) Description: EXPORT, Secondary Actions: Expand
++				68 button Get shareable link.
++					69 text SHARE
++				70 container
++					71 list
++						72 (selected) All known pages
++						73 All submitted pages
++						74 Unsubmitted pages only
++						75 /sitemap.xml
++					76 container
++						77 text Last update:  10/12/26
++					78 container
++						79 text Discovered - currently not indexed These pages aren't indexed or served on Google
++						80 link Description: Link to more extensive documentation, Value: support.google.com/webmasters/answer/7440203#discovered__unclear_status
++						81 container
++							82 text Validation  started Started: 10/13/26
++							83 button SEE DETAILS
++								84 text SEE DETAILS
++					85 container
++						86 text Affected pages 13
++					87 container
++						88 text Examples
++						89 button (collapsed) Description: null, Secondary Actions: Expand
++						90 pop up button (collapsed) Description: Filter table rows, Secondary Actions: Expand
++						91 table
++							92 row
++								93 cell
++									94 text URL
++								95 cell
++									96 text Last crawled
++							97 row
++								98 cell
++									99 text https://www.embratechnologies.org/blog/local-seo-guide-for-service-businesses
++								100 cell
++									101 text N/A
++							102 row
++								103 cell
++									104 text https://www.embratechnologies.org/blog/website-roi-calculator
++								105 cell
++									106 text N/A
++							107 row
++								108 cell
++									109 text https://www.embratechnologies.org/blog/why-pagespeed-matters
++								110 cell
++									111 text N/A
++							112 row
++								113 cell
++									114 text https://www.embratechnologies.org/niches
++								115 cell
++									116 text N/A
++							117 row
++								118 cell
++									119 text https://www.embratechnologies.org/niches/landscaping-website-design
++								120 cell
++									121 text N/A
++							122 row
++								123 cell
++									124 text https://www.embratechnologies.org/portfolio/alaska-fast-fix
++								125 cell
++									126 text N/A
++							127 row
++								128 cell
++									129 text https://www.embratechnologies.org/portfolio/bestbreaks
++								130 cell
++									131 text N/A
++							132 row
++								133 cell
++									134 text https://www.embratechnologies.org/portfolio/tuxford-collision
++								135 cell
++									136 text N/A
++							137 row
++								138 cell
++									139 text https://www.embratechnologies.org/portfolio/vvasquez-handyman
++								140 cell
++									141 text N/A
++							142 row
++								143 cell
++									144 text https://www.embratechnologies.org/services/care-plan
++								145 cell
++									146 text N/A
++						147 text Rows per page:
++						148 list Number of rows per page
++							149 5
++							150 (selected) 10
++							151 25
++							152 50
++							153 100
++							154 250
++							155 500
++						156 text 1-10 of 13
++		157 text Page indexing
+The focused UI element is 0 AXWebArea Page indexing, URL: search.google.com/search-console/index/drilldown?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&item_key=CAMYFiAC
+
+Wall time: 0.9240 seconds
+Output:
+Browser tab: 2018925319, Title: "URL Inspection", URL: "https://search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&id=3c_XHL3YDRpeifeMS9qqUQ".
+0 AXWebArea URL Inspection, URL: search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&id=3c_XHL3YDRpeifeMS9qqUQ
+	1 container yDmH0d
+		2 container gb
+			3 container
+				4 button (collapsed) Description: Main menu, Secondary Actions: Expand
+					5 image
+				6 link Description: Google Search Console, Value: search.google.com/search-console?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F, ID: sdgBod
+				7 container
+					8 combo box (collapsed, settable) Description: Inspect any URL in https://www.embratechnologies.org/, Secondary Actions: Expand
+				9 button Search
+					10 image
+				11 button Help
+				12 button User settings
+				13 container
+					14 button Unread messages: 9
+					15 text 9
+				16 button (collapsed) Description: Google apps, Secondary Actions: Expand
+				17 button (collapsed) Description: Google Account: Harvey murphy (harveymmurphy@gmail.com), Google membership, Secondary Actions: Expand
+		18 container navigational drawer
+			19 container
+				20 container Primary
+					21 pop up button (collapsed) Description: Search property, Secondary Actions: Expand
+						22 image favicon
+						23 combo box (collapsed, settable) Description: https://www.embratechnologies.org/, Secondary Actions: Expand
+					24 container
+						25 link Description: Overview, Value: search.google.com/search-console?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+						26 link Description: Insights, Value: search.google.com/search-console/performance/insights?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+						27 link Description: Performance, Value: search.google.com/search-console/performance/search-analytics?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+						28 button (collapsed) Description: Performance report section, Secondary Actions: Expand
+						29 button URL inspection
+							30 text URL inspection
+						31 text Indexing
+						32 button (expanded) Description: Indexing report section, Secondary Actions: Collapse
+						33 container
+							34 link Description: Pages, Value: search.google.com/search-console/index?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							35 link Description: Sitemaps, Value: search.google.com/search-console/sitemaps?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							36 link Description: Removals, Value: search.google.com/search-console/removals?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+						37 text Experience
+						38 button (expanded) Description: Experience report section, Secondary Actions: Collapse
+						39 container
+							40 link Description: Core Web Vitals, Value: search.google.com/search-console/core-web-vitals?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							41 link Description: HTTPS, Value: search.google.com/search-console/https?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+						42 text Enhancements
+						43 button (expanded) Description: Enhancements report section, Secondary Actions: Collapse
+						44 container
+							45 link Description: Breadcrumbs, Value: search.google.com/search-console/r/breadcrumbs?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+							46 link Description: Review snippets, Value: search.google.com/search-console/r/review-snippet?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+						47 text Security & Manual Actions
+						48 button (collapsed) Description: Security & Manual Actions report section, Secondary Actions: Expand
+						49 link Description: Links report, Value: search.google.com/search-console/links?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+						50 link Description: Achievements, Value: search.google.com/search-console/achievements?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+						51 link Description: Settings, Value: search.google.com/search-console/settings?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F
+						52 button Submit feedback
+							53 text Submit feedback
+						54 button About Search Console
+							55 text About Search Console
+						56 link Description: Privacy, Value: myaccount.google.com/privacypolicy?hl=en
+						57 link Description: Terms, Value: myaccount.google.com/termsofservice?hl=en
+		58 text https://www.embratechnologies.org/services/local-seo
+		59 container
+			60 container Breadcrumbs
+				61 heading URL Inspection, Value: 1
+					62 text URL Inspection
+			63 button TEST LIVE URL
+				64 text TEST LIVE URL
+			65 container
+				66 text URL is not on Google
+				67 container
+					68 text This page is not indexed. Pages that aren't indexed can't be served on Google. See the details below to learn why it wasn't indexed. 
+					69 link Description: Learn more, Value: support.google.com/webmasters/answer/9012289#url_not_on_google
+				70 button (disabled) View crawled page
+					71 text VIEW CRAWLED PAGE
+				72 text Page changed?
+				73 button Request indexingRequest again
+					74 text REQUEST INDEXING
+			75 container
+				76 button (expanded) Page indexing Page is not indexed: Discovered - currently not indexed, Secondary Actions: Collapse
+					77 text Page indexing
+					78 container
+						79 text Page is not indexed:  Discovered - currently not indexed
+				80 text Discovery
+				81 text Sitemaps
+				82 text https://www.embratechnologies.org/sitemap.xml
+				83 text Referring page
+				84 text https://www.embratechnologies.org/sitemap.xml
+				85 text Crawl
+				86 text Last crawl
+				87 text N/A
+				88 text Crawled as
+				89 text N/A
+				90 text Crawl allowed?
+				91 text N/A
+				92 text Page fetch
+				93 text N/A
+				94 text Indexing allowed?
+				95 text N/A
+				96 text Indexing
+				97 text User-declared canonical
+				98 text N/A
+				99 text Google-selected canonical
+				100 button (collapsed) Description: null, Secondary Actions: Expand
+				101 text N/A
+				102 link Description: Link to more extensive documentation, Value: support.google.com/webmasters/answer/7440203#discovered__unclear_status
+				103 link Description: OPEN REPORT, Value: search.google.com/search-console/index/drilldown?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&item_key=CAMYFiAC
+			104 text Enhancements & Experience
+			105 text Only indexed URLs can have enhancements
+
+The focused UI element is 0 AXWebArea URL Inspection, URL: search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&id=3c_XHL3YDRpeifeMS9qqUQ
+
+Wall time: 0.6172 seconds
+Output:
+Browser tab: 2018925322, Title: "URL Inspection", URL: "https://search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&id=u20yp6jHXCty9khgC4H2iQ".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 7, 12, 56
++				68 container
++					69 combo box (collapsed, settable) Description: Inspect any URL in https://www.embratechnologies.org/, Secondary Actions: Expand
++				70 container
++					71 button Unread messages: 9
++					72 text 9
+~				14 button (collapsed) Description: Google Account: Harvey murphy (harveymmurphy@gmail.com), Google membership, Secondary Actions: Expand
++		73 text https://www.embratechnologies.org/services/web-design
++			74 container Breadcrumbs
++				75 heading URL Inspection, Value: 1
++					76 text URL Inspection
+~			57 button TEST LIVE URL
++				77 text TEST LIVE URL
++				78 text URL is not on Google
++					79 text This page is not indexed. Pages that aren't indexed can't be served on Google. See the details below to learn why it wasn't indexed. 
+~					60 link Description: Learn more, Value: support.google.com/webmasters/answer/9012289#url_not_on_google
+~				61 button (disabled) View crawled page
++					80 text VIEW CRAWLED PAGE
++				81 text Page changed?
+~				62 button Request indexingRequest again
++					82 text REQUEST INDEXING
+~				64 button (expanded) Page indexing Page is not indexed: Discovered - currently not indexed, Secondary Actions: Collapse
++					83 text Page indexing
++					84 container
++						85 text Page is not indexed:  Discovered - currently not indexed
++				86 text Discovery
++				87 text Sitemaps
++				88 text https://www.embratechnologies.org/sitemap.xml
++				89 text Referring page
++				90 text https://www.embratechnologies.org/services/website-integrations
++				91 text https://www.embratechnologies.org/sitemap.xml
++				92 text Crawl
++				93 text Last crawl
++				94 text N/A
++				95 text Crawled as
++				96 text N/A
++				97 text Crawl allowed?
++				98 text N/A
++				99 text Page fetch
++				100 text N/A
++				101 text Indexing allowed?
++				102 text N/A
++				103 text Indexing
++				104 text User-declared canonical
++				105 text N/A
++				106 text Google-selected canonical
+~				65 button (collapsed) Description: null, Secondary Actions: Expand
++				107 text N/A
+~				66 link Description: Link to more extensive documentation, Value: support.google.com/webmasters/answer/7440203#discovered__unclear_status
+~				67 link Description: OPEN REPORT, Value: search.google.com/search-console/index/drilldown?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&item_key=CAMYFiAC
++			108 text Enhancements & Experience
++			109 text Only indexed URLs can have enhancements
+The focused UI element is 0 AXWebArea URL Inspection, URL: search.google.com/search-console/inspect?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&id=u20yp6jHXCty9khgC4H2iQ
+
+Wall time: 8.5506 seconds
+Output:
+C:\Users\dell\Downloads\https___www.embratechnologies.org_-Performance-on-Search-2026-10-19 (1).zipbout Search Console
+    - link "Privacy":
+      - /url: https://myaccount.google.com/privacypolicy?hl=en
+    - link "Terms":
+      - /url: https://myaccount.google.com/termsofservice?hl=en
+- navigation "Breadcrumbs":
+  - heading "Page indexing" [level=1]
+- button "EXPORT":
+  - generic: 
+  - generic: EXPORT
+- listbox:
+  - option "All known pages" [selected]
+  - option "All submitted pages"
+  - option "Unsubmitted pages only"
+  - option "/sitemap.xml"
+- generic: "Last update: 10/12/26"
+- main:
+  - button "Not indexed 17 4 reasons":
+    - generic "Not indexed":
+      - generic: 
+      - generic: Not indexed
+    - generic "17"
+    - generic: 4 reasons
+  - button "null":
+    - generic: 
+  - button "Indexed 21":
+    - generic "Indexed":
+      - generic: 
+      - generic: Indexed
+    - generic "21"
+  - button "null":
+    - generic: 
+  - checkbox "Impressions"
+  - generic: Impressions
+  - generic: Pages
+  - link "View data about indexed pages":
+    - /url: ./search-console/index/drilldown?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&pages=ALL_URLS
+    - generic: check_circle
+    - generic: View data about indexed pages
+    - generic: 
+  - generic: info_filled
+  - generic: Why pages aren’t indexed
+  - generic: Pages that aren’t indexed can’t be served on Google
+  - button "Filter table rows":
+    - generic: 
+  - table:
+    - rowgroup:
+      - row "Reason Source null Validation Trend Pages":
+        - columnheader "Reason":
+          - generic: Reason
+        - columnheader "Source null":
+          - text: Source
+          - button "null":
+            - generic: 
+        - columnheader "Validation":
+          - generic: Validation
+        - columnheader "Trend":
+          - generic: Trend
+        - columnheader "Pages":
+          - generic: Pages
+    - rowgroup:
+      - row "Duplicate without user-selected canonical Website Started 2":
+        - cell "Duplicate without user-selected canonical":
+          - generic "Duplicate without user-selected canonical"
+        - cell "Website":
+          - generic: Website
+        - cell "Started":
+          - generic: 
+          - text: Started
+        - cell:
+        - cell "2":
+          - generic: "2"
+      - row "Not found (404) Website Started 1":
+        - cell "Not found (404)":
+          - generic "Not found (404)"
+        - cell "Website":
+          - generic: Website
+        - cell "Started":
+          - generic: 
+          - text: Started
+        - cell:
+        - cell "1":
+          - generic: "1"
+      - row "Discovered - currently not indexed Google systems Started 13":
+        - cell "Discovered - currently not indexed":
+          - generic "Discovered - currently not indexed"
+        - cell "Google systems":
+          - generic: Google systems
+        - cell "Started":
+          - generic: 
+          - text: Started
+        - cell:
+        - cell "13":
+          - generic: "13"
+      - row "Crawled - currently not indexed Google systems Started 1":
+        - cell "Crawled - currently not indexed":
+          - generic "Crawled - currently not indexed"
+        - cell "Google systems":
+          - generic: Google systems
+        - cell "Started":
+          - generic: 
+          - text: Started
+        - cell:
+        - cell "1":
+          - generic: "1"
+  - generic: "Rows per page:"
+  - listbox "Number of rows per page":
+    - option "5"
+    - option "10" [selected]
+    - option "25"
+    - option "50"
+    - option "100"
+    - option "250"
+    - option "500"
+  - generic: 1-4 of 4
+  - generic: 
+  - generic: 
+- generic: Page indexing
+
+Wall time: 3.6570 seconds
+Output:
+ch Console
+    - link "Privacy":
+      - /url: https://myaccount.google.com/privacypolicy?hl=en
+    - link "Terms":
+      - /url: https://myaccount.google.com/termsofservice?hl=en
+- navigation:
+  - link:
+    - /url: ./search-console/index?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&pages=ALL_URLS
+    - text: Page indexing
+  - generic: 
+  - heading [level=1]: Discovered - currently not indexed
+- button:
+  - generic: 
+  - generic: EXPORT
+- button:
+  - generic: 
+  - generic: SHARE
+- listbox:
+  - option [selected]: All known pages
+  - text: All submitted pages Unsubmitted pages only /sitemap.xml
+- generic: "Last update: 10/12/26"
+- main:
+  - generic: info
+  - generic: Discovered - currently not indexed
+  - generic: These pages aren't indexed or served on Google
+  - link:
+    - /url: https://support.google.com/webmasters/answer/7440203#discovered__unclear_status
+    - generic: Learn more
+  - generic: 
+  - generic: Validation Started
+  - generic: "Started: 10/13/26"
+  - button:
+    - generic: see details
+  - generic: Affected pages
+  - generic: "13"
+  - generic: Examples
+  - button:
+    - generic: 
+  - button:
+    - generic: 
+  - table:
+    - rowgroup:
+      - row:
+        - columnheader:
+          - generic: URL
+        - columnheader:
+          - generic: Last crawled
+    - rowgroup:
+      - row:
+        - cell:
+          - generic: https://www.embratechnologies.org/blog/local-seo-guide-for-service-businesses
+        - cell:
+          - generic: N/A
+      - row:
+        - cell:
+          - generic: https://www.embratechnologies.org/blog/website-roi-calculator
+        - cell:
+          - generic: N/A
+      - row:
+        - cell:
+          - generic: https://www.embratechnologies.org/blog/why-pagespeed-matters
+        - cell:
+          - generic: N/A
+      - row:
+        - cell:
+          - generic: https://www.embratechnologies.org/niches
+        - cell:
+          - generic: N/A
+      - row:
+        - cell:
+          - generic: https://www.embratechnologies.org/niches/landscaping-website-design
+        - cell:
+          - generic: N/A
+      - row:
+        - cell:
+          - generic: https://www.embratechnologies.org/portfolio/alaska-fast-fix
+        - cell:
+          - generic: N/A
+      - row:
+        - cell:
+          - generic: https://www.embratechnologies.org/portfolio/bestbreaks
+        - cell:
+          - generic: N/A
+      - row:
+        - cell:
+          - generic: https://www.embratechnologies.org/portfolio/tuxford-collision
+        - cell:
+          - generic: N/A
+      - row:
+        - cell:
+          - generic: https://www.embratechnologies.org/portfolio/vvasquez-handyman
+        - cell:
+          - generic: N/A
+      - row:
+        - cell:
+          - generic: https://www.embratechnologies.org/services/care-plan
+        - cell:
+          - generic: N/A
+  - generic: "Rows per page:"
+  - listbox:
+    - text: "5"
+    - option [selected]: "10"
+    - text: 25 50 100 250 500
+  - generic: 1-10 of 13
+  - generic: 
+  - generic: 
+- generic: Loading...
+
+Wall time: 0.2557 seconds
+Output:
+bout Search Console
+    - link "Privacy":
+      - /url: https://myaccount.google.com/privacypolicy?hl=en
+    - link "Terms":
+      - /url: https://myaccount.google.com/termsofservice?hl=en
+- navigation "Breadcrumbs":
+  - heading "Page indexing" [level=1]
+- button "EXPORT":
+  - generic: 
+  - generic: EXPORT
+- listbox:
+  - option "All known pages" [selected]
+  - option "All submitted pages"
+  - option "Unsubmitted pages only"
+  - option "/sitemap.xml"
+- generic: "Last update: 10/12/26"
+- main:
+  - button "Not indexed 17 4 reasons":
+    - generic "Not indexed":
+      - generic: 
+      - generic: Not indexed
+    - generic "17"
+    - generic: 4 reasons
+  - button "null":
+    - generic: 
+  - button "Indexed 21":
+    - generic "Indexed":
+      - generic: 
+      - generic: Indexed
+    - generic "21"
+  - button "null":
+    - generic: 
+  - checkbox "Impressions"
+  - generic: Impressions
+  - generic: Pages
+  - link "View data about indexed pages":
+    - /url: ./search-console/index/drilldown?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&pages=ALL_URLS
+    - generic: check_circle
+    - generic: View data about indexed pages
+    - generic: 
+  - generic: info_filled
+  - generic: Why pages aren’t indexed
+  - generic: Pages that aren’t indexed can’t be served on Google
+  - button "Filter table rows":
+    - generic: 
+  - table:
+    - rowgroup:
+      - row "Reason Source null Validation Trend Pages":
+        - columnheader "Reason":
+          - generic: Reason
+        - columnheader "Source null":
+          - text: Source
+          - button "null":
+            - generic: 
+        - columnheader "Validation":
+          - generic: Validation
+        - columnheader "Trend":
+          - generic: Trend
+        - columnheader "Pages":
+          - generic: Pages
+    - rowgroup:
+      - row "Duplicate without user-selected canonical Website Started 2":
+        - cell "Duplicate without user-selected canonical":
+          - generic "Duplicate without user-selected canonical"
+        - cell "Website":
+          - generic: Website
+        - cell "Started":
+          - generic: 
+          - text: Started
+        - cell:
+        - cell "2":
+          - generic: "2"
+      - row "Not found (404) Website Started 1":
+        - cell "Not found (404)":
+          - generic "Not found (404)"
+        - cell "Website":
+          - generic: Website
+        - cell "Started":
+          - generic: 
+          - text: Started
+        - cell:
+        - cell "1":
+          - generic: "1"
+      - row "Discovered - currently not indexed Google systems Started 13":
+        - cell "Discovered - currently not indexed":
+          - generic "Discovered - currently not indexed"
+        - cell "Google systems":
+          - generic: Google systems
+        - cell "Started":
+          - gene
+
+Wall time: 10.5475 seconds
+Output:
+Browser tab: 2018927670, Title: "Web Design & Local SEO for Home Service Businesses | Embra", URL: "https://www.embratechnologies.org/".
+0 AXWebArea Web Design & Local SEO for Home Service Businesses | Embra, URL: embratechnologies.org/
+	1 container
+		2 link Description: Skip to main content, Value: embratechnologies.org/#main
+		3 container topHeader
+			4 link Description: Embra Technologies home, Value: embratechnologies.org/
+			5 container Description: Primary, ID: site-nav
+				6 link Description: Industries, Value: embratechnologies.org/niches
+				7 link Description: Services, Value: embratechnologies.org/services
+				8 link Description: Portfolio, Value: embratechnologies.org/portfolio
+				9 link Description: Pricing, Value: embratechnologies.org/pricing
+				10 link Description: About, Value: embratechnologies.org/about
+				11 link Description: Blog, Value: embratechnologies.org/blog
+				12 link Description: Contact, Value: embratechnologies.org/contact
+			13 link Description: Start Project, Value: embratechnologies.org/contact
+		14 container main
+			15 container Custom Websites for Home Service Businesses, Built Before You Buy., ID: heroSection
+				16 container
+					17 link Description: NEW See It Before You Pay, Value: embratechnologies.org/#services
+					18 heading Description: Custom Websites for Home Service Businesses, Built Before You Buy., Value: 1, ID: hero-heading
+						19 text Custom Websites for Home Service Businesses, Built Before You
+						20 text Buy.
+					21 text We build your homepage in 24 hours, for free. No templates, no commitments. See real work built for your business before you spend a cent. Love it and we build the rest. Walk away and you owe us nothing.
+					22 link Description: Get My Free Sample, Value: embratechnologies.org/contact
+					23 link Description: See Our Work, Value: embratechnologies.org/portfolio
+			24 container Engineered for Sub-Second Speed and Conversions., ID: showcase
+				25 text LIVE ARCHITECTURE Interactive Ecosystem
+				26 heading Engineered for Sub-Second Speed and Conversions., Value: 2, ID: showcase-heading
+					27 text Engineered for Sub-Second Speed and Conversions.
+				28 text A real-time overview of how our custom infrastructure accelerates growth, search rankings, and client engagement.
+				29 container showcaseBox
+					30 text yourbusiness.com/analytics/growth
+					31 button Overview
+					32 button SEO Live
+					33 button Speed 99
+					34 container trafficChartCard
+						35 container
+							36 text Organic Traffic & Inbound Leads Sample data, illustrative (Last 90 Days) Accelerated Growth ▲ Record High
+						37 container liveBarsContainer
+							38 container
+								39 text Month 1: Initial Growth
+							40 container
+								41 text Month 1.5: Scaling Up
+							42 container
+								43 text Month 2: Accelerating
+							44 container
+								45 text Month 2.5: High Volume
+							46 container
+								47 text Month 3: Record Traffic
+							48 container
+								49 text Illustrative Trajectory
+					50 link Description: Google PageSpeed Score Verify Report 99 / 100, Help: Verify live report on Google PageSpeed Insights, Value: pagespeed.web.dev/analysis?url=https%3A%2F%2Fembratechnologies.org%2F
+					51 link Description: Time to First Byte (TTFB) Verify Report 0.38s, Help: Verify live TTFB report on Google PageSpeed Insights, Value: pagespeed.web.dev/analysis?url=https%3A%2F%2Fembratechnologies.org%2F
+					52 text Structured Schema SEO Validated
+			53 container work
+				54 container
+					55 text PROOF Selected Work
+				56 heading Websites We've Built & Ranked., Value: 2
+					57 text Websites We've Built & Ranked.
+				58 text Real client sites in production, sub-second speeds, custom design, and verified performance.
+				59 link Description: View All 5 Projects →, Value: embratechnologies.org/portfolio
+				60 container
+					61 text 01 Live tuxfordcollision.com
+					62 image Tuxford Collision Center website screenshot
+					63 heading Tuxford Collision Center, Value: 3
+						64 text Tuxford Collision Center
+					65 text AUTO BODY & COLLISION REPAIR A fully licensed auto body repair center with free towing and estimate services. A bold, trust-first site built to convert distressed drivers into booked repairs.
+					66 container Verified results
+						67 text ↑ 280% organic traffic
+						68 link Description: PageSpeed 97/100 Verify ↗, Help: View live report, Value: pagespeed.web.dev/analysis?url=https%3A%2F%2Ftuxfordcollision.com%2F
+					69 text Web Design Local SEO Quote Forms
+					70 image
+					71 text Los Angeles, CA
+					72 link Description: Read Case Study, Value: embratechnologies.org/portfolio/tuxford-collision
+					73 link Description: Visit Site, Value: tuxfordcollision.com/
+				74 container
+					75 text 02 Live alaskafastfixhandyman.com
+					76 image Alaska Fast Fix Handyman website screenshot
+					77 heading Alaska Fast Fix Handyman, Value: 3
+						78 text Alaska Fast Fix Handyman
+					79 text HANDYMAN SERVICES Local handyman services built for instant phone call and quote form conversion, backed by strong local SEO structure.
+					80 container Verified results
+						81 text +190% Local Calls
+						82 link Description: PageSpeed 98/100 Verify ↗, Help: View live report, Value: pagespeed.web.dev/analysis?url=https%3A%2F%2Falaskafastfixhandyman.com%2F
+					83 text Local SEO Instant Quotes Mobile-First
+					84 image
+					85 text Alaska
+					86 link Description: Read Case Study, Value: embratechnologies.org/portfolio/alaska-fast-fix
+					87 link Description: Visit Site, Value: alaskafastfixhandyman.com/
+				88 container
+					89 text 03 Live skyhightreeservicechicago.com
+					90 image Sky High Tree Service website screenshot
+					91 heading Sky High Tree Service, Value: 3
+						92 text Sky High Tree Service
+					93 text TREE SERVICE A high-converting web platform engineered for 24/7 emergency tree removal requests and local municipal service visibility.
+					94 container Verified results
+						95 link Description: PageSpeed 95/100 Verify ↗, Help: View live report, Value: pagespeed.web.dev/analysis?url=https%3A%2F%2Fskyhightreeservicechicago.com%2F
+						96 text +215% Emergency Leads
+					97 text Next.js Emergency CTA Local SEO
+					98 image
+					99 text Chicago, IL
+					100 link Description: Read Case Study, Value: embratechnologies.org/portfolio/sky-high-tree
+					101 link Description: Visit Site, Value: skyhightreeservicechicago.com/
+			102 text ENGINEERED WITH INDUSTRY-LEADING TECHNOLOGIES
+			103 container
+				104 image
+				105 text NEXT.JS 14
+				106 image
+				107 text REACT 18 ARCHITECTURE
+				108 image
+				109 text GOOGLE CORE WEB VITALS
+				110 image
+				111 text GSAP ANIMATIONS
+				112 image
+				113 text THREE.JS WebGL
+				114 image
+				115 text VERCEL EDGE CLOUD
+				116 image
+				117 text STRIPE PAYMENTS
+				118 image
+				119 text NEXT.JS 14
+				120 image
+				121 text REACT 18 ARCHITECTURE
+				122 image
+				123 text GOOGLE CORE WEB VITALS
+				124 image
+				125 text GSAP ANIMATIONS
+				126 image
+				127 text THREE.JS WebGL
+				128 image
+				129 text VERCEL EDGE CLOUD
+				130 image
+				131 text STRIPE PAYMENTS
+			132 container Frequently Asked Questions., ID: faqs
+				133 text FAQS Got Questions?
+				134 heading Frequently Asked Questions., Value: 2, ID: faqs-heading
+					135 text Frequently Asked Questions.
+				136 text Everything you need to know about working with Embra Technologies.
+				137 button (collapsed) How long does a custom website project take?, ID: faq-btn-0, Secondary Actions: Expand
+					138 text How long does a custom website project take?
+					139 image
+				140 button (collapsed) Will my website be mobile responsive and fast?, ID: faq-btn-1, Secondary Actions: Expand
+					141 text Will my website be mobile responsive and fast?
+					142 image
+				143 button (collapsed) How do your SEO services help my business?, ID: faq-btn-2, Secondary Actions: Expand
+					144 text How do your SEO services help my business?
+					145 image
+				146 button (collapsed) Do you provide maintenance and ongoing support?, ID: faq-btn-3, Secondary Actions: Expand
+					147 text Do you provide maintenance and ongoing support?
+					148 image
+		149 link Description: EMBRA TECHNOLOGIES, Value: embratechnologies.org/
+		150 text Custom-built websites, local SEO, and digital identity for home service businesses: handymen, tree services, auto body shops, plumbers, roofers, HVAC, and landscapers.
+		151 text All Systems Live, Accepting New Projects
+		152 heading COMPANY, Value: 4
+			153 text COMPANY
+		154 content list
+			155 link Description: Portfolio, Value: embratechnologies.org/portfolio
+			156 link Description: Services, Value: embratechnologies.org/services
+			157 link Description: Pricing, Value: embratechnologies.org/pricing
+			158 link Description: About Us, Value: embratechnologies.org/about
+			159 link Description: Blog, Value: embratechnologies.org/blog
+			160 link Description: Contact, Value: embratechnologies.org/contact
+		161 heading SERVICES, Value: 4
+			162 text SERVICES
+		163 content list
+			164 link Description: Website Design, Value: embratechnologies.org/services/web-design
+			165 link Description: Local SEO, Value: embratechnologies.org/services/local-seo
+			166 link Description: Integrations, Value: embratechnologies.org/services/website-integrations
+			167 link Description: Care Plan ($150/mo), Value: embratechnologies.org/services/care-plan
+		168 heading INDUSTRIES, Value: 4
+			169 text INDUSTRIES
+		170 content list
+			171 link Description: Handyman, Value: embratechnologies.org/niches/web-design-for-handyman-businesses
+			172 link Description: Tree Service, Value: embratechnologies.org/niches/tree-service-website-design
+			173 link Description: Plumbing, Value: embratechnologies.org/niches/plumber-website-design
+			174 link Description: HVAC, Value: embratechnologies.org/niches/hvac-website-design
+			175 link Description: Roofing, Value: embratechnologies.org/niches/roofing-website-design
+			176 link Description: Auto Body, Value: embratechnologies.org/niches/auto-body-shop-website-design
+			177 link Description: Landscaping, Value: embratechnologies.org/niches/landscaping-website-design
+		178 heading CONTACT & LEGAL, Value: 4
+			179 text CONTACT & LEGAL
+		180 image
+		181 text Remote team serving home service
+		182 text businesses across the United States
+		183 image
+		184 link Description: sales@embratechnologies.org, Value: mailto:sales@embratechnologies.org
+		185 image
+		186 text Mon–Fri, 9 am – 6 pm EST
+		187 image
+		188 link Description: +1 (212) 207-1152, Value: tel:+1-212-207-1152
+		189 link Description: Embra Technologies on LinkedIn, Value: linkedin.com/company/embratechnologies
+		190 link Description: Embra Technologies on X (Twitter), Value: twitter.com/embratech
+		191 text Case Studies :
+		192 link Description: Pick N Drop Laundry, Value: embratechnologies.org/portfolio/pnd-laundry
+		193 link Description: Tuxford Collision, Value: embratechnologies.org/portfolio/tuxford-collision
+		194 link Description: Sky High Tree Service, Value: embratechnologies.org/portfolio/sky-high-tree
+		195 link Description: Alaska Fast Fix, Value: embratechnologies.org/portfolio/alaska-fast-fix
+		196 link Description: V Vasquez, Value: embratechnologies.org/portfolio/vvasquez-handyman
+		197 link Description: BestBreaks, Value: embratechnologies.org/portfolio/bestbreaks
+		198 text Guides :
+		199 link Description: Local SEO guide, Value: embratechnologies.org/blog/local-seo-guide-for-service-businesses
+		200 link Description: Website cost guide, Value: embratechnologies.org/blog/website-cost-for-home-service-businesses
+		201 link Description: Website ROI calculator, Value: embratechnologies.org/blog/website-roi-calculator
+		202 link Description: Does speed affect SEO?, Value: embratechnologies.org/blog/why-pagespeed-matters
+		203 text Service Areas:
+		204 link Description: Brooklyn, NY, Value: embratechnologies.org/locations/brooklyn
+		205 link Description: Los Angeles, CA, Value: embratechnologies.org/locations/los-angeles
+		206 link Description: Chicago, IL, Value: embratechnologies.org/locations/chicago
+		207 link Description: Alaska, Value: embratechnologies.org/locations/alaska
+		208 container
+			209 text ©  2026 Embra Technologies . All rights reserved.
+		210 container
+			211 text Built by 
+			212 link Description: Embra Technologies, Value: embratechnologies.org/
+		213 link Description: Privacy Policy, Value: embratechnologies.org/privacy
+		214 link Description: Terms of Service, Value: embratechnologies.org/terms
+		215 link Description: Sitemap, Value: embratechnologies.org/sitemap.xml
+		216 link Description: Chat with us on WhatsApp, Value: wa.me/12122071152
+
+The focused UI element is 0 AXWebArea Web Design & Local SEO for Home Service Businesses | Embra, URL: embratechnologies.org/
+bout Search Console
+    - link "Privacy":
+      - /url: https://myaccount.google.com/privacypolicy?hl=en
+    - link "Terms":
+      - /url: https://myaccount.google.com/termsofservice?hl=en
+- navigation "Breadcrumbs":
+  - link "Page indexing":
+    - /url: ./search-console/index?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&pages=ALL_URLS
+  - generic: 
+  - heading "Indexed pages" [level=1]
+- button "EXPORT":
+  - generic: 
+  - generic: EXPORT
+- button "Get shareable link.":
+  - generic: 
+  - generic: SHARE
+- listbox:
+  - option "All known pages" [selected]
+  - option "All submitted pages"
+  - option "Unsubmitted pages only"
+  - option "/sitemap.xml"
+- generic: "Last update: 10/12/26"
+- main:
+  - generic: check_circle
+  - generic: Indexed pages
+  - generic: These pages can be served on Google
+  - link "Link to more extensive documentation":
+    - /url: https://support.google.com/webmasters/answer/7440203#valid-status
+    - generic: Learn more
+  - generic "Affected pages"
+  - generic "21"
+  - generic: Examples
+  - button "null":
+    - generic: 
+  - button "Filter table rows":
+    - generic: 
+  - table:
+    - rowgroup:
+      - row "URL Last crawled":
+        - columnheader "URL":
+          - generic: URL
+        - columnheader "Last crawled":
+          - generic: Last crawled
+    - rowgroup:
+      - row "https://www.embratechnologies.org/ Oct 13, 2026":
+        - cell "https://www.embratechnologies.org/":
+          - generic "https://www.embratechnologies.org/":
+            - generic: https://www.embratechnologies.org/
+        - cell "Oct 13, 2026":
+          - generic: Oct 13, 2026
+      - row "https://www.embratechnologies.org/locations/alaska Oct 3, 2026":
+        - cell "https://www.embratechnologies.org/locations/alaska":
+          - generic "https://www.embratechnologies.org/locations/alaska":
+            - generic: https://www.embratechnologies.org/locations/alaska
+        - cell "Oct 3, 2026":
+          - generic: Oct 3, 2026
+      - row "https://www.embratechnologies.org/locations/chicago Oct 3, 2026":
+        - cell "https://www.embratechnologies.org/locations/chicago":
+          - generic "https://www.embratechnologies.org/locations/chicago":
+URL
+	
+Last crawled
+
+https://www.embratechnologies.org/
+	Oct 13, 2026
+
+https://www.embratechnologies.org/locations/alaska
+	Oct 3, 2026
+
+https://www.embratechnologies.org/locations/chicago
+	Oct 3, 2026
+
+https://www.embratechnologies.org/locations/los-angeles
+	Oct 3, 2026
+
+https://www.embratechnologies.org/locations/brooklyn
+	Oct 3, 2026
+
+https://www.embratechnologies.org/niches/roofing-website-design
+	Oct 3, 2026
+
+https://www.embratechnologies.org/services/website-integrations
+	Oct 3, 2026
+
+https://www.embratechnologies.org/niches/plumber-website-design
+	Oct 3, 2026
+
+https://www.embratechnologies.org/niches/tree-service-website-design
+	Oct 2, 2026
+
+https://www.embratechnologies.org/services
+	Oct 2, 2026
+
+Wall time: 8.0105 seconds
+Output:
+Browser tab: 2018927665, Title: "Page indexing", URL: "https://search.google.com/search-console/index/drilldown?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&pages=ALL_URLS".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 153-160
++							146 row
++								147 cell
++									148 text https://www.embratechnologies.org/blog/hvac-local-seo
++								149 cell
++									150 text Oct 2, 2026
++							151 row
++								152 cell
++									153 text https://www.embratechnologies.org/blog/what-tree-service-website-needs
++								154 cell
++									155 text Oct 2, 2026
++							156 row
++								157 cell
++									158 container https://www.embratechnologies.org/blog/auto-body-shop-marketing
++										159 text https://www.embratechnologies.org/blog/auto-body-shop-marketing
++										160 container
++											161 text 
++											162 text 
++											163 text 
++								164 cell
++									165 text Oct 2, 2026
++							166 row
++								167 cell
++									168 text https://www.embratechnologies.org/niches/web-design-for-handyman-businesses
++								169 cell
++									170 text Oct 2, 2026
++							171 row
++								172 cell
++									173 text https://www.embratechnologies.org/niches/auto-body-shop-website-design
++								174 cell
++									175 text Oct 2, 2026
++							176 row
++								177 cell
++									178 text https://www.embratechnologies.org/about
++								179 cell
++									180 text Oct 2, 2026
++							181 row
++								182 cell
++									183 text https://www.embratechnologies.org/contact
++								184 cell
++									185 text Oct 2, 2026
++							186 row
++								187 cell
++									188 text https://www.embratechnologies.org/pricing
++								189 cell
++									190 text Oct 2, 2026
++							191 row
++								192 cell
++									193 text https://www.embratechnologies.org/privacy
++								194 cell
++									195 text Oct 1, 2026
++							196 row
++								197 cell
++									198 text https://www.embratechnologies.org/blog
++								199 cell
++									200 text Oct 1, 2026
++							201 row
++								202 cell
++									203 text https://www.embratechnologies.org/portfolio
++								204 cell
++									205 text Oct 1, 2026
++							206 5
++							207 10
++							208 25
++							209 50
++							210 (selected) 100
++							211 250
++							212 500
++						213 text 1-21 of 21
+The focused UI element is 210 (selected) 100{
+  claims: true,
+  fonts: [
+    { font: '"Times New Roman"', selector: 'body' },
+    { font: '"Times New Roman"', selector: 'h1' },
+    { font: '"Times New Roman"', selector: 'p' }
+  ],
+  scripts: [
+    'https://www.embratechnologies.org/_next/static/chunks/fd9d1056-f98ae39c556968da.js',
+    'https://www.embratechnologies.org/_next/static/chunks/117-746b40adbdffe8f2.js',
+    'https://www.embratechnologies.org/_next/static/chunks/main-app-2dcde4753ea0d175.js',
+    'https://www.embratechnologies.org/_next/static/chunks/c15bf2b0-7971b3d333b0cf68.js',
+    'https://www.embratechnologies.org/_next/static/chunks/972-577862e684441db7.js',
+    'https://www.embratechnologies.org/_next/static/chunks/592-c3176a856b3e549f.js',
+    'https://www.embratechnologies.org/_next/static/chunks/690-188b1e8cd192cfbd.js',
+    'https://www.embratechnologies.org/_next/static/chunks/app/page-72bd51d03c294501.js',
+    'https://www.embratechnologies.org/_next/static/chunks/246-8bf05093cdc2f00a.js',
+    'https://www.embratechnologies.org/_next/static/chunks/app/layout-c9a0836a89aea3b7.js',
+    'https://www.embratechnologies.org/_next/static/chunks/app/not-found-e038b1eac56c3921.js',
+    'https://www.embratechnologies.org/_next/static/chunks/polyfills-42372ed130431b0a.js',
+    'https://www.embratechnologies.org/c2d8ab7e0ec9d0c4/script.js',
+    'https://www.embratechnologies.org/8b02dd76d5c05841/script.js',
+    'https://www.embratechnologies.org/_next/static/chunks/webpack-7e616b4dbd7ac0e8.js'
+  ]
+}
+
+Script completed
+Wall time 6.2 seconds
+Output:
+
+{"chunk_id":"1affa5","wall_time_seconds":2.222465,"exit_code":0,"original_token_count":1620,"output":"arial.ttf\r\narialbd.ttf\r\narialbi.ttf\r\nariali.ttf\r\nARIALN.TTF\r\nARIALNB.TTF\r\nARIALNBI.TTF\r\nARIALNI.TTF\r\n  - generic: \r\n  - generic: EXPORT\r\n- listbox:\r\n  - option \"All known pages\" [selected]\r\n  - option \"All submitted pages\"\r\n  - option \"Unsubmitted pages only\"\r\n  - option \"/sitemap.xml\"\r\n- generic: \"Last update: 10/12/26\"\r\n- main:\r\n  - button \"Not indexed 17 4 reasons\":\r\n    - generic \"Not indexed\":\r\n      - generic: \r\n      - generic: Not indexed\r\n    - generic \"17\"\r\n    - generic: 4 reasons\r\n  - button \"null\":\r\n    - generic: \r\n  - button \"Indexed 21\":\r\n    - generic \"Indexed\":\r\n      - generic: \r\n      - generic: Indexed\r\n    - generic \"21\"\r\n  - button \"null\":\r\n    - generic: \r\n  - checkbox \"Impressions\"\r\n  - generic: Impressions\r\n  - generic: Pages\r\n  - link \"View data about indexed pages\":\r\n    - /url: ./search-console/index/drilldown?resource_id=https%3A%2F%2Fwww.embratechnologies.org%2F&pages=ALL_URLS\r\n    - generic: check_circle\r\n    - generic: View data about indexed pages\r\n    - generic: \r\n  - generic: info_filled\r\n  - generic: Why pages aren’t indexed\r\n  - generic: Pages that aren’t indexed can’t be served on Google\r\n  - button \"Filter table rows\":\r\n    - generic: \r\n  - table:\r\n    - rowgroup:\r\n      - row \"Reason Source null Validation Trend Pages\":\r\n        - columnheader \"Reason\":\r\n          - generic: Reason\r\n        - columnheader \"Source null\":\r\n          - text: Source\r\n          - button \"null\":\r\n            - generic: \r\n        - columnheader \"Validation\":\r\n          - generic: Validation\r\n        - columnheader \"Trend\":\r\n          - generic: Trend\r\n        - columnheader \"Pages\":\r\n          - generic: Pages\r\n    - rowgroup:\r\n      - row \"Duplicate without user-selected canonical Website Started 2\":\r\n        - cell \"Duplicate without user-selected canonical\":\r\n          - generic \"Duplicate without user-selected canonical\"\r\n        - cell \"Website\":\r\n          - generic: Website\r\n        - cell \"Started\":\r\n          - generic: \r\n          - text: Started\r\n        - cell:\r\n        - cell \"2\":\r\n          - generic: \"2\"\r\n      - row \"Not found (404) Website Started 1\":\r\n        - cell \"Not found (404)\":\r\n          - generic \"Not found (404)\"\r\n        - cell \"Website\":\r\n          - generic: Website\r\n        - cell \"Started\":\r\n          - generic: \r\n          - text: Started\r\n        - cell:\r\n        - cell \"1\":\r\n          - generic: \"1\"\r\n      - row \"Discovered - currently not indexed Google systems Started 13\":\r\n        - cell \"Discovered - currently not indexed\":\r\n          - generic \"Discovered - currently not indexed\"\r\n        - cell \"Google systems\":\r\n          - generic: Google systems\r\n        - cell \"Started\":\r\n          - generic: \r\n          - text: Started\r\n        - cell:\r\n        - cell \"13\":\r\n          - generic: \"13\"\r\n      - row \"Crawled - currently not indexed Google systems Started 1\":\r\n        - cell \"Crawled - currently not indexed\":\r\n          - generic \"Crawled - currently not indexed\"\r\n        - cell \"Google systems\":\r\n          - generic: Google systems\r\n        - cell \"Started\":\r\n          - generic: \r\n          - text: Started\r\n        - cell:\r\n        - cell \"1\":\r\n          - generic: \"1\"\r\n  - generic: \"Rows per page:\"\r\n  - listbox \"Number of rows per page\":\r\n    - option \"5\"\r\n    - option \"10\" [selected]\r\n    - option \"25\"\r\n    - option \"50\"\r\n    - option \"100\"\r\n    - option \"250\"\r\n    - option \"500\"\r\n  - generic: 1-4 of 4\r\n  - generic: \r\n  - generic: \r\n- generic: Page indexing\r\n          \"state\": \"success\",\r\n          \"description\": \"Deployment has completed\",\r\n          \"target_url\": \"https://vercel.com/embra3/embra-next-2/8f4ahqTDkkJctV7LeMZkkBcwrRP4\",\r\n          \"created_at\": \"2026-10-12T22:07:33Z\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"commit\": \"edce867\",\r\n      \"state\": \"success\",\r\n      \"statuses\": [\r\n        {\r\n          \"context\": \"Vercel\",\r\n          \"state\": \"success\",\r\n          \"description\": \"Deployment has completed\",\r\n          \"target_url\": \"https://vercel.com/embra3/embra-next-2/Em7sPA9aTBaWk1JeUSD9y9fJ5x1e\",\r\n          \"created_at\": \"2026-10-13T10:00:24Z\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"commit\": \"2f1b984\",\r\n      \"state\": \"success\",\r\n      \"statuses\": [\r\n        {\r\n          \"context\": \"Vercel\",\r\n          \"state\": \"success\",\r\n          \"description\": \"Deployment has completed\",\r\n          \"target_url\": \"https://vercel.com/embra3/embra-next-2/HiNxSSSx5N4PJ6qJ7XJS2yBWZ8kj\",\r\n          \"created_at\": \"2026-10-13T10:39:43Z\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"commit\": \"6b926a5\",\r\n      \"state\": \"success\",\r\n      \"statuses\": [\r\n        {\r\n          \"context\": \"Vercel\",\r\n          \"state\": \"success\",\r\n          \"description\": \"Deployment has completed\",\r\n          \"target_url\": \"https://vercel.com/embra3/embra-next-2/C8XgFBoQpLA532NWKmPGZbse8fVK\",\r\n          \"created_at\": \"2026-10-13T18:00:06Z\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"commit\": \"828402a\",\r\n      \"state\": \"success\",\r\n      \"statuses\": [\r\n        {\r\n          \"context\": \"Vercel\",\r\n          \"state\": \"success\",\r\n          \"description\": \"Deployment has completed\",\r\n          \"target_url\": \"https://vercel.com/embra3/embra-next-2/J5FBdV2VT3V1fRhVUCxQ9L8Low1s\",\r\n          \"created_at\": \"2026-10-13T19:35:32Z\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"commit\": \"8721c96\",\r\n      \"state\": \"success\",\r\n      \"statuses\": [\r\n        {\r\n          \"context\": \"Vercel\",\r\n          \"state\": \"success\",\r\n          \"description\": \"Deployment has completed\",\r\n          \"target_url\": \"https://vercel.com/embra3/embra-next-2/DE2mXTd1d7aRoWMhpVyMrWSk11jS\",\r\n          \"created_at\": \"2026-10-18T02:37:44Z\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"commit\": \"5cf96f5\",\r\n      \"state\": \"success\",\r\n      \"statuses\": [\r\n        {\r\n          \"context\": \"Vercel\",\r\n          \"state\": \"success\",\r\n          \"description\": \"Deployment has completed\",\r\n          \"target_url\": \"https://vercel.com/embra3/embra-next-2/Fk2uuoaLPbhJSU3kfSGcSHiKdJ5F\",\r\n          \"created_at\": \"2026-10-18T20:59:06Z\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"commit\": \"f543429\",\r\n      \"state\": \"success\",\r\n      \"statuses\": [\r\n        {\r\n          \"context\": \"Vercel\",\r\n          \"state\": \"success\",\r\n          \"description\": \"Deployment has completed\",\r\n          \"target_url\": \"https://vercel.com/embra3/embra-next-2/3gbi2hLL3ye1n1BNi9tx4REfkdbN\",\r\n          \"created_at\": \"2026-10-19T08:07:59Z\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n"}
+CrUX methodology  |  Chrome UX Report  |  Chrome for Developers (https://developer.chrome.com/docs/crux/methodology)
+citeturn29view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"https://developer.chrome.com/docs/crux/methodology","pattern":"popular"}); Total lines: 185
+L51: ### Publicly discoverable
+L52: 
+L53: A page must be publicly discoverable to be considered for inclusion in the CrUX dataset.
+L54: 
+L55: A page is determined to be publicly discoverable using the same cite10†indexability†developers.google.com criteria as search engines.
+L56: 
+L57: A page cannot meet the discoverability requirement if any of the following conditions are met, including root pages for the origin dataset:
+L58:   * The page is served with an HTTP cite11†status code†developer.mozilla.org other than `200` (after redirects).
+L59:   * The page is served with an HTTP `X-Robots-Tag: noindex` cite12†header†developers.google.com or equivalent.
+L60:   * The document includes a `<meta name="robots" content="noindex">` cite13†meta tag†developers.google.com or equivalent.
+L61: 
+L62: Refer to cite14†Google Search Console†search.google.com for an overview of your site's indexing status.
+L63: ### Sufficiently popular
+L64: 
+L65: A page is determined to be sufficiently popular if it has a minimum number of visitors. An origin is determined to be sufficiently popular if it has a minimum number of visitors across all of its pages. An exact number is not disclosed, but it has been chosen to ensure that we have enough samples to be confident in the statistical distributions for included pages. The minimum number is the same for pages and origins.
+L66: Pages and origins that don't meet the popularity threshold are not included in the CrUX dataset.
+L67: ### Origin
+L68: 
+L69: An cite15†origin†developer.mozilla.org represents an entire website, addressable by a URL like `https://www.example.com`. For an origin to be included in the CrUX dataset it must meet two requirements:
+L70: 
+L71:   1. cite16†Publicly discoverable L72:   2. cite17†Sufficiently popular L73: You can verify that your origin is discoverable by running a cite6†Lighthouse audit†pagespeed.web.dev and looking at the SEO category results. Your site is not discoverable if your root page fails the cite18†Page is blocked from indexing or cite19†Page has unsuccessful HTTP status code audits.
+L74: If an origin is determined to be publicly discoverable, eligible user experiences on all of that origin's pages are aggregated at the origin-level, regardless of individual page discoverability. All of these experiences count towards the origin's popularity requirement.
+L75: 
+L76: For querying purposes, note that all origins in the CrUX dataset are lowercase.
+L77: ### Page
+L78: 
+L79: The requirements for a page to be included in the CrUX dataset are the same as origins:
+L80: 
+L81:   1. cite16†Publicly discoverable L82:   2. cite17†Sufficiently popular L83: 
+L84: You can verify that a page is discoverable by running a cite6†Lighthouse audit†pagespeed.web.dev and looking at the SEO category results. Your page is not discoverable if it fails the cite18†Page is blocked from indexing or cite19†Page has unsuccessful HTTP status code audits.
+L85: If page is publicly discoverable for some users, but returns a non-success HTTP status in some circumstances, then those experiences won't be included in CrUX.
+L86: Pages commonly have additional identifiers in their URL including query string parameters like `?utm_medium=email` and fragments like `#main`. These identifiers are stripped from the URL in the CrUX dataset so that all user experiences on the page are aggregated together. This is useful for pages that would otherwise not meet the popularity threshold if there were many disjointed URL variations for the same page.
+L87: Note that in rare cases this may unexpectedly group experiences for distinct pages together; for example if parameters `?productID=101` and `?productID=102` represent different pages.
+L88: Pages in CrUX are measured based on the top-level page. Pages included as iframes are not reported on separately in CrUX, but do contribute to the metrics of the top-level page. For example, if `https://www.example.com/page.html` embeds `https://www.example.com/frame.html` in an iframe, then `page.html` will be represented in CrUX (subject to the other eligibility criteria) but `frame.html` will not. And if `frame.html` has poor cite20†CLS then the CLS will be included when measuring the CLS for `page.html`.
+--------------------------------------------------------------------------------
+Creating Helpful, Reliable, People-First Content | Google Search Central  |  Documentation  |  Google for Developers (https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+citeturn29view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"https://developers.google.com/search/docs/fundamentals/creating-helpful-content","pattern":"ranking factor"}); Total lines: 304
+L181: ## Get to know E-E-A-T and the quality rater guidelines
+L182: 
+L183: Google's automated systems are designed to use cite20†many different factors†www.google.com to rank great content. After identifying relevant content, our systems aim to prioritize those that seem most helpful. To do this, they identify a mix of factors that can help determine which content demonstrates aspects of experience, expertise, authoritativeness, and trustworthiness, or what we call E-E-A-T.
+L184: Of these aspects, trust is most important. The others contribute to trust, but content doesn't necessarily have to demonstrate all of them. For example, some content might be helpful based on the experience it demonstrates, while other content might be helpful because of the expertise it shares.
+L185: While E-E-A-T itself isn't a specific ranking factor, using a mix of factors that can identify content with good E-E-A-T is useful. For example, our systems give even more weight to content that aligns with strong E-E-A-T for topics that could significantly impact the health, financial stability, or safety of people, or the welfare or well-being of society. We call these "Your Money or Your Life" topics, or YMYL for short.
+L186: cite23†Search quality raters†www.google.com are people who give us insights on if our algorithms seem to be providing good results, a way to help confirm our changes are working well. In particular, raters are trained to understand if content has strong E-E-A-T. The criteria they use to do this is outlined in our cite24†search quality rater guidelines†services.google.com .
+L187: Search raters have no control over how pages rank. Rater data is not used directly in our ranking algorithms. Rather, we use them as a restaurant might get feedback cards from diners. The feedback helps us know if our systems seem to be working.
+L188: 
+L189: Reading the guidelines may help you self-assess how your content is doing from an E-E-A-T perspective, improvements to consider, and help align it conceptually with the different signals that our automated systems use to rank content.
+L190: Beyond E-E-A-T, the cite25†Search Quality Evaluator Guidelines†static.googleusercontent.com emphasize that one of the most critical factors for assessing page quality is the quality of the main content, specifically how effectively it allows the page to achieve its purpose and provide a satisfying user experience.
+--------------------------------------------------------------------------------
+Spam Policies for Google Web Search | Google Search Central  |  Documentation  |  Google for Developers (https://developers.google.com/search/docs/essentials/spam-policies)
+citeturn29view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"https://developers.google.com/search/docs/essentials/spam-policies","pattern":"footers"}); Total lines: 428
+L197:   * Requiring a link as part of a Terms of Service, contract, or similar arrangement without allowing a third-party content owner the choice of cite30†qualifying the outbound link L198:   * Text advertisements or text links that don't block ranking credit
+L199:   * Advertorials or native advertising where payment is received for articles that include links that pass ranking credit, or links with optimized anchor text in articles, guest posts, or press releases distributed on other sites. For example:
+L200: > There are many cite31†wedding rings†www.example.com on the market. If you want to have a cite31†wedding†www.example.com , you will have to pick the cite31†best ring†www.example.com . You will also need to cite31†buy flowers†www.example.com and a cite31†wedding dress†www.example.com .
+L201:   * Low-quality directory or bookmark site links
+L202:   * Keyword-rich, hidden, or low-quality links embedded in widgets that are distributed across various sites
+L203:   * Widely distributed links in the footers or templates of various sites
+L204:   * Forum comments with optimized links in the post or signature, for example:
+L205: 
+L206: > Thanks, that's great info!
+L207: > - Paul
+L208: > cite31†paul's pizza†www.example.com cite31†san diego pizza†www.example.com cite31†best pizza san diego†www.example.com L209:   * Creating low-value content primarily for the purposes of manipulating linking and ranking signals
+L210: 
+L211: Google does understand that buying and selling links is a normal part of the economy of the web for advertising and sponsorship purposes. It's not a violation of our policies to have such links as long as they are cite30†qualified with a cite32†`rel="nofollow"` or cite33†`rel="sponsored"` attribute value to the `<a>` tag.
+L212: ## Machine-generated traffic
+L213: Machine-generated traffic (also called cite34†automated traffic†support.google.com ) refers to the practice of sending automated queries to Google. This includes scraping results for rank-checking purposes or other types of automated access to Google Search conducted without express permission. Machine-generated traffic consumes resources and interferes with our ability to best serve users. Such activities violate our spam policies and the cite35†Google Terms of Service†policies.google.com .
+L214: ## Malicious practices
+L215: 
+L216: Malicious practices create a mismatch between user expectations and the actual outcome, leading to a negative and deceptive user experience, or compromised user security or privacy.
+L217: 
+L218: The following are common examples of malicious practices:
+--------------------------------------------------------------------------------
+Getting started with Speed Insights (https://vercel.com/docs/speed-insights/quickstart)
+citeturn29view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"https://vercel.com/docs/speed-insights/quickstart","pattern":"Enable"}); Total lines: 761
+L253:   * cite106†Drains Expand menu
+L254: 
+L255:     * cite107†Using Drains L256: 
+L257:     * cite108†Drain Audit Logs to S3 L258: 
+L259:     * cite109†Drain Audit Logs to Splunk L260: 
+L261:     * cite110†Drain Audit Logs to Datadog L262: 
+L263:     * cite111†Drain Audit Logs to Panther L264: 
+L265:     * Reference Expand menu
+L266: 
+L267:     * cite112†Security L268: 
+L269:   * cite113†Web Analytics Expand menu
+L270: 
+L271:     * cite114†Getting Started L272: 
+L273:     * cite115†Using Web Analytics L274: 
+L275:     * cite116†Using with CLI L276: 
+L277:     * cite117†Web Analytics API L278: 
+L279:     * cite118†Filtering L280: 
+L281:     * cite119†Custom Events L282: 
+L283:     * cite120†Redacting Sensitive Data L284:     * cite121†Privacy L285: 
+L286:     * cite122†`@vercel/analytics` L287: 
+L288:     * cite123†Pricing L289: 
+L290:     * cite124†Troubleshooting L291: 
+L292:   * cite125†Manage & Optimize L293: ## On this page
+L294: 
+L295:   * cite126†Prerequisites L296:   * cite127†Set up your project L297:   * cite128†Add @vercel/speed-insights to your project L298:   * cite129†Add the SpeedInsights component to your app L299:   * cite130†Enable the Nuxt module L300:   * cite131†Call the injectSpeedInsights function in your app L301:   * cite132†Add the script tag to your site L302:   * cite133†Deploy your app to Vercel L303:   * cite134†View your data in the dashboard L304:   * cite135†Next steps L305: # Getting started with Speed Insights
+L306: 
+L307: This guide will help you get started with using Vercel Speed Insights on your project, add the package to your project, deploy your app to Vercel, and view your data in the dashboard.
+L308: 
+L309: Speed Insights is available on cite66†all plans L310: 
+L311: To view instructions on using the Vercel Speed Insights in your project for your framework, use the Choose a framework dropdown on the right (at the bottom in mobile view).
+L312: 
+L313: Agent Prompt
+L314: Help me add Vercel Speed Insights to this project. First, make sure the Vercel CLI is installed (`npm i -g vercel`). If I'm using Claude Code or Cursor, install the Vercel Plugin (`npx plugins add vercel/vercel-plugin`). For other agents, install Vercel Skills (`npx skills add vercel-labs/agent-skills`). Then: 1. Install @vercel/speed-insights. 2. Add the SpeedInsights component to my root layout. 3. Deploy with `vercel --prod` and verify Core Web Vitals data appears in the Vercel dashboard.
+L315: 
+L316: Show more
+L317: ## cite126†Prerequisites L318: 
+L319:   * A Vercel account. If you don't have one, you can cite35†sign up for free .
+L320:   * A Vercel project. If you don't have one, you can cite136†create a new project .
+L321:   * The Vercel CLI installed. If you don't have it, you can install it using the following command:
+L322: 
+L323: pnpm yarn npm bun
+L324: 
+L325: Terminal
+L326: 
+L327:     `pnpm i -g vercel`
+L328: 
+L329: Terminal
+L330: 
+L331:     `yarn global add vercel`
+L332: 
+L333: Terminal
+L334: 
+L335:     `npm i -g vercel`
+L336: 
+L337: Terminal
+L338: 
+L339:     `bun add -g vercel`
+L584: main.ts
+L585: 
+L586:     `import { injectSpeedInsights } from '@vercel/speed-insights';
+L587: 
+L588:     injectSpeedInsights();`
+L589: 
+L590: main.js
+L591: 
+L592:     `import { injectSpeedInsights } from '@vercel/speed-insights';
+L593: 
+L594:     injectSpeedInsights();`
+L595: 
+L596:   3. ### cite133†Deploy your app to Vercel L597: 
+L598: You can deploy your app to Vercel's global cite14†CDN by running the following command from your terminal:
+L599: 
+L600: terminal
+L601: 
+L602:     `vercel deploy`
+L603: Alternatively, you can cite138†connect your project's git repository , which will enable Vercel to deploy your latest pushes and merges to main.
+L604: 
+L605: Once your app is deployed, it's ready to begin tracking performance metrics.
+L606: 
+L607: Your deployments automatically include routes to collect Speed Insights events (scoped at `/_vercel/speed-insights/*` and `/<unique-path>/*`).
+L608: 
+L609: If everything is set up correctly, you should be able to find the `/<unique-path>/script.js` script inside the head tag of your page.
+L610:   4. ### cite134†View your data in the dashboard L611: 
+L612: Once your app is deployed, and users have visited your site, you can view the data in the dashboard.
+L613: 
+L614: To do so, go to your cite139†dashboard , select your project, and click cite140†Speed Insights in the sidebar.
+L615: 
+L616: Upgrade to cite102†Speed Insights Plus to unlock all Core Web Vitals, breakdowns, and cite106†Drains .
+L617: After a few days of visitors, you'll be able to start exploring your metrics. For more information on how to use Speed Insights, see cite97†Using Speed Insights .
+L618: 
+L619: Learn more about how Vercel supports cite100†privacy and data compliance standards with Vercel Speed Insights.
+L620: ## cite135†Next steps L621: 
+L622: Now that you have Vercel Speed Insights set up, you can explore the following topics to learn more:
+L623: 
+L624:   * cite97†Explore your Speed Insights dashboard L625:   * cite99†Explore collected metrics L626:   * cite100†Read about privacy and compliance L627:   * cite101†Learn how to configure your client-side package L628:   * cite103†Learn how to sample your events and manage your costs 

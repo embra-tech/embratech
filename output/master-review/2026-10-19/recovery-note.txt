@@ -1,0 +1,1 @@
+The output/tmp report files were missing after the workspace changed on October 19-20. Report source and displayed screenshots were recovered from this exact chat record; original October 19 CSV exports were restored from Downloads. Public HTML evidence is re-fetched on October 20. No historical evidence is claimed to be a new GSC observation.

@@ -1,0 +1,271 @@
+{
+  "checkedAtUTC": "2026-10-19T18:52:24.471233+00:00",
+  "assets": [
+    {
+      "url": "https://www.embratechnologies.org/_next/static/chunks/fd9d1056-f98ae39c556968da.js",
+      "status": 200,
+      "bytes": 172834,
+      "contentEncoding": null,
+      "threeMarkers": false
+    },
+    {
+      "url": "https://www.embratechnologies.org/_next/static/chunks/117-746b40adbdffe8f2.js",
+      "status": 200,
+      "bytes": 124364,
+      "contentEncoding": null,
+      "threeMarkers": false
+    },
+    {
+      "url": "https://www.embratechnologies.org/_next/static/chunks/main-app-2dcde4753ea0d175.js",
+      "status": 200,
+      "bytes": 461,
+      "contentEncoding": null,
+      "threeMarkers": false
+    },
+    {
+      "url": "https://www.embratechnologies.org/_next/static/chunks/c15bf2b0-7971b3d333b0cf68.js",
+      "status": 200,
+      "bytes": 52050,
+      "contentEncoding": null,
+      "threeMarkers": false
+    },
+    {
+      "url": "https://www.embratechnologies.org/_next/static/chunks/972-577862e684441db7.js",
+      "status": 200,
+      "bytes": 26066,
+      "contentEncoding": null,
+      "threeMarkers": false
+    },
+    {
+      "url": "https://www.embratechnologies.org/_next/static/chunks/592-c3176a856b3e549f.js",
+      "status": 200,
+      "bytes": 62398,
+      "contentEncoding": null,
+      "threeMarkers": false
+    },
+    {
+      "url": "https://www.embratechnologies.org/_next/static/chunks/690-188b1e8cd192cfbd.js",
+      "status": 200,
+      "bytes": 11274,
+      "contentEncoding": null,
+      "threeMarkers": false
+    },
+    {
+      "url": "https://www.embratechnologies.org/_next/static/chunks/app/page-e37b654f4f155c1c.js",
+      "status": 200,
+      "bytes": 47427,
+      "contentEncoding": null,
+      "threeMarkers": false
+    },
+    {
+      "url": "https://www.embratechnologies.org/_next/static/chunks/246-8bf05093cdc2f00a.js",
+      "status": 200,
+      "bytes": 29361,
+      "contentEncoding": null,
+      "threeMarkers": false
+    },
+    {
+      "url": "https://www.embratechnologies.org/_next/static/chunks/app/layout-c9a0836a89aea3b7.js",
+      "status": 200,
+      "bytes": 21689,
+      "contentEncoding": null,
+      "threeMarkers": false
+    },
+    {
+      "url": "https://www.embratechnologies.org/_next/static/chunks/app/not-found-20e7bd65a878665a.js",
+      "status": 200,
+      "bytes": 228,
+      "contentEncoding": null,
+      "threeMarkers": false
+    },
+    {
+      "url": "https://www.embratechnologies.org/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "status": 200,
+      "bytes": 112594,
+      "contentEncoding": null,
+      "threeMarkers": false
+    },
+    {
+      "url": "https://www.embratechnologies.org/_next/static/chunks/webpack-7e616b4dbd7ac0e8.js",
+      "status": 200,
+      "bytes": 4320,
+      "contentEncoding": null,
+      "threeMarkers": false
+    }
+  ],
+  "initialScriptUncompressedBytes": 665066,
+  "credits": [
+    {
+      "url": "https://pndlaundry.com/",
+      "finalURL": "https://pndlaundry.com/",
+      "status": 200,
+      "credits": []
+    },
+    {
+      "url": "https://tuxfordcollision.com/",
+      "finalURL": "https://tuxfordcollision.com/",
+      "status": 200,
+      "credits": [
+        {
+          "href": "https://embratechnologies.org",
+          "text": "Built by Embra Technologies",
+          "rel": "noopener noreferrer"
+        }
+      ]
+    },
+    {
+      "url": "https://alaskafastfixhandyman.com/",
+      "finalURL": "https://alaskafastfixhandyman.com/",
+      "status": 200,
+      "credits": [
+        {
+          "href": "https://embratechnologies.org",
+          "text": "\u26a1 Built by Embra Technologies",
+          "rel": "noopener noreferrer"
+        }
+      ]
+    },
+    {
+      "url": "https://vvasquezhandymanllc.net/",
+      "finalURL": "https://vvasquezhandymanllc.net/",
+      "status": 200,
+      "credits": [
+        {
+          "href": "https://embratechnologies.org",
+          "text": "Embra Technologies",
+          "rel": "noopener"
+        }
+      ]
+    },
+    {
+      "url": "https://bestbreaks.com.au/",
+      "finalURL": "https://www.bestbreaks.com.au/",
+      "status": 200,
+      "credits": [
+        {
+          "href": "https://embratechnologies.org",
+          "text": "Embra Technologies",
+          "rel": "noopener noreferrer"
+        }
+      ]
+    },
+    {
+      "url": "https://skyhightreeservicechicago.com/",
+      "finalURL": "https://skyhightreeservicechicago.com/",
+      "status": 200,
+      "credits": [
+        {
+          "href": "https://embratechnologies.org",
+          "text": "Embra Technologies",
+          "rel": "noopener noreferrer"
+        }
+      ]
+    }
+  ],
+  "releases": [
+    {
+      "commit": "4305277",
+      "state": "success",
+      "statuses": [
+        {
+          "context": "Vercel",
+          "state": "success",
+          "description": "Deployment has completed",
+          "target_url": "https://vercel.com/embra3/embra-next-2/8f4ahqTDkkJctV7LeMZkkBcwrRP4",
+          "created_at": "2026-10-12T22:07:33Z"
+        }
+      ]
+    },
+    {
+      "commit": "edce867",
+      "state": "success",
+      "statuses": [
+        {
+          "context": "Vercel",
+          "state": "success",
+          "description": "Deployment has completed",
+          "target_url": "https://vercel.com/embra3/embra-next-2/Em7sPA9aTBaWk1JeUSD9y9fJ5x1e",
+          "created_at": "2026-10-13T10:00:24Z"
+        }
+      ]
+    },
+    {
+      "commit": "2f1b984",
+      "state": "success",
+      "statuses": [
+        {
+          "context": "Vercel",
+          "state": "success",
+          "description": "Deployment has completed",
+          "target_url": "https://vercel.com/embra3/embra-next-2/HiNxSSSx5N4PJ6qJ7XJS2yBWZ8kj",
+          "created_at": "2026-10-13T10:39:43Z"
+        }
+      ]
+    },
+    {
+      "commit": "6b926a5",
+      "state": "success",
+      "statuses": [
+        {
+          "context": "Vercel",
+          "state": "success",
+          "description": "Deployment has completed",
+          "target_url": "https://vercel.com/embra3/embra-next-2/C8XgFBoQpLA532NWKmPGZbse8fVK",
+          "created_at": "2026-10-13T18:00:06Z"
+        }
+      ]
+    },
+    {
+      "commit": "828402a",
+      "state": "success",
+      "statuses": [
+        {
+          "context": "Vercel",
+          "state": "success",
+          "description": "Deployment has completed",
+          "target_url": "https://vercel.com/embra3/embra-next-2/J5FBdV2VT3V1fRhVUCxQ9L8Low1s",
+          "created_at": "2026-10-13T19:35:32Z"
+        }
+      ]
+    },
+    {
+      "commit": "8721c96",
+      "state": "success",
+      "statuses": [
+        {
+          "context": "Vercel",
+          "state": "success",
+          "description": "Deployment has completed",
+          "target_url": "https://vercel.com/embra3/embra-next-2/DE2mXTd1d7aRoWMhpVyMrWSk11jS",
+          "created_at": "2026-10-18T02:37:44Z"
+        }
+      ]
+    },
+    {
+      "commit": "5cf96f5",
+      "state": "success",
+      "statuses": [
+        {
+          "context": "Vercel",
+          "state": "success",
+          "description": "Deployment has completed",
+          "target_url": "https://vercel.com/embra3/embra-next-2/Fk2uuoaLPbhJSU3kfSGcSHiKdJ5F",
+          "created_at": "2026-10-18T20:59:06Z"
+        }
+      ]
+    },
+    {
+      "commit": "f543429",
+      "state": "success",
+      "statuses": [
+        {
+          "context": "Vercel",
+          "state": "success",
+          "description": "Deployment has completed",
+          "target_url": "https://vercel.com/embra3/embra-next-2/3gbi2hLL3ye1n1BNi9tx4REfkdbN",
+          "created_at": "2026-10-19T08:07:59Z"
+        }
+      ]
+    }
+  ]
+}

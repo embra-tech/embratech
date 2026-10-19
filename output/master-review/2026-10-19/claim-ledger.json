@@ -1,0 +1,443 @@
+[
+  {
+    "id": "L01",
+    "pages": "1-2",
+    "claim": "59/100, previously 57, first audit 39",
+    "status": "Partly verified",
+    "finding": "Current weighted total is 59.25, rounding to 59; previous values give 56.75, rounding to 57. Original 39 baseline/method not supplied. No rank-predictive validity."
+  },
+  {
+    "id": "L02",
+    "pages": "1-2",
+    "claim": "Technically clean, honest, consistent; authority is main limit",
+    "status": "Overstated",
+    "finding": "The initial check found indexing, homepage claims, typography, SEO promises and measurement gaps. Later project-claim fixes do not establish backlinks as the main cause of limited rankings."
+  },
+  {
+    "id": "L03",
+    "pages": "1-2,4",
+    "claim": "1 click, 656 impressions, 180 searches",
+    "status": "Verified with scope",
+    "finding": "www worldwide Sep 29-Oct 17: correct click/impression totals and 180 disclosed query rows. Not US performance or market search volume."
+  },
+  {
+    "id": "L04",
+    "pages": "1-2,4",
+    "claim": "First Google click",
+    "status": "Misleading scope",
+    "finding": "One www click in selected dates; historical non-www has 11. The www click came from Nicaragua. No US click in the inspected windows."
+  },
+  {
+    "id": "L05",
+    "pages": "1-3",
+    "claim": "All eight named releases are live",
+    "status": "Verified scope",
+    "finding": "All named commits have successful Vercel statuses and are in current production history; current key changes corroborated. Not proof these are every deployment ever made in that interval."
+  },
+  {
+    "id": "L06",
+    "pages": "2-3",
+    "claim": "All 38 pages pass status/H1/canonical/indexability checks",
+    "status": "Verified limited checks",
+    "finding": "38 current sitemap URLs pass these HTTP/HTML checks. That does not prove rendering quality, indexing, rich-result eligibility or ranking readiness."
+  },
+  {
+    "id": "L07",
+    "pages": "2-3,5",
+    "claim": "Tree and Sky High now show no unproven results",
+    "status": "Partly true / incomplete",
+    "finding": "Revised tree offer and three Phase 3 routes use feature-based proof. Homepage still had Sky High +215%, 95/100 and unsupported stack context then. These are now removed by f7b6d18. Zero-hype count remains unverified."
+  },
+  {
+    "id": "L08",
+    "pages": "2,4",
+    "claim": "Already page one for small tree and handyman-city searches",
+    "status": "Qualified",
+    "finding": "Some query averages are at or below 10 on tiny samples. This is neither stable US national page-one visibility nor a fixed SERP placement."
+  },
+  {
+    "id": "L09",
+    "pages": "2-4,6",
+    "claim": "9 sites, 27 links, all homepage, none editorial",
+    "status": "Partly verified",
+    "finding": "Fresh Links report reproduces counts and homepage target. It is sampled; link quality and no-editorial conclusion do not follow from these counts."
+  },
+  {
+    "id": "L10",
+    "pages": "2,6-8",
+    "claim": "Tuxford +280% and Alaska +190% remain; user chose to keep them",
+    "status": "Mixed",
+    "finding": "Claims remained at initial review and were later removed. The referenced October 14 decision was not independently reproduced from an explicit approval record available here; not authorization for this task."
+  },
+  {
+    "id": "L11",
+    "pages": "2,6",
+    "claim": "Handyman most impressions, 138 / 20.6 and machine-written",
+    "status": "Mixed",
+    "finding": "Worldwide page row 138 / 20.64 confirmed; US 123 / 21.51. AI authorship cannot be established from adjective density."
+  },
+  {
+    "id": "L12",
+    "pages": "2,6",
+    "claim": "No founder profile; no examples guides; leads untraced",
+    "status": "Partly verified",
+    "finding": "Founder biography and dedicated examples guides absent from reviewed pages. Byline/schema and lead-event plumbing already exist; reliable sales attribution is not established."
+  },
+  {
+    "id": "L13",
+    "pages": "3",
+    "claim": "Release descriptions and exact times",
+    "status": "Mostly verified",
+    "finding": "Descriptions match history/current outputs. Exact timing labels mix commit and deployment moments; see normalized Vercel completion table. Two-second hero improvement not retimed."
+  },
+  {
+    "id": "L14",
+    "pages": "3",
+    "claim": "Free-review wording differs from prior summary",
+    "status": "Not a contradiction",
+    "finding": "Surrounding live copy explicitly offers a free local-visibility review. The CTA wording does not invalidate the description."
+  },
+  {
+    "id": "L15",
+    "pages": "3",
+    "claim": "No Brooklyn street address; menu/footer/PND present",
+    "status": "Verified current crawl",
+    "finding": "No prior street-address string found in 38 crawled pages; remote-team wording and navigation/project elements are present. This is not an exhaustive archive or asset inspection."
+  },
+  {
+    "id": "L16",
+    "pages": "3,6",
+    "claim": "Seven 67-76 character blog titles are cut off",
+    "status": "Partly verified",
+    "finding": "Seven original lengths confirmed; later shortened to 44-59. No fixed 65-character cutoff or screenshot proving all were cut off. [G2]"
+  },
+  {
+    "id": "L17",
+    "pages": "3,6,11",
+    "claim": "Seven hype rates 10.4-14.8; above 10 means machine-written",
+    "status": "Unsupported method",
+    "finding": "No full dictionary, word boundary or exclusions supplied. Do not use this as an AI detector, originality score or Google penalty threshold."
+  },
+  {
+    "id": "L18",
+    "pages": "3,7",
+    "claim": "Proxy retained; Google ranks on real-visitor data",
+    "status": "Decision correct; rationale oversimplified",
+    "finding": "Keep it per user. CWV is one component among many ranking signals. Text parity in our UA test does not certify every rendered path or prove no ranking harm."
+  },
+  {
+    "id": "L19",
+    "pages": "3",
+    "claim": "Remote wording option B; prices/animations unchanged except intro",
+    "status": "Historical qualification",
+    "finding": "Current remote wording and release scope supported. No new broad price/motion change is evidenced; exact historic owner-decision wording outside available records remains unverified."
+  },
+  {
+    "id": "L20",
+    "pages": "4",
+    "claim": "Data to Oct 17 excludes Oct 18-19 release effects",
+    "status": "Verified",
+    "finding": "Dates precede releases. Delay varies; “2-3 days” is operational guidance, not a fixed reporting SLA."
+  },
+  {
+    "id": "L21",
+    "pages": "4",
+    "claim": "Since Oct 14 read: 503 to 656, 164 to 180, 0 to 1, 30.8 to 32.3",
+    "status": "Historical baseline not reproduced",
+    "finding": "Current endpoint verified. No matching Oct 14-read export supplied. Oct 17 saved export through Oct 14 shows 574 worldwide impressions, 173 rows, one click; these are different snapshots."
+  },
+  {
+    "id": "L22",
+    "pages": "4",
+    "claim": "Worse average is normal because Google tests more searches",
+    "status": "Plausible hypothesis",
+    "finding": "Changing query/country mix can alter aggregate position; the specific cause is not proven here. Use fixed query/page cohorts."
+  },
+  {
+    "id": "L23",
+    "pages": "4",
+    "claim": "23 pages have impressions; listed page metrics",
+    "status": "Verified worldwide",
+    "finding": "23 worldwide page rows; listed homepage, handyman, pricing, about, auto-body and city metrics reproduce. These are not the US-only priorities."
+  },
+  {
+    "id": "L24",
+    "pages": "4",
+    "claim": "Watch-list query counts/positions",
+    "status": "Verified worldwide",
+    "finding": "Handyman Centennial 16/8.06, Colorado 9/9.78; tree 12/17.17; auto-body marketing 22/35.5; domain 19/4.79; embra 25/24.72; HVAC Chicago 27/47.96."
+  },
+  {
+    "id": "L25",
+    "pages": "4,5,9",
+    "claim": "21 of 38 indexed; 13+2+1+1 not indexed",
+    "status": "Qualified / crosswalk added",
+    "finding": "Counts are from All known pages last updated Oct 12. All 21 indexed examples match current sitemap; remaining current URLs are not automatically identical to legacy exclusions."
+  },
+  {
+    "id": "L26",
+    "pages": "4",
+    "claim": "All four fixes validation started",
+    "status": "State verified, outcome not",
+    "finding": "All four issue validations show Started. This does not mean fixes passed or Google indexed the pages. Old-.html example was not freshly reverified."
+  },
+  {
+    "id": "L27",
+    "pages": "5",
+    "claim": "Technical 9, indexing 6, content 7.5, fit 6.5, trust 5.5",
+    "status": "Opinion, not measurement",
+    "finding": "Underlying selected observations partly verified; ten-point scales and weighting are subjective. No reproducible rubric validates these category scores."
+  },
+  {
+    "id": "L28",
+    "pages": "5",
+    "claim": "Links 8.5, backlinks 2, speed 6.5, brand 5, UX 6.5",
+    "status": "Opinion / missing evidence",
+    "finding": "Link sample and brand averages are observable. “Real visitor speed” has no field baseline here; scores are not measurements or rank predictors."
+  },
+  {
+    "id": "L29",
+    "pages": "5",
+    "claim": "Before line means Oct 14 / first audit",
+    "status": "Internal inconsistency",
+    "finding": "Text says the dark line is Oct 14; table header calls it first audit. Clarify the baseline; do not combine a 39 first score with the 57 comparator."
+  },
+  {
+    "id": "L30",
+    "pages": "5",
+    "claim": "Site work near ceiling; next 10-15 points mainly authority",
+    "status": "Unsupported prioritization",
+    "finding": "Initial missed claims, font, attribution and indexing contradicted “near ceiling.” Project-growth claims are now corrected; other work remains. Point gains derive from the author’s subjective weights, not Google."
+  },
+  {
+    "id": "L31",
+    "pages": "5",
+    "claim": "60-65 wins long-tail; broad terms usually need 75+",
+    "status": "Unsupported threshold",
+    "finding": "No validated dataset connects this invented score with rankings or keyword difficulty. Remove these thresholds from decisions."
+  },
+  {
+    "id": "L32",
+    "pages": "6",
+    "claim": "19 issue register, owners and approvals",
+    "status": "Reviewed in full",
+    "finding": "All 19 IDs are adjudicated separately in this report. Owner labels in an attached report do not authorize execution, accounts, messages or client-site edits."
+  },
+  {
+    "id": "L33",
+    "pages": "7",
+    "claim": "20 domains / 8 deep links brings page-two terms toward page one",
+    "status": "Goal, not forecast",
+    "finding": "Relevant references may help; numerical link targets do not predict rank movement or replace intent, proof and indexing."
+  },
+  {
+    "id": "L34",
+    "pages": "7",
+    "claim": "Verified case studies improve trust with buyers/raters",
+    "status": "Reasonable objective",
+    "finding": "Supported claims improve credibility. Quality raters do not directly change a page’s rank; a founder or proof section is not an automatic E-E-A-T ranking factor. [G6]"
+  },
+  {
+    "id": "L35",
+    "pages": "7",
+    "claim": "Handyman has 138 monthly impressions",
+    "status": "Incorrect period",
+    "finding": "138 covers 19 observed days worldwide, Sep 29-Oct 17. US count is 123. It is not a monthly rate or a lead estimate."
+  },
+  {
+    "id": "L36",
+    "pages": "7",
+    "claim": "Examples guides fit what Google ranks for main terms",
+    "status": "Overgeneralized",
+    "finding": "Public samples include commercial pages and listicles. No reproducible localized top-three census supplied. Match each intent rather than replacing sales pages."
+  },
+  {
+    "id": "L37",
+    "pages": "7",
+    "claim": "Founder page makes journalist/podcast quotes possible",
+    "status": "Proposal",
+    "finding": "A useful identity page may support outreach confidence; media attention and quotes are not assured."
+  },
+  {
+    "id": "L38",
+    "pages": "7",
+    "claim": "Shorter titles will be fully visible and generate more clicks",
+    "status": "Unproven effect",
+    "finding": "Clarity can improve appeal; Google may rewrite/truncate titles and CTR may not rise. Evaluate actual query/position cohorts after recrawl. [G2]"
+  },
+  {
+    "id": "L39",
+    "pages": "7",
+    "claim": "Consistent profiles take domain from 4.8 to number one",
+    "status": "Unsupported outcome",
+    "finding": "Brand consistency is reasonable; number one cannot be guaranteed, especially for ambiguous “embra.”"
+  },
+  {
+    "id": "L40",
+    "pages": "7",
+    "claim": "Every inquiry traced to page and search",
+    "status": "Overpromised",
+    "finding": "Landing-page/channel attribution is feasible with correct instrumentation. An individual’s organic query generally cannot be reconstructed from aggregate GSC rows."
+  },
+  {
+    "id": "L41",
+    "pages": "7",
+    "claim": "Visitor performance fixes reduce abandonment",
+    "status": "Hypothesis to test",
+    "finding": "Plausible user benefit, but no measured abandonment or device baseline here. Keep real visitor and lab measurements distinct."
+  },
+  {
+    "id": "L42",
+    "pages": "7",
+    "claim": "Design, prices, motion and proxy require approval",
+    "status": "Standing constraint",
+    "finding": "Consistent with the user’s instruction for new frontend changes and retaining the proxy. No approval follows from the uploaded document alone."
+  },
+  {
+    "id": "L43",
+    "pages": "8",
+    "claim": "Page and authority work should run in parallel",
+    "status": "Adopt",
+    "finding": "Useful improvement to the short sequential release summary. Earlier full audit/keyword plan also discussed real relationships and original assets."
+  },
+  {
+    "id": "L44",
+    "pages": "8",
+    "claim": "Clutch/reviews/HARO/Qwoted/Jobber program",
+    "status": "Conditional proposals",
+    "finding": "Identity, honest reviews and relevant opportunities are useful. Availability, eligibility, cost and terms of every named program were not established; no sign-up or outreach authorized."
+  },
+  {
+    "id": "L45",
+    "pages": "8",
+    "claim": "Turn on Speed Insights",
+    "status": "Correct next step differs",
+    "finding": "Deployed layout already includes component; normal page loads telemetry scripts. Inspect dashboard collection, settings and samples before adding/reinstalling anything. [R2, G7]"
+  },
+  {
+    "id": "L46",
+    "pages": "8",
+    "claim": "Study real-visitor speed of 1,000 trade sites",
+    "status": "Feasibility unproven",
+    "finding": "CrUX coverage depends on sufficient eligible visits; lab tests are not field data. Pilot the sample and publish methodology before committing. [G8]"
+  },
+  {
+    "id": "L47",
+    "pages": "8",
+    "claim": "Handyman/examples/founder/lead work in weeks 3-8",
+    "status": "Modify sequence",
+    "finding": "Move lead reliability and claims/privacy checks earlier; retain focused handyman and original examples work with approvals."
+  },
+  {
+    "id": "L48",
+    "pages": "8",
+    "claim": "Local SEO offer waits until weeks 9-13",
+    "status": "Not recommended",
+    "finding": "SEO sales are a stated goal and the page is unindexed with overstatements. Define and improve it in the first month alongside discovery checks."
+  },
+  {
+    "id": "L49",
+    "pages": "9",
+    "claim": "1 click per 28 days baseline; 30 at 90d / 150 at 6mo",
+    "status": "Mixed units / aspiration",
+    "finding": "Baseline is worldwide over 19 observed days, not 28 and not US. No traffic/conversion forecast supports the targets."
+  },
+  {
+    "id": "L50",
+    "pages": "9",
+    "claim": "Two non-brand top-three queries",
+    "status": "Not two relevant wins",
+    "finding": "Worldwide second non-brand row is unrelated “que venden,” one impression. Relevant US buyer row is tree service web design company, three impressions."
+  },
+  {
+    "id": "L51",
+    "pages": "9",
+    "claim": "16 page-one searches baseline; 40 / 80 later",
+    "status": "Not reproduced as stated",
+    "finding": "Fresh worldwide query averages <=10 yield 17 rows; US yields 15. Define cutoff and exclusions; targets are aspirations, not forecasts."
+  },
+  {
+    "id": "L52",
+    "pages": "9",
+    "claim": "All pages indexed; 20/35 sites; 8/15 deep links",
+    "status": "Aspirations, refine",
+    "finding": "Prioritize worthwhile canonical sales/proof pages. Do not index legacy duplicates/dead URLs or pursue arbitrary link counts at the expense of relevance."
+  },
+  {
+    "id": "L53",
+    "pages": "9",
+    "claim": "Few Trustpilot reviews; 5 then 10+",
+    "status": "Baseline not verified",
+    "finding": "Three GSC links from Trustpilot is not three reviews. Exact current review count/quality was not established. Seek honest feedback without incentives for positive ratings."
+  },
+  {
+    "id": "L54",
+    "pages": "9",
+    "claim": "Qualified leads untracked; then tracked and growing",
+    "status": "Partly supported",
+    "finding": "Analytics/lead plumbing exists but reliable qualified-source reporting not established. Tracking completion is a deliverable; monthly growth is not assured."
+  },
+  {
+    "id": "L55",
+    "pages": "9",
+    "claim": "Oct 28 first look; Nov 16 matched 28-day review",
+    "status": "Timing needs correction",
+    "finding": "Oct 28 directional only. Wait for complete Nov 15 data. Prior window includes dates before visible www history begins; document missing coverage."
+  },
+  {
+    "id": "L56",
+    "pages": "9",
+    "claim": "Fewer than about 20 impressions provisional",
+    "status": "Useful heuristic",
+    "finding": "Retain as a caution, not a statistical significance threshold. Segment only when sample sizes support interpretation."
+  },
+  {
+    "id": "L57",
+    "pages": "10",
+    "claim": "Prior summary covers only three releases",
+    "status": "Correct scope",
+    "finding": "The five-page document explicitly covers three approved releases. Earlier 22-page audit and 10-page GSC plan must also be considered in a fair comparison."
+  },
+  {
+    "id": "L58",
+    "pages": "10",
+    "claim": "Indexing, open issues and privacy not covered in prior summary",
+    "status": "Overstated absence",
+    "finding": "Its pages 4-5 discuss URL discovery, measurement, real experience and unpublished analytics separation; earlier reports cover indexing, capture and privacy in depth."
+  },
+  {
+    "id": "L59",
+    "pages": "10",
+    "claim": "Prior reports have no competitor results / only generic authority",
+    "status": "Scope mismatch",
+    "finding": "The short summary is not a competitor audit. Prior full audit and GSC plan review named public competitors and evidence-based authority work, with appropriate limits."
+  },
+  {
+    "id": "L60",
+    "pages": "10",
+    "claim": "Adopted evidence standards and keyword assignments",
+    "status": "Supported",
+    "finding": "Release IDs, matched US/device windows, feature-based proof, no duplicate city expansion and intent mapping agree with the prior plan. They do not resolve the uploaded data errors."
+  },
+  {
+    "id": "L61",
+    "pages": "11",
+    "claim": "Every finding sourced/dated; sources V1-C1-D1-D3-S1",
+    "status": "Partly traceable",
+    "finding": "Useful source categories, but no attached raw exports, reproducible hype dictionary, study model or dated SERP record. This review preserves its own raw evidence."
+  },
+  {
+    "id": "L62",
+    "pages": "11",
+    "claim": "Glossary: positions 1-10 mean page one; nofollow little value",
+    "status": "Oversimplified",
+    "finding": "Average position does not guarantee a literal page. GSC Links does not identify nofollow; Google treats qualifying link attributes as hints, not a fixed “little value” quantity. [G9]"
+  },
+  {
+    "id": "L63",
+    "pages": "11",
+    "claim": "No edits/outreach by report author; no top-three guarantee",
+    "status": "Mixed verifiability",
+    "finding": "No guarantee caveat is appropriate. Author’s historical no-action claim not independently auditable here; this review performed no deployment, form submission or outreach."
+  }
+]
