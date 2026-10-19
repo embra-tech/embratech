@@ -8,29 +8,33 @@ export default function sitemap() {
   const staticLastMod = '2026-09-30'; // Last date of major content overhaul
   const phase1Date = '2026-10-01';    // Phase 1 new pages
   const oct13 = '2026-10-13';         // Phase 1 fixes, pricing/refund wording, location wording, PND case study
+  // 2026-10-20: real change dates from the release log, so Google re-reads updated pages sooner.
+  const oct18 = '2026-10-18';         // 8721c96: homepage links, service-page headings and introductions
+  const oct19 = '2026-10-19';         // 5cf96f5 tree page; f543429 / f7b6d18 case studies, portfolio, homepage cards, DesignRush link
+  const oct20 = '2026-10-20';         // city and About wording
 
   const corePages = [
-    { url: baseUrl,                                    lastModified: staticLastMod, changeFrequency: 'weekly',   priority: 1.0 },
-    { url: `${baseUrl}/services`,                      lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.9 },
+    { url: baseUrl,                                    lastModified: oct19,         changeFrequency: 'weekly',   priority: 1.0 },
+    { url: `${baseUrl}/services`,                      lastModified: oct18,         changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/services/care-plan`,            lastModified: staticLastMod, changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/niches`,                        lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.85 },
-    { url: `${baseUrl}/services/web-design`,           lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.9 },
-    { url: `${baseUrl}/services/local-seo`,            lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.9 },
+    { url: `${baseUrl}/services/web-design`,           lastModified: oct18,         changeFrequency: 'monthly',  priority: 0.9 },
+    { url: `${baseUrl}/services/local-seo`,            lastModified: oct18,         changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/services/website-integrations`, lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/pricing`,                       lastModified: oct13,         changeFrequency: 'monthly',  priority: 0.9 },
-    { url: `${baseUrl}/portfolio`,                     lastModified: oct13,         changeFrequency: 'monthly',  priority: 0.85 },
+    { url: `${baseUrl}/portfolio`,                     lastModified: oct19,         changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/blog`,                          lastModified: oct13,         changeFrequency: 'weekly',   priority: 0.8 },
     { url: `${baseUrl}/contact`,                       lastModified: oct13,         changeFrequency: 'monthly',  priority: 0.8 },
-    { url: `${baseUrl}/about`,                         lastModified: oct13,         changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/about`,                         lastModified: oct20,         changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/privacy`,                       lastModified: staticLastMod, changeFrequency: 'yearly',   priority: 0.3 },
     { url: `${baseUrl}/terms`,                         lastModified: oct13,         changeFrequency: 'yearly',   priority: 0.3 },
   ];
 
   const locationPages = [
-    { url: `${baseUrl}/locations/brooklyn`,            lastModified: oct13,         changeFrequency: 'monthly',  priority: 0.8 },
-    { url: `${baseUrl}/locations/los-angeles`,         lastModified: oct13,         changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/chicago`,             lastModified: oct13,         changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/alaska`,              lastModified: oct13,         changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/brooklyn`,            lastModified: oct20,         changeFrequency: 'monthly',  priority: 0.8 },
+    { url: `${baseUrl}/locations/los-angeles`,         lastModified: oct20,         changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/chicago`,             lastModified: oct20,         changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/alaska`,              lastModified: oct20,         changeFrequency: 'monthly',  priority: 0.7 },
     // /locations/gulf-coast is noindex, excluded from sitemap intentionally
   ];
 
@@ -44,7 +48,7 @@ export default function sitemap() {
     'roofing-website-design',
   ].map(slug => ({
     url: `${baseUrl}/niches/${slug}`,
-    lastModified: oct13,
+    lastModified: slug === 'tree-service-website-design' ? oct19 : oct13,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
@@ -58,7 +62,7 @@ export default function sitemap() {
     'sky-high-tree'
   ].map(slug => ({
     url: `${baseUrl}/portfolio/${slug}`,
-    lastModified: oct13,
+    lastModified: oct19,
     changeFrequency: 'monthly',
     priority: 0.75,
   }));

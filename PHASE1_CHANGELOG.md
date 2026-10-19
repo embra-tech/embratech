@@ -355,3 +355,20 @@ Fix: the classes are now on `<html>`. Nothing else changed. `ThemeProvider` only
 **Deploy (with section N):** `git add app/layout.jsx "app/locations/[city]/LocationClient.jsx" app/about/AboutClient.jsx PHASE1_CHANGELOG.md`
 
 Also found 20 Oct in Search Console URL Inspection: `/services/web-design` is "Discovered, currently not indexed" (never crawled) and `/services/local-seo` is "URL is unknown to Google". Request indexing for both after this deploy.
+
+---
+
+## P. Sitemap dates and indexing requests (2026-10-20)
+
+Verified live after the font deploy: headings render in Figtree and body text in Inter (was Times New Roman); 38/38 pages OK; no outcome claims anywhere.
+
+Request indexing for `/services/web-design` was refused by Search Console with "Quota exceeded" (daily limit already used). Retry both service URLs the next day.
+
+The sitemap showed old dates for changed pages (web-design and local-seo 2026-10-01, homepage 2026-09-30), so Google had no signal to re-read them. `app/sitemap.js` now uses the real change dates from the release log:
+- `/services`, `/services/web-design`, `/services/local-seo`: 2026-10-18 (8721c96)
+- homepage, `/portfolio`, all case studies, tree-service page: 2026-10-19 (5cf96f5, f543429, f7b6d18)
+- `/about` and all city pages: 2026-10-20
+
+Sitemap status in Search Console before this change: submitted Oct 1, last read Oct 16, Success, 38 discovered pages. Resubmit after deploy.
+
+**Deploy:** `git add app/sitemap.js PHASE1_CHANGELOG.md`
