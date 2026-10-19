@@ -136,25 +136,29 @@ They had to accomplish this ambitious goal without possessing the massive develo
   'sky-high-tree': {
     name: 'Sky High Tree Service',
     metaTitle: 'Tree Service Website Design, Sky High',
+    metaDescription: "Explore Embra's Sky High Tree Service website project: service information, project photos and clear call and estimate options for local customers.",
+    articleDescription: "Explore Embra's Sky High Tree Service website project: service information, project photos and clear call and estimate options for local customers.",
+    dateModified: '2026-10-19',
     domain: 'skyhightreeservicechicago.com',
     url: 'https://skyhightreeservicechicago.com/',
     industry: 'Tree Service',
-    location: 'Chicago, IL',
-    timeline: '3 weeks',
-    tags: ['Web Design', 'Local SEO', 'Emergency CTAs'],
-    stack: 'Next.js · React · Vercel · FormSubmit',
-    challenge: `The professional tree service industry is a uniquely high-urgency, high-ticket business category. When customers in Chicago are frantically searching for emergency tree removal services immediately following a severe, damaging storm, they absolutely do not casually browse multiple options. They almost always call the very first website that looks genuinely credible, highly professional, and distinctly local.
+    location: 'Naperville / Chicagoland, IL',
+    tags: ['Web Design', 'Service Information', 'Estimate Requests'],
+    challengeLabel: 'Project Focus',
+    challenge: `Tree-care customers may be planning routine work or looking for help after a storm. This project presents the business's services and gives visitors clear routes to make contact.
 
-Sky High Tree Service urgently needed a high-performance website that successfully converted those critical, high-stress emergency searches into firmly booked jobs immediately upon landing. Simultaneously, they also needed to build a highly sustainable, long-term organic presence in the extremely competitive Chicago metropolitan market. Their old site simply lacked the immediate trust factors and the prominent emergency contact options required to capture this highly lucrative, time-sensitive business.`,
+The design focus is straightforward: explain the available work, show project images and coverage, and make calling or requesting an estimate easy to find.`,
     approach: [
-      { title: 'Emergency CTA architecture', body: 'We designed and implemented a highly aggressive emergency CTA architecture. We placed extremely high-visibility emergency contact options directly above the fold on absolutely every single page of the website. This included a massive phone number, an instant click-to-call button optimized for mobile, and a prominent "24/7 Emergency Service" badge. This powerful combination instantly builds massive confidence and provides a clear action path before a panicked visitor even reads a single word of the descriptive body copy.' },
-      { title: 'Credibility signals up front', body: 'We deliberately placed crucial credibility signals right up front on the homepage. We highly prioritized showing clear insurance verification details, prominent professional license numbers, and compelling before-and-after project imagery. By immediately presenting these vital trust factors, we successfully removed the major psychological barriers that typically cause anxious, storm-damaged homeowners to quickly keep scrolling to find a competitor. We proved Sky High\'s legitimacy the very second the page loaded.' },
-      { title: 'Service-area SEO', body: 'We executed a highly targeted service-area SEO campaign to dominate the local market. We carefully built completely dedicated, optimized pages for vital Chicago neighborhoods and key surrounding suburbs. Every single one of these specific local pages was heavily enriched with highly accurate LocalBusiness schema markup. This strategy was specifically designed to aggressively target lucrative "tree removal [neighborhood]" search queries, which consistently convert at the absolute highest rate in this particular service market.' },
+      { title: 'Clear contact routes', body: 'Phone links and a free-estimate form offer two ways to contact the team. Visitors can choose the route that suits their inquiry.' },
+      { title: 'Services and project photos', body: 'Service descriptions and project images help visitors understand the work offered and prepare questions for the company.' },
+      { title: 'Service-area information', body: 'A coverage section helps visitors check whether their location is listed before contacting the team. This is a website feature, not evidence of a particular search ranking.' },
     ],
-    deepDive: `<p>The comprehensive three-week rebuild for Sky High Tree Service was strategically designed to completely dominate the highly lucrative, time-critical emergency tree removal market in Chicago. We understood that homeowners dealing with massive fallen trees need immediate, trustworthy help, not a lengthy corporate brochure. The entire digital experience was radically re-engineered to project total authority, absolute reliability, and massive local relevance, explicitly aimed at converting panicked visitors into immediate, high-value phone calls.</p><p>We implemented a heavy emphasis on immediate trust-building. By placing their essential insurance information, valid licenses, and highly prominent 24/7 emergency badges front and center, we instantly reassured highly stressed users. Powered by a blazing fast Next.js and React frontend, and hosted reliably on Vercel, the site achieved a verified PageSpeed score of 95/100. This excellent performance ensures that users on unstable mobile connections following a severe local storm can still access vital emergency help instantly. FormSubmit was also seamlessly integrated to securely handle non-emergency quote requests.</p><p>To secure long-term growth, we built a massive localized SEO foundation. By systematically rolling out highly optimized, schema-rich pages targeting specific Chicago neighborhoods, we ensured Sky High naturally captures the exact high-intent searches that drive their business. This robust combination of instant emergency conversion architecture and deep local search relevance helps drive the unverified but reported 215% surge in critical emergency leads.</p>`,
+    deepDiveLabel: 'Project Walkthrough',
+    deepDive: `<p>The live website brings service descriptions, a project gallery, service-area information and contact options into one browsing journey. Homeowners can review the work offered and move to a call or estimate request.</p><p>This case study describes visible website features. It does not claim a measured increase in leads, revenue or Google rankings. Outcome reporting requires a dated source and a clearly defined comparison period.</p><p>Planning a similar site? Explore our <a href="/niches/tree-service-website-design">tree service website design</a> offer, compare <a href="/pricing">website plans</a> or request a <a href="/contact">free homepage sample</a>.</p>`,
+    resultsLabel: 'Website Features',
     results: [
-      { label: '+215% Emergency Leads', verified: false },
-      { label: 'PageSpeed 95/100', verified: true, href: PAGESPEED('skyhightreeservicechicago.com') },
+      { label: 'Call and estimate options' },
+      { label: 'Project gallery' },
     ],
   },
 };
@@ -198,10 +202,10 @@ export default function CaseStudyPage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: `${cs.name}, Web Design Case Study`,
-    description: `How Embra Technologies built a high-performance website for ${cs.name} in ${cs.location}.`,
+    description: cs.articleDescription || `How Embra Technologies built a high-performance website for ${cs.name} in ${cs.location}.`,
     image: `${siteConfig.siteUrl}${siteConfig.ogImage}`,
     datePublished: '2026-09-30',
-    dateModified: '2026-10-01',
+    dateModified: cs.dateModified || '2026-10-01',
     author: { '@type': 'Organization', name: siteConfig.legalName, url: siteConfig.siteUrl },
     publisher: {
       '@type': 'Organization',
@@ -264,7 +268,7 @@ export default function CaseStudyPage({ params }) {
               </svg>
               {cs.location}
             </span>
-            <span className="cs-timeline-pill">⏱ {cs.timeline}</span>
+            {cs.timeline && <span className="cs-timeline-pill">⏱ {cs.timeline}</span>}
           </div>
 
           <h1 className="cs-title">{cs.name}</h1>
@@ -307,7 +311,7 @@ export default function CaseStudyPage({ params }) {
       {/* ── Challenge ────────────────────────────────────────── */}
       <section className="cs-section">
         <div className="wrap cs-two-col">
-          <div className="cs-col-label">The Challenge</div>
+          <div className="cs-col-label">{cs.challengeLabel || 'The Challenge'}</div>
           <div className="cs-col-body">
             {cs.challenge.split(/\n\s*\n/).map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
@@ -338,7 +342,7 @@ export default function CaseStudyPage({ params }) {
       {cs.deepDive && (
         <section className="cs-section">
           <div className="wrap cs-two-col">
-            <div className="cs-col-label">Deep Dive</div>
+            <div className="cs-col-label">{cs.deepDiveLabel || 'Deep Dive'}</div>
             <div className="cs-col-body" dangerouslySetInnerHTML={{ __html: cs.deepDive }} />
           </div>
         </section>
@@ -357,7 +361,7 @@ export default function CaseStudyPage({ params }) {
       {/* ── Results ──────────────────────────────────────────── */}
       <section className="cs-section">
         <div className="wrap cs-two-col">
-          <div className="cs-col-label">Results</div>
+          <div className="cs-col-label">{cs.resultsLabel || 'Results'}</div>
           <div className="cs-col-body">
             <div className="cs-results-grid">
               {cs.results.map((r) => (

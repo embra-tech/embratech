@@ -99,13 +99,13 @@ const SITES = [
     url: 'https://skyhightreeservicechicago.com/',
     image: '/images/skyhightreeservice.webp',
     industry: 'Tree Service',
-    location: 'Chicago, IL',
-    desc: 'Professional tree care for the Chicago area. A high-converting local site with emergency-service CTAs, credibility signals, and SEO structured for service-area dominance.',
+    location: 'Naperville / Chicagoland, IL',
+    desc: 'A tree-care website with service information, project photos, service-area details and clear ways to call or request an estimate.',
     c1: '#6DBE4A', c2: '#23491A',
-    tags: ['Web Design', 'Local SEO', 'Emergency CTAs'],
+    tags: ['Web Design', 'Service Information', 'Estimate Requests'],
     results: [
-      { label: 'PageSpeed 95/100', href: PAGESPEED('skyhightreeservicechicago.com') },
-      { label: '+215% Emergency Leads', href: null },
+      { label: 'Call and estimate options', href: null },
+      { label: 'Project gallery', href: null },
     ],
   },
 ];
