@@ -64,11 +64,13 @@ export default function Hero() {
 
     // Safety net, technical failures only. Normal flow is unchanged: the orb
     // intro plays first and its onComplete reveals the text. If the WebGL scene
-    // still has not been created after 10s (three.js chunk failed or stalled),
+    // still has not been created after 4s (three.js chunk failed or stalled),
     // reveal the headline, subtitle and CTAs so the hero is never left empty.
+    // 2026-10-19: lowered from 10s so visitors on slow phone connections see the headline sooner;
+    // the orb still joins once it loads. No change on normal connections.
     const fallbackTimer = setTimeout(() => {
       if (!sceneRef.current) revealText();
-    }, 10000);
+    }, 4000);
 
     (heroScenePromise || import('./three/HeroScene'))
       .then(({ createHeroScene }) => {

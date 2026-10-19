@@ -40,7 +40,7 @@ const SITES = [
     c1: '#E8654F', c2: '#7A2A1A',
     tags: ['Web Design', 'Local SEO', 'Quote Forms'],
     results: [
-      { label: '↑ 280% organic traffic', href: null },
+      { label: 'Free towing + estimate offer up front', href: null },
       { label: 'PageSpeed 97/100', href: PAGESPEED('tuxfordcollision.com') },
     ],
   },
@@ -57,7 +57,7 @@ const SITES = [
     tags: ['Web Design', 'Service Pages', 'Mobile First'],
     results: [
       { label: 'PageSpeed 99/100', href: PAGESPEED('vvasquezhandymanllc.net') },
-      { label: '3.4x Quote Submissions', href: null },
+      { label: 'Service-specific quote requests', href: null },
     ],
   },
   {
@@ -73,7 +73,7 @@ const SITES = [
     tags: ['Web Design', 'Local SEO', 'Lead Capture'],
     results: [
       { label: 'PageSpeed 98/100', href: PAGESPEED('alaskafastfixhandyman.com') },
-      { label: '+190% Local Calls', href: null },
+      { label: 'Tap-to-call on every page', href: null },
     ],
   },
   {

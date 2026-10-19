@@ -8,7 +8,7 @@ import siteConfig from '../../lib/site-config';
 export const metadata = {
   title: 'Industry Website Design for Home Service Contractors',
   description:
-    'Specialist website design and local SEO for handymen, tree services, auto body shops, plumbers, HVAC contractors, landscapers, and roofers. Custom Next.js builds starting at $700.',
+    'Website design and local SEO for handymen, tree services, auto body shops, plumbers, HVAC contractors, landscapers and roofers. Custom builds from $700.',
   alternates: { canonical: '/niches' },
   openGraph: {
     title: 'Industry Website Design for Home Service Contractors | Embra',

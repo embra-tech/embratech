@@ -300,3 +300,26 @@ Made on branch `designrush-link`, created from `origin/main` (f543429) in a sepa
 - `rel="nofollow noopener noreferrer"`: DesignRush requested the link in exchange for a complimentary 60-day promoted listing. Google's spam policies treat exchanged links as link schemes unless they are qualified with nofollow or sponsored.
 - Push: `git push origin designrush-link:main` (fast-forward from f543429).
 - After deploy, confirm the link on the live homepage, then reply to DesignRush.
+
+---
+
+## M. Trust, search-title, privacy and speed fixes (2026-10-19, owner gave full permission)
+
+Made in the `embra-live` worktree on top of live `main` (da47749).
+
+**Analytics review (dcb2c7f, branch `analytics-wip`): not published.** It adds `/api/collect` (scroll depth, clicks, time on page, ad-click flags, bot scoring, per-request logging). None of it improves rankings; it adds client-side work and more personal data. Kept unpublished on the local `analytics-wip` branch.
+
+| ID | Where | Change |
+|---|---|---|
+| TRUST-1 | Homepage project cards (`components/FeaturedWork.jsx`) | Removed unproven "↑ 280% organic traffic" (Tuxford), "+190% Local Calls" (Alaska Fast Fix), "+215% Emergency Leads" and the fixed 95/100 badge (Sky High). Sky High card now matches its portfolio card. "View All 5 Projects" corrected to 6. |
+| TRUST-1 | Portfolio cards (`app/portfolio/PortfolioClient.jsx`) | Removed "↑ 280% organic traffic", "3.4x Quote Submissions", "+190% Local Calls"; replaced with website features. |
+| TRUST-1 / CONT-2 | Case studies: Tuxford, V Vasquez, Alaska Fast Fix, BestBreaks (`app/portfolio/[slug]/page.jsx`) | Plain-language rewrite (hype words removed). Unproven outcome numbers removed from text and results. PageSpeed badges (linked to live reports), build time and stack kept. Each now links to its matching industry page, pricing and the free sample. |
+| TECH-1 | Blog (`lib/blogData.js`, `app/blog/[slug]/page.jsx`) | New `metaTitle` per post (≤ 60 characters with " \| Embra") used as the search title; on-page H1 unchanged. Tree guide `dateModified` set to 2026-10-19 (content changed in f543429). |
+| TECH-4 | `/niches` description | Shortened from 179 to 152 characters. |
+| Privacy | `app/api/track/route.js` (already live before this project) | Stores a shortened IP (IPv4 x.y.z.0; IPv6 first three groups) instead of the full address, matching the privacy policy's "anonymised" wording. Country and city unchanged. |
+| Speed | `components/Hero.jsx` | Safety timer for a failed or stalled 3D load lowered from 10 s to 4 s. No change on normal connections. |
+
+**Not done this round:**
+- LINK-1: linking the tree, auto body and HVAC guides from their industry pages.
+- PageSpeed badge numbers not re-measured; the PageSpeed service needs a Chrome permission.
+- Handyman page rework (CONT-1).

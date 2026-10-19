@@ -83,13 +83,24 @@ function isAssetPath(path) {
   return ASSET_RE.test(path) || SKIP_PATHS.has(path);
 }
 
+// 2026-10-19: store a shortened IP so it can't identify a visitor, as the privacy policy states
+// ("anonymised ... no personal identifiers"). IPv4 keeps the first three parts (x.y.z.0);
+// IPv6 keeps the first three groups. Country and city still come from Vercel's headers.
+function anonymizeIp(raw) {
+  const ip = (raw || '').split(',')[0].trim();
+  if (!ip) return null;
+  if (ip.includes(':')) return ip.split(':').slice(0, 3).join(':') + '::';
+  const parts = ip.split('.');
+  return parts.length === 4 ? `${parts[0]}.${parts[1]}.${parts[2]}.0` : null;
+}
+
 // ── Route handler ────────────────────────────────────────────────────────────
 export async function POST(request) {
   try {
     const body = await request.json();
 
     const rawUA = cleanUA(request.headers.get('user-agent'));
-    const ip = request.headers.get('x-forwarded-for') || 'Unknown';
+    const ip = anonymizeIp(request.headers.get('x-forwarded-for'));
     const country = request.headers.get('x-vercel-ip-country') || 'Unknown';
     const city = request.headers.get('x-vercel-ip-city') || 'Unknown';
     const uaParsed = parseUA(rawUA);

@@ -14,7 +14,7 @@ export function generateMetadata({ params }) {
   const post = BLOG_POSTS.find((p) => p.slug === params.slug);
   if (!post) return {};
   return {
-    title: post.title,
+    title: post.metaTitle || post.title, // 2026-10-19: short search title; on-page H1 still uses post.title
     description: post.excerpt,
     alternates: { canonical: `/blog/${params.slug}` },
     openGraph: {
