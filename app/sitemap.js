@@ -12,7 +12,7 @@ export default function sitemap() {
   const oct18 = '2026-10-18';         // 8721c96: homepage links, service-page headings and introductions
   const oct19 = '2026-10-19';         // 5cf96f5 tree page; f543429 / f7b6d18 case studies, portfolio, homepage cards, DesignRush link
   const oct20 = '2026-10-20';         // city and About wording
-  const oct21 = '2026-10-21';         // Local SEO + handyman rewrites, industry-page guide links and claims, privacy policy, homepage FAQ
+  const oct21 = '2026-10-24';         // (published 2026-10-24) Local SEO + handyman rewrites, industry-page guide links and claims, privacy policy, homepage FAQ
   const changedOct21 = ['tree-service-website-design', 'web-design-for-handyman-businesses', 'auto-body-shop-website-design', 'landscaping-website-design', 'hvac-website-design'];
 
   const corePages = [

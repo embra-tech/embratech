@@ -24,7 +24,7 @@ export const metadata = {
 import Link from 'next/link';
 import Breadcrumb from '../../components/Breadcrumb';
 
-const LAST_UPDATED = 'October 21, 2026';
+const LAST_UPDATED = 'October 24, 2026';
 
 // 2026-10-21: the page-level BreadcrumbList was removed; <Breadcrumb> already outputs an identical one.
 // Analytics, cookie, third-party and retention sections rewritten to match what the site's code

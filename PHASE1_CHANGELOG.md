@@ -407,3 +407,21 @@ Sitemap status in Search Console before this change: submitted Oct 1, last read 
 - Sitemap: homepage, Local SEO, privacy and the five edited industry pages dated 2026-10-21.
 
 **After deploy:** request indexing for `/services/local-seo` and `/services/web-design`; verify the pages live.
+
+---
+
+## R. Published and submitted (2026-10-24)
+
+Live check after the owner's push: 38/38 pages OK; no page has more than one BreadcrumbList; no fixed scores in body text outside the homepage and portfolio badges; Local SEO, handyman, privacy, guide links and case-study H2s live; fonts correct.
+
+Search Console, 24 Oct:
+| URL | Status before | Action |
+|---|---|---|
+| /services/local-seo | Discovered, currently not indexed (was "unknown" on Oct 20) | Indexing requested |
+| /services/web-design | URL is unknown to Google (shown as "Discovered" on Oct 20) | Indexing requested |
+| /niches/web-design-for-handyman-businesses | URL is on Google | Recrawl requested (rewritten page) |
+| /sitemap.xml | Last read Oct 23 | Resubmitted, "Sitemap submitted successfully" |
+
+**Date correction:** this round was dated 2026-10-21 (from the export's file name), but Search Console shows the publish date as Oct 24. The sitemap date and the privacy policy's "Last updated" are now 2026-10-24.
+
+**Deploy:** `git add app/sitemap.js app/privacy/page.jsx PHASE1_CHANGELOG.md`
