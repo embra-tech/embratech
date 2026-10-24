@@ -72,19 +72,13 @@ const SERVICE_SCHEMA = {
   },
 };
 
-const BREADCRUMB_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteConfig.siteUrl}/` },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: `${siteConfig.siteUrl}/services` },
-  ],
-};
+// 2026-10-21: page-level BreadcrumbList removed; the visible <Breadcrumb> in ServicesClient already
+// outputs an identical one.
 
 export default function ServicesPage() {
   return (
     <>
-      <JsonLd data={[SERVICE_SCHEMA, BREADCRUMB_SCHEMA]} />
+      <JsonLd data={[SERVICE_SCHEMA]} />
       <ServicesClient />
     </>
   );

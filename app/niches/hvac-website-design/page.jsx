@@ -102,8 +102,8 @@ export default function NichePage() {
   
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Local SEO Strategy for Heating & Cooling Contractors</h2>
-          <p style={{ marginBottom: '20px' }}>Dominating local search in HVAC requires securing top organic rankings for high-intent queries including "AC repair near me," "furnace replacement contractor," "heat pump installation," and "ductless mini-split specialist."</p>
-          <p style={{ marginBottom: '20px' }}>We engineer semantic content silos that cleanly separate cooling systems, heating equipment, indoor air quality (IAQ), and commercial refrigeration. Each silo is marked up with structured HVACBusiness and Service schema, and supported by localized service area pages targeting neighboring communities. Explore our complete organic optimization methodology in our <Link href="/services/local-seo" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Local SEO Services</Link> documentation.</p>
+          <p style={{ marginBottom: '20px' }}>Local search for HVAC contractors revolves around phrases like "AC repair near me," "furnace replacement," "heat pump installation" and "ductless mini-split," and demand swings with the weather, so pages need to be ready before each season starts.</p>
+          <p style={{ marginBottom: '20px' }}>We give cooling, heating, heat pumps, indoor air quality and commercial work their own clear pages, add HVACBusiness and Service structured data, and add area pages only where you have real local work to show. For a step-by-step plan, read our <Link href="/blog/hvac-local-seo" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>HVAC local SEO guide</Link>, or see our <Link href="/services/local-seo" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>local SEO service</Link>.</p>
   
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Technical Superiority: Next.js vs. Bloated Template Sites</h2>

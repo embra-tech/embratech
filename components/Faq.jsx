@@ -12,7 +12,7 @@ const FAQ_SETS = {
       q: 'Will my website be mobile responsive and fast?',
       a: (
         <>
-          Yes, every website we build is mobile-first and engineered for sub-second loading, averaging 96/100 on Google PageSpeed Insights and meeting Core Web Vitals.{' '}
+          Yes, every website we build is mobile-first and built to load quickly. Each case study links to the client site&apos;s live PageSpeed report, so you can check the results yourself.{' '}
           <a
             href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.embratechnologies.org%2F"
             target="_blank"

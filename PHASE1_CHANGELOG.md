@@ -372,3 +372,38 @@ The sitemap showed old dates for changed pages (web-design and local-seo 2026-10
 Sitemap status in Search Console before this change: submitted Oct 1, last read Oct 16, Success, 38 discovered pages. Resubmit after deploy.
 
 **Deploy:** `git add app/sitemap.js PHASE1_CHANGELOG.md`
+
+---
+
+## Q. Search Console analysis and four-part content and cleanup round (2026-10-21, owner requested)
+
+**Search Console export analysed** (handyman page only, Oct 4–10 vs Oct 11–17, web search):
+- Impressions 127 to 5 (US 117 to 1); clicks 0 and 0. 75 of 82 queries were "website design for handyman [city]" at 1–3 impressions each; 94% desktop.
+- Reading: a one-week burst of templated city queries, consistent with automated rank-checking or crawlers rather than buyer demand (not provable). The fall began before the Oct 13 changes.
+- Consequence: the handyman rewrite targets the national buyer phrases in the data (handyman website design; affordable web design for handyman; handyman website builder; website designers for handyman business) and answers city searches in an FAQ. No city pages.
+
+**1. Local SEO page** (`app/services/local-seo/page.jsx`): copy rewritten, layout unchanged. Removed "ensure" Map Pack, "dominate", review-rating aggregation and the "Yes" to a page per city. Added Google's local ranking guidance, links to the local SEO and HVAC guides, and 5 FAQs (timing, no Map Pack guarantee, city pages, what we need, pricing via free review and Care Plan). FAQ questions now use H3.
+
+**2. Handyman page** (`app/niches/web-design-for-handyman-businesses/page.jsx`):
+- Search title "Handyman Website Design: Custom Sites From $700"; H1 "Handyman Website Design for Small Repair Businesses".
+- Pricing aligned with the tree page and /pricing ($700 split, or $600 paid in full).
+- Removed the unsourced "65% mobile" statistic, the fixed 98/100 and 99/100 scores, hype, and city pages for every town.
+- 6 FAQs, including handymen in other cities, an affordable option, and SEO for handyman and drywall businesses.
+- Corrected the client domain in the preview card to alaskafastfixhandyman.com.
+
+**3. Privacy policy** (`app/privacy/page.jsx`, last updated October 21, 2026), matching the code:
+- Removed the inaccurate Google Analytics 4 statements.
+- Describes the `embra_session` cookie and browser storage keys.
+- Describes our own visitor analytics in Axiom: pages viewed, previous on-site page, visible time, country and city, browser and device, shortened IP.
+- Contact-form copies stored in Axiom with the session ID.
+- Vercel Analytics and Speed Insights described as cookieless.
+- Owner action: set an Axiom retention period and add it to section 6.
+
+**4. Cleanup**
+- Duplicate breadcrumb data removed from 7 pages: privacy, terms, about, contact, pricing, services, and niches (whose copy disagreed with the visible breadcrumb). Unused imports removed.
+- Guide links added: auto body page to `/blog/auto-body-shop-marketing`; HVAC page to `/blog/hvac-local-seo`; tree page to `/blog/what-tree-service-website-needs`; Local SEO page to both SEO guides. The auto body and HVAC search sections were also reworded (no "dominating", no area-page clusters).
+- Remaining fixed scores in body text removed: auto body caption and text (97/100, "dominant local footprint"), landscaping caption and text (99/100), and the homepage FAQ ("averaging 96/100 … meeting Core Web Vitals"). The homepage "verify our own live score" link is kept by owner decision.
+- Case-study section labels (Challenge, Approach, Deep Dive, Tech Stack, Results) are now `<h2>`; `h2.cs-col-label` in `globals.css` keeps the same look.
+- Sitemap: homepage, Local SEO, privacy and the five edited industry pages dated 2026-10-21.
+
+**After deploy:** request indexing for `/services/local-seo` and `/services/web-design`; verify the pages live.

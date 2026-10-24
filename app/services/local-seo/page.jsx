@@ -5,15 +5,19 @@ import Cta from '../../../components/Cta';
 import JsonLd from '../../../components/JsonLd';
 import siteConfig from '../../../lib/site-config';
 
+// 2026-10-21: copy rewritten (owner gave full permission). Removed promises nobody can keep
+// ("ensure" Map Pack placement, "dominate", review-rating markup, "Yes" to a page per city) and
+// added honest FAQs. Layout and styling unchanged.
+
 export const metadata = {
   alternates: { canonical: '/services/local-seo' },
   title: 'Local SEO Services for Home Service Businesses',
   description:
-    'Dominate local search results. We optimize your Google Business Profile, fix NAP consistency, and build service-area pages to generate more leads.',
+    'Local SEO for plumbers, HVAC, roofing, tree service and handyman businesses: Google Business Profile, service pages and consistent listings. Start with a free review.',
   openGraph: {
     title: 'Local SEO Services for Home Service Businesses | Embra',
     description:
-      'Dominate local search results. We optimize your Google Business Profile, fix NAP consistency, and build service-area pages to generate more leads.',
+      'Local SEO for plumbers, HVAC, roofing, tree service and handyman businesses: Google Business Profile, service pages and consistent listings. Start with a free review.',
     url: `${siteConfig.siteUrl}/services/local-seo`,
     images: [
       {
@@ -29,34 +33,46 @@ export const metadata = {
 const SEO_FEATURES = [
   {
     title: 'Google Business Profile Optimization',
-    desc: 'Your Google Business Profile (GBP) is arguably the most important asset for local visibility. We claim, verify, and fully optimize your profile to ensure you appear in the highly coveted "Local Map Pack." This includes updating your business hours, selecting the exact correct primary and secondary categories, uploading high-quality photos, and responding to reviews. We also help you implement a strategy for continually generating new reviews, signaling to Google that your business is active, trusted, and relevant to local searchers.',
-    points: ['Claiming and verification', 'Category optimization', 'Review generation strategies', 'Ongoing profile updates'],
+    desc: 'For most trades, the Business Profile brings in more calls than the website. We help you claim and verify it (Google runs verification and may need your input), choose accurate primary and secondary categories, list each service, keep hours current and add real job photos. We also set up a simple way to ask every happy customer for a review. Google decides who appears in the Map Pack, and distance from the searcher is part of that, so we work on what you can influence: relevance, completeness and steady reviews.',
+    points: ['Claiming and verification support', 'Accurate categories and services', 'Review requests that follow Google\'s rules', 'Regular photo and profile updates'],
   },
   {
-    title: 'LocalBusiness Schema Markup',
-    desc: 'Search engines are smart, but they still need structured data to understand exactly who you are, what you do, and where you do it. We implement comprehensive LocalBusiness JSON-LD schema markup directly into the code of your website. This hidden code speaks directly to search engines, explicitly detailing your business name, address, phone number, operating hours, service area, and customer ratings. This technical foundation prevents confusion and significantly boosts your chances of showing up for hyper-local queries.',
-    points: ['Advanced JSON-LD implementation', 'Service area specification', 'Review rating aggregation', 'Direct search engine communication'],
+    title: 'Structured Data (Schema Markup)',
+    desc: 'We add LocalBusiness structured data to your website that matches what visitors can see: business name, phone number, hours, service area and, where you have one, your address. It helps search engines read your details consistently and connect your website to your business. Structured data does not raise rankings by itself, and we don\'t add star-rating markup for reviews you host about yourself, because Google doesn\'t show it.',
+    points: ['LocalBusiness structured data', 'Service area and hours', 'Matches your visible details', 'Checked with Google\'s Rich Results Test'],
   },
   {
-    title: 'NAP Consistency & Digital Identity',
-    desc: 'NAP stands for Name, Address, and Phone number. For local SEO to be effective, your NAP must be perfectly consistent across the entire web-on your website, your GBP, Yelp, Angi, local directories, and social media. Inconsistent information confuses search engines and degrades trust, severely harming your rankings. We conduct a thorough audit of your digital identity, claiming profiles on relevant directories and correcting any mismatched data. This solidifies your digital footprint and establishes undeniable local authority.',
-    points: ['Comprehensive directory audits', 'Correction of mismatched data', 'Citation building in niche directories', 'Unified digital identity management'],
+    title: 'Consistent Business Details (NAP)',
+    desc: 'NAP stands for name, address and phone number. When these differ between your website, your Google profile and directories like Yelp, Angi or the BBB, it muddies the picture of who you are for customers and for Google. We audit where your business is listed, fix mismatched details, and add complete profiles on the directories that matter for your trade, with one consistent description everywhere.',
+    points: ['Listing audit', 'Fixing mismatched details', 'Relevant trade directories', 'One consistent business description'],
   },
   {
-    title: 'Dedicated Service-Area Pages',
-    desc: 'If you serve multiple cities or counties, trying to rank for all of them on just your homepage is nearly impossible. We build dedicated, hyper-targeted service-area pages (location landing pages) for each distinct area you operate in. These pages feature localized content, specific customer testimonials from that area, and optimized headings tailored to local search terms (e.g., "Emergency Plumber in Brooklyn" vs "Emergency Plumber in Queens"). This expansion strategy casts a wider net, capturing leads from surrounding towns.',
-    points: ['Custom location landing pages', 'Localized on-page content', 'Targeted heading structures', 'Expanded geographical reach'],
+    title: 'Service and Area Pages That Earn Their Place',
+    desc: 'Google ranks pages, not businesses, so each core service (drain cleaning, AC repair, tree removal) deserves its own clear page. For the towns you serve, we add pages only where there is something real to say: jobs you have done there, local conditions and reviews from local customers. Copying one page and swapping the town name tends to backfire, and Google\'s spam policies treat that pattern as doorway pages.',
+    points: ['One page per core service', 'Town pages backed by real local work', 'Clear headings and internal links', 'No copied city-swap pages'],
   },
 ];
 
 const SEO_FAQS = [
   {
     q: 'How long does local SEO take to work?',
-    a: 'Local SEO is a marathon, not a sprint. While technical fixes (like schema markup) and GBP optimization can show improvements in as little as 30 to 60 days, establishing strong authority and consistently ranking in the top 3 of the map pack for competitive terms usually takes 3 to 6 months of sustained effort. The exact timeline depends on your starting point, your competition, and the size of your service area.',
+    a: 'Fixes to your Google Business Profile and website can show results within a few weeks to a few months. Ranking for competitive searches in a busy area usually takes longer and depends on your competition, your reviews, how far searchers are from your business and where you are starting from. We\'ll tell you what we see in the free review rather than promise a date.',
   },
   {
-    q: 'Do I need separate pages for each city I serve?',
-    a: 'Yes, if you want to rank well in those cities. Search engines prefer to show the most relevant result to a user based on their location. Having dedicated service-area pages signals that you specifically cater to that community. Our local SEO strategy includes building and optimizing these pages to capture traffic across your entire service radius, rather than just your immediate zip code.',
+    q: 'Can you guarantee a top-3 spot in the Google Map Pack?',
+    a: 'No, and you should be wary of anyone who does. Google decides local rankings, and one of its three main factors is the distance between the searcher and your business, which nobody can change. What we can do is improve the things Google weighs that you control: how relevant and complete your profile and website are, and how well known and well reviewed your business is.',
+  },
+  {
+    q: 'Do I need a separate page for every city I serve?',
+    a: 'Not necessarily. Start with strong pages for your core services, then add town pages only where you have real local work, reviews or details to show. A handful of genuinely useful town pages beats dozens of copies that only swap the city name.',
+  },
+  {
+    q: 'What do you need from me?',
+    a: 'Access to your Google Business Profile and website, a list of the services you offer and the areas you cover, recent job photos, and a list of past customers you are comfortable asking for reviews. We handle the rest and check in when we need a decision from you.',
+  },
+  {
+    q: 'How is local SEO priced?',
+    a: 'We start with a free review of your local search visibility and then quote the work your profile and website actually need, so you are not paying for tasks you don\'t need. Website clients can also add our $150/month Care Plan for hosting, security, SEO monitoring and content updates.',
   },
 ];
 
@@ -74,7 +90,7 @@ export default function LocalSeoPage() {
           name: siteConfig.brandName,
           url: siteConfig.siteUrl,
         },
-        description: 'Local SEO services including Google Business Profile optimization, LocalBusiness schema, and NAP consistency.',
+        description: 'Local SEO for home service businesses: Google Business Profile optimization, LocalBusiness structured data, consistent business listings and service-area pages.',
         areaServed: { '@type': 'Country', name: 'United States' }, // 2026-10-13 option B: was the old Brooklyn address city
       }
     ]
@@ -94,14 +110,17 @@ export default function LocalSeoPage() {
         </div>
       </section>
 
-      {/* Intro Text to hit word count */}
+      {/* Introduction */}
       <section style={{ padding: '60px 0', borderBottom: '1px solid var(--line-dark)' }}>
         <div className="wrap" style={{ maxWidth: 800, margin: '0 auto', color: 'var(--muted-inv)', fontSize: '1.05rem', lineHeight: 1.7 }}>
           <p style={{ marginBottom: '20px' }}>
-            When a pipe bursts, a roof leaks, or an AC unit breaks down in the middle of summer, homeowners don't spend hours researching-they pull out their phones and search for a local professional right away. If your business doesn't appear at the top of those local search results, specifically in the Google Map Pack, you are losing out on the highest-intent, most profitable leads available. Local SEO (Search Engine Optimization) is the systematic process of improving your visibility for these exact, location-based searches.
+            When a pipe bursts, a roof leaks or an AC unit fails in the middle of summer, homeowners pull out their phones and search for someone nearby. Local SEO is the work that helps your business show up for those searches, both in the map results and in the regular results below them.
           </p>
           <p style={{ marginBottom: '20px' }}>
-            For home service businesses, local SEO is not just about sprinkling keywords on your homepage. It requires a holistic approach that connects your website, your Google Business Profile, and your overall digital identity across the web. We focus heavily on on-page SEO, ensuring your title tags, meta descriptions, and heading hierarchy accurately reflect your services and locations. This clear structure tells Google exactly what queries you should rank for.
+            It isn&apos;t about sprinkling keywords on your homepage. Google&apos;s own <a href="https://support.google.com/business/answer/7091" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>guidance on local ranking</a> names three factors: how relevant your business is to the search, how far it is from the searcher, and how well known it is. We focus on the two you can influence, relevance and prominence, through your Google Business Profile, clear service pages and consistent business details across the web.
+          </p>
+          <p style={{ marginBottom: '20px' }}>
+            Want to see the steps first? Read our free <Link href="/blog/local-seo-guide-for-service-businesses" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>local SEO guide for home service businesses</Link>, or the <Link href="/blog/hvac-local-seo" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>HVAC local SEO guide</Link> if you run a heating and cooling company.
           </p>
           <p>
             Start with a free review of your local search visibility. We look at your website, Google Business Profile and target service area to identify practical next steps. <Link href="/contact" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>Request your local SEO review</Link>. If you also need a new website, explore our <Link href="/services/web-design" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>website design for home service businesses</Link>.
@@ -113,9 +132,9 @@ export default function LocalSeoPage() {
       <section style={{ padding: '80px 0' }}>
         <div className="wrap">
           <div className="section-head " style={{ textAlign: 'center', marginBottom: '56px' }}>
-            <div className="section-badge"><span className="badge-pill">Methodology</span><span className="badge-text">How We Rank You</span></div>
-            <h2>Comprehensive Local SEO Strategies</h2>
-            <p>We handle the technical details so you can focus on serving your customers.</p>
+            <div className="section-badge"><span className="badge-pill">Methodology</span><span className="badge-text">What We Do</span></div>
+            <h2>What Our Local SEO Work Includes</h2>
+            <p>Practical work on the things Google looks at for local results, so you can focus on serving your customers.</p>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
@@ -157,7 +176,7 @@ export default function LocalSeoPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {SEO_FAQS.map((faq) => (
               <div key={faq.q} style={{ padding: '24px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--line-dark)', borderRadius: '12px' }}>
-                <h4 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '8px' }}>{faq.q}</h4>
+                <h3 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '8px' }}>{faq.q}</h3>
                 <p style={{ fontSize: '0.95rem', color: 'var(--muted-inv)', lineHeight: 1.6 }}>{faq.a}</p>
               </div>
             ))}

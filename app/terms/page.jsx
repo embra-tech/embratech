@@ -22,24 +22,15 @@ export const metadata = {
 };
 
 import Link from 'next/link';
-import JsonLd from '../../components/JsonLd';
 import Breadcrumb from '../../components/Breadcrumb';
 
 const LAST_UPDATED = 'October 13, 2026';
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteConfig.siteUrl}/` },
-    { '@type': 'ListItem', position: 2, name: 'Terms of Service', item: `${siteConfig.siteUrl}/terms` },
-  ],
-};
+// 2026-10-21: page-level BreadcrumbList removed; <Breadcrumb> already outputs an identical one.
 
 export default function TermsPage() {
   return (
     <div className="page-shell">
-      <JsonLd data={breadcrumbSchema} />
       <section className="page-hero">
         <div className="wrap">
           <Breadcrumb label="Terms of Service" href="/terms" />

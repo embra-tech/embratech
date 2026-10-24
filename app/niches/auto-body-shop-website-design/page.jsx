@@ -89,7 +89,7 @@ export default function NichePage() {
               />
             </picture>
             <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
-              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Auto Body Project: Tuxford Collision Center Los Angeles, Trust-first hierarchy & 97/100 PageSpeed.</span>
+              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Auto Body Project: Tuxford Collision Center, Los Angeles. Licensing, rating and free towing offer up front.</span>
               <Link href="/portfolio/tuxford-collision" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Read Tuxford Case Study &rarr;</Link>
             </div>
           </div>
@@ -103,12 +103,12 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Real-World Proof: The Tuxford Collision Center Case Study</h2>
           <p style={{ marginBottom: '20px' }}>Our collision repair web design principles were proven through our work with <Link href="/portfolio/tuxford-collision" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Tuxford Collision Center</Link>, a premier auto body facility in Los Angeles, CA. Facing intense competition from franchised collision conglomerates, Tuxford needed a digital presence that highlighted their independent customer advocacy, free towing assistance, and verified craftsmanship.</p>
-          <p style={{ marginBottom: '20px' }}>We built a custom Next.js web application engineered for sub-second mobile loading, achieving a verified 97/100 PageSpeed score and establishing a dominant local footprint. Read the full story in our <Link href="/portfolio/tuxford-collision" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Tuxford Collision Center Case Study</Link>.</p>
+          <p style={{ marginBottom: '20px' }}>We built a fast, mobile-first website that puts the shop&apos;s licensing, Google rating and free towing and estimate offer at the top, with a phone number and quote form on every screen. The case study links to the site&apos;s live PageSpeed report. Read the full story in our <Link href="/portfolio/tuxford-collision" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Tuxford Collision Center Case Study</Link>.</p>
   
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Local SEO Strategy for Collision Centers & Body Shops</h2>
-          <p style={{ marginBottom: '20px' }}>Dominating local search in the auto body sector requires capturing high-value terms like "collision repair near me," "auto body shop," "bumper scratch repair," and "paintless dent removal."</p>
-          <p style={{ marginBottom: '20px' }}>We implement comprehensive LocalBusiness and AutoRepair schema markup, configure precise geolocation data, and optimize landing pages for specific automotive repair specialties. For shops drawing vehicles across multiple zip codes, we build targeted service-area clusters that capture traffic along major commuter corridors. Explore our <Link href="/services/local-seo" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Local SEO Services</Link> for additional details.</p>
+          <p style={{ marginBottom: '20px' }}>Local search for body shops revolves around phrases like "collision repair near me," "auto body shop," "bumper repair" and "paintless dent removal," and many of those calls come through your Google Business Profile and the map results.</p>
+          <p style={{ marginBottom: '20px' }}>We add LocalBusiness and auto repair structured data, give each repair specialty its own clear page, and add area pages only where the shop has real local work to show. For the full playbook, covering your Business Profile, reviews, insurance questions and photo estimates, read our <Link href="/blog/auto-body-shop-marketing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>auto body shop marketing guide</Link>, or see our <Link href="/services/local-seo" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>local SEO service</Link>.</p>
   
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Pricing for Collision Centers</h2>

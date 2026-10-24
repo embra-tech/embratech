@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Breadcrumb from '../../components/Breadcrumb';
 import PageHeader from '../../components/PageHeader';
 import Cta from '../../components/Cta';
-import JsonLd from '../../components/JsonLd';
 import siteConfig from '../../lib/site-config';
 
 export const metadata = {
@@ -113,19 +112,12 @@ const NICHES = [
   },
 ];
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.siteUrl },
-    { '@type': 'ListItem', position: 2, name: 'Industry Pages', item: `${siteConfig.siteUrl}/niches` },
-  ],
-};
+// 2026-10-21: page-level BreadcrumbList ("Home > Industry Pages") removed; it disagreed with the
+// visible <Breadcrumb>, which already outputs the matching one.
 
 export default function NichesPage() {
   return (
     <div className="page-shell">
-      <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
       <section className="page-hero">

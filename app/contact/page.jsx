@@ -46,19 +46,12 @@ const contactSchema = {
   },
 };
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteConfig.siteUrl}/` },
-    { '@type': 'ListItem', position: 2, name: 'Contact', item: `${siteConfig.siteUrl}/contact` },
-  ],
-};
+// 2026-10-21: page-level BreadcrumbList removed; the visible <Breadcrumb> in ContactClient already outputs an identical one.
 
 export default function ContactPage() {
   return (
     <>
-      <JsonLd data={[contactSchema, breadcrumbSchema]} />
+      <JsonLd data={[contactSchema]} />
       <ContactClient />
     </>
   );

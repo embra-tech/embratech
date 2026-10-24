@@ -12,21 +12,23 @@ export default function sitemap() {
   const oct18 = '2026-10-18';         // 8721c96: homepage links, service-page headings and introductions
   const oct19 = '2026-10-19';         // 5cf96f5 tree page; f543429 / f7b6d18 case studies, portfolio, homepage cards, DesignRush link
   const oct20 = '2026-10-20';         // city and About wording
+  const oct21 = '2026-10-21';         // Local SEO + handyman rewrites, industry-page guide links and claims, privacy policy, homepage FAQ
+  const changedOct21 = ['tree-service-website-design', 'web-design-for-handyman-businesses', 'auto-body-shop-website-design', 'landscaping-website-design', 'hvac-website-design'];
 
   const corePages = [
-    { url: baseUrl,                                    lastModified: oct19,         changeFrequency: 'weekly',   priority: 1.0 },
+    { url: baseUrl,                                    lastModified: oct21,         changeFrequency: 'weekly',   priority: 1.0 },
     { url: `${baseUrl}/services`,                      lastModified: oct18,         changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/services/care-plan`,            lastModified: staticLastMod, changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/niches`,                        lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/services/web-design`,           lastModified: oct18,         changeFrequency: 'monthly',  priority: 0.9 },
-    { url: `${baseUrl}/services/local-seo`,            lastModified: oct18,         changeFrequency: 'monthly',  priority: 0.9 },
+    { url: `${baseUrl}/services/local-seo`,            lastModified: oct21,         changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/services/website-integrations`, lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/pricing`,                       lastModified: oct13,         changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/portfolio`,                     lastModified: oct19,         changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/blog`,                          lastModified: oct13,         changeFrequency: 'weekly',   priority: 0.8 },
     { url: `${baseUrl}/contact`,                       lastModified: oct13,         changeFrequency: 'monthly',  priority: 0.8 },
     { url: `${baseUrl}/about`,                         lastModified: oct20,         changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/privacy`,                       lastModified: staticLastMod, changeFrequency: 'yearly',   priority: 0.3 },
+    { url: `${baseUrl}/privacy`,                       lastModified: oct21,         changeFrequency: 'yearly',   priority: 0.3 },
     { url: `${baseUrl}/terms`,                         lastModified: oct13,         changeFrequency: 'yearly',   priority: 0.3 },
   ];
 
@@ -48,7 +50,7 @@ export default function sitemap() {
     'roofing-website-design',
   ].map(slug => ({
     url: `${baseUrl}/niches/${slug}`,
-    lastModified: slug === 'tree-service-website-design' ? oct19 : oct13,
+    lastModified: changedOct21.includes(slug) ? oct21 : oct13,
     changeFrequency: 'monthly',
     priority: 0.8,
   }));

@@ -157,7 +157,7 @@ export default function NichePage() {
 
           <h2 style={headingStyle}>Local SEO for the Services and Areas You Cover</h2>
           <p style={paragraphStyle}>A clear website gives search engines and customers useful information about your business. We plan page titles, headings, service descriptions and internal links around your actual work and service area.</p>
-          <p style={paragraphStyle}>Your Google Business Profile, website and business details should tell a consistent story. Dedicated service or area pages should offer useful, specific information; a page for every town is not automatically the right approach. Explore our <Link href="/services/local-seo" style={linkStyle}>local SEO services</Link> for the broader scope.</p>
+          <p style={paragraphStyle}>Your Google Business Profile, website and business details should tell a consistent story. Dedicated service or area pages should offer useful, specific information; a page for every town is not automatically the right approach. Explore our <Link href="/services/local-seo" style={linkStyle}>local SEO services</Link> for the broader scope, or read our checklist of <Link href="/blog/what-tree-service-website-needs" style={linkStyle}>what every tree service website needs</Link>.</p>
           <p style={paragraphStyle}>Search visibility depends on competition, relevance, authority and other factors. We do not promise a particular Google position.</p>
 
           <h2 style={headingStyle}>Tree-Service Website Pricing</h2>

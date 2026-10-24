@@ -317,7 +317,8 @@ export default function CaseStudyPage({ params }) {
       {/* ── Challenge ────────────────────────────────────────── */}
       <section className="cs-section">
         <div className="wrap cs-two-col">
-          <div className="cs-col-label">{cs.challengeLabel || 'The Challenge'}</div>
+          {/* 2026-10-21: section labels are <h2> (same look via h2.cs-col-label in globals.css) so the page has a real heading structure. */}
+          <h2 className="cs-col-label">{cs.challengeLabel || 'The Challenge'}</h2>
           <div className="cs-col-body">
             {cs.challenge.split(/\n\s*\n/).map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
@@ -330,7 +331,7 @@ export default function CaseStudyPage({ params }) {
       <section className="cs-section cs-section--alt">
         <div className="wrap">
           <div className="cs-approach-header">
-            <div className="cs-col-label">Our Approach</div>
+            <h2 className="cs-col-label">Our Approach</h2>
           </div>
           <div className="cs-approach-grid">
             {cs.approach.map((a, i) => (
@@ -348,7 +349,7 @@ export default function CaseStudyPage({ params }) {
       {cs.deepDive && (
         <section className="cs-section">
           <div className="wrap cs-two-col">
-            <div className="cs-col-label">{cs.deepDiveLabel || 'Deep Dive'}</div>
+            <h2 className="cs-col-label">{cs.deepDiveLabel || 'Deep Dive'}</h2>
             <div className="cs-col-body" dangerouslySetInnerHTML={{ __html: cs.deepDive }} />
           </div>
         </section>
@@ -358,7 +359,7 @@ export default function CaseStudyPage({ params }) {
       {cs.stack && (
         <section className="cs-section cs-section--alt">
           <div className="wrap cs-two-col">
-            <div className="cs-col-label">Tech Stack</div>
+            <h2 className="cs-col-label">Tech Stack</h2>
             <div className="cs-col-body"><p>{cs.stack}</p></div>
           </div>
         </section>
@@ -367,7 +368,7 @@ export default function CaseStudyPage({ params }) {
       {/* ── Results ──────────────────────────────────────────── */}
       <section className="cs-section">
         <div className="wrap cs-two-col">
-          <div className="cs-col-label">{cs.resultsLabel || 'Results'}</div>
+          <h2 className="cs-col-label">{cs.resultsLabel || 'Results'}</h2>
           <div className="cs-col-body">
             <div className="cs-results-grid">
               {cs.results.map((r) => (

@@ -22,24 +22,17 @@ export const metadata = {
 };
 
 import Link from 'next/link';
-import JsonLd from '../../components/JsonLd';
 import Breadcrumb from '../../components/Breadcrumb';
 
-const LAST_UPDATED = 'September 14, 2026';
+const LAST_UPDATED = 'October 21, 2026';
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteConfig.siteUrl}/` },
-    { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: `${siteConfig.siteUrl}/privacy` },
-  ],
-};
+// 2026-10-21: the page-level BreadcrumbList was removed; <Breadcrumb> already outputs an identical one.
+// Analytics, cookie, third-party and retention sections rewritten to match what the site's code
+// actually does (components/DurationTracker.jsx, app/api/track, app/api/lead, Vercel Analytics).
 
 export default function PrivacyPage() {
   return (
     <div className="page-shell">
-      <JsonLd data={breadcrumbSchema} />
       <section className="page-hero">
         <div className="wrap">
           <Breadcrumb label="Privacy Policy" href="/privacy" />
@@ -87,14 +80,15 @@ export default function PrivacyPage() {
               <h2>2. Data We Collect</h2>
               <h3>Information you provide directly</h3>
               <ul>
-                <li><strong>Contact form submissions</strong>, your name, email address, business name, website URL, and the message you write to us.</li>
+                <li><strong>Contact form submissions</strong>, the details you enter, such as your name, email address, phone number, business name, website and the message you write to us.</li>
                 <li><strong>Email correspondence</strong>, any information you include when emailing us at sales@embratechnologies.org.</li>
               </ul>
               <h3>Information collected automatically</h3>
               <ul>
                 <li><strong>Log data</strong>, your IP address, browser type, operating system, referring URL, pages visited, and timestamps. This data is collected by our hosting provider (Vercel) in standard server logs.</li>
-                <li><strong>Analytics data</strong>, aggregated, anonymised traffic and engagement data collected via privacy-first Vercel Analytics. This includes general page counts, referrer domains, and country-level geographic region. No cross-site tracking or personal identifiers are used.</li>
-                <li><strong>Performance data</strong>, Core Web Vitals and page-load metrics collected by Vercel&rsquo;s edge infrastructure. No personal identifiers are attached to this data.</li>
+                <li><strong>Our own visitor analytics</strong>, when you browse the site we record the pages you view, the previous page you viewed on our site, how long each page stays visible on your screen, your approximate location (country and city), your browser and device type, and a shortened version of your IP address with the last part removed. These records are linked by a random session ID stored in a first-party cookie called <code>embra_session</code>, and are stored with our logging provider, Axiom. We use them to understand which pages are useful and how visitors move through the site. We do not track you across other websites.</li>
+                <li><strong>Vercel Analytics</strong>, aggregated page counts, referring websites and country-level location, collected without cookies.</li>
+                <li><strong>Performance data</strong>, Core Web Vitals and page-load metrics collected by Vercel Speed Insights. No personal identifiers are attached to this data.</li>
               </ul>
               <h3>Information we do NOT collect</h3>
               <p>We do not collect payment card details (all payments are processed by Stripe, directly). We do not knowingly collect personal information from children under 13.</p>
@@ -107,7 +101,8 @@ export default function PrivacyPage() {
                 <li><strong>Responding to enquiries</strong>, to reply to contact form submissions and email messages.</li>
                 <li><strong>Providing services</strong>, to deliver the website design, SEO, and digital identity services you have engaged us for.</li>
                 <li><strong>Sending project updates</strong>, to communicate progress, milestones, and deliverables related to your active project.</li>
-                <li><strong>Improving our website</strong>, to understand which pages are most useful and where visitors encounter difficulties, using anonymised analytics data.</li>
+                <li><strong>Improving our website</strong>, to understand which pages are most useful and where visitors encounter difficulties, using the visitor analytics described in section 2.</li>
+                <li><strong>Following up reliably</strong>, a copy of each contact form submission is stored with Axiom, linked to the visit&rsquo;s session ID, so no enquiry is lost if an email fails to arrive.</li>
                 <li><strong>Legal compliance</strong>, to comply with applicable laws and enforce our Terms of Service.</li>
               </ul>
               <p>We do <strong>not</strong> sell, rent, or trade your personal information to third parties. We do not use your data for automated decision-making or profiling that produces legal effects.</p>
@@ -115,12 +110,13 @@ export default function PrivacyPage() {
 
             <section id="cookies">
               <h2>4. Cookies &amp; Tracking</h2>
-              <p>Our website may use the following types of cookies and local storage:</p>
+              <p>Our website uses the following cookies and browser storage:</p>
               <ul>
-                <li><strong>Strictly necessary</strong>, cookies required for the website to function (e.g., CSRF tokens, session identifiers). These cannot be disabled.</li>
-                <li><strong>Analytics</strong>, Google Analytics 4 may set cookies to track anonymous usage patterns. You can opt out via your browser settings or by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</li>
+                <li><strong><code>embra_session</code> (first-party cookie)</strong>, a random ID that groups the pages viewed during your visit and connects a contact form submission to that visit. It does not contain your name or contact details.</li>
+                <li><strong>Browser storage</strong>, small values that remember that you dismissed the cookie notice (<code>embra-cookie-consent</code>), the site theme (<code>embra_theme</code>) and the order of pages in your current visit (<code>embra_nav_seq</code>, cleared when you close the tab).</li>
+                <li><strong>No advertising or cross-site cookies</strong>, we do not use Google Analytics or advertising trackers. Vercel Analytics and Speed Insights work without cookies.</li>
                 </ul>
-              <p>You can control cookie settings through your browser. Disabling cookies may affect website functionality.</p>
+              <p>You can block or delete cookies through your browser settings. The site still works without them; we simply can&rsquo;t group your page views into a visit.</p>
             </section>
 
             <section id="third-parties">
@@ -136,8 +132,11 @@ export default function PrivacyPage() {
                   <a href="https://formsubmit.co/privacy" target="_blank" rel="noopener noreferrer">FormSubmit Privacy Policy</a>.
                 </li>
                 <li>
-                  <strong>Vercel Analytics &amp; Axiom</strong>, used for anonymised performance monitoring and visitor count statistics. No personal identifiers or cross-site tracking cookies are stored. See the{' '}
-                  <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Vercel Privacy Policy</a> and{' '}
+                  <strong>Vercel Analytics &amp; Speed Insights</strong>, cookieless, aggregated page-view and performance measurement. See the{' '}
+                  <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Vercel Privacy Policy</a>.
+                </li>
+                <li>
+                  <strong>Axiom</strong>, stores our own visitor analytics (described in section 2) and a copy of contact form submissions linked to the visit&rsquo;s session ID. IP addresses are shortened before they are stored. See the{' '}
                   <a href="https://axiom.co/privacy" target="_blank" rel="noopener noreferrer">Axiom Privacy Policy</a>.
                 </li>
                 <li>
@@ -156,7 +155,7 @@ export default function PrivacyPage() {
               <ul>
                 <li><strong>Contact form submissions</strong>, retained in our email for up to 3 years from the date of submission, or until you request deletion.</li>
                 <li><strong>Active client project data</strong>, retained for the duration of the project plus 2 years.</li>
-                <li><strong>Analytics data</strong>, Google Analytics retains data per your browser&rsquo;s GA settings (default 14 months).</li>
+                <li><strong>Visitor analytics and form copies stored with Axiom</strong>, kept only as long as needed to understand how the site is used and to follow up on enquiries. You can ask us to delete records linked to your form submission at any time.</li>
                 <li><strong>Server logs</strong>, Vercel retains server logs for up to 30 days.</li>
               </ul>
             </section>

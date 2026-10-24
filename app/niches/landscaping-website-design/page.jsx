@@ -89,7 +89,7 @@ export default function NichePage() {
               />
             </picture>
             <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
-              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Landscaping & Concrete Project: V Vasquez LLC Merced, CA, 99/100 PageSpeed & instant quote flow.</span>
+              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Landscaping & Concrete Project: V Vasquez LLC, Merced, CA. Service catalog with a pre-filled quote form.</span>
               <Link href="/portfolio/vvasquez-handyman" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Read V Vasquez Case Study &rarr;</Link>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Real-World Proof: The V Vasquez Handyman Case Study</h2>
           <p style={{ marginBottom: '20px' }}>We applied our localized service catalog methodology when developing the digital storefront for <Link href="/portfolio/vvasquez-handyman" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>V Vasquez Handyman LLC</Link>, serving Merced, CA. Specializing in lawn care, concrete work, and irrigation maintenance, Victor Vasquez needed an online platform that separated his distinct outdoor trades into clear, navigable offerings.</p>
-          <p style={{ marginBottom: '20px' }}>We structured a mobile-first site featuring dedicated service sections and instant estimate request flows, achieving a verified 99/100 Google PageSpeed score. Read our full <Link href="/portfolio/vvasquez-handyman" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>V Vasquez Handyman Case Study</Link> to inspect our technical execution.</p>
+          <p style={{ marginBottom: '20px' }}>We structured a mobile-first site with a dedicated section for each service and a quote form that pre-selects the service the visitor was viewing; the case study links to its live PageSpeed report. Read our full <Link href="/portfolio/vvasquez-handyman" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>V Vasquez Handyman Case Study</Link> for the details.</p>
   
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Local SEO Strategy for Landscapers and Hardscaping Contractors</h2>

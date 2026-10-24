@@ -22,22 +22,8 @@ export const metadata = {
   },
 };
 
-import JsonLd from '../../components/JsonLd';
-
+// 2026-10-21: page-level BreadcrumbList removed; the visible <Breadcrumb> in PricingClient already
+// outputs an identical one.
 export default function PricingPage() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteConfig.siteUrl}/` },
-      { '@type': 'ListItem', position: 2, name: 'Pricing', item: `${siteConfig.siteUrl}/pricing` },
-    ],
-  };
-
-  return (
-    <>
-      <JsonLd data={schema} />
-      <PricingClient />
-    </>
-  );
+  return <PricingClient />;
 }

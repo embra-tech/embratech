@@ -5,24 +5,63 @@ import Cta from '../../../components/Cta';
 import JsonLd from '../../../components/JsonLd';
 import siteConfig from '../../../lib/site-config';
 
+// 2026-10-21: copy rewritten (owner gave full permission). Search Console (Oct 4-17) showed the
+// page's impressions were mostly "website design for handyman [city]" variants in one week; the
+// copy now targets the national buyer phrases (handyman website design, affordable web design
+// for handyman, handyman website builder) and answers city searches in an FAQ instead of adding
+// city pages. Unsourced stats, fixed PageSpeed numbers and hype removed. Layout unchanged.
+
+const PAGE_DESCRIPTION = 'Affordable handyman website design: custom, mobile-first sites with tap-to-call and photo quote requests. From $700, or $600 paid in full. Free sample first.';
+
 export const metadata = {
-  title: 'Handyman Website Design That Wins More Jobs',
+  title: 'Handyman Website Design: Custom Sites From $700',
   alternates: { canonical: '/niches/web-design-for-handyman-businesses' },
-  description: 'Custom-coded Next.js websites built to establish instant trust, showcase versatile trades, and convert local homeowners into booked jobs.',
+  description: PAGE_DESCRIPTION,
   openGraph: {
-    title: 'Handyman Website Design That Wins More Jobs | Embra',
-    description: 'Custom-coded Next.js websites built to establish instant trust, showcase versatile trades, and convert local homeowners into booked jobs.',
+    title: 'Handyman Website Design: Custom Sites From $700 | Embra',
+    description: PAGE_DESCRIPTION,
     url: `${siteConfig.siteUrl}/niches/web-design-for-handyman-businesses`,
     images: [
       {
         url: siteConfig.ogImage,
         width: siteConfig.ogImageWidth,
         height: siteConfig.ogImageHeight,
-        alt: 'Handyman Website Design That Wins More Jobs | Embra',
+        alt: 'Handyman website design by Embra Technologies',
       },
     ],
   },
 };
+
+const link = { color: 'var(--primary-bright)', textDecoration: 'underline' };
+const h2 = { color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' };
+const para = { marginBottom: '20px' };
+
+const FAQS = [
+  {
+    q: 'Do you design websites for handymen in my city?',
+    a: 'Yes. We work remotely with handyman businesses across the United States, so your location doesn\'t matter. Your website is built around the towns you actually serve, with your service area shown clearly near the top so local homeowners can see you cover them.',
+  },
+  {
+    q: 'Is there an affordable option for a one-person handyman business?',
+    a: 'Yes. Our Starter website is $700 total with split payments, or $600 paid in full. It includes a custom homepage plus 2 inner pages, tap-to-call buttons, a quote request form and on-page SEO basics. You own the website, and there is no long-term contract.',
+  },
+  {
+    q: 'I offer dozens of different repair services. How do I show them all without confusing visitors?',
+    a: 'We group your work into 4 to 6 clear categories, such as carpentry and trim, drywall and paint, fixtures and hardware, minor plumbing and electrical, and exterior maintenance. Each category describes the kinds of jobs you take on, so a homeowner looking for drywall repair can confirm quickly that you do it.',
+  },
+  {
+    q: 'Can my website bring in work before I have many Google reviews?',
+    a: 'It can help. Clear services, real photos of your work, your insurance and any licenses that apply in your state, and an easy way to send a photo for a quote all build confidence. Reviews still matter, so we also set up a simple way to ask every happy customer for one.',
+  },
+  {
+    q: 'Do you also do SEO for handyman and drywall businesses?',
+    a: 'Yes. Our local SEO service covers your Google Business Profile, clear service pages and consistent business details across directories, for general handymen and specialty trades like drywall, carpentry or painting. It starts with a free review of where you stand today.',
+  },
+  {
+    q: 'How long does it take to design and launch a handyman website?',
+    a: 'Most projects take 2 to 3 weeks from the first call to launch, depending on how quickly photos and details are ready. Before you commit to anything, we design a free custom homepage sample within 24 hours.',
+  },
+];
 
 export default function NichePage() {
   // 2026-10-13 Phase 1: removed a second BreadcrumbList (Home > Services > page) that
@@ -31,11 +70,11 @@ export default function NichePage() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Web Design for Handyman Businesses",
+      "name": "Handyman Website Design",
       "serviceType": "Web Design for Handyman Businesses",
       "provider": { "@id": `${siteConfig.siteUrl}/#localbusiness` },
       "areaServed": { "@type": "Country", "name": "United States" },
-      "description": "Custom-coded Next.js websites built to establish instant trust, showcase versatile trades, and convert local homeowners into booked jobs."
+      "description": PAGE_DESCRIPTION
     }
   ];
 
@@ -44,25 +83,23 @@ export default function NichePage() {
       <JsonLd data={jsonLdData} />
       <section className="page-hero">
         <div className="wrap">
-          <Breadcrumb label="Web Design for Handyman Businesses" href="/niches/web-design-for-handyman-businesses" />
+          <Breadcrumb label="Handyman Website Design" href="/niches/web-design-for-handyman-businesses" />
           <PageHeader
             pill="Industry Web Design"
-            title={<>Web Design for Handyman Businesses</>}
-            sub="Custom-coded Next.js websites built to establish instant trust, showcase versatile trades, and convert local homeowners into booked jobs."
+            title={<>Handyman Website Design for Small Repair Businesses</>}
+            sub="Websites for handymen across the US: clear services, real photos and easy ways for homeowners to call or send a photo for a quote. Starter: $700 total with split payments, or $600 paid in full."
           />
         </div>
       </section>
 
       <section className="location-content" style={{ padding: '80px 0' }}>
         <div className="wrap text-content " style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
-          
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>The Core Challenge in Handyman Web Design: Overcoming Low-Trust Perceptions</h2>
-          <p style={{ marginBottom: '20px' }}>Homeowners face a difficult dilemma whenever they need minor home repairs, carpentry, drywall patching, or fixture replacement: should they call a high-priced specialized contractor, or hire an independent handyman? In most cases, homeowners want the affordability, responsiveness, and versatility of a local handyman. However, their single greatest hesitation is trust. Handyman services require inviting an unfamiliar tradesperson directly into someone's home, often around their family and valuable property.</p>
-          <p style={{ marginBottom: '20px' }}>When an independent handyman relies on a generic, outdated template or an incomplete Facebook business page, potential clients subconsciously assume the worst-unreliable scheduling, poor communication, or lack of proper insurance. Conversely, a custom-engineered, lightning-fast digital storefront immediately establishes the credibility of an established, professional operation.</p>
-          <p style={{ marginBottom: '20px' }}>At Embra Technologies, we build custom Next.js websites tailored specifically to the operational realities of handyman businesses. We engineer every page to alleviate homeowner skepticism, showcase verified craftsmanship through high-resolution galleries, and eliminate every barrier standing between a homeowner with a broken fixture and your phone line.</p>
-  
 
-          
+          <h2 style={h2}>What a Handyman Website Needs to Do</h2>
+          <p style={para}>When something small breaks at home, a sticking door, a running toilet or a hole in the drywall, most homeowners would rather call a local handyman than a specialist contractor. Their biggest hesitation is trust: they are inviting someone they haven&apos;t met into their home.</p>
+          <p style={para}>A good handyman website answers that hesitation quickly. It shows the jobs you take on, real photos of your work, your insurance and any licenses that apply in your state, what customers say about you, and the fastest way to reach you. An outdated template or a half-finished Facebook page leaves homeowners guessing.</p>
+          <p style={para}>We build custom websites for handyman businesses around those questions, so a homeowner with a broken fixture can see within seconds that you do the job, that you&apos;re trustworthy, and how to get on your schedule.</p>
+
           {/* Visual Showcase Card */}
           <div data-preview-card="true" style={{ margin: '48px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.02)' }}>
             <div style={{ background: 'rgba(0,0,0,0.5)', padding: '12px 18px', display: 'flex', alignItems: 'center', gap: '12px', borderBottom: '1px solid var(--line-dark)' }}>
@@ -72,7 +109,7 @@ export default function NichePage() {
                 <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#27c93f', display: 'inline-block' }} />
               </div>
               <div style={{ flex: 1, background: 'rgba(255,255,255,0.06)', borderRadius: '6px', padding: '4px 12px', fontSize: '0.82rem', color: 'var(--muted-inv)', fontFamily: 'monospace' }}>
-                alaskafastfix.com
+                alaskafastfixhandyman.com
               </div>
             </div>
             <picture>
@@ -89,38 +126,33 @@ export default function NichePage() {
               />
             </picture>
             <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
-              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Handyman Project: Alaska Fast Fix Handyman LLC, Sub-second mobile conversion architecture.</span>
+              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live handyman project: Alaska Fast Fix Handyman. Tap-to-call on every page and a clear service-area section.</span>
               <Link href="/portfolio/alaska-fast-fix" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Read Alaska Fast Fix Case Study &rarr;</Link>
             </div>
           </div>
 
-<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Conversion Architecture: How We Structure Handyman Websites for Maximum Calls</h2>
-          <p style={{ marginBottom: '20px' }}>A successful handyman website cannot simply be an online business card; it must function as a relentless lead-generation engine. Most homeowners searching for repair work are dealing with an active inconvenience-a door that won't latch, a running toilet, rotted exterior trim, or a drywall hole left by a plumbing leak. They want immediate answers, transparent expectations, and effortless ways to get on your schedule.</p>
-          <p style={{ marginBottom: '20px' }}>To maximize lead generation, we implement a conversion-focused architecture built around three core structural pillars:</p>
-          <p style={{ marginBottom: '20px' }}>1. <strong>Categorized Service Silos with Scope Clarity:</strong> Instead of an overwhelming, unreadable bulleted list of fifty random chores, we organize your skills into clean, logical categories (e.g., Carpentry & Trim, Drywall & Paint Repair, Fixture & Hardware Installation, Minor Plumbing & Electrical Repairs, and Exterior Maintenance). Each category features clear scope descriptions and dedicated quote request CTAs.</p>
-          <p style={{ marginBottom: '20px' }}>2. <strong>Thumb-First Mobile Design:</strong> Over 65% of local repair searches happen on mobile devices. We design sticky contact headers, prominent click-to-call buttons, and direct WhatsApp messaging triggers where users' thumbs naturally rest.</p>
-          <p style={{ marginBottom: '20px' }}>3. <strong>Frictionless Photo-Upload Estimate Forms:</strong> Many homeowners struggle to articulate what needs repair. Our quote forms allow prospective clients to snap a photo on their phone and upload it directly with their inquiry, allowing you to estimate job scopes accurately before ever getting in your truck.</p>
-  
+          <h2 style={h2}>How We Structure a Handyman Website</h2>
+          <p style={para}>Most homeowners looking for repair work are dealing with an annoyance right now. They want to know quickly whether you do the job, roughly what to expect and how to get on your schedule. Every handyman site we build is organized around three things:</p>
+          <p style={para}>1. <strong>Clear service categories:</strong> instead of a long list of fifty chores, your work is grouped into a few clear categories (for example carpentry and trim, drywall and paint, fixtures and hardware, minor plumbing and electrical, exterior maintenance), each with a short description and its own quote button.</p>
+          <p style={para}>2. <strong>Easy contact on a phone:</strong> a contact bar that stays in view, a tap-to-call button, and a text or WhatsApp option if you use one, placed where a thumb naturally reaches.</p>
+          <p style={para}>3. <strong>Photo quote requests:</strong> many homeowners struggle to describe what&apos;s wrong. The quote form lets them snap a photo and send it with their request, so you can judge the job before you drive out.</p>
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Real-World Proof: Case Studies from Our Client Portfolio</h2>
-          <p style={{ marginBottom: '20px' }}>We have partnered with tradespeople across the country to transform their digital presence from an overlooked expense into their primary source of profitable revenue.</p>
-          <p style={{ marginBottom: '20px' }}>For example, when we engineered the digital platform for <Link href="/portfolio/alaska-fast-fix" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Alaska Fast Fix Handyman</Link>, the challenge was addressing a vast geographic service territory where clients needed rapid response times. We built an urgency-driven layout with instant tap-to-call functionality and clear service-boundary maps, achieving a verified 98/100 Google PageSpeed score.</p>
-          <p style={{ marginBottom: '20px' }}>Similarly, for <Link href="/portfolio/vvasquez-handyman" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>V Vasquez Handyman LLC</Link>-a specialist providing lawn care, concrete, and irrigation services in Merced, CA-we replaced a generic template with a structured multi-service catalog that pre-fills quote parameters, delivering a verified 99/100 PageSpeed benchmark.</p>
-  
+          <h2 style={h2}>Handyman Websites We&apos;ve Built</h2>
+          <p style={para}>For <Link href="/portfolio/alaska-fast-fix" style={link}>Alaska Fast Fix Handyman</Link>, many calls are urgent and the service area is large. We put the phone number one tap away on every page and showed the service area near the top, so homeowners know straight away whether the business covers them.</p>
+          <p style={para}>For <Link href="/portfolio/vvasquez-handyman" style={link}>V Vasquez Handyman LLC</Link> in Merced, CA, which does lawn care, concrete and irrigation work, we replaced a generic template with a clear catalog of services and a quote form that pre-selects the service the visitor was viewing.</p>
+          <p style={para}>Each case study links to the site&apos;s live PageSpeed report, so you can check how quickly it loads for yourself.</p>
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Local SEO Strategy: Dominating "Handyman Near Me" Searches</h2>
-          <p style={{ marginBottom: '20px' }}>Ranking at the top of Google for local handyman searches requires more than sprinkling keywords into a paragraph. We build robust technical SEO foundations directly into your site's code, including semantic HTML5 structure, automated XML sitemaps, and full LocalBusiness JSON-LD schema markup configured with your exact service areas and operating hours.</p>
-          <p style={{ marginBottom: '20px' }}>Furthermore, because handymen frequently operate across multiple adjacent municipalities, we design dedicated Service Area Pages (SAPs) targeting specific cities, boroughs, and neighborhoods. To learn more about our comprehensive organic optimization process, explore our dedicated <Link href="/services/local-seo" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Local SEO Services</Link> guide.</p>
-  
+          <h2 style={h2}>Getting Found by Homeowners Near You</h2>
+          <p style={para}>Every handyman website we build includes the search basics: a clear heading structure, a sitemap, and LocalBusiness structured data with your service area and hours. Most local calls come through your Google Business Profile, so a complete, active profile and a steady flow of reviews matter just as much as the website.</p>
+          <p style={para}>If you serve several nearby towns, we add town pages only where there is something real to show, such as jobs you&apos;ve done and reviews from local customers, rather than copying one page and swapping the city name. Learn more about our <Link href="/services/local-seo" style={link}>local SEO service for home service businesses</Link>.</p>
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent, Flat-Rate Pricing for Handyman Contractors</h2>
-          <p style={{ marginBottom: '20px' }}>We believe in straightforward, honest pricing with zero hidden fees, arbitrary retainers, or proprietary platform lock-in. Our website solutions are designed to deliver rapid return on investment for growing home service businesses:</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a quote request form and on-page SEO basics. Offer lots of different jobs? Our Growth plan ($1,000) covers up to 7 pages, plus schema markup and Google Business Profile setup.</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Monthly Care Plan ($150/mo):</strong> Enterprise-grade global edge hosting on Vercel, automated SSL security renewals, regular content and photo updates, monthly Core Web Vitals audits, and local keyword tracking.</p>
-          <p style={{ marginBottom: '20px' }}>Review all package inclusions and options on our comprehensive <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
-  
+          <h2 style={h2}>Pricing for Handyman Websites</h2>
+          <p style={para}>Straightforward pricing, no hidden fees and no platform lock-in:</p>
+          <p style={para}>• <strong>Starter ($700 total with split payments, or $600 paid in full):</strong> a custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a quote request form and on-page SEO basics.</p>
+          <p style={para}>• <strong>Growth ($1,000):</strong> up to 7 pages, for handymen who want separate pages for each type of work, plus structured data and Google Business Profile setup.</p>
+          <p style={para}>• <strong>Care Plan ($150/month, optional):</strong> hosting, security, SEO monitoring, content updates and priority support. Cancel anytime.</p>
+          <p style={para}>See every plan on our <Link href="/pricing" style={link}>pricing page</Link>, or read our guide to <Link href="/blog/website-cost-for-home-service-businesses" style={link}>what a contractor website costs</Link>.</p>
 
-          
           {/* Mid-Content Conversion CTA Box */}
           <div data-mid-cta="true" style={{
             margin: '56px 0',
@@ -131,8 +163,8 @@ export default function NichePage() {
             textAlign: 'center'
           }}>
             <span className="badge-pill" style={{ marginBottom: '16px', display: 'inline-block' }}>24-Hour Free Sample</span>
-            <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '12px', fontWeight: 700 }}>Get More Local Handyman Inquiries Every Week</h3>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '620px', margin: '0 auto 24px', lineHeight: 1.6 }}>Don't let slow, outdated template websites cost you jobs. We design a custom homepage mockup for your handyman business in 24 hours, free with zero commitment.</p>
+            <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '12px', fontWeight: 700 }}>See Your New Handyman Website Before You Pay</h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '620px', margin: '0 auto 24px', lineHeight: 1.6 }}>We design a custom homepage sample for your handyman business within 24 hours, free and with no commitment.</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', alignItems: 'center' }}>
               <Link href="/contact" className="btn-flip btn-primary btn-large">
                 <span className="btn-flip-inner">
@@ -149,32 +181,20 @@ export default function NichePage() {
             </div>
           </div>
 
-<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
+          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
           <div style={{ marginTop: '24px', marginBottom: '40px' }}>
-            
-            <div style={{ marginBottom: '28px' }}>
-              <h3 style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '12px' }}>I offer dozens of different repair services. How do I show them all without confusing visitors?</h3>
-              <p style={{ color: 'var(--text-muted)' }}>We organize your offerings into 4 to 6 broad service umbrellas (such as Carpentry, Drywall, Fixtures, and Maintenance) on your main navigation, and create dedicated sub-sections for specific repairs. This allows visitors searching for a specific job (like drywall repair) to find exact details immediately without wading through unrelated services.</p>
-            </div>
-  
-
-            <div style={{ marginBottom: '28px' }}>
-              <h3 style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '12px' }}>Can I get consistent leads from my website before I have dozens of Google reviews?</h3>
-              <p style={{ color: 'var(--text-muted)' }}>Yes. While Google reviews certainly boost conversion, a modern, blazing-fast website that features proof of licensing, liability insurance coverage, before-and-after project photos, and transparent pricing signals builds tremendous confidence on its own, allowing you to win jobs over established competitors who have slow, broken websites.</p>
-            </div>
-  
-
-            <div style={{ marginBottom: '28px' }}>
-              <h3 style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '12px' }}>How long does it take Embra to design and launch our handyman website?</h3>
-              <p style={{ color: 'var(--text-muted)' }}>Our standard turnaround time is 2 to 3 weeks from initial consultation to public launch. Furthermore, we provide a free custom homepage sample within 24 hours of your initial inquiry so you can evaluate our design quality before making any financial commitment.</p>
-            </div>
-  
+            {FAQS.map((f) => (
+              <div key={f.q} style={{ marginBottom: '28px' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '12px' }}>{f.q}</h3>
+                <p style={{ color: 'var(--text-muted)' }}>{f.a}</p>
+              </div>
+            ))}
           </div>
 
           <div style={{ marginTop: '48px', padding: '32px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid var(--line-dark)' }}>
-            <h3 style={{ color: '#fff', fontSize: '1.35rem', marginBottom: '12px' }}>Ready to Scale Your Contracting Business?</h3>
+            <h3 style={{ color: '#fff', fontSize: '1.35rem', marginBottom: '12px' }}>Ready to Get More Handyman Jobs?</h3>
             <p style={{ fontSize: '1rem', marginBottom: '20px', lineHeight: 1.7 }}>
-              Get a custom-engineered Next.js website starting at just $700 one-time, or request our free 24-hour custom homepage sample with zero upfront commitment.
+              Custom handyman websites from $700 total with split payments, or $600 paid in full. Start with a free homepage sample, ready within 24 hours.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
               <Link href="/contact" style={{ color: 'var(--primary-bright)', textDecoration: 'underline', fontWeight: 600 }}>Request Free 24-Hour Sample &rarr;</Link>
