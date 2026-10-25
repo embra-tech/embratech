@@ -425,3 +425,58 @@ Search Console, 24 Oct:
 **Date correction:** this round was dated 2026-10-21 (from the export's file name), but Search Console shows the publish date as Oct 24. The sitemap date and the privacy policy's "Last updated" are now 2026-10-24.
 
 **Deploy:** `git add app/sitemap.js app/privacy/page.jsx PHASE1_CHANGELOG.md`
+
+---
+
+## S. Top-35 query round (2026-10-25, owner requested)
+
+Source: Search Console export 2026-10-25 (web search, last 3 months, all countries; data 29 Sep–23 Oct). 195 queries, 655 impressions in the query table; US 762 of 854 impressions; 2 clicks (India and Nicaragua), 0 US clicks. The top 35 queries hold 64% of query impressions.
+
+**Grouping of the top 35** (rank in list):
+- A. Auto body marketing (5, 9, 10, 18, 24, 32, 33, 35), positions 17–35: target, via `/blog/auto-body-shop-marketing`
+- B. HVAC SEO (1, 7, 15, 16, 28), positions 36–73: target, via `/blog/hvac-local-seo` plus `/services/local-seo`
+- C. Auto body website design (21, 26, 27), positions 53–57: target, via `/niches/auto-body-shop-website-design`
+- D. Tree service web design (13, 22, 25), positions 7–33: already revised Oct 19; wait for recrawl
+- E. Handyman + city (8, 17, 31), positions 8–16: covered by the handyman FAQ; likely automated traffic
+- F. LA service businesses (2), position 60: target, via `/locations/los-angeles`
+- G. Brand (3, 4, 6, 23): profiles and identity; "embra" is shared with other companies
+- H. Local SEO agencies in other places (11 Juneau, 12 Fairbanks, 14 Airway Heights): not pursued; would imply offices there
+- I. Not our business (19 cloverjet, 20 / 30 / 34 Alaska smart-home integrators, 29 aviation): ignored
+
+**Changes**
+- `lib/blog/auto-body-shop-marketing.js`: expanded around the A queries: collision repair marketing strategy (6 channels), 90-day plan, digital marketing, small budget, offline and referral, measurement, 5 FAQs.
+- `lib/blogData.js`: auto body title "Auto Body Shop Marketing: A 90-Day Plan and Strategy for Collision Shops", search title "Auto Body Shop Marketing Plan & Collision Strategy", new summary, 9 min read. HVAC title "HVAC SEO: How Heating and Cooling Contractors Rank Higher on Google", search title "HVAC SEO Guide for Heating & Cooling Contractors". Both dated 2026-10-25.
+- `lib/blog/hvac-local-seo.js`: intro names HVAC SEO; new section "How to choose an HVAC SEO company" (good signs, red flags, link to the Local SEO service).
+- `app/niches/auto-body-shop-website-design/page.jsx`: title "Auto Body Shop & Collision Repair Website Design"; H1 "Auto Body Shop Website Design for Collision Repair Shops"; new description, schema and breadcrumb; Starter pricing wording aligned ($700 split / $600 full).
+- `app/locations/[city]/page.jsx` and `LocationClient.jsx`: title and H1 "Websites & SEO for Service Businesses in [city]" (was "Dominating Search in [city]"), new description and subtitle.
+- `app/sitemap.js`: city pages and the auto body page dated 2026-10-25.
+
+**After deploy:** request indexing for the two blog posts, the auto body page and the 4 city pages; resubmit the sitemap.
+
+**Deploy:** `git add lib/blog/auto-body-shop-marketing.js lib/blog/hvac-local-seo.js lib/blogData.js app/niches/auto-body-shop-website-design/page.jsx "app/locations/[city]/page.jsx" "app/locations/[city]/LocationClient.jsx" app/sitemap.js PHASE1_CHANGELOG.md`
+
+---
+
+## T. Site-wide content audit, batch 1 (2026-10-25, owner requested)
+
+**Audit of all 38 live pages** (crawl 25 Oct; unique text = share of 8-word phrases found on no other page):
+- **Duplication:** low. Unique text 71–100% per page, except the blog index (38%, article excerpts) and the portfolio (71%, project cards). The only text repeated on 3+ pages is the shared call-to-action box, plus one statistic in 3 articles. Not a risk.
+- **Outdated content:** none. The only flagged years are correct historical references (FTC review rule 2024, INP replacing FID in 2024, 25C credit ending in 2025).
+- **Generic wording:** concentrated in old template pages (hype words per 1,000: plumber 14.4, services 9.8, HVAC 8.8, integrations 8.1, LA 8.0, industries hub 7.8, roofing 7.6, web design 6.3, homepage 5.7). Rewritten pages score 0.
+- **Targeting:** the Services hub H1 ("Everything you need to grow online.") and the web design title did not use the phrases buyers search.
+
+**Fixed in batch 1** (layout and design unchanged):
+- `app/services/web-design/page.jsx`: full copy rewrite. Title "Website Design for Home Service Businesses"; pricing aligned; removed an unsourced statistic, hype, "immune to WordPress hacks" and "color psychology"; links to all 7 industry pages and the cost guide; 5 FAQs (cost, timing, platform, templates, trades); FAQ headings H3.
+- `app/niches/plumber-website-design/page.jsx`: full copy rewrite. Title "Plumber Website Design: Custom Plumbing Websites"; removed the invented "Google data confirms" claim, franchise claims, "pages for every town", the unconfirmed ServiceTitan embed and hype; honest FAQ that Apex is a concept design; pricing aligned.
+- `app/services/ServicesClient.jsx`: H1 "Web Design & Local SEO for Home Service Businesses"; card copy de-hyped; SEO card no longer promises ranking "at the top"; areas section reworded.
+- `components/WhyUs.jsx` (homepage and services): "Custom Built", "Fast on Every Device"; plainer intro. The "Verify our own live score" link and speed claim kept by owner decision.
+- `components/Showcase.jsx`: "real-time overview" corrected to an illustrative preview with sample data; plainer heading.
+- `components/Marquee.jsx`: tagline "Built with Modern, Proven Technology".
+- `components/Services.jsx`: web design card and integrations card de-hyped.
+- `components/Process.jsx`: step 2 text.
+- `app/locations/[city]/LocationClient.jsx` (LA): intro, case study, list and map FAQ rewritten plainly; no zip-code page clusters.
+- `app/sitemap.js`: homepage, services, web design and plumber pages dated 2026-10-25.
+
+**Batch 2 (next):** HVAC, roofing and landscaping industry pages, website integrations, the industries hub, the Chicago section.
+
+**Deploy:** `git add -A` (check `git status` lists only the files in sections S and T).

@@ -22,13 +22,14 @@ export function generateMetadata({ params }) {
   const loc = LOCATIONS.find(l => l.slug === params.city);
   if (!loc) return {};
   const url = `${siteConfig.siteUrl}/locations/${params.city}`;
-  const desc = `Embra Technologies builds high-converting, lightning-fast websites for growing businesses in ${loc.name}. Get a free custom homepage sample today.`;
+  const desc = `Websites and local SEO for service businesses in ${loc.name}: plumbers, HVAC, roofers, tree services, handymen and auto body shops. Free homepage sample in 24 hours.`;
   
   // 2026-10-13 Phase 1: "| Embra" removed here; the root layout's title template adds it.
   // 2026-10-13 (option B): "Agency in X" implied an office there; now "for X businesses".
+  // 2026-10-25: matches the US query "website for service businesses in los angeles" (36 impressions, pos 60).
   const titleText = loc.slug === 'brooklyn'
-    ? 'Website Design & SEO for Brooklyn, NY Businesses'
-    : `Website Design & SEO for ${loc.name} Businesses`;
+    ? 'Websites & SEO for Service Businesses in Brooklyn, NY'
+    : `Websites & SEO for Service Businesses in ${loc.name}`;
 
   const meta = {
     title: titleText,

@@ -5,58 +5,77 @@ import Cta from '../../../components/Cta';
 import JsonLd from '../../../components/JsonLd';
 import siteConfig from '../../../lib/site-config';
 
+// 2026-10-25: copy rewritten (owner gave full permission) to read as specific, current and plain:
+// removed an unsourced statistic, hype ("relentless", "unparalleled", "flawlessly"), the "immune to
+// WordPress hacks" overclaim and "color psychology"; pricing aligned with /pricing; FAQs expanded with
+// the questions buyers ask (cost, timing, trades) and links to every industry page. Layout unchanged.
+
+const PAGE_DESCRIPTION = 'Custom website design for plumbers, HVAC companies, roofers, tree services, handymen and auto body shops. From $700, or $600 paid in full. Free homepage sample first.';
+
 export const metadata = {
   alternates: { canonical: '/services/web-design' },
-  title: 'Custom Web Design for Home Service Businesses',
-  description:
-    'We build custom Next.js websites tailored to home service businesses. Get mobile-first design, conversion optimization, and a 24-hour free sample offer.',
+  title: 'Website Design for Home Service Businesses',
+  description: PAGE_DESCRIPTION,
   openGraph: {
-    title: 'Custom Web Design for Home Service Businesses | Embra',
-    description:
-      'We build custom Next.js websites tailored to home service businesses. Get mobile-first design, conversion optimization, and a 24-hour free sample offer.',
+    title: 'Website Design for Home Service Businesses | Embra',
+    description: PAGE_DESCRIPTION,
     url: `${siteConfig.siteUrl}/services/web-design`,
     images: [
       {
         url: siteConfig.ogImage,
         width: siteConfig.ogImageWidth,
         height: siteConfig.ogImageHeight,
-        alt: 'Embra Technologies Custom Web Design',
+        alt: 'Website design for home service businesses by Embra Technologies',
       },
     ],
   },
 };
 
+const link = { color: 'var(--primary)', textDecoration: 'underline' };
+
 const DESIGN_FEATURES = [
   {
-    title: 'Custom Next.js & React Builds (No WordPress)',
-    desc: 'Unlike template agencies that simply buy a $50 WordPress theme and swap out the logo, we custom-build your website from the ground up using modern technologies like Next.js and React. This means you aren’t weighed down by bloated plugins, slow database queries, or constant security vulnerabilities. A custom build ensures your site loads instantly, scores highly on Google PageSpeed Insights, and provides exactly what your business needs without unnecessary overhead. This foundational speed directly impacts how Google ranks your site and how users perceive your professionalism.',
-    points: ['No bloated plugins or slow themes', 'Sub-second load times', 'Modern Next.js & React architecture', 'Immune to typical WordPress hacks'],
+    title: 'Custom-Built Sites, Not Templates',
+    desc: 'Many contractor websites are a bought theme with the logo swapped in, plus a stack of plugins that need constant updates. We build each site from scratch with Next.js, around the services you actually sell and the areas you actually cover. There are no plugins to keep patching, pages load quickly on a phone, and you own the finished website.',
+    points: ['Built from scratch for your business', 'No plugins to keep updating', 'Fast loading on phones', 'You own the site and its content'],
   },
   {
-    title: 'Mobile-First Design Engineered for Thumbs',
-    desc: 'Over half of all local searches for home service businesses happen on smartphones, often when a customer is in a hurry (like a leaking pipe or a broken AC). Your website must perform flawlessly on a small screen. We design mobile-first, ensuring that tap targets are large enough, menus are easy to navigate, and crucial contact information is always within reach of a user’s thumb. By prioritizing the mobile experience, we reduce bounce rates and capture leads that would otherwise be lost to a competitor with a frustrating, hard-to-use mobile site.',
-    points: ['Optimized for all screen sizes', 'Large, easy-to-tap buttons', 'Sticky contact headers on mobile', 'Fast rendering on mobile networks'],
+    title: 'Designed for Phones First',
+    desc: 'Most people looking for an urgent home repair search on a phone, often while something is leaking, broken or blocking the driveway. We design the phone version first: large buttons, a menu that is easy to use with one thumb, readable text without zooming, and your phone number always within reach. The desktop version is built from there.',
+    points: ['Works on every screen size', 'Large, easy-to-tap buttons', 'Phone number always within reach', 'Readable without zooming'],
   },
   {
-    title: 'Trust Signals Displayed Above the Fold',
-    desc: 'When a homeowner lands on your website, they are looking for reasons to trust you with their property. We strategically place critical trust signals-such as your license numbers, insurance details, years in business, verified customer ratings, and guarantees-"above the fold" (visible without scrolling). This immediately establishes credibility and sets you apart from fly-by-night operators. Trust is the currency of home services, and displaying it prominently is one of the most effective ways to increase your conversion rate from visitor to paying customer.',
-    points: ['License & insurance badges', 'Verified Google reviews', 'Satisfaction guarantees highlighted', 'Professional affiliations displayed'],
+    title: 'Trust Signals Near the Top',
+    desc: 'Homeowners are deciding whether to let a stranger into their home. Near the top of the page we show what helps them decide: your license and insurance details where they apply, years in business, real reviews, photos of your own work, and any guarantee you offer. These answer the first questions before a visitor has to scroll or search.',
+    points: ['License and insurance details', 'Real Google reviews', 'Photos of your own work', 'Your guarantees, if you offer them'],
   },
   {
-    title: 'Relentless Conversion Engineering',
-    desc: 'A beautiful website is useless if it doesn’t ring your phone. We engineer every single page with conversion in mind. Every "fold" or section of your website will have clear, compelling calls-to-action (CTAs). Whether it’s a tap-to-call phone number, a simple quote request form, or a WhatsApp chat button, we make it effortlessly easy for a prospect to contact you. We reduce friction by eliminating unnecessary form fields and clarifying the next steps. The result is a website that doesn’t just look good, but actively works as a 24/7 sales representative for your business.',
-    points: ['Clear calls-to-action on every fold', 'Frictionless quote request forms', 'Tap-to-call phone numbers', 'Strategic color psychology for buttons'],
+    title: 'A Clear Next Step on Every Page',
+    desc: 'A good-looking website still has to make the phone ring. Every section ends with a clear next step: a tap-to-call button, a short quote form or a text option. Forms ask only for what you need to call the customer back, and each service page has its own quote button so requests arrive with the right context.',
+    points: ['Tap-to-call on every page', 'Short quote request forms', 'A quote button on each service', 'Text or WhatsApp option if you use one'],
   },
 ];
 
 const DESIGN_FAQS = [
   {
-    q: 'What platform do you build on?',
-    a: 'We build exclusively using custom code with modern frameworks like Next.js and React. We do not use drag-and-drop builders like Wix, Squarespace, or WordPress. Our approach ensures your website is lightning-fast, highly secure, and tailored precisely to your needs, giving you a significant technical advantage over competitors using slow, bloated templates.',
+    q: 'How much does a website for a home service business cost?',
+    a: 'Our Starter website is $700 total with split payments, or $600 paid in full, for a custom homepage plus 2 inner pages. Growth is $1,000 for up to 7 pages with structured data and Google Business Profile setup, and Pro is $1,500 with an admin dashboard and inquiry management. An optional Care Plan at $150/month covers hosting, security, SEO monitoring and content updates.',
   },
   {
-    q: 'How is your process different from a template agency?',
-    a: 'Template agencies force your business to fit into a pre-made mold, often resulting in slow load times and a generic look. We start with your business goals and custom-code a solution that highlights your unique strengths. Furthermore, we optimize for speed, security, and conversion from day one, rather than trying to fix a broken template later. We also offer a 24-hour free custom homepage sample with no commitment, so you can see the difference before spending a dime.',
+    q: 'How long does it take to build a contractor website?',
+    a: 'Most projects take 2 to 4 weeks from the first call to launch, depending on how many pages you need and how quickly your photos and details are ready. Before you commit to anything, we design a free custom homepage sample within 24 hours.',
+  },
+  {
+    q: 'What platform do you build on?',
+    a: 'We write custom code with Next.js and React rather than using Wix, Squarespace or a WordPress theme. That keeps pages fast and avoids plugin updates. You own the finished website, and there is no long-term contract.',
+  },
+  {
+    q: 'How is this different from a template or a website builder?',
+    a: 'A template makes your business fit a pre-made layout. We start from your services, your service area and the questions your customers ask, then design pages around them. You see a free homepage sample before deciding, so you can judge the difference yourself.',
+  },
+  {
+    q: 'Which trades do you build websites for?',
+    a: 'Home service businesses across the US, including plumbers, HVAC companies, roofers, tree services, handymen, landscapers and auto body shops. Each trade has its own page explaining what its website needs.',
   },
 ];
 
@@ -68,13 +87,13 @@ export default function WebDesignPage() {
       // the visible breadcrumb; <Breadcrumb> below already outputs the matching one.
       {
         '@type': 'Service',
-        serviceType: 'Custom Web Design and Development',
+        serviceType: 'Website Design for Home Service Businesses',
         provider: {
           '@type': 'Organization',
           name: siteConfig.brandName,
           url: siteConfig.siteUrl,
         },
-        description: 'Custom React/Next.js web design built to convert for home service businesses. Mobile-first, fast loading, and optimized for trust and local SEO.',
+        description: PAGE_DESCRIPTION,
         areaServed: { '@type': 'Country', name: 'United States' }, // 2026-10-13 option B: was the old Brooklyn address city
       }
     ]
@@ -99,10 +118,10 @@ export default function WebDesignPage() {
         <div className="wrap" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '20px' }}>
           <div>
             <div style={{ fontSize: '2rem', fontWeight: 800, color: '#fff' }}>
-              $700 <span style={{ fontSize: '1rem', fontWeight: 400, color: 'var(--muted-inv)' }}>Starter one-time</span>
+              $700 <span style={{ fontSize: '1rem', fontWeight: 400, color: 'var(--muted-inv)' }}>Starter with split payments, or $600 paid in full</span>
             </div>
             <div style={{ fontSize: '0.88rem', color: 'var(--muted-inv)', marginTop: '4px' }}>
-              Or choose our all-inclusive Care Plan at $150/mo. View our <Link href="/pricing" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>full pricing</Link> for details.
+              Optional Care Plan at $150/mo for hosting, security, SEO monitoring and updates. View our <Link href="/pricing" style={link}>full pricing</Link> for details.
             </div>
           </div>
           <Link href="/contact" className="btn-flip btn-primary btn-large">
@@ -114,20 +133,30 @@ export default function WebDesignPage() {
         </div>
       </section>
 
-      {/* Intro Text to hit word count */}
+      {/* Introduction */}
       <section style={{ padding: '60px 0', borderBottom: '1px solid var(--line-dark)' }}>
         <div className="wrap" style={{ maxWidth: 800, margin: '0 auto', color: 'var(--muted-inv)', fontSize: '1.05rem', lineHeight: 1.7 }}>
           <p style={{ marginBottom: '20px' }}>
-            In the highly competitive home service industry, your website is often the first impression a homeowner has of your business. If it looks outdated, loads slowly, or is difficult to use on a mobile phone, that prospect will immediately hit the back button and call your competitor. A custom web design is not just a digital brochure; it is a vital business asset engineered to generate trust, capture leads, and drive revenue. We understand the unique challenges faced by plumbers, roofers, HVAC technicians, and landscapers. You need a site that works as hard as you do.
+            For most home service businesses, the website is where a homeowner decides whether to call. If it loads slowly, is hard to use on a phone or doesn&apos;t make clear what you do and where, they go back to the search results and call the next company. A good contractor website answers three questions quickly: do you do this job, can I trust you, and how do I reach you?
           </p>
           <p style={{ marginBottom: '20px' }}>
-            We invite you to experience the difference with our <strong>24-hour free custom homepage sample</strong>. With no commitment and no upfront cost, we will design a custom homepage mockup for your business within one day. This allows you to see our quality of work and envision how your new brand presence will look before you sign any contracts. If you love it, we can move forward with a full build. Check out our <Link href="/portfolio" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>portfolio</Link> to see what we've built for others, and contact us to claim your free sample.
+            We design websites around those questions for each trade we work with. See what that looks like for{' '}
+            <Link href="/niches/plumber-website-design" style={link}>plumbers</Link>,{' '}
+            <Link href="/niches/hvac-website-design" style={link}>HVAC companies</Link>,{' '}
+            <Link href="/niches/roofing-website-design" style={link}>roofers</Link>,{' '}
+            <Link href="/niches/tree-service-website-design" style={link}>tree services</Link>,{' '}
+            <Link href="/niches/web-design-for-handyman-businesses" style={link}>handymen</Link>,{' '}
+            <Link href="/niches/landscaping-website-design" style={link}>landscapers</Link> and{' '}
+            <Link href="/niches/auto-body-shop-website-design" style={link}>auto body shops</Link>.
           </p>
           <p style={{ marginBottom: '20px' }}>
-            Our pricing is transparent and designed to fit businesses at different stages of growth. Our Starter package begins at a highly accessible $700 one-time fee, providing a rock-solid foundation. For businesses looking for ongoing support, hosting, and continuous improvements, our $150/mo Care Plan offers unparalleled value, ensuring your site remains secure, fast, and up-to-date long after launch.
+            Before you pay anything, we design a <strong>free custom homepage sample</strong> for your business within 24 hours, with no commitment. You can judge the work on your own business rather than on someone else&apos;s, and browse our <Link href="/portfolio" style={link}>portfolio</Link> to see live client websites.
+          </p>
+          <p style={{ marginBottom: '20px' }}>
+            Pricing is published, not quoted case by case: the Starter website is $700 total with split payments, or $600 paid in full, and the optional $150/month Care Plan covers hosting, security, SEO monitoring and content updates after launch. Our guide to <Link href="/blog/website-cost-for-home-service-businesses" style={link}>what a contractor website costs</Link> compares the other options on the market.
           </p>
           <p>
-            Need help getting found after launch? Explore our <Link href="/services/local-seo" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>local SEO services for home service businesses</Link>, including Google Business Profile optimization and service-page planning.
+            Need help getting found after launch? Explore our <Link href="/services/local-seo" style={link}>local SEO services for home service businesses</Link>, including Google Business Profile optimization and service-page planning.
           </p>
         </div>
       </section>
@@ -137,8 +166,8 @@ export default function WebDesignPage() {
         <div className="wrap">
           <div className="section-head " style={{ textAlign: 'center', marginBottom: '56px' }}>
             <div className="section-badge"><span className="badge-pill">Features</span><span className="badge-text">How We Build</span></div>
-            <h2>Engineering Trust and Maximizing Conversions</h2>
-            <p>Every aspect of our custom builds is designed to outperform your competition.</p>
+            <h2>What Every Website We Build Includes</h2>
+            <p>The basics a home service website needs to turn visitors into calls and quote requests.</p>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
@@ -180,7 +209,7 @@ export default function WebDesignPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {DESIGN_FAQS.map((faq) => (
               <div key={faq.q} style={{ padding: '24px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--line-dark)', borderRadius: '12px' }}>
-                <h4 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '8px' }}>{faq.q}</h4>
+                <h3 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '8px' }}>{faq.q}</h3>
                 <p style={{ fontSize: '0.95rem', color: 'var(--muted-inv)', lineHeight: 1.6 }}>{faq.a}</p>
               </div>
             ))}

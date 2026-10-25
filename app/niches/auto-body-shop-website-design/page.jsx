@@ -5,20 +5,24 @@ import Cta from '../../../components/Cta';
 import JsonLd from '../../../components/JsonLd';
 import siteConfig from '../../../lib/site-config';
 
+// 2026-10-25: title, description and H1 now use the phrases buyers search for (Search Console, US):
+// "auto body website design", "collision repair website design", "auto body shops website design agency".
+const PAGE_DESCRIPTION = 'Auto body shop and collision repair website design: trust signals up front, photo estimate forms and insurance answers. From $700, or $600 paid in full.';
+
 export const metadata = {
-  title: 'Auto Body Shop Website Design That Builds Trust',
+  title: 'Auto Body Shop & Collision Repair Website Design',
   alternates: { canonical: '/niches/auto-body-shop-website-design' },
-  description: 'Modern, high-trust digital storefronts designed to assist post-accident drivers, streamline estimate uploads, and capture insurance repair jobs.',
+  description: PAGE_DESCRIPTION,
   openGraph: {
-    title: 'Auto Body Shop Website Design That Builds Trust | Embra',
-    description: 'Modern, high-trust digital storefronts designed to assist post-accident drivers, streamline estimate uploads, and capture insurance repair jobs.',
+    title: 'Auto Body Shop & Collision Repair Website Design | Embra',
+    description: PAGE_DESCRIPTION,
     url: `${siteConfig.siteUrl}/niches/auto-body-shop-website-design`,
     images: [
       {
         url: siteConfig.ogImage,
         width: siteConfig.ogImageWidth,
         height: siteConfig.ogImageHeight,
-        alt: 'Auto Body Shop Website Design That Builds Trust | Embra',
+        alt: 'Auto body shop and collision repair website design by Embra Technologies',
       },
     ],
   },
@@ -31,11 +35,11 @@ export default function NichePage() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Auto Body Shop Website Design That Converts at 11 PM",
-      "serviceType": "Auto Body Shop Website Design That Converts at 11 PM",
+      "name": "Auto Body Shop Website Design",
+      "serviceType": "Collision Repair Website Design",
       "provider": { "@id": `${siteConfig.siteUrl}/#localbusiness` },
       "areaServed": { "@type": "Country", "name": "United States" },
-      "description": "Modern, high-trust digital storefronts designed to assist post-accident drivers, streamline estimate uploads, and capture insurance repair jobs."
+      "description": PAGE_DESCRIPTION
     }
   ];
 
@@ -44,11 +48,11 @@ export default function NichePage() {
       <JsonLd data={jsonLdData} />
       <section className="page-hero">
         <div className="wrap">
-          <Breadcrumb label="Auto Body Shop Website Design That Converts at 11 PM" href="/niches/auto-body-shop-website-design" />
+          <Breadcrumb label="Auto Body Shop Website Design" href="/niches/auto-body-shop-website-design" />
           <PageHeader
             pill="Industry Web Design"
-            title={<>Auto Body Shop Website Design That Converts at 11 PM</>}
-            sub="Modern, high-trust digital storefronts designed to assist post-accident drivers, streamline estimate uploads, and capture insurance repair jobs."
+            title={<>Auto Body Shop Website Design for Collision Repair Shops</>}
+            sub="Websites for independent auto body and collision repair shops across the US: licensing, reviews and warranty up front, photo estimate requests and clear insurance answers. Starter: $700 total with split payments, or $600 paid in full."
           />
         </div>
       </section>
@@ -113,7 +117,7 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Pricing for Collision Centers</h2>
           <p style={{ marginBottom: '20px' }}>We provide transparent, flat-rate pricing designed to deliver superior digital performance without lock-in contracts:</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom homepage plus 2 inner pages, built mobile-first with a tap-to-call button, a photo estimate form and on-page SEO basics. Want separate pages for collision repair, paint, dent repair and insurance claims? Our Growth plan ($1,000) covers up to 7 pages, plus schema markup and Google Business Profile setup.</p>
+          <p style={{ marginBottom: '20px' }}>• <strong>Starter ($700 total with split payments, or $600 paid in full):</strong> A custom homepage plus 2 inner pages, built mobile-first with a tap-to-call button, a photo estimate form and on-page SEO basics. Want separate pages for collision repair, paint, dent repair and insurance claims? Our Growth plan ($1,000) covers up to 7 pages, plus schema markup and Google Business Profile setup.</p>
           <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Managed edge hosting on Vercel, automated SSL security renewals, photo gallery updates, Google PageSpeed maintenance, and continuous local search rank tracking.</p>
           <p style={{ marginBottom: '20px' }}>Review all details on our <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
   

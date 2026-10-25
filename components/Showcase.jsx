@@ -119,9 +119,10 @@ export default function Showcase() {
     <section className="showcase-section" id="showcase" aria-labelledby="showcase-heading" ref={sectionRef}>
       <div className="wrap showcase-wrap">
         <div className="section-head reveal-up" style={{ marginBottom: 36 }}>
-          <div className="section-badge"><span className="badge-pill">Live Architecture</span><span className="badge-text">Interactive Ecosystem</span></div>
-          <h2 id="showcase-heading">Engineered for Sub-Second Speed and Conversions.</h2>
-          <p>A real-time overview of how our custom infrastructure accelerates growth, search rankings, and client engagement.</p>
+          {/* 2026-10-25: wording made plain and accurate (the panel shows illustrative sample data, not a real-time feed). */}
+          <div className="section-badge"><span className="badge-pill">How It Works</span><span className="badge-text">Interactive Preview</span></div>
+          <h2 id="showcase-heading">Built for Fast Pages and More Calls.</h2>
+          <p>An illustrative preview of what we build into every site: fast pages, clear calls to action and the search basics Google looks for. The figures shown are sample data.</p>
         </div>
 
         <div className="showcase-box reveal-up" id="showcaseBox">

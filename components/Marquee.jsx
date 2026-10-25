@@ -22,7 +22,7 @@ export default function Marquee() {
   const track = [...ITEMS, ...ITEMS]; // duplicated for a seamless loop
   return (
     <div className="logos-strip">
-      <p className="logos-tagline">Engineered with Industry-Leading Technologies</p>
+      <p className="logos-tagline">Built with Modern, Proven Technology</p>
       <div className="marquee-container">
         <div className="marquee-track">
           {track.map((item, i) => (

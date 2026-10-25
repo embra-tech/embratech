@@ -5,15 +5,15 @@ const ITEMS = [
     icon: <><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></>,
   },
   {
-    title: 'Custom Engineered',
+    title: 'Custom Built',
     text: "Not Squarespace. Not Wix. Not a WordPress theme someone else already has. Every page is written from scratch in React, built specifically for your business and no one else.",
     icon: <><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></>,
   },
   {
-    title: 'Blazing Performance',
+    title: 'Fast on Every Device',
     text: (
       <>
-        Sub-second TTFB, and flawless responsiveness across all devices.{' '}
+        Sub-second server response, and pages that work well on phones, tablets and desktops.{' '}
         <a
           href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.embratechnologies.org%2F"
           target="_blank"
@@ -40,7 +40,7 @@ export default function WhyUs() {
         <div className="section-head reveal-up">
           <div className="section-badge"><span className="badge-pill">Why Embra</span><span className="badge-text">Built to Win</span></div>
           <h2 id="why-heading">Built Around Your Business, Not a Template.</h2>
-          <p>We combine modern design with high-performance engineering to deliver measurable business results.</p>
+          <p>Modern design, fast pages and a clear next step, built around how homeowners choose a contractor.</p>
         </div>
         <div className="why-grid">
           {ITEMS.map((item) => (

@@ -6,7 +6,7 @@ const STEPS = [
   },
   {
     badge: 'Step 02', title: 'Custom UI Design',
-    text: 'Clean, high-converting interactive mockups built around your brand identity and users.',
+    text: 'Clickable mockups of your key pages, built around your brand and the way your customers decide, starting with a free homepage sample.',
     graphic: 'image',
   },
   {

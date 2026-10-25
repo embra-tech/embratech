@@ -11,18 +11,18 @@ function LosAngelesContent() {
   return (
     <>
       <p style={{ marginBottom: '24px' }}>
-        In a market as vast and competitive as Los Angeles, simply having a website is no longer enough. Home service businesses, auto repair shops, plumbers, and contractors face an incredibly dense digital landscape. When an LA resident searches for an "auto body shop near me" or an "emergency plumber," they expect a lightning-fast mobile experience, clear trust signals, and an effortless way to get in touch. Embra Technologies specializes in engineering these exact high-performance websites for Los Angeles businesses, turning raw search traffic into booked local jobs.
+        Los Angeles is one of the most competitive places in the country to run a service business online. When someone in LA searches for an "auto body shop near me" or an "emergency plumber," they compare a few options on their phone in minutes: who looks trustworthy, who covers their neighborhood and who is easiest to reach. Embra Technologies builds websites for service businesses in Los Angeles, from auto body shops to plumbers and contractors, around exactly those questions.
       </p>
       <p style={{ marginBottom: '40px' }}>
-        Traditional agencies often rely on bloated WordPress templates that load slowly, particularly on mobile networks across Southern California. This slow loading speed directly hurts your Google rankings and causes potential customers to bounce to your competitors. We take a different approach. By utilizing the modern Next.js framework, we build custom web applications that load in under a second. We pair this raw speed with aggressive local SEO strategies designed specifically for the LA market-targeting high-value neighborhood searches from Santa Monica to Pasadena, and Silver Lake to the San Fernando Valley.
+        Many service-business websites run on heavy templates that load slowly on a phone, especially on a weak signal. We build custom websites with Next.js that load quickly, then set up the local search basics: a complete Google Business Profile, clear service pages and accurate business details. For a business covering several parts of LA, such as the Westside, the San Fernando Valley or the South Bay, we add area pages only where there are real jobs and reviews to show.
       </p>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Case Study: Tuxford Collision Center</h2>
       <p style={{ marginBottom: '24px' }}>
-        One of our proudest LA partnerships is with <strong>Tuxford Collision Center</strong>, a fully licensed auto body repair shop. When they came to us, they had a major problem: their previous online presence did nothing to build trust when it mattered most. If a driver got into a fender bender on the 405 at 11 PM, they needed a fast, trustworthy shop immediately. Tuxford's old site was slow, clunky on mobile, and lacked the immediate trust signals necessary to win that late-night emergency call.
+        In Los Angeles we built the website for <strong>Tuxford Collision Center</strong>, a licensed auto body repair shop. Its previous site was slow, hard to use on a phone and didn't show what a driver needs to see after an accident: licensing, reviews and what happens next.
       </p>
       <p style={{ marginBottom: '24px' }}>
-        We completely rebuilt their digital identity. We engineered a trust-first hierarchy, placing licensing credentials, their glowing Google rating, and a clear "Free Towing + Free Estimate" guarantee above the fold. We built a conversion-engineered layout where every page fold includes a phone number and an instant quote form, eliminating all decision friction.
+        We rebuilt the site around trust: licensing details, the shop's Google rating and a clear "Free Towing + Free Estimate" offer at the top of the page, with a phone number and a quote form within reach on every screen.
       </p>
       <p style={{ marginBottom: '24px' }}>
         We also set up the local search basics: LocalBusiness structured data and page titles focused on auto body repair in Los Angeles, so Google understands where the shop works. The site's current speed can be checked at any time through the PageSpeed report linked from the case study.
@@ -34,14 +34,14 @@ function LosAngelesContent() {
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why Choose Embra for Your LA Business?</h2>
       <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
         <li><strong>Fast on Phones:</strong> Speed matters to visitors and is one of the signals Google uses. Each case study links to the client site's live PageSpeed report, so you can check it yourself.</li>
-        <li><strong>Hyper-Local Focus:</strong> We don't just target "Los Angeles." We build service-area clusters that target the specific neighborhoods and zip codes where your best customers live.</li>
-        <li><strong>Transparent, Flat-Rate Pricing:</strong> We don't hide our fees. Our comprehensive <Link href="/pricing" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>pricing plans</Link> start at a flat rate of $700 for a starter build, with no surprise agency retainers.</li>
+        <li><strong>Local Detail Where It&apos;s Real:</strong> We cover the neighborhoods you actually serve, adding area pages only where you have jobs and reviews to show, rather than copied pages for every zip code.</li>
+        <li><strong>Published Pricing:</strong> Our <Link href="/pricing" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>pricing plans</Link> start at $700 total with split payments, or $600 paid in full, with no retainers.</li>
       </ul>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Los Angeles Web Design FAQs</h2>
       <div style={{ marginBottom: '24px' }}>
         <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>How do you help LA businesses rank on Google Maps?</h3>
-        <p>We align your website's LocalBusiness schema exactly with your Google Business Profile. We also build location-specific landing pages and ensure your NAP (Name, Address, Phone number) consistency is flawless across your site.</p>
+        <p>We make your website&apos;s business details match your Google Business Profile, keep your name, address and phone number consistent across the web, and help you collect genuine reviews. Distance from the searcher also matters, so nobody can guarantee a map position, but these are the factors you can influence.</p>
       </div>
       <div style={{ marginBottom: '40px' }}>
         <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>Can I see a design before committing?</h3>
@@ -199,9 +199,9 @@ export default function LocationClient({ loc }) {
         <div className="wrap">
           <Breadcrumb label={loc.name} href={`/locations/${loc.slug}`} />
           <PageHeader
-            pill={`Web Design in ${loc.name}`}
-            title={<>Dominating Search in <span className="highlight-text">{loc.name}</span></>}
-            sub={`We help local businesses in ${loc.name} rank higher, load faster, and convert more traffic into paying customers.`}
+            pill={`Web Design & SEO in ${loc.name}`}
+            title={<>Websites &amp; SEO for Service Businesses in <span className="highlight-text">{loc.name}</span></>}
+            sub={`Custom websites and local SEO for plumbers, HVAC companies, roofers, tree services, handymen and auto body shops in ${loc.name}, built by a remote team with US business-hours support.`}
           />
         </div>
       </section>

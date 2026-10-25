@@ -13,27 +13,27 @@ import Link from 'next/link';
 const SERVICES = [
   {
     step: '01', title: 'Custom Website Design & Development',
-    desc: 'Written from scratch in React, no WordPress themes, no drag-and-drop builders. Engineered to load in under a second and built around your customers, not a template.',
+    desc: 'Written from scratch with Next.js and React, without WordPress themes or drag-and-drop builders, and built around your services, your service area and the questions your customers ask.',
     points: [
-      'Written from scratch, no WordPress themes or Wix templates',
-      'Mobile-first, flawless on every device',
-      'Sub-second loads meeting Core Web Vitals',
-      'CMS-ready so your team can edit content',
-      'Conversion-focused layouts and CTAs',
+      'Written from scratch, no themes or templates',
+      'Designed for phones first',
+      'Fast-loading pages',
+      'Admin dashboard on the Pro plan',
+      'A clear next step on every page',
     ],
     link: '/services/web-design',
     linkLabel: 'Explore custom website design',
     icon: <><rect x="3" y="3" width="18" height="18" rx="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></>,
   },
   {
-    step: '02', title: 'Search Engine Optimization (SEO)',
-    desc: 'Technical architecture, keyword targeting, and on-page optimization so your business ranks at the top when customers search.',
+    step: '02', title: 'Local SEO for Home Service Businesses',
+    desc: 'Your Google Business Profile, service pages, structured data and business listings, so homeowners searching for the services you offer in the areas you cover can find you.',
     points: [
-      'Technical SEO audits & semantic HTML structure',
-      'JSON-LD structured data & schema markup',
-      'High-intent keyword targeting & content strategy',
-      'Local search optimization & Google Business Profile',
-      'Ongoing ranking & traffic reporting',
+      'Google Business Profile optimization',
+      'Service pages and structured data',
+      'Consistent business listings',
+      'Technical SEO checks',
+      'Progress reporting in plain language',
     ],
     link: '/services/local-seo',
     linkLabel: 'Explore local SEO services',
@@ -52,8 +52,8 @@ const SERVICES = [
     icon: <><circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" /><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" /></>,
   },
   {
-    step: '04', title: 'Digital Systems & Seamless Integrations',
-    desc: 'Payment gateways, CRM automations, lead capture funnels, and analytics pipelines tailored smoothly to your operations.',
+    step: '04', title: 'Website Integrations',
+    desc: 'Payment, CRM, quote request and analytics connections, set up to fit the way your business already works.',
     points: [
       'Stripe & payment gateway integration',
       'CRM sync & lead funnel automation',
@@ -79,8 +79,8 @@ export default function ServicesClient() {
           <PageHeader
             pill="Services"
             badge="What We Deliver"
-            title={<>Everything you need to <span className="highlight-text">grow online.</span></>}
-            sub="Exactly what it says: web design, SEO, and digital management built around your business, not a template, not a subscription trap, not a monthly fee you can’t cancel."
+            title={<>Web Design &amp; Local SEO for <span className="highlight-text">Home Service Businesses</span></>}
+            sub="Custom websites, local SEO and the integrations that connect them, for plumbers, HVAC companies, roofers, tree services, handymen and auto body shops across the US. Published pricing and no long-term contracts."
           />
         </div>
       </section>
@@ -124,8 +124,8 @@ export default function ServicesClient() {
         <div className="wrap">
           <div className="section-head reveal-up" style={{ textAlign: 'center', marginBottom: '32px' }}>
             <div className="section-badge"><span className="badge-pill">Coverage</span><span className="badge-text">Service Areas</span></div>
-            <h2>Targeted Local Search &amp; Web Development</h2>
-            <p>We build high-converting websites optimized for local visibility across key US metropolitan and regional markets.</p>
+            <h2>Areas We Work In</h2>
+            <p>We work remotely with home service businesses across the US. These pages cover areas where we have client work or local context.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
             {siteConfig.serviceAreas.map((loc) => {

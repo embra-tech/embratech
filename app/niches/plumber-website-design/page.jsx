@@ -5,24 +5,58 @@ import Cta from '../../../components/Cta';
 import JsonLd from '../../../components/JsonLd';
 import siteConfig from '../../../lib/site-config';
 
+// 2026-10-25: copy rewritten (owner gave full permission) to read as specific and accurate: removed an
+// invented "Google data confirms" claim, unsupported franchise comparisons, hype, "pages for every town"
+// and an unconfirmed ServiceTitan embed; pricing aligned with /pricing; honest FAQ about the concept
+// design. Layout and concept image unchanged.
+
+const PAGE_DESCRIPTION = 'Plumber website design for independent plumbing companies: tap-to-call on every page, emergency and scheduled service pages, license details up front. From $700.';
+
 export const metadata = {
-  title: 'Plumber Website Design That Gets Emergency Calls',
+  title: 'Plumber Website Design: Custom Plumbing Websites',
   alternates: { canonical: '/niches/plumber-website-design' },
-  description: 'Sub-second mobile websites engineered for burst pipes, drain cleanings, water heater replacements, and urgent phone call conversions.',
+  description: PAGE_DESCRIPTION,
   openGraph: {
-    title: 'Plumber Website Design That Gets Emergency Calls | Embra',
-    description: 'Sub-second mobile websites engineered for burst pipes, drain cleanings, water heater replacements, and urgent phone call conversions.',
+    title: 'Plumber Website Design: Custom Plumbing Websites | Embra',
+    description: PAGE_DESCRIPTION,
     url: `${siteConfig.siteUrl}/niches/plumber-website-design`,
     images: [
       {
         url: siteConfig.ogImage,
         width: siteConfig.ogImageWidth,
         height: siteConfig.ogImageHeight,
-        alt: 'Plumber Website Design That Gets Emergency Calls | Embra',
+        alt: 'Plumber website design by Embra Technologies',
       },
     ],
   },
 };
+
+const link = { color: 'var(--primary-bright)', textDecoration: 'underline' };
+const h2 = { color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' };
+const para = { marginBottom: '20px' };
+
+const FAQS = [
+  {
+    q: 'How can an independent plumber compete with franchises online?',
+    a: 'Mostly on the basics customers check before they call: a complete Google Business Profile, a steady flow of genuine reviews, a clear page for each service you offer, your license and insurance details, and a phone number that is one tap away on every page. Franchises often have bigger ad budgets, but those basics are where an independent plumber can match or beat them.',
+  },
+  {
+    q: 'What pages should a plumbing website have?',
+    a: 'Besides Home, About and Contact, give each main service its own page: emergency plumbing, drain cleaning, water heater repair and installation, sewer line repair, leak detection and repiping, for example. Each page should say what the job involves, show photos of real work and end with a way to call or request a quote.',
+  },
+  {
+    q: 'Can customers book a plumbing appointment online?',
+    a: 'Yes, if your scheduling tool offers a booking link or embed, such as Calendly. We add it to the relevant pages and check that it still loads quickly on a phone. If you prefer calls for emergencies, we keep the phone number first and offer online booking only for scheduled work.',
+  },
+  {
+    q: 'Is the website shown on this page a real plumbing client?',
+    a: 'No. Apex Plumbing is a concept design we created to show the layout we recommend for plumbers. Our live client projects are in auto body repair, tree service, handyman, landscaping and laundry services, and the same principles apply. Before you commit, we design a free homepage sample for your own plumbing business.',
+  },
+  {
+    q: 'How much does a plumbing website cost?',
+    a: 'Our Starter website is $700 total with split payments, or $600 paid in full, for a custom homepage plus 2 inner pages. Growth is $1,000 for up to 7 pages, enough for separate service pages, plus structured data and Google Business Profile setup. The optional Care Plan is $150/month.',
+  },
+];
 
 export default function NichePage() {
   // 2026-10-13 Phase 1: removed a second BreadcrumbList (Home > Services > page) that
@@ -31,11 +65,11 @@ export default function NichePage() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Plumber Website Design Built for Emergency Searches",
-      "serviceType": "Plumber Website Design Built for Emergency Searches",
+      "name": "Plumber Website Design",
+      "serviceType": "Website Design for Plumbing Companies",
       "provider": { "@id": `${siteConfig.siteUrl}/#localbusiness` },
       "areaServed": { "@type": "Country", "name": "United States" },
-      "description": "Sub-second mobile websites engineered for burst pipes, drain cleanings, water heater replacements, and urgent phone call conversions."
+      "description": PAGE_DESCRIPTION
     }
   ];
 
@@ -44,25 +78,23 @@ export default function NichePage() {
       <JsonLd data={jsonLdData} />
       <section className="page-hero">
         <div className="wrap">
-          <Breadcrumb label="Plumber Website Design Built for Emergency Searches" href="/niches/plumber-website-design" />
+          <Breadcrumb label="Plumber Website Design" href="/niches/plumber-website-design" />
           <PageHeader
             pill="Industry Web Design"
-            title={<>Plumber Website Design Built for Emergency Searches</>}
-            sub="Sub-second mobile websites engineered for burst pipes, drain cleanings, water heater replacements, and urgent phone call conversions."
+            title={<>Plumber Website Design for Independent Plumbing Companies</>}
+            sub="Websites for plumbing companies across the US: tap-to-call on every page, separate pages for emergency and scheduled work, and your license and reviews up front. Starter: $700 total with split payments, or $600 paid in full."
           />
         </div>
       </section>
 
       <section className="location-content" style={{ padding: '80px 0' }}>
         <div className="wrap text-content " style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
-          
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>The Emergency Reality of Modern Plumbing Searches</h2>
-          <p style={{ marginBottom: '20px' }}>Plumbing problems are notorious for striking without warning. A water heater ruptures in a basement, a main sewer line backs up into a ground-floor bathroom, or a frozen pipe bursts behind a drywall partition. In these moments of domestic crisis, homeowners do not browse social media or evaluate design aesthetics-they grab their smartphones and search for an immediate, trustworthy solution.</p>
-          <p style={{ marginBottom: '20px' }}>Google's mobile search data confirms that plumbing queries are among the most immediate, local, and transaction-ready searches in the entire service economy. The homeowner taps the first organic result or map pack listing and expects an instantaneous load.</p>
-          <p style={{ marginBottom: '20px' }}>If your website stalls for several seconds on cellular networks, displays microscopic phone numbers, or requires completing an arduous multi-step form, that frantic caller immediately hits the back button and dials the next plumber on Google. At Embra Technologies, we build custom Next.js websites engineered specifically for emergency plumbing conversion.</p>
-  
 
-          
+          <h2 style={h2}>What a Plumbing Website Needs to Do</h2>
+          <p style={para}>Plumbing work comes in two kinds. Emergencies, like a burst pipe, a backed-up sewer line or a failed water heater, send homeowners straight to their phones to find someone who can come today. Scheduled jobs, like a tankless water heater, repiping or a bathroom remodel, give them time to compare a few companies first.</p>
+          <p style={para}>A plumbing website has to serve both. Emergency callers need the phone number immediately and a clear sign that you handle urgent work. People planning a bigger job need to see your license, insurance, reviews and real photos before they trust you inside their walls and under their floors.</p>
+          <p style={para}>We design plumbing websites around those two journeys, so whichever kind of customer arrives, the next step is obvious.</p>
+
           {/* Visual Showcase Card */}
           <div data-preview-card="true" style={{ margin: '48px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.02)' }}>
             <div style={{ background: 'rgba(0,0,0,0.5)', padding: '12px 18px', display: 'flex', alignItems: 'center', gap: '12px', borderBottom: '1px solid var(--line-dark)' }}>
@@ -94,31 +126,25 @@ export default function NichePage() {
             </div>
           </div>
 
-<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Conversion Architecture for High-Volume Plumbing Operations</h2>
-          <p style={{ marginBottom: '20px' }}>To consistently convert emergency distress calls into booked dispatch appointments, we architect plumbing websites around speed, clarity, and instant accessibility:</p>
-          <p style={{ marginBottom: '20px' }}>1. <strong>Thumb-Targeted Click-to-Call Navigation:</strong> We place bold, tap-to-call phone buttons and dispatch indicators in persistent mobile headers and bottom floating navigation bars, ensuring emergency assistance is always one tap away.</p>
-          <p style={{ marginBottom: '20px' }}>2. <strong>Prominent Licensing and Master Plumber Credentials:</strong> Homeowners are terrified of unlicensed handymen botching complex plumbing infrastructure. We showcase your state license numbers, master plumber credentials, bonded status, and full liability coverage above the fold.</p>
-          <p style={{ marginBottom: '20px' }}>3. <strong>Categorized Emergency vs. Scheduled Service Silos:</strong> We separate urgent emergency calls (Burst Pipes, Slab Leaks, Sewer Backups) from high-ticket scheduled installations (Tankless Water Heaters, Whole-Home Repiping, Water Filtration Systems, Bathroom Remodels), optimizing each pathway for its specific customer intent.</p>
-  
+          <h2 style={h2}>How We Structure a Plumbing Website</h2>
+          <p style={para}>1. <strong>Tap-to-call that never leaves the screen:</strong> a phone button in a header that stays visible on mobile, plus a clear &quot;emergency service&quot; message if you offer it, so an urgent caller never has to hunt for your number.</p>
+          <p style={para}>2. <strong>License, insurance and reviews up front:</strong> your license number where your state requires one, insurance, years in business and recent Google reviews near the top of the page, before the visitor has to scroll.</p>
+          <p style={para}>3. <strong>Emergency and scheduled work kept separate:</strong> urgent services (burst pipes, leaks, sewer backups) and planned installations (tankless water heaters, repiping, water filtration) each get their own clear pages, with the right call to action for each.</p>
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Dominating Local Search: The "Plumber Near Me" Playbook</h2>
-          <p style={{ marginBottom: '20px' }}>Plumbing represents one of the most competitive local search landscapes in North America, with massive private-equity-backed franchises bidding aggressively on pay-per-click ads. Independent plumbing contractors must dominate organic search through superior technical performance and granular localized relevance.</p>
-          <p style={{ marginBottom: '20px' }}>We engineer custom Next.js applications that achieve sub-second server response times, leaving bloated WordPress competitors behind. We implement comprehensive LocalBusiness and Plumber schema markup, structured FAQ schema, and localized service area landing pages targeting every town, borough, and subdivision in your territory. Explore our <Link href="/services/local-seo" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Local SEO Services</Link> to inspect our organic optimization framework.</p>
-  
+          <h2 style={h2}>Getting Found for Plumbing Searches</h2>
+          <p style={para}>Most plumbing calls from search come through Google&apos;s map results and the pages below them. Every plumbing website we build includes clear service pages, a sitemap and LocalBusiness and Plumber structured data with your service area and hours. Your Google Business Profile and steady, genuine reviews matter just as much as the website.</p>
+          <p style={para}>If you serve several towns, we add town pages only where there is something real to show, such as jobs you&apos;ve done and reviews from local customers, rather than copying one page and swapping the town name. Read our <Link href="/blog/local-seo-guide-for-service-businesses" style={link}>local SEO guide for home service businesses</Link>, or see our <Link href="/services/local-seo" style={link}>local SEO service</Link>.</p>
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Integrations That Keep Your Dispatch Schedule Full</h2>
-          <p style={{ marginBottom: '20px' }}>A modern plumbing website must integrate smoothly with your back-office dispatch workflow. We build custom front-ends that integrate directly with scheduling tools, quote request pipelines, and direct messaging channels without slowing down your site.</p>
-          <p style={{ marginBottom: '20px' }}>Whether you utilize FormSubmit for instant email notifications, WhatsApp click-to-chat for mobile inquiries, or third-party CRM booking embeds, we ensure your inbound leads land immediately in your dispatcher's hands. Review our complete capabilities on our <Link href="/services/website-integrations" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Website Integrations</Link> page.</p>
-  
+          <h2 style={h2}>Connecting Your Website to How You Work</h2>
+          <p style={para}>Quote requests can arrive by email the moment they are sent, and customers can text you or message you on WhatsApp if you use it. If your scheduling software offers a booking link or embed, we add it where it helps without slowing the page down. See our <Link href="/services/website-integrations" style={link}>website integrations</Link> page for the options.</p>
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Flat-Rate Pricing for Plumbing Contractors</h2>
-          <p style={{ marginBottom: '20px' }}>We offer honest, upfront pricing designed to give independent plumbing companies an institutional-quality website without monthly retainers or long-term contracts:</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a quote request form and on-page SEO basics. Need more pages, such as separate water heater and drain cleaning pages? Our Growth plan ($1,000) covers up to 7 pages, plus schema markup and Google Business Profile setup.</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Ultra-fast managed edge hosting on Vercel, automated SSL renewals, 24-hour turnaround on text and coupon updates, and ongoing Core Web Vitals performance assurance.</p>
-          <p style={{ marginBottom: '20px' }}>Discover all options on our <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link>.</p>
-  
+          <h2 style={h2}>Pricing for Plumbing Websites</h2>
+          <p style={para}>Published pricing, no long-term contract, and you own the finished website:</p>
+          <p style={para}>&bull; <strong>Starter ($700 total with split payments, or $600 paid in full):</strong> a custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a quote request form and on-page SEO basics.</p>
+          <p style={para}>&bull; <strong>Growth ($1,000):</strong> up to 7 pages, enough for separate water heater, drain cleaning and emergency pages, plus structured data and Google Business Profile setup.</p>
+          <p style={para}>&bull; <strong>Care Plan ($150/month, optional):</strong> hosting, security, SEO monitoring, content updates and priority support. Cancel anytime.</p>
+          <p style={para}>See every plan on our <Link href="/pricing" style={link}>pricing page</Link>, or read our guide to <Link href="/blog/website-cost-for-home-service-businesses" style={link}>what a contractor website costs</Link>.</p>
 
-          
           {/* Mid-Content Conversion CTA Box */}
           <div data-mid-cta="true" style={{
             margin: '56px 0',
@@ -129,8 +155,8 @@ export default function NichePage() {
             textAlign: 'center'
           }}>
             <span className="badge-pill" style={{ marginBottom: '16px', display: 'inline-block' }}>24-Hour Free Sample</span>
-            <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '12px', fontWeight: 700 }}>Capture High-Intent Emergency Plumbing Searches</h3>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '620px', margin: '0 auto 24px', lineHeight: 1.6 }}>When pipes burst or water heaters fail, customers won't wait for a slow website. See what a sub-second Next.js plumbing website looks like for your business.</p>
+            <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '12px', fontWeight: 700 }}>See Your Plumbing Website Before You Pay</h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '620px', margin: '0 auto 24px', lineHeight: 1.6 }}>We design a custom homepage sample for your plumbing company within 24 hours, free and with no commitment.</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', alignItems: 'center' }}>
               <Link href="/contact" className="btn-flip btn-primary btn-large">
                 <span className="btn-flip-inner">
@@ -147,32 +173,20 @@ export default function NichePage() {
             </div>
           </div>
 
-<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
+          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
           <div style={{ marginTop: '24px', marginBottom: '40px' }}>
-            
-            <div style={{ marginBottom: '28px' }}>
-              <h3 style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '12px' }}>How can an independent plumbing business outrank large national franchises online?</h3>
-              <p style={{ color: 'var(--text-muted)' }}>National plumbing franchises typically operate sluggish, template-driven corporate websites that struggle with mobile PageSpeed scores. By deploying a custom-coded Next.js website that loads in under one second, paired with hyper-local neighborhood landing pages and genuine customer reviews, independent plumbers can regularly outrank massive corporate brands in local map packs.</p>
-            </div>
-  
-
-            <div style={{ marginBottom: '28px' }}>
-              <h3 style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '12px' }}>What essential pages should a professional plumber's website include?</h3>
-              <p style={{ color: 'var(--text-muted)' }}>In addition to Home, About, and Contact pages, an effective plumbing website must feature dedicated service pages for Emergency Plumbing, Water Heater Repair & Installation, Drain Cleaning & Rooter Services, Sewer Line Inspection, and Leak Detection.</p>
-            </div>
-  
-
-            <div style={{ marginBottom: '28px' }}>
-              <h3 style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '12px' }}>Can we integrate online booking or scheduling directly on the website?</h3>
-              <p style={{ color: 'var(--text-muted)' }}>Yes. We seamlessly embed scheduling integrations such as Calendly, ServiceTitan, or custom form pipelines directly into your site while maintaining sub-second load performance.</p>
-            </div>
-  
+            {FAQS.map((f) => (
+              <div key={f.q} style={{ marginBottom: '28px' }}>
+                <h3 style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '12px' }}>{f.q}</h3>
+                <p style={{ color: 'var(--text-muted)' }}>{f.a}</p>
+              </div>
+            ))}
           </div>
 
           <div style={{ marginTop: '48px', padding: '32px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid var(--line-dark)' }}>
-            <h3 style={{ color: '#fff', fontSize: '1.35rem', marginBottom: '12px' }}>Ready to Scale Your Contracting Business?</h3>
+            <h3 style={{ color: '#fff', fontSize: '1.35rem', marginBottom: '12px' }}>Ready for a Plumbing Website That Brings in Calls?</h3>
             <p style={{ fontSize: '1rem', marginBottom: '20px', lineHeight: 1.7 }}>
-              Get a custom-engineered Next.js website starting at just $700 one-time, or request our free 24-hour custom homepage sample with zero upfront commitment.
+              Custom plumbing websites from $700 total with split payments, or $600 paid in full. Start with a free homepage sample, ready within 24 hours.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
               <Link href="/contact" style={{ color: 'var(--primary-bright)', textDecoration: 'underline', fontWeight: 600 }}>Request Free 24-Hour Sample &rarr;</Link>
