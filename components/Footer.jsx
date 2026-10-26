@@ -14,7 +14,11 @@ const CASE_STUDY_LINKS = [
   { href: '/portfolio/vvasquez-handyman', label: 'V Vasquez' },
   { href: '/portfolio/bestbreaks', label: 'BestBreaks' },
 ];
+// 2026-10-26: all 7 articles, led by the 3 that get impressions for top US queries.
 const GUIDE_LINKS = [
+  { href: '/blog/auto-body-shop-marketing', label: 'Auto body shop marketing' },
+  { href: '/blog/hvac-local-seo', label: 'HVAC SEO guide' },
+  { href: '/blog/what-tree-service-website-needs', label: 'Tree service website guide' },
   { href: '/blog/local-seo-guide-for-service-businesses', label: 'Local SEO guide' },
   { href: '/blog/website-cost-for-home-service-businesses', label: 'Website cost guide' },
   { href: '/blog/website-roi-calculator', label: 'Website ROI calculator' },

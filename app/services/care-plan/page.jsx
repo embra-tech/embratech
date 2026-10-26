@@ -114,7 +114,7 @@ export default function CarePlanPage() {
       {/* What is included */}
       <section style={{ padding: '80px 0' }}>
         <div className="wrap">
-          <div className="section-head reveal-up" style={{ textAlign: 'center', marginBottom: '56px' }}>
+          <div className="section-head " style={{ textAlign: 'center', marginBottom: '56px' }}>
             <div className="section-badge"><span className="badge-pill">Coverage</span><span className="badge-text">What Is Included</span></div>
             <h2>Comprehensive Maintenance, Performance &amp; Peace of Mind</h2>
             <p>Every critical piece of ongoing website health managed by senior builders.</p>
@@ -153,7 +153,7 @@ export default function CarePlanPage() {
       {/* SLA & Handover Guarantees */}
       <section style={{ padding: '80px 0', borderTop: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.015)' }}>
         <div className="wrap" style={{ maxWidth: 860, margin: '0 auto' }}>
-          <div className="section-head reveal-up" style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div className="section-head " style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2>Transparent SLAs and Full Ownership</h2>
             <p>No fine print. We believe you should stay because the service is great, not because you're locked in.</p>
           </div>
@@ -178,13 +178,13 @@ export default function CarePlanPage() {
       {/* FAQ Section */}
       <section style={{ padding: '80px 0' }}>
         <div className="wrap" style={{ maxWidth: 800, margin: '0 auto' }}>
-          <div className="section-head reveal-up" style={{ textAlign: 'center', marginBottom: '48px' }}>
+          <div className="section-head " style={{ textAlign: 'center', marginBottom: '48px' }}>
             <h2>Care Plan Frequently Asked Questions</h2>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {CARE_FAQS.map((faq) => (
               <div key={faq.q} style={{ padding: '24px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--line-dark)', borderRadius: '12px' }}>
-                <h4 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '8px' }}>{faq.q}</h4>
+                <h3 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '8px' }}>{faq.q}</h3>
                 <p style={{ fontSize: '0.95rem', color: 'var(--muted-inv)', lineHeight: 1.6 }}>{faq.a}</p>
               </div>
             ))}

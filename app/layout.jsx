@@ -102,6 +102,8 @@ const globalSchema = [
     "@type": "ProfessionalService",
     "@id": `${siteConfig.siteUrl}/#localbusiness`,
     "name": siteConfig.brandName,
+    // 2026-10-26: short brand name for brand searches ("embra", "what is embra"). Not "Embra Inc.", which may be another company.
+    "alternateName": ["Embra", "Embra Technologies"],
     "url": siteConfig.siteUrl,
     "logo": `${siteConfig.siteUrl}${siteConfig.logo}`,
     "image": `${siteConfig.siteUrl}${siteConfig.ogImage}`,

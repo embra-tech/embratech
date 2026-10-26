@@ -1,24 +1,27 @@
 # Embra Technologies — AI / LLM Access Guide
 # https://www.embratechnologies.org/llms.txt
+# Last updated: 2026-10-26
 
 ## About Embra Technologies
 
-Embra Technologies (https://www.embratechnologies.org) is a custom web design and local SEO agency
-based in Brooklyn, NY (1969 51st St, Brooklyn, NY 11204). We build high-performance websites for
-US home service businesses — handymen, tree services, auto body shops, plumbers, roofers, HVAC
-contractors, and landscapers.
+Embra Technologies (https://www.embratechnologies.org) designs custom websites and provides local SEO
+for home service businesses in the United States: plumbers, HVAC companies, roofers, tree services,
+handymen, landscapers and auto body shops. We are a remote team with support on US business hours.
+Founded in 2026. Founder: Md Bilaal Rahman Ali.
 
-Our websites are built with React (Next.js), load in under one second, and are engineered to rank
-in Google local search. All pricing is transparent and publicly listed.
+Websites are custom-built with React (Next.js). Pricing is published: the Starter website is $700 total
+with split payments, or $600 paid in full (custom homepage plus 2 inner pages); Growth is $1,000
+(up to 7 pages); Pro is $1,500; the optional Care Plan is $150/month. Every project starts with a free
+custom homepage sample, delivered within 24 hours.
 
 ## Key Pages
 
 - Homepage: https://www.embratechnologies.org/
 - Services: https://www.embratechnologies.org/services
-- Web Design Service: https://www.embratechnologies.org/services/web-design
-- Local SEO Service: https://www.embratechnologies.org/services/local-seo
+- Website Design for Home Service Businesses: https://www.embratechnologies.org/services/web-design
+- Local SEO for Home Service Businesses: https://www.embratechnologies.org/services/local-seo
 - Website Integrations: https://www.embratechnologies.org/services/website-integrations
-- Care Plan ($150/mo): https://www.embratechnologies.org/services/care-plan
+- Care Plan ($150/month): https://www.embratechnologies.org/services/care-plan
 - Industry Pages: https://www.embratechnologies.org/niches
 - Pricing: https://www.embratechnologies.org/pricing
 - Portfolio / Case Studies: https://www.embratechnologies.org/portfolio
@@ -26,82 +29,68 @@ in Google local search. All pricing is transparent and publicly listed.
 - About: https://www.embratechnologies.org/about
 - Contact: https://www.embratechnologies.org/contact
 
-## Blog Articles (full text available)
+## Blog Articles
 
 - https://www.embratechnologies.org/blog/local-seo-guide-for-service-businesses
-  Title: The Complete Local SEO Playbook for Home Service Contractors
-
+  Local SEO for Home Service Businesses: A Step-by-Step Guide
 - https://www.embratechnologies.org/blog/website-roi-calculator
-  Title: How Much Is a Slow Website Costing Your Service Business? (ROI Guide)
-
+  Website ROI Calculator for Contractors: What Is Your Website Worth?
 - https://www.embratechnologies.org/blog/why-pagespeed-matters
-  Title: Why Google PageSpeed Is the #1 Unfair Advantage for Local SEO
-
+  Does Website Speed Affect Local SEO? What Contractors Need to Know
 - https://www.embratechnologies.org/blog/website-cost-for-home-service-businesses
-  Title: How Much Does a Website Cost for a Home Service Business in 2026?
-
+  How Much Does a Website Cost for a Home Service Business in 2026?
 - https://www.embratechnologies.org/blog/what-tree-service-website-needs
-  Title: What Every Tree Service Website Needs to Get Emergency Calls
-
+  What Every Tree Service Website Needs to Win Emergency Calls
 - https://www.embratechnologies.org/blog/auto-body-shop-marketing
-  Title: The Complete Auto Body Shop Marketing Playbook
-
+  Auto Body Shop Marketing: A 90-Day Plan and Strategy for Collision Shops
 - https://www.embratechnologies.org/blog/hvac-local-seo
-  Title: HVAC Local SEO Guide: Dominating High-Intent Heating & AC Searches
+  HVAC SEO: How Heating and Cooling Contractors Rank Higher on Google
 
 ## Case Studies
 
+- https://www.embratechnologies.org/portfolio/pnd-laundry
+  Pick N Drop Laundry | Laundry pickup and dry cleaning, Los Angeles CA | Local SEO.
+  Google Search Console, Mar 15–Apr 13 vs Sep 11–Oct 10, 2026: clicks 9 to 21, impressions 471 to 1,399.
 - https://www.embratechnologies.org/portfolio/tuxford-collision
-  Client: Tuxford Collision Center | Auto body repair, Los Angeles CA
-
+  Tuxford Collision Center | Auto body repair, Los Angeles CA | Website design
 - https://www.embratechnologies.org/portfolio/sky-high-tree
-  Client: Sky High Tree Service | Tree removal, Chicago IL
-
+  Sky High Tree Service | Tree service, Chicagoland IL | Website design
 - https://www.embratechnologies.org/portfolio/alaska-fast-fix
-  Client: Alaska Fast Fix Handyman | Handyman services, Alaska
-
+  Alaska Fast Fix Handyman | Handyman services, Alaska | Website design
 - https://www.embratechnologies.org/portfolio/vvasquez-handyman
-  Client: V Vasquez Handyman LLC | Lawn care, concrete & irrigation, Merced CA
-
+  V Vasquez Handyman LLC | Lawn care, concrete and irrigation, Merced CA | Website design
 - https://www.embratechnologies.org/portfolio/bestbreaks
-  Client: BestBreaks | Travel & accommodation, Australia
+  BestBreaks | Holiday accommodation, Australia and New Zealand | Website design
 
-## Niche Service Pages
+Only the Pick N Drop Laundry case study reports measured search results. The others describe website
+features; they make no traffic or lead-growth claims.
 
-- https://www.embratechnologies.org/niches/web-design-for-handyman-businesses
-  Handyman website design
+## Industry Pages
 
-- https://www.embratechnologies.org/niches/tree-service-website-design
-  Tree service website design
+- https://www.embratechnologies.org/niches/web-design-for-handyman-businesses — Handyman website design
+- https://www.embratechnologies.org/niches/tree-service-website-design — Tree service website design
+- https://www.embratechnologies.org/niches/auto-body-shop-website-design — Auto body and collision repair website design
+- https://www.embratechnologies.org/niches/landscaping-website-design — Landscaping website design
+- https://www.embratechnologies.org/niches/plumber-website-design — Plumber website design
+- https://www.embratechnologies.org/niches/hvac-website-design — HVAC contractor website design
+- https://www.embratechnologies.org/niches/roofing-website-design — Roofing contractor website design
 
-- https://www.embratechnologies.org/niches/auto-body-shop-website-design
-  Auto body shop website design
+## Areas With Location Pages
 
-- https://www.embratechnologies.org/niches/landscaping-website-design
-  Landscaping website design
+Embra works remotely with businesses across the US. These pages describe work and context in specific areas;
+they are not office locations.
 
-- https://www.embratechnologies.org/niches/plumber-website-design
-  Plumber website design
-
-- https://www.embratechnologies.org/niches/hvac-website-design
-  HVAC contractor website design
-
-- https://www.embratechnologies.org/niches/roofing-website-design
-  Roofing contractor website design
-
-## Service Areas
-
-- https://www.embratechnologies.org/locations/brooklyn — Brooklyn, NY (headquarters)
 - https://www.embratechnologies.org/locations/los-angeles — Los Angeles, CA
 - https://www.embratechnologies.org/locations/chicago — Chicago, IL
 - https://www.embratechnologies.org/locations/alaska — Alaska
+- https://www.embratechnologies.org/locations/brooklyn — Brooklyn, NY
 
 ## Contact
 
 Email: sales@embratechnologies.org
 Phone: +1 (212) 207-1152
-Address: 1969 51st St, Brooklyn, NY 11204, USA
 Hours: Mon–Fri, 9am–6pm EST
+No public street address: Embra is a remote team.
 
 ## Permissions for AI / LLMs
 

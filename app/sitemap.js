@@ -15,28 +15,29 @@ export default function sitemap() {
   const oct21 = '2026-10-24';         // (published 2026-10-24) Local SEO + handyman rewrites, industry-page guide links and claims, privacy policy, homepage FAQ
   const changedOct21 = ['tree-service-website-design', 'web-design-for-handyman-businesses', 'auto-body-shop-website-design', 'landscaping-website-design', 'hvac-website-design'];
   const oct25 = '2026-10-25';         // top-35 query round: auto body page, city pages (blog dates come from blogData)
+  const oct26 = '2026-10-26';         // review of the external audit: care plan, integrations, pricing, about, homepage, LA and Chicago
 
   const corePages = [
-    { url: baseUrl,                                    lastModified: oct25,         changeFrequency: 'weekly',   priority: 1.0 },
+    { url: baseUrl,                                    lastModified: oct26,         changeFrequency: 'weekly',   priority: 1.0 },
     { url: `${baseUrl}/services`,                      lastModified: oct25,         changeFrequency: 'monthly',  priority: 0.9 },
-    { url: `${baseUrl}/services/care-plan`,            lastModified: staticLastMod, changeFrequency: 'monthly',  priority: 0.85 },
+    { url: `${baseUrl}/services/care-plan`,            lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/niches`,                        lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/services/web-design`,           lastModified: oct25,         changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/services/local-seo`,            lastModified: oct21,         changeFrequency: 'monthly',  priority: 0.9 },
-    { url: `${baseUrl}/services/website-integrations`, lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.85 },
-    { url: `${baseUrl}/pricing`,                       lastModified: oct13,         changeFrequency: 'monthly',  priority: 0.9 },
+    { url: `${baseUrl}/services/website-integrations`, lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.85 },
+    { url: `${baseUrl}/pricing`,                       lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/portfolio`,                     lastModified: oct19,         changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/blog`,                          lastModified: oct13,         changeFrequency: 'weekly',   priority: 0.8 },
     { url: `${baseUrl}/contact`,                       lastModified: oct13,         changeFrequency: 'monthly',  priority: 0.8 },
-    { url: `${baseUrl}/about`,                         lastModified: oct20,         changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/about`,                         lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/privacy`,                       lastModified: oct21,         changeFrequency: 'yearly',   priority: 0.3 },
     { url: `${baseUrl}/terms`,                         lastModified: oct13,         changeFrequency: 'yearly',   priority: 0.3 },
   ];
 
   const locationPages = [
     { url: `${baseUrl}/locations/brooklyn`,            lastModified: oct25,         changeFrequency: 'monthly',  priority: 0.8 },
-    { url: `${baseUrl}/locations/los-angeles`,         lastModified: oct25,         changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/chicago`,             lastModified: oct25,         changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/los-angeles`,         lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/chicago`,             lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/alaska`,              lastModified: oct25,         changeFrequency: 'monthly',  priority: 0.7 },
     // /locations/gulf-coast is noindex, excluded from sitemap intentionally
   ];

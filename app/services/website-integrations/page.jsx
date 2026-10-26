@@ -5,15 +5,17 @@ import Cta from '../../../components/Cta';
 import JsonLd from '../../../components/JsonLd';
 import siteConfig from '../../../lib/site-config';
 
+// 2026-10-26: wording makes clear these are website software integrations for contractor websites
+// (the page was appearing for smart-home installer searches such as "home systems integrator alaska").
+const PAGE_DESCRIPTION = 'Website software integrations for contractor websites: quote forms, booking links, WhatsApp, Google Maps and analytics, connected to the tools you already use.';
+
 export const metadata = {
   alternates: { canonical: '/services/website-integrations' },
-  title: 'Website Integrations & Digital Systems',
-  description:
-    'Connect your website to the tools you use every day. We integrate quote forms, Vercel Analytics, WhatsApp, Google Maps, and booking systems seamlessly.',
+  title: 'Website Integrations for Contractor Websites',
+  description: PAGE_DESCRIPTION,
   openGraph: {
-    title: 'Website Integrations & Digital Systems | Embra',
-    description:
-      'Connect your website to the tools you use every day. We integrate quote forms, Vercel Analytics, WhatsApp, Google Maps, and booking systems seamlessly.',
+    title: 'Website Integrations for Contractor Websites | Embra',
+    description: PAGE_DESCRIPTION,
     url: `${siteConfig.siteUrl}/services/website-integrations`,
     images: [
       {
@@ -157,7 +159,7 @@ export default function WebsiteIntegrationsPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {INTEGRATION_FAQS.map((faq) => (
               <div key={faq.q} style={{ padding: '24px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--line-dark)', borderRadius: '12px' }}>
-                <h4 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '8px' }}>{faq.q}</h4>
+                <h3 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '8px' }}>{faq.q}</h3>
                 <p style={{ fontSize: '0.95rem', color: 'var(--muted-inv)', lineHeight: 1.6 }}>{faq.a}</p>
               </div>
             ))}

@@ -65,8 +65,8 @@ export default function FeaturedWork() {
         <div className="section-head reveal-up" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '20px', marginBottom: '48px' }}>
           <div>
             <div className="section-badge"><span className="badge-pill">Proof</span><span className="badge-text">Selected Work</span></div>
-            <h2>Websites We&apos;ve Built &amp; Ranked.</h2>
-            <p>Real client sites in production, sub-second speeds, custom design, and verified performance.</p>
+            <h2>Live Client Websites We&apos;ve Built.</h2>
+            <p>Real client sites in production: custom design for each trade, with a case study and a live speed report for every project.</p>
           </div>
           <Link href="/portfolio" className="btn-flip btn-ghost btn-small">
             <span className="btn-flip-inner">

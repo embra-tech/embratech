@@ -480,3 +480,41 @@ Source: Search Console export 2026-10-25 (web search, last 3 months, all countri
 **Batch 2 (next):** HVAC, roofing and landscaping industry pages, website integrations, the industries hub, the Chicago section.
 
 **Deploy:** `git add -A` (check `git status` lists only the files in sections S and T).
+
+---
+
+## U. Review of the external "7-Legend SEO Collective" report, and fixes (2026-10-26)
+
+Release 46680ac (sections S and T) verified READY and rendering live.
+
+**Verified as correct and fixed:**
+- Care Plan section headings invisible (`reveal-up` on a server page without the reveal script; opacity 0 live). Removed; FAQ `h4` changed to `h3` (also on integrations).
+- `public/llms.txt` still said "based in Brooklyn" with the old street address and "headquarters"; old titles; no PND. Rewritten to match the site (remote team, current titles, all 6 case studies, pricing, no address).
+- About stat cards ("actively ranking on Google", "96/100 average PageSpeed") replaced with verifiable figures (5 client websites built, 7 trades).
+- Homepage: "Websites We've Built & Ranked" and "sub-second speeds" (FeaturedWork), and the SEO card's "ranks at the top" (Services). Fixed; the integrations card now links its page.
+- City fallback text ("average 96/100", "service-area clusters"). Fixed.
+- Footer guides lacked the 3 trade guides with impressions. All 7 articles now linked, auto body, HVAC and tree first.
+- Pricing snippet at position 2.7 for "embra inc. pricing plans" without prices. Title and description now lead with real prices.
+- LA page lacked the PND local SEO case study. Added, with a trades paragraph linking industry pages, guides and the Local SEO service.
+- Chicago page had no HVAC SEO section for query #1. Added "Local SEO for Chicago HVAC and Plumbing Contractors" linking the HVAC guide, Local SEO and HVAC pages; old hype wording rewritten.
+- Integrations page appearing for smart-home installer searches. Title and description now say "website software integrations for contractor websites".
+- HVAC guide: new section "Air conditioning SEO vs. heating SEO: plan by season" (qualitative table, scrollable on phones) linking the Chicago and LA pages.
+- Auto body guide: new section on less dependence on insurer DRPs, plus an FAQ "What does autobody and collision repair marketing include?".
+- Brand: `alternateName` ["Embra", "Embra Technologies"] in the site-wide ProfessionalService data.
+
+**Rejected (incorrect or unsafe):**
+- "V Vasquez is in Centennial, Colorado": the client is in Merced, CA. No Colorado callouts.
+- "Embra Technologies LLC, registered in Delaware, US-based": contradicts the company record and the remote-team wording. Not used.
+- `alternateName` "Embra Inc.": may be another company.
+- "$350 deposit + $350": the code splits Starter into 4 payments of $175.
+- "Live in 7 days": the site states 2–4 weeks.
+- FAQPage and Offer schema "for rich results": FAQ rich results are limited to authoritative government and health sites, and service prices don't produce price snippets. Low value; not added.
+- Wrong slugs (`/portfolio/sky-high-tree-service`, `/portfolio/vasquez-handyman`, `/portfolio/best-breaks`) and post titles the site never had.
+- "Chicago never mentions HVAC" (it did) and "TODO_OWNER in schema" (not rendered).
+- Invented local detail ("-10°F cold snaps in Lincoln Park") and "guaranteed" top-3 dates.
+- Sitemap dates for plumber, web design, services and home were already fixed in section T.
+- bot-proxy stripping JSON-LD: only affects PageSpeed and Lighthouse requests, not Googlebot, and the proxy is kept by owner decision.
+
+**Batch 2, next:** full rewrites of the auto body body, HVAC, roofing and landscaping industry pages; a founder bio and author box (needs owner details).
+
+**Deploy:** `git add -A` (check `git status`).

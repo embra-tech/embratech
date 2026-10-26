@@ -1,15 +1,16 @@
 import PricingClient from './PricingClient';
 import siteConfig from '../../lib/site-config';
 
+// 2026-10-26: title and description lead with the plan prices (US query "embra inc. pricing plans" at position 2.7 with no clicks).
+const PAGE_DESCRIPTION = 'Embra pricing plans: Starter website $700 ($600 paid in full), Growth $1,000, Pro $1,500, optional $150/month Care Plan. Free homepage sample before you pay.';
+
 export const metadata = {
   alternates: { canonical: '/pricing' },
-  title: 'Web Design Pricing & Monthly Care Plans',
-  description:
-    'Transparent website design pricing. From our $700 full build to the $150/mo Care Plan, we offer honest, no-surprise costs for growing US service businesses.',
+  title: 'Pricing Plans: Websites From $700 & Care Plan',
+  description: PAGE_DESCRIPTION,
   openGraph: {
-    title: 'Web Design Pricing & Monthly Care Plans | Embra',
-    description:
-      'Transparent website design pricing. From our $700 full build to the $150/mo Care Plan, we offer honest, no-surprise costs for growing US service businesses.',
+    title: 'Embra Pricing Plans: Websites From $700 | Embra',
+    description: PAGE_DESCRIPTION,
     url: `${siteConfig.siteUrl}/pricing`,
     images: [
       {

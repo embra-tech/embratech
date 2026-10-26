@@ -9,8 +9,9 @@ import Breadcrumb from '../../components/Breadcrumb';
 import siteConfig from '../../lib/site-config';
 
 const STATS = [
-  { value: 5, suffix: '', label: 'Live client websites built and actively ranking on Google' },
-  { value: 96, suffix: '/100', label: 'Average PageSpeed score across our 5 live builds, verify any of them', decimals: 0 },
+  // 2026-10-26: "actively ranking on Google" and the "96/100 average PageSpeed" card removed (no dated source).
+  { value: 5, suffix: '', label: 'Live client websites we have designed and built, each with its own case study' },
+  { value: 7, suffix: '', label: 'Home service trades we design websites for, from plumbing and HVAC to auto body' },
   { value: 24, suffix: 'h', label: 'Hours to your free custom homepage sample. No deposit, and if it is not right, you walk away and owe nothing' },
   { value: 100, suffix: '%', label: 'Yours to keep. Once your website is paid for and live, you own the code, content and domain' },
 ];

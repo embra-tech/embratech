@@ -31,6 +31,25 @@ function LosAngelesContent() {
         <Link href="/portfolio/tuxford-collision" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the full Los Angeles auto body case study &rarr;</Link>
       </p>
 
+      {/* 2026-10-26: second LA case study (local SEO, measured in the client's own Search Console). */}
+      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Local SEO Results: Pick N Drop Laundry</h2>
+      <p style={{ marginBottom: '24px' }}>
+        <strong>Pick N Drop Laundry</strong> offers laundry pickup and dry cleaning across Los Angeles neighborhoods. We added neighborhood pages, fixed its structured data and breadcrumbs, and optimized its Google Business Profile. In the client&apos;s own Google Search Console data, clicks from Google grew from 9 to 21 and impressions from 471 to 1,399, comparing March 15–April 13 with September 11–October 10, 2026.
+      </p>
+      <p style={{ marginBottom: '40px' }}>
+        <Link href="/portfolio/pnd-laundry" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the Pick N Drop Laundry local SEO case study &rarr;</Link>
+      </p>
+
+      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Service Businesses We Build For in Los Angeles</h2>
+      <p style={{ marginBottom: '40px' }}>
+        We design websites and handle local SEO for LA service businesses including{' '}
+        <Link href="/niches/auto-body-shop-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>auto body and collision repair shops</Link>,{' '}
+        <Link href="/niches/hvac-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>HVAC companies</Link>,{' '}
+        <Link href="/niches/plumber-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>plumbers</Link>,{' '}
+        <Link href="/niches/roofing-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>roofers</Link>,{' '}
+        <Link href="/niches/web-design-for-handyman-businesses" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>handymen</Link> and other contractors. For marketing ideas, read our <Link href="/blog/auto-body-shop-marketing" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>auto body shop marketing guide</Link> or <Link href="/blog/hvac-local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>HVAC SEO guide</Link>, or see our <Link href="/services/local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>local SEO service</Link>.
+      </p>
+
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why Choose Embra for Your LA Business?</h2>
       <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
         <li><strong>Fast on Phones:</strong> Speed matters to visitors and is one of the signals Google uses. Each case study links to the client site's live PageSpeed report, so you can check it yourself.</li>
@@ -55,15 +74,15 @@ function ChicagoContent() {
   return (
     <>
       <p style={{ marginBottom: '24px' }}>
-        Chicago is a tough, hard-working market, and local businesses here need an online presence that reflects that same reliability. Whether you run a tree service navigating harsh Midwestern storms, a plumbing company, or a roofing business, your customers need to know they can count on you. When a Chicago homeowner has an emergency, they don't browse five different websites-they call the first business that looks professional, local, and fast. At Embra Technologies, we engineer websites that convert these high-intent local searches into booked jobs.
+        Chicago homeowners deal with storm damage, frozen pipes and furnace failures in winter and heavy AC use in summer, so the businesses that fix those problems need websites people trust at a glance. Whether you run a tree service, a plumbing company, an HVAC company or a roofing business, a Chicago homeowner with an urgent problem will usually call the first company that looks professional, local and easy to reach. Embra Technologies builds websites for Chicago service businesses around exactly that.
       </p>
       <p style={{ marginBottom: '40px' }}>
-        A slow, bloated website built on an outdated template will cost you leads. Google specifically rewards fast-loading sites, especially for mobile searches. By utilizing Next.js, we build custom applications that load almost instantly. We combine this technical superiority with localized SEO strategies targeting Chicagoland-from the Loop out to the suburbs-ensuring your business appears exactly when customers are searching for your services.
+        Many contractor websites run on heavy templates that load slowly on a phone. We build custom websites with Next.js that load quickly, then set up the local search basics for Chicagoland, from the city to the suburbs you actually serve: a complete Google Business Profile, clear service pages and accurate business details.
       </p>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Case Study: Sky High Tree Service</h2>
       <p style={{ marginBottom: '24px' }}>
-        Tree service is a high-urgency, high-ticket industry. When severe storms hit Chicago, homeowners need emergency tree removal immediately. They don't have time to navigate a confusing website. <strong>Sky High Tree Service</strong> needed an online presence that captured these emergency searches instantly and built a sustainable organic presence year-round.
+        Tree service is urgent, high-value work: after a storm, Chicago homeowners need someone quickly and don&apos;t have time for a confusing website. For <strong>Sky High Tree Service</strong>, the goal was a site that makes it easy to call or ask for an estimate, at any time of year.
       </p>
       <p style={{ marginBottom: '24px' }}>
         The site gives homeowners two clear ways to get in touch, phone links and a free-estimate form, alongside service descriptions, project photos and a service-area section, so they can check the work and the coverage before they call.
@@ -75,17 +94,26 @@ function ChicagoContent() {
         <Link href="/portfolio/sky-high-tree" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the full Chicago tree service case study &rarr;</Link>
       </p>
 
+      {/* 2026-10-26: Chicago HVAC section (US queries "seo company for hvac repair in chicago", "hvac seo chicago"). */}
+      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Local SEO for Chicago HVAC and Plumbing Contractors</h2>
+      <p style={{ marginBottom: '24px' }}>
+        In Chicago, heating and cooling searches swing hard with the seasons: furnace and boiler repair when the first cold snap arrives, AC repair once summer heat sets in. For an HVAC company, local SEO means having heating and cooling service pages ready before each season, a Google Business Profile that lists every service you offer, and a steady flow of genuine reviews from Chicago customers.
+      </p>
+      <p style={{ marginBottom: '40px' }}>
+        Our <Link href="/blog/hvac-local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>HVAC SEO guide</Link> walks through the steps, including how to choose an SEO company for HVAC repair. If you&apos;d rather have it done for you, our <Link href="/services/local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>local SEO service</Link> starts with a free review, and our <Link href="/niches/hvac-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>HVAC website design</Link> page shows how we build heating and cooling websites. We work remotely with contractors across Chicagoland.
+      </p>
+
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Our Approach to Chicago Web Design</h2>
       <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
-        <li><strong>Conversion-First Layouts:</strong> We design your site to guide the user naturally to the phone or the quote form, eliminating friction at every step.</li>
-        <li><strong>Built for Local Dominance:</strong> Our SEO architecture ensures you aren't just ranking in the city center, but in the specific Chicago suburbs you want to target.</li>
-        <li><strong>Clear, Honest Pricing:</strong> No hidden retainers. Check out our <Link href="/pricing" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>pricing page</Link> for transparent packages, starting at just $700 for a complete, blazing-fast starter site.</li>
+        <li><strong>A Clear Next Step:</strong> Every page guides visitors to the phone or the quote form, with no hunting for contact details.</li>
+        <li><strong>The Areas You Actually Serve:</strong> We set up your Google profile and service pages around the city neighborhoods and suburbs you cover, adding area pages only where you have real work to show.</li>
+        <li><strong>Published Pricing:</strong> No retainers. See our <Link href="/pricing" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>pricing page</Link>: the Starter website is $700 total with split payments, or $600 paid in full.</li>
       </ul>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Chicago Web Design FAQs</h2>
       <div style={{ marginBottom: '24px' }}>
         <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>Do you provide ongoing support after the site goes live?</h3>
-        <p>Yes. Our $150/mo Care Plan covers ultra-fast managed hosting, monthly content updates, security patches, and localized SEO tracking, so you can focus on running your business.</p>
+        <p>Yes. Our optional $150/month Care Plan covers hosting, security updates, monthly content updates and SEO monitoring, so you can focus on running your business.</p>
       </div>
       <div style={{ marginBottom: '40px' }}>
         <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>How long does it take to build a site for a Chicago contractor?</h3>
@@ -233,8 +261,8 @@ export default function LocationClient({ loc }) {
 
               <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why {displayLocName} Companies Choose Embra</h2>
               <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <li><strong>Sub-Second Load Times:</strong> Google explicitly rewards speed in local search. Our client websites average 96/100 on Google PageSpeed Insights.</li>
-                <li><strong>Hyper-Local SEO:</strong> We structure your site with LocalBusiness JSON-LD schema, service-area clusters, and optimized metadata tailored to {loc.name}.</li>
+                <li><strong>Fast on Phones:</strong> Speed matters to visitors and is one of the signals Google uses. Each case study links to the client site&apos;s live PageSpeed report, so you can check it yourself.</li>
+                <li><strong>Local Search Basics:</strong> LocalBusiness structured data, clear service pages and accurate business details for {loc.name}, with area pages only where there is real local work to show.</li>
                 <li><strong>Zero Upfront Risk:</strong> We build a custom, interactive homepage sample for your brand in 24 hours. You only move forward if you love it.</li>
               </ul>
             </>
