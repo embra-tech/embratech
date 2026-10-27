@@ -83,6 +83,7 @@ export default function ContactClient() {
         <div className="wrap">
           <Breadcrumb label="Contact" href="/contact" />
           <PageHeader
+            offer={false}
             pill="Contact"
             badge="Let's Talk"
             title={<>Start your project <span className="highlight-text">today.</span></>}

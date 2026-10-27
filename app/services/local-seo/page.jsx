@@ -3,11 +3,16 @@ import Breadcrumb from '../../../components/Breadcrumb';
 import PageHeader from '../../../components/PageHeader';
 import Cta from '../../../components/Cta';
 import JsonLd from '../../../components/JsonLd';
+import ProjectShot from '../../../components/ProjectShot';
+import FaqAccordion from '../../../components/FaqAccordion';
 import siteConfig from '../../../lib/site-config';
 
 // 2026-10-21: copy rewritten (owner gave full permission). Removed promises nobody can keep
 // ("ensure" Map Pack placement, "dominate", review-rating markup, "Yes" to a page per city) and
-// added honest FAQs. Layout and styling unchanged.
+// added honest FAQs.
+// 2026-10-26: layout made easier to scan (owner feedback): short intro, 3 ranking-factor cards,
+// "How it works" steps with a call to action, a call to action on each feature card, FAQ dropdowns.
+// The SEO wording is kept; only its presentation changed.
 
 export const metadata = {
   alternates: { canonical: '/services/local-seo' },
@@ -30,25 +35,52 @@ export const metadata = {
   },
 };
 
+const FACTORS = [
+  {
+    tag: 'You can improve',
+    title: 'Relevance',
+    text: 'How well your Google Business Profile and website match what someone searched for: accurate categories, every service listed, a clear page for each service.',
+    icon: <><circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></>,
+  },
+  {
+    tag: 'Fixed',
+    title: 'Distance',
+    text: 'How far the searcher is from your business or service area. Nobody can change this, which is why no honest agency guarantees a Map Pack spot.',
+    icon: <><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></>,
+  },
+  {
+    tag: 'You can improve',
+    title: 'Prominence',
+    text: 'How well known and well reviewed your business is: steady genuine reviews, consistent listings across the web and mentions from other local sites.',
+    icon: <><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></>,
+  },
+];
+
+const STEPS = [
+  { n: '1', title: 'Free review', text: 'We check your Google Business Profile, website and service area, then send practical next steps.' },
+  { n: '2', title: 'Clear quote', text: 'You get a quote for only the work your profile and website actually need. No long-term contract.' },
+  { n: '3', title: 'We do the work', text: 'We fix your profile, service pages and listings, and keep you updated in plain language.' },
+];
+
 const SEO_FEATURES = [
   {
     title: 'Google Business Profile Optimization',
-    desc: 'For most trades, the Business Profile brings in more calls than the website. We help you claim and verify it (Google runs verification and may need your input), choose accurate primary and secondary categories, list each service, keep hours current and add real job photos. We also set up a simple way to ask every happy customer for a review. Google decides who appears in the Map Pack, and distance from the searcher is part of that, so we work on what you can influence: relevance, completeness and steady reviews.',
+    desc: 'For most trades, the Business Profile brings in more calls than the website. We help you claim and verify it (Google runs verification and may need your input), choose accurate primary and secondary categories, list each service, keep hours current and add real job photos. We also set up a simple way to ask every happy customer for a review.',
     points: ['Claiming and verification support', 'Accurate categories and services', 'Review requests that follow Google\'s rules', 'Regular photo and profile updates'],
   },
   {
     title: 'Structured Data (Schema Markup)',
-    desc: 'We add LocalBusiness structured data to your website that matches what visitors can see: business name, phone number, hours, service area and, where you have one, your address. It helps search engines read your details consistently and connect your website to your business. Structured data does not raise rankings by itself, and we don\'t add star-rating markup for reviews you host about yourself, because Google doesn\'t show it.',
+    desc: 'We add LocalBusiness structured data to your website that matches what visitors can see: business name, phone number, hours, service area and, where you have one, your address. It helps search engines read your details consistently. Structured data does not raise rankings by itself, and we don\'t add star-rating markup for reviews you host about yourself, because Google doesn\'t show it.',
     points: ['LocalBusiness structured data', 'Service area and hours', 'Matches your visible details', 'Checked with Google\'s Rich Results Test'],
   },
   {
     title: 'Consistent Business Details (NAP)',
-    desc: 'NAP stands for name, address and phone number. When these differ between your website, your Google profile and directories like Yelp, Angi or the BBB, it muddies the picture of who you are for customers and for Google. We audit where your business is listed, fix mismatched details, and add complete profiles on the directories that matter for your trade, with one consistent description everywhere.',
+    desc: 'NAP stands for name, address and phone number. When these differ between your website, your Google profile and directories like Yelp, Angi or the BBB, it muddies the picture for customers and for Google. We audit where you are listed, fix mismatches, and complete the directories that matter for your trade.',
     points: ['Listing audit', 'Fixing mismatched details', 'Relevant trade directories', 'One consistent business description'],
   },
   {
     title: 'Service and Area Pages That Earn Their Place',
-    desc: 'Google ranks pages, not businesses, so each core service (drain cleaning, AC repair, tree removal) deserves its own clear page. For the towns you serve, we add pages only where there is something real to say: jobs you have done there, local conditions and reviews from local customers. Copying one page and swapping the town name tends to backfire, and Google\'s spam policies treat that pattern as doorway pages.',
+    desc: 'Google ranks pages, not businesses, so each core service (drain cleaning, AC repair, tree removal) deserves its own clear page. For the towns you serve, we add pages only where there is something real to say: local jobs and reviews. Copying one page and swapping the town name tends to backfire; Google\'s spam policies treat that pattern as doorway pages.',
     points: ['One page per core service', 'Town pages backed by real local work', 'Clear headings and internal links', 'No copied city-swap pages'],
   },
 ];
@@ -103,6 +135,7 @@ export default function LocalSeoPage() {
         <div className="wrap">
           <Breadcrumb label="Local SEO" href="/services/local-seo" />
           <PageHeader
+            offer="seo"
             pill="Local Search Optimization"
             title={<>Local SEO for <span className="highlight-text">Home Service Businesses</span></>}
             sub="Help local customers find your plumbing, HVAC, roofing, tree service or handyman business. We improve your Google Business Profile, service pages and business information around the services and areas you actually cover."
@@ -110,77 +143,114 @@ export default function LocalSeoPage() {
         </div>
       </section>
 
-      {/* Introduction */}
-      <section style={{ padding: '60px 0', borderBottom: '1px solid var(--line-dark)' }}>
-        <div className="wrap" style={{ maxWidth: 800, margin: '0 auto', color: 'var(--muted-inv)', fontSize: '1.05rem', lineHeight: 1.7 }}>
-          <p style={{ marginBottom: '20px' }}>
-            When a pipe bursts, a roof leaks or an AC unit fails in the middle of summer, homeowners pull out their phones and search for someone nearby. Local SEO is the work that helps your business show up for those searches, both in the map results and in the regular results below them.
-          </p>
-          <p style={{ marginBottom: '20px' }}>
-            It isn&apos;t about sprinkling keywords on your homepage. Google&apos;s own <a href="https://support.google.com/business/answer/7091" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>guidance on local ranking</a> names three factors: how relevant your business is to the search, how far it is from the searcher, and how well known it is. We focus on the two you can influence, relevance and prominence, through your Google Business Profile, clear service pages and consistent business details across the web.
-          </p>
-          <p style={{ marginBottom: '20px' }}>
-            Want to see the steps first? Read our free <Link href="/blog/local-seo-guide-for-service-businesses" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>local SEO guide for home service businesses</Link>, or the <Link href="/blog/hvac-local-seo" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>HVAC local SEO guide</Link> if you run a heating and cooling company.
-          </p>
-          <p>
-            Start with a free review of your local search visibility. We look at your website, Google Business Profile and target service area to identify practical next steps. <Link href="/contact" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>Request your local SEO review</Link>. If you also need a new website, explore our <Link href="/services/web-design" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>website design for home service businesses</Link>.
-          </p>
+      {/* How local ranking works: short intro + 3 factor cards */}
+      <section className="section-pad gradient-divider">
+        <div className="wrap">
+          <div className="section-head " style={{ textAlign: 'center', marginBottom: '36px', maxWidth: 760, marginLeft: 'auto', marginRight: 'auto' }}>
+            <h2>How Google Decides Who Shows Up Locally</h2>
+            <p>
+              When a pipe bursts or an AC unit fails, homeowners search on their phones for someone nearby. Google&apos;s{' '}
+              <a href="https://support.google.com/business/answer/7091" target="_blank" rel="noopener noreferrer" className="text-link">guidance on local ranking</a>{' '}
+              names three factors. We focus on the two you can influence.
+            </p>
+          </div>
+          <div className="factor-grid">
+            {FACTORS.map((f) => (
+              <div key={f.title} className={`factor-card${f.tag === 'Fixed' ? ' factor-fixed' : ''}`}>
+                <div className="factor-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">{f.icon}</svg>
+                </div>
+                <span className="factor-tag">{f.tag}</span>
+                <h3>{f.title}</h3>
+                <p>{f.text}</p>
+              </div>
+            ))}
+          </div>
+          <div className="link-chips">
+            <Link href="/blog/local-seo-guide-for-service-businesses" className="link-chip">Read the free local SEO guide &rarr;</Link>
+            <Link href="/blog/hvac-local-seo" className="link-chip">HVAC SEO guide &rarr;</Link>
+            <Link href="/services/web-design" className="link-chip">Need a new website too? &rarr;</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Real local SEO project (lazy-loaded, below the fold) */}
+      <section style={{ padding: '0 0 10px' }}>
+        <div className="wrap" style={{ maxWidth: 840, margin: '0 auto' }}>
+          <ProjectShot
+            name="pndlaundry"
+            url="pndlaundry.com"
+            alt="Pick N Drop Laundry website, a Los Angeles local SEO project by Embra Technologies"
+            caption="Local SEO project: Pick N Drop Laundry, Los Angeles. Clicks 9 to 21, impressions 471 to 1,399 (Search Console)."
+            href="/portfolio/pnd-laundry"
+            linkText="Read the case study"
+          />
+        </div>
+      </section>
+
+      {/* How it works: 3 steps + CTA */}
+      <section className="section-pad gradient-divider">
+        <div className="wrap">
+          <div className="section-head " style={{ textAlign: 'center', marginBottom: '36px' }}>
+            <h2>How It Works</h2>
+            <p>Three simple steps, starting with a free review.</p>
+          </div>
+          <div className="steps-row">
+            {STEPS.map((s) => (
+              <div key={s.n} className="step-card">
+                <span className="step-num">{s.n}</span>
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '32px' }}>
+            <Link href="/contact" className="btn-flip btn-primary btn-large">
+              <span className="btn-flip-inner">
+                <span className="btn-flip-state">Request My Free Local SEO Review &rarr;</span>
+                <span className="btn-flip-state" aria-hidden="true">Request My Free Local SEO Review &rarr;</span>
+              </span>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* What is included */}
-      <section style={{ padding: '80px 0' }}>
+      <section className="section-pad gradient-divider">
         <div className="wrap">
-          <div className="section-head " style={{ textAlign: 'center', marginBottom: '56px' }}>
+          <div className="section-head " style={{ textAlign: 'center', marginBottom: '48px' }}>
             <div className="section-badge"><span className="badge-pill">Methodology</span><span className="badge-text">What We Do</span></div>
             <h2>What Our Local SEO Work Includes</h2>
             <p>Practical work on the things Google looks at for local results, so you can focus on serving your customers.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
+          <div className="feature-grid">
             {SEO_FEATURES.map((f) => (
-              <article
-                key={f.title}
-                style={{
-                  background: 'var(--card-bg, rgba(255,255,255,0.03))',
-                  border: '1px solid var(--line-dark)',
-                  borderRadius: '16px',
-                  padding: '32px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '16px',
-                }}
-              >
-                <h3 style={{ color: '#fff', fontSize: '1.25rem' }}>{f.title}</h3>
-                <p style={{ fontSize: '0.95rem', color: 'var(--muted-inv)', lineHeight: 1.6 }}>{f.desc}</p>
-                <ul style={{ listStyle: 'none', padding: 0, margin: '8px 0 0', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <article key={f.title} className="feature-card">
+                <h3>{f.title}</h3>
+                <p>{f.desc}</p>
+                <ul className="check-list">
                   {f.points.map((pt) => (
-                    <li key={pt} style={{ fontSize: '0.88rem', color: 'var(--paper-bright)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <li key={pt}>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
                       {pt}
                     </li>
                   ))}
                 </ul>
+                <Link href="/contact" className="card-cta">Include this in my free review &rarr;</Link>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section style={{ padding: '80px 0', borderTop: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.015)' }}>
-        <div className="wrap" style={{ maxWidth: 800, margin: '0 auto' }}>
-          <div className="section-head " style={{ textAlign: 'center', marginBottom: '48px' }}>
+      {/* FAQ */}
+      <section className="section-pad gradient-divider" style={{ background: 'rgba(255,255,255,0.015)' }}>
+        <div className="wrap" style={{ maxWidth: 820, margin: '0 auto' }}>
+          <div className="section-head " style={{ textAlign: 'center', marginBottom: '36px' }}>
             <h2>Local SEO Frequently Asked Questions</h2>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            {SEO_FAQS.map((faq) => (
-              <div key={faq.q} style={{ padding: '24px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--line-dark)', borderRadius: '12px' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '8px' }}>{faq.q}</h3>
-                <p style={{ fontSize: '0.95rem', color: 'var(--muted-inv)', lineHeight: 1.6 }}>{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FaqAccordion items={SEO_FAQS} />
         </div>
       </section>
 

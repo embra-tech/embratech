@@ -6,6 +6,7 @@ import PageHeader from '../../../components/PageHeader';
 import Breadcrumb from '../../../components/Breadcrumb';
 import Cta from '../../../components/Cta';
 import Link from 'next/link';
+import ProjectShot from '../../../components/ProjectShot';
 
 function LosAngelesContent() {
   return (
@@ -30,6 +31,7 @@ function LosAngelesContent() {
       <p style={{ marginBottom: '40px' }}>
         <Link href="/portfolio/tuxford-collision" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the full Los Angeles auto body case study &rarr;</Link>
       </p>
+      <ProjectShot name="tuxford" url="tuxfordcollision.com" alt="Tuxford Collision Center website for a Los Angeles auto body shop, by Embra Technologies" caption="Tuxford Collision Center, Los Angeles: licensing, rating and free towing offer up front." href="/portfolio/tuxford-collision" linkText="Case study" />
 
       {/* 2026-10-26: second LA case study (local SEO, measured in the client's own Search Console). */}
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Local SEO Results: Pick N Drop Laundry</h2>
@@ -93,6 +95,7 @@ function ChicagoContent() {
       <p style={{ marginBottom: '40px' }}>
         <Link href="/portfolio/sky-high-tree" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the full Chicago tree service case study &rarr;</Link>
       </p>
+      <ProjectShot name="skyhightreeservice" url="skyhightreeservicechicago.com" alt="Sky High Tree Service website for a Chicagoland tree service, by Embra Technologies" caption="Sky High Tree Service, Chicagoland: call and estimate options, project photos and service area." href="/portfolio/sky-high-tree" linkText="Case study" />
 
       {/* 2026-10-26: Chicago HVAC section (US queries "seo company for hvac repair in chicago", "hvac seo chicago"). */}
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Local SEO for Chicago HVAC and Plumbing Contractors</h2>
@@ -146,11 +149,12 @@ function AlaskaContent() {
       <p style={{ marginBottom: '40px' }}>
         <Link href="/portfolio/alaska-fast-fix" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the full Alaska handyman case study &rarr;</Link>
       </p>
+      <ProjectShot name="alaskahandyman" url="alaskafastfixhandyman.com" alt="Alaska Fast Fix Handyman website by Embra Technologies" caption="Alaska Fast Fix Handyman: tap-to-call on every page and a clear service-area section." href="/portfolio/alaska-fast-fix" linkText="Case study" />
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why Embra is Right for Alaskan Businesses</h2>
       <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
-        <li><strong>Built for Speed & Reliability:</strong> Our Next.js architecture means your site is served from global edge networks, ensuring it loads lightning fast even on slower mobile connections.</li>
-        <li><strong>Clear Service Area Targeting:</strong> We use advanced local SEO tactics to ensure your site ranks for the exact boroughs, towns, and regions you service, filtering out unqualified leads.</li>
+        <li><strong>Built for Speed & Reliability:</strong> Your site is hosted on Vercel&apos;s global network, so pages load quickly even on slower mobile connections.</li>
+        <li><strong>Clear Service Area Targeting:</strong> We set up your service pages and Google Business Profile around the towns you actually serve, so the right customers can find you and others can see you don&apos;t cover their area.</li>
         <li><strong>No Hidden Costs:</strong> Transparency is key. Review our <Link href="/pricing" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>pricing options</Link> to see our flat-rate builds and affordable monthly care plans.</li>
       </ul>
 

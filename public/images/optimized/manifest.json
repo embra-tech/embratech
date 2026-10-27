@@ -62,6 +62,83 @@
         720,
         960
       ]
+    },
+    "stock-plumber": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "stock-hvac": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "stock-roofing": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "stock-tree": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "stock-handyman": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "stock-landscaping": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "stock-autobody": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "stock-webdesign": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "stock-localseo": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "stock-growth": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
+    },
+    "stock-integrations": {
+      "widths": [
+        480,
+        720,
+        960
+      ]
     }
   },
   "avatars": {

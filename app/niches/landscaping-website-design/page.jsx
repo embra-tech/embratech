@@ -3,26 +3,65 @@ import PageHeader from '../../../components/PageHeader';
 import Breadcrumb from '../../../components/Breadcrumb';
 import Cta from '../../../components/Cta';
 import JsonLd from '../../../components/JsonLd';
+import StockPhoto from '../../../components/StockPhoto';
+import FaqAccordion from '../../../components/FaqAccordion';
 import siteConfig from '../../../lib/site-config';
 
+// 2026-10-26: copy rewritten (batch 2): plain, specific copy replacing the old template; removed an
+// unsourced price example and hype ("visual psychology", "hardscape artisans", "high-converting");
+// built around the real V Vasquez project; pricing aligned; 6 FAQs. Layout and V Vasquez image unchanged.
+
+const PAGE_DESCRIPTION = 'Landscaping website design for lawn care, landscaping and hardscape companies: project galleries, clear services and easy quote requests. From $700 ($600 paid in full).';
+
 export const metadata = {
-  title: 'Landscaping Website Design for More Local Jobs',
+  title: 'Landscaping Website Design for Lawn Care Companies',
   alternates: { canonical: '/niches/landscaping-website-design' },
-  description: 'Visually compelling, high-converting websites designed to showcase hardscaping, lawn maintenance, and irrigation systems across all seasons.',
+  description: PAGE_DESCRIPTION,
   openGraph: {
-    title: 'Landscaping Website Design for More Local Jobs | Embra',
-    description: 'Visually compelling, high-converting websites designed to showcase hardscaping, lawn maintenance, and irrigation systems across all seasons.',
+    title: 'Landscaping Website Design for Lawn Care Companies | Embra',
+    description: PAGE_DESCRIPTION,
     url: `${siteConfig.siteUrl}/niches/landscaping-website-design`,
     images: [
       {
         url: siteConfig.ogImage,
         width: siteConfig.ogImageWidth,
         height: siteConfig.ogImageHeight,
-        alt: 'Landscaping Website Design for More Local Jobs | Embra',
+        alt: 'Landscaping website design by Embra Technologies',
       },
     ],
   },
 };
+
+const link = { color: 'var(--primary-bright)', textDecoration: 'underline' };
+const h2 = { color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' };
+const para = { marginBottom: '20px' };
+
+const FAQS = [
+  {
+    q: 'What should a landscaping website show first?',
+    a: 'Photos of your own work, the services you offer, the areas you cover and a quick way to request a quote. For landscaping, real before-and-after photos persuade far more than stock images.',
+  },
+  {
+    q: 'Can our website separate weekly lawn care from bigger projects?',
+    a: 'Yes. Recurring services like mowing, cleanups and irrigation checks get their own pages with a simple sign-up or quote form, while larger projects like patios, retaining walls or new plantings get gallery-led pages with a consultation request.',
+  },
+  {
+    q: 'Can customers send photos of their yard for a quote?',
+    a: 'Yes. We can add a quote form where customers describe the job and upload photos of their yard, so you can judge the work before visiting.',
+  },
+  {
+    q: 'Have you built a landscaping website before?',
+    a: 'Yes. We built the website for V Vasquez Handyman LLC in Merced, CA, which does lawn care, concrete and irrigation work. Each service has its own section, and the quote form pre-selects the service the visitor was viewing.',
+  },
+  {
+    q: 'How much does a landscaping website cost?',
+    a: 'Our Starter website is $700 total with split payments, or $600 paid in full, for a custom homepage plus 2 inner pages. Growth is $1,000 for up to 7 pages, enough for separate lawn care, hardscape, irrigation and gallery pages, plus structured data and Google Business Profile setup.',
+  },
+  {
+    q: 'Do you work with landscaping companies in my area?',
+    a: 'Yes. We work remotely with landscaping and lawn care companies across the US. Your website is built around the towns you actually serve.',
+  },
+];
 
 export default function NichePage() {
   // 2026-10-13 Phase 1: removed a second BreadcrumbList (Home > Services > page) that
@@ -31,11 +70,11 @@ export default function NichePage() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Landscaping Website Design Built to Rank Locally",
-      "serviceType": "Landscaping Website Design Built to Rank Locally",
+      "name": "Landscaping Website Design",
+      "serviceType": "Website Design for Landscaping and Lawn Care Companies",
       "provider": { "@id": `${siteConfig.siteUrl}/#localbusiness` },
       "areaServed": { "@type": "Country", "name": "United States" },
-      "description": "Visually compelling, high-converting websites designed to showcase hardscaping, lawn maintenance, and irrigation systems across all seasons."
+      "description": PAGE_DESCRIPTION
     }
   ];
 
@@ -44,25 +83,23 @@ export default function NichePage() {
       <JsonLd data={jsonLdData} />
       <section className="page-hero">
         <div className="wrap">
-          <Breadcrumb label="Landscaping Website Design Built to Rank Locally" href="/niches/landscaping-website-design" />
+          <Breadcrumb label="Landscaping Website Design" href="/niches/landscaping-website-design" />
           <PageHeader
             pill="Industry Web Design"
-            title={<>Landscaping Website Design Built to Rank Locally</>}
-            sub="Visually compelling, high-converting websites designed to showcase hardscaping, lawn maintenance, and irrigation systems across all seasons."
+            title={<>Landscaping Website Design for Lawn Care and Landscaping Companies</>}
+            sub="Websites for landscaping, lawn care and hardscape companies across the US: real project photos, clear services and easy quote requests. Starter: $700 total with split payments, or $600 paid in full."
           />
         </div>
       </section>
 
       <section className="location-content" style={{ padding: '80px 0' }}>
         <div className="wrap text-content " style={{ maxWidth: 840, margin: '0 auto', fontSize: '1.1rem', lineHeight: 1.85, color: 'var(--text-muted)' }}>
-          
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>The Visual Psychology of High-End Landscaping & Lawn Care</h2>
-          <p style={{ marginBottom: '20px' }}>Landscaping, hardscaping, and lawn care are deeply visual, aspirational investments. Whether a residential homeowner is seeking routine weekly mowing, an elaborate backyard patio installation, a modern retaining wall, or a smart irrigation system, they make their purchasing decisions based on visible evidence of quality craftsmanship.</p>
-          <p style={{ marginBottom: '20px' }}>When landscaping companies use blurry stock photography, cluttered templates, or slow image carousels that freeze mobile browsers, high-value prospects quickly navigate away. Affluent homeowners wanting $15,000 outdoor living spaces expect a contractor whose digital presence matches the elegance of their physical work.</p>
-          <p style={{ marginBottom: '20px' }}>At Embra Technologies, we build custom Next.js websites for landscaping contractors, grounds maintenance specialists, and hardscape artisans. We engineer fast, responsive photo galleries, clear service tier breakdowns, and localized search frameworks that keep your crews booked through spring, summer, and fall.</p>
-  
 
-          
+          <h2 style={h2}>What a Landscaping Website Needs to Do</h2>
+          <p style={para}>Landscaping is bought with the eyes. Whether a homeowner wants weekly mowing, a spring cleanup, a new patio or an irrigation system, they decide based on what your past work looks like and how easy you are to reach.</p>
+          <p style={para}>Blurry stock photos, a cluttered template or a slow photo slider that stalls on a phone send them back to the search results. A landscaping website should show your best real work quickly, explain your services clearly and make asking for a quote effortless.</p>
+          <p style={para}>We build custom websites for landscaping, lawn care and hardscape companies with fast photo galleries, clear service pages and simple quote forms.</p>
+
           {/* Visual Showcase Card */}
           <div data-preview-card="true" style={{ margin: '48px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.02)' }}>
             <div style={{ background: 'rgba(0,0,0,0.5)', padding: '12px 18px', display: 'flex', alignItems: 'center', gap: '12px', borderBottom: '1px solid var(--line-dark)' }}>
@@ -89,36 +126,32 @@ export default function NichePage() {
               />
             </picture>
             <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
-              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Landscaping & Concrete Project: V Vasquez LLC, Merced, CA. Service catalog with a pre-filled quote form.</span>
+              <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Live Landscaping &amp; Concrete Project: V Vasquez LLC, Merced, CA. Service catalog with a pre-filled quote form.</span>
               <Link href="/portfolio/vvasquez-handyman" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Read V Vasquez Case Study &rarr;</Link>
             </div>
           </div>
 
-<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Overcoming Seasonality with Multi-Service Conversion Architecture</h2>
-          <p style={{ marginBottom: '20px' }}>A major challenge facing landscaping businesses is revenue seasonality. A company that focuses heavily on spring cleanups and summer lawn maintenance often experiences revenue lulls in autumn and winter unless their website strategically pivots:</p>
-          <p style={{ marginBottom: '20px' }}>1. <strong>Year-Round Service Silos:</strong> We build persistent, dedicated landing pages for both warm-weather services (Aeration, Mowing, Irrigation Installation, Patio Construction) and cold-weather services (Fall Leaf Removal, Mulching, Winterization, Snow & Ice Management). Because these pages remain live year-round, they accumulate continuous organic search equity.</p>
-          <p style={{ marginBottom: '20px' }}>2. <strong>Performance-Optimized Before-and-After Galleries:</strong> We implement next-generation image optimization (WebP/AVIF formats with responsive srcset attributes), allowing visitors to inspect high-resolution before-and-after transformations instantly without penalizing Core Web Vitals.</p>
-          <p style={{ marginBottom: '20px' }}>3. <strong>Commercial vs. Residential Portals:</strong> If your company services commercial HOA properties alongside residential homeowners, we build distinct user pathways that present tailored capabilities, insurance credentials, and quote workflows for property managers.</p>
-  
+          <h2 style={h2}>How We Structure a Landscaping Website</h2>
+          <p style={para}>1. <strong>Your real work, front and center:</strong> fast-loading galleries of finished lawns, patios and plantings, organized by type of work, with before-and-after pairs where you have them.</p>
+          <p style={para}>2. <strong>Recurring services and projects kept separate:</strong> weekly lawn care, seasonal cleanups and irrigation checks get simple quote or sign-up forms, while bigger projects get gallery-led pages and a consultation request.</p>
+          <p style={para}>3. <strong>Quote requests that save you a trip:</strong> a form that asks for the address, the service and photos of the yard, so you can price small jobs without visiting first.</p>
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Real-World Proof: The V Vasquez Handyman Case Study</h2>
-          <p style={{ marginBottom: '20px' }}>We applied our localized service catalog methodology when developing the digital storefront for <Link href="/portfolio/vvasquez-handyman" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>V Vasquez Handyman LLC</Link>, serving Merced, CA. Specializing in lawn care, concrete work, and irrigation maintenance, Victor Vasquez needed an online platform that separated his distinct outdoor trades into clear, navigable offerings.</p>
-          <p style={{ marginBottom: '20px' }}>We structured a mobile-first site with a dedicated section for each service and a quote form that pre-selects the service the visitor was viewing; the case study links to its live PageSpeed report. Read our full <Link href="/portfolio/vvasquez-handyman" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>V Vasquez Handyman Case Study</Link> for the details.</p>
-  
+          <h2 style={h2}>Landscaping Website Example: V Vasquez Handyman LLC</h2>
+          <p style={para}>For <Link href="/portfolio/vvasquez-handyman" style={link}>V Vasquez Handyman LLC</Link> in Merced, CA, which does lawn care, concrete and irrigation work, we replaced a generic template with a clear catalog of services. Each service has its own section, and the quote form pre-selects the service the visitor was viewing, so requests arrive with the right context. The case study links to the site&apos;s live PageSpeed report.</p>
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Local SEO Strategy for Landscapers and Hardscaping Contractors</h2>
-          <p style={{ marginBottom: '20px' }}>To generate consistent quote requests, your business needs to rank for terms like "landscaper near me," "hardscape contractor," "sprinkler repair," and "lawn mowing service" across every neighborhood in your service territory.</p>
-          <p style={{ marginBottom: '20px' }}>We engineer custom websites with comprehensive LocalBusiness structured data, clean heading hierarchies, and geo-targeted service area landing pages that capture affluent suburban searches. Learn more about our technical methodology in our <Link href="/services/local-seo" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Local SEO Services</Link> documentation.</p>
-  
+          <StockPhoto name="stock-landscaping" />
 
-          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px', marginTop: '48px' }}>Transparent Pricing for Landscaping Professionals</h2>
-          <p style={{ marginBottom: '20px' }}>Our transparent pricing model ensures your outdoor service business gets an enterprise-grade digital foundation at an accessible investment level:</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Starter Custom Build ($700 one-time):</strong> A custom homepage plus 2 inner pages, built mobile-first with before-and-after photo galleries, a quote request form and on-page SEO basics. Want separate pages for lawn care, hardscaping, irrigation and seasonal services? Our Growth plan ($1,000) covers up to 7 pages, plus schema markup and Google Business Profile setup.</p>
-          <p style={{ marginBottom: '20px' }}>• <strong>Website Care Plan ($150/mo):</strong> Global edge hosting on Vercel, automated SSL certificates, seasonal gallery and banner updates, and monthly local search ranking monitoring.</p>
-          <p style={{ marginBottom: '20px' }}>Visit our comprehensive <Link href="/pricing" style={{ color: "var(--primary-bright)", textDecoration: "underline" }}>Pricing Page</Link> for complete details.</p>
-  
+          <h2 style={h2}>Local SEO for Landscaping Companies</h2>
+          <p style={para}>Homeowners usually search for &quot;lawn care near me,&quot; &quot;landscaper&quot; or &quot;patio installation&quot; plus their town, and many of those calls come through your Google Business Profile. A complete profile with real project photos and steady reviews matters as much as the website.</p>
+          <p style={para}>We add LocalBusiness structured data, give each service its own page, and add town pages only where you have real jobs and reviews to show. Read our <Link href="/blog/local-seo-guide-for-service-businesses" style={link}>local SEO guide for home service businesses</Link>, or see our <Link href="/services/local-seo" style={link}>local SEO service</Link>.</p>
 
-          
+          <h2 style={h2}>Pricing for Landscaping Websites</h2>
+          <p style={para}>Published pricing, no long-term contract, and you own the finished website:</p>
+          <p style={para}>&bull; <strong>Starter ($700 total with split payments, or $600 paid in full):</strong> a custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a quote request form and on-page SEO basics.</p>
+          <p style={para}>&bull; <strong>Growth ($1,000):</strong> up to 7 pages, enough for separate lawn care, hardscape, irrigation and gallery pages, plus structured data and Google Business Profile setup.</p>
+          <p style={para}>&bull; <strong>Care Plan ($150/month, optional):</strong> hosting, security, SEO monitoring, content updates and priority support. Cancel anytime.</p>
+          <p style={para}>See every plan on our <Link href="/pricing" style={link}>pricing page</Link>, or read our guide to <Link href="/blog/website-cost-for-home-service-businesses" style={link}>what a contractor website costs</Link>.</p>
+
           {/* Mid-Content Conversion CTA Box */}
           <div data-mid-cta="true" style={{
             margin: '56px 0',
@@ -129,8 +162,8 @@ export default function NichePage() {
             textAlign: 'center'
           }}>
             <span className="badge-pill" style={{ marginBottom: '16px', display: 'inline-block' }}>24-Hour Free Sample</span>
-            <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '12px', fontWeight: 700 }}>Book High-Margin Landscaping, Irrigation & Hardscape Jobs</h3>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '620px', margin: '0 auto 24px', lineHeight: 1.6 }}>Showcase your seasonal services, before-and-after projects, and transparent estimates with a lightning-fast custom website.</p>
+            <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '12px', fontWeight: 700 }}>See Your Landscaping Website Before You Pay</h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: '620px', margin: '0 auto 24px', lineHeight: 1.6 }}>We design a custom homepage sample for your landscaping company within 24 hours, free and with no commitment.</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', alignItems: 'center' }}>
               <Link href="/contact" className="btn-flip btn-primary btn-large">
                 <span className="btn-flip-inner">
@@ -147,32 +180,15 @@ export default function NichePage() {
             </div>
           </div>
 
-<h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
+          <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
           <div style={{ marginTop: '24px', marginBottom: '40px' }}>
-            
-            <div style={{ marginBottom: '28px' }}>
-              <h3 style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '12px' }}>Should I display fixed pricing for lawn care and landscaping on my website?</h3>
-              <p style={{ color: 'var(--text-muted)' }}>For standardized maintenance packages (such as weekly mowing or spring aeration), listing "starting from" price points is highly effective for pre-qualifying leads. For custom design-build hardscaping, we recommend emphasizing "Free On-Site Consultations" rather than rigid price tags.</p>
-            </div>
-  
-
-            <div style={{ marginBottom: '28px' }}>
-              <h3 style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '12px' }}>How does our website stay relevant and rank during the off-season winter months?</h3>
-              <p style={{ color: 'var(--text-muted)' }}>We keep your seasonal service pages live throughout the entire year. By maintaining pages for leaf cleanup, winter pruning, and commercial snow removal year-round, Google establishes long-term domain authority, ensuring you rank at the top the moment seasonal demand begins.</p>
-            </div>
-  
-
-            <div style={{ marginBottom: '28px' }}>
-              <h3 style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '12px' }}>Can we easily update our project portfolio with new photos of completed jobs?</h3>
-              <p style={{ color: 'var(--text-muted)' }}>Yes. Under our $150/mo Website Care Plan, you simply send us your latest project photos via email or WhatsApp, and our engineering team optimizes, tags, and publishes them to your live website within 24 hours.</p>
-            </div>
-  
+            <FaqAccordion items={FAQS} />
           </div>
 
           <div style={{ marginTop: '48px', padding: '32px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid var(--line-dark)' }}>
-            <h3 style={{ color: '#fff', fontSize: '1.35rem', marginBottom: '12px' }}>Ready to Scale Your Contracting Business?</h3>
+            <h3 style={{ color: '#fff', fontSize: '1.35rem', marginBottom: '12px' }}>Ready for a Landscaping Website That Shows Your Best Work?</h3>
             <p style={{ fontSize: '1rem', marginBottom: '20px', lineHeight: 1.7 }}>
-              Get a custom-engineered Next.js website starting at just $700 one-time, or request our free 24-hour custom homepage sample with zero upfront commitment.
+              Custom landscaping websites from $700 total with split payments, or $600 paid in full. Start with a free homepage sample, ready within 24 hours.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
               <Link href="/contact" style={{ color: 'var(--primary-bright)', textDecoration: 'underline', fontWeight: 600 }}>Request Free 24-Hour Sample &rarr;</Link>

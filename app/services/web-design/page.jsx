@@ -3,6 +3,8 @@ import Breadcrumb from '../../../components/Breadcrumb';
 import PageHeader from '../../../components/PageHeader';
 import Cta from '../../../components/Cta';
 import JsonLd from '../../../components/JsonLd';
+import ProjectShot from '../../../components/ProjectShot';
+import FaqAccordion from '../../../components/FaqAccordion';
 import siteConfig from '../../../lib/site-config';
 
 // 2026-10-25: copy rewritten (owner gave full permission) to read as specific, current and plain:
@@ -161,6 +163,20 @@ export default function WebDesignPage() {
         </div>
       </section>
 
+      {/* 2026-10-26: recent client websites (lazy-loaded, below the fold) */}
+      <section style={{ padding: '20px 0 0' }}>
+        <div className="wrap">
+          <div className="section-head " style={{ textAlign: 'center', marginBottom: '8px' }}>
+            <h2>Recent Websites for Home Service Businesses</h2>
+          </div>
+          <div className="project-shot-grid">
+            <ProjectShot name="tuxford" url="tuxfordcollision.com" alt="Tuxford Collision Center auto body website by Embra Technologies" caption="Auto body, Los Angeles" href="/portfolio/tuxford-collision" linkText="Case study" />
+            <ProjectShot name="skyhightreeservice" url="skyhightreeservicechicago.com" alt="Sky High Tree Service website by Embra Technologies" caption="Tree service, Chicagoland" href="/portfolio/sky-high-tree" linkText="Case study" />
+            <ProjectShot name="alaskahandyman" url="alaskafastfixhandyman.com" alt="Alaska Fast Fix Handyman website by Embra Technologies" caption="Handyman, Alaska" href="/portfolio/alaska-fast-fix" linkText="Case study" />
+          </div>
+        </div>
+      </section>
+
       {/* What is included */}
       <section style={{ padding: '80px 0' }}>
         <div className="wrap">
@@ -174,6 +190,7 @@ export default function WebDesignPage() {
             {DESIGN_FEATURES.map((f) => (
               <article
                 key={f.title}
+                className="feature-card"
                 style={{
                   background: 'var(--card-bg, rgba(255,255,255,0.03))',
                   border: '1px solid var(--line-dark)',
@@ -194,6 +211,7 @@ export default function WebDesignPage() {
                     </li>
                   ))}
                 </ul>
+                <Link href="/contact" className="card-cta">Get my free homepage sample &rarr;</Link>
               </article>
             ))}
           </div>
@@ -206,14 +224,7 @@ export default function WebDesignPage() {
           <div className="section-head " style={{ textAlign: 'center', marginBottom: '48px' }}>
             <h2>Web Design Frequently Asked Questions</h2>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            {DESIGN_FAQS.map((faq) => (
-              <div key={faq.q} style={{ padding: '24px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--line-dark)', borderRadius: '12px' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '8px' }}>{faq.q}</h3>
-                <p style={{ fontSize: '0.95rem', color: 'var(--muted-inv)', lineHeight: 1.6 }}>{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FaqAccordion items={DESIGN_FAQS} />
         </div>
       </section>
 

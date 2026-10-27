@@ -89,9 +89,10 @@ export default function WebsiteIntegrationsPage() {
         <div className="wrap">
           <Breadcrumb label="Integrations" href="/services/website-integrations" />
           <PageHeader
+            offer={false}
             pill="Digital Systems"
-            title={<>Seamless Website Integrations <span className="highlight-text">for Your Business</span></>}
-            sub="Connect your website to the tools you use every day. We build digital ecosystems that automate lead capture, track analytics, and streamline customer communication."
+            title={<>Website Integrations <span className="highlight-text">for Contractor Websites</span></>}
+            sub="Connect your website to the software you already use: quote forms that reach your inbox, booking links, WhatsApp, Google Maps and analytics, set up to fit how your business works."
           />
         </div>
       </section>

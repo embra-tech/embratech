@@ -518,3 +518,130 @@ Release 46680ac (sections S and T) verified READY and rendering live.
 **Batch 2, next:** full rewrites of the auto body body, HVAC, roofing and landscaping industry pages; a founder bio and author box (needs owner details).
 
 **Deploy:** `git add -A` (check `git status`).
+
+---
+
+## V. Content batch 2: the last template pages (2026-10-26)
+
+Release 1a4af5d (section U) verified live. Indexing requested for 10 pages (web design, care plan, Chicago, LA, auto body guide, HVAC guide, pricing, auto body page, plumber page, services); sitemap resubmitted.
+
+Full copy rewrites. Layout, images and design unchanged; pricing aligned ($700 split / $600 full, Growth $1,000, Care Plan $150); 6 FAQs each; FAQ headings H3.
+- `app/niches/auto-body-shop-website-design/page.jsx`: body rewritten (title, H1 and intro done in S). New sections "Why Work With an Auto Body Website Design Agency That Knows Collision Repair" and "Pages Every Collision Repair Website Needs"; insurance wording made accurate (which insurers you work with; right to choose only where state law provides it).
+- `app/niches/hvac-website-design/page.jsx`: title "HVAC Website Design for Heating & Cooling Contractors". Polar Air labelled as a concept (sample brand); removed the unsourced $8k–$15k figure and conversion claims; certifications and financing only if held or offered; FAQ on air conditioning and heating SEO; links to the HVAC guide and Chicago.
+- `app/niches/roofing-website-design/page.jsx`: title "Roofing Website Design for Roofing Contractors". Summit Peak labelled as a concept; removed the unsourced $10k–$40k range, "institutional-grade" and the "adjuster meeting representation" promise (licensed public-adjuster work in many states).
+- `app/niches/landscaping-website-design/page.jsx`: title "Landscaping Website Design for Lawn Care Companies". Removed the unsourced "$15,000 outdoor living" example and hype; V Vasquez example section.
+- Care Plan: no `h4` left in the page (the 4 found live are the footer column titles).
+- `app/sitemap.js`: the four pages dated 2026-10-26.
+
+All 7 industry pages now use the same honest, specific approach; none uses the old `generate_niches.js` template wording.
+
+**Deploy:** `git add -A` (check `git status`).
+
+---
+
+## W. Free-sample offer, pictures and motion on every page (2026-10-26, owner requested)
+
+Goal: visitors see the free, no-obligation homepage sample as soon as they land, and inner pages get more visual interest, without hurting rankings.
+
+**New components:**
+- `components/OfferStrip.jsx`: "Free custom homepage sample in 24 hours. No payment and no obligation" plus a Get My Free Sample button. Plain server-rendered HTML: no pop-up (Google demotes intrusive mobile pop-ups), no layout shift, no extra JavaScript.
+- `components/ProjectShot.jsx`: real project screenshots in the existing browser-window style. Existing optimized AVIF/WebP sets, lazy-loaded, fixed width/height (no layout shift), descriptive alt text, optional link to the case study. `concept` labels sample brands.
+
+**Where the offer appears:**
+- `components/PageHeader.jsx`: under every inner page heading (services, industries, cities, pricing, portfolio, blog index, about, legal). `offer={false}` on Contact, which the offer links to.
+- `app/blog/[slug]/page.jsx`: under each article's summary.
+- `app/portfolio/[slug]/page.jsx`: at the end of each case-study hero.
+- Homepage unchanged: its hero already states the free 24-hour sample.
+
+**Pictures added** (all below the first screen):
+- Local SEO page: Pick N Drop Laundry.
+- Web design page: "Recent Websites" grid (Tuxford, Sky High, Alaska Fast Fix).
+- City pages: LA Tuxford, Chicago Sky High, Alaska Alaska Fast Fix.
+- Each article: one relevant project, inserted before its first H2 so it never delays the main content.
+- Each case study: its own screenshot after "The Challenge".
+
+**Motion** (`app/globals.css`, pure CSS):
+- A soft moving glow behind inner page headers.
+- A pulsing green dot on the offer.
+- The offer sliding in.
+- Screenshots and showcase cards easing in on scroll (scroll-driven CSS, Chrome and Edge; other browsers show them normally).
+- Transform-based only: no layout shift, and text is never hidden (screenshots start at 40% opacity, not 0). Off for visitors who prefer reduced motion and for crawlers (`html[data-bot]`).
+
+**Also:** Alaska section, "lightning fast" and "ensure your site ranks for the exact boroughs" reworded.
+
+**SEO safety:** no titles, H1s, URLs, canonicals or main copy changed by this round; no new JavaScript libraries; images lazy-loaded below the first screen with explicit dimensions; offer text in the HTML for every visitor and crawler alike.
+
+**Deploy:** `git add -A` (check `git status`).
+
+---
+
+## X. Offer matched to each page, Pexels photos, card animations (2026-10-26, owner requested)
+
+**1. Offer relevance (owner feedback):** the free homepage sample was showing on the Local SEO page, which sells SEO.
+- `components/OfferStrip.jsx` now has two versions: `sample` (free homepage sample) and `seo` (free local SEO review).
+- `PageHeader` takes `offer="sample" | "seo" | false`.
+- Local SEO page, the local SEO, HVAC SEO and auto body marketing articles, and the PND case study use `seo`.
+- Care Plan and integrations show none (neither offer fits); Contact shows none. Privacy and Terms never had it.
+- Integrations H1 and subtitle de-hyped to match its title ("Website Integrations for Contractor Websites").
+
+**2. Pexels photos (self-hosted for speed and SEO):**
+- `scripts/fetch-pexels.mjs` downloads 10 relevant landscape photos once into `public/images/stock/`. Each is the first search result whose Pexels description contains a trade keyword. Credits go to `lib/stock-credits.json`; `OVERRIDES` pins a specific photo id.
+- The key lives in `.env.local` (ignored by git via `.env*`).
+- `scripts/generate-images.mjs` optimizes the photos (AVIF/WebP/JPEG at 480/720/960) at build.
+- `components/StockPhoto.jsx`: lazy-loaded, fixed 3:2 box, Pexels alt text, photographer credit with a nofollow link. Renders nothing until downloaded, so builds never show broken images.
+- Placed on all 7 industry pages (mid-page, before the local search section), each industry card on `/niches`, and the Services rows (web design, local SEO, growth).
+
+**3. Card animations** (pure CSS; hover and motion off for reduced-motion users and crawlers):
+- `/niches` cards: lift, glow, photo zoom and icon tilt on hover. Card descriptions and the hub subtitle de-hyped.
+- `/services` rows: icon lift and photo zoom on hover; `components/GrowthBars.jsx`, a decorative animated growth graphic (no data, `aria-hidden`) on the Local SEO row.
+- Local SEO and web design feature cards: lift and top glow line on hover.
+
+**Order:**
+1. `node scripts/fetch-pexels.mjs`.
+2. Review the photos.
+3. `npm run build`.
+4. Preview, then push. Commit `public/images/stock/` and `lib/stock-credits.json`, never `.env.local`.
+
+**Photo review (done 2026-10-26):** all 10 checked and pinned by id in `scripts/fetch-pexels.mjs`. All are landscape, about 3:2, about 6000×4000.
+
+| Slot | Pexels id | Subject |
+|---|---|---|
+| plumber | 6419128 | hands installing steel pipes |
+| hvac | 7347538 | technician repairing an outdoor AC unit |
+| roofing | 33404248 | roofer nailing shingles on a residential roof |
+| tree | 31127615 | arborist cutting a trunk with a chainsaw |
+| handyman | 7285924 | drill fitting a door hinge; replaced an auto-mechanic photo |
+| landscaping | 37554739 | mower on a backyard lawn; replaced a golf course, then a portrait shot |
+| autobody | 14615263 | car parts being spray-painted |
+| webdesign | 7309483 | business owner at a laptop |
+| localseo | 5448160 | hands navigating a phone GPS map; replaced a TikTok app search |
+| growth | 3861957 | analytics graph on a laptop |
+
+---
+
+## Y. Polish round: scannable Local SEO page, Services photo column, FAQ dropdowns, gradient accents, card CTAs (2026-10-26, owner feedback)
+
+1. **Services page:** each row is now text on the left and the photo in its own top-aligned 300px column on the right (CSS grid on `.service-detail-content`; stacks on phones). Photos get a gradient frame. The list widens to 1080px. Website Integrations gets a photo (`stock-integrations`, new search entry in `fetch-pexels.mjs`, not pinned until reviewed).
+2. **Local SEO page:** rebuilt for scanning; the wording and SEO content are kept:
+   - short intro plus 3 ranking-factor cards (Relevance and Prominence "You can improve", Distance "Fixed")
+   - guide links as chips
+   - PND screenshot
+   - "How It Works" 3 steps with a Request My Free Local SEO Review button
+   - a call to action on each feature card ("Include this in my free review")
+   - FAQ dropdowns
+3. **CTAs and hover:**
+   - Web design feature cards: "Get my free homepage sample".
+   - Hover lift and glow on factor, step, feature, service and industry cards; the CTA arrow slides; chips lift; buttons and mid-page CTA boxes glow.
+4. **Gradient accents and dropdowns:**
+   - 1px gradient-blue outline (CSS mask) on cards, photo frames, offer strips, FAQ items and mid-page CTA boxes.
+   - Gradient divider lines between sections (`.gradient-divider`).
+   - Gradient underline under centered section headings.
+   - Gradient bar beside content headings on industry and city pages (`.text-content h2`).
+   - FAQ dropdowns (`components/FaqAccordion.jsx`, native `<details>`; first item open) on the Local SEO, Web Design and 6 industry pages. Gradient outline when open; rotating chevron.
+
+**SEO safety:**
+- FAQ answers stay in the HTML inside `<details>` (indexed); questions keep their H3s.
+- No titles, H1s or URLs changed; no JavaScript added; all effects are CSS, transform and opacity, with no layout shift.
+- Motion is disabled under prefers-reduced-motion.
+
+**Next:** `node scripts/fetch-pexels.mjs` (only `stock-integrations` is new; the other 10 are pinned), review it, then build, preview and push.

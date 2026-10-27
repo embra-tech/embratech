@@ -2,7 +2,19 @@ import Link from 'next/link';
 import Breadcrumb from '../../components/Breadcrumb';
 import PageHeader from '../../components/PageHeader';
 import Cta from '../../components/Cta';
+import StockPhoto from '../../components/StockPhoto';
 import siteConfig from '../../lib/site-config';
+
+// 2026-10-26: a trade photo on each card (Pexels, served from our site; hidden until downloaded).
+const NICHE_PHOTOS = {
+  'web-design-for-handyman-businesses': 'stock-handyman',
+  'tree-service-website-design': 'stock-tree',
+  'auto-body-shop-website-design': 'stock-autobody',
+  'landscaping-website-design': 'stock-landscaping',
+  'plumber-website-design': 'stock-plumber',
+  'hvac-website-design': 'stock-hvac',
+  'roofing-website-design': 'stock-roofing',
+};
 
 export const metadata = {
   title: 'Industry Website Design for Home Service Contractors',
@@ -29,11 +41,12 @@ const NICHES = [
   {
     slug: 'web-design-for-handyman-businesses',
     title: 'Handyman Website Design',
-    desc: 'Build trust fast. Show your service catalog, license, and quote form above the fold so homeowners book you instead of a competitor.',
+    desc: 'Show your services, license and a quote form near the top, so homeowners can see you do the job and book you quickly.',
     badge: 'Handyman',
     icon: (
       <>
-        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+        <circle className="niche-icon-pulse" cx="6.5" cy="17.5" r="1.1" fill="currentColor" stroke="none" />
+        <path className="niche-icon-wrench" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
       </>
     ),
     caseStudy: { label: 'Alaska Fast Fix Case Study', href: '/portfolio/alaska-fast-fix' },
@@ -41,11 +54,11 @@ const NICHES = [
   {
     slug: 'tree-service-website-design',
     title: 'Tree Service Website Design',
-    desc: 'Emergency-first architecture with 24/7 click-to-call, insurance proof, and storm surge SEO so you capture high-ticket removals instantly.',
+    desc: 'Clear ways to call or request an estimate, proof of insurance, and service pages for removals, trimming and storm work.',
     badge: 'Tree Service',
     icon: (
       <>
-        <path d="M12 22V12" /><path d="M5 12H2a10 10 0 0 0 20 0h-3" /><path d="M8 6a4 4 0 0 1 8 0c0 7-8 10-8 10" /><path d="M16 6a4 4 0 0 0-8 0" />
+        <path d="M12 22v-5" /><path d="M9 22h6" /><g className="niche-icon-tree"><path d="M12 3 6.5 10h3.2L5 17h14l-4.7-7h3.2L12 3z" /></g>
       </>
     ),
     caseStudy: { label: 'Sky High Tree Service Case Study', href: '/portfolio/sky-high-tree' },
@@ -53,11 +66,11 @@ const NICHES = [
   {
     slug: 'auto-body-shop-website-design',
     title: 'Auto Body Shop Website Design',
-    desc: 'Trust-first hierarchy: licensing credentials, ratings, and free estimate offers above the fold so drivers choose you at 11 PM after an accident.',
+    desc: 'Licensing, ratings and free estimate offers up front, plus photo estimates and clear answers about insurance claims.',
     badge: 'Auto Body',
     icon: (
       <>
-        <rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" />
+        <g className="niche-icon-car"><path d="M5 17H3v-4.5L5.2 7a2 2 0 0 1 1.85-1.25h9.9A2 2 0 0 1 18.8 7L21 12.5V17h-2" /><line x1="9" y1="17" x2="15" y2="17" /><circle cx="7" cy="17" r="2" /><circle cx="17" cy="17" r="2" /></g><path className="niche-icon-sparkle" d="M19 2v3M17.5 3.5h3" />
       </>
     ),
     caseStudy: { label: 'Tuxford Collision Case Study', href: '/portfolio/tuxford-collision' },
@@ -65,11 +78,11 @@ const NICHES = [
   {
     slug: 'landscaping-website-design',
     title: 'Landscaping Website Design',
-    desc: 'Seasonal service pages, before/after photo galleries, and local SEO that keeps your calendar full across lawn care, irrigation, and hardscape seasons.',
+    desc: 'Real project galleries, separate pages for weekly lawn care and bigger projects, and easy quote requests with photos.',
     badge: 'Landscaping',
     icon: (
       <>
-        <path d="M2 22 16 8" /><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94z" /><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94z" /><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94z" /><path d="M20 21a9 9 0 0 0-9-9" />
+        <g className="niche-icon-leaf"><path d="M2 22 16 8" /><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94z" /><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94z" /><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94z" /></g><path className="niche-icon-pulse" d="M20 21a9 9 0 0 0-9-9" />
       </>
     ),
     caseStudy: { label: 'V Vasquez LLC Case Study', href: '/portfolio/vvasquez-handyman' },
@@ -77,11 +90,11 @@ const NICHES = [
   {
     slug: 'plumber-website-design',
     title: 'Plumber Website Design',
-    desc: 'Prominent tap-to-call, instant quote forms, and 24/7 availability messaging so emergency plumbing searches convert into booked jobs.',
+    desc: 'Tap-to-call on every page, separate pages for emergency and scheduled work, and your license and reviews up front.',
     badge: 'Plumbing',
     icon: (
       <>
-        <path d="M6 3v2" /><path d="M10 3v2" /><path d="M6 19v2" /><path d="M10 19v2" /><path d="M4 9a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h2a5 5 0 0 1 4 2 5 5 0 0 0 4 2h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2 2 2 0 0 1-2-2 2 2 0 0 0-2-2H4z" />
+        <path d="M6 3v2" /><path d="M10 3v2" /><path d="M6 19v2" /><path d="M10 19v2" /><path d="M4 9a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h2a5 5 0 0 1 4 2 5 5 0 0 0 4 2h1a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2 2 2 0 0 1-2-2 2 2 0 0 0-2-2H4z" /><path className="niche-icon-drop" d="M20 13.5c.9 1.2 1.5 2.1 1.5 2.9a1.5 1.5 0 0 1-3 0c0-.8.6-1.7 1.5-2.9z" />
       </>
     ),
     caseStudy: null,
@@ -89,11 +102,11 @@ const NICHES = [
   {
     slug: 'hvac-website-design',
     title: 'HVAC Website Design',
-    desc: 'Season-targeted landing pages, financing callouts, and service-area SEO that keeps your technicians booked through summer peaks and winter emergencies.',
+    desc: 'AC and heating pages ready before each season, financing and maintenance plan details, and tap-to-call on every page.',
     badge: 'HVAC',
     icon: (
       <>
-        <path d="M12 22V2" /><path d="m5 9 7-7 7 7" /><path d="m5 15 7 7 7-7" />
+        <path d="M12 22V2" /><path className="niche-icon-up" d="m5 9 7-7 7 7" /><path className="niche-icon-down" d="m5 15 7 7 7-7" /><circle className="niche-icon-pulse" cx="12" cy="12" r="2.2" />
       </>
     ),
     caseStudy: null,
@@ -101,11 +114,11 @@ const NICHES = [
   {
     slug: 'roofing-website-design',
     title: 'Roofing Website Design',
-    desc: 'Storm damage urgency, insurance claim guidance pages, manufacturer certifications, and high-ticket trust signals that convert roofing searches.',
+    desc: 'License, insurance and local proof up front, storm damage and replacement pages, and easy inspection requests.',
     badge: 'Roofing',
     icon: (
       <>
-        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" />
+        <path className="niche-icon-roof" d="m3 9 9-7 9 7" /><path d="M5 7.5V20a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7.5" /><polyline points="9 22 9 12 15 12 15 22" />
       </>
     ),
     caseStudy: null,
@@ -127,7 +140,7 @@ export default function NichesPage() {
             pill="By Industry"
             badge="Specialist Sites"
             title={<>Website design built for <span className="highlight-text">your trade.</span></>}
-            sub="Generic template websites don't convert trade leads. We build conversion-engineered sites specifically for each home service niche, with the right trust signals, CTAs, and local SEO structure for that industry."
+            sub="Each trade has different customers, questions and searches. We design websites around the trust signals, calls to action and local search structure that fit your industry."
           />
         </div>
       </section>
@@ -140,6 +153,7 @@ export default function NichesPage() {
               <Link
                 key={n.slug}
                 href={`/niches/${n.slug}`}
+                className="niche-card"
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -152,13 +166,14 @@ export default function NichesPage() {
                   textDecoration: 'none',
                 }}
               >
+                <StockPhoto name={NICHE_PHOTOS[n.slug]} variant="thumb" alt={`${n.badge} work, illustrating ${n.title.toLowerCase()}`} />
                 <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                  <div style={{
+                  <div className="niche-card-icon" style={{
                     width: 48, height: 48, borderRadius: '12px',
                     background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(37,99,235,0.2)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
                   }}>
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary-bright)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary-bright, #60a5fa)" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
                       {n.icon}
                     </svg>
                   </div>

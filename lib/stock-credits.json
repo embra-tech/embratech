@@ -1,0 +1,101 @@
+{
+  "stock-plumber": {
+    "id": 6419128,
+    "photographer": "Anıl Karakaya",
+    "photographerUrl": "https://www.pexels.com/@anilkarakaya",
+    "pexelsUrl": "https://www.pexels.com/photo/plumber-installs-pipe-fittings-6419128/",
+    "alt": "Close-up of a plumber's hands installing steel pipes indoors, showcasing skilled manual work.",
+    "width": 6000,
+    "height": 4000
+  },
+  "stock-hvac": {
+    "id": 7347538,
+    "photographer": "Richard Low Hong",
+    "photographerUrl": "https://www.pexels.com/@richard-low-hong-33206323",
+    "pexelsUrl": "https://www.pexels.com/photo/man-in-gray-t-shirt-fixing-the-aircon-7347538/",
+    "alt": "A technician skillfully repairing an outdoor air conditioning unit mounted on a building wall.",
+    "width": 8256,
+    "height": 5504
+  },
+  "stock-roofing": {
+    "id": 33404248,
+    "photographer": "Ryan  Stephens",
+    "photographerUrl": "https://www.pexels.com/@rstephens",
+    "pexelsUrl": "https://www.pexels.com/photo/professional-roofer-installing-shingles-on-new-roof-33404248/",
+    "alt": "Roofer using nail gun for shingle installation on residential roof.",
+    "width": 6359,
+    "height": 4239
+  },
+  "stock-tree": {
+    "id": 31127615,
+    "photographer": "Henk Schuurmans",
+    "photographerUrl": "https://www.pexels.com/@henk-schuurmans-331483624",
+    "pexelsUrl": "https://www.pexels.com/photo/arborist-cutting-down-tree-trunk-safely-with-chainsaw-31127615/",
+    "alt": "Arborist climbs tree to cut a trunk with a chainsaw, showcasing safety gear and sawdust.",
+    "width": 6000,
+    "height": 4000
+  },
+  "stock-handyman": {
+    "id": 7285924,
+    "photographer": "kaboompics.com",
+    "photographerUrl": "https://www.pexels.com/@karola-g",
+    "pexelsUrl": "https://www.pexels.com/photo/a-person-drilling-a-screw-7285924/",
+    "alt": "Focused close-up of a handyman using a drill on a wooden plank indoors.",
+    "width": 6720,
+    "height": 4480
+  },
+  "stock-landscaping": {
+    "id": 37554739,
+    "photographer": "Joel Hägele",
+    "photographerUrl": "https://www.pexels.com/@joel-hagele-2160986215",
+    "pexelsUrl": "https://www.pexels.com/photo/orange-lawn-mower-in-green-backyard-37554739/",
+    "alt": "A lawn mower sits on a green lawn in a backyard, ready for yard work.",
+    "width": 6000,
+    "height": 4000
+  },
+  "stock-autobody": {
+    "id": 14615263,
+    "photographer": "Dextar Studio ™",
+    "photographerUrl": "https://www.pexels.com/@dextarstudio",
+    "pexelsUrl": "https://www.pexels.com/photo/close-up-of-man-painting-car-details-14615263/",
+    "alt": "Close-up of car parts being spray-painted in an automotive workshop.",
+    "width": 6960,
+    "height": 4640
+  },
+  "stock-webdesign": {
+    "id": 7309483,
+    "photographer": "RDNE Stock project",
+    "photographerUrl": "https://www.pexels.com/@rdne",
+    "pexelsUrl": "https://www.pexels.com/photo/a-man-looking-at-a-website-on-the-internet-7309483/",
+    "alt": "Entrepreneur at a desk using a laptop for business planning. Ideal for tech and startup themes.",
+    "width": 6418,
+    "height": 4279
+  },
+  "stock-localseo": {
+    "id": 5448160,
+    "photographer": "Theo  Decker",
+    "photographerUrl": "https://www.pexels.com/@theo-decker",
+    "pexelsUrl": "https://www.pexels.com/photo/person-wearing-bracelets-holding-black-phone-5448160/",
+    "alt": "Close-up of hands with bracelets navigating on smartphone using GPS app outdoors.",
+    "width": 6720,
+    "height": 4480
+  },
+  "stock-growth": {
+    "id": 3861957,
+    "photographer": "ThisIsEngineering",
+    "photographerUrl": "https://www.pexels.com/@thisisengineering",
+    "pexelsUrl": "https://www.pexels.com/photo/graph-on-laptop-screen-3861957/",
+    "alt": "Laptop displaying data analytics graph in a modern office setting, symbolizing growth and technology.",
+    "width": 7952,
+    "height": 5304
+  },
+  "stock-integrations": {
+    "id": 13801799,
+    "photographer": "Mizuno K",
+    "photographerUrl": "https://www.pexels.com/@mizunokozuki",
+    "pexelsUrl": "https://www.pexels.com/photo/man-using-his-laptop-and-a-smart-phone-13801799/",
+    "alt": "Businessman in a suit using a laptop and smartphone in an urban setting, blending technology with business.",
+    "width": 6000,
+    "height": 4000
+  }
+}

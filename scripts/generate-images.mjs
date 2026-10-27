@@ -38,6 +38,18 @@ const PORTFOLIO_IMAGES = [
   { name: 'plumbing-mockup',    src: 'plumbing-mockup.jpg' },
   { name: 'hvac-mockup',        src: 'hvac-mockup.jpg' },
   { name: 'roofing-mockup',     src: 'roofing-mockup.jpg' },
+  // 2026-10-26: Pexels photos, downloaded once by scripts/fetch-pexels.mjs into public/images/stock/
+  { name: 'stock-plumber',      src: 'stock/stock-plumber.jpg' },
+  { name: 'stock-hvac',         src: 'stock/stock-hvac.jpg' },
+  { name: 'stock-roofing',      src: 'stock/stock-roofing.jpg' },
+  { name: 'stock-tree',         src: 'stock/stock-tree.jpg' },
+  { name: 'stock-handyman',     src: 'stock/stock-handyman.jpg' },
+  { name: 'stock-landscaping',  src: 'stock/stock-landscaping.jpg' },
+  { name: 'stock-autobody',     src: 'stock/stock-autobody.jpg' },
+  { name: 'stock-webdesign',    src: 'stock/stock-webdesign.jpg' },
+  { name: 'stock-localseo',     src: 'stock/stock-localseo.jpg' },
+  { name: 'stock-growth',       src: 'stock/stock-growth.jpg' },
+  { name: 'stock-integrations', src: 'stock/stock-integrations.jpg' },
 ];
 
 const AVATAR_IMAGES = [

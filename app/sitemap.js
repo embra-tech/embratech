@@ -52,7 +52,7 @@ export default function sitemap() {
     'roofing-website-design',
   ].map(slug => ({
     url: `${baseUrl}/niches/${slug}`,
-    lastModified: ['auto-body-shop-website-design', 'plumber-website-design'].includes(slug) ? oct25 : (changedOct21.includes(slug) ? oct21 : oct13),
+    lastModified: ['auto-body-shop-website-design', 'hvac-website-design', 'roofing-website-design', 'landscaping-website-design'].includes(slug) ? oct26 : (slug === 'plumber-website-design' ? oct25 : (changedOct21.includes(slug) ? oct21 : oct13)),
     changeFrequency: 'monthly',
     priority: 0.8,
   }));

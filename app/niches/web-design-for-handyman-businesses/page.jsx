@@ -3,6 +3,8 @@ import PageHeader from '../../../components/PageHeader';
 import Breadcrumb from '../../../components/Breadcrumb';
 import Cta from '../../../components/Cta';
 import JsonLd from '../../../components/JsonLd';
+import StockPhoto from '../../../components/StockPhoto';
+import FaqAccordion from '../../../components/FaqAccordion';
 import siteConfig from '../../../lib/site-config';
 
 // 2026-10-21: copy rewritten (owner gave full permission). Search Console (Oct 4-17) showed the
@@ -142,6 +144,8 @@ export default function NichePage() {
           <p style={para}>For <Link href="/portfolio/vvasquez-handyman" style={link}>V Vasquez Handyman LLC</Link> in Merced, CA, which does lawn care, concrete and irrigation work, we replaced a generic template with a clear catalog of services and a quote form that pre-selects the service the visitor was viewing.</p>
           <p style={para}>Each case study links to the site&apos;s live PageSpeed report, so you can check how quickly it loads for yourself.</p>
 
+          <StockPhoto name="stock-handyman" />
+
           <h2 style={h2}>Getting Found by Homeowners Near You</h2>
           <p style={para}>Every handyman website we build includes the search basics: a clear heading structure, a sitemap, and LocalBusiness structured data with your service area and hours. Most local calls come through your Google Business Profile, so a complete, active profile and a steady flow of reviews matter just as much as the website.</p>
           <p style={para}>If you serve several nearby towns, we add town pages only where there is something real to show, such as jobs you&apos;ve done and reviews from local customers, rather than copying one page and swapping the city name. Learn more about our <Link href="/services/local-seo" style={link}>local SEO service for home service businesses</Link>.</p>
@@ -183,12 +187,7 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
           <div style={{ marginTop: '24px', marginBottom: '40px' }}>
-            {FAQS.map((f) => (
-              <div key={f.q} style={{ marginBottom: '28px' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '12px' }}>{f.q}</h3>
-                <p style={{ color: 'var(--text-muted)' }}>{f.a}</p>
-              </div>
-            ))}
+            <FaqAccordion items={FAQS} />
           </div>
 
           <div style={{ marginTop: '48px', padding: '32px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid var(--line-dark)' }}>

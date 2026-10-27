@@ -3,6 +3,8 @@ import PageHeader from '../../../components/PageHeader';
 import Breadcrumb from '../../../components/Breadcrumb';
 import Cta from '../../../components/Cta';
 import JsonLd from '../../../components/JsonLd';
+import StockPhoto from '../../../components/StockPhoto';
+import FaqAccordion from '../../../components/FaqAccordion';
 import siteConfig from '../../../lib/site-config';
 
 // 2026-10-25: copy rewritten (owner gave full permission) to read as specific and accurate: removed an
@@ -131,6 +133,8 @@ export default function NichePage() {
           <p style={para}>2. <strong>License, insurance and reviews up front:</strong> your license number where your state requires one, insurance, years in business and recent Google reviews near the top of the page, before the visitor has to scroll.</p>
           <p style={para}>3. <strong>Emergency and scheduled work kept separate:</strong> urgent services (burst pipes, leaks, sewer backups) and planned installations (tankless water heaters, repiping, water filtration) each get their own clear pages, with the right call to action for each.</p>
 
+          <StockPhoto name="stock-plumber" />
+
           <h2 style={h2}>Getting Found for Plumbing Searches</h2>
           <p style={para}>Most plumbing calls from search come through Google&apos;s map results and the pages below them. Every plumbing website we build includes clear service pages, a sitemap and LocalBusiness and Plumber structured data with your service area and hours. Your Google Business Profile and steady, genuine reviews matter just as much as the website.</p>
           <p style={para}>If you serve several towns, we add town pages only where there is something real to show, such as jobs you&apos;ve done and reviews from local customers, rather than copying one page and swapping the town name. Read our <Link href="/blog/local-seo-guide-for-service-businesses" style={link}>local SEO guide for home service businesses</Link>, or see our <Link href="/services/local-seo" style={link}>local SEO service</Link>.</p>
@@ -175,12 +179,7 @@ export default function NichePage() {
 
           <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '28px', marginTop: '56px' }}>Frequently Asked Questions</h2>
           <div style={{ marginTop: '24px', marginBottom: '40px' }}>
-            {FAQS.map((f) => (
-              <div key={f.q} style={{ marginBottom: '28px' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.25rem', marginBottom: '12px' }}>{f.q}</h3>
-                <p style={{ color: 'var(--text-muted)' }}>{f.a}</p>
-              </div>
-            ))}
+            <FaqAccordion items={FAQS} />
           </div>
 
           <div style={{ marginTop: '48px', padding: '32px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid var(--line-dark)' }}>

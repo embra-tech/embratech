@@ -3,6 +3,7 @@ import PageHeader from '../../../components/PageHeader';
 import Breadcrumb from '../../../components/Breadcrumb';
 import Cta from '../../../components/Cta';
 import JsonLd from '../../../components/JsonLd';
+import StockPhoto from '../../../components/StockPhoto';
 import siteConfig from '../../../lib/site-config';
 
 const description = 'Custom tree service website design for US contractors. Explore a live project, compare pricing and request a free homepage sample.';
@@ -159,6 +160,8 @@ export default function NichePage() {
           <p style={paragraphStyle}>A clear website gives search engines and customers useful information about your business. We plan page titles, headings, service descriptions and internal links around your actual work and service area.</p>
           <p style={paragraphStyle}>Your Google Business Profile, website and business details should tell a consistent story. Dedicated service or area pages should offer useful, specific information; a page for every town is not automatically the right approach. Explore our <Link href="/services/local-seo" style={linkStyle}>local SEO services</Link> for the broader scope, or read our checklist of <Link href="/blog/what-tree-service-website-needs" style={linkStyle}>what every tree service website needs</Link>.</p>
           <p style={paragraphStyle}>Search visibility depends on competition, relevance, authority and other factors. We do not promise a particular Google position.</p>
+
+          <StockPhoto name="stock-tree" />
 
           <h2 style={headingStyle}>Tree-Service Website Pricing</h2>
           <p style={paragraphStyle}><strong>Starter:</strong> $700 total with split payments, or $600 paid in full. Includes a custom homepage plus 2 inner pages, mobile-responsive design, contact and quote forms, and an on-page SEO foundation.</p>

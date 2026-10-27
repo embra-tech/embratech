@@ -84,6 +84,7 @@ export default function CarePlanPage() {
         <div className="wrap">
           <Breadcrumb label="Care Plan" href="/services/care-plan" />
           <PageHeader
+            offer={false}
             pill="Maintenance &amp; Support"
             title={<>The $150/mo <span className="highlight-text">Website Care Plan</span></>}
             sub="Never worry about updates, security patches, or slow loading speeds again. We keep your website running at peak performance so you can focus on running your business."

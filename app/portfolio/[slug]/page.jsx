@@ -1,4 +1,16 @@
 import Link from 'next/link';
+import OfferStrip from '../../../components/OfferStrip';
+import ProjectShot from '../../../components/ProjectShot';
+
+// 2026-10-26: project screenshot per case study (existing optimized image sets).
+const CASE_SHOTS = {
+  'pnd-laundry': 'pndlaundry',
+  'tuxford-collision': 'tuxford',
+  'vvasquez-handyman': 'vvasquez',
+  'alaska-fast-fix': 'alaskahandyman',
+  'bestbreaks': 'bestbreaks',
+  'sky-high-tree': 'skyhightreeservice',
+};
 import { notFound } from 'next/navigation';
 import Cta from '../../../components/Cta';
 import siteConfig from '../../../lib/site-config';
@@ -311,6 +323,7 @@ export default function CaseStudyPage({ params }) {
               {cs.tags.map((t) => <span key={t} className="bento-tag">{t}</span>)}
             </div>
           </div>
+          <OfferStrip variant={params.slug === 'pnd-laundry' ? 'seo' : 'sample'} />
         </div>
       </section>
 
@@ -326,6 +339,20 @@ export default function CaseStudyPage({ params }) {
           </div>
         </div>
       </section>
+
+      {/* 2026-10-26: project screenshot (below the first screen, lazy-loaded) */}
+      {CASE_SHOTS[params.slug] && (
+        <section style={{ padding: '0 0 24px' }}>
+          <div className="wrap" style={{ maxWidth: 960, margin: '0 auto' }}>
+            <ProjectShot
+              name={CASE_SHOTS[params.slug]}
+              url={cs.domain}
+              alt={`${cs.name} website (${cs.industry}, ${cs.location}) by Embra Technologies`}
+              caption={`${cs.name} · ${cs.industry} · ${cs.location}`}
+            />
+          </div>
+        </section>
+      )}
 
       {/* ── Approach ─────────────────────────────────────────── */}
       <section className="cs-section cs-section--alt">
