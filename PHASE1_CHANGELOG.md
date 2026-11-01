@@ -645,3 +645,70 @@ Goal: visitors see the free, no-obligation homepage sample as soon as they land,
 - Motion is disabled under prefers-reduced-motion.
 
 **Next:** `node scripts/fetch-pexels.mjs` (only `stock-integrations` is new; the other 10 are pinned), review it, then build, preview and push.
+
+---
+
+## AA. Top-30 queries and 10-city targeting (2026-11-02, owner requested)
+
+**Data:** GSC export of 2026-10-25 (web, 3 months, all countries; data 29 Sep–23 Oct). 195 queries, 655 query impressions. 57 queries name a place, with 243 impressions (37%):
+- Chicago 54 (HVAC SEO, construction SEO)
+- Los Angeles 57 (service businesses, HVAC SEO, construction SEO, plumbing web design, website maintenance)
+- Alaska/Anchorage 44 (handyman, contractor and plumber websites, "anchorage seo company")
+- Fairbanks 15 ("seo fairbanks")
+- Juneau 15 ("seo agency juneau")
+- Denver metro 27 (handyman websites in Centennial, Colorado, Boulder and Aurora; positions 8–10)
+- Spokane/Airway Heights 13 (SEO, handyman)
+- Phoenix metro 4 (handyman websites in Tempe and Mesa)
+- single impressions elsewhere
+
+**10 cities targeted:**
+- Strengthened: Los Angeles, Chicago, Brooklyn (unchanged) and the Alaska hub.
+- New: Anchorage, Fairbanks, Juneau, Denver metro, Spokane, Phoenix metro.
+
+**Doorway-safe design:** every new city page has its own local context (climate and seasons, real nearby areas), the trades its searches asked for, unique FAQs and honest remote-team wording (no office claims). Pages are not city-name swaps.
+
+**Files:**
+- `lib/cityGuides.js` (new): the 6 guides (meta title and description, intro, 4 trade cards, SEO section, areas, FAQs, photo; Alaska guides show the Alaska Fast Fix project).
+- `components/CityGuide.jsx` (new): renders a guide (trade cards with CTAs, StockPhoto, area chips, ProjectShot, FaqAccordion).
+- `app/locations/[city]/page.jsx`: guides added to the static params; per-guide title and description; `guide` prop.
+- `app/locations/[city]/LocationClient.jsx`:
+  - guide branch, guide subtitle, and the SEO-review offer on Fairbanks, Juneau and Spokane
+  - LA section "HVAC SEO, Plumbing and Contractor Websites in Los Angeles" (HVAC SEO agency LA, construction SEO, plumbing web design, website maintenance via the Care Plan)
+  - Chicago paragraph on construction SEO and home services
+  - Alaska hub "Alaska Cities We Work With" (links to Anchorage, Fairbanks and Juneau)
+  - fallback copy de-hyped; "measurable gains" removed
+- `lib/site-config.js`: `serviceAreas` adds the 6 cities (footer "Service Areas" row and the Services hub list).
+- `app/sitemap.js`: 6 new URLs; LA, Chicago and Alaska dated 2026-11-02.
+- `public/llms.txt`: city pages listed.
+- `components/Faq.jsx`: homepage FAQ "What is Embra Technologies?" for the brand queries.
+
+**After deploy:** request indexing for the 6 new city pages, then LA, Chicago and Alaska; resubmit the sitemap.
+
+---
+
+## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)
+
+No site code changed in this section.
+
+**Phase 0 findings (where things stand):**
+- `middleware.js` logs nothing; it only sets `embra_session` = `{id, ts}` (30 min, set once, never refreshed). All logging is client-side (`components/DurationTracker.jsx` → `app/api/track/route.js`).
+- The page counter lives in the browser: `sessionStorage` key `embra_nav_seq`, per tab, incremented in `firePageview` before the session check. `referrer_path` is the previous path held in memory, so it is null on every full page load (new tab, typed URL, bookmark, reload) while the number keeps counting in that tab. "Duplicate tab" copies the counter.
+- Request logging was removed by the Sep 30 refactor (commit 4a302e7, 09:31 IST / 04:01 UTC). Its own build was cancelled; the same change went live from deployments created 04:02:02 UTC (f04294d) and 04:02:33 UTC (1939717). The old middleware also kept a counter in the cookie and re-set it on every request; the refactor dropped both.
+- IPs are stored shortened (IPv4 x.y.z.0; IPv6 first 3 groups), see `anonymizeIp` in `app/api/track/route.js`.
+- Unmerged branch `analytics-wip` (dcb2c7f, Oct 15) already holds a Phases 1–4 attempt (middleware request logging with `waitUntil`, page_id, scroll, clicks, `app/api/collect`). Review it against the owner's Nov 1 patch before reuse.
+
+**403 deny-list = Vercel platform protection, not our code or a project rule.** Checked Nov 1 from the live site: `/wp-login.php`, `/xmlrpc.php`, `/wp-admin/install.php`, `/.aws/credentials`, `/filefuns.php` and an invented `/random-test-404.php` all return 403 with `x-vercel-mitigated: deny` and a plain "Forbidden <request id>" body. `/.env` and `/credentials` return the site's normal 404. The project has no custom firewall rules. These requests are stopped before middleware runs, so middleware request logging will never see them (only Vercel's Firewall view, or a log drain on Pro). Keep relying on it; nothing in the repo provides it.
+
+**Owner decisions (Nov 1):** no sequence counter in the cookie or on the server; log immutable facts (session_id, page_id, path, server time) and derive order at query time in Axiom. Preview events go to a separate dataset. `TEST_TOKEN` only sets `is_test`, never skips the deny-list, rate limits or bot checks. Proposed Axiom retention: 90 days, but the Axiom plan caps retention at 30 days (checked Nov 2 in the dataset's Edit panel: "Your plan keeps data for up to 30 days"). `embratechiplog` stays on the 30-day organization default; events before Oct 2, 2026 have already expired, including the Sep 28–30 period. 90 days needs an Axiom plan upgrade.
+
+**Setup done:**
+- `.env.local`: `AXIOM_QUERY_TOKEN` (query-only, local scripts only, owner rotates by Nov 2) and `AXIOM_ORG_ID`. File is git-ignored (`.env*`).
+- `.env.local`: `TEST_TOKEN` generated locally (random, 32 bytes). The owner copies the same value into Vercel.
+- Axiom: new dataset `embratechiplog-preview` (30-day retention) for Preview and test traffic.
+- Vercel env (take effect on the next deployment): `INTERNAL_IPS` (Production + Preview); `AXIOM_DATASET=embratechiplog-preview` (Preview only; Production keeps `embratechiplog`).
+
+**Undo:** delete `INTERNAL_IPS` and the Preview-only `AXIOM_DATASET` in Vercel → Settings → Environment Variables; delete dataset `embratechiplog-preview` in Axiom; remove the two Axiom lines from `.env.local`.
+
+**Owner approved (Nov 1):** cookie keeps an unchanging value and gets a fresh 30-minute expiry on each page request (sliding expiry, no read-modify-write); privacy wording for sections 2, 4 and 6, to be applied when Phases 1–4 ship (retention sentence to say 30 days, matching the Axiom plan, unless the plan is upgraded).
+
+**Still open (owner):** copy `TEST_TOKEN` from `.env.local` into Vercel (Sensitive, Production + Preview); create the Protection Bypass for Automation secret in Vercel and put it in `.env.local` as `VERCEL_AUTOMATION_BYPASS_SECRET`; create an ingest-only Axiom token for `embratechiplog-preview` and add it in Vercel as `AXIOM_TOKEN` (Sensitive, Preview only); decide whether to upgrade the Axiom plan for 90-day retention (otherwise 30 days stays).

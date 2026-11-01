@@ -9,6 +9,11 @@ const FAQ_SETS = {
       a: 'Most custom website projects take between 2 to 4 weeks from initial discovery to final launch, depending on scope and complexity. We share a clear timeline before work begins.',
     },
     {
+      // 2026-10-27: brand queries "embra" (pos 22.6) and "what is embra" (pos 20.2) in Search Console.
+      q: 'What is Embra Technologies?',
+      a: 'Embra Technologies (Embra for short) designs custom websites and provides local SEO for US home service businesses, such as plumbers, HVAC companies, roofers, tree services, handymen and auto body shops. We are a remote team working on US business hours, with published pricing and a free homepage sample before you buy.',
+    },
+    {
       q: 'Will my website be mobile responsive and fast?',
       a: (
         <>

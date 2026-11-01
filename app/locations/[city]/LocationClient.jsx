@@ -7,6 +7,7 @@ import Breadcrumb from '../../../components/Breadcrumb';
 import Cta from '../../../components/Cta';
 import Link from 'next/link';
 import ProjectShot from '../../../components/ProjectShot';
+import CityGuide from '../../../components/CityGuide';
 
 function LosAngelesContent() {
   return (
@@ -50,6 +51,18 @@ function LosAngelesContent() {
         <Link href="/niches/plumber-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>plumbers</Link>,{' '}
         <Link href="/niches/roofing-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>roofers</Link>,{' '}
         <Link href="/niches/web-design-for-handyman-businesses" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>handymen</Link> and other contractors. For marketing ideas, read our <Link href="/blog/auto-body-shop-marketing" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>auto body shop marketing guide</Link> or <Link href="/blog/hvac-local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>HVAC SEO guide</Link>, or see our <Link href="/services/local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>local SEO service</Link>.
+      </p>
+
+      {/* 2026-10-27: LA trade searches from Search Console (hvac seo agency la, construction seo los angeles, plumbing web design los angeles, website maintenance for home repair services los angeles). */}
+      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>HVAC SEO, Plumbing and Contractor Websites in Los Angeles</h2>
+      <p style={{ marginBottom: '24px' }}>
+        In Los Angeles, cooling demand runs for much of the year, so HVAC companies need AC repair and installation pages that are live and indexed well before the hottest months, plus a Google Business Profile that lists every service and the neighborhoods they cover. If you are looking for an HVAC SEO agency in LA, our <Link href="/services/local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>local SEO service</Link> starts with a free review of your profile, website and listings.
+      </p>
+      <p style={{ marginBottom: '24px' }}>
+        The same approach works for plumbing companies, general contractors and construction firms: a clear page for each service, license details up front and real project photos. For construction SEO in Los Angeles, that means pages for the kinds of projects you take on and the areas you build in, rather than one generic homepage. See our <Link href="/niches/plumber-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>plumbing web design</Link> page for an example.
+      </p>
+      <p style={{ marginBottom: '40px' }}>
+        Already have a website? Our $150/month <Link href="/services/care-plan" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Care Plan</Link> covers website maintenance for home repair and service businesses: hosting, security, SEO monitoring and content updates.
       </p>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why Choose Embra for Your LA Business?</h2>
@@ -105,6 +118,9 @@ function ChicagoContent() {
       <p style={{ marginBottom: '40px' }}>
         Our <Link href="/blog/hvac-local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>HVAC SEO guide</Link> walks through the steps, including how to choose an SEO company for HVAC repair. If you&apos;d rather have it done for you, our <Link href="/services/local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>local SEO service</Link> starts with a free review, and our <Link href="/niches/hvac-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>HVAC website design</Link> page shows how we build heating and cooling websites. We work remotely with contractors across Chicagoland.
       </p>
+      <p style={{ marginBottom: '40px' }}>
+        We also build websites for Chicago home services businesses and construction contractors, with a page for each service and project type and clear details on the neighborhoods and suburbs you cover. Construction SEO in Chicago follows the same rules as HVAC: real project photos, license and insurance details up front, and steady genuine reviews.
+      </p>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Our Approach to Chicago Web Design</h2>
       <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
@@ -150,6 +166,15 @@ function AlaskaContent() {
         <Link href="/portfolio/alaska-fast-fix" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the full Alaska handyman case study &rarr;</Link>
       </p>
       <ProjectShot name="alaskahandyman" url="alaskafastfixhandyman.com" alt="Alaska Fast Fix Handyman website by Embra Technologies" caption="Alaska Fast Fix Handyman: tap-to-call on every page and a clear service-area section." href="/portfolio/alaska-fast-fix" linkText="Case study" />
+
+      {/* 2026-10-27: Alaska city guides and the contractor and plumber searches from Search Console. */}
+      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Alaska Cities We Work With</h2>
+      <p style={{ marginBottom: '40px' }}>
+        We build websites and handle local SEO for contractors, plumbers, handymen and heating companies across Alaska. See our guides for{' '}
+        <Link href="/locations/anchorage" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Anchorage</Link>,{' '}
+        <Link href="/locations/fairbanks" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Fairbanks</Link> and{' '}
+        <Link href="/locations/juneau" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Juneau</Link>, each covering the trades and seasons that matter there, or our <Link href="/niches/plumber-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>plumber website design</Link> page.
+      </p>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why Embra is Right for Alaskan Businesses</h2>
       <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
@@ -219,7 +244,7 @@ function BrooklynContent() {
   );
 }
 
-export default function LocationClient({ loc }) {
+export default function LocationClient({ loc, guide = null }) {
   const ref = useRef(null);
   useReveal(ref);
 
@@ -231,9 +256,10 @@ export default function LocationClient({ loc }) {
         <div className="wrap">
           <Breadcrumb label={loc.name} href={`/locations/${loc.slug}`} />
           <PageHeader
+            offer={guide && ['fairbanks', 'juneau', 'spokane'].includes(guide.slug) ? 'seo' : 'sample'}
             pill={`Web Design & SEO in ${loc.name}`}
             title={<>Websites &amp; SEO for Service Businesses in <span className="highlight-text">{loc.name}</span></>}
-            sub={`Custom websites and local SEO for plumbers, HVAC companies, roofers, tree services, handymen and auto body shops in ${loc.name}, built by a remote team with US business-hours support.`}
+            sub={guide ? guide.sub : `Custom websites and local SEO for plumbers, HVAC companies, roofers, tree services, handymen and auto body shops in ${loc.name}, built by a remote team with US business-hours support.`}
           />
         </div>
       </section>
@@ -249,18 +275,16 @@ export default function LocationClient({ loc }) {
             <AlaskaContent />
           ) : loc.slug === 'brooklyn' ? (
             <BrooklynContent />
+          ) : guide ? (
+            <CityGuide guide={guide} />
           ) : (
             <>
               <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Custom Web Development for {displayLocName} Businesses</h2>
               <p style={{ marginBottom: '24px' }}>
-                When customers in <strong>{loc.name}</strong> search for your services, they aren't looking for a slow, outdated website. 
-                They want immediate answers, trust signals, and a seamless way to contact you. We specialize in building digital 
-                experiences that meet those exact needs.
+                When customers in <strong>{loc.name}</strong> search for your services, they want quick answers, signs they can trust you and an easy way to get in touch. We design websites around exactly those needs.
               </p>
               <p style={{ marginBottom: '40px' }}>
-                Unlike traditional agencies that use bloated WordPress templates, we engineer custom-built Next.js applications that load 
-                in under a second. We combine this technical foundation with aggressive Local SEO strategies to ensure you dominate 
-                the local search market.
+                We build custom websites with Next.js that load quickly on a phone, then set up the local search basics: a complete Google Business Profile, clear service pages and accurate business details.
               </p>
 
               <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why {displayLocName} Companies Choose Embra</h2>
@@ -275,7 +299,7 @@ export default function LocationClient({ loc }) {
           <div style={{ marginTop: '40px', padding: '24px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid var(--line-dark)' }}>
             <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>Explore Our Work &amp; Services</h3>
             <p style={{ fontSize: '0.95rem', marginBottom: '12px' }}>
-              See how we help businesses achieve measurable search visibility and conversion gains:
+              See our work, services and published pricing:
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
               <Link href="/services" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Explore All Services &rarr;</Link>

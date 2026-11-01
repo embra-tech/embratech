@@ -83,6 +83,12 @@ they are not office locations.
 - https://www.embratechnologies.org/locations/los-angeles — Los Angeles, CA
 - https://www.embratechnologies.org/locations/chicago — Chicago, IL
 - https://www.embratechnologies.org/locations/alaska — Alaska
+- https://www.embratechnologies.org/locations/anchorage — Anchorage, AK
+- https://www.embratechnologies.org/locations/fairbanks — Fairbanks, AK
+- https://www.embratechnologies.org/locations/juneau — Juneau, AK
+- https://www.embratechnologies.org/locations/denver — Denver metro (Centennial, Aurora, Boulder), CO
+- https://www.embratechnologies.org/locations/spokane — Spokane and Airway Heights, WA
+- https://www.embratechnologies.org/locations/phoenix — Phoenix metro (Tempe, Mesa), AZ
 - https://www.embratechnologies.org/locations/brooklyn — Brooklyn, NY
 
 ## Contact

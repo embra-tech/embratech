@@ -36,9 +36,16 @@ export default function sitemap() {
 
   const locationPages = [
     { url: `${baseUrl}/locations/brooklyn`,            lastModified: oct25,         changeFrequency: 'monthly',  priority: 0.8 },
-    { url: `${baseUrl}/locations/los-angeles`,         lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/chicago`,             lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/alaska`,              lastModified: oct25,         changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/los-angeles`,         lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/chicago`,             lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/alaska`,              lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
+    // 2026-11-02: city guides built from Search Console city queries (lib/cityGuides.js)
+    { url: `${baseUrl}/locations/anchorage`,           lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/fairbanks`,           lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/juneau`,              lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/denver`,              lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/spokane`,             lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/phoenix`,             lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
     // /locations/gulf-coast is noindex, excluded from sitemap intentionally
   ];
 

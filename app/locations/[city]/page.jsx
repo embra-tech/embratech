@@ -1,15 +1,18 @@
 import { notFound } from 'next/navigation';
 import LocationClient from './LocationClient';
 import siteConfig from '../../../lib/site-config';
+import { CITY_GUIDES, CITY_GUIDE_LIST } from '../../../lib/cityGuides';
 
 export const dynamicParams = false;
 
+// 2026-10-27: six city guides added from Search Console city queries (lib/cityGuides.js).
 const LOCATIONS = [
   { slug: 'los-angeles', name: 'Los Angeles', state: 'CA' },
   { slug: 'chicago', name: 'Chicago', state: 'IL' },
   { slug: 'alaska', name: 'Alaska', state: 'AK' },
   { slug: 'gulf-coast', name: 'the Gulf Coast', state: 'Region' },
-  { slug: 'brooklyn', name: 'Brooklyn', state: 'NY' }
+  { slug: 'brooklyn', name: 'Brooklyn', state: 'NY' },
+  ...CITY_GUIDE_LIST.map((g) => ({ slug: g.slug, name: g.display, state: g.state })),
 ];
 
 export function generateStaticParams() {
@@ -21,15 +24,18 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const loc = LOCATIONS.find(l => l.slug === params.city);
   if (!loc) return {};
+  const guide = CITY_GUIDES[params.city];
   const url = `${siteConfig.siteUrl}/locations/${params.city}`;
-  const desc = `Websites and local SEO for service businesses in ${loc.name}: plumbers, HVAC, roofers, tree services, handymen and auto body shops. Free homepage sample in 24 hours.`;
+  const desc = guide ? guide.metaDescription : `Websites and local SEO for service businesses in ${loc.name}: plumbers, HVAC, roofers, tree services, handymen and auto body shops. Free homepage sample in 24 hours.`;
   
   // 2026-10-13 Phase 1: "| Embra" removed here; the root layout's title template adds it.
   // 2026-10-13 (option B): "Agency in X" implied an office there; now "for X businesses".
   // 2026-10-25: matches the US query "website for service businesses in los angeles" (36 impressions, pos 60).
-  const titleText = loc.slug === 'brooklyn'
-    ? 'Websites & SEO for Service Businesses in Brooklyn, NY'
-    : `Websites & SEO for Service Businesses in ${loc.name}`;
+  const titleText = guide
+    ? guide.metaTitle
+    : loc.slug === 'brooklyn'
+      ? 'Websites & SEO for Service Businesses in Brooklyn, NY'
+      : `Websites & SEO for Service Businesses in ${loc.name}`;
 
   const meta = {
     title: titleText,
@@ -61,5 +67,5 @@ export default function LocationPage({ params }) {
   const loc = LOCATIONS.find(l => l.slug === params.city);
   if (!loc) notFound();
 
-  return <LocationClient loc={loc} />;
+  return <LocationClient loc={loc} guide={CITY_GUIDES[params.city] || null} />;
 }
