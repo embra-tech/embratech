@@ -724,6 +724,36 @@ Goal: visitors see the free, no-obligation homepage sample as soon as they land,
 - Re-run the uniqueness crawl (target: new city pages above 85% unique, no pair above 10%).
 - Request indexing for the 6 city pages (refresh), Chicago and the Local SEO page; resubmit the sitemap. The daily quota was used on Nov 2, so this happens on the next day.
 
+**Published and verified (2026-11-06, commit f8adad6):**
+- Live: all 6 city pages show the new titles, calendar, search chips, tip and FAQs; Chicago has its HVAC SEO title; city links live on the handyman, HVAC and Local SEO pages.
+- Uniqueness re-crawl:
+  - new city pages 88–92% unique (was 69–83%), 641–773 words
+  - most similar new pair denver~phoenix 10% (was 24%)
+  - industry pages 73–94%
+- Search Console: all 6 new city pages already indexed (between Nov 2 and Nov 6). Recrawl requested for those 6 plus Chicago, handyman and HVAC; indexing requested for /services/local-seo (still not indexed). Sitemap resubmitted (Success, 44).
+
+---
+
+## AC. Alaska trade coverage, Bel Air, sitemap date fix (2026-11-06, owner requested)
+
+Owner goal: rank for HVAC SEO, HVAC web design, auto body shop website design and other trades in Alaska, Anchorage and Bel Air.
+
+Approach: no trade × city doorway pages (e.g. "/hvac-seo-anchorage"). The Alaska hub and Anchorage page cover every trade with Alaska-specific content instead.
+- `app/locations/[city]/LocationClient.jsx` (Alaska hub): new section "Websites and SEO for Every Alaska Trade", 7 cards with CTAs:
+  - HVAC SEO and heating websites (boilers, heat pumps, oil-to-heat-pump conversions)
+  - Auto body shop website design (icy-road fender-benders, moose collisions, gravel-chipped windshields)
+  - Plumbing (frozen lines, sewer thawing, heat tape)
+  - Roofing (snow load, ice dams, metal roofs)
+  - Handyman (Alaska Fast Fix)
+  - Tree service (spruce beetle removal, Firewise clearing)
+  - Landscaping (short season, breakup clean-ups)
+- `app/locations/[city]/page.jsx`: Alaska title "Alaska HVAC, Auto Body & Contractor Websites and SEO".
+- `lib/cityGuides.js` (Anchorage): two more trade cards (auto body: winter fender-benders and moose collisions on the Glenn and Seward Highways; tree service: spruce beetle removal and Firewise). Search chips add "hvac seo anchorage" and "auto body shop website design alaska".
+- LA page: Bel Air (Los Angeles neighborhood) named among the areas covered ("such as Bel Air and the Westside…"). No separate Bel Air page, which would be thin.
+- `app/sitemap.js`: dates corrected to 2026-11-06 for all city pages, the 6 changed industry pages and local-seo. The previous round said 2026-11-02 but went live on 2026-11-06.
+
+**After deploy:** request indexing for /locations/alaska, /locations/anchorage and /locations/los-angeles; resubmit the sitemap.
+
 ---
 
 ## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)

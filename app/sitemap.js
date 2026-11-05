@@ -23,7 +23,7 @@ export default function sitemap() {
     { url: `${baseUrl}/services/care-plan`,            lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/niches`,                        lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/services/web-design`,           lastModified: oct25,         changeFrequency: 'monthly',  priority: 0.9 },
-    { url: `${baseUrl}/services/local-seo`,            lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.9 },
+    { url: `${baseUrl}/services/local-seo`,            lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/services/website-integrations`, lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/pricing`,                       lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/portfolio`,                     lastModified: oct19,         changeFrequency: 'monthly',  priority: 0.85 },
@@ -36,16 +36,16 @@ export default function sitemap() {
 
   const locationPages = [
     { url: `${baseUrl}/locations/brooklyn`,            lastModified: oct25,         changeFrequency: 'monthly',  priority: 0.8 },
-    { url: `${baseUrl}/locations/los-angeles`,         lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/chicago`,             lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/alaska`,              lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
-    // 2026-11-02: city guides built from Search Console city queries (lib/cityGuides.js)
-    { url: `${baseUrl}/locations/anchorage`,           lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/fairbanks`,           lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/juneau`,              lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/denver`,              lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/spokane`,             lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/phoenix`,             lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/los-angeles`,         lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/chicago`,             lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/alaska`,              lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
+    // 2026-11-02: city guides built from Search Console city queries (lib/cityGuides.js); deepened and live 2026-11-06
+    { url: `${baseUrl}/locations/anchorage`,           lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/fairbanks`,           lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/juneau`,              lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/denver`,              lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/spokane`,             lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/phoenix`,             lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
     // /locations/gulf-coast is noindex, excluded from sitemap intentionally
   ];
 
@@ -59,8 +59,8 @@ export default function sitemap() {
     'roofing-website-design',
   ].map(slug => ({
     url: `${baseUrl}/niches/${slug}`,
-    // 2026-11-02: all industry pages except tree service changed today (uniqueness pass, city links).
-    lastModified: slug === 'tree-service-website-design' ? oct21 : '2026-11-02',
+    // 2026-11-06: all industry pages except tree service changed in the uniqueness pass (live 2026-11-06).
+    lastModified: slug === 'tree-service-website-design' ? oct21 : '2026-11-06',
     changeFrequency: 'monthly',
     priority: 0.8,
   }));

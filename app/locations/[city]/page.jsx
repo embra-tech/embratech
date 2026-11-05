@@ -36,9 +36,11 @@ export function generateMetadata({ params }) {
     ? guide.metaTitle
     : loc.slug === 'chicago'
       ? 'HVAC SEO & Websites for Chicago Service Businesses'
-      : loc.slug === 'brooklyn'
-        ? 'Websites & SEO for Service Businesses in Brooklyn, NY'
-        : `Websites & SEO for Service Businesses in ${loc.name}`;
+      : loc.slug === 'alaska'
+        ? 'Alaska HVAC, Auto Body & Contractor Websites and SEO'
+        : loc.slug === 'brooklyn'
+          ? 'Websites & SEO for Service Businesses in Brooklyn, NY'
+          : `Websites & SEO for Service Businesses in ${loc.name}`;
 
   const meta = {
     title: titleText,

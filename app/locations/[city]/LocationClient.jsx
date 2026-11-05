@@ -16,7 +16,7 @@ function LosAngelesContent() {
         Los Angeles is one of the most competitive places in the country to run a service business online. When someone in LA searches for an "auto body shop near me" or an "emergency plumber," they compare a few options on their phone in minutes: who looks trustworthy, who covers their neighborhood and who is easiest to reach. Embra Technologies builds websites for service businesses in Los Angeles, from auto body shops to plumbers and contractors, around exactly those questions.
       </p>
       <p style={{ marginBottom: '40px' }}>
-        Many service-business websites run on heavy templates that load slowly on a phone, especially on a weak signal. We build custom websites with Next.js that load quickly, then set up the local search basics: a complete Google Business Profile, clear service pages and accurate business details. For a business covering several parts of LA, such as the Westside, the San Fernando Valley or the South Bay, we add area pages only where there are real jobs and reviews to show.
+        Many service-business websites run on heavy templates that load slowly on a phone, especially on a weak signal. We build custom websites with Next.js that load quickly, then set up the local search basics: a complete Google Business Profile, clear service pages and accurate business details. For a business covering several parts of LA, such as Bel Air and the Westside, the San Fernando Valley or the South Bay, we add area pages only where there are real jobs and reviews to show.
       </p>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Case Study: Tuxford Collision Center</h2>
@@ -175,6 +175,49 @@ function AlaskaContent() {
         <Link href="/locations/fairbanks" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Fairbanks</Link> and{' '}
         <Link href="/locations/juneau" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Juneau</Link>, each covering the trades and seasons that matter there, or our <Link href="/niches/plumber-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>plumber website design</Link> page.
       </p>
+
+      {/* 2026-11-06: Alaska trade coverage (HVAC SEO, HVAC web design, auto body shop website design and other trades in Alaska). */}
+      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Websites and SEO for Every Alaska Trade</h2>
+      <p style={{ marginBottom: '24px' }}>
+        Alaska trades face problems most of the country never sees, and homeowners search for help in their own words. Here is what we build for each trade in Alaska.
+      </p>
+      <div className="feature-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '40px' }}>
+        <article className="feature-card">
+          <h3>HVAC SEO and Heating Websites in Alaska</h3>
+          <p>Boilers, furnaces and heat pumps carry Alaska homes through long winters, and oil-to-heat-pump conversions are growing. We build heating pages ready before freeze-up and a Google profile that lists every heating service you offer.</p>
+          <Link href="/niches/hvac-website-design" className="card-cta">HVAC website design &rarr;</Link>
+        </article>
+        <article className="feature-card">
+          <h3>Auto Body Shop Website Design in Alaska</h3>
+          <p>Icy-road fender-benders, moose collisions and gravel-chipped windshields drive repair searches. Photo estimates matter when the nearest shop can be a long drive away.</p>
+          <Link href="/niches/auto-body-shop-website-design" className="card-cta">Auto body website design &rarr;</Link>
+        </article>
+        <article className="feature-card">
+          <h3>Plumbing Websites for Frozen Pipes</h3>
+          <p>Separate pages for frozen water lines, sewer line thawing, heat tape and burst-pipe repairs, each with tap-to-call for the middle-of-the-night emergency.</p>
+          <Link href="/niches/plumber-website-design" className="card-cta">Plumber website design &rarr;</Link>
+        </article>
+        <article className="feature-card">
+          <h3>Roofing for Snow Load and Ice Dams</h3>
+          <p>Snow removal, ice dam repair and metal roof pages with real photos of Alaska jobs and a simple inspection request.</p>
+          <Link href="/niches/roofing-website-design" className="card-cta">Roofing website design &rarr;</Link>
+        </article>
+        <article className="feature-card">
+          <h3>Handyman Websites Across Alaska</h3>
+          <p>Built the way we built Alaska Fast Fix Handyman: grouped services, a clear service area and the phone number one tap away on every page.</p>
+          <Link href="/niches/web-design-for-handyman-businesses" className="card-cta">Handyman website design &rarr;</Link>
+        </article>
+        <article className="feature-card">
+          <h3>Tree Service and Spruce Beetle Removal</h3>
+          <p>Pages for removing beetle-killed spruce, storm cleanup and Firewise clearing around homes, with before-and-after photos and an estimate request.</p>
+          <Link href="/niches/tree-service-website-design" className="card-cta">Tree service website design &rarr;</Link>
+        </article>
+        <article className="feature-card">
+          <h3>Landscaping for a Short Season</h3>
+          <p>Spring breakup clean-ups, lawns and hardscape packed into a few busy months, so your booking window and galleries need to be clear from day one.</p>
+          <Link href="/niches/landscaping-website-design" className="card-cta">Landscaping website design &rarr;</Link>
+        </article>
+      </div>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why Embra is Right for Alaskan Businesses</h2>
       <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
