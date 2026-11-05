@@ -23,7 +23,7 @@ export default function sitemap() {
     { url: `${baseUrl}/services/care-plan`,            lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/niches`,                        lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/services/web-design`,           lastModified: oct25,         changeFrequency: 'monthly',  priority: 0.9 },
-    { url: `${baseUrl}/services/local-seo`,            lastModified: oct21,         changeFrequency: 'monthly',  priority: 0.9 },
+    { url: `${baseUrl}/services/local-seo`,            lastModified: '2026-11-02',  changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/services/website-integrations`, lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/pricing`,                       lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/portfolio`,                     lastModified: oct19,         changeFrequency: 'monthly',  priority: 0.85 },
@@ -59,7 +59,8 @@ export default function sitemap() {
     'roofing-website-design',
   ].map(slug => ({
     url: `${baseUrl}/niches/${slug}`,
-    lastModified: ['auto-body-shop-website-design', 'hvac-website-design', 'roofing-website-design', 'landscaping-website-design'].includes(slug) ? oct26 : (slug === 'plumber-website-design' ? oct25 : (changedOct21.includes(slug) ? oct21 : oct13)),
+    // 2026-11-02: all industry pages except tree service changed today (uniqueness pass, city links).
+    lastModified: slug === 'tree-service-website-design' ? oct21 : '2026-11-02',
     changeFrequency: 'monthly',
     priority: 0.8,
   }));

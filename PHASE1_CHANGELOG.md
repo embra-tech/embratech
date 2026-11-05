@@ -684,6 +684,46 @@ Goal: visitors see the free, no-obligation homepage sample as soon as they land,
 
 **After deploy:** request indexing for the 6 new city pages, then LA, Chicago and Alaska; resubmit the sitemap.
 
+**Published and submitted (2026-11-02, commit 72e83a5):**
+- Live check: all 9 city pages return 200 with one H1, a correct canonical and their own title. Each new page has 4 FAQs and 4 trade CTAs, with the right offer (SEO review on Fairbanks, Juneau and Spokane).
+- LA HVAC section, Chicago construction paragraph and Alaska hub city links are live; the footer links all 6 cities; the homepage brand FAQ is live.
+- Sitemap: 44 URLs.
+- Search Console: indexing requested for anchorage, fairbanks, juneau, denver, spokane and phoenix (all "URL is not on Google" before), then los-angeles, chicago, alaska and the homepage (all already on Google). Sitemap resubmitted; read the same day (Success, 44 discovered).
+- Next check: about 1 week (are the new city pages indexed?), then about 2 weeks (first city-search impressions).
+
+---
+
+## AB. Uniqueness and content-quality pass (2026-11-02, owner requested)
+
+**Audit (live crawl of all 44 pages; uniqueness = share of 8-word phrases found on no other page):**
+- Older city pages: 84–88% unique, 640–905 words. Good.
+- New city pages: 69–83% unique, only 517–648 words. Pairs too similar: denver~phoenix 24%, denver~spokane 20%, spokane~phoenix 20%, juneau~phoenix 19%.
+- Sentences repeated between new city pages: the "remote team" FAQ answer (5×), pricing sentences (4×), the Care Plan sentence, "set up accurate service areas…", "websites and local search setups around those decisions", the Alaska project caption (3×), the areas intro (6×), and the city "See our work…" box (10×).
+- Industry pages: 69–75% unique. The Care Plan bullet and pricing-link sentence were identical on 6 pages.
+- /services 58% and /blog 22% are hub pages that summarize others (expected).
+- Outdated content: none found in earlier passes.
+
+**Changes:**
+- `lib/cityGuides.js` rewritten. Every repeated sentence is now city-specific, and each guide adds:
+  - a seasonal calendar (4 rows: when homeowners call about what, and what to have ready)
+  - 5 search examples mirroring that city's Search Console queries
+  - a local tip (Mat-Su as separate areas; North Pole; Juneau neighborhoods; hail-damage page timing; Post Falls/Coeur d'Alene; seasonal residents)
+  - its own areas sentence and Alaska project caption
+  - unique FAQ answers
+- Titles sharpened to each city's biggest search: Anchorage "Anchorage Websites & SEO for Handymen and Contractors"; Juneau "SEO Agency Services for Juneau Service Businesses"; Denver "Handyman Websites & SEO in Denver, Centennial & Aurora"; Spokane "SEO for Spokane & Airway Heights Service Businesses"; Phoenix "Handyman & HVAC Websites in Phoenix, Tempe & Mesa". Chicago (non-guide) is now "HVAC SEO & Websites for Chicago Service Businesses" (top Chicago query, 42 impressions).
+- `components/CityGuide.jsx` renders the calendar (scrollable table), search chips, local tip, areas note and caption. Styles are in `app/globals.css` (season table with gradient header line, dashed search chips, green-accent tip box).
+- `LocationClient.jsx`: the "See our work…" box names the city.
+- 6 industry pages: Care Plan bullet and pricing-link sentence rewritten per trade (plumber, HVAC, roofing, landscaping, auto body, handyman).
+- Internal links to the city pages:
+  - handyman page links Denver metro, Anchorage, Phoenix and Spokane
+  - HVAC page links Fairbanks, Phoenix and LA
+  - Local SEO page gets chips for SEO in Fairbanks, Juneau, Spokane & Airway Heights, Anchorage, and HVAC SEO in Chicago
+- `app/sitemap.js`: the 6 changed industry pages and Local SEO dated 2026-11-02.
+
+**After deploy:**
+- Re-run the uniqueness crawl (target: new city pages above 85% unique, no pair above 10%).
+- Request indexing for the 6 city pages (refresh), Chicago and the Local SEO page; resubmit the sitemap. The daily quota was used on Nov 2, so this happens on the next day.
+
 ---
 
 ## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)

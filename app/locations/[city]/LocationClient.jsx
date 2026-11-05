@@ -299,7 +299,7 @@ export default function LocationClient({ loc, guide = null }) {
           <div style={{ marginTop: '40px', padding: '24px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid var(--line-dark)' }}>
             <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>Explore Our Work &amp; Services</h3>
             <p style={{ fontSize: '0.95rem', marginBottom: '12px' }}>
-              See our work, services and published pricing:
+              See our work, services and pricing for {displayLocName} businesses:
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
               <Link href="/services" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Explore All Services &rarr;</Link>

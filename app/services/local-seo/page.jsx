@@ -171,6 +171,15 @@ export default function LocalSeoPage() {
             <Link href="/blog/hvac-local-seo" className="link-chip">HVAC SEO guide &rarr;</Link>
             <Link href="/services/web-design" className="link-chip">Need a new website too? &rarr;</Link>
           </div>
+          {/* 2026-11-02: links to the city guides whose searches are about SEO (Search Console). */}
+          <p style={{ textAlign: 'center', marginTop: '24px', marginBottom: 0, color: 'var(--muted-inv)' }}>Local SEO for businesses in specific cities:</p>
+          <div className="link-chips" style={{ marginTop: '12px' }}>
+            <Link href="/locations/fairbanks" className="link-chip">SEO in Fairbanks</Link>
+            <Link href="/locations/juneau" className="link-chip">SEO for Juneau businesses</Link>
+            <Link href="/locations/spokane" className="link-chip">SEO in Spokane &amp; Airway Heights</Link>
+            <Link href="/locations/anchorage" className="link-chip">Anchorage SEO</Link>
+            <Link href="/locations/chicago" className="link-chip">HVAC SEO in Chicago</Link>
+          </div>
         </div>
       </section>
 

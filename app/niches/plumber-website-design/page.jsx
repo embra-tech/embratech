@@ -146,8 +146,8 @@ export default function NichePage() {
           <p style={para}>Published pricing, no long-term contract, and you own the finished website:</p>
           <p style={para}>&bull; <strong>Starter ($700 total with split payments, or $600 paid in full):</strong> a custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a quote request form and on-page SEO basics.</p>
           <p style={para}>&bull; <strong>Growth ($1,000):</strong> up to 7 pages, enough for separate water heater, drain cleaning and emergency pages, plus structured data and Google Business Profile setup.</p>
-          <p style={para}>&bull; <strong>Care Plan ($150/month, optional):</strong> hosting, security, SEO monitoring, content updates and priority support. Cancel anytime.</p>
-          <p style={para}>See every plan on our <Link href="/pricing" style={link}>pricing page</Link>, or read our guide to <Link href="/blog/website-cost-for-home-service-businesses" style={link}>what a contractor website costs</Link>.</p>
+          <p style={para}>&bull; <strong>Care Plan ($150/month, optional):</strong> we keep your plumbing site hosted and secure, and update it for you, from new service areas to seasonal offers like water heater flushes. Cancel anytime.</p>
+          <p style={para}>Compare every plan on our <Link href="/pricing" style={link}>pricing page</Link>, or see how a plumbing website from us compares with other options in our <Link href="/blog/website-cost-for-home-service-businesses" style={link}>contractor website cost guide</Link>.</p>
 
           {/* Mid-Content Conversion CTA Box */}
           <div data-mid-cta="true" style={{

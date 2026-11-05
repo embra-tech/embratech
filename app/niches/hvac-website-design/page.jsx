@@ -141,13 +141,14 @@ export default function NichePage() {
           <h2 style={h2}>Local SEO for Heating and Cooling Contractors</h2>
           <p style={para}>Local search for HVAC contractors revolves around phrases like &quot;AC repair near me,&quot; &quot;furnace replacement,&quot; &quot;heat pump installation&quot; and &quot;ductless mini-split,&quot; and demand swings with the weather, so pages need to be ready before each season starts.</p>
           <p style={para}>We give cooling, heating, heat pumps, indoor air quality and commercial work their own clear pages, add HVACBusiness and Service structured data, and add area pages only where you have real local work to show. For a step-by-step plan, read our <Link href="/blog/hvac-local-seo" style={link}>HVAC SEO guide</Link>, see how we approach <Link href="/locations/chicago" style={link}>local SEO for Chicago HVAC contractors</Link>, or explore our <Link href="/services/local-seo" style={link}>local SEO service</Link>.</p>
+          <p style={para}>We also work with heating and cooling contractors in <Link href="/locations/fairbanks" style={link}>Fairbanks</Link>, where no-heat calls come at -40°F, in the <Link href="/locations/phoenix" style={link}>Phoenix metro</Link>, where AC failures are summer emergencies, and in <Link href="/locations/los-angeles" style={link}>Los Angeles</Link>.</p>
 
           <h2 style={h2}>Pricing for HVAC Websites</h2>
           <p style={para}>Published pricing, no long-term contract, and you own the finished website:</p>
           <p style={para}>&bull; <strong>Starter ($700 total with split payments, or $600 paid in full):</strong> a custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a service request form and on-page SEO basics.</p>
           <p style={para}>&bull; <strong>Growth ($1,000):</strong> up to 7 pages, enough for separate cooling, heating and maintenance plan pages, plus structured data and Google Business Profile setup.</p>
-          <p style={para}>&bull; <strong>Care Plan ($150/month, optional):</strong> hosting, security, SEO monitoring, content updates and priority support. Cancel anytime.</p>
-          <p style={para}>See every plan on our <Link href="/pricing" style={link}>pricing page</Link>, or read our guide to <Link href="/blog/website-cost-for-home-service-businesses" style={link}>what a contractor website costs</Link>.</p>
+          <p style={para}>&bull; <strong>Care Plan ($150/month, optional):</strong> before each season we swap in your AC or heating offers, and we keep the site hosted, secure and monitored for search. Cancel anytime.</p>
+          <p style={para}>Every plan is listed on our <Link href="/pricing" style={link}>pricing page</Link>. To weigh an HVAC website from us against templates and larger agencies, see our <Link href="/blog/website-cost-for-home-service-businesses" style={link}>website cost breakdown</Link>.</p>
 
           {/* Mid-Content Conversion CTA Box */}
           <div data-mid-cta="true" style={{

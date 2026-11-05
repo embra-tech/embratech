@@ -2063,6 +2063,18 @@ html[data-bot] .growth-bars span { animation: none !important; }
 @media (prefers-reduced-motion: reduce) {
   .factor-card, .factor-card:hover, .step-card, .step-card:hover, .service-detail, .service-detail:hover, .link-chip, .link-chip:hover, .factor-icon, .faq-chevron { transition: none !important; transform: none !important; }
 }
+
+/* 2026-11-02: city guide sections (components/CityGuide.jsx): seasonal calendar, search examples, local tip */
+.season-table-wrap { overflow-x: auto; margin-bottom: 8px; border-radius: 14px; position: relative; }
+.season-table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: .95rem; background: rgba(255,255,255,0.02); }
+.season-table thead th { text-align: left; padding: 12px 14px; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: #bfdbfe; background: rgba(37,99,235,0.12); border-bottom: 2px solid transparent; border-image: var(--grad-line) 1; }
+.season-table td { padding: 12px 14px; vertical-align: top; color: var(--muted-inv); border-bottom: 1px solid var(--line-dark); line-height: 1.55; }
+.season-table td:first-child { color: #fff; font-weight: 600; white-space: nowrap; }
+.season-table tbody tr:hover td { background: rgba(37,99,235,0.06); }
+.search-chip { padding: 8px 14px; border-radius: 999px; font-size: .88rem; font-family: var(--ff-mono, monospace); color: #bfdbfe; background: rgba(37,99,235,0.1); border: 1px dashed rgba(96,165,250,0.45); }
+.local-tip { position: relative; margin: 8px 0 24px; padding: 16px 18px 16px 22px; border-radius: 12px; background: linear-gradient(165deg, rgba(34,197,94,0.08), rgba(255,255,255,0.02)); color: var(--muted-inv); line-height: 1.65; }
+.local-tip::before { content: ''; position: absolute; left: 0; top: 10px; bottom: 10px; width: 4px; border-radius: 4px; background: linear-gradient(180deg, #4ade80, #16a34a); }
+.local-tip strong { color: #fff; }
 .cs-col-body p { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.75); margin-bottom: 20px; }
 
 .cs-approach-header { margin-bottom: 40px; }

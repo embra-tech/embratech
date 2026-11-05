@@ -149,13 +149,14 @@ export default function NichePage() {
           <h2 style={h2}>Getting Found by Homeowners Near You</h2>
           <p style={para}>Every handyman website we build includes the search basics: a clear heading structure, a sitemap, and LocalBusiness structured data with your service area and hours. Most local calls come through your Google Business Profile, so a complete, active profile and a steady flow of reviews matter just as much as the website.</p>
           <p style={para}>If you serve several nearby towns, we add town pages only where there is something real to show, such as jobs you&apos;ve done and reviews from local customers, rather than copying one page and swapping the city name. Learn more about our <Link href="/services/local-seo" style={link}>local SEO service for home service businesses</Link>.</p>
+          <p style={para}>Handyman businesses in several areas find us by searching their city. See how we work with handymen in the <Link href="/locations/denver" style={link}>Denver metro, including Centennial, Aurora and Boulder</Link>, in <Link href="/locations/anchorage" style={link}>Anchorage</Link>, in <Link href="/locations/phoenix" style={link}>Tempe and Mesa</Link> and in <Link href="/locations/spokane" style={link}>Spokane</Link>.</p>
 
           <h2 style={h2}>Pricing for Handyman Websites</h2>
           <p style={para}>Straightforward pricing, no hidden fees and no platform lock-in:</p>
           <p style={para}>• <strong>Starter ($700 total with split payments, or $600 paid in full):</strong> a custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a quote request form and on-page SEO basics.</p>
           <p style={para}>• <strong>Growth ($1,000):</strong> up to 7 pages, for handymen who want separate pages for each type of work, plus structured data and Google Business Profile setup.</p>
-          <p style={para}>• <strong>Care Plan ($150/month, optional):</strong> hosting, security, SEO monitoring, content updates and priority support. Cancel anytime.</p>
-          <p style={para}>See every plan on our <Link href="/pricing" style={link}>pricing page</Link>, or read our guide to <Link href="/blog/website-cost-for-home-service-businesses" style={link}>what a contractor website costs</Link>.</p>
+          <p style={para}>• <strong>Care Plan ($150/month, optional):</strong> as you add services or take on new towns, we update your handyman site for you, and keep it hosted, secure and monitored. Cancel anytime.</p>
+          <p style={para}>Find every plan on our <Link href="/pricing" style={link}>pricing page</Link>; our <Link href="/blog/website-cost-for-home-service-businesses" style={link}>cost guide</Link> shows what other handyman website options cost.</p>
 
           {/* Mid-Content Conversion CTA Box */}
           <div data-mid-cta="true" style={{

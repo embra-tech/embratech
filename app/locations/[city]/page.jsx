@@ -31,11 +31,14 @@ export function generateMetadata({ params }) {
   // 2026-10-13 Phase 1: "| Embra" removed here; the root layout's title template adds it.
   // 2026-10-13 (option B): "Agency in X" implied an office there; now "for X businesses".
   // 2026-10-25: matches the US query "website for service businesses in los angeles" (36 impressions, pos 60).
+  // 2026-11-02: Chicago leads with HVAC SEO (top Chicago query: "seo company for hvac repair in chicago", 42 impressions).
   const titleText = guide
     ? guide.metaTitle
-    : loc.slug === 'brooklyn'
-      ? 'Websites & SEO for Service Businesses in Brooklyn, NY'
-      : `Websites & SEO for Service Businesses in ${loc.name}`;
+    : loc.slug === 'chicago'
+      ? 'HVAC SEO & Websites for Chicago Service Businesses'
+      : loc.slug === 'brooklyn'
+        ? 'Websites & SEO for Service Businesses in Brooklyn, NY'
+        : `Websites & SEO for Service Businesses in ${loc.name}`;
 
   const meta = {
     title: titleText,
