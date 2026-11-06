@@ -12,7 +12,9 @@ import Link from 'next/link';
  * Static files at public/images/optimized/, no /_next/image round-trip.
  */
 function SitePreview({ site }) {
-  const name = site.image.replace('/images/', '').replace('.webp', '').replace('.png', '');
+  // 2026-11-06: strip any image extension (the newest screenshots are .jpg; .jpg was previously left on,
+  // which produced paths like /images/optimized/jcplawn.jpg-480.avif and broken images).
+  const name = site.image.replace('/images/', '').replace(/\.(webp|png|jpe?g|avif)$/i, '');
   const base = `/images/optimized/${name}`;
   const sizes = '(max-width: 720px) 100vw, 480px';
 

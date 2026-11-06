@@ -790,6 +790,18 @@ Link audit (Search Console, Nov 6): 36 external links from 10 sites, all pointin
 4. Push.
 5. Request indexing for the 3 case studies, the homepage and /portfolio.
 
+**Published and verified (2026-11-06, commit b8c1e75):**
+- Homepage shows Tuxford, JCP, Alaska Handyman Services and Royal Home Health Care (Alaska Fast Fix and Sky High removed).
+- All 3 screenshots and their optimized AVIF versions load. The 3 case studies return 200 with their own titles, one H1, a screenshot and correct canonicals.
+- Portfolio page lists 3/3; footer links 3/3; About stat updated; sitemap 47 URLs.
+- Search Console: indexing requested for /portfolio/alaska-handyman-services (was "not on Google"). Quota then exceeded. Sitemap resubmitted and read the same day (Success, 47 discovered).
+- Still to request when the quota resets: /portfolio/jcp-lawn-service, /portfolio/royal-home-health-care, the homepage, /portfolio, /locations/anchorage and /locations/los-angeles.
+
+**Fix: broken screenshots on the new project cards (2026-11-06, owner reported):**
+- Cause: `components/SiteCard.jsx` built the optimized image name by stripping only `.webp` and `.png`. The new screenshots are `.jpg`, so the cards requested e.g. `/images/optimized/jcplawn.jpg-480.jpg` (confirmed on the live /portfolio: 3 cards with broken paths).
+- All 27 optimized files exist live (3 sites × 480/720/960 × avif/webp/jpg).
+- Fix: strip any image extension (`/\.(webp|png|jpe?g|avif)$/i`). The case-study pages were unaffected (they use ProjectShot with explicit names).
+
 ---
 
 ## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)
