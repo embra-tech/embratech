@@ -13,6 +13,9 @@ const CASE_STUDY_LINKS = [
   { href: '/portfolio/alaska-fast-fix', label: 'Alaska Fast Fix' },
   { href: '/portfolio/vvasquez-handyman', label: 'V Vasquez' },
   { href: '/portfolio/bestbreaks', label: 'BestBreaks' },
+  { href: '/portfolio/alaska-handyman-services', label: 'Alaska Handyman Services' },
+  { href: '/portfolio/jcp-lawn-service', label: 'JCP Lawn Service' },
+  { href: '/portfolio/royal-home-health-care', label: 'Royal Home Health Care' },
 ];
 // 2026-10-26: all 7 articles, led by the 3 that get impressions for top US queries.
 const GUIDE_LINKS = [

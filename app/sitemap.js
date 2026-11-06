@@ -18,7 +18,7 @@ export default function sitemap() {
   const oct26 = '2026-10-26';         // review of the external audit: care plan, integrations, pricing, about, homepage, LA and Chicago
 
   const corePages = [
-    { url: baseUrl,                                    lastModified: oct26,         changeFrequency: 'weekly',   priority: 1.0 },
+    { url: baseUrl,                                    lastModified: '2026-11-06',  changeFrequency: 'weekly',   priority: 1.0 },
     { url: `${baseUrl}/services`,                      lastModified: oct25,         changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/services/care-plan`,            lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/niches`,                        lastModified: phase1Date,    changeFrequency: 'monthly',  priority: 0.85 },
@@ -26,7 +26,7 @@ export default function sitemap() {
     { url: `${baseUrl}/services/local-seo`,            lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.9 },
     { url: `${baseUrl}/services/website-integrations`, lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/pricing`,                       lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.9 },
-    { url: `${baseUrl}/portfolio`,                     lastModified: oct19,         changeFrequency: 'monthly',  priority: 0.85 },
+    { url: `${baseUrl}/portfolio`,                     lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.85 },
     { url: `${baseUrl}/blog`,                          lastModified: oct13,         changeFrequency: 'weekly',   priority: 0.8 },
     { url: `${baseUrl}/contact`,                       lastModified: oct13,         changeFrequency: 'monthly',  priority: 0.8 },
     { url: `${baseUrl}/about`,                         lastModified: oct26,         changeFrequency: 'monthly',  priority: 0.7 },
@@ -71,10 +71,14 @@ export default function sitemap() {
     'vvasquez-handyman',
     'alaska-fast-fix',
     'bestbreaks',
-    'sky-high-tree'
+    'sky-high-tree',
+    // 2026-11-06: new projects
+    'alaska-handyman-services',
+    'jcp-lawn-service',
+    'royal-home-health-care',
   ].map(slug => ({
     url: `${baseUrl}/portfolio/${slug}`,
-    lastModified: oct19,
+    lastModified: ['alaska-handyman-services', 'jcp-lawn-service', 'royal-home-health-care'].includes(slug) ? '2026-11-06' : oct19,
     changeFrequency: 'monthly',
     priority: 0.75,
   }));

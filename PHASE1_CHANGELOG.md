@@ -754,6 +754,42 @@ Approach: no trade × city doorway pages (e.g. "/hvac-seo-anchorage"). The Alask
 
 **After deploy:** request indexing for /locations/alaska, /locations/anchorage and /locations/los-angeles; resubmit the sitemap.
 
+**Published and verified (2026-11-06, commit b672a7a):**
+- Live: Alaska title "Alaska HVAC, Auto Body & Contractor Websites and SEO"; "Websites and SEO for Every Alaska Trade" with 7/7 cards. Anchorage has 6 trade cards (auto body and tree added) and 6 search chips. LA names Bel Air. Sitemap dates 2026-11-06.
+- Search Console: /locations/alaska recrawl requested. Daily quota then exceeded, so /locations/anchorage and /locations/los-angeles are pending (both already indexed). Sitemap resubmitted (Success, 44).
+- Next: request Anchorage and LA when the quota resets; about Nov 13 city-query impressions; about Nov 20 rank check.
+
+---
+
+## AD. Three new portfolio projects; homepage project cards (2026-11-06, owner requested)
+
+Link audit (Search Console, Nov 6): 36 external links from 10 sites, all pointing to the homepage. Alaska Fast Fix's footer credit is followed (`rel="noopener noreferrer"`, no nofollow) and Google has recorded it (3 links). Recommendation: re-point client credits to the matching city or case-study page on the www address (Alaska Fast Fix to /locations/anchorage, Tuxford to /locations/los-angeles, Sky High to /locations/chicago, JCP to /niches/landscaping-website-design).
+
+**New projects** (facts taken from each live site; feature descriptions only, no outcome claims):
+- `alaska-handyman-services`: Alaska Handyman Services LLC, Anchorage AK (license #143470). 8 service categories with pages, before-and-after sliders, service-area page, estimate form that pre-selects service and area. Links to /locations/anchorage and the handyman page.
+- `jcp-lawn-service`: JCP Lawn Service, Rancho Cordova CA (Greater Sacramento). Homes, HOAs and commercial lawn care. Links to the landscaping page.
+- `royal-home-health-care`: Royal Home Health Care, Inc., Van Nuys CA (4 counties). About 20 service pages, referral, service-area and FAQ pages, accessibility page, reduce-motion option, privacy-aware contact form.
+
+**Files:**
+- `app/portfolio/[slug]/page.jsx`: 3 case studies, and `CASE_SHOTS` entries for jcplawn, alaskahandymanservices and royalcare.
+- `components/FeaturedWork.jsx` (homepage): Tuxford, JCP, Alaska Handyman Services, Royal Home Health Care. Alaska Fast Fix and Sky High removed from the homepage only; they stay in the portfolio.
+- `app/portfolio/PortfolioClient.jsx`: the 3 projects added.
+- `components/Footer.jsx`: case-study links added.
+- `app/sitemap.js`: 3 new URLs; homepage and /portfolio dated 2026-11-06.
+- `public/llms.txt`: the 3 case studies listed.
+- `app/about/AboutClient.jsx`: "Live client websites" stat 5 → 8.
+- `lib/cityGuides.js`: the Anchorage FAQ mentions Alaska Handyman Services.
+- `scripts/capture-screenshots.mjs` (new): saves 1440×900 screenshots to `public/images/{jcplawn,alaskahandymanservices,royalcare}.jpg` via Microlink (thum.io fallback).
+- `scripts/generate-images.mjs`: optimizes them.
+- The new cards show "Live PageSpeed report" links without a fixed score.
+
+**Order:**
+1. `node scripts/capture-screenshots.mjs`.
+2. Review the screenshots.
+3. `npm run build`.
+4. Push.
+5. Request indexing for the 3 case studies, the homepage and /portfolio.
+
 ---
 
 ## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)

@@ -38,6 +38,10 @@ const PORTFOLIO_IMAGES = [
   { name: 'plumbing-mockup',    src: 'plumbing-mockup.jpg' },
   { name: 'hvac-mockup',        src: 'hvac-mockup.jpg' },
   { name: 'roofing-mockup',     src: 'roofing-mockup.jpg' },
+  // 2026-11-06: new project screenshots, captured once by scripts/capture-screenshots.mjs
+  { name: 'jcplawn',                src: 'jcplawn.jpg' },
+  { name: 'alaskahandymanservices', src: 'alaskahandymanservices.jpg' },
+  { name: 'royalcare',              src: 'royalcare.jpg' },
   // 2026-10-26: Pexels photos, downloaded once by scripts/fetch-pexels.mjs into public/images/stock/
   { name: 'stock-plumber',      src: 'stock/stock-plumber.jpg' },
   { name: 'stock-hvac',         src: 'stock/stock-hvac.jpg' },

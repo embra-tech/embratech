@@ -10,6 +10,10 @@ const CASE_SHOTS = {
   'alaska-fast-fix': 'alaskahandyman',
   'bestbreaks': 'bestbreaks',
   'sky-high-tree': 'skyhightreeservice',
+  // 2026-11-06: new projects (screenshots captured by scripts/capture-screenshots.mjs)
+  'jcp-lawn-service': 'jcplawn',
+  'alaska-handyman-services': 'alaskahandymanservices',
+  'royal-home-health-care': 'royalcare',
 };
 import { notFound } from 'next/navigation';
 import Cta from '../../../components/Cta';
@@ -75,6 +79,88 @@ The goal was a site that answers those questions in the first few seconds and ma
     results: [
       { label: 'Free towing + estimate offer up front' },
       { label: 'PageSpeed 97/100', verified: true, href: PAGESPEED('tuxfordcollision.com') },
+    ],
+  },
+  // 2026-11-06: three new projects. Feature descriptions only, taken from the live sites; no outcome claims.
+  'alaska-handyman-services': {
+    name: 'Alaska Handyman Services',
+    metaTitle: 'Anchorage Handyman Website: Alaska Handyman Services',
+    metaDescription: 'How Embra built a multi-page website for Alaska Handyman Services in Anchorage: 8 service categories, before-and-after sliders, service-area pages and a free estimate form.',
+    dateModified: '2026-11-06',
+    domain: 'alaskahandymanservices.com',
+    url: 'https://www.alaskahandymanservices.com/',
+    industry: 'Handyman & Home Repair',
+    location: 'Anchorage, AK',
+    tags: ['Web Design', 'Service Pages', 'Estimate Requests'],
+    stack: 'Custom-coded, mobile-first website',
+    challenge: `Alaska Handyman Services LLC is a licensed, bonded and insured contractor in Anchorage that handles everything from roof leaks and post-earthquake drywall cracks to flooring, painting and bathroom remodels. With so many services, the risk was a website that tried to say everything at once and helped no one decide.
+
+Homeowners in Anchorage, Eagle River and Girdwood needed to see quickly that the company does their job, covers their area and is properly licensed, then request a free estimate without friction.`,
+    approach: [
+      { title: 'Eight clear service categories', body: 'Roof repair, drywall, painting, cabinets and installs, flooring, house and pressure washing, bathroom remodeling, and repairs and maintenance each get their own section and page, with the specific jobs listed under each.' },
+      { title: 'Proof you can see', body: 'Drag-to-compare before-and-after sliders show real Anchorage jobs, and the contractor license number is visible at the top of the page and in the footer.' },
+      { title: 'An estimate form that does the sorting', body: 'The free estimate form asks for the service and the service area up front, from Anchorage to Bird Creek, and tapping a specialty service pre-selects it in the form.' },
+    ],
+    deepDive: `<p>The site is built as a set of focused pages: home, services, projects with before-and-after photos, about and licensing, service areas and a dedicated estimate page. Each page answers one question a homeowner has before they call.</p><p>Alaska weather shapes the content, from snow load and ice dams on the roofing section to winter grime and road salt on the pressure washing section, so the wording matches how Anchorage homeowners describe their problems.</p><p>This case study describes the website and its features; it does not claim a measured increase in traffic or leads. See how we build <a href="/niches/web-design-for-handyman-businesses">handyman websites</a> and our approach to <a href="/locations/anchorage">websites and SEO in Anchorage</a>, or request a <a href="/contact">free homepage sample</a>.</p>`,
+    resultsLabel: 'Highlights',
+    results: [
+      { label: '8 service categories with their own pages' },
+      { label: 'Before-and-after sliders' },
+      { label: 'Live PageSpeed report', verified: true, href: PAGESPEED('www.alaskahandymanservices.com') },
+    ],
+  },
+  'jcp-lawn-service': {
+    name: 'JCP Lawn Service',
+    metaTitle: 'Lawn Care Website Design: JCP Lawn Service, Sacramento',
+    metaDescription: 'How Embra built a website for JCP Lawn Service in Rancho Cordova, CA: residential, HOA and commercial lawn care with a clear call to action for the Greater Sacramento area.',
+    dateModified: '2026-11-06',
+    domain: 'jcplawnservicecalifornia.com',
+    url: 'https://www.jcplawnservicecalifornia.com/',
+    industry: 'Lawn Care & Landscaping',
+    location: 'Rancho Cordova, CA',
+    tags: ['Web Design', 'Local SEO', 'Mobile-First'],
+    stack: 'Custom-coded, mobile-first website',
+    challenge: `JCP Lawn Service mows, edges, trims hedges and handles seasonal clean-ups for homes, HOAs and commercial properties in Rancho Cordova and the Greater Sacramento area. Its customers range from homeowners wanting weekly mowing to property managers comparing contractors for a whole community.
+
+The website needed to speak to both: show the services clearly, make the service area obvious and make it easy to call or email from a phone.`,
+    approach: [
+      { title: 'Residential and commercial in one place', body: 'Homes, HOAs and commercial properties are all addressed directly, so a property manager and a homeowner can each see the business takes on their kind of job.' },
+      { title: 'Local search basics', body: 'Page titles and descriptions name the services and Rancho Cordova and Greater Sacramento, so Google understands what the business does and where.' },
+      { title: 'Easy to reach', body: 'Tap-to-call and email links are available from the first screen on a phone.' },
+    ],
+    deepDive: `<p>Lawn care is bought locally and often on a phone, so the site puts the services, the area served and the phone number first.</p><p>This case study describes the website and its features; it does not claim a measured increase in traffic or leads. See how we build <a href="/niches/landscaping-website-design">landscaping and lawn care websites</a>, compare <a href="/pricing">website plans</a> or request a <a href="/contact">free homepage sample</a>.</p>`,
+    resultsLabel: 'Highlights',
+    results: [
+      { label: 'Homes, HOAs and commercial properties' },
+      { label: 'Tap-to-call from the first screen' },
+      { label: 'Live PageSpeed report', verified: true, href: PAGESPEED('www.jcplawnservicecalifornia.com') },
+    ],
+  },
+  'royal-home-health-care': {
+    name: 'Royal Home Health Care',
+    metaTitle: 'Home Health Website Design: Royal Home Health Care',
+    metaDescription: 'How Embra built a multi-page website for Royal Home Health Care in Van Nuys, CA: 20 service pages, referral and service-area pages, accessibility features and a privacy-aware contact form.',
+    dateModified: '2026-11-06',
+    domain: 'royalcareathome.com',
+    url: 'https://www.royalcareathome.com/',
+    industry: 'Home Health Care',
+    location: 'Van Nuys, CA',
+    tags: ['Web Design', 'Service Pages', 'Accessibility'],
+    stack: 'Custom-coded, mobile-first website',
+    challenge: `Royal Home Health Care, Inc. is a licensed home health agency in Van Nuys serving Los Angeles, Ventura, San Bernardino and Orange Counties. Its visitors are patients, worried family members, physicians and hospital discharge planners, each looking for something different.
+
+The site had to explain skilled nursing, recovery programs and therapy services clearly, make referrals simple and stay accessible to older visitors.`,
+    approach: [
+      { title: 'A page for every service', body: 'Skilled nursing services, recovery and condition programs, and home health disciplines each have their own page, around 20 in total, so families and referrers can find the exact service they need.' },
+      { title: 'Built for referrers and families', body: 'Dedicated referral, service-area and FAQ pages answer the questions physicians and families ask, and the contact form asks who is writing (patient, family, physician or case manager).' },
+      { title: 'Accessible and privacy-aware', body: 'An accessibility page, a reduce-motion option and a contact form that asks visitors not to include detailed medical history respect the people using the site.' },
+    ],
+    deepDive: `<p>Home health care is a high-trust decision, often made quickly after a hospital stay. The site leads with the agency\'s license, its four-county service area and a phone number answered by a real person, with a registered nurse on call after hours.</p><p>This case study describes the website and its features; it does not claim a measured increase in traffic or referrals. See our <a href="/services/web-design">website design service</a>, compare <a href="/pricing">website plans</a> or request a <a href="/contact">free homepage sample</a>.</p>`,
+    resultsLabel: 'Highlights',
+    results: [
+      { label: 'About 20 service pages' },
+      { label: 'Accessibility page and reduce-motion option' },
+      { label: 'Live PageSpeed report', verified: true, href: PAGESPEED('www.royalcareathome.com') },
     ],
   },
   'vvasquez-handyman': {
