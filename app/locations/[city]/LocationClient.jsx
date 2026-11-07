@@ -181,7 +181,7 @@ function AlaskaContent() {
       <p style={{ marginBottom: '24px' }}>
         Alaska trades face problems most of the country never sees, and homeowners search for help in their own words. Here is what we build for each trade in Alaska.
       </p>
-      <div className="feature-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '40px' }}>
+      <div className="feature-grid stack-cards" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '40px' }}>
         <article className="feature-card">
           <h3>HVAC SEO and Heating Websites in Alaska</h3>
           <p>Boilers, furnaces and heat pumps carry Alaska homes through long winters, and oil-to-heat-pump conversions are growing. We build heating pages ready before freeze-up and a Google profile that lists every heating service you offer.</p>

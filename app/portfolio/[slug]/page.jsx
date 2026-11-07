@@ -355,6 +355,15 @@ export default function CaseStudyPage({ params }) {
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="page-hero case-hero">
+        {/* 2026-11-08: the project's own screenshot as a blurred backdrop (decorative). */}
+        {CASE_SHOTS[params.slug] && (
+          <div className="page-hero-media case-hero-media" aria-hidden="true">
+            <picture>
+              <source type="image/avif" srcSet={`/images/optimized/${CASE_SHOTS[params.slug]}-480.avif 480w, /images/optimized/${CASE_SHOTS[params.slug]}-960.avif 960w`} sizes="(max-width: 767px) 60vw, 100vw" />
+              <img src={`/images/optimized/${CASE_SHOTS[params.slug]}-960.jpg`} alt="" decoding="async" fetchPriority="high" />
+            </picture>
+          </div>
+        )}
         <div className="wrap">
           <nav className="cs-breadcrumb" aria-label="Breadcrumb">
             <Link href="/">Home</Link>

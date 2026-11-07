@@ -97,5 +97,188 @@
     "alt": "Businessman in a suit using a laptop and smartphone in an urban setting, blending technology with business.",
     "width": 6000,
     "height": 4000
+  },
+  "hero-services": {
+    "id": 6474469,
+    "photographer": "Tima Miroshnichenko",
+    "photographerUrl": "https://www.pexels.com/@tima-miroshnichenko",
+    "pexelsUrl": "https://www.pexels.com/photo/woman-wearing-white-helmet-while-holding-a-tablet-inside-the-house-6474469/",
+    "alt": "Woman in hard hat using tablet for construction project in unfinished interior.",
+    "width": 6000,
+    "height": 4000
+  },
+  "hero-pricing": {
+    "id": 7964468,
+    "photographer": "Felicity Tai",
+    "photographerUrl": "https://www.pexels.com/@felicity-tai",
+    "pexelsUrl": "https://www.pexels.com/photo/close-up-photo-of-people-shaking-hands-7964468/",
+    "alt": "Close-up of a handshake between two adults, symbolizing agreement or partnership.",
+    "width": 6000,
+    "height": 4000
+  },
+  "hero-portfolio": {
+    "id": 1181449,
+    "photographer": "Christina Morillo",
+    "photographerUrl": "https://www.pexels.com/@divinetechygirl",
+    "pexelsUrl": "https://www.pexels.com/photo/woman-sitting-near-table-using-macbook-1181449/",
+    "alt": "Businesswoman working on laptop with Android 6.0 Marshmallow webpage open.",
+    "width": 6016,
+    "height": 4016
+  },
+  "hero-blog": {
+    "id": 7320516,
+    "photographer": "kaboompics.com",
+    "photographerUrl": "https://www.pexels.com/@karola-g",
+    "pexelsUrl": "https://www.pexels.com/photo/photograph-of-a-notebook-beside-a-laptop-7320516/",
+    "alt": "A cozy, modern workspace setup with a cup, laptop, and notes on a notebook.",
+    "width": 6720,
+    "height": 4480
+  },
+  "hero-about": {
+    "id": 7652176,
+    "photographer": "Thirdman",
+    "photographerUrl": "https://www.pexels.com/@thirdman",
+    "pexelsUrl": "https://www.pexels.com/photo/a-group-of-people-having-a-meeting-in-the-office-7652176/",
+    "alt": "A group of colleagues engaged in a business meeting discussing plans around a laptop in a modern office.",
+    "width": 6592,
+    "height": 4395
+  },
+  "hero-contact": {
+    "id": 5387286,
+    "photographer": "kaboompics.com",
+    "photographerUrl": "https://www.pexels.com/@karola-g",
+    "pexelsUrl": "https://www.pexels.com/photo/overhead-shot-of-a-person-having-a-phone-call-5387286/",
+    "alt": "Woman holding smartphone to ear while working on a laptop. Modern communication and multitasking.",
+    "width": 6720,
+    "height": 4480
+  },
+  "hero-industries": {
+    "id": 634511,
+    "photographer": "Frans van Heerden",
+    "photographerUrl": "https://www.pexels.com/@frans-van-heerden-201846",
+    "pexelsUrl": "https://www.pexels.com/photo/man-using-angle-grinder-634511/",
+    "alt": "A carpenter uses a grinder in a dusty woodworking shop. Safety gear worn.",
+    "width": 6016,
+    "height": 4016
+  },
+  "hero-los-angeles": {
+    "id": 35291216,
+    "photographer": "Stephen Leonardi",
+    "photographerUrl": "https://www.pexels.com/@stephen-leonardi-587681991",
+    "pexelsUrl": "https://www.pexels.com/photo/stunning-night-cityscape-of-downtown-los-angeles-35291216/",
+    "alt": "Vibrant long exposure of Downtown Los Angeles skyscrapers at night, showcasing the city skyline.",
+    "width": 6000,
+    "height": 4000
+  },
+  "hero-chicago": {
+    "id": 18916644,
+    "photographer": "Qiang Lai",
+    "photographerUrl": "https://www.pexels.com/@qiang-lai-774921977",
+    "pexelsUrl": "https://www.pexels.com/photo/buildings-by-lake-in-chicago-18916644/",
+    "alt": "Stunning view of Chicago's skyline with Willis Tower under a cloudy sky.",
+    "width": 9504,
+    "height": 6336
+  },
+  "hero-alaska": {
+    "id": 13769372,
+    "photographer": "John De Leon",
+    "photographerUrl": "https://www.pexels.com/@john-de-leon-142955220",
+    "pexelsUrl": "https://www.pexels.com/photo/a-grass-field-near-the-snow-covered-mountains-under-the-cloudy-sky-13769372/",
+    "alt": "Breathtaking view of snow-covered Alaskan mountains with cloudy sky and autumn foliage in the foreground.",
+    "width": 7178,
+    "height": 4824
+  },
+  "hero-anchorage": {
+    "id": 39381389,
+    "photographer": "A G",
+    "photographerUrl": "https://www.pexels.com/@a-g-2163563917",
+    "pexelsUrl": "https://www.pexels.com/photo/scenic-street-view-in-anchorage-alaska-morning-39381389/",
+    "alt": "Street scene capturing the serene atmosphere of Anchorage, Alaska in the morning.",
+    "width": 7252,
+    "height": 4835
+  },
+  "hero-fairbanks": {
+    "id": 16398144,
+    "photographer": "John De Leon",
+    "photographerUrl": "https://www.pexels.com/@john-de-leon-142955220",
+    "pexelsUrl": "https://www.pexels.com/photo/mountains-in-snow-in-wild-winter-landscape-16398144/",
+    "alt": "Breathtaking view of snow-covered Alaskan mountains with evergreen trees during winter.",
+    "width": 7744,
+    "height": 5034
+  },
+  "hero-juneau": {
+    "id": 38167951,
+    "photographer": "steve schimdt",
+    "photographerUrl": "https://www.pexels.com/@steve-schimdt-1727840286",
+    "pexelsUrl": "https://www.pexels.com/photo/breathtaking-mendenhall-glacier-in-juneau-alaska-38167951/",
+    "alt": "Stunning view of Mendenhall Glacier nestled between rocky mountains in Juneau, Alaska.",
+    "width": 6000,
+    "height": 4000
+  },
+  "hero-denver": {
+    "id": 13633732,
+    "photographer": "Griffin Wooldridge",
+    "photographerUrl": "https://www.pexels.com/@griffinw",
+    "pexelsUrl": "https://www.pexels.com/photo/aerial-photography-of-city-buildings-under-the-sky-13633732/",
+    "alt": "Stunning aerial view of Denver cityscape with urban sprawl and distant skyline at dusk.",
+    "width": 8000,
+    "height": 6000
+  },
+  "hero-spokane": {
+    "id": 27998518,
+    "photographer": "William Jacobs",
+    "photographerUrl": "https://www.pexels.com/@williamjacobs",
+    "pexelsUrl": "https://www.pexels.com/photo/spokane-river-27998518/",
+    "alt": "A beautiful view of the Spokane Falls with a bridge and urban landscape, captured at sunset.",
+    "width": 6045,
+    "height": 4061
+  },
+  "hero-phoenix": {
+    "id": 22764344,
+    "photographer": "Matthew Jackson",
+    "photographerUrl": "https://www.pexels.com/@matthewjackson",
+    "pexelsUrl": "https://www.pexels.com/photo/a-woman-sitting-on-a-mountain-peak-at-sunset-22764344/",
+    "alt": "A woman sits on a rock formation overlooking Phoenix, Arizona at sunset, embracing nature and tranquility.",
+    "width": 6000,
+    "height": 4000
+  },
+  "hero-brooklyn": {
+    "id": 30726437,
+    "photographer": "Sasha Zilov",
+    "photographerUrl": "https://www.pexels.com/@sasha-zilov-2148192686",
+    "pexelsUrl": "https://www.pexels.com/photo/charming-brooklyn-brownstones-in-fall-30726437/",
+    "alt": "Brownstone buildings in Brooklyn, New York, showcasing autumn charm.",
+    "width": 6960,
+    "height": 4644
+  },
+  "video-services": {
+    "id": 8488109,
+    "type": "video",
+    "photographer": "Kindel Media",
+    "pexelsUrl": "https://www.pexels.com/video/a-female-construction-worker-using-a-drill-8488109/",
+    "width": 1280,
+    "height": 720,
+    "duration": 10,
+    "sizeKB": 3239
+  },
+  "video-localseo": {
+    "id": 33637800,
+    "type": "video",
+    "photographer": "K",
+    "pexelsUrl": "https://www.pexels.com/video/stunning-aerial-timelapse-of-city-lights-at-night-33637800/",
+    "width": 960,
+    "height": 540,
+    "duration": 15,
+    "sizeKB": 6627
+  },
+  "video-integrations": {
+    "id": 8937990,
+    "type": "video",
+    "photographer": "Leeloo The First",
+    "pexelsUrl": "https://www.pexels.com/video/person-holding-a-card-while-using-a-laptop-8937990/",
+    "width": 1280,
+    "height": 720,
+    "duration": 18,
+    "sizeKB": 3726
   }
 }

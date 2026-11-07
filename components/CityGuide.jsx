@@ -15,7 +15,7 @@ export default function CityGuide({ guide }) {
       {guide.intro.map((p) => <p key={p.slice(0, 24)} style={{ marginBottom: '20px' }}>{p}</p>)}
 
       <h2 style={h2}>What {guide.name} Customers Search For</h2>
-      <div className="feature-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+      <div className="feature-grid stack-cards" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
         {guide.trades.map((t) => (
           <article key={t.title} className="feature-card">
             <h3>{t.title}</h3>
@@ -69,6 +69,17 @@ export default function CityGuide({ guide }) {
       </div>
 
       <h2 style={h2}>Areas We Work With Around {guide.name}</h2>
+      {/* 2026-11-08: decorative orbit of nearby areas around the city (the real list follows as text). */}
+      <div className="orbit" aria-hidden="true">
+        <div className="orbit-center"><span>{guide.name}</span></div>
+        <div className="orbit-ring">
+          {guide.areas.slice(0, 8).map((a, i) => (
+            <span key={a} className="orbit-item" style={{ '--i': i, '--n': Math.min(guide.areas.length, 8) }}>
+              <span className="orbit-label">{a}</span>
+            </span>
+          ))}
+        </div>
+      </div>
       <p style={{ marginBottom: '16px' }}>{guide.areasNote}</p>
       <div className="link-chips" style={{ justifyContent: 'flex-start', marginTop: 0 }}>
         {guide.areas.map((a) => <span key={a} className="link-chip" style={{ cursor: 'default' }}>{a}</span>)}

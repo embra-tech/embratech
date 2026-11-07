@@ -110,6 +110,15 @@ for (const img of AVATAR_IMAGES) {
   }
 }
 
+// 2026-11-08: hero backgrounds for inner pages (lib/heroMedia.js, components/PageHeader.jsx).
+// Trade photos already get 480/720/960 above, so they only need the wide 1600 version. New hero photos get
+// all four. Missing files are logged and skipped (the page then shows its plain gradient hero).
+const HERO_ONLY_WIDE = ['stock-plumber', 'stock-hvac', 'stock-roofing', 'stock-tree', 'stock-handyman', 'stock-landscaping', 'stock-autobody', 'stock-webdesign', 'stock-localseo', 'stock-growth', 'stock-integrations'];
+const HERO_NEW = ['hero-services', 'hero-pricing', 'hero-portfolio', 'hero-blog', 'hero-about', 'hero-contact', 'hero-industries',
+  'hero-los-angeles', 'hero-chicago', 'hero-alaska', 'hero-anchorage', 'hero-fairbanks', 'hero-juneau', 'hero-denver', 'hero-spokane', 'hero-phoenix', 'hero-brooklyn'];
+for (const name of HERO_ONLY_WIDE) tasks.push({ img: { name, src: `stock/${name}.jpg` }, w: 1600, type: 'hero' });
+for (const name of HERO_NEW) for (const w of [480, 720, 960, 1600]) tasks.push({ img: { name, src: `stock/${name}.jpg` }, w, type: 'hero' });
+
 let done = 0;
 const total = tasks.length * 3; // 3 formats each
 

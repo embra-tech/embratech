@@ -18,6 +18,18 @@ const POST_SHOTS = {
   'why-pagespeed-matters': { name: 'bestbreaks', url: 'bestbreaks.com.au', alt: 'BestBreaks travel website, an example from Embra Technologies', caption: 'Example: BestBreaks. Its case study links to live PageSpeed reports you can check yourself.', href: '/portfolio/bestbreaks', linkText: 'Read the case study' },
 };
 
+// 2026-11-08: topic photo behind each guide's hero (reviewed Pexels trade photos; 480-1600 versions exist).
+const POST_HERO = {
+  'auto-body-shop-marketing': 'stock-autobody',
+  'what-tree-service-website-needs': 'stock-tree',
+  'hvac-local-seo': 'stock-hvac',
+  'local-seo-guide-for-service-businesses': 'stock-localseo',
+  'website-cost-for-home-service-businesses': 'stock-webdesign',
+  'website-roi-calculator': 'stock-growth',
+  'why-pagespeed-matters': 'stock-integrations',
+};
+const heroSet = (n, ext) => [480, 720, 960, 1600].map((w) => `/images/optimized/${n}-${w}.${ext} ${w}w`).join(', ');
+
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -60,11 +72,21 @@ export default function BlogPostPage({ params }) {
   const cleanText = post.content.replace(/<[^>]*>/g, '');
   const wordCount = cleanText.split(/\s+/).filter(Boolean).length;
 
+  // 2026-11-08: give every <h2> an id and build the "In this guide" contents list from them.
+  const toc = [];
+  const contentWithIds = post.content.replace(/<h2>([\s\S]*?)<\/h2>/g, (m, inner) => {
+    const text = inner.replace(/<[^>]+>/g, '').trim();
+    const id = text.toLowerCase().replace(/&[a-z]+;/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    toc.push({ id, text });
+    return `<h2 id="${id}">${inner}</h2>`;
+  });
+
   // Split the article at its first section heading so the screenshot sits after the introduction.
   const shot = POST_SHOTS[params.slug];
-  const splitAt = post.content.indexOf('<h2');
-  const introHtml = shot && splitAt > 0 ? post.content.slice(0, splitAt) : post.content;
-  const restHtml = shot && splitAt > 0 ? post.content.slice(splitAt) : '';
+  const splitAt = contentWithIds.indexOf('<h2');
+  const introHtml = splitAt > 0 ? contentWithIds.slice(0, splitAt) : contentWithIds;
+  const restHtml = splitAt > 0 ? contentWithIds.slice(splitAt) : '';
+  const heroImg = POST_HERO[params.slug];
 
   const schema = {
     '@context': 'https://schema.org',
@@ -119,7 +141,17 @@ export default function BlogPostPage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify([schema, breadcrumbSchema]) }}
       />
 
+      <div className="read-progress" aria-hidden="true" />
       <section className="page-hero" style={{ paddingBottom: '40px' }}>
+        {heroImg && (
+          <div className="page-hero-media" aria-hidden="true">
+            <picture>
+              <source type="image/avif" srcSet={heroSet(heroImg, 'avif')} sizes="(max-width: 767px) 60vw, 100vw" />
+              <source type="image/webp" srcSet={heroSet(heroImg, 'webp')} sizes="(max-width: 767px) 60vw, 100vw" />
+              <img src={`/images/optimized/${heroImg}-960.jpg`} alt="" decoding="async" fetchPriority="high" />
+            </picture>
+          </div>
+        )}
         <div className="wrap" style={{ maxWidth: '800px' }}>
           <nav className="cs-breadcrumb" aria-label="Breadcrumb">
             <Link href="/">Home</Link>
@@ -172,6 +204,14 @@ export default function BlogPostPage({ params }) {
             dangerouslySetInnerHTML={{ __html: introHtml }}
             style={{ color: 'rgba(255,255,255,0.85)', fontSize: '16px', lineHeight: 1.8 }}
           />
+          {toc.length > 2 && (
+            <details className="toc-box" open>
+              <summary>In this guide <span className="toc-count">{toc.length} sections</span></summary>
+              <ol>
+                {toc.map((t) => <li key={t.id}><a href={`#${t.id}`}>{t.text}</a></li>)}
+              </ol>
+            </details>
+          )}
           {shot && <ProjectShot {...shot} />}
           {restHtml && (
             <div

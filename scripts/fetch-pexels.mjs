@@ -50,6 +50,24 @@ const PHOTOS = [
   { name: 'stock-localseo',    query: 'hand holding smartphone map navigation', keywords: ['map', 'navigation', 'location', 'gps'], exclude: ['tiktok', 'game', 'selfie', 'social media'] },
   { name: 'stock-growth',      query: 'business growth chart on laptop', keywords: ['chart', 'graph', 'analytic', 'growth', 'data'] },
   { name: 'stock-integrations', query: 'small business owner using laptop and smartphone', keywords: ['laptop', 'smartphone', 'phone', 'tablet', 'payment'], exclude: ['tiktok', 'game', 'selfie', 'social media'] },
+  // 2026-11-08: hero backgrounds for inner pages (to review before publishing)
+  { name: 'hero-services', query: 'contractor showing homeowner plans on tablet', keywords: ['contractor', 'homeowner', 'tablet', 'worker', 'plan'] },
+  { name: 'hero-pricing', query: 'contractor shaking hands with homeowner', keywords: ['handshake', 'shaking hands', 'agreement', 'deal'] },
+  { name: 'hero-portfolio', query: 'website design on laptop screen', keywords: ['website', 'laptop', 'screen', 'design'] },
+  { name: 'hero-blog', query: 'notebook laptop coffee desk writing', keywords: ['notebook', 'laptop', 'desk', 'writing'] },
+  { name: 'hero-about', query: 'small business team meeting with laptop', keywords: ['team', 'meeting', 'colleagues', 'office'] },
+  { name: 'hero-contact', query: 'person talking on phone at desk', keywords: ['phone', 'call', 'talking'] },
+  { name: 'hero-industries', query: 'tradesman tools workshop', keywords: ['tools', 'workshop', 'tradesman', 'construction', 'carpenter'] },
+  { name: 'hero-los-angeles', query: 'Los Angeles skyline', keywords: ['los angeles', 'california', 'downtown'] },
+  { name: 'hero-chicago', query: 'Chicago skyline', keywords: ['chicago'] },
+  { name: 'hero-alaska', query: 'Alaska mountains landscape', keywords: ['alaska'] },
+  { name: 'hero-anchorage', query: 'Anchorage Alaska', keywords: ['anchorage'] },
+  { name: 'hero-fairbanks', query: 'Fairbanks Alaska winter', keywords: ['fairbanks', 'alaska', 'northern lights', 'aurora'] },
+  { name: 'hero-juneau', query: 'Juneau Alaska', keywords: ['juneau'] },
+  { name: 'hero-denver', query: 'Denver skyline mountains', keywords: ['denver', 'colorado'] },
+  { name: 'hero-spokane', query: 'Spokane Washington', keywords: ['spokane'] },
+  { name: 'hero-phoenix', query: 'Phoenix Arizona skyline', keywords: ['phoenix', 'arizona'] },
+  { name: 'hero-brooklyn', query: 'Brooklyn brownstones street', keywords: ['brooklyn', 'brownstone', 'new york'] },
 ];
 
 // Reviewed 2026-10-26: approved photos are pinned by id so re-running never swaps them. Rejected first picks:
@@ -66,6 +84,24 @@ const OVERRIDES = {
   'stock-growth': 3861957,
   'stock-localseo': 5448160,      // hands navigating on a smartphone GPS app (landscape, reviewed)
   'stock-integrations': 13801799, // person using a laptop and smartphone together (landscape, reviewed)
+  // Hero backgrounds, reviewed 2026-11-08 (descriptions checked; all landscape 3:2)
+  'hero-services': 6474469,      // contractor in hard hat with tablet on a job site
+  'hero-pricing': 7964468,       // handshake
+  'hero-portfolio': 1181449,     // person working on a laptop with a webpage open
+  'hero-blog': 7320516,          // laptop, notebook and coffee
+  'hero-about': 7652176,         // team meeting around a laptop
+  'hero-contact': 5387286,       // phone call at a laptop
+  'hero-industries': 634511,     // carpenter with a grinder in a workshop
+  'hero-los-angeles': 35291216,  // downtown LA skyline at night
+  'hero-chicago': 18916644,      // Chicago skyline with Willis Tower
+  'hero-alaska': 13769372,       // snow-covered Alaskan mountains
+  'hero-anchorage': 39381389,    // Anchorage street scene
+  'hero-fairbanks': 16398144,    // Alaskan winter mountains with evergreens
+  'hero-juneau': 38167951,       // Mendenhall Glacier, Juneau
+  'hero-denver': 13633732,       // aerial Denver at dusk
+  'hero-spokane': 27998518,      // Spokane Falls and bridge
+  'hero-phoenix': 22764344,      // overlooking Phoenix at sunset
+  'hero-brooklyn': 30726437,     // Brooklyn brownstones
 };
 
 const api = async (path) => {
@@ -97,5 +133,34 @@ for (const p of PHOTOS) {
     console.error(`  x ${p.name}: ${e.message}`);
   }
 }
+// 2026-11-08: short background videos for 3 hero sections (desktop only, loaded after the page; see components/PageHeader.jsx).
+// Reviewed and pinned by id. maxWidth keeps file sizes small (the local SEO clip was 9.9 MB at 1280px).
+const VIDEOS = [
+  { name: 'video-services', id: 8488109, maxWidth: 1280 },      // construction worker with a drill
+  { name: 'video-integrations', id: 8937990, maxWidth: 1280 },  // card payment on a laptop (integrations page)
+  { name: 'video-localseo', id: 33637800, maxWidth: 960 },      // aerial city lights at night
+];
+const VIDEO_DIR = join(ROOT, 'public', 'videos');
+mkdirSync(VIDEO_DIR, { recursive: true });
+for (const v of VIDEOS) {
+  try {
+    const res = await fetch(`https://api.pexels.com/videos/videos/${v.id}`, { headers: { Authorization: KEY } });
+    if (!res.ok) throw new Error(`Pexels video API ${res.status}`);
+    const pick = await res.json();
+    const files = (pick.video_files || []).filter((f) => f.file_type === 'video/mp4' && f.width);
+    const fit = files.filter((f) => f.width <= v.maxWidth).sort((a, b) => b.width - a.width);
+    const file = fit[0] || files.sort((a, b) => a.width - b.width)[0];
+    const vres = await fetch(file.link);
+    if (!vres.ok) throw new Error(`download ${vres.status}`);
+    const buf = Buffer.from(await vres.arrayBuffer());
+    writeFileSync(join(VIDEO_DIR, `${v.name}.mp4`), buf);
+    credits[v.name] = { id: pick.id, type: 'video', photographer: pick.user?.name || '', pexelsUrl: pick.url, width: file.width, height: file.height, duration: pick.duration, sizeKB: Math.round(buf.length / 1024) };
+    console.log(`  ok ${v.name}: #${pick.id} ${file.width}x${file.height} ${pick.duration}s ${(buf.length / 1048576).toFixed(1)} MB`);
+  } catch (e) {
+    console.error(`  x ${v.name}: ${e.message}`);
+  }
+}
+delete credits['video-webdesign']; // renamed to video-integrations
+
 writeFileSync(CREDITS, JSON.stringify(credits, null, 2));
 console.log('\nSaved photos to public/images/stock/ and credits to lib/stock-credits.json');

@@ -801,6 +801,64 @@ Link audit (Search Console, Nov 6): 36 external links from 10 sites, all pointin
 - Cause: `components/SiteCard.jsx` built the optimized image name by stripping only `.webp` and `.png`. The new screenshots are `.jpg`, so the cards requested e.g. `/images/optimized/jcplawn.jpg-480.jpg` (confirmed on the live /portfolio: 3 cards with broken paths).
 - All 27 optimized files exist live (3 sites × 480/720/960 × avif/webp/jpg).
 - Fix: strip any image extension (`/\.(webp|png|jpe?g|avif)$/i`). The case-study pages were unaffected (they use ProjectShot with explicit names).
+- Verified live (commit e975d47): homepage 4/4 and /portfolio 9/9 cards load their screenshots (JPEG fallback loaded in the browser, AVIF version present).
+
+---
+
+## AE. Premium inner-page round: tighter hero spacing, hero photos and videos, glassmorphism, scroll animations (2026-11-08, owner requested)
+
+The homepage is unchanged (all new styles are scoped to `.page-shell` or `.page-head`).
+
+1. **Spacing:** inner-page heroes had 64px (navbar offset) + 96px top padding = 160px above the breadcrumb. `.page-hero` padding-top is now 64px desktop and 32px mobile, matching the owner's mobile screenshot.
+2. **Hero background media by route:**
+   - `lib/heroMedia.js` (new) maps routes to media; `components/PageHeader.jsx` renders it.
+   - Industry pages use their reviewed trade photos (new 1600px versions); services and care plan use the existing stock photos.
+   - Services hub, pricing, portfolio, blog, about, contact, industries hub and the 10 city pages use new `hero-*` photos from `scripts/fetch-pexels.mjs` (city skylines and similar; to be reviewed before publishing).
+   - Image: real `<picture>` HTML, AVIF/WebP/JPEG at 480/720/960/1600 (`scripts/generate-images.mjs` hero lists), `fetchpriority=high`, phones get small versions (`sizes` 60vw), dark overlay, hidden if the file is missing.
+   - Videos (`public/videos/`, 1280×720 MP4 from Pexels): services, web design and local SEO only. Desktop ≥1024px only, added after window load and idle, never for prefers-reduced-motion or Save-Data. Fades in over the photo.
+3. **Glassmorphism** (inner pages): offer strip, feature, factor, step and service cards, FAQ items, niche cards and the season table get frosted translucent surfaces (`backdrop-filter: blur(14px) saturate(140%)`, inner highlight), keeping the blue hover glow.
+4. **Scroll animations:** cards ease in via scroll-driven CSS (`translate` + opacity from .35, so text is never hidden and hover transforms still work). Off for reduced motion and crawlers (`html[data-bot]`).
+5. **Dropdowns:** FAQ dropdowns already exist on the service, industry and city pages. Navbar dropdown menus are not done in this round: the navbar is shared with the homepage, so they are proposed as a separate, reviewed change.
+
+**Order:**
+1. `node scripts/fetch-pexels.mjs` (17 hero photos and 3 videos; the 11 existing photos are pinned and unchanged).
+2. Review the picks in `lib/stock-credits.json`.
+3. `npm run build`.
+4. Preview, then push.
+
+**Review (2026-11-08):**
+- All 17 hero photos are relevant and landscape: city skylines and landmarks for LA, Chicago, Juneau (Mendenhall Glacier), Denver, Spokane (Falls), Phoenix and Brooklyn; Alaska mountains for Alaska and Fairbanks; an Anchorage street. All are pinned by id.
+- Videos:
+  - Services: construction worker with a drill (3.2 MB). Kept.
+  - The "web design" pick showed a card payment on a laptop. Renamed to `video-integrations` and moved to the integrations page; web design keeps its photo.
+  - Local SEO: aerial city lights at night, but 9.9 MB at 1280px. Pinned with maxWidth 960 to fetch the smaller file.
+- Re-run `node scripts/fetch-pexels.mjs` once to download the smaller local SEO clip (everything else is pinned and unchanged).
+
+---
+
+## AF. Mobile showcase round: case studies, guides and city pages (2026-11-08, owner requested)
+
+Goal: make Case Studies, Guides and Service Areas feel visual and convincing, especially on phones. The homepage is unchanged; content stays in the HTML; pure CSS motion with reduced-motion and crawler opt-outs.
+- **City pages** (`components/CityGuide.jsx`; Alaska hub in `LocationClient.jsx`):
+  - trade cards use `.stack-cards`; on phones they stick and stack as you scroll (sticky, staggered tops, solid card backgrounds)
+  - a decorative orbit of nearby areas around the city name (aria-hidden; the real area list stays below as text)
+  - the seasonal calendar becomes one card per season on phones ("Calls:" / "Have ready:")
+- **Guides** (`app/blog/[slug]/page.jsx`):
+  - topic photo behind the hero (reviewed trade photos)
+  - CSS reading progress bar (`animation-timeline: scroll()`)
+  - every `<h2>` gets an id and feeds an "In this guide" contents box (`<details open>`, 2 columns on desktop)
+  - typography: gradient heading bars, glowing bullet points, glass tables, `scroll-margin-top` so anchor jumps clear the navbar
+- **Case studies** (`app/portfolio/[slug]/page.jsx`): the project's own screenshot, blurred, as the hero backdrop; on phones, "Our Approach" cards stack as you scroll.
+- **Everywhere on inner pages:**
+  - section headings, contents box and orbit slide in from the left (scroll-driven `translate` + opacity from .4)
+  - spinning conic-gradient rings around step numbers and ranking-factor icons; pulse ring on the orbit center
+- **Safeguards:** no text hidden (the lowest opacity is .4); all motion is under `prefers-reduced-motion: no-preference`; `html[data-bot]` disables every animation; unsupported browsers show the content normally.
+
+**Order (with AE):**
+1. `node scripts/fetch-pexels.mjs`.
+2. `npm run build`.
+3. Preview on a phone-sized window.
+4. Push.
 
 ---
 
