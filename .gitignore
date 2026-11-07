@@ -10,3 +10,12 @@ dist
 
 # Local-only backups of removed/edited files (see INDEXING_FIX_CHANGELOG.md)
 _backup/
+
+# 2026-11-08: generated at build time by scripts/generate-images.mjs ("build" runs it, on Vercel too),
+# so these hundreds of AVIF/WebP/JPEG files never need to be pushed. Source images in public/images and
+# public/images/stock stay tracked.
+public/images/optimized/
+
+# Local working folders (reports, review screenshots, scratch files); not part of the website
+output/
+tmp/

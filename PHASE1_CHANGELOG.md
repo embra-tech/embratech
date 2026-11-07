@@ -862,6 +862,18 @@ Goal: make Case Studies, Guides and Service Areas feel visual and convincing, es
 
 ---
 
+## AG. Faster pushes: stop committing generated images (2026-11-08)
+
+The owner's push took about 30 minutes. Cause: the commit included hundreds of generated files in `public/images/optimized/` (AVIF/WebP/JPEG at 480/720/960/1600 for every photo).
+
+The `build` script already runs `scripts/generate-images.mjs` before `next build`, on Vercel as well, so those files are recreated on every deploy and never needed to be in git.
+- `.gitignore`: added `public/images/optimized/`, plus the local working folders `output/` and `tmp/`.
+- Still tracked, because the site needs them: the source photos in `public/images/stock/` (28 files, 7.05 MB) and `public/videos/` (3 files, 13.27 MB; the local SEO clip is now 6.47 MB at 960px).
+- One-time fix for the unpushed commit: `git reset --soft origin/main`, then `git rm -r --cached --ignore-unmatch public/images/optimized output tmp`, `git add -A`, commit and push. Files stay on disk.
+- Vercel builds take a few minutes longer while sharp generates the images; the push itself is about 20 MB instead of the full optimized set.
+
+---
+
 ## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)
 
 No site code changed in this section.
