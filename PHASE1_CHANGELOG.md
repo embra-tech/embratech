@@ -506,7 +506,7 @@ Release 46680ac (sections S and T) verified READY and rendering live.
 - "V Vasquez is in Centennial, Colorado": the client is in Merced, CA. No Colorado callouts.
 - "Embra Technologies LLC, registered in Delaware, US-based": contradicts the company record and the remote-team wording. Not used.
 - `alternateName` "Embra Inc.": may be another company.
-- "$350 deposit + $350": the code splits Starter into 4 payments of $175.
+- "$350 deposit + $350": CORRECTION (2026-11-08): this was wrongly rejected. The live pricing page offers Starter as "$350 now + $350 at launch" (the code also has a 4 × $175 monthly option). The site's "$700 total with split payments" wording covers both, so no page change is needed.
 - "Live in 7 days": the site states 2–4 weeks.
 - FAQPage and Offer schema "for rich results": FAQ rich results are limited to authoritative government and health sites, and service prices don't produce price snippets. Low value; not added.
 - Wrong slugs (`/portfolio/sky-high-tree-service`, `/portfolio/vasquez-handyman`, `/portfolio/best-breaks`) and post titles the site never had.
@@ -871,6 +871,36 @@ The `build` script already runs `scripts/generate-images.mjs` before `next build
 - Still tracked, because the site needs them: the source photos in `public/images/stock/` (28 files, 7.05 MB) and `public/videos/` (3 files, 13.27 MB; the local SEO clip is now 6.47 MB at 960px).
 - One-time fix for the unpushed commit: `git reset --soft origin/main`, then `git rm -r --cached --ignore-unmatch public/images/optimized output tmp`, `git add -A`, commit and push. Files stay on disk.
 - Vercel builds take a few minutes longer while sharp generates the images; the push itself is about 20 MB instead of the full optimized set.
+
+**Published and verified (2026-11-08, commit eb247a4; covers AE, AF and AG):**
+- Vercel regenerated all optimized images (portfolio, stock and hero sets load).
+- Hero photos load on every checked page at 31–133 KB (largest AVIF). The 3 videos are served (3.2, 3.7 and 6.6 MB). The homepage has no hero media (unchanged).
+- Anchorage: orbit, stacking cards and season cards present. Guide: contents box and reading progress bar present. Case study: blurred screenshot hero.
+- Desktop hero padding-top is 64px (breadcrumb at 128px, was ~160px). The live CSS contains the phone rules: 32px spacing, sticky stacking cards, season cards, plus the orbit, progress and glass rules and the reduced-motion and crawler opt-outs.
+- Phone-size screenshots were not possible: the browser window would not shrink, so the owner checks on a real phone.
+
+---
+
+## AH. Client-review trust round (2026-11-08, owner requested)
+
+Based on the 7-perspective client review (Anchorage HVAC, LA collision, Centennial handyman, Chicago HVAC operations manager, Fairbanks plumber, Chicagoland tree service, Phoenix roofer). Common gaps: no visible proof, phone or hours near the top; no SEO results where SEO is sold; "remote" stated without a process; concept designs with no next step; no quotes or founder.
+
+**Built** (shared components, so every relevant page gets them):
+- `components/ProofBar.jsx` + `lib/proof.js`, under the offer in every PageHeader hero:
+  - "Recent clients": 3 real clients, most relevant first per route (local clients on city pages, same-trade clients on industry pages), each linking to its case study, plus "+N more"
+  - "Call (212) 207-1152 · Mon–Fri 9am–6pm ET", with the visitor's local hours added after load on city pages (Intl time zones, so DST and Arizona are handled; client-side to avoid hydration mismatch) · "Websites from $700"
+- `components/TrustBlocks.jsx`:
+  - `SeoResultCard`: Pick N Drop Laundry Search Console numbers (9→21 clicks, 471→1,399 impressions), always labelled as a Los Angeles client with dates and source. Shown on all 6 city guides and in the Chicago HVAC section.
+  - `HowWeWork`: a 4-step remote process (tell us → free sample in 24h → built in 2–4 weeks → launch and you own it) on all 10 city pages.
+- `components/ClientQuotes.jsx` + `lib/testimonials.js`: real-quote slots (renders nothing while empty; no ratings or review markup). Placed after the trade cards on city guides.
+- Plumber, HVAC and roofing concept-design captions now link to /contact: "See your own design free in 24 hours".
+- `app/globals.css`: proof chips (green dot, glass), hero facts row, SEO result card (gradient numbers), how-we-work steps (reuse the spinning step-num rings), quote cards. Phone layout compact.
+
+**Correction recorded:** the Starter split is "$350 now + $350 at launch" on the live pricing page (see U).
+
+**Waiting on the owner:** 2–3 real client quotes (Tuxford, Alaska Handyman Services, Sky High, V Vasquez); founder photo and bio; whether the number accepts texts and an honest reply time. Then: quotes into `lib/testimonials.js`, founder block and author box, and "Text us".
+
+**Next (Claude):** tree service page upgrade (FAQ dropdowns, Sky High screenshot near the top); longer case studies (phone-view screenshot, build time, quote); SEO buyers' page (reporting sample, contract terms).
 
 ---
 

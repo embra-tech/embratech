@@ -8,6 +8,7 @@ import Cta from '../../../components/Cta';
 import Link from 'next/link';
 import ProjectShot from '../../../components/ProjectShot';
 import CityGuide from '../../../components/CityGuide';
+import { HowWeWork, SeoResultCard } from '../../../components/TrustBlocks';
 
 function LosAngelesContent() {
   return (
@@ -118,6 +119,8 @@ function ChicagoContent() {
       <p style={{ marginBottom: '40px' }}>
         Our <Link href="/blog/hvac-local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>HVAC SEO guide</Link> walks through the steps, including how to choose an SEO company for HVAC repair. If you&apos;d rather have it done for you, our <Link href="/services/local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>local SEO service</Link> starts with a free review, and our <Link href="/niches/hvac-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>HVAC website design</Link> page shows how we build heating and cooling websites. We work remotely with contractors across Chicagoland.
       </p>
+      {/* 2026-11-08: proven local SEO result for the Chicago HVAC SEO searches. */}
+      <SeoResultCard place="Chicago" />
       <p style={{ marginBottom: '40px' }}>
         We also build websites for Chicago home services businesses and construction contractors, with a page for each service and project type and clear details on the neighborhoods and suburbs you cover. Construction SEO in Chicago follows the same rules as HVAC: real project photos, license and insurance details up front, and steady genuine reviews.
       </p>
@@ -338,6 +341,9 @@ export default function LocationClient({ loc, guide = null }) {
               </ul>
             </>
           )}
+
+          {/* 2026-11-08: the remote process as clear steps, on every city page. */}
+          <HowWeWork place={displayLocName} />
 
           <div style={{ marginTop: '40px', padding: '24px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid var(--line-dark)' }}>
             <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>Explore Our Work &amp; Services</h3>

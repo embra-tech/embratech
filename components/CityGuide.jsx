@@ -2,6 +2,8 @@ import Link from 'next/link';
 import StockPhoto from './StockPhoto';
 import ProjectShot from './ProjectShot';
 import FaqAccordion from './FaqAccordion';
+import ClientQuotes from './ClientQuotes';
+import { SeoResultCard } from './TrustBlocks';
 
 // Renders a city guide from lib/cityGuides.js inside /locations/[city] (2026-11-02).
 // Each guide has its own local context, trade cards, seasonal calendar, search examples, local tip, areas and
@@ -25,6 +27,9 @@ export default function CityGuide({ guide }) {
         ))}
       </div>
 
+      {/* 2026-11-08: real client quotes for this city (renders nothing until lib/testimonials.js has quotes). */}
+      <ClientQuotes place={guide.slug} />
+
       {guide.season && (
         <>
           <h2 style={h2}>{guide.name} Service Calendar</h2>
@@ -46,6 +51,8 @@ export default function CityGuide({ guide }) {
 
       <h2 style={h2}>{guide.seoTitle}</h2>
       {guide.seo.map((p) => <p key={p.slice(0, 24)} style={{ marginBottom: '20px' }}>{p}</p>)}
+      {/* 2026-11-08: proven local SEO result (client city, dates and source shown). */}
+      <SeoResultCard place={guide.name} />
 
       {guide.searches && (
         <>

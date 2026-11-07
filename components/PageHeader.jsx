@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import OfferStrip from './OfferStrip';
+import ProofBar from './ProofBar';
 import { HERO_MEDIA, heroSrcSet } from '../lib/heroMedia';
 
 // 2026-10-26: shows an offer under every inner page heading, matched to the page:
@@ -81,6 +82,8 @@ export default function PageHeader({ pill, badge, title, sub, offer = 'sample' }
       <h1>{title}</h1>
       {sub && <p className="page-head-sub">{sub}</p>}
       {variant && <OfferStrip variant={variant} />}
+      {/* 2026-11-08: real-client proof, phone, local-time hours and starting price (components/ProofBar.jsx). */}
+      <ProofBar pathname={pathname} />
     </div>
   );
 }

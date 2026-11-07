@@ -127,7 +127,7 @@ export default function NichePage() {
             </picture>
             <div style={{ padding: '16px 20px', borderTop: '1px solid var(--line-dark)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px', background: 'rgba(0,0,0,0.25)' }}>
               <span style={{ fontSize: '0.88rem', color: 'var(--muted-inv)' }}>Concept design. Polar Air HVAC is a sample brand we created to show the layout: seasonal tune-up callouts, financing details and same-day service requests.</span>
-              <Link href="/services/web-design" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline' }}>Explore Custom Web Design Services &rarr;</Link>
+              <Link href="/contact" style={{ color: 'var(--primary-bright)', fontSize: '0.88rem', textDecoration: 'underline', fontWeight: 600 }}>See your own design free in 24 hours &rarr;</Link>
             </div>
           </div>
 
