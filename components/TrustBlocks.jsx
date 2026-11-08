@@ -24,7 +24,7 @@ export function SeoResultCard({ place }) {
 // 2026-11-08: the remote process, explained as clear steps rather than a phrase in the subtitle.
 export function HowWeWork({ place }) {
   const steps = [
-    ['Tell us about your business', 'Send the short form or call during US business hours. No sales pitch, just questions about your services and area.'],
+    ['Tell us about your business', 'Send the short form, call, or message us on WhatsApp. We reply within 24 hours, with questions about your services and area, not a sales pitch.'],
     ['Free homepage sample in 24 hours', 'You see a custom design for your business before paying anything.'],
     ['Built in 2\u20134 weeks', 'We build your pages, set up tap-to-call and quote forms, and keep you updated by email or video call.'],
     ['Launch, and you own it', 'Your site goes live, you own it outright, and the $150/month Care Plan is optional.'],

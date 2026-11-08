@@ -902,6 +902,14 @@ Based on the 7-perspective client review (Anchorage HVAC, LA collision, Centenni
 
 **Next (Claude):** tree service page upgrade (FAQ dropdowns, Sky High screenshot near the top); longer case studies (phone-view screenshot, build time, quote); SEO buyers' page (reporting sample, contract terms).
 
+**Follow-up (2026-11-08):**
+- Owner confirmed WhatsApp on the same number with replies within 24 hours.
+  - ProofBar facts now read "Call or WhatsApp (212) 207-1152 · Replies within 24 hours · Mon–Fri 9am–6pm ET (local) · Websites from $700" (WhatsApp link `https://wa.me/12122071152`, as in WhatsAppButton).
+  - HowWeWork step 1 mentions WhatsApp and the 24-hour reply.
+- Owner asked for placeholder quotes written by Claude. Declined: invented quotes presented as client words are fake testimonials (FTC 2024 rule; deceptive to visitors and Google). `lib/testimonials.js` stays empty until real quotes arrive.
+- OPEN QUESTION: the homepage `components/Testimonials.jsx` shows quotes attributed to Carlos Mendez (Tuxford), Victor Vasquez (V Vasquez) and Dan Miller (Sky High), with 5-star ratings. If these were not actually given by those people, remove or replace them. Dan Miller's quote also makes an outcome claim ("brings in real emergency calls"). They are not reused on inner pages until confirmed genuine.
+- Founder photo and bio: not available yet.
+
 ---
 
 ## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)

@@ -54,7 +54,12 @@ export default function ProofBar({ pathname }) {
         <Link href="/portfolio" className="proof-chip proof-more">+{more} more</Link>
       </div>
       <p className="hero-facts">
-        <a href={`tel:${siteConfig.phone}`}>Call {siteConfig.phoneDisplay}</a>
+        <span>
+          <a href={`tel:${siteConfig.phone}`}>Call</a> or{' '}
+          <a href="https://wa.me/12122071152" target="_blank" rel="noopener noreferrer">WhatsApp</a> {siteConfig.phoneDisplay}
+        </span>
+        <span aria-hidden="true">&middot;</span>
+        <span>Replies within 24 hours</span>
         <span aria-hidden="true">&middot;</span>
         <span>Mon&ndash;Fri 9am&ndash;6pm ET{local}</span>
         <span aria-hidden="true">&middot;</span>
