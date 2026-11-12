@@ -59,6 +59,10 @@ const FAQS = [
     a: 'Our Starter website is $700 total with split payments, or $600 paid in full, for a custom homepage plus 2 inner pages. Growth is $1,000 for up to 7 pages, enough for separate collision, paint, dent repair and insurance pages, plus structured data and Google Business Profile setup.',
   },
   {
+    q: 'What makes a good collision center website?',
+    a: 'It answers a stressed driver\'s questions in seconds: how to get an estimate (ideally by sending photos), which insurers you work with, what your warranty covers, and how to reach you right now. Strong collision repair website design also gives each service its own page, shows real repairs and certifications, and loads fast on a phone at the roadside.',
+  },
+  {
     q: 'Can you help with marketing our body shop, not just the website?',
     a: 'Yes. Our local SEO service covers your Google Business Profile, service pages and business listings. For a do-it-yourself plan, read our auto body shop marketing guide, which includes a 90-day plan for collision shops.',
   },

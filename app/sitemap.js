@@ -36,15 +36,15 @@ export default function sitemap() {
 
   const locationPages = [
     { url: `${baseUrl}/locations/brooklyn`,            lastModified: oct25,         changeFrequency: 'monthly',  priority: 0.8 },
-    { url: `${baseUrl}/locations/los-angeles`,         lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/los-angeles`,         lastModified: '2026-11-11',  changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/chicago`,             lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/alaska`,              lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
     // 2026-11-02: city guides built from Search Console city queries (lib/cityGuides.js); deepened and live 2026-11-06
-    { url: `${baseUrl}/locations/anchorage`,           lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/anchorage`,           lastModified: '2026-11-11',  changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/fairbanks`,           lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/juneau`,              lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/denver`,              lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/spokane`,             lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/spokane`,             lastModified: '2026-11-11',  changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/phoenix`,             lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
     // /locations/gulf-coast is noindex, excluded from sitemap intentionally
   ];
@@ -59,8 +59,8 @@ export default function sitemap() {
     'roofing-website-design',
   ].map(slug => ({
     url: `${baseUrl}/niches/${slug}`,
-    // 2026-11-06: all industry pages except tree service changed in the uniqueness pass (live 2026-11-06).
-    lastModified: slug === 'tree-service-website-design' ? oct21 : '2026-11-06',
+    // 2026-11-11: near-page-1 push (auto body, roofing, plumber, HVAC); other industry pages last changed 2026-11-06.
+    lastModified: ['auto-body-shop-website-design', 'roofing-website-design', 'plumber-website-design', 'hvac-website-design'].includes(slug) ? '2026-11-11' : (slug === 'tree-service-website-design' ? oct21 : '2026-11-06'),
     changeFrequency: 'monthly',
     priority: 0.8,
   }));

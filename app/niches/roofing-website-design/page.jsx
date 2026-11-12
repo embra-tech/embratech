@@ -140,6 +140,16 @@ export default function NichePage() {
           <h2 style={h2}>Pages Every Roofing Website Needs</h2>
           <p style={para}>Give each service its own page: roof replacement, roof repair, storm and hail damage, emergency tarping if you offer it, gutters, commercial roofing if you do it, and a project gallery. Each page should say what the job involves, show real work and end with a way to call or request an inspection.</p>
 
+          {/* 2026-11-11: checklist for the near-page-1 search "roofing website" (46 impressions, position 14.2). */}
+          <h2 style={h2}>Roofing Website Checklist</h2>
+          <p style={para}>Use this to check the roofing website you have now, or to brief whoever builds your next one:</p>
+          <p style={para}>&bull; <strong>Local proof in the first screen:</strong> license and insurance details, years in business, the towns you serve and your Google rating.</p>
+          <p style={para}>&bull; <strong>A tap-to-call button that never scrolls away,</strong> plus a short inspection request form.</p>
+          <p style={para}>&bull; <strong>Separate pages</strong> for replacement, repair, storm and hail damage, and gutters, each with real photos.</p>
+          <p style={para}>&bull; <strong>A plain insurance claim explanation</strong> that describes your inspection and documentation without promising to negotiate the claim.</p>
+          <p style={para}>&bull; <strong>A gallery of finished roofs</strong> organized by roof type, with before-and-after pairs where you have them.</p>
+          <p style={para}>&bull; <strong>Fast loading on a phone</strong>, because many homeowners search from the driveway after a storm.</p>
+
           <StockPhoto name="stock-roofing" />
 
           <h2 style={h2}>Local SEO for Roofing Contractors</h2>

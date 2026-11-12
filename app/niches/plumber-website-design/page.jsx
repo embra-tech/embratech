@@ -55,8 +55,8 @@ const FAQS = [
     a: 'No. Apex Plumbing is a concept design we created to show the layout we recommend for plumbers. Our live client projects are in auto body repair, tree service, handyman, landscaping and laundry services, and the same principles apply. Before you commit, we design a free homepage sample for your own plumbing business.',
   },
   {
-    q: 'How much does a plumbing website cost?',
-    a: 'Our Starter website is $700 total with split payments, or $600 paid in full, for a custom homepage plus 2 inner pages. Growth is $1,000 for up to 7 pages, enough for separate service pages, plus structured data and Google Business Profile setup. The optional Care Plan is $150/month.',
+    q: 'How much do plumbing web design services cost?',
+    a: 'Our Starter website is $700 total with split payments, or $600 paid in full, for a custom homepage plus 2 inner pages. Growth is $1,000 for up to 7 pages, enough for separate service pages, plus structured data and Google Business Profile setup. The optional Care Plan is $150/month. Our guide to contractor website costs compares these prices with templates and larger agencies.',
   },
 ];
 

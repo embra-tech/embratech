@@ -912,6 +912,32 @@ Based on the 7-perspective client review (Anchorage HVAC, LA collision, Centenni
 
 ---
 
+## AI. Near-page-1 push (2026-11-11, owner requested)
+
+Search Console (28 days to Nov 9): 575 queries, 5,670 impressions, average position 46.4.
+- HVAC website/web design: 61% of impressions at average position 59.1. Every other query: average 28.8.
+- 30 queries on page 1; **93 queries at positions 11–20** (the targets).
+- Owner reports the 7 client credit links have been re-pointed.
+
+**Targets and changes:**
+- **HVAC SEO group** (seo hvac 76/16.5, ac company seo 56/11.4, local seo for hvac companies 35/18.4, air conditioning repair seo 24/13, seo for air conditioning 19/15.1, heating and air local seo 13/14.8, hvac seo guide 10/19.6):
+  - `lib/blog/hvac-local-seo.js`: new section "SEO for AC and heating companies: where to start" (3 steps) with links to the HVAC website design page and Local SEO
+  - `lib/blogData.js`: metaTitle "HVAC SEO Guide: Local SEO for HVAC & AC Companies"; dateModified 2026-11-11
+  - HVAC website page (3,401 impressions) links the guide as "HVAC SEO guide for AC and heating companies"
+- **Auto body** (collision repair website design 67/19, auto body shop website design 55/18.8):
+  - the auto body guide's in-text link now uses the anchor "collision repair website design" (dateModified 2026-11-11)
+  - the auto body page gets an FAQ "What makes a good collision center website?"
+- **Roofing** (roofing website 46/14.2): roofing page gets a "Roofing Website Checklist" section (6 items).
+- **Plumbing** (plumbing web design services cost 16/11.1): the FAQ becomes "How much do plumbing web design services cost?" and points to the cost guide.
+- **Los Angeles** (hvac website design la 34/13.7, plumbing web design los angeles 9/17.8): H2 "HVAC Website Design, HVAC SEO and Plumbing Websites in Los Angeles", plus a sentence linking "HVAC website design".
+- **Spokane** (airway heights seo 21/14.8): SEO section title "Airway Heights and Spokane SEO: What Actually Helps".
+- **Anchorage** (website design for handyman anchorage 8/15): trade card "Handyman Website Design in Anchorage".
+- `app/sitemap.js`: auto body, roofing, plumber and HVAC industry pages, LA, Anchorage and Spokane dated 2026-11-11.
+
+**Measure:** the same 93 queries around Nov 25 and Dec 9 (positions settle 2–4 weeks after recrawl).
+
+---
+
 ## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)
 
 No site code changed in this section.
