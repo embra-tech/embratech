@@ -2282,6 +2282,18 @@ html[data-bot] .page-shell .toc-box, html[data-bot] .page-shell .orbit, html[dat
     -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
   }
 }
+
+/* 2026-11-20: case-study "Project at a Glance" facts and "Related Pages" cards */
+.cs-glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 0; }
+.cs-glance > div { padding: 14px 16px; border-radius: 14px; background: linear-gradient(150deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015)); border: 1px solid rgba(96,165,250,0.2); }
+.cs-glance dt { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-inv); margin-bottom: 4px; }
+.cs-glance dd { margin: 0; color: #fff; font-size: 1rem; line-height: 1.45; }
+.cs-glance dd a, .cs-col-body p a { color: var(--primary-bright); text-decoration: underline; }
+.cs-related { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 18px; }
+.cs-related-card { display: flex; flex-direction: column; gap: 4px; padding: 18px; border-radius: 16px; background: linear-gradient(150deg, rgba(37,99,235,0.12), rgba(255,255,255,0.02)); border: 1px solid rgba(96,165,250,0.3); color: var(--muted-inv); transition: transform .25s ease, border-color .25s ease; }
+.cs-related-card strong { color: #fff; font-size: 1.05rem; }
+.cs-related-card:hover { transform: translateY(-3px); border-color: rgba(96,165,250,0.75); }
+.cs-related-kicker { font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: #93c5fd; }
 .cs-col-body p { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.75); margin-bottom: 20px; }
 
 .cs-approach-header { margin-bottom: 40px; }

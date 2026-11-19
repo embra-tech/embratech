@@ -40,12 +40,12 @@ export default function sitemap() {
     { url: `${baseUrl}/locations/chicago`,             lastModified: '2026-11-18',  changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/alaska`,              lastModified: '2026-11-18',  changeFrequency: 'monthly',  priority: 0.7 },
     // 2026-11-02: city guides built from Search Console city queries (lib/cityGuides.js); deepened and live 2026-11-06
-    { url: `${baseUrl}/locations/anchorage`,           lastModified: '2026-11-13',  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/fairbanks`,           lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/juneau`,              lastModified: '2026-11-18',  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/denver`,              lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/spokane`,             lastModified: '2026-11-18',  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/phoenix`,             lastModified: '2026-11-06',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/anchorage`,           lastModified: '2026-11-20',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/fairbanks`,           lastModified: '2026-11-20',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/juneau`,              lastModified: '2026-11-20',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/denver`,              lastModified: '2026-11-20',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/spokane`,             lastModified: '2026-11-20',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/phoenix`,             lastModified: '2026-11-20',  changeFrequency: 'monthly',  priority: 0.7 },
     // /locations/gulf-coast is noindex, excluded from sitemap intentionally
   ];
 
@@ -60,7 +60,7 @@ export default function sitemap() {
   ].map(slug => ({
     url: `${baseUrl}/niches/${slug}`,
     // 2026-11-11: near-page-1 push (auto body, roofing, plumber, HVAC); other industry pages last changed 2026-11-06.
-    lastModified: ['auto-body-shop-website-design', 'roofing-website-design', 'plumber-website-design', 'hvac-website-design'].includes(slug) ? '2026-11-13' : (slug === 'tree-service-website-design' ? oct21 : '2026-11-06'),
+    lastModified: ['hvac-website-design', 'auto-body-shop-website-design'].includes(slug) ? '2026-11-20' : (['roofing-website-design', 'plumber-website-design'].includes(slug) ? '2026-11-13' : (slug === 'tree-service-website-design' ? oct21 : '2026-11-06')),
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
@@ -78,7 +78,7 @@ export default function sitemap() {
     'royal-home-health-care',
   ].map(slug => ({
     url: `${baseUrl}/portfolio/${slug}`,
-    lastModified: ['alaska-handyman-services', 'jcp-lawn-service', 'royal-home-health-care'].includes(slug) ? '2026-11-06' : oct19,
+    lastModified: '2026-11-20', // 2026-11-20: all case studies gained "Project at a Glance" and "Related Pages"
     changeFrequency: 'monthly',
     priority: 0.75,
   }));

@@ -977,6 +977,44 @@ Search Console (28 days to Nov 9): 575 queries, 5,670 impressions, average posit
 
 **Next:** recheck around Nov 25 (US clicks and CTR on the page-1 searches); the authority work (links, reviews) remains the ceiling for the biggest HVAC searches.
 
+**Published and verified (2026-11-19, commit 2615543):**
+- 7 new meta descriptions live (130–159 chars): HVAC guide, Chicago, Spokane, Juneau, LA, Brooklyn, Alaska.
+- `<html lang="en-US">` on every page.
+- Mobile no-blur rule present in the live CSS (selectors reordered by the minifier).
+- Sitemap: 7 entries 2026-11-18, 5 entries 2026-11-13.
+- One leftover: /blog/auto-body-shop-marketing still showed 2026-11-11 (its dateModified lives in `lib/blogData.js`). Fixed locally to 2026-11-13; ships with the next push.
+- Search Console:
+  - recrawl requested for the 7 changed pages (all indexed)
+  - indexing requested for the 3 new case studies (jcp-lawn-service, royal-home-health-care, alaska-handyman-services), all still "not on Google" two weeks after launch despite strong internal linking; likely too short (about 440 words) → expand them next
+  - sitemap resubmitted (Success, 47, read Nov 19)
+
+---
+
+## AK. Indexing audit and fixes (2026-11-20, owner requested)
+
+**Search Console → Pages (last updated Nov 16):** 29 indexed, 20 not indexed.
+
+| Reason | Count | Pages | Status |
+|---|---|---|---|
+| Discovered – currently not indexed | 16 | 8 of 9 case studies (all but sky-high-tree); /services/web-design, /services/local-seo, /services/care-plan; /blog/local-seo-guide-for-service-businesses, /blog/website-roi-calculator, /blog/why-pagespeed-matters; /niches; /terms | Google knows the URLs but has not crawled them: low crawl priority for a young, DR-30 site. Not a quality rejection |
+| Not found (404) | 1 | /portfolio/sky-high-tree | Stale: returns 200 now (title "Tree Service Website Design, Sky High") |
+| Duplicate without user-selected canonical | 1 | /blog/website-cost-for-home-service-businesses | Stale: last crawl Oct 2, before the Oct 13 canonical fixes. Inspection showed user canonical "None" and a Google-selected canonical on an unrelated cinema site (a Google glitch on a mid-change crawl). The page now has a self-canonical and a unique title |
+| Page with redirect | 2 | /pricing.html, /index.html | Intended .html redirects; nothing to fix |
+| Crawled – currently not indexed | 0 | | No quality rejections |
+
+**Fixes:**
+- `app/portfolio/[slug]/page.jsx`: every case study gets "Project at a Glance" (client, industry, location, what we did, built with, live website) and "Related Pages" (a contextual sentence linking the matching industry or service page and city or pricing page, plus 2 related case-study cards). `RELATED` map per slug.
+- `components/CityGuide.jsx`: "Free guides for {city} business owners" chips linking the local SEO guide, the website cost guide, the ROI calculator and the PageSpeed guide, from all 6 city guides.
+- HVAC and auto body industry pages (the most crawled): the Care Plan bullet links /services/care-plan; the pricing paragraph links /services/web-design.
+- `app/globals.css`: `.cs-glance` and `.cs-related` styles.
+- `app/sitemap.js`: all 9 case studies, the 6 city guides, and the HVAC and auto body pages → 2026-11-20.
+
+**Indexing requests:**
+- Nov 20: /blog/website-cost-for-home-service-businesses requested; quota then exceeded (yesterday's 10 had not reset).
+- Queue for the next days (10/day): /portfolio/sky-high-tree, /services/web-design, /services/care-plan, /portfolio/tuxford-collision, /portfolio/pnd-laundry, /portfolio/vvasquez-handyman, /portfolio/alaska-fast-fix, /portfolio/bestbreaks, /niches, /blog/local-seo-guide-for-service-businesses, /blog/website-roi-calculator, /blog/why-pagespeed-matters, then /terms. Already requested Nov 19: jcp-lawn-service, royal-home-health-care, alaska-handyman-services.
+
+**Expectation (honest):** "Discovered" pages typically get crawled within days to a few weeks after requests and fresh links. Ranking growth on competitive US terms depends mostly on authority (links, reviews); positions for city and niche terms are already moving onto page 1.
+
 ---
 
 ## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)

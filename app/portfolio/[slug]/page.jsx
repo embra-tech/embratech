@@ -15,6 +15,21 @@ const CASE_SHOTS = {
   'alaska-handyman-services': 'alaskahandymanservices',
   'royal-home-health-care': 'royalcare',
 };
+
+// 2026-11-20: related pages per case study (Search Console showed 8 of 9 case studies "Discovered - currently not
+// indexed"). Contextual links into the matching industry/service and city pages and to similar projects make each
+// case study more useful and better connected, so Google crawls and values them sooner.
+const RELATED = {
+  'tuxford-collision': { page: ['/niches/auto-body-shop-website-design', 'Auto body shop website design', 'how we build collision repair websites'], city: ['/locations/los-angeles', 'Websites & SEO in Los Angeles'], cases: ['pnd-laundry', 'royal-home-health-care'] },
+  'pnd-laundry': { page: ['/services/local-seo', 'Local SEO service', 'the local SEO work behind these results'], city: ['/locations/los-angeles', 'Websites & SEO in Los Angeles'], cases: ['tuxford-collision', 'royal-home-health-care'] },
+  'alaska-fast-fix': { page: ['/niches/web-design-for-handyman-businesses', 'Handyman website design', 'how we build handyman websites'], city: ['/locations/anchorage', 'Websites & SEO in Anchorage'], cases: ['alaska-handyman-services', 'vvasquez-handyman'] },
+  'alaska-handyman-services': { page: ['/niches/web-design-for-handyman-businesses', 'Handyman website design', 'how we build handyman websites'], city: ['/locations/anchorage', 'Websites & SEO in Anchorage'], cases: ['alaska-fast-fix', 'vvasquez-handyman'] },
+  'vvasquez-handyman': { page: ['/niches/web-design-for-handyman-businesses', 'Handyman website design', 'how we build handyman websites'], city: ['/pricing', 'Website pricing'], cases: ['alaska-handyman-services', 'alaska-fast-fix'] },
+  'sky-high-tree': { page: ['/niches/tree-service-website-design', 'Tree service website design', 'how we build tree service websites'], city: ['/locations/chicago', 'Websites & SEO in Chicago'], cases: ['jcp-lawn-service', 'tuxford-collision'] },
+  'jcp-lawn-service': { page: ['/niches/landscaping-website-design', 'Landscaping website design', 'how we build lawn care and landscaping websites'], city: ['/pricing', 'Website pricing'], cases: ['sky-high-tree', 'vvasquez-handyman'] },
+  'royal-home-health-care': { page: ['/services/web-design', 'Website design service', 'our custom website design process'], city: ['/locations/los-angeles', 'Websites & SEO in Los Angeles'], cases: ['tuxford-collision', 'pnd-laundry'] },
+  'bestbreaks': { page: ['/services/web-design', 'Website design service', 'our custom website design process'], city: ['/blog/why-pagespeed-matters', 'Why PageSpeed matters'], cases: ['tuxford-collision', 'sky-high-tree'] },
+};
 import { notFound } from 'next/navigation';
 import Cta from '../../../components/Cta';
 import siteConfig from '../../../lib/site-config';
@@ -507,6 +522,47 @@ export default function CaseStudyPage({ params }) {
           </div>
         </div>
       </section>
+
+      {/* ── 2026-11-20: Project at a glance + related pages (helps visitors and Google connect the case study to the site) ── */}
+      <section className="cs-section cs-section--alt">
+        <div className="wrap cs-two-col">
+          <h2 className="cs-col-label">Project at a Glance</h2>
+          <div className="cs-col-body">
+            <dl className="cs-glance">
+              <div><dt>Client</dt><dd>{cs.name}</dd></div>
+              <div><dt>Industry</dt><dd>{cs.industry}</dd></div>
+              <div><dt>Location</dt><dd>{cs.location}</dd></div>
+              {cs.tags && <div><dt>What we did</dt><dd>{cs.tags.join(', ')}</dd></div>}
+              {cs.stack && <div><dt>Built with</dt><dd>{cs.stack}</dd></div>}
+              <div><dt>Live website</dt><dd><a href={cs.url} target="_blank" rel="noopener noreferrer">{cs.domain}</a></dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      {RELATED[params.slug] && (
+        <section className="cs-section">
+          <div className="wrap cs-two-col">
+            <h2 className="cs-col-label">Related Pages</h2>
+            <div className="cs-col-body">
+              <p>
+                Planning a similar project? See {RELATED[params.slug].page[2]} on our{' '}
+                <Link href={RELATED[params.slug].page[0]}>{RELATED[params.slug].page[1]}</Link> page,
+                or visit <Link href={RELATED[params.slug].city[0]}>{RELATED[params.slug].city[1]}</Link>.
+              </p>
+              <div className="cs-related">
+                {RELATED[params.slug].cases.filter((s) => CASE_STUDIES[s]).map((s) => (
+                  <Link key={s} href={`/portfolio/${s}`} className="cs-related-card">
+                    <span className="cs-related-kicker">Case study</span>
+                    <strong>{CASE_STUDIES[s].name}</strong>
+                    <span>{CASE_STUDIES[s].industry} &middot; {CASE_STUDIES[s].location}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── Nav row ──────────────────────────────────────────── */}
       <section className="cs-nav-section">

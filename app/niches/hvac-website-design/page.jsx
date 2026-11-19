@@ -147,8 +147,8 @@ export default function NichePage() {
           <p style={para}>Published pricing, no long-term contract, and you own the finished website:</p>
           <p style={para}>&bull; <strong>Starter ($700 total with split payments, or $600 paid in full):</strong> a custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a service request form and on-page SEO basics.</p>
           <p style={para}>&bull; <strong>Growth ($1,000):</strong> up to 7 pages, enough for separate cooling, heating and maintenance plan pages, plus structured data and Google Business Profile setup.</p>
-          <p style={para}>&bull; <strong>Care Plan ($150/month, optional):</strong> before each season we swap in your AC or heating offers, and we keep the site hosted, secure and monitored for search. Cancel anytime.</p>
-          <p style={para}>Every plan is listed on our <Link href="/pricing" style={link}>pricing page</Link>. To weigh an HVAC website from us against templates and larger agencies, see our <Link href="/blog/website-cost-for-home-service-businesses" style={link}>website cost breakdown</Link>.</p>
+          <p style={para}>&bull; <strong><Link href="/services/care-plan" style={link}>Care Plan</Link> ($150/month, optional):</strong> before each season we swap in your AC or heating offers, and we keep the site hosted, secure and monitored for search. Cancel anytime.</p>
+          <p style={para}>Every plan is listed on our <Link href="/pricing" style={link}>pricing page</Link>, and our <Link href="/services/web-design" style={link}>website design service</Link> page walks through the build process. To weigh an HVAC website from us against templates and larger agencies, see our <Link href="/blog/website-cost-for-home-service-businesses" style={link}>website cost breakdown</Link>.</p>
 
           {/* Mid-Content Conversion CTA Box */}
           <div data-mid-cta="true" style={{

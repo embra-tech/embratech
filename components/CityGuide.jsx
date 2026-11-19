@@ -74,6 +74,14 @@ export default function CityGuide({ guide }) {
         <Link href="/services/web-design" className="link-chip">Website design &rarr;</Link>
         <Link href="/pricing" className="link-chip">Pricing &rarr;</Link>
       </div>
+      {/* 2026-11-20: links to the free guides Google has discovered but not yet crawled (Search Console). */}
+      <p style={{ margin: '18px 0 10px' }}>Free guides for {guide.name} business owners:</p>
+      <div className="link-chips" style={{ justifyContent: 'flex-start', marginTop: 0 }}>
+        <Link href="/blog/local-seo-guide-for-service-businesses" className="link-chip">Local SEO guide</Link>
+        <Link href="/blog/website-cost-for-home-service-businesses" className="link-chip">What a contractor website costs</Link>
+        <Link href="/blog/website-roi-calculator" className="link-chip">Website ROI calculator</Link>
+        <Link href="/blog/why-pagespeed-matters" className="link-chip">Why page speed matters</Link>
+      </div>
 
       <h2 style={h2}>Areas We Work With Around {guide.name}</h2>
       {/* 2026-11-08: decorative orbit of nearby areas around the city (the real list follows as text). */}
