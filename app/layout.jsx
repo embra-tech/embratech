@@ -131,7 +131,8 @@ export default function RootLayout({ children }) {
     // 2026-10-20: font variable classes moved from <body> to <html>. globals.css reads them in :root
     // (--ff-display / --ff-body), which can't see variables defined on <body>, so every page was
     // rendering in the browser's default serif (Times New Roman) instead of Figtree/Inter.
-    <html lang="en" data-theme="obsidian" className={`${figtree.variable} ${inter.variable} ${jetbrains.variable}`}>
+    // 2026-11-18: lang "en-US" (was "en"): the site is written for US businesses in American English.
+    <html lang="en-US" data-theme="obsidian" className={`${figtree.variable} ${inter.variable} ${jetbrains.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: `
           if (/googlebot|google-inspectiontool|lighthouse|chrome-lighthouse|pagespeed|headlesschrome|ptst|gtmetrix/i.test(navigator.userAgent) || window.location.search.includes('psi=1') || window.location.search.includes('pagespeed')) {

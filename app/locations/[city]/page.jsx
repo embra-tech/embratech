@@ -26,7 +26,14 @@ export function generateMetadata({ params }) {
   if (!loc) return {};
   const guide = CITY_GUIDES[params.city];
   const url = `${siteConfig.siteUrl}/locations/${params.city}`;
-  const desc = guide ? guide.metaDescription : `Websites and local SEO for service businesses in ${loc.name}: plumbers, HVAC, roofers, tree services, handymen and auto body shops. Free homepage sample in 24 hours.`;
+  // 2026-11-18: search descriptions written for click-through, leading with what people in each city search for (Search Console, US).
+  const CITY_DESC = {
+    chicago: 'HVAC SEO and websites for Chicago heating, cooling and home service companies. Free local SEO review; websites from $700, or $600 paid in full.',
+    'los-angeles': 'Websites and local SEO for Los Angeles HVAC, plumbing, auto body and home service businesses. Websites from $700; free homepage sample in 24 hours.',
+    brooklyn: 'HVAC SEO, websites and local SEO for Brooklyn service businesses. Free local SEO review; websites from $700, or $600 paid in full.',
+    alaska: 'Websites and SEO for Alaska HVAC, auto body, plumbing and home service businesses, from Anchorage to Fairbanks. Websites from $700; free homepage sample.',
+  };
+  const desc = guide ? guide.metaDescription : (CITY_DESC[params.city] || `Websites and local SEO for service businesses in ${loc.name}: plumbers, HVAC, roofers, tree services, handymen and auto body shops. Free homepage sample in 24 hours.`);
   
   // 2026-10-13 Phase 1: "| Embra" removed here; the root layout's title template adds it.
   // 2026-10-13 (option B): "Agency in X" implied an office there; now "for X businesses".

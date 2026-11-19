@@ -2272,6 +2272,16 @@ html[data-bot] .page-shell .toc-box, html[data-bot] .page-shell .orbit, html[dat
 .client-quote blockquote { margin: 0 0 10px; color: #e5edff; font-size: 1rem; line-height: 1.6; }
 .client-quote figcaption { font-size: .86rem; color: var(--muted-inv); }
 .client-quote figcaption a { color: var(--primary-bright); }
+
+/* 2026-11-18 performance: on phones, cards keep their translucent glass background but drop the live
+   backdrop blur (the costliest effect while scrolling on low-end phones; up to 18 blurred elements per page).
+   The small hero chips keep their blur. Desktop is unchanged. */
+@media (max-width: 768px) {
+  .page-shell .feature-card, .page-shell .factor-card, .page-shell .step-card, .page-shell .faq-item,
+  .page-shell .niche-card, .page-shell .service-detail, .page-shell .season-table-wrap, .page-shell .page-head-offer {
+    -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+  }
+}
 .cs-col-body p { font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.75); margin-bottom: 20px; }
 
 .cs-approach-header { margin-bottom: 40px; }

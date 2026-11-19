@@ -936,6 +936,47 @@ Search Console (28 days to Nov 9): 575 queries, 5,670 impressions, average posit
 
 **Measure:** the same 93 queries around Nov 25 and Dec 9 (positions settle 2–4 weeks after recrawl).
 
+**Published and verified (2026-11-13, commit 9034c39):**
+- All 9 changes live (each page 200, one H1); sitemap has 9 entries dated 2026-11-11.
+- Search Console: recrawl requested for 9 pages (HVAC guide, auto body, roofing, HVAC, plumber, LA, Spokane, auto body guide, Anchorage; all already indexed). The 10th request, /services/local-seo, now shows "URL is on Google" for the first time. Sitemap resubmitted (Success, 47, read Nov 13).
+- Date note: this round went live on Nov 13, but the sitemap says 2026-11-11. Harmless; align it in the next release.
+
+---
+
+## AJ. US analysis: impressions down, position up, no US clicks; CTR, US-signal and mobile fixes (2026-11-18, owner requested)
+
+**Search Console, US only, week vs week:**
+
+| US | Nov 3–9 | Nov 10–16 |
+|---|---|---|
+| Impressions | 2,613 | 1,662 |
+| Avg position | 47.3 | 36.0 |
+| Page-1 impressions | 81 (23 queries) | 192 (30 queries), +137% |
+| Positions 11–20 | 372 | 294 |
+| Positions 51+ | 1,460 | 582 |
+| HVAC web design | 1,522 imp at 59.2 | 851 imp at 47.0 |
+| Everything else | avg 30.7 | avg 24.4 |
+
+- All countries: 2,970 → 1,920 impressions; position 47.2 → 35.7; 2 clicks (Pakistan, Sweden), 0 US.
+- Conclusion: the impression drop is almost entirely page-6+ appearances (-878); page-1 appearances more than doubled.
+- Near-page-1 push results (US, Nov 10–16): auto body shops website design agency 55→1.3; seo company for hvac repair in chicago 43→9.9; air conditioning seo 57.6→7.1; ac company seo 11.4→6.7; airway heights seo 14.8→6.8; air conditioning repair seo 13→7.4; seo for air conditioning 15.1→9.6; plumbing web design los angeles 17.8→9.4.
+- Why 0 US clicks: about 190 page-1 impressions a week across ~30 searches at positions 6–10 (expected roughly 2–5 clicks a week); agency-type searches are also often tracked by rank-checking tools (impressions, no clicks); listings were generic.
+- Authority (Ahrefs DR): embratechnologies.org 30 vs Scorpion 84, Hibu 79, a smaller HVAC agency 44. This explains HVAC web design at ~47.
+- Performance:
+  - PageSpeed mobile (Anchorage) 98: LCP 1.5s, TBT 0, CLS 0. Note: the middleware serves Lighthouse the bot-proxy page, so this is flattering; no real-user (CrUX) data yet.
+  - Real-browser check: TTFB 111ms, load 1.6s, JS 399KB gz (React 54KB, GSAP+ScrollTrigger ~46KB); Three.js is not loaded on inner pages; hero AVIF downloaded by 1.5s; 18 elements with backdrop blur. A 9.8s LCP reading in a background tab was discarded as an artifact.
+
+**Changes:**
+- Click-through descriptions that echo the US searches and give a reason to click:
+  - HVAC guide excerpt (also the Google description): "Step-by-step SEO for AC and heating companies…"
+  - `app/locations/[city]/page.jsx` CITY_DESC for chicago (HVAC SEO first), los-angeles, brooklyn (HVAC SEO) and alaska
+  - `lib/cityGuides.js`: Spokane ("Airway Heights and Spokane SEO…") and Juneau ("Juneau SEO…") meta descriptions
+- `app/layout.jsx`: `<html lang="en-US">` (was "en").
+- `app/globals.css`: on phones (≤768px), cards drop the live backdrop blur (translucent background kept); hero chips keep it; desktop unchanged.
+- `app/sitemap.js`: Brooklyn, LA, Chicago, Alaska, Juneau and Spokane → 2026-11-18; Anchorage and the 4 industry pages → 2026-11-13 (their real go-live date; was 2026-11-11). The HVAC guide's dateModified is 2026-11-18.
+
+**Next:** recheck around Nov 25 (US clicks and CTR on the page-1 searches); the authority work (links, reviews) remains the ceiling for the biggest HVAC searches.
+
 ---
 
 ## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)
