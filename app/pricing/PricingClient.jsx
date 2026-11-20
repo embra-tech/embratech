@@ -7,6 +7,7 @@ import PageHeader from '../../components/PageHeader';
 import Faq from '../../components/Faq';
 import Cta from '../../components/Cta';
 import Breadcrumb from '../../components/Breadcrumb';
+import ProjectMarquee from '../../components/ProjectMarquee';
 
 /* ─── Pricing tiers ─────────────────────────────────────── */
 const TIERS = [
@@ -298,6 +299,8 @@ export default function PricingClient() {
       </section>
 
       <Faq variant="pricing" />
+      {/* 2026-11-20: drifting strip of real client projects, each linking to its case study */}
+      <ProjectMarquee />
       <Cta variant="pricing" />
     </div>
   );

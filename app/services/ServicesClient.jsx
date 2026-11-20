@@ -11,6 +11,7 @@ import siteConfig from '../../lib/site-config';
 import Link from 'next/link';
 import StockPhoto from '../../components/StockPhoto';
 import GrowthBars from '../../components/GrowthBars';
+import ProjectMarquee from '../../components/ProjectMarquee';
 
 const SERVICES = [
   {
@@ -222,6 +223,9 @@ export default function ServicesClient() {
           <a href="/portfolio" className="btn-secondary" style={{ padding: '12px 24px', borderRadius: '8px', border: '1px solid var(--line-dark)' }}>See Our Work &rarr;</a>
         </div>
       </section>
+
+      {/* 2026-11-20: drifting strip of real client websites, each linking to its case study */}
+      <ProjectMarquee />
 
       <Cta variant="services" />
     </div>

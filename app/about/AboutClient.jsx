@@ -6,6 +6,7 @@ import { gsap, ScrollTrigger } from '../../lib/gsap';
 import PageHeader from '../../components/PageHeader';
 import Cta from '../../components/Cta';
 import Breadcrumb from '../../components/Breadcrumb';
+import ProjectMarquee from '../../components/ProjectMarquee';
 import siteConfig from '../../lib/site-config';
 
 const STATS = [
@@ -138,6 +139,9 @@ export default function AboutClient() {
           </div>
         </div>
       </section>
+
+      {/* 2026-11-20: drifting strip of real client projects, each linking to its case study */}
+      <ProjectMarquee />
 
             <Cta variant="about" />
     </div>

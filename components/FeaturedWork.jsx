@@ -1,7 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import SiteCard from './SiteCard';
+import ProjectCorridor from './ProjectCorridor';
+
+// 2026-11-20: shown as a 3D project corridor (components/ProjectCorridor.jsx): swipe on phones, scroll on desktop.
+const TOTAL_PROJECTS = 9; // case studies in /portfolio
 
 const FEATURED_SITES = [
   {
@@ -78,7 +81,7 @@ const FEATURED_SITES = [
 
 export default function FeaturedWork() {
   return (
-    <section className="featured-work-section" id="work" style={{ padding: '80px 0' }}>
+    <section className="featured-work-section" id="work" style={{ padding: '80px 0 0' }}>
       <div className="wrap">
         <div className="section-head reveal-up" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '20px', marginBottom: '48px' }}>
           <div>
@@ -88,18 +91,14 @@ export default function FeaturedWork() {
           </div>
           <Link href="/portfolio" className="btn-flip btn-ghost btn-small">
             <span className="btn-flip-inner">
-              <span className="btn-flip-state">View All 6 Projects &rarr;</span>
-              <span className="btn-flip-state" aria-hidden="true">View All 6 Projects &rarr;</span>
+              <span className="btn-flip-state">View All {TOTAL_PROJECTS} Projects &rarr;</span>
+              <span className="btn-flip-state" aria-hidden="true">View All {TOTAL_PROJECTS} Projects &rarr;</span>
             </span>
           </Link>
         </div>
 
-        <div className="work-grid">
-          {FEATURED_SITES.map((site, i) => (
-            <SiteCard key={site.domain} site={site} index={i} />
-          ))}
-        </div>
       </div>
+      <ProjectCorridor sites={FEATURED_SITES} totalProjects={TOTAL_PROJECTS} />
     </section>
   );
 }

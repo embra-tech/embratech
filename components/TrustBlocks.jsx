@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RollingNumber from './RollingNumber';
 
 // 2026-11-08: proven local SEO result for pages that sell SEO (city guides, Chicago).
 // Real numbers from the client's own Google Search Console; the client's city, dates and source are always shown.
@@ -10,8 +11,8 @@ export function SeoResultCard({ place }) {
         <h3>Pick N Drop Laundry, a Los Angeles service business</h3>
       </div>
       <div className="seo-result-stats">
-        <div className="seo-stat"><span className="seo-stat-from">9</span><span className="seo-stat-arrow" aria-hidden="true">&rarr;</span><span className="seo-stat-to">21</span><span className="seo-stat-label">clicks from Google</span></div>
-        <div className="seo-stat"><span className="seo-stat-from">471</span><span className="seo-stat-arrow" aria-hidden="true">&rarr;</span><span className="seo-stat-to">1,399</span><span className="seo-stat-label">times shown in Google</span></div>
+        <div className="seo-stat"><span className="seo-stat-from">9</span><span className="seo-stat-arrow" aria-hidden="true">&rarr;</span><RollingNumber className="seo-stat-to" value="21" /><span className="seo-stat-label">clicks from Google</span></div>
+        <div className="seo-stat"><span className="seo-stat-from">471</span><span className="seo-stat-arrow" aria-hidden="true">&rarr;</span><RollingNumber className="seo-stat-to" value="1,399" /><span className="seo-stat-label">times shown in Google</span></div>
       </div>
       <p className="seo-result-note">
         Google Search Console, March 15&ndash;April 13 vs September 11&ndash;October 10, 2026. Results depend on the market{place ? `, and ${place} has its own competition` : ''}; we explain what we see in your free review.

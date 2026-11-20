@@ -17,7 +17,8 @@ export default function HomePage() {
   const ref = useRef(null);
   useReveal(ref);
   return (
-    <div ref={ref}>
+    // 2026-11-20: .home-shell scopes the shared premium effects (globals.css, components/PremiumFx.jsx) to the homepage.
+    <div ref={ref} className="home-shell">
       <Hero />
       <Showcase />
       <FeaturedWork />

@@ -1011,9 +1011,97 @@ Search Console (28 days to Nov 9): 575 queries, 5,670 impressions, average posit
 
 **Indexing requests:**
 - Nov 20: /blog/website-cost-for-home-service-businesses requested; quota then exceeded (yesterday's 10 had not reset).
-- Queue for the next days (10/day): /portfolio/sky-high-tree, /services/web-design, /services/care-plan, /portfolio/tuxford-collision, /portfolio/pnd-laundry, /portfolio/vvasquez-handyman, /portfolio/alaska-fast-fix, /portfolio/bestbreaks, /niches, /blog/local-seo-guide-for-service-businesses, /blog/website-roi-calculator, /blog/why-pagespeed-matters, then /terms. Already requested Nov 19: jcp-lawn-service, royal-home-health-care, alaska-handyman-services.
+- Nov 20 (after push bbbf48f): /portfolio/sky-high-tree → "URL is not on Google | INDEXING REQUESTED". /services/web-design → "QUOTA EXCEEDED" (not requested). Sitemap resubmitted: Success, 47 URLs, read Nov 20.
+- Next batch scheduled for Nov 20, 10:30 IST (automatic follow-up in this session).
+- Queue for the next days (10/day): /services/web-design, /services/care-plan, /portfolio/tuxford-collision, /portfolio/pnd-laundry, /portfolio/vvasquez-handyman, /portfolio/alaska-fast-fix, /portfolio/bestbreaks, /niches, /blog/local-seo-guide-for-service-businesses, /blog/website-roi-calculator, /blog/why-pagespeed-matters, then /terms. Already requested Nov 19: jcp-lawn-service, royal-home-health-care, alaska-handyman-services.
+
+**Live check of push bbbf48f (Nov 20):** all 9 case studies show "Project at a Glance" and "Related Pages" (2 cards each, one H1, about 416–624 words); the Fairbanks guide shows 4/4 guide chips; HVAC and auto body pages link /services/care-plan and /services/web-design; live sitemap has 47 URLs, 17 dated 2026-11-20.
 
 **Expectation (honest):** "Discovered" pages typically get crawled within days to a few weeks after requests and fresh links. Ranking growth on competitive US terms depends mostly on authority (links, reviews); positions for city and niche terms are already moving onto page 1.
+
+---
+
+## AL. Premium effects round (2026-11-20, owner requested)
+
+Request: analyse vault.hyperiux.com/effects and add every effect that can make the site look premium, without hurting Google rankings or the homepage.
+
+**Analysis:** all 185 effects in 11 categories (sitemap, every effect page, and live demos captured at several scroll positions). Free effects are MPL 2.0 and need the Hyperiux CLI; Pro effects are proprietary. Nothing was copied: every effect below is original code (CSS plus one small script), with no new libraries.
+
+**Added (inner pages only; everything is scoped to `.page-shell`, so the homepage is untouched):**
+
+| Effect (Hyperiux name it is based on) | Where | How |
+|---|---|---|
+| Light pass on buttons (Shiny Button) | every primary button on inner pages; repeats every few seconds on the closing CTA button | CSS |
+| Orbiting light ring (Spotlight Button) | closing CTA button, featured pricing button | CSS `@property` angle |
+| Magnetic buttons (Animated Button) | all buttons on inner pages, mouse/trackpad only | `components/PremiumFx.jsx` |
+| Cursor spotlight on cards + border that lights up under the cursor | service, feature, factor, step, industry, FAQ, pricing, portfolio, related-page and glance cards | PremiumFx + CSS |
+| Border beam | hero offer strip, SEO result card, featured price card, contact form | CSS |
+| 3D tilt with moving glare | project screenshots, portfolio previews | PremiumFx + CSS |
+| Headings fill from dim to bright on scroll (Text Fill Animation) | section headings (h2) | CSS scroll timeline |
+| Photo mask reveal + parallax drift (Parallax Image) | stock photos; screenshots wipe in | CSS scroll timeline |
+| Progress line across "How We Work" steps (Timeline) | city pages | CSS scroll timeline |
+| Smooth FAQ open/close + answer rises in (Elastic Accordion) | all FAQ dropdowns | CSS (`::details-content`) |
+| Rolling digits (Number Counter) | SEO result numbers (21, 1,399) | `components/RollingNumber.jsx` |
+| Dotted grid that lights up around the cursor (Dotted Grid / Dotted Trail) | inner page heroes | CSS + PremiumFx |
+| Aurora light + cursor glow (Aurora Ribbon) | closing CTA section | CSS |
+| Route sweep (light version of the page transitions) | thin light line on navigation between inner pages | PremiumFx |
+| Card underneath shrinks/dims as the next slides over (Stacking Cards) | phone stacked-card sections | CSS named view timelines |
+| Drifting, draggable strip of real client projects (Draggable Marquee) | /services, /services/web-design, /pricing, /niches, /about ("Recent Client Projects"; 9 links to case studies) | `components/ProjectMarquee.jsx` |
+
+**Bug found and fixed:** `html, body { overflow-x: hidden }` made `<body>` its own (non-scrolling) scroll box. Every scroll-linked animation (`animation-timeline: view()`) and every `position: sticky` measured against it, so the Nov 8 phone stacking cards never stuck and the scroll animations never played. `body` now uses `overflow-x: clip` (same look, nothing scrolls sideways; old browsers keep `hidden`). The homepage uses neither feature and is pixel-identical below its 3D hero.
+
+**Not added, and why:** WebGL/Three.js effects and shader backgrounds (150 KB+ of script and GPU load: PageSpeed and phone battery); loaders (delay content, hurt LCP and leads); full page transitions (fragile with the Next.js App Router and delay content; the route sweep is the light version); cursor trails and custom cursors (distracting, accessibility); navigation overhauls (the menu is shared with the homepage); scroll hijacking and pinned horizontal sections (bad on phones); glitch, scramble and typing text (tech-startup look, readability); 3D carousels (hide content behind interaction).
+
+**SEO and speed safeguards:** text, headings and links are never hidden or changed; nothing animates for bots (`html[data-bot]`) or reduced-motion visitors; cursor effects only on mouse/trackpad devices; transform/opacity/paint-only motion; one passive pointer listener throttled to one update per frame.
+
+**Checks (local production build):** 47/47 pages static. Page JS +~2 kB on the 5 pages with the strip, +0.5 kB on city pages, unchanged elsewhere. All 47 pages compared with the live site as Googlebot: titles, descriptions, canonicals, robots, H1s and JSON-LD unchanged; the only addition is the "Recent Client Projects" H2 with 9 case-study links on 5 pages (+118 words). Googlebot render: headings normal, plain numbers. No horizontal overflow on any page (desktop and phone); CLS at most 0.008; no console errors. Reduced motion: all motion off. Strip: drifts, pauses on hover, drags without opening a link, a click opens the case study, keyboard focus pauses it.
+
+**Sitemap:** /services, /niches, /services/web-design, /pricing and /about dated 2026-11-20 (new section).
+
+**Files:** new `components/PremiumFx.jsx`, `components/ProjectMarquee.jsx`, `components/RollingNumber.jsx`; edited `app/layout.jsx`, `app/globals.css` (body `clip` fix near the top, effects section at the end), `components/TrustBlocks.jsx`, `app/services/ServicesClient.jsx`, `app/services/web-design/page.jsx`, `app/pricing/PricingClient.jsx`, `app/niches/page.jsx`, `app/about/AboutClient.jsx`, `app/sitemap.js`.
+
+**Undo:** remove `<PremiumFx />` from `app/layout.jsx`, the `<ProjectMarquee />` lines, the two `RollingNumber` uses in TrustBlocks, and the "2026-11-20 PREMIUM EFFECTS ROUND" CSS section. Keep the body `clip` fix.
+
+---
+
+## AM. Premium effects, second round (2026-11-20, owner requested)
+
+Request: apply the effects to the homepage too; present the homepage portfolio the way vault.hyperiux.com/templates presents its templates (the 3D "corridor"); add Rotation Slider, Depth Shift Transition, Chess Grid Transition and any other carousel, transition, scroll and text effects that fit; mobile first.
+
+**Reference checked:** the Hyperiux templates corridor is a WebGL scene (sticky full-screen canvas, scroll moves the camera past tilted browser frames, glass info panel with 01-09 progress, "click to step inside"). The three named effects were captured frame by frame from their demos. Everything below is original code with no new libraries (CSS 3D, no WebGL).
+
+**Added:**
+
+| Effect | Where | Phones | Wide screens with a mouse |
+|---|---|---|---|
+| Project corridor (templates page style) | homepage "Live Client Websites We've Built" (`components/ProjectCorridor.jsx`, used by `FeaturedWork.jsx`) | swipe carousel with a 3D coverflow turn; details of the centred project below; arrows; 01-05 progress | scroll-driven 3D corridor: frames float in space with a perspective grid floor and stars, the camera walks past them as you scroll, pointer parallax, glass panel with progress, details and buttons; clicking a frame opens the case study |
+| Chess grid page transition | every in-site link click (`components/PageTransition.jsx`) | 4 tile columns | 6-8 tile columns |
+| Depth shift page transition | opening a case study (/portfolio/...) from anywhere | same | same |
+| Rotation (cards swing into place in 3D while scrolling) | homepage process and "why" cards, portfolio cards | one after another | alternating sides |
+| First-round effects on the homepage | light pass + magnetic buttons, orbiting ring + aurora on the closing CTA, cursor spotlight on process/why/FAQ cards and the corridor panel, heading fill, travelling light around the interactive preview box | touch-safe ones only | all |
+
+The homepage hero (headline, 3D orb, buttons) is unchanged, so the first screen loads exactly as before. "View All 6 Projects" (out of date) now reads "View All 9 Projects".
+
+**SEO and speed safeguards:** transitions run only on clicks inside the site, never on the first page load (what Google and PageSpeed measure), and never for bots, reduced-motion visitors, new-tab clicks, hash links or other sites; links stay real links. Every corridor project (name, trade, city, description, results, case-study and live-site links) is in the server HTML; without JavaScript, for bots and for reduced-motion visitors all projects are listed in full. The 3D corridor only switches on for wide screens with a mouse after the page has loaded, below the first screen.
+
+**Checks (local production build):** 47/47 pages static; homepage JS 12.5 kB to 13.8 kB, other pages unchanged by this round. All 47 pages compared with the live site as Googlebot: titles, descriptions, canonicals, robots, H1s, H2s and JSON-LD unchanged; homepage text +91 words (corridor details and the "see all projects" card). All pages on desktop, phone and as Googlebot: no horizontal overflow, CLS at most 0.008, no console errors. Transitions tested: grid on desktop and phone, depth into a case study, back button (instant), reduced motion (instant navigation), a drag on the project strip does not open a page. Corridor tested on desktop (3D) and phone (coverflow), keyboard focus reaches every frame. Also confirmed running on the owner's localhost:3000 in 3D mode.
+
+**Files:** new `components/PageTransition.jsx`, `components/ProjectCorridor.jsx`; edited `components/FeaturedWork.jsx`, `components/HomePage.jsx` (`home-shell` class), `components/PremiumFx.jsx` (homepage scope, more cards), `components/ProjectMarquee.jsx` (drag flag for transitions), `app/layout.jsx`, `app/globals.css` ("PREMIUM EFFECTS, SECOND ROUND" section at the end).
+
+**Undo:** remove `<PageTransition />` from `app/layout.jsx`; in `FeaturedWork.jsx` render the old `work-grid` of `SiteCard`s instead of `ProjectCorridor`; delete the "SECOND ROUND" CSS section and the `home-shell` class.
+
+**Owner feedback, same day (2026-11-20):**
+- "The chess transition looks awful": **removed.** `PageTransition.jsx` now only handles links to a case study (`/portfolio/<project>`), which keep the depth shift. Every other link navigates instantly, as before this round. The tile CSS (section 15) is deleted.
+- Phone portfolio "kills UX" (the arrows sat at the bottom of the section, so on arrival you saw neither the project photo nor a way to browse): **rebuilt as a scroll story.** On phones the site preview pins under the header (just below it when the header is showing) with a thin progress line; the project details scroll underneath, and the preview crossfades to the project whose details you are reading. The card being read is highlighted, the others are dimmed. No arrows, no sideways swiping. On tablets (768px+, or desktop with reduced motion) the same idea runs side by side: pinned preview on the left, details on the right. The desktop 3D corridor is unchanged.
+- Checks: build OK, no lint warnings; all 47 pages vs the live site as Googlebot unchanged (homepage still +91 words from the corridor details); audit of 48 paths on desktop, phone and as Googlebot: 0 problems; phone (375x667, 390x844) and tablet (820x1180) scroll tests switch 01 to 05 in order with no horizontal overflow and no errors; plain links show no overlay, case-study links still get the depth shift.
+- Files: `components/PageTransition.jsx`, `components/ProjectCorridor.jsx`, `app/globals.css` (sections 15 and 16), `app/layout.jsx` (comment).
+
+**Owner request, same day: phone animation in the style of lorenzolottici.it/en/work (mobile).**
+- Reference studied on an emulated iPhone: a WebGL scene where the project panels ride a figure-8 loop in depth (front panel in focus, neighbours to the sides, the rest behind), a swipe drags the loop and it eases onto the nearest panel, a light pulse on arrival, a planet rim and floating cubes behind, a "— SWIPE" hint. Original code here, CSS 3D and about 150 lines of script, no WebGL, no new library.
+- Phones and tablets now get this "ring": our five site previews (four client sites plus the "see all 9 projects" card) on the same kind of figure-8 path; swipe left or right (the loop follows the finger, a flick carries on), tap a card behind to bring it forward, tap the front card to open its case study; a light passes over the card when it settles; planet rim, drifting cubes and a floor grid that slides with the swipe; "01 / 05" counter; the front project's details (trade, city, tags, description, PageSpeed link, case study and live-site buttons) sit right under it. Up/down swipes still scroll the page. Keyboard: Tab to a card brings it to the front, arrow keys step through.
+- Reduced-motion visitors keep the pinned list from the previous entry (no animation). Desktop with a mouse keeps the 3D corridor. Bots and no-JS keep the full list. `PageTransition.jsx`: a card marked `data-no-transition` (any card not in front) is ignored, so tapping it only brings it forward.
+- Checks: build OK, no lint warnings; SEO compare of all 47 pages unchanged (homepage +91 words, as before); audit of 48 paths on desktop, phone and as Googlebot: 0 problems; swipe, flick, tap-behind, tap-front, vertical scroll tested on iPhone 13, Galaxy S8 and iPad Mini sizes, no overflow, no errors; desktop still 3D, reduced motion gets the pinned list; case-study links still get the depth shift.
+- Files: `components/ProjectCorridor.jsx`, `components/PageTransition.jsx`, `app/globals.css` (section 16: `is-pin` and `is-ring` rules).
 
 ---
 

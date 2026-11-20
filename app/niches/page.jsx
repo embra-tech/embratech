@@ -3,6 +3,7 @@ import Breadcrumb from '../../components/Breadcrumb';
 import PageHeader from '../../components/PageHeader';
 import Cta from '../../components/Cta';
 import StockPhoto from '../../components/StockPhoto';
+import ProjectMarquee from '../../components/ProjectMarquee';
 import siteConfig from '../../lib/site-config';
 
 // 2026-10-26: a trade photo on each card (Pexels, served from our site; hidden until downloaded).
@@ -242,6 +243,9 @@ export default function NichesPage() {
           </div>
         </div>
       </section>
+
+      {/* 2026-11-20: real client websites across trades, each linking to its case study */}
+      <ProjectMarquee title="Client Projects Across the Trades" />
 
       <Cta variant="services" />
     </div>

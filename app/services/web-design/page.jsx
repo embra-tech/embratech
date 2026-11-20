@@ -5,6 +5,7 @@ import Cta from '../../../components/Cta';
 import JsonLd from '../../../components/JsonLd';
 import ProjectShot from '../../../components/ProjectShot';
 import FaqAccordion from '../../../components/FaqAccordion';
+import ProjectMarquee from '../../../components/ProjectMarquee';
 import siteConfig from '../../../lib/site-config';
 
 // 2026-10-25: copy rewritten (owner gave full permission) to read as specific, current and plain:
@@ -227,6 +228,9 @@ export default function WebDesignPage() {
           <FaqAccordion items={DESIGN_FAQS} />
         </div>
       </section>
+
+      {/* 2026-11-20: drifting strip of real client websites, each linking to its case study */}
+      <ProjectMarquee />
 
       <Cta variant="default" />
     </div>

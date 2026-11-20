@@ -7,6 +7,8 @@ import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 import CookieBanner from '../components/CookieBanner';
 import DurationTracker from '../components/DurationTracker';
+import PremiumFx from '../components/PremiumFx';
+import PageTransition from '../components/PageTransition';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import siteConfig from '../lib/site-config';
@@ -152,6 +154,10 @@ export default function RootLayout({ children }) {
             <WhatsAppButton />
             <CookieBanner />
             <DurationTracker />
+            {/* 2026-11-20: pointer effects and route sweep on inner pages and the homepage (nothing for bots) */}
+            <PremiumFx />
+            {/* 2026-11-20: depth-shift transition when opening a case study (never on first load; chess grid removed) */}
+            <PageTransition />
             <JsonLd data={globalSchema} />
             <Analytics />
             <SpeedInsights />

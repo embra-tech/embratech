@@ -51,6 +51,11 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 html, body { max-width: 100%; overflow-x: hidden; }
+/* 2026-11-20: body uses `clip` instead of `hidden` (same look: nothing can scroll sideways). `hidden` made <body>
+   its own scroll box, so position: sticky and every scroll-linked animation (animation-timeline: view()) measured
+   against a box that never scrolls: the phone stacking cards never stuck and the scroll animations never played.
+   The homepage uses neither, so it is unaffected. Old browsers without `clip` keep `hidden`. */
+@supports (overflow-x: clip) { body { overflow-x: clip; } }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
@@ -2356,5 +2361,523 @@ html[data-bot] .page-shell .toc-box, html[data-bot] .page-shell .orbit, html[dat
     display: inline-flex;
     align-items: center;
   }
+}
+
+/* ================================================================
+   2026-11-20 PREMIUM EFFECTS ROUND (inner pages only, everything scoped to .page-shell)
+   Ideas from the Hyperiux Vault catalogue, rebuilt as original CSS + one small script
+   (components/PremiumFx.jsx). No new libraries.
+   SEO and speed rules kept: text and links are never hidden or changed; no layout shift;
+   motion is transform/opacity/paint only; nothing animates for bots (html[data-bot]) or
+   reduced-motion visitors; cursor effects only on mouse/trackpad devices.
+   ================================================================ */
+@property --fx-angle { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+@keyframes fxOrbit { to { --fx-angle: 360deg; } }
+
+/* 1. Route sweep: a thin light line across the top when moving between inner pages */
+.route-sweep { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 1003; pointer-events: none; opacity: 0; transform: scaleX(0); transform-origin: 0 50%; background: linear-gradient(90deg, rgba(96,165,250,0), #60a5fa 30%, #c7d2fe 62%, rgba(96,165,250,0)); box-shadow: 0 0 12px rgba(96,165,250,0.7); }
+.route-sweep.is-on { animation: fxSweep .9s cubic-bezier(.16,1,.3,1) both; }
+@keyframes fxSweep { 0% { opacity: 1; transform: scaleX(0); } 65% { opacity: 1; transform: scaleX(1); } 100% { opacity: 0; transform: scaleX(1); } }
+
+/* 2. Buttons: glossy light pass on hover (Shiny Button), orbiting light on the main CTAs (Spotlight Button),
+      magnetic pull toward the cursor (set by PremiumFx through --tx/--ty, using `translate` so hover lifts still work) */
+.page-shell .btn-primary::before {
+  content: ''; position: absolute; top: 0; bottom: 0; left: -60%; width: 45%; pointer-events: none; opacity: 0;
+  background: linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,0.42), rgba(255,255,255,0));
+  transform: skewX(-20deg);
+}
+@keyframes fxSheen { 0% { opacity: 1; transform: skewX(-20deg) translateX(0); } 100% { opacity: 1; transform: skewX(-20deg) translateX(460%); } }
+@keyframes fxSheenLoop { 0% { opacity: 1; transform: skewX(-20deg) translateX(0); } 24%, 100% { opacity: 1; transform: skewX(-20deg) translateX(460%); } }
+.page-shell .final-cta .btn-primary::after, .page-shell .pricing-featured .pricing-btn::after {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px; pointer-events: none;
+  background: conic-gradient(from var(--fx-angle), rgba(255,255,255,0) 0 58%, rgba(255,255,255,0.95) 76%, rgba(191,219,254,0.7) 84%, rgba(255,255,255,0) 94%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:not([data-bot]) .page-shell .btn-primary:hover::before { animation: fxSheen .85s cubic-bezier(.4,0,.2,1); }
+  html:not([data-bot]) .page-shell .final-cta .btn-primary::before { animation: fxSheenLoop 4.8s cubic-bezier(.4,0,.2,1) 1.5s infinite; }
+  html:not([data-bot]) .page-shell .final-cta .btn-primary::after, html:not([data-bot]) .page-shell .pricing-featured .pricing-btn::after { animation: fxOrbit 3.2s linear infinite; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  html:not([data-bot]) .page-shell .btn-flip {
+    translate: var(--tx, 0px) var(--ty, 0px);
+    transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease, background .25s ease, translate .45s cubic-bezier(.16,1,.3,1);
+  }
+}
+
+/* 3. Cursor spotlight on cards: a soft light follows the pointer inside the card, and the card's gradient
+      border brightens where the pointer is (PremiumFx sets --mx/--my and .fx-lit) */
+@media (hover: hover) and (pointer: fine) {
+  html:not([data-bot]) .page-shell :is(.how-step, .cs-related-card, .cs-glance > div, .seo-result, .stat-card) { position: relative; }
+  html:not([data-bot]) .page-shell :is(.feature-card, .factor-card, .step-card, .niche-card, .service-detail, .faq-item, .how-step, .cs-related-card, .pricing-card, .work-card, .seo-result, .stat-card, .cs-glance > div) { isolation: isolate; }
+  html:not([data-bot]) .page-shell :is(.feature-card, .factor-card, .step-card, .niche-card, .service-detail, .faq-item, .how-step, .cs-related-card, .pricing-card, .work-card, .seo-result, .stat-card, .cs-glance > div)::before {
+    content: ''; position: absolute; inset: 0; width: auto; height: auto; z-index: -1; pointer-events: none; border-radius: inherit;
+    background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 50%), rgba(96,165,250,0.18), rgba(96,165,250,0.05) 45%, rgba(96,165,250,0) 70%);
+    opacity: 0; transition: opacity .35s ease;
+  }
+  html:not([data-bot]) .page-shell .fx-lit::before { opacity: 1; }
+  html:not([data-bot]) .page-shell :is(.feature-card, .factor-card, .step-card, .niche-card, .service-detail, .faq-item).fx-lit::after {
+    background:
+      radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%), rgba(191,219,254,0.95), rgba(96,165,250,0.35) 45%, rgba(96,165,250,0) 75%),
+      linear-gradient(135deg, rgba(96,165,250,0.55), rgba(37,99,235,0.06) 38%, rgba(37,99,235,0.06) 62%, rgba(96,165,250,0.45));
+    opacity: 1;
+  }
+}
+
+/* 4. Border beam: a light travels around the border of the key boxes (offer strip, SEO result,
+      featured price, contact form) */
+.page-shell :is(.seo-result, .contact-form) { position: relative; }
+.page-shell .seo-result { --fx-bw: 1px; }
+.page-shell :is(.pricing-featured, .contact-form) { --fx-bw: 2px; }
+.page-shell .page-head-offer { --fx-bw: 1px; }
+.page-shell :is(.seo-result, .pricing-featured, .contact-form, .page-head-offer)::after {
+  content: ''; position: absolute; inset: calc(var(--fx-bw, 1px) * -1); border-radius: inherit; padding: calc(var(--fx-bw, 1px) + 0.5px); pointer-events: none;
+  background:
+    conic-gradient(from var(--fx-angle), rgba(96,165,250,0) 0 60%, rgba(191,219,254,0.95) 77%, rgba(96,165,250,0.55) 85%, rgba(96,165,250,0) 93%),
+    linear-gradient(135deg, rgba(96,165,250,0.45), rgba(37,99,235,0.08) 40%, rgba(37,99,235,0.08) 60%, rgba(96,165,250,0.35));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:not([data-bot]) .page-shell :is(.seo-result, .pricing-featured, .contact-form, .page-head-offer)::after { animation: fxOrbit 6s linear infinite; }
+}
+
+/* 5. Project screenshots tilt toward the cursor with a moving glare (PremiumFx sets --rx/--ry/--lx/--ly) */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  html:not([data-bot]) .page-shell .site-preview { position: relative; }
+  html:not([data-bot]) .page-shell .fx-tilt {
+    animation: none !important;
+    transform: perspective(1100px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    transition: transform .5s cubic-bezier(.16,1,.3,1), box-shadow .4s ease;
+    box-shadow: 0 34px 70px -34px rgba(0,0,0,0.95), 0 0 0 1px rgba(96,165,250,0.28);
+  }
+  html:not([data-bot]) .page-shell .fx-tilt::before {
+    content: ''; position: absolute; inset: 0; z-index: 3; pointer-events: none; border-radius: inherit;
+    background: radial-gradient(520px circle at var(--lx, 50%) var(--ly, 0%), rgba(255,255,255,0.17), rgba(255,255,255,0.04) 35%, rgba(255,255,255,0) 60%);
+    opacity: 1; transition: opacity .45s ease;
+  }
+  html:not([data-bot]) .page-shell .fx-tilt-out::before { opacity: 0; }
+}
+
+/* 6. Section headings fill from dim to bright as they scroll into view (Text Fill Animation).
+      Real text, Chrome/Edge/Safari only; other browsers show the normal white heading. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    html:not([data-bot]) .page-shell h2:not(.final-cta h2):not(.cs-col-label):not(.sr-only) {
+      background-image: linear-gradient(100deg, #fff 0 44%, rgba(203,213,225,0.34) 56% 100%);
+      background-size: 230% 100%; background-repeat: no-repeat; background-position: 100% 0;
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+      animation: slideInText linear both, fxFill linear both;
+      animation-timeline: view(), view();
+      animation-range: entry 0% entry 40%, entry 15% cover 42%;
+    }
+  }
+}
+@keyframes fxFill { to { background-position: 0 0; } }
+
+/* 7. Photos open from a soft frame and drift slightly while scrolling (Parallax Image); project screenshots
+      wipe in from the top. Lazy images below the fold only, never the hero image. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    html:not([data-bot]) .page-shell .stock-photo img {
+      animation: fxPhotoIn linear both, fxPhotoDrift linear both;
+      animation-timeline: view(), view();
+      animation-range: entry 0% cover 38%, cover 0% cover 100%;
+    }
+    html:not([data-bot]) .page-shell .project-shot img {
+      animation: fxShotIn linear both; animation-timeline: view(); animation-range: entry 5% cover 35%;
+    }
+  }
+}
+@keyframes fxPhotoIn { from { clip-path: inset(9% 9% 9% 9% round 18px); scale: 1.24; } to { clip-path: inset(0 0 0 0 round 0); scale: 1.12; } }
+@keyframes fxPhotoDrift { from { translate: 0 -4%; } to { translate: 0 4%; } }
+@keyframes fxShotIn { from { clip-path: inset(0 0 24% 0); scale: 1.05; } to { clip-path: inset(0 0 0 0); scale: 1; } }
+
+/* 8. "How we work" steps: a progress line fills across each step in turn as the section scrolls (Timeline) */
+.page-shell .how-step { position: relative; }
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    html:not([data-bot]) .page-shell .how-step::after {
+      content: ''; position: absolute; left: 16px; right: 16px; top: -1px; height: 2px; border-radius: 2px; pointer-events: none;
+      background: linear-gradient(90deg, #60a5fa, #a5b4fc, #60a5fa); box-shadow: 0 0 10px rgba(96,165,250,0.6);
+      transform: scaleX(0); transform-origin: 0 50%;
+      animation: fxStepLine linear both; animation-timeline: view(); animation-range: entry 70% cover 40%;
+    }
+    html:not([data-bot]) .page-shell .how-step:nth-child(2)::after { animation-range: entry 90% cover 46%; }
+    html:not([data-bot]) .page-shell .how-step:nth-child(3)::after { animation-range: cover 12% cover 52%; }
+    html:not([data-bot]) .page-shell .how-step:nth-child(4)::after { animation-range: cover 18% cover 58%; }
+  }
+}
+@keyframes fxStepLine { to { transform: scaleX(1); } }
+
+/* 9. FAQ answers open and close smoothly and the text rises in (Elastic Accordion). Native <details> stays:
+      every answer is still in the HTML. Browsers without support open instantly, as before. */
+@supports (interpolate-size: allow-keywords) {
+  @media (prefers-reduced-motion: no-preference) {
+    html:not([data-bot]) .page-shell .faq-accordion { interpolate-size: allow-keywords; }
+    html:not([data-bot]) .page-shell .faq-item::details-content { block-size: 0; overflow-y: clip; transition: block-size .5s cubic-bezier(.16,1,.3,1), content-visibility .5s allow-discrete; }
+    html:not([data-bot]) .page-shell .faq-item[open]::details-content { block-size: auto; }
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:not([data-bot]) .page-shell .faq-item[open] .faq-answer p { animation: fxFaqIn .55s cubic-bezier(.16,1,.3,1) both; }
+}
+@keyframes fxFaqIn { from { opacity: 0; translate: 0 10px; } }
+
+/* 10. Rolling digits on the SEO result numbers (components/RollingNumber.jsx) */
+.roll { display: inline-flex; align-items: flex-end; }
+.seo-stat-to.roll { background: none; -webkit-text-fill-color: currentColor; color: #7fe0b8; }
+.roll-track { display: inline-flex; align-items: flex-end; line-height: 1; }
+.roll-digit { display: inline-block; height: 1em; overflow: hidden; line-height: 1; }
+.roll-strip { display: flex; flex-direction: column; transform: translateY(0); transition: transform 1.35s cubic-bezier(.16,1,.3,1); transition-delay: calc(var(--n, 1) * 90ms); }
+.roll-strip > span { display: block; height: 1em; line-height: 1; text-align: center; }
+.roll.is-run .roll-strip { transform: translateY(calc(var(--d, 0) * -1em)); }
+
+/* 11. Inner page heroes: a quiet dotted grid that lights up around the cursor (Dotted Grid / Dotted Trail) */
+html:not([data-bot]) .page-shell .page-hero::after {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background-image: radial-gradient(circle at center, rgba(191,219,254,0.55) 1px, rgba(191,219,254,0) 1.6px);
+  background-size: 24px 24px; background-position: center top;
+  -webkit-mask-image: radial-gradient(ellipse 65% 75% at 50% 22%, rgba(0,0,0,0.5), rgba(0,0,0,0) 78%);
+  mask-image: radial-gradient(ellipse 65% 75% at 50% 22%, rgba(0,0,0,0.5), rgba(0,0,0,0) 78%);
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  html:not([data-bot]) .page-shell .page-hero.fx-glow::after {
+    -webkit-mask-image: radial-gradient(circle 210px at var(--gx, 50%) var(--gy, 50%), #000, rgba(0,0,0,0) 75%), radial-gradient(ellipse 65% 75% at 50% 22%, rgba(0,0,0,0.5), rgba(0,0,0,0) 78%);
+    mask-image: radial-gradient(circle 210px at var(--gx, 50%) var(--gy, 50%), #000, rgba(0,0,0,0) 75%), radial-gradient(ellipse 65% 75% at 50% 22%, rgba(0,0,0,0.5), rgba(0,0,0,0) 78%);
+  }
+}
+
+/* 12. Closing call-to-action: slow aurora light behind the box and a glow that follows the cursor (Aurora Ribbon) */
+html:not([data-bot]) .page-shell .final-cta { isolation: isolate; }
+html:not([data-bot]) .page-shell .final-cta::before {
+  content: ''; position: absolute; inset: -35% -15%; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(38% 32% at 28% 42%, rgba(37,99,235,0.30), rgba(37,99,235,0) 70%),
+    radial-gradient(34% 30% at 72% 58%, rgba(99,102,241,0.22), rgba(99,102,241,0) 70%),
+    radial-gradient(30% 26% at 52% 30%, rgba(34,211,238,0.12), rgba(34,211,238,0) 70%);
+}
+html:not([data-bot]) .page-shell .final-cta::after {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(440px circle at var(--gx, 50%) var(--gy, 50%), rgba(96,165,250,0.16), rgba(96,165,250,0) 65%);
+  opacity: 0; transition: opacity .5s ease;
+}
+html:not([data-bot]) .page-shell .final-cta.fx-glow::after { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  html:not([data-bot]) .page-shell .final-cta::before { animation: fxAurora 16s ease-in-out infinite alternate; }
+}
+@keyframes fxAurora { from { transform: translate3d(-5%, -3%, 0) rotate(-4deg) scale(1); } to { transform: translate3d(5%, 4%, 0) rotate(6deg) scale(1.15); } }
+
+/* 13. Phones: in the stacked card sections, the card underneath shrinks and dims as the next one slides over it
+       (Stacking Cards). Uses the next card's own scroll position; no script. */
+@media (max-width: 768px) and (prefers-reduced-motion: no-preference) {
+  @supports (timeline-scope: --fx) {
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) { timeline-scope: --fxs2, --fxs3, --fxs4, --fxs5, --fxs6, --fxs7; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > :nth-child(2) { view-timeline-name: --fxs2; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > :nth-child(3) { view-timeline-name: --fxs3; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > :nth-child(4) { view-timeline-name: --fxs4; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > :nth-child(5) { view-timeline-name: --fxs5; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > :nth-child(6) { view-timeline-name: --fxs6; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > :nth-child(7) { view-timeline-name: --fxs7; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > * { transform-origin: 50% 0; animation-name: fxStackBack; animation-timing-function: linear; animation-fill-mode: both; animation-range: entry 0% entry 100%; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > :nth-child(1) { animation-timeline: --fxs2; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > :nth-child(2) { animation-timeline: --fxs3; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > :nth-child(3) { animation-timeline: --fxs4; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > :nth-child(4) { animation-timeline: --fxs5; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > :nth-child(5) { animation-timeline: --fxs6; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > :nth-child(6) { animation-timeline: --fxs7; }
+    html:not([data-bot]) .page-shell :is(.stack-cards, .cs-approach-grid) > :last-child { animation: none; }
+  }
+}
+@keyframes fxStackBack { to { scale: .93; filter: brightness(.62); } }
+
+/* 14. Drifting, draggable strip of real client projects (components/ProjectMarquee.jsx, Draggable Marquee) */
+.proj-marquee { padding: 72px 0 56px; border-top: 1px solid var(--line-dark); overflow: hidden; }
+.pm-viewport { overflow-x: auto; scroll-snap-type: x proximity; padding: 10px 0 20px; -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0), #000 6%, #000 94%, rgba(0,0,0,0)); mask-image: linear-gradient(90deg, rgba(0,0,0,0), #000 6%, #000 94%, rgba(0,0,0,0)); }
+.pm-viewport.is-live { overflow: hidden; scroll-snap-type: none; touch-action: pan-y; cursor: grab; }
+.pm-viewport.is-dragging { cursor: grabbing; }
+.pm-track { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0 24px; width: max-content; }
+.pm-viewport.is-live .pm-track { will-change: transform; }
+.pm-item { flex: 0 0 auto; scroll-snap-align: start; }
+.pm-card { display: flex; flex-direction: column; width: 300px; border-radius: 16px; overflow: hidden; text-decoration: none; background: linear-gradient(150deg, rgba(255,255,255,0.07), rgba(255,255,255,0.015)); border: 1px solid rgba(96,165,250,0.22); transition: transform .35s cubic-bezier(.16,1,.3,1), border-color .3s ease, box-shadow .35s ease; -webkit-user-select: none; user-select: none; -webkit-user-drag: none; }
+.pm-card:hover, .pm-card:focus-visible { transform: translateY(-6px); border-color: rgba(96,165,250,0.65); box-shadow: 0 24px 50px -26px rgba(37,99,235,0.75); }
+.pm-shot { display: block; aspect-ratio: 16 / 10; overflow: hidden; background: #0b0f16; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.pm-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform .6s cubic-bezier(.16,1,.3,1); pointer-events: none; }
+.pm-card:hover .pm-shot img { transform: scale(1.05); }
+.pm-meta { display: flex; flex-direction: column; gap: 3px; padding: 14px 16px 16px; }
+.pm-meta strong { color: #fff; font-size: 1rem; font-weight: 600; }
+.pm-meta span { color: var(--muted-inv); font-size: .84rem; }
+.pm-hint { text-align: center; margin: 10px 0 0; padding: 0 24px; font-size: .9rem; color: var(--muted-inv); }
+.pm-hint a { color: var(--primary-bright); }
+.pm-hint-drag { display: none; }
+.pm-viewport.is-live + .pm-hint .pm-hint-drag { display: inline; }
+@media (max-width: 640px) { .proj-marquee { padding: 56px 0 40px; } .pm-card { width: 240px; } .pm-track { gap: 14px; } }
+@media (prefers-reduced-motion: reduce) { .pm-card, .pm-shot img { transition: none; } }
+
+/* ================================================================
+   2026-11-20 PREMIUM EFFECTS, SECOND ROUND (owner request: homepage too, a Hyperiux-style project corridor,
+   page transitions, rotation, more scroll and text motion). Mobile first: the base rules are the phone
+   layout; wide screens with a mouse get the 3D enhancements. Same SEO and speed rules as the first round.
+   ================================================================ */
+
+/* 15. Page transition (components/PageTransition.jsx): depth shift when opening a case study. Only on clicks
+       inside the site, never on the first page load. (The chess-grid transition was removed at the owner's request.) */
+.pt-overlay { position: fixed; inset: 0; z-index: 2000; pointer-events: all; }
+.pt-depth { background: radial-gradient(60% 60% at 50% 50%, rgba(37,99,235,0.12), rgba(37,99,235,0) 70%); }
+#main.pt-depth-out { animation: ptDepthOut .42s cubic-bezier(.55,0,.25,1) both; }
+#main.pt-depth-in { animation: ptDepthIn .56s cubic-bezier(.16,1,.3,1) both; }
+@keyframes ptDepthOut { to { transform: perspective(1600px) translate3d(-5%, 2%, -160px) rotateY(10deg) scale(.86); opacity: 0; } }
+@keyframes ptDepthIn { from { transform: perspective(1600px) translate3d(7%, 3%, -120px) rotateY(-12deg) scale(.9); opacity: 0; } }
+
+/* 16. Homepage project corridor (components/ProjectCorridor.jsx, Hyperiux templates "corridor").
+       Base (no JavaScript, bots): a swipeable row of site previews with every project's details listed.
+       Phones and tablets: the preview stays pinned while the details scroll under it (rules below).
+       Wide screens with a mouse: the scroll-driven 3D corridor. */
+.corridor { position: relative; }
+.corridor-stage { position: relative; padding: 4px 0 64px; overflow: hidden; }
+.corridor-floor { position: absolute; left: -50%; right: -50%; bottom: 0; height: 62%; pointer-events: none; overflow: hidden; transform: perspective(520px) rotateX(70deg); transform-origin: 50% 100%; -webkit-mask-image: linear-gradient(to top, #000 10%, rgba(0,0,0,0) 85%); mask-image: linear-gradient(to top, #000 10%, rgba(0,0,0,0) 85%); }
+.corridor-floor-grid {
+  position: absolute; left: 0; right: 0; top: -120px; bottom: 0; transform: translateY(var(--floor, 0px));
+  background-image:
+    linear-gradient(90deg, rgba(96,165,250,0) calc(50% - 242px), rgba(96,165,250,0.9) calc(50% - 240px), rgba(96,165,250,0) calc(50% - 238px)),
+    linear-gradient(90deg, rgba(96,165,250,0) calc(50% + 238px), rgba(96,165,250,0.9) calc(50% + 240px), rgba(96,165,250,0) calc(50% + 242px)),
+    linear-gradient(rgba(96,165,250,0.14) 1px, rgba(96,165,250,0) 1px),
+    linear-gradient(90deg, rgba(96,165,250,0.14) 1px, rgba(96,165,250,0) 1px);
+  background-size: 100% 100%, 100% 100%, 120px 120px, 120px 120px;
+  background-position: 0 0, 0 0, center top, center top;
+}
+.corridor-cam { position: relative; z-index: 1; }
+.corridor-track { position: relative; display: flex; gap: 14px; margin: 0; padding: 18px 9vw 26px; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.corridor-track::-webkit-scrollbar { display: none; }
+.corridor-item { flex: 0 0 74vw; max-width: 560px; scroll-snap-align: center; }
+.corridor-track { padding-inline: 13vw; }
+@media (min-width: 640px) { .corridor-item { flex-basis: 58vw; } .corridor-track { padding-inline: 21vw; } }
+.corridor-frame { display: block; border-radius: 14px; overflow: hidden; background: #0b0f16; border: 1px solid rgba(96,165,250,0.28); box-shadow: 0 30px 60px -30px rgba(0,0,0,0.9); text-decoration: none; -webkit-user-drag: none; }
+.corridor-bar { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.07); }
+.corridor-dots { display: inline-flex; gap: 5px; }
+.corridor-dots i { width: 7px; height: 7px; border-radius: 50%; background: #ff5f56; }
+.corridor-dots i:nth-child(2) { background: #ffbd2e; }
+.corridor-dots i:nth-child(3) { background: #27c93f; }
+.corridor-url { flex: 1; min-width: 0; text-align: center; font-family: var(--ff-mono); font-size: 10.5px; color: var(--muted-inv); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.corridor-frame picture { display: block; aspect-ratio: 16 / 10; overflow: hidden; }
+.corridor-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.corridor-door-face { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; aspect-ratio: 16 / 10; background: radial-gradient(80% 90% at 50% 0%, rgba(59,130,246,0.35), rgba(59,130,246,0) 70%), linear-gradient(160deg, #0d1a36, #060a14); }
+.corridor-door-count { font-family: var(--ff-display); font-size: clamp(56px, 14vw, 120px); font-weight: 800; line-height: 1; background: linear-gradient(135deg, #fff, #93c5fd); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.corridor-door-text { color: #dbeafe; font-size: 1rem; }
+.corridor-door-cta { margin-top: 10px; color: #93c5fd; font-weight: 600; font-size: .95rem; }
+.corridor-label { display: none; }
+.corridor-hud { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; padding: 0 24px; }
+.corridor-progress { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; font-family: var(--ff-mono); font-size: 12px; color: var(--muted-inv); }
+.corridor-progress-bar { flex: 1; height: 2px; border-radius: 2px; overflow: hidden; background: rgba(255,255,255,0.12); }
+.corridor-progress-bar span { display: block; height: 100%; transform-origin: 0 50%; background: linear-gradient(90deg, #3b82f6, #93c5fd); transition: transform .5s cubic-bezier(.16,1,.3,1); }
+.corridor-infos { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+.corridor-info { padding: 20px; border-radius: 18px; background: linear-gradient(150deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02)); border: 1px solid rgba(96,165,250,0.25); }
+.corridor:is(.is-3d, .is-ring) .corridor-infos { display: grid; }
+.corridor:is(.is-3d, .is-ring) .corridor-info { grid-area: 1 / 1; opacity: 0; visibility: hidden; transform: translateY(10px); transition: opacity .3s ease, transform .45s cubic-bezier(.16,1,.3,1), visibility 0s linear .3s; }
+.corridor:is(.is-3d, .is-ring) .corridor-info[data-active] { opacity: 1; visibility: visible; transform: none; transition: opacity .4s ease .05s, transform .5s cubic-bezier(.16,1,.3,1) .05s, visibility 0s; }
+.ci-meta { margin: 0 0 6px; font-size: .76rem; letter-spacing: .06em; text-transform: uppercase; color: #93c5fd; }
+.corridor-info h3 { margin: 0 0 10px; color: #fff; font-size: clamp(1.4rem, 5.5vw, 2rem); line-height: 1.15; }
+.ci-tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0 0 12px; padding: 0; }
+.ci-tags li { padding: 3px 10px; border-radius: 999px; font-size: .74rem; color: #dbeafe; border: 1px solid rgba(96,165,250,0.35); background: rgba(37,99,235,0.1); }
+.ci-desc { margin: 0 0 12px; color: var(--muted-inv); font-size: .95rem; line-height: 1.6; }
+.ci-results { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0 0 14px; padding: 0; }
+.ci-results li { padding: 4px 10px; border-radius: 8px; font-size: .78rem; color: #86efac; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25); }
+.ci-results a { color: inherit; }
+.ci-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.ci-visit { color: #93c5fd; font-weight: 600; font-size: .92rem; }
+.corridor-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; }
+.corridor-controls button { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(96,165,250,0.4); background: rgba(12,19,34,0.7); color: #fff; font-size: 18px; cursor: pointer; transition: background .2s ease, border-color .2s ease, opacity .2s ease; }
+.corridor-controls button:hover:not(:disabled) { background: rgba(37,99,235,0.35); border-color: #93c5fd; }
+.corridor-controls button:disabled { opacity: .35; cursor: default; }
+.corridor-hint { margin: 0; text-align: center; font-size: .82rem; color: var(--muted-inv); }
+html:not([data-bot]) .corridor:is(.is-3d, .is-ring) .corridor-info[data-active] h3 { animation: ciFlip .6s cubic-bezier(.16,1,.3,1) both; transform-origin: 50% 100%; }
+@keyframes ciFlip { from { transform: perspective(600px) rotateX(-70deg); opacity: 0; } }
+
+/* Reduced motion (class is-pin): the site preview pins under the header, the project details scroll beneath it, and
+   the preview switches to the project being read, with no animation. (This was the phone layout for a few hours;
+   phones and tablets now get the ring below.) --cor-top follows the header, which hides while scrolling down. */
+.corridor.is-pin { --cor-top: 0px; }
+body:has(.site-header:not(.nav-hidden)) .corridor.is-pin { --cor-top: var(--cor-hdr, 76px); }
+.corridor.is-pin .corridor-stage { padding: 0 0 56px; overflow: clip; }
+.corridor.is-pin .corridor-floor { display: none; }
+.corridor.is-pin .corridor-cam { position: sticky; top: var(--cor-top); z-index: 3; padding: 10px 16px 18px; background: var(--bg-dark); transition: top .35s cubic-bezier(.16,1,.3,1); }
+.corridor.is-pin .corridor-cam::after { content: ''; position: absolute; left: 0; right: 0; top: 100%; height: 26px; pointer-events: none; background: linear-gradient(var(--bg-dark), rgba(4,7,13,0)); }
+.corridor.is-pin .corridor-cam::before { content: ''; position: absolute; left: 16px; right: 16px; bottom: 6px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, #3b82f6, #93c5fd) 0 0 / calc((var(--a, 0) + 1) / var(--n, 1) * 100%) 100% no-repeat, rgba(255,255,255,0.1); transition: background-size .5s cubic-bezier(.16,1,.3,1); }
+.corridor.is-pin .corridor-track { display: grid; width: min(100%, 560px, calc(30vh * 1.6)); width: min(100%, 560px, calc(30svh * 1.6)); margin: 0 auto; padding: 0; overflow: visible; scroll-snap-type: none; }
+.corridor.is-pin .corridor-item { grid-area: 1 / 1; max-width: none; min-width: 0; opacity: 0; visibility: hidden; transform: translateY(14px) scale(.97); transition: opacity .3s ease, transform .5s cubic-bezier(.16,1,.3,1), visibility 0s linear .3s; }
+.corridor.is-pin .corridor-item[data-state="past"] { transform: translateY(-14px) scale(.97); }
+.corridor.is-pin .corridor-item[data-state="active"] { opacity: 1; visibility: visible; transform: none; transition: opacity .4s ease .06s, transform .55s cubic-bezier(.16,1,.3,1) .06s, visibility 0s; }
+.corridor.is-pin .corridor-frame { border-color: rgba(147,197,253,0.45); box-shadow: 0 24px 50px -30px rgba(0,0,0,0.9), 0 0 44px -18px rgba(59,130,246,0.55); }
+.corridor.is-pin .corridor-label { display: block; margin: 9px 0 0; color: #e2e8f0; font-size: .95rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.corridor.is-pin .corridor-label span { margin-right: 6px; color: #60a5fa; font-family: var(--ff-mono); font-weight: 400; }
+.corridor.is-pin .corridor-hud { padding: 22px 16px 0; }
+.corridor.is-pin .corridor-progress { display: none; }
+.corridor.is-pin .corridor-infos { gap: 16px; }
+.corridor.is-pin .corridor-info { opacity: .5; transition: opacity .4s ease, border-color .4s ease, box-shadow .4s ease, background .4s ease; }
+.corridor.is-pin .corridor-info[data-active] { opacity: 1; border-color: rgba(147,197,253,0.6); background: linear-gradient(150deg, rgba(59,130,246,0.14), rgba(255,255,255,0.03)); box-shadow: 0 24px 60px -32px rgba(59,130,246,0.6); }
+@media (min-width: 768px) {
+  .corridor.is-pin .corridor-stage { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 40px; align-items: start; max-width: 1240px; margin: 0 auto; padding: 0 32px 80px; }
+  .corridor.is-pin .corridor-cam { top: calc(var(--cor-top) + 28px); padding: 0 0 20px; background: none; }
+  .corridor.is-pin .corridor-cam::after { display: none; }
+  .corridor.is-pin .corridor-cam::before { left: 0; right: 0; bottom: 0; }
+  .corridor.is-pin .corridor-track { width: 100%; max-width: none; }
+  .corridor.is-pin .corridor-hud { max-width: none; margin: 0; padding: 0; }
+  .corridor.is-pin .corridor-infos { gap: 24px; padding: 4vh 0 12vh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .corridor.is-pin :is(.corridor-cam, .corridor-item, .corridor-item[data-state="active"], .corridor-info) { transition: none; }
+  .corridor.is-pin .corridor-cam::before { transition: none; }
+}
+
+/* Phones and tablets (class is-ring; owner request, after lorenzolottici.it/en/work on a phone): the site previews
+   ride a figure-8 loop in depth (positions set by the component). Front card in focus, neighbours peek in from the
+   sides, the rest swing round behind, darker. Swipe to drag the loop; it settles with a light pass over the card.
+   Behind: a planet rim lit from one side, drifting cubes, and the floor grid sliding with the swipe. */
+.corridor.is-ring { --ring-h: clamp(340px, 108vw, 600px); }
+.corridor.is-ring .corridor-stage { padding: var(--ring-h) 0 48px; overflow: clip; touch-action: pan-y; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+.corridor.is-ring :is(.corridor-sky, .corridor-cam) { position: absolute; left: 0; right: 0; top: 0; height: var(--ring-h); }
+.corridor.is-ring .corridor-sky { overflow: hidden; pointer-events: none;
+  background: radial-gradient(1px 1px at 12% 14%, rgba(191,219,254,0.7), transparent 60%), radial-gradient(1px 1px at 72% 9%, rgba(191,219,254,0.55), transparent 60%), radial-gradient(1.5px 1.5px at 88% 30%, rgba(191,219,254,0.6), transparent 60%), radial-gradient(1px 1px at 30% 26%, rgba(191,219,254,0.45), transparent 60%), radial-gradient(1px 1px at 55% 5%, rgba(191,219,254,0.5), transparent 60%), radial-gradient(1.5px 1.5px at 6% 40%, rgba(191,219,254,0.5), transparent 60%), radial-gradient(1px 1px at 94% 52%, rgba(191,219,254,0.45), transparent 60%), radial-gradient(1px 1px at 42% 12%, rgba(191,219,254,0.4), transparent 60%); }
+.corridor-orb { position: absolute; left: 50%; top: 11%; width: 128%; aspect-ratio: 1; margin-left: -64%; border-radius: 50%; background: radial-gradient(circle at 50% 30%, #070b14, #020409 62%); box-shadow: 0 -20px 90px -30px rgba(59,130,246,0.45); }
+.corridor-orb::before, .corridor-orb::after { content: ''; position: absolute; border-radius: 50%; rotate: calc(var(--rp, 0) * -16deg);
+  background: conic-gradient(from 300deg, rgba(219,234,254,0) 0deg, rgba(239,246,255,0.95) 55deg, rgba(147,197,253,0.55) 105deg, rgba(147,197,253,0) 160deg, rgba(147,197,253,0) 300deg, rgba(147,197,253,0.25) 335deg, rgba(219,234,254,0) 360deg); }
+.corridor-orb::before { inset: -1.5px; -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2.5px), #000 calc(100% - 1px)); mask: radial-gradient(farthest-side, transparent calc(100% - 2.5px), #000 calc(100% - 1px)); }
+.corridor-orb::after { inset: -16px; opacity: .55; filter: blur(10px); -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 26px), #000 calc(100% - 15px), transparent 100%); mask: radial-gradient(farthest-side, transparent calc(100% - 26px), #000 calc(100% - 15px), transparent 100%); }
+.corridor-sky i { position: absolute; width: var(--cs, 10px); height: var(--cs, 10px); border-radius: 2px; background: linear-gradient(135deg, #1f2a3d, #070b14 70%); border: 1px solid rgba(148,163,184,0.22); box-shadow: inset 1px 1px 0 rgba(219,234,254,0.18); translate: calc(var(--rp, 0) * var(--cp, -10px)) 0; animation: ringCube var(--ct, 16s) linear infinite; }
+.corridor-sky i:nth-of-type(1) { left: 14%; top: 22%; --cs: 9px; --cp: -14px; --ct: 18s; }
+.corridor-sky i:nth-of-type(2) { left: 78%; top: 15%; --cs: 13px; --cp: -22px; --ct: 22s; animation-direction: reverse; }
+.corridor-sky i:nth-of-type(3) { left: 63%; top: 37%; --cs: 8px; --cp: -9px; --ct: 15s; }
+.corridor-sky i:nth-of-type(4) { left: 30%; top: 44%; --cs: 11px; --cp: -18px; --ct: 20s; animation-direction: reverse; }
+.corridor-sky i:nth-of-type(5) { left: 88%; top: 46%; --cs: 7px; --cp: -7px; --ct: 13s; }
+@keyframes ringCube { to { transform: rotate(360deg); } }
+.corridor.is-ring .corridor-floor { top: calc(var(--ring-h) * .5); bottom: auto; height: calc(var(--ring-h) * .5); transform: perspective(520px) rotateX(72deg); }
+.corridor.is-ring .corridor-floor-grid { transform: none; translate: var(--floor-x, 0px) 0;
+  background-image: linear-gradient(rgba(96,165,250,0.16) 1px, rgba(96,165,250,0) 1px), linear-gradient(90deg, rgba(96,165,250,0.16) 1px, rgba(96,165,250,0) 1px);
+  background-size: 120px 120px, 120px 120px; background-position: center top, center top; }
+.corridor.is-ring .corridor-cam { z-index: 2; }
+.corridor.is-ring .corridor-track { position: absolute; inset: 0; display: block; margin: 0; padding: 0; overflow: visible; scroll-snap-type: none; }
+.corridor.is-ring .corridor-item { position: absolute; left: 50%; top: 63%; width: var(--ring-w, 84vw); max-width: none; margin: 0 0 0 calc(var(--ring-w, 84vw) / -2); translate: 0 -50%; transform-origin: 50% 50%; will-change: transform; }
+.corridor.is-ring .corridor-frame { position: relative; border-color: rgba(147,197,253,0.3); box-shadow: 0 30px 60px -28px rgba(0,0,0,0.95); transition: border-color .4s ease, box-shadow .4s ease; animation: ringBob 6s ease-in-out infinite; animation-delay: calc(var(--i, 0) * -1.4s); }
+.corridor.is-ring .corridor-frame::before { content: ''; position: absolute; inset: 0; z-index: 2; border-radius: inherit; background: #02050b; opacity: var(--dim, 0); pointer-events: none; }
+.corridor.is-ring .corridor-item[data-state="active"] .corridor-frame { border-color: rgba(191,219,254,0.7); box-shadow: 0 30px 60px -28px rgba(0,0,0,0.95), 0 0 60px -16px rgba(59,130,246,0.7); }
+.corridor.is-ring .corridor-item::after { content: ''; position: absolute; left: 12%; right: 12%; bottom: -26px; height: 22px; border-radius: 50%; background: radial-gradient(closest-side, rgba(59,130,246,0.45), rgba(59,130,246,0)); opacity: calc(1 - var(--dim, 0) * 1.6); pointer-events: none; }
+.corridor.is-ring .corridor-item.is-pulse .corridor-frame::after { content: ''; position: absolute; inset: 0; z-index: 3; pointer-events: none; background: linear-gradient(105deg, rgba(219,234,254,0) 30%, rgba(219,234,254,0.3) 48%, rgba(255,255,255,0.42) 50%, rgba(219,234,254,0.3) 52%, rgba(219,234,254,0) 70%); transform: translateX(-110%); animation: ringPulse .95s cubic-bezier(.45,0,.2,1) forwards; }
+@keyframes ringPulse { to { transform: translateX(110%); } }
+@keyframes ringBob { 50% { transform: translateY(-5px); } }
+.corridor.is-ring .corridor-door-count { font-size: clamp(48px, 16vw, 96px); }
+.corridor-ringui { position: absolute; left: 16px; right: 16px; top: 14px; z-index: 3; display: flex; align-items: center; justify-content: space-between; pointer-events: none; font-family: var(--ff-mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: rgba(226,232,240,0.78); }
+.corridor-swipe { display: inline-flex; align-items: center; gap: 10px; transition: opacity .6s ease; animation: ringHint 2.6s ease-in-out infinite; }
+.corridor-swipe::before { content: ''; width: 18px; height: 1px; background: currentColor; }
+.corridor.ring-touched .corridor-swipe { opacity: 0; }
+@keyframes ringHint { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(6px); } }
+.corridor-count b { color: #fff; font-weight: 600; }
+.corridor.is-ring .corridor-hud { max-width: 640px; margin: 0 auto; padding: 0 16px; }
+.corridor.is-ring .corridor-progress { display: none; }
+@media (min-width: 768px) {
+  .corridor.is-ring { --ring-h: clamp(460px, 80vw, 680px); }
+  .corridor.is-ring .corridor-item { top: 61%; }
+}
+
+/* Wide screens with a mouse: the scroll-driven 3D corridor (class added by the component). */
+.corridor.is-3d { height: calc(100vh + (var(--n) - 1) * 62vh); }
+.corridor.is-3d .corridor-stage { position: sticky; top: 0; height: 100vh; padding: 0; overflow: hidden; perspective: 1000px; perspective-origin: 40% 42%;
+  background: radial-gradient(1px 1px at 12% 18%, rgba(191,219,254,0.7), transparent 60%), radial-gradient(1px 1px at 68% 12%, rgba(191,219,254,0.55), transparent 60%), radial-gradient(1.5px 1.5px at 84% 34%, rgba(191,219,254,0.6), transparent 60%), radial-gradient(1px 1px at 33% 30%, rgba(191,219,254,0.45), transparent 60%), radial-gradient(1px 1px at 52% 8%, rgba(191,219,254,0.5), transparent 60%), radial-gradient(1.5px 1.5px at 6% 46%, rgba(191,219,254,0.5), transparent 60%), radial-gradient(1px 1px at 92% 58%, rgba(191,219,254,0.45), transparent 60%), radial-gradient(70% 55% at 40% 40%, rgba(37,99,235,0.10), rgba(37,99,235,0) 70%); }
+.corridor.is-3d .corridor-floor { height: 55%; transform: perspective(700px) rotateX(74deg); }
+.corridor.is-3d .corridor-cam { position: absolute; inset: 0; transform-style: preserve-3d; transform: rotateY(calc(var(--mx, 0) * 6deg)) rotateX(calc(var(--my, 0) * -4deg)); }
+.corridor.is-3d .corridor-track { position: absolute; inset: 0; display: block; overflow: visible; padding: 0; transform-style: preserve-3d; transform: translateZ(calc(var(--p, 0) * (var(--n) - 1) * 1100px - 260px)); }
+.corridor.is-3d .corridor-item {
+  --t: calc(var(--p, 0) * (var(--n) - 1) - var(--i));
+  position: absolute; left: 36%; top: 44%; width: min(42vw, 700px); max-width: none; transform-style: preserve-3d;
+  transform: translate(-50%, -50%) translate3d(calc(var(--side) * 8vw), calc(var(--side) * 1.5vh), calc(var(--i) * -1100px)) rotateY(calc(var(--side) * -12deg));
+  opacity: clamp(0, min(calc(1 - var(--t) * 1.8), calc(3.4 + var(--t) * 1.2)), 1);
+}
+.corridor.is-3d .corridor-item[data-state="past"] { pointer-events: none; }
+.corridor.is-3d .corridor-frame { box-shadow: 0 60px 120px -40px rgba(0,0,0,0.95), 0 0 0 1px rgba(147,197,253,0.16); transition: box-shadow .4s ease, border-color .4s ease; }
+.corridor.is-3d .corridor-item[data-state="active"] .corridor-frame { border-color: rgba(147,197,253,0.6); box-shadow: 0 60px 120px -40px rgba(0,0,0,0.95), 0 0 70px -14px rgba(59,130,246,0.6); }
+.corridor.is-3d .corridor-frame:hover { border-color: #bfdbfe; }
+.corridor.is-3d .corridor-label { display: block; margin: 18px 0 0; text-align: center; color: #e2e8f0; font-size: 1.1rem; }
+.corridor.is-3d .corridor-label span { margin-right: 8px; color: #60a5fa; font-family: var(--ff-mono); }
+.corridor.is-3d .corridor-hud { position: absolute; right: 4vw; bottom: 6vh; width: min(430px, 34vw); max-width: none; margin: 0; padding: 20px 22px; border-radius: 20px; background: linear-gradient(150deg, rgba(15,23,42,0.74), rgba(8,12,24,0.62)); border: 1px solid rgba(96,165,250,0.28); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); box-shadow: 0 30px 70px -30px rgba(0,0,0,0.9); }
+.corridor.is-3d .corridor-info { padding: 0; background: none; border: 0; }
+
+/* 17. Cards swing into place in 3D as they scroll in (Rotation Slider idea): homepage process and "why" cards,
+       portfolio cards. Alternate cards come from opposite sides; on phones they swing in one after another. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    html:not([data-bot]) :is(.process-grid, .why-grid, .work-grid) { perspective: 1400px; }
+    html:not([data-bot]) :is(.process-card, .why-card, .work-card) { animation: fxSwingL linear both; animation-timeline: view(); animation-range: entry 0% cover 32%; transform-origin: 50% 100%; }
+    html:not([data-bot]) :is(.process-card, .why-card, .work-card):nth-child(even) { animation-name: fxSwingR; }
+  }
+}
+@keyframes fxSwingL { from { opacity: .15; rotate: 0.35 1 0 38deg; translate: -8% 30px; } to { opacity: 1; rotate: 0 1 0 0deg; translate: 0 0; } }
+@keyframes fxSwingR { from { opacity: .15; rotate: 0.35 -1 0 38deg; translate: 8% 30px; } to { opacity: 1; rotate: 0 1 0 0deg; translate: 0 0; } }
+
+/* 18. Homepage extras: travelling light around the interactive preview box */
+.home-shell .showcase-box::after {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px; pointer-events: none; z-index: 3;
+  background: conic-gradient(from var(--fx-angle), rgba(96,165,250,0) 0 62%, rgba(191,219,254,0.9) 78%, rgba(96,165,250,0.5) 86%, rgba(96,165,250,0) 94%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:not([data-bot]) .home-shell .showcase-box::after { animation: fxOrbit 7s linear infinite; }
+}
+
+/* 19. The first-round effects on the homepage too (owner request, second round): light pass and magnetic pull on
+       buttons, orbiting ring and aurora on the closing call to action, cursor spotlight on cards, heading fill. */
+.home-shell .btn-primary::before {
+  content: ''; position: absolute; top: 0; bottom: 0; left: -60%; width: 45%; pointer-events: none; opacity: 0;
+  background: linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,0.42), rgba(255,255,255,0));
+  transform: skewX(-20deg);
+}
+.home-shell .final-cta .btn-primary::after {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px; pointer-events: none;
+  background: conic-gradient(from var(--fx-angle), rgba(255,255,255,0) 0 58%, rgba(255,255,255,0.95) 76%, rgba(191,219,254,0.7) 84%, rgba(255,255,255,0) 94%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+}
+html:not([data-bot]) .home-shell .final-cta { isolation: isolate; }
+html:not([data-bot]) .home-shell .final-cta::before {
+  content: ''; position: absolute; inset: -35% -15%; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(38% 32% at 28% 42%, rgba(37,99,235,0.30), rgba(37,99,235,0) 70%),
+    radial-gradient(34% 30% at 72% 58%, rgba(99,102,241,0.22), rgba(99,102,241,0) 70%),
+    radial-gradient(30% 26% at 52% 30%, rgba(34,211,238,0.12), rgba(34,211,238,0) 70%);
+}
+html:not([data-bot]) .home-shell .final-cta::after {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(440px circle at var(--gx, 50%) var(--gy, 50%), rgba(96,165,250,0.16), rgba(96,165,250,0) 65%);
+  opacity: 0; transition: opacity .5s ease;
+}
+html:not([data-bot]) .home-shell .final-cta.fx-glow::after { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  html:not([data-bot]) .home-shell .btn-primary:hover::before { animation: fxSheen .85s cubic-bezier(.4,0,.2,1); }
+  html:not([data-bot]) .home-shell .final-cta .btn-primary::before { animation: fxSheenLoop 4.8s cubic-bezier(.4,0,.2,1) 1.5s infinite; }
+  html:not([data-bot]) .home-shell .final-cta .btn-primary::after { animation: fxOrbit 3.2s linear infinite; }
+  html:not([data-bot]) .home-shell .final-cta::before { animation: fxAurora 16s ease-in-out infinite alternate; }
+  @supports (animation-timeline: view()) {
+    html:not([data-bot]) .home-shell h2:not(.final-cta h2):not(.sr-only) {
+      background-image: linear-gradient(100deg, #fff 0 44%, rgba(203,213,225,0.34) 56% 100%);
+      background-size: 230% 100%; background-repeat: no-repeat; background-position: 100% 0;
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+      animation: slideInText linear both, fxFill linear both;
+      animation-timeline: view(), view();
+      animation-range: entry 0% entry 40%, entry 15% cover 42%;
+    }
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  html:not([data-bot]) .home-shell .btn-flip {
+    translate: var(--tx, 0px) var(--ty, 0px);
+    transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease, background .25s ease, translate .45s cubic-bezier(.16,1,.3,1);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  html:not([data-bot]) .home-shell :is(.why-card, .corridor-infos) { position: relative; }
+  html:not([data-bot]) .home-shell :is(.process-card, .why-card, .faq-item, .corridor-infos) { isolation: isolate; }
+  html:not([data-bot]) .home-shell :is(.process-card, .why-card, .faq-item, .corridor-infos)::before {
+    content: ''; position: absolute; inset: 0; width: auto; height: auto; z-index: -1; pointer-events: none; border-radius: inherit;
+    background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 50%), rgba(96,165,250,0.18), rgba(96,165,250,0.05) 45%, rgba(96,165,250,0) 70%);
+    opacity: 0; transition: opacity .35s ease;
+  }
+  html:not([data-bot]) .home-shell .fx-lit::before { opacity: 1; }
 }
 
