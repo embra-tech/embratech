@@ -1103,6 +1103,13 @@ The homepage hero (headline, 3D orb, buttons) is unchanged, so the first screen 
 - Checks: build OK, no lint warnings; SEO compare of all 47 pages unchanged (homepage +91 words, as before); audit of 48 paths on desktop, phone and as Googlebot: 0 problems; swipe, flick, tap-behind, tap-front, vertical scroll tested on iPhone 13, Galaxy S8 and iPad Mini sizes, no overflow, no errors; desktop still 3D, reduced motion gets the pinned list; case-study links still get the depth shift.
 - Files: `components/ProjectCorridor.jsx`, `components/PageTransition.jsx`, `app/globals.css` (section 16: `is-pin` and `is-ring` rules).
 
+**Owner request, same day: "the rotations can confuse visitors", use a card stack instead.**
+- The ring and the pinned list are removed. Phones, tablets and touch screens now get stacking cards: one card per project (site preview with its browser bar and "01 / 05" number, trade and city, name, short description, linked results, case study and live-site buttons) plus the "see all 9 projects" card. As you scroll, each card sticks a little lower than the one before and slides over it; the cards underneath shrink slightly, darken and tilt back, so the stack stays visible. Normal vertical scrolling only, no swiping, nothing to learn. The stack sits just below the header when the header is showing.
+- Tablets (768px and up) show each card in two columns: preview on the left, details on the right, with tags and every result shown.
+- Reduced-motion visitors, and screens too short for the stack to fit, get the same cards as a plain list. Desktop with a mouse keeps the 3D corridor. Bots and no-JS keep the full list. The `data-no-transition` opt-out in `PageTransition.jsx` stays (comment updated); case-study links still get the depth shift.
+- Checks: build OK, no lint warnings; SEO compare of all 47 pages unchanged (homepage word count the same as before this change); audit of 48 paths on desktop, phone and as Googlebot: 0 problems; scroll tests on iPhone 13, iPhone SE (320x568), Galaxy S8 and iPad Mini: all five cards stack in order, no horizontal overflow, no errors; reduced motion gets the plain list; desktop still 3D.
+- Files: `components/ProjectCorridor.jsx`, `components/PageTransition.jsx` (comment), `app/globals.css` (section 16: `is-stack` rules replace `is-pin` and `is-ring`).
+
 ---
 
 ## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)

@@ -2631,8 +2631,8 @@ html:not([data-bot]) .page-shell .final-cta.fx-glow::after { opacity: 1; }
 
 /* 16. Homepage project corridor (components/ProjectCorridor.jsx, Hyperiux templates "corridor").
        Base (no JavaScript, bots): a swipeable row of site previews with every project's details listed.
-       Phones and tablets: the preview stays pinned while the details scroll under it (rules below).
-       Wide screens with a mouse: the scroll-driven 3D corridor. */
+       Phones, tablets and touch screens: stacking cards (rules below, class is-stack).
+       Wide screens with a mouse: the scroll-driven 3D corridor (class is-3d). */
 .corridor { position: relative; }
 .corridor-stage { position: relative; padding: 4px 0 64px; overflow: hidden; }
 .corridor-floor { position: absolute; left: -50%; right: -50%; bottom: 0; height: 62%; pointer-events: none; overflow: hidden; transform: perspective(520px) rotateX(70deg); transform-origin: 50% 100%; -webkit-mask-image: linear-gradient(to top, #000 10%, rgba(0,0,0,0) 85%); mask-image: linear-gradient(to top, #000 10%, rgba(0,0,0,0) 85%); }
@@ -2672,9 +2672,9 @@ html:not([data-bot]) .page-shell .final-cta.fx-glow::after { opacity: 1; }
 .corridor-progress-bar span { display: block; height: 100%; transform-origin: 0 50%; background: linear-gradient(90deg, #3b82f6, #93c5fd); transition: transform .5s cubic-bezier(.16,1,.3,1); }
 .corridor-infos { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
 .corridor-info { padding: 20px; border-radius: 18px; background: linear-gradient(150deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02)); border: 1px solid rgba(96,165,250,0.25); }
-.corridor:is(.is-3d, .is-ring) .corridor-infos { display: grid; }
-.corridor:is(.is-3d, .is-ring) .corridor-info { grid-area: 1 / 1; opacity: 0; visibility: hidden; transform: translateY(10px); transition: opacity .3s ease, transform .45s cubic-bezier(.16,1,.3,1), visibility 0s linear .3s; }
-.corridor:is(.is-3d, .is-ring) .corridor-info[data-active] { opacity: 1; visibility: visible; transform: none; transition: opacity .4s ease .05s, transform .5s cubic-bezier(.16,1,.3,1) .05s, visibility 0s; }
+.corridor.is-3d .corridor-infos { display: grid; }
+.corridor.is-3d .corridor-info { grid-area: 1 / 1; opacity: 0; visibility: hidden; transform: translateY(10px); transition: opacity .3s ease, transform .45s cubic-bezier(.16,1,.3,1), visibility 0s linear .3s; }
+.corridor.is-3d .corridor-info[data-active] { opacity: 1; visibility: visible; transform: none; transition: opacity .4s ease .05s, transform .5s cubic-bezier(.16,1,.3,1) .05s, visibility 0s; }
 .ci-meta { margin: 0 0 6px; font-size: .76rem; letter-spacing: .06em; text-transform: uppercase; color: #93c5fd; }
 .corridor-info h3 { margin: 0 0 10px; color: #fff; font-size: clamp(1.4rem, 5.5vw, 2rem); line-height: 1.15; }
 .ci-tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0 0 12px; padding: 0; }
@@ -2690,92 +2690,60 @@ html:not([data-bot]) .page-shell .final-cta.fx-glow::after { opacity: 1; }
 .corridor-controls button:hover:not(:disabled) { background: rgba(37,99,235,0.35); border-color: #93c5fd; }
 .corridor-controls button:disabled { opacity: .35; cursor: default; }
 .corridor-hint { margin: 0; text-align: center; font-size: .82rem; color: var(--muted-inv); }
-html:not([data-bot]) .corridor:is(.is-3d, .is-ring) .corridor-info[data-active] h3 { animation: ciFlip .6s cubic-bezier(.16,1,.3,1) both; transform-origin: 50% 100%; }
+html:not([data-bot]) .corridor.is-3d .corridor-info[data-active] h3 { animation: ciFlip .6s cubic-bezier(.16,1,.3,1) both; transform-origin: 50% 100%; }
 @keyframes ciFlip { from { transform: perspective(600px) rotateX(-70deg); opacity: 0; } }
 
-/* Reduced motion (class is-pin): the site preview pins under the header, the project details scroll beneath it, and
-   the preview switches to the project being read, with no animation. (This was the phone layout for a few hours;
-   phones and tablets now get the ring below.) --cor-top follows the header, which hides while scrolling down. */
-.corridor.is-pin { --cor-top: 0px; }
-body:has(.site-header:not(.nav-hidden)) .corridor.is-pin { --cor-top: var(--cor-hdr, 76px); }
-.corridor.is-pin .corridor-stage { padding: 0 0 56px; overflow: clip; }
-.corridor.is-pin .corridor-floor { display: none; }
-.corridor.is-pin .corridor-cam { position: sticky; top: var(--cor-top); z-index: 3; padding: 10px 16px 18px; background: var(--bg-dark); transition: top .35s cubic-bezier(.16,1,.3,1); }
-.corridor.is-pin .corridor-cam::after { content: ''; position: absolute; left: 0; right: 0; top: 100%; height: 26px; pointer-events: none; background: linear-gradient(var(--bg-dark), rgba(4,7,13,0)); }
-.corridor.is-pin .corridor-cam::before { content: ''; position: absolute; left: 16px; right: 16px; bottom: 6px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, #3b82f6, #93c5fd) 0 0 / calc((var(--a, 0) + 1) / var(--n, 1) * 100%) 100% no-repeat, rgba(255,255,255,0.1); transition: background-size .5s cubic-bezier(.16,1,.3,1); }
-.corridor.is-pin .corridor-track { display: grid; width: min(100%, 560px, calc(30vh * 1.6)); width: min(100%, 560px, calc(30svh * 1.6)); margin: 0 auto; padding: 0; overflow: visible; scroll-snap-type: none; }
-.corridor.is-pin .corridor-item { grid-area: 1 / 1; max-width: none; min-width: 0; opacity: 0; visibility: hidden; transform: translateY(14px) scale(.97); transition: opacity .3s ease, transform .5s cubic-bezier(.16,1,.3,1), visibility 0s linear .3s; }
-.corridor.is-pin .corridor-item[data-state="past"] { transform: translateY(-14px) scale(.97); }
-.corridor.is-pin .corridor-item[data-state="active"] { opacity: 1; visibility: visible; transform: none; transition: opacity .4s ease .06s, transform .55s cubic-bezier(.16,1,.3,1) .06s, visibility 0s; }
-.corridor.is-pin .corridor-frame { border-color: rgba(147,197,253,0.45); box-shadow: 0 24px 50px -30px rgba(0,0,0,0.9), 0 0 44px -18px rgba(59,130,246,0.55); }
-.corridor.is-pin .corridor-label { display: block; margin: 9px 0 0; color: #e2e8f0; font-size: .95rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.corridor.is-pin .corridor-label span { margin-right: 6px; color: #60a5fa; font-family: var(--ff-mono); font-weight: 400; }
-.corridor.is-pin .corridor-hud { padding: 22px 16px 0; }
-.corridor.is-pin .corridor-progress { display: none; }
-.corridor.is-pin .corridor-infos { gap: 16px; }
-.corridor.is-pin .corridor-info { opacity: .5; transition: opacity .4s ease, border-color .4s ease, box-shadow .4s ease, background .4s ease; }
-.corridor.is-pin .corridor-info[data-active] { opacity: 1; border-color: rgba(147,197,253,0.6); background: linear-gradient(150deg, rgba(59,130,246,0.14), rgba(255,255,255,0.03)); box-shadow: 0 24px 60px -32px rgba(59,130,246,0.6); }
+/* Phones, tablets and touch screens (class is-stack; owner request, replacing a swipeable figure-8 ring that could
+   confuse visitors): stacking cards. One card per project, screenshot on top and details below. Each card pins
+   (position: sticky) a little lower than the one before; scrolling slides the next card up over it, and the cards
+   underneath shrink and dim a little (--cov, set by the component), while the arriving card straightens from a slight
+   tilt (--in). Reduced motion, or a screen too short for a whole card: a plain list (class stack-flat). */
+.corridor.is-stack { --stack-top: 12px; padding: 6px 16px 0; }
+body:has(.site-header:not(.nav-hidden)) .corridor.is-stack { --stack-top: calc(var(--cor-hdr, 76px) + 10px); }
+.pstack { list-style: none; max-width: 560px; margin: 0 auto; padding: 0; }
+.pstack::after { content: ''; display: block; height: 28vh; } /* room for the last card to settle on the pile before it all scrolls away */
+.pstack-card { position: sticky; top: calc(var(--stack-top) + var(--i, 0) * 14px); margin: 0 0 32px; transition: top .35s cubic-bezier(.16,1,.3,1); }
+.pstack-card:last-child { margin-bottom: 0; }
+.pstack-inner { position: relative; overflow: hidden; min-height: var(--card-h, 0px); display: flex; flex-direction: column; border-radius: 20px; background: linear-gradient(165deg, #0f1a2f, #080c16 72%); border: 1px solid rgba(96,165,250,0.3); box-shadow: 0 -16px 36px -22px rgba(0,0,0,0.95), 0 28px 60px -30px rgba(0,0,0,0.9);
+  transform-origin: 50% 0; transform: perspective(1400px) rotateX(calc((1 - var(--in, 1)) * 7deg)) scale(calc(1 - min(var(--cov, 0), 3) * 0.045)); will-change: transform; }
+.pstack-inner::before { content: ''; position: absolute; left: 0; right: 0; top: 0; z-index: 2; height: 1px; background: linear-gradient(90deg, rgba(147,197,253,0), rgba(191,219,254,0.8), rgba(147,197,253,0)); pointer-events: none; }
+.pstack-inner::after { content: ''; position: absolute; inset: 0; z-index: 3; border-radius: inherit; background: #03060c; opacity: calc(min(var(--cov, 0), 2) * 0.3); pointer-events: none; }
+.pstack-shot { border: 0; border-radius: 0; box-shadow: none; }
+.pstack-shot picture { aspect-ratio: auto; height: min(56vw, 30vh, 350px); height: min(56vw, 30svh, 350px); }
+.pstack-shot .corridor-url { text-align: left; }
+.pstack-shot img { object-position: left top; } /* keep each site's headline in view when the screenshot is cropped */
+.pstack-num { flex-shrink: 0; font-family: var(--ff-mono); font-size: 10.5px; letter-spacing: .08em; color: #e2e8f0; }
+.pstack-door .pstack-shot { flex: 1; display: flex; flex-direction: column; }
+.pstack-door .corridor-door-face { flex: 1; aspect-ratio: auto; min-height: min(180px, 24vh); }
+.pstack-door .corridor-door-count { font-size: clamp(48px, 15vw, 88px); }
+.pstack-body { padding: 14px 18px 18px; }
+.pstack-body .ci-meta { margin-bottom: 4px; font-size: .7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pstack-body h3 { margin: 0 0 6px; color: #fff; font-size: clamp(1.25rem, 5.2vw, 1.7rem); line-height: 1.15; }
+.pstack-body .ci-tags { display: none; }
+.pstack-body .ci-desc { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin-bottom: 10px; font-size: .9rem; line-height: 1.5; }
+.pstack-body .ci-results { margin-bottom: 12px; }
+.pstack-body .ci-results .ci-plain { display: none; }
+.corridor.is-stack.stack-flat .pstack-card { position: static; }
+.corridor.is-stack.stack-flat .pstack::after { display: none; }
+.corridor.is-stack.stack-flat .pstack-inner { transform: none; }
+.corridor.is-stack.stack-flat .pstack-inner::after { opacity: 0; }
 @media (min-width: 768px) {
-  .corridor.is-pin .corridor-stage { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 40px; align-items: start; max-width: 1240px; margin: 0 auto; padding: 0 32px 80px; }
-  .corridor.is-pin .corridor-cam { top: calc(var(--cor-top) + 28px); padding: 0 0 20px; background: none; }
-  .corridor.is-pin .corridor-cam::after { display: none; }
-  .corridor.is-pin .corridor-cam::before { left: 0; right: 0; bottom: 0; }
-  .corridor.is-pin .corridor-track { width: 100%; max-width: none; }
-  .corridor.is-pin .corridor-hud { max-width: none; margin: 0; padding: 0; }
-  .corridor.is-pin .corridor-infos { gap: 24px; padding: 4vh 0 12vh; }
+  .corridor.is-stack { padding: 6px 32px 0; }
+  .pstack { max-width: 1000px; }
+  .pstack-inner { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: stretch; }
+  .pstack::after { height: 20vh; }
+  .pstack-shot { display: flex; flex-direction: column; }
+  .pstack-shot picture { flex: 1; height: auto; min-height: 0; aspect-ratio: auto; }
+  .pstack-body { align-self: center; }
+  .pstack-door .corridor-door-face { height: auto; aspect-ratio: 16 / 10; }
+  .pstack-body { padding: 22px 26px; }
+  .pstack-body .ci-meta { white-space: normal; }
+  .pstack-body .ci-tags { display: flex; }
+  .pstack-body .ci-desc { -webkit-line-clamp: 3; }
+  .pstack-body .ci-results .ci-plain { display: list-item; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .corridor.is-pin :is(.corridor-cam, .corridor-item, .corridor-item[data-state="active"], .corridor-info) { transition: none; }
-  .corridor.is-pin .corridor-cam::before { transition: none; }
-}
-
-/* Phones and tablets (class is-ring; owner request, after lorenzolottici.it/en/work on a phone): the site previews
-   ride a figure-8 loop in depth (positions set by the component). Front card in focus, neighbours peek in from the
-   sides, the rest swing round behind, darker. Swipe to drag the loop; it settles with a light pass over the card.
-   Behind: a planet rim lit from one side, drifting cubes, and the floor grid sliding with the swipe. */
-.corridor.is-ring { --ring-h: clamp(340px, 108vw, 600px); }
-.corridor.is-ring .corridor-stage { padding: var(--ring-h) 0 48px; overflow: clip; touch-action: pan-y; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
-.corridor.is-ring :is(.corridor-sky, .corridor-cam) { position: absolute; left: 0; right: 0; top: 0; height: var(--ring-h); }
-.corridor.is-ring .corridor-sky { overflow: hidden; pointer-events: none;
-  background: radial-gradient(1px 1px at 12% 14%, rgba(191,219,254,0.7), transparent 60%), radial-gradient(1px 1px at 72% 9%, rgba(191,219,254,0.55), transparent 60%), radial-gradient(1.5px 1.5px at 88% 30%, rgba(191,219,254,0.6), transparent 60%), radial-gradient(1px 1px at 30% 26%, rgba(191,219,254,0.45), transparent 60%), radial-gradient(1px 1px at 55% 5%, rgba(191,219,254,0.5), transparent 60%), radial-gradient(1.5px 1.5px at 6% 40%, rgba(191,219,254,0.5), transparent 60%), radial-gradient(1px 1px at 94% 52%, rgba(191,219,254,0.45), transparent 60%), radial-gradient(1px 1px at 42% 12%, rgba(191,219,254,0.4), transparent 60%); }
-.corridor-orb { position: absolute; left: 50%; top: 11%; width: 128%; aspect-ratio: 1; margin-left: -64%; border-radius: 50%; background: radial-gradient(circle at 50% 30%, #070b14, #020409 62%); box-shadow: 0 -20px 90px -30px rgba(59,130,246,0.45); }
-.corridor-orb::before, .corridor-orb::after { content: ''; position: absolute; border-radius: 50%; rotate: calc(var(--rp, 0) * -16deg);
-  background: conic-gradient(from 300deg, rgba(219,234,254,0) 0deg, rgba(239,246,255,0.95) 55deg, rgba(147,197,253,0.55) 105deg, rgba(147,197,253,0) 160deg, rgba(147,197,253,0) 300deg, rgba(147,197,253,0.25) 335deg, rgba(219,234,254,0) 360deg); }
-.corridor-orb::before { inset: -1.5px; -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2.5px), #000 calc(100% - 1px)); mask: radial-gradient(farthest-side, transparent calc(100% - 2.5px), #000 calc(100% - 1px)); }
-.corridor-orb::after { inset: -16px; opacity: .55; filter: blur(10px); -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 26px), #000 calc(100% - 15px), transparent 100%); mask: radial-gradient(farthest-side, transparent calc(100% - 26px), #000 calc(100% - 15px), transparent 100%); }
-.corridor-sky i { position: absolute; width: var(--cs, 10px); height: var(--cs, 10px); border-radius: 2px; background: linear-gradient(135deg, #1f2a3d, #070b14 70%); border: 1px solid rgba(148,163,184,0.22); box-shadow: inset 1px 1px 0 rgba(219,234,254,0.18); translate: calc(var(--rp, 0) * var(--cp, -10px)) 0; animation: ringCube var(--ct, 16s) linear infinite; }
-.corridor-sky i:nth-of-type(1) { left: 14%; top: 22%; --cs: 9px; --cp: -14px; --ct: 18s; }
-.corridor-sky i:nth-of-type(2) { left: 78%; top: 15%; --cs: 13px; --cp: -22px; --ct: 22s; animation-direction: reverse; }
-.corridor-sky i:nth-of-type(3) { left: 63%; top: 37%; --cs: 8px; --cp: -9px; --ct: 15s; }
-.corridor-sky i:nth-of-type(4) { left: 30%; top: 44%; --cs: 11px; --cp: -18px; --ct: 20s; animation-direction: reverse; }
-.corridor-sky i:nth-of-type(5) { left: 88%; top: 46%; --cs: 7px; --cp: -7px; --ct: 13s; }
-@keyframes ringCube { to { transform: rotate(360deg); } }
-.corridor.is-ring .corridor-floor { top: calc(var(--ring-h) * .5); bottom: auto; height: calc(var(--ring-h) * .5); transform: perspective(520px) rotateX(72deg); }
-.corridor.is-ring .corridor-floor-grid { transform: none; translate: var(--floor-x, 0px) 0;
-  background-image: linear-gradient(rgba(96,165,250,0.16) 1px, rgba(96,165,250,0) 1px), linear-gradient(90deg, rgba(96,165,250,0.16) 1px, rgba(96,165,250,0) 1px);
-  background-size: 120px 120px, 120px 120px; background-position: center top, center top; }
-.corridor.is-ring .corridor-cam { z-index: 2; }
-.corridor.is-ring .corridor-track { position: absolute; inset: 0; display: block; margin: 0; padding: 0; overflow: visible; scroll-snap-type: none; }
-.corridor.is-ring .corridor-item { position: absolute; left: 50%; top: 63%; width: var(--ring-w, 84vw); max-width: none; margin: 0 0 0 calc(var(--ring-w, 84vw) / -2); translate: 0 -50%; transform-origin: 50% 50%; will-change: transform; }
-.corridor.is-ring .corridor-frame { position: relative; border-color: rgba(147,197,253,0.3); box-shadow: 0 30px 60px -28px rgba(0,0,0,0.95); transition: border-color .4s ease, box-shadow .4s ease; animation: ringBob 6s ease-in-out infinite; animation-delay: calc(var(--i, 0) * -1.4s); }
-.corridor.is-ring .corridor-frame::before { content: ''; position: absolute; inset: 0; z-index: 2; border-radius: inherit; background: #02050b; opacity: var(--dim, 0); pointer-events: none; }
-.corridor.is-ring .corridor-item[data-state="active"] .corridor-frame { border-color: rgba(191,219,254,0.7); box-shadow: 0 30px 60px -28px rgba(0,0,0,0.95), 0 0 60px -16px rgba(59,130,246,0.7); }
-.corridor.is-ring .corridor-item::after { content: ''; position: absolute; left: 12%; right: 12%; bottom: -26px; height: 22px; border-radius: 50%; background: radial-gradient(closest-side, rgba(59,130,246,0.45), rgba(59,130,246,0)); opacity: calc(1 - var(--dim, 0) * 1.6); pointer-events: none; }
-.corridor.is-ring .corridor-item.is-pulse .corridor-frame::after { content: ''; position: absolute; inset: 0; z-index: 3; pointer-events: none; background: linear-gradient(105deg, rgba(219,234,254,0) 30%, rgba(219,234,254,0.3) 48%, rgba(255,255,255,0.42) 50%, rgba(219,234,254,0.3) 52%, rgba(219,234,254,0) 70%); transform: translateX(-110%); animation: ringPulse .95s cubic-bezier(.45,0,.2,1) forwards; }
-@keyframes ringPulse { to { transform: translateX(110%); } }
-@keyframes ringBob { 50% { transform: translateY(-5px); } }
-.corridor.is-ring .corridor-door-count { font-size: clamp(48px, 16vw, 96px); }
-.corridor-ringui { position: absolute; left: 16px; right: 16px; top: 14px; z-index: 3; display: flex; align-items: center; justify-content: space-between; pointer-events: none; font-family: var(--ff-mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: rgba(226,232,240,0.78); }
-.corridor-swipe { display: inline-flex; align-items: center; gap: 10px; transition: opacity .6s ease; animation: ringHint 2.6s ease-in-out infinite; }
-.corridor-swipe::before { content: ''; width: 18px; height: 1px; background: currentColor; }
-.corridor.ring-touched .corridor-swipe { opacity: 0; }
-@keyframes ringHint { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(6px); } }
-.corridor-count b { color: #fff; font-weight: 600; }
-.corridor.is-ring .corridor-hud { max-width: 640px; margin: 0 auto; padding: 0 16px; }
-.corridor.is-ring .corridor-progress { display: none; }
-@media (min-width: 768px) {
-  .corridor.is-ring { --ring-h: clamp(460px, 80vw, 680px); }
-  .corridor.is-ring .corridor-item { top: 61%; }
+  .pstack-card { transition: none; }
 }
 
 /* Wide screens with a mouse: the scroll-driven 3D corridor (class added by the component). */

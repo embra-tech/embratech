@@ -20,7 +20,7 @@ function shouldHandle(e) {
   const a = e.target instanceof Element ? e.target.closest('a[href]') : null;
   if (!a) return null;
   if (a.target && a.target !== '_self') return null;
-  if (a.hasAttribute('download') || a.closest('[data-no-transition]')) return null; // e.g. a project card not in front
+  if (a.hasAttribute('download') || a.closest('[data-no-transition]')) return null; // a link or its container can opt out
   if (a.closest('[data-drag-click]')) return null; // a drag on the project strip, not a click
   let url;
   try { url = new URL(a.href, window.location.href); } catch (err) { return null; }
