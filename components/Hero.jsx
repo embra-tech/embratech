@@ -46,7 +46,7 @@ export default function Hero() {
       textTl.current.add(() => actionsRef.current && actionsRef.current.classList.add('revealed'), base + 0.3);
     };
 
-    // Bot / Lighthouse / PageSpeed detection (instant reveal for audits)
+    // Crawlers (html[data-bot], set in app/layout.jsx): instant reveal, no WebGL
     const isBot = document.documentElement.getAttribute('data-bot') === 'true';
 
     if (isBot) {
@@ -101,7 +101,8 @@ export default function Hero() {
         }
       })
       .catch((err) => {
-        console.error('WebGL init error:', err);
+        // 'software-webgl': no graphics chip, the orb is skipped on purpose (components/three/gpu.js)
+        if (!err || err.message !== 'software-webgl') console.error('WebGL init error:', err);
         // Technical failure (no WebGL support, context creation failed, chunk
         // failed to load): show the text instead of an empty hero.
         revealText();

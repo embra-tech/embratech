@@ -59,6 +59,14 @@ function LosAngelesContent() {
       <p style={{ marginBottom: '24px' }}>
         In Los Angeles, cooling demand runs for much of the year, so HVAC companies need AC repair and installation pages that are live and indexed well before the hottest months, plus a Google Business Profile that lists every service and the neighborhoods they cover. If you are looking for an HVAC SEO agency in LA, our <Link href="/services/local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>local SEO service</Link> starts with a free review of your profile, website and listings. For HVAC website design in LA, our <Link href="/niches/hvac-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>HVAC website design</Link> page shows how we build heating and cooling sites that work through a long cooling season.
       </p>
+      {/* 2026-11-24: LA-specific HVAC website detail (Search Console: hvac website design la, 58 impressions, position 24.3). */}
+      <h3 style={{ color: '#fff', fontSize: '1.3rem', marginBottom: '16px' }}>What an HVAC website in Los Angeles should cover</h3>
+      <ul style={{ marginBottom: '32px', paddingLeft: '20px', lineHeight: 1.8 }}>
+        <li><strong>A long cooling season:</strong> AC repair, AC installation and heat pump pages that stay current from spring through fall, with tap-to-call for heat-wave emergencies.</li>
+        <li><strong>Permits on replacements:</strong> in California, replacing a central AC or heat pump generally needs a permit under the state&apos;s Title 24 energy code, often with third-party (HERS) testing. A replacement page that explains how you handle it answers a question homeowners increasingly ask.</li>
+        <li><strong>Heat pumps and rebates:</strong> many LA homeowners are comparing heat pumps with gas furnaces; explain the options plainly and mention utility or state rebates only while they are actually available.</li>
+        <li><strong>The parts of LA you really cover:</strong> the Westside, the San Fernando Valley, the South Bay and so on are searched separately, so name your areas on your pages and in your Google Business Profile.</li>
+      </ul>
       <p style={{ marginBottom: '24px' }}>
         The same approach works for plumbing companies, general contractors and construction firms: a clear page for each service, license details up front and real project photos. For construction SEO in Los Angeles, that means pages for the kinds of projects you take on and the areas you build in, rather than one generic homepage. See our <Link href="/niches/plumber-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>plumbing web design</Link> page for an example.
       </p>
@@ -112,13 +120,22 @@ function ChicagoContent() {
       <ProjectShot name="skyhightreeservice" url="skyhightreeservicechicago.com" alt="Sky High Tree Service website for a Chicagoland tree service, by Embra Technologies" caption="Sky High Tree Service, Chicagoland: call and estimate options, project photos and service area." href="/portfolio/sky-high-tree" linkText="Case study" />
 
       {/* 2026-10-26: Chicago HVAC section (US queries "seo company for hvac repair in chicago", "hvac seo chicago"). */}
-      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Local SEO for Chicago HVAC and Plumbing Contractors</h2>
+      {/* 2026-11-24: heading names the top Chicago query; added "what an SEO company for HVAC repair in Chicago should do". */}
+      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>HVAC SEO in Chicago: Local SEO for HVAC Repair and Plumbing Contractors</h2>
       <p style={{ marginBottom: '24px' }}>
         In Chicago, heating and cooling searches swing hard with the seasons: furnace and boiler repair when the first cold snap arrives, AC repair once summer heat sets in. For an HVAC company, local SEO means having heating and cooling service pages ready before each season, a Google Business Profile that lists every service you offer, and a steady flow of genuine reviews from Chicago customers.
       </p>
       <p style={{ marginBottom: '40px' }}>
         Our <Link href="/blog/hvac-local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>HVAC SEO guide</Link> walks through the steps, including how to choose an SEO company for HVAC repair. If you&apos;d rather have it done for you, our <Link href="/services/local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>local SEO service</Link> starts with a free review, and our <Link href="/niches/hvac-website-design" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>HVAC website design</Link> page shows how we build heating and cooling websites. We work remotely with contractors across Chicagoland.
       </p>
+      <h3 style={{ color: '#fff', fontSize: '1.3rem', marginBottom: '16px' }}>What an SEO company for HVAC repair in Chicago should do</h3>
+      <ul style={{ marginBottom: '40px', paddingLeft: '20px', lineHeight: 1.8 }}>
+        <li><strong>Map the areas you really cover.</strong> Chicago searches are split by neighborhood and suburb (Lincoln Park, Naperville, Schaumburg, Oak Lawn), so your Google Business Profile service area and your pages should name the places you serve, and only those.</li>
+        <li><strong>Get heating pages ready before the first freeze.</strong> Furnace, boiler and no-heat pages need to be live and crawled by early fall, when Chicago heating searches start to climb; AC pages need the same treatment before the first summer heat.</li>
+        <li><strong>Separate repair from replacement.</strong> Emergency AC and furnace repair pages lead with the phone number; replacement pages explain system options, financing you offer and any current utility rebates, checked before each season.</li>
+        <li><strong>Build reviews from Chicago jobs.</strong> A short review request after every visit, and a reply to every review that names the service.</li>
+        <li><strong>Report calls, not just rankings.</strong> Track calls and booked jobs from search, so you can see what the work is worth.</li>
+      </ul>
       {/* 2026-11-08: proven local SEO result for the Chicago HVAC SEO searches. */}
       <SeoResultCard place="Chicago" />
       <p style={{ marginBottom: '40px' }}>
@@ -152,7 +169,7 @@ function AlaskaContent() {
         Operating a business in Alaska presents unique geographical and logistical challenges. Your customers are often spread out across vast areas, and when they need a home service, they need to know you actually serve their specific region. For handymen, repair services, and contractors in Alaska, your website serves as your digital storefront, dispatcher, and trust-builder all rolled into one. At Embra Technologies, we build rugged, reliable, high-performance websites tailored to the unique demands of Alaskan businesses.
       </p>
       <p style={{ marginBottom: '40px' }}>
-        A generic website template won't cut it when your customers are dealing with harsh weather emergencies or urgent home repairs. They need a site that loads instantly on a smartphone-even on spotty cellular connections-and immediately shows them you are local, available, and capable. We utilize modern React architecture to deliver sub-second load times, paired with precise local SEO to ensure your business ranks prominently when Alaskans search for services "near me."
+        A generic website template won't cut it when your customers are dealing with harsh weather emergencies or urgent home repairs. They need a site that loads instantly on a smartphone-even on spotty cellular connections-and immediately shows them you are local, available, and capable. We use modern React architecture to keep pages fast on phones, paired with precise local SEO to ensure your business ranks prominently when Alaskans search for services "near me."
       </p>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Case Study: Alaska Fast Fix Handyman</h2>
@@ -249,7 +266,7 @@ function BrooklynContent() {
         Embra Technologies builds high-performance custom websites and local SEO systems for home service businesses across the United States, including Brooklyn and the rest of New York City. We are a fully remote team with support on US business hours, so your location never limits whether we can help. Our clients are in Los Angeles, Chicago, Alaska, Merced, and beyond.
       </p>
       <p style={{ marginBottom: '24px' }}>
-        If you run a home service business, a handyman operation, a plumbing company, a tree service, a roofing contractor, an HVAC business, or a landscaping company, you know that most of your customers find you online first. And what they find determines whether they call you or your competitor. A slow, generic website built on an outdated WordPress template will cost you leads every single day. At Embra Technologies, we build custom websites using the modern Next.js (React) framework, engineered to load in under one second and designed to convert first-time visitors into booked jobs.
+        If you run a home service business, a handyman operation, a plumbing company, a tree service, a roofing contractor, an HVAC business, or a landscaping company, you know that most of your customers find you online first. And what they find determines whether they call you or your competitor. A slow, generic website built on an outdated WordPress template will cost you leads every single day. At Embra Technologies, we build custom websites using the modern Next.js (React) framework, built to load fast on phones and designed to convert first-time visitors into booked jobs.
       </p>
       <p style={{ marginBottom: '40px' }}>
         Brooklyn rewards businesses that are direct and dependable, and that is how we approach every project: honest pricing, real timelines, and a 24-hour custom homepage sample so you can see what we build before you commit to anything. No retainers, no lock-in, no surprises.

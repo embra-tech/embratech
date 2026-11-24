@@ -12,6 +12,9 @@ import siteConfig from '../../../lib/site-config';
 // 2026-10-26: body rewritten (batch 2): plain, specific copy replacing the old template; insurance wording
 // made accurate ("which insurers you work with", right to choose only where state law provides it);
 // 6 FAQs; pricing aligned. Layout and Tuxford image unchanged.
+// 2026-11-24: Search Console round: auto body website design checklist and collision center (one shop or several)
+// sections (collision repair website design 125/20.3, auto body website design 122/20.8, auto body shop website
+// design 97/18.9, collision center website design 20/8.1).
 const PAGE_DESCRIPTION = 'Auto body shop and collision repair website design: trust signals up front, photo estimate forms and insurance answers. From $700, or $600 paid in full.';
 
 export const metadata = {
@@ -148,6 +151,22 @@ export default function NichePage() {
 
           <h2 style={h2}>Collision Repair Website Design Example: Tuxford Collision Center</h2>
           <p style={para}>For <Link href="/portfolio/tuxford-collision" style={link}>Tuxford Collision Center</Link>, a licensed auto body shop in Los Angeles, we put the shop&apos;s licensing details, Google rating and free towing and free estimate offer at the top of the site, with a phone number and quote form within reach on every screen. The case study links to the site&apos;s live PageSpeed report, so you can check its speed yourself.</p>
+
+          <h2 style={h2}>Auto Body Website Design Checklist</h2>
+          <p style={para}>Use this list to check your current site, or any auto body website design proposal you receive. Every item should be true on a phone, not only on a desktop:</p>
+          <p style={para}>&bull; Phone number and a &quot;Get an estimate&quot; button visible without scrolling, on every page.</p>
+          <p style={para}>&bull; Your address, hours and a map link near the top, so drivers know you are close.</p>
+          <p style={para}>&bull; A photo estimate form that accepts several photos and a VIN, and says when you will reply.</p>
+          <p style={para}>&bull; Insurance answers: the insurers you work with, how claims work at your shop and, where it applies, the driver&apos;s right to choose a repair shop.</p>
+          <p style={para}>&bull; Certifications you actually hold (I-CAR, manufacturer programs) and your written warranty terms.</p>
+          <p style={para}>&bull; Before-and-after photos of your own repairs, not stock images.</p>
+          <p style={para}>&bull; Towing and rental car help, if you provide them, explained in one or two sentences.</p>
+          <p style={para}>&bull; Genuine reviews with a link to your Google profile.</p>
+          <p style={para}>&bull; A separate page for each service: collision repair, paint, dent repair, frame repair, ADAS calibration.</p>
+          <p style={para}>&bull; Fast loading on a phone, which you can check with Google&apos;s free PageSpeed test.</p>
+
+          <h2 style={h2}>Collision Center Website Design: One Shop or Several</h2>
+          <p style={para}>A single independent body shop needs one strong site built around its location, its certifications and its estimate process. A collision center group with several shops needs a page for each location, each with its own address, hours, phone number, photos and reviews, so drivers reach the nearest shop and each location can rank in its own area. List insurer and direct repair program (DRP) relationships only where they are real, and keep them up to date when agreements change.</p>
 
           <StockPhoto name="stock-autobody" />
 

@@ -12,6 +12,8 @@ import siteConfig from '../../../lib/site-config';
 // "unshakeable") and the "adjuster meeting representation" promise (claim negotiation is licensed
 // public-adjuster work in many states); pricing aligned; 6 FAQs. Layout and concept image unchanged.
 
+// 2026-11-24: Search Console round: "Roofing Company Web Design Services" section (110 impressions, position 38.6)
+// and a hosting note in the pricing section (roofing website cost 21/23.1, roofing website hosting 8/23.2).
 const PAGE_DESCRIPTION = 'Roofing website design for roofing contractors: license and insurance up front, storm damage and replacement pages, photo galleries and inspection requests. From $700.';
 
 export const metadata = {
@@ -152,6 +154,15 @@ export default function NichePage() {
 
           <StockPhoto name="stock-roofing" />
 
+          <h2 style={h2}>Roofing Company Web Design Services</h2>
+          <p style={para}>Our roofing company web design services cover the full site, designed and written for your business rather than adapted from a template:</p>
+          <p style={para}>&bull; <strong>Service pages</strong> for roof replacement, roof repair, storm and hail damage, gutters, siding and commercial roofing, each with the questions homeowners ask before they call.</p>
+          <p style={para}>&bull; <strong>An inspection request form</strong> that works on a phone and lets homeowners attach photos of the damage.</p>
+          <p style={para}>&bull; <strong>Project galleries</strong> with before-and-after photos of your own roofs, sorted by job type.</p>
+          <p style={para}>&bull; <strong>Trust details up front:</strong> license and insurance information, the manufacturer certifications you actually hold, and your workmanship warranty in plain terms.</p>
+          <p style={para}>&bull; <strong>Insurance claim and financing sections</strong>, written carefully: how you help with claims, and financing only if you offer it.</p>
+          <p style={para}>&bull; <strong>On-page SEO and structured data</strong>, plus a sitemap submitted to Google when the site launches.</p>
+
           <h2 style={h2}>Local SEO for Roofing Contractors</h2>
           <p style={para}>Roofing searches rise sharply after storms, and homeowners usually search for &quot;roof repair near me&quot; or &quot;roofing contractor&quot; plus their town. Most of those calls come through your Google Business Profile and the map results, so a complete profile with real job photos and steady reviews matters as much as the website.</p>
           <p style={para}>We add LocalBusiness and RoofingContractor structured data, give each service its own page, and add town pages only where you have real jobs and reviews to show. Read our <Link href="/blog/local-seo-guide-for-service-businesses" style={link}>local SEO guide for home service businesses</Link>, or see our <Link href="/services/local-seo" style={link}>local SEO service</Link>.</p>
@@ -162,6 +173,7 @@ export default function NichePage() {
           <p style={para}>&bull; <strong>Growth ($1,000):</strong> up to 7 pages, enough for separate replacement, repair, storm damage and gallery pages, plus structured data and Google Business Profile setup.</p>
           <p style={para}>&bull; <strong>Care Plan ($150/month, optional):</strong> after each storm season we add your newest roof photos, and we keep hosting, security and search monitoring handled. Cancel anytime.</p>
           <p style={para}>All plans are on our <Link href="/pricing" style={link}>pricing page</Link>; our <Link href="/blog/website-cost-for-home-service-businesses" style={link}>guide to contractor website costs</Link> shows what roofing companies usually pay elsewhere.</p>
+          <p style={para}><strong>What about hosting?</strong> Roofing website hosting is included in the optional Care Plan along with security and updates. Without it, the site is still yours: we hand over the files and you can host it wherever you like.</p>
 
           {/* Mid-Content Conversion CTA Box */}
           <div data-mid-cta="true" style={{

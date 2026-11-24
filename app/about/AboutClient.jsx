@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import { useEffect, useRef, useState } from 'react';
 import { useReveal } from '../../lib/useReveal';
 import { gsap, ScrollTrigger } from '../../lib/gsap';
@@ -11,7 +13,8 @@ import siteConfig from '../../lib/site-config';
 
 const STATS = [
   // 2026-10-26: "actively ranking on Google" and the "96/100 average PageSpeed" card removed (no dated source).
-  { value: 8, suffix: '', label: 'Live client websites we have designed and built, each with its own case study' },
+  // 2026-11-24: label says how 8 relates to the "9 client projects" shown elsewhere (8 builds + 1 local SEO project)
+  { value: 8, suffix: '', label: 'Live client websites we have designed and built, plus a local SEO project: 9 case studies in all' },
   { value: 7, suffix: '', label: 'Home service trades we design websites for, from plumbing and HVAC to auto body' },
   { value: 24, suffix: 'h', label: 'Hours to your free custom homepage sample. No deposit, and if it is not right, you walk away and owe nothing' },
   { value: 100, suffix: '%', label: 'Yours to keep. Once your website is paid for and live, you own the code, content and domain' },
@@ -86,7 +89,7 @@ export default function AboutClient() {
           </div>
           <div className="reveal-up">
             <h2>How we work</h2>
-            <p>Strategy first, then design, then code. Every project begins with understanding your customers and conversion goals. The result: websites that load in under a second, rank on Google, and turn visitors into booked jobs and paying clients.</p>
+            <p>Strategy first, then design, then code. Every project begins with understanding your customers and conversion goals. The result: fast, mobile-first websites built to rank on Google and turn visitors into booked jobs and paying clients. Each case study links to the client site's live PageSpeed report, so you can check the speed yourself.</p>
           </div>
         </div>
       </section>
@@ -101,10 +104,13 @@ export default function AboutClient() {
               We are a small, remote team of senior designers and engineers serving home service businesses across the United States, with support on US business hours ({siteConfig.hoursDisplay}). When you email us, the person who replies is the same person writing your code and designing your pages. No account managers, no handoffs to junior staff.
             </p>
             <p>
+              Embra Technologies was founded in 2026 by Md Bilaal Rahman Ali, our founder and lead developer, who also writes the guides on our <Link href="/blog" style={{ color: 'var(--primary)' }}>blog</Link>.
+            </p>
+            <p>
               We built Embra because great web work was gatekept behind agency retainers most local businesses can&apos;t justify. Our answer was to cut the overhead entirely and put the savings back into execution quality: fast, mobile-first sites (each case study links to a live PageSpeed report you can check), at a fraction of what a full-service agency charges.
             </p>
             <p style={{marginTop: '20px', fontSize: '14px', color: 'rgba(255,255,255,0.5)', fontStyle: 'italic'}}>
-              Want to know who you&apos;re working with? Reach out directly at <a href={`mailto:${siteConfig.email}`} style={{ color: 'var(--primary)' }}>{siteConfig.email}</a>, we reply within one business day, not a bot.
+              Want to know who you&apos;re working with? Reach out directly at <a href={`mailto:${siteConfig.email}`} style={{ color: 'var(--primary)' }}>{siteConfig.email}</a>, we reply within 24 hours, not a bot.
             </p>
           </div>
         </div>

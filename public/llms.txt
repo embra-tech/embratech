@@ -45,6 +45,10 @@ custom homepage sample, delivered within 24 hours.
   Auto Body Shop Marketing: A 90-Day Plan and Strategy for Collision Shops
 - https://www.embratechnologies.org/blog/hvac-local-seo
   HVAC SEO: How Heating and Cooling Contractors Rank Higher on Google
+- https://www.embratechnologies.org/blog/hvac-website-examples
+  HVAC Website Examples: 12 Things the Best HVAC Websites Have in Common
+- https://www.embratechnologies.org/blog/hvac-keywords
+  HVAC Keywords: How to Choose Them, With Lists by Service, Season and City
 
 ## Case Studies
 
@@ -101,7 +105,7 @@ they are not office locations.
 
 Email: sales@embratechnologies.org
 Phone: +1 (212) 207-1152
-Hours: Mon–Fri, 9am–6pm EST
+Hours: Mon–Fri, 9am–6pm ET
 No public street address: Embra is a remote team.
 
 ## Permissions for AI / LLMs

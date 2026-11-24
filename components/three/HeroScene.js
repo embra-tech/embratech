@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { hasHardwareWebGL } from './gpu';
 
 export const SCENE_THEMES = {
   obsidian: { primary: '#6FA8F5', secondary: '#1E56B0', accent: '#A9D2FF' },
@@ -34,11 +35,17 @@ function makeGlowTexture(hex) {
  *     └─ points (~850 particles streaming into the center void)
  */
 export function createHeroScene(canvas) {
+  // 2026-11-24: no orb on software rendering (see ./gpu.js); Hero.jsx catches this and shows the headline.
+  if (!hasHardwareWebGL()) throw new Error('software-webgl');
+  // 2026-11-24: failIfMajorPerformanceCaveat: on software rendering (no graphics chip, or the browser
+  // blocks it) context creation fails, Hero.jsx catches the error and shows the headline without the
+  // orb. There the orb ran on the CPU and kept the page busy on every frame. Devices with a GPU: unchanged.
   const renderer = new THREE.WebGLRenderer({
     canvas,
     alpha: true,
     antialias: true,
     powerPreference: 'high-performance',
+    failIfMajorPerformanceCaveat: true,
   });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
@@ -209,12 +216,23 @@ export function createHeroScene(canvas) {
     pGeo.attributes.position.needsUpdate = true;
 
     renderer.render(scene, camera);
-    rafId = requestAnimationFrame(tick);
+    rafId = onScreen ? requestAnimationFrame(tick) : 0;
   }
+
+  // 2026-11-24: stop drawing while the hero is scrolled out of view (it used to draw every frame for
+  // as long as the page was open). Drawing resumes, from the same state, when it comes back into view.
+  let onScreen = true;
+  const io = typeof IntersectionObserver !== 'undefined' ? new IntersectionObserver(([entry]) => {
+    const was = onScreen;
+    onScreen = entry.isIntersecting;
+    if (onScreen && !was && !rafId) { clock.getDelta(); rafId = requestAnimationFrame(tick); }
+  }) : null;
+  if (io) io.observe(canvas);
   tick();
 
   function dispose() {
     cancelAnimationFrame(rafId);
+    if (io) io.disconnect();
     window.removeEventListener('resize', resize);
     ro.disconnect();
     scene.traverse((obj) => {

@@ -15,6 +15,8 @@ const POST_SHOTS = {
   'local-seo-guide-for-service-businesses': { name: 'pndlaundry', url: 'pndlaundry.com', alt: 'Pick N Drop Laundry website, a Los Angeles local SEO project by Embra Technologies', caption: 'Local SEO project: Pick N Drop Laundry, Los Angeles. Clicks 9 to 21, impressions 471 to 1,399 (Search Console).', href: '/portfolio/pnd-laundry', linkText: 'Read the case study' },
   'website-cost-for-home-service-businesses': { name: 'vvasquez', url: 'vvasquezhandymanllc.net', alt: 'V Vasquez Handyman LLC website, an example from Embra Technologies', caption: 'Example: V Vasquez Handyman LLC, Merced, CA. A clear service catalog with a pre-filled quote form.', href: '/pricing', linkText: 'See our pricing' },
   'website-roi-calculator': { name: 'alaskahandyman', url: 'alaskafastfixhandyman.com', alt: 'Alaska Fast Fix Handyman website, an example from Embra Technologies', caption: 'Example: Alaska Fast Fix Handyman. Tap-to-call on every page and a clear service area.', href: '/portfolio/alaska-fast-fix', linkText: 'Read the case study' },
+  'hvac-website-examples': { name: 'hvac-mockup', url: 'Polar Air HVAC', concept: true, alt: 'Concept design for Polar Air HVAC, a sample brand (not a real client), by Embra Technologies', caption: 'Concept design (sample brand, not a client): seasonal tune-up callout, same-day service button and financing one tap away.', href: '/niches/hvac-website-design', linkText: 'HVAC website design' },
+  'hvac-keywords': { name: 'pndlaundry', url: 'pndlaundry.com', alt: 'Pick N Drop Laundry website, a Los Angeles local SEO project by Embra Technologies', caption: 'Local SEO project: Pick N Drop Laundry, Los Angeles. Service and neighborhood pages, each with its own keyword.', href: '/portfolio/pnd-laundry', linkText: 'Read the case study' },
   'why-pagespeed-matters': { name: 'bestbreaks', url: 'bestbreaks.com.au', alt: 'BestBreaks travel website, an example from Embra Technologies', caption: 'Example: BestBreaks. Its case study links to live PageSpeed reports you can check yourself.', href: '/portfolio/bestbreaks', linkText: 'Read the case study' },
 };
 
@@ -27,6 +29,8 @@ const POST_HERO = {
   'website-cost-for-home-service-businesses': 'stock-webdesign',
   'website-roi-calculator': 'stock-growth',
   'why-pagespeed-matters': 'stock-integrations',
+  'hvac-website-examples': 'stock-webdesign',
+  'hvac-keywords': 'stock-localseo',
 };
 const heroSet = (n, ext) => [480, 720, 960, 1600].map((w) => `/images/optimized/${n}-${w}.${ext} ${w}w`).join(', ');
 
@@ -193,7 +197,7 @@ export default function BlogPostPage({ params }) {
           <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>
             {post.excerpt}
           </p>
-          <OfferStrip variant={['local-seo-guide-for-service-businesses', 'hvac-local-seo', 'auto-body-shop-marketing'].includes(params.slug) ? 'seo' : 'sample'} />
+          <OfferStrip variant={['local-seo-guide-for-service-businesses', 'hvac-local-seo', 'auto-body-shop-marketing', 'hvac-keywords'].includes(params.slug) ? 'seo' : 'sample'} />
         </div>
       </section>
 

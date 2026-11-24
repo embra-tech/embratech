@@ -8,6 +8,7 @@ import gsap from 'gsap';
 // lighting/parallax/disposal rig used across the rest of the site's
 // WebGL scenes (see components/three/HeroScene.js).
 // init(root, camera) -> { update(t, dt), dispose?() }
+import { hasHardwareWebGL } from './gpu';
 import { initRankClimb, initConstellation, initDataStreams, initLayerStack, initRocketArc } from './serviceAnimations';
 
 const INITS = { rankClimb: initRankClimb, constellation: initConstellation, dataStreams: initDataStreams, layerStack: initLayerStack, rocketArc: initRocketArc };
@@ -19,23 +20,29 @@ export default function ThreeCanvas({ type }) {
     const mount = mountRef.current;
     if (!mount) return;
 
-    // Skip WebGL overhead on bots / PageSpeed audits / reduced-motion
+    // Skip WebGL for crawlers and reduced-motion visitors
     const isBot =
       typeof navigator !== 'undefined' &&
-      (/googlebot|google-inspectiontool|lighthouse|chrome-lighthouse|pagespeed|headlesschrome|ptst|gtmetrix/i.test(navigator.userAgent) ||
-       Boolean(navigator.webdriver) ||
-       (typeof window !== 'undefined' && (new URLSearchParams(window.location.search).has('psi') || new URLSearchParams(window.location.search).has('pagespeed'))));
+      (/googlebot|google-inspectiontool|headlesschrome/i.test(navigator.userAgent));
+    // 2026-11-24: crawlers only; speed tests (Lighthouse/PageSpeed) now get what visitors get.
     const reduced =
       typeof window !== 'undefined' &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (isBot || reduced) return;
+    if (isBot || reduced || !hasHardwareWebGL()) return;
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
     camera.position.set(0, 0, 6);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'low-power' });
+    // 2026-11-24: no scene on software rendering (no graphics chip, or the browser blocks it). There
+    // the GPU work runs on the CPU and blocks the page; the card keeps its static design instead.
+    let renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'low-power', failIfMajorPerformanceCaveat: true });
+    } catch (err) {
+      return;
+    }
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     mount.appendChild(renderer.domElement);
 

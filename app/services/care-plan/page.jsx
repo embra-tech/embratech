@@ -28,17 +28,17 @@ export const metadata = {
 const CARE_FEATURES = [
   {
     title: 'Ultra-Fast Managed Hosting',
-    desc: 'Global edge-network delivery with 99.99% uptime, automated SSL certificates, and sub-second server response times.',
+    desc: 'Hosting on Vercel\'s global edge network, with automated SSL certificates and uptime monitoring.',
     points: ['Enterprise edge CDN routing', 'Automated SSL renewals', 'DDoS mitigation & firewall', 'Continuous uptime monitoring'],
   },
   {
     title: 'Content & Layout Updates',
-    desc: 'Need to add new team members, update service pricing, swap photos, or post customer reviews? We handle it within 24 hours.',
-    points: ['Up to 2 hours of monthly updates', 'Text and image revisions', 'New promotion banners & announcements', '24-hour business turnaround'],
+    desc: 'Need to add new team members, update service pricing, swap photos, or post customer reviews? We handle it within one business day.',
+    points: ['Up to 2 hours of monthly updates', 'Text and image revisions', 'New promotion banners & announcements', 'One-business-day turnaround'],
   },
   {
     title: 'Speed & Core Web Vitals Audits',
-    desc: 'We continually audit and optimize your site to preserve sub-second load times and ensure your 95+ PageSpeed scores never slip.',
+    desc: 'We check your site\'s speed and Core Web Vitals every month and fix what slips, so pages stay fast on phones.',
     points: ['Monthly Lighthouse & CrUX audit', 'Asset compression maintenance', 'Cache validation checks', 'Mobile responsiveness assurance'],
   },
   {
@@ -73,7 +73,7 @@ const CARE_FAQS = [
   },
   {
     q: 'How do I submit update requests?',
-    a: 'Simply email sales@embratechnologies.org or message us via WhatsApp with your requested changes. Minor updates are typically completed and live within 24 business hours.',
+    a: 'Simply email sales@embratechnologies.org or message us via WhatsApp with your requested changes. Minor updates are typically completed and live within one business day.',
   },
 ];
 
@@ -161,7 +161,7 @@ export default function CarePlanPage() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
             <div style={{ padding: '24px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--line-dark)', borderRadius: '12px' }}>
-              <strong style={{ color: '#fff', fontSize: '1.1rem', display: 'block', marginBottom: '8px' }}>24-Hour Turnaround</strong>
+              <strong style={{ color: '#fff', fontSize: '1.1rem', display: 'block', marginBottom: '8px' }}>One-Business-Day Turnaround</strong>
               <p style={{ fontSize: '0.9rem', color: 'var(--muted-inv)' }}>Content updates and standard inquiries are actioned within one business day.</p>
             </div>
             <div style={{ padding: '24px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--line-dark)', borderRadius: '12px' }}>
@@ -169,8 +169,8 @@ export default function CarePlanPage() {
               <p style={{ fontSize: '0.9rem', color: 'var(--muted-inv)' }}>You own your domain, code, and content. We never hold client files hostage.</p>
             </div>
             <div style={{ padding: '24px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--line-dark)', borderRadius: '12px' }}>
-              <strong style={{ color: '#fff', fontSize: '1.1rem', display: 'block', marginBottom: '8px' }}>7-Day Handover</strong>
-              <p style={{ fontSize: '0.9rem', color: 'var(--muted-inv)' }}>If you ever cancel, we provide a full transfer of all repository files and credentials within 7 days.</p>
+              <strong style={{ color: '#fff', fontSize: '1.1rem', display: 'block', marginBottom: '8px' }}>7-Business-Day Handover</strong>
+              <p style={{ fontSize: '0.9rem', color: 'var(--muted-inv)' }}>If you ever cancel, we provide a full transfer of all repository files and credentials within 7 business days.</p>
             </div>
           </div>
         </div>

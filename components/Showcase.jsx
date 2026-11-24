@@ -45,9 +45,8 @@ export default function Showcase() {
 
     const isBot =
       typeof navigator !== 'undefined' &&
-      (/googlebot|google-inspectiontool|lighthouse|chrome-lighthouse|pagespeed|headlesschrome|ptst|gtmetrix/i.test(navigator.userAgent) ||
-       Boolean(navigator.webdriver) ||
-       (typeof window !== 'undefined' && (new URLSearchParams(window.location.search).has('psi') || new URLSearchParams(window.location.search).has('pagespeed'))));
+      (/googlebot|google-inspectiontool|headlesschrome/i.test(navigator.userAgent));
+    // 2026-11-24: crawlers only; speed tests (Lighthouse/PageSpeed) now get what visitors get.
     const reduced =
       typeof window !== 'undefined' &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;

@@ -191,7 +191,7 @@ export default function PortfolioClient() {
           <div className="portfolio-note reveal-up">
             <div>
               <h3>Your business could be next.</h3>
-              <p>Every project ships with sub-second load times, search-optimized structure, and a design built to convert. Timeline: under 4 weeks from brief to live.</p>
+              <p>Every project ships with fast-loading pages (each case study links to its live PageSpeed report), search-optimized structure, and a design built to convert. Timeline: 2 to 4 weeks from brief to live.</p>
             </div>
             <a href="/contact" className="btn-flip btn-primary btn-large">
               <span className="btn-flip-inner">

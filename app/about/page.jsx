@@ -6,11 +6,11 @@ export const metadata = {
   alternates: { canonical: '/about' },
   title: 'About Our Local SEO & Web Design Agency',
   description:
-    'Learn how Embra Technologies helps US service businesses compete online. We build custom React websites engineered for local SEO and sub-second load times.',
+    'Learn how Embra Technologies helps US service businesses compete online. We build custom React websites built for local SEO and fast loading on phones.',
   openGraph: {
     title: 'About Our Local SEO & Web Design Agency | Embra',
     description:
-      'Learn how Embra Technologies helps US service businesses compete online. We build custom React websites engineered for local SEO and sub-second load times.',
+      'Learn how Embra Technologies helps US service businesses compete online. We build custom React websites built for local SEO and fast loading on phones.',
     url: `${siteConfig.siteUrl}/about`,
     images: [
       {

@@ -1112,6 +1112,59 @@ The homepage hero (headline, 3D orb, buttons) is unchanged, so the first screen 
 
 ---
 
+## AN. Ranking-risk audit and Search Console top-30 content round (2026-11-24, owner requested)
+
+Request: deep analysis for anything that could pull rankings down (content mismatch and contradictions plus the other top causes) and fix it; from 3 months of Search Console data, list the top 100 keywords, pick the top 30 and build content around each; rankings and impressions should both improve.
+
+**Search Console (www property, Sep 29 – Nov 22, 2026):** 9,480 impressions, 5 clicks, average position 40.6; 573 queries with data; 29 pages indexed, 20 not (16 "Discovered – currently not indexed", 1 duplicate, 1 404, 2 redirects).
+- Daily impressions: ~30 (mid-Oct) → 350–650 (Oct 28 – Nov 13, the HVAC page) → 130–215 from Nov 14, while the site's average position improved from ~48 to ~24.
+- The drop is the HVAC page only: ~250 a day at position ~58 until Nov 13, ~20 a day from Nov 14. Its position for "hvac website design" held (56 → 58.7); the lost impressions were page-5/6 appearances (mostly rank-tracking tools). Other pages held steady or grew. No penalty, no manual action.
+- Top 30 picked by impressions divided by position (brand searches excluded), so near-page-1 keywords count as much as high-volume ones. Full list: owner's keyword sheet.
+
+**Audit: 8 risk areas and what was fixed**
+1. **Speed-test cloaking (high).** `middleware.js` rewrote Lighthouse/PageSpeed/GTmetrix requests (and `?psi`, `?pagespeed`) to `/api/bot-proxy`, which served each page with every script stripped ("instant 100/100 score"); the client-side `data-bot` check also gave those tools the animation-free page. Removed: the rewrite, `app/api/bot-proxy/route.js`, and the speed-test patterns in `app/layout.jsx`, `Showcase.jsx` and `ThreeCanvas.jsx` (crawlers only now: Googlebot, Google-InspectionTool, HeadlessChrome). Confirmed: browser, Googlebot and Lighthouse now get identical text on all 49 pages.
+2. **Real performance (high, found by 1).** Honest mobile Lighthouse for the homepage was 52–56 with 56 s of blocking time. Cause, measured: WebGL drawn in software (no GPU) on every frame (homepage blocked time per 5 s: 3.1 s as-is, 0 with WebGL off, 2.3 s with CSS animations paused). Fix: `components/three/gpu.js` detects software rendering (SwiftShader, llvmpipe, Basic Render...) and the hero orb and service-card scenes are skipped there for everyone (device check, not a visitor check); the hero orb also stops drawing while scrolled out of view. Devices with a GPU see exactly the same hero. Result: homepage 78 (blocking 0.6 s), HVAC page 82, /services 78, new guide 87; CLS 0.
+3. **Wrong brand entity links (high).** `sameAs`, the footer and the `twitter:site` tag pointed to twitter.com/embratech (EMBRATECH BLINDAGEM, a Brazilian security company) and linkedin.com/company/embratechnologies (page does not exist). Both removed in `lib/site-config.js`; `sameAs` only appears when a real profile is added.
+4. **Conflicting structured data (medium).** `/contact` declared the business `@id` as a `LocalBusiness` named "Embra" with no address, while every page declares it as a `ProfessionalService`. Now it references the sitewide entity; the `ProfessionalService` name is "Embra Technologies" (same as the Organization), alternate names "Embra" and "embratechnologies.org".
+5. **Contradictions on the page (medium).**
+   - Reply time: "within one business day" (About, homepage "why" card, the CTA on every location and industry page) vs "within 24 hours" (banner, hero). Now 24 hours everywhere for replies.
+   - Care Plan update turnaround: "24 hours", "24-hour business turnaround", "24 business hours" and "one business day" on one page; now one business day throughout. Handover: "7 days" vs "7 business days"; now 7 business days.
+   - About "8 live client websites" vs "9 client projects" elsewhere: label now says 8 builds plus a local SEO project, 9 case studies.
+   - Handyman timeline "2 to 3 weeks" vs "2–4 weeks" sitewide: now 2 to 4 weeks. "Every project above shipped in under 4 weeks" vs case studies that took 4 weeks: now "4 weeks or less".
+   - Pricing: Pro listed "Direct access to the senior builder" although the same page says every client talks to the people doing the work; removed from Pro.
+   - HVAC page listed our live client trades without home health care and travel; fixed.
+   - "EST" vs "ET": ET everywhere.
+6. **Unverifiable claims (medium).** "Load in under a second" / "sub-second" (About, About description, Brooklyn, Alaska, portfolio, process step, Care Plan), "99.99% uptime", "ensure your 95+ PageSpeed scores never slip": replaced with checkable wording (each case study links to its PageSpeed report).
+7. **Indexing (medium).** 16 pages "Discovered – currently not indexed" (case studies, 3 guides, /niches...) and the cost guide grouped by Google with an unrelated site (last crawled Oct 2, during the old crawler error; no canonical seen then). Every page links to every other through the footer, so footer links carry little signal: added contextual links from the expanded pages and new guides to the guides and case studies, accurate sitemap dates for changed pages; indexing to be requested after deploy.
+8. **Author and trust signals (low).** Blog bylines and BlogPosting schema name Md Bilaal Rahman Ali (Founder & Lead Developer) with /about as his page, but /about never mentioned him: one factual line added. Checked and fine: one H1, canonical and index/follow on every page, no duplicate titles or descriptions, no broken internal links, www/https redirects (308), robots.txt, tax-credit facts (25C ended after 2025). Location pages share up to 30% of their text with each other (template sections): acceptable, watch it.
+
+**Content round (top 30 keywords → one target page each, no duplicate pages):**
+- `/niches/hvac-website-design` (11 of the 30: hvac website design, hvac web design, hvac web design agency/company/services, website design for hvac, hvac websites...): +1,000 words. New sections: Web Design for Heating, Ventilation and Air Conditioning Companies; HVAC Web Design Services: What Is Included; HVAC Website Builder or a Custom HVAC Website?; Choosing an HVAC Web Design Agency or Company (honest: no live HVAC client yet); How an HVAC Website Project Works. 3 FAQs (timeline, builders, city pages). Title and H1 unchanged.
+- `/blog/hvac-local-seo` (9: ac company seo, heating and cooling seo, seo hvac, air conditioning seo, seo basics for hvac companies, seo for heating, seo for air conditioning, air conditioning repair seo, the furnace-repair categories question): +780 words. HVAC SEO basics in five steps; Google Business Profile categories table (HVAC contractor, Air conditioning contractor, Air conditioning repair service, Heating contractor, Furnace repair service, Mechanical contractor, Air duct cleaning service; checked against current guidance); AC repair SEO subheading; How to improve your HVAC brand in search; 2 FAQs. dateModified 2026-11-24.
+- New `/blog/hvac-website-examples` (hvac website examples 72/49.6, best hvac websites 43/57.3, best hvac website design 54/69.6, hvac website content 55/41.4): 12 features of the best HVAC websites, pages to write first, sample layout (our labelled concept), tips, mistakes, FAQs. No other company's site named or copied.
+- New `/blog/hvac-keywords` (hvac keywords 63/47.6, select hvac keywords 41/40.3, keywords for hvac 17/42.8, best hvac keywords for seo...): how to select HVAC keywords, lists by service, problem, season and location, keyword-to-page map, no made-up search volumes.
+- `/niches/auto-body-shop-website-design` (4: collision repair website design, auto body website design, auto body shop website design, collision center website design): Auto Body Website Design Checklist; Collision Center Website Design: One Shop or Several.
+- `/niches/roofing-website-design` (roofing company web design services 110/38.6, roofing website 46/14.2): Roofing Company Web Design Services; hosting note in pricing.
+- `/niches/web-design-for-handyman-businesses` (handyman website design 82/39.6): "Handyman Website Examples We've Built" (adds Alaska Handyman Services); builder vs custom.
+- `/locations/chicago` (seo company for hvac repair in chicago 86/29.7): H2 "HVAC SEO in Chicago: Local SEO for HVAC Repair and Plumbing Contractors" plus "What an SEO company for HVAC repair in Chicago should do".
+- `/locations/los-angeles` (hvac website design la 58/24.3): "What an HVAC website in Los Angeles should cover" (cooling season, Title 24 permits, heat pumps and rebates, areas).
+- `/locations/spokane` (airway heights seo 99/12.3): 2 FAQs (Airway Heights web design, what Airway Heights SEO involves). `/locations/juneau` (juneau seo 38/7.7): Juneau SEO paragraph.
+- `public/llms.txt`: the 2 new guides; `app/sitemap.js`: 49 URLs, changed pages dated 2026-11-24.
+
+**Checks (local production build):** lint clean, build OK, 49 static pages. All 47 existing pages vs before: titles, canonicals, robots and H1s unchanged (About description changed on purpose); HVAC page 1,140 → 2,147 words, HVAC SEO guide 2,025 → 2,801. User, Googlebot and Lighthouse text identical on all 49 pages. Audit of 49 paths on desktop, phone and as Googlebot: 0 problems (no overflow, CLS ≤ 0.008, no console errors). No JSON-LD parse errors.
+
+**Files:** `middleware.js`, `app/api/bot-proxy/route.js` (deleted), `app/layout.jsx`, `lib/site-config.js`, `app/contact/page.jsx`, `components/three/gpu.js` (new), `components/three/HeroScene.js`, `components/three/ThreeCanvas.jsx`, `components/Hero.jsx` (comment + quiet catch), `components/Showcase.jsx`, `components/Cta.jsx`, `components/WhyUs.jsx`, `components/Process.jsx`, `app/about/AboutClient.jsx`, `app/about/page.jsx`, `app/services/care-plan/page.jsx`, `app/pricing/PricingClient.jsx`, `app/portfolio/PortfolioClient.jsx`, `app/locations/[city]/LocationClient.jsx`, `lib/cityGuides.js`, `app/niches/hvac-website-design/page.jsx`, `app/niches/auto-body-shop-website-design/page.jsx`, `app/niches/roofing-website-design/page.jsx`, `app/niches/web-design-for-handyman-businesses/page.jsx`, `lib/blog/hvac-local-seo.js`, `lib/blog/hvac-website-examples.js` (new), `lib/blog/hvac-keywords.js` (new), `lib/blogData.js`, `app/blog/[slug]/page.jsx`, `app/sitemap.js`, `public/llms.txt`.
+
+**Still open (owner):**
+- Homepage testimonials (`components/Testimonials.jsx`, 3 quotes with 5 stars) are still unconfirmed; `lib/testimonials.js` is empty "until the owner supplies real, attributable quotes". Confirm each in writing with the client, or remove them.
+- Add real profiles to `lib/site-config.js` `social` when they exist (LinkedIn company page, Google Business Profile...).
+- After deploy: request indexing for the 2 new guides, HVAC page, HVAC SEO guide, auto body, roofing, handyman, Chicago, LA, Spokane, Juneau, About, and the cost guide; resubmit the sitemap.
+- Measure around Dec 8 and Dec 22: the 30 target queries (position and impressions), indexed page count.
+
+**Undo:** revert this release's commit; to restore only the old speed-test behavior (not recommended), restore `app/api/bot-proxy/route.js` and the rewrite in `middleware.js` from git history.
+
+---
+
 ## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)
 
 No site code changed in this section.

@@ -29,21 +29,10 @@ const contactSchema = {
   name: 'Contact Embra Technologies',
   url: `${siteConfig.siteUrl}/contact`,
   description: 'Request a free 24-hour custom homepage sample for your home service business.',
-  mainEntity: {
-    '@type': 'LocalBusiness',
-    '@id': `${siteConfig.siteUrl}/#localbusiness`,
-    name: siteConfig.brandName,
-    telephone: siteConfig.phone,
-    email: siteConfig.email,
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '09:00',
-        closes: '18:00',
-      },
-    ],
-  },
+  // 2026-11-24: reference the sitewide business entity (app/layout.jsx) instead of redefining it. This page
+  // used to declare the same @id as a "LocalBusiness" named "Embra" with no address, while every page
+  // declares it as a ProfessionalService: two conflicting descriptions of one business.
+  mainEntity: { '@id': `${siteConfig.siteUrl}/#localbusiness` },
 };
 
 // 2026-10-21: page-level BreadcrumbList removed; the visible <Breadcrumb> in ContactClient already outputs an identical one.

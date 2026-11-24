@@ -11,7 +11,7 @@ const STEPS = [
   },
   {
     badge: 'Step 03', title: 'Modern Build & SEO',
-    text: 'Clean code, sub-second load performance, and schema metadata ready for search dominance.',
+    text: 'Clean code, fast load times on phones, and schema markup ready for search.',
     graphic: 'code',
   },
   {

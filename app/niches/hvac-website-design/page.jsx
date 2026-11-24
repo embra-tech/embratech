@@ -7,6 +7,9 @@ import StockPhoto from '../../../components/StockPhoto';
 import FaqAccordion from '../../../components/FaqAccordion';
 import siteConfig from '../../../lib/site-config';
 
+// 2026-11-24: Search Console round (top 30 queries, 3 months): sections for HVAC web design services, heating and
+// ventilation companies, website builder vs custom, choosing an HVAC web design company, project steps; 3 FAQs;
+// links to the new HVAC website examples and HVAC keywords guides. No HVAC client claimed (concept stays labelled).
 // 2026-10-26: copy rewritten (batch 2): plain, specific copy replacing the old template; concept design
 // labelled clearly as a sample brand; removed unsourced cost and conversion claims and hype; pricing
 // aligned; 6 FAQs including HVAC SEO. Layout and concept image unchanged.
@@ -51,11 +54,23 @@ const FAQS = [
   },
   {
     q: 'Is the HVAC website shown on this page a real client?',
-    a: 'No. Polar Air HVAC is a concept design we created to show the layout we recommend for heating and cooling contractors. Our live client projects are in auto body repair, tree service, handyman, landscaping and laundry services. Before you commit, we design a free homepage sample for your own HVAC company.',
+    a: 'No. Polar Air HVAC is a concept design we created to show the layout we recommend for heating and cooling contractors. Our live client projects are in auto body repair, tree service, handyman, landscaping, home health care, travel and laundry services. Before you commit, we design a free homepage sample for your own HVAC company.',
   },
   {
     q: 'How much does an HVAC website cost?',
     a: 'Our Starter website is $700 total with split payments, or $600 paid in full, for a custom homepage plus 2 inner pages. Growth is $1,000 for up to 7 pages, enough for separate cooling, heating and maintenance pages, plus structured data and Google Business Profile setup.',
+  },
+  {
+    q: 'How long does an HVAC website take to build?',
+    a: 'Most projects take 2 to 4 weeks from the first call to launch, depending on how quickly we receive your photos, service list and service area. You see a free custom homepage sample within 24 hours, before you pay anything.',
+  },
+  {
+    q: 'Should we use an HVAC website builder instead?',
+    a: 'A website builder can work if you have the time to write every service page yourself and keep it updated each season. Most HVAC owners we talk to would rather spend that time on jobs. A custom site from us costs a one-time $600 to $1,500, you own it outright, and there is no monthly platform fee unless you choose the optional Care Plan.',
+  },
+  {
+    q: 'Do HVAC websites need a page for every city we serve?',
+    a: 'No. Pages that only swap the town name help nobody and can hurt your rankings. Add a town page only where you have real local work to show, such as photos, reviews or projects in that area; otherwise list your service area on your main pages and in your Google Business Profile.',
   },
   {
     q: 'Do you work with HVAC companies in my area?',
@@ -136,12 +151,47 @@ export default function NichePage() {
           <p style={para}>2. <strong>Replacements that earn trust:</strong> installation and replacement pages that show the certifications you hold, such as NATE or EPA Section 608, any manufacturer dealer status you have, real reviews and photos of your installs, and your financing options if you offer them.</p>
           <p style={para}>3. <strong>Maintenance plans that smooth out the seasons:</strong> a dedicated page explaining what your tune-up plan includes and what it costs, with a simple way to sign up.</p>
 
+          <h2 style={h2}>Web Design for Heating, Ventilation and Air Conditioning Companies</h2>
+          <p style={para}>Not every HVAC business looks the same. A residential AC company, a heating and ventilation contractor and a commercial mechanical contractor need different pages, even though they share the same trade. We plan the site around the work you actually sell:</p>
+          <p style={para}>&bull; <strong>Residential heating and cooling:</strong> AC repair and installation, furnace repair and replacement, heat pumps, ductless mini-splits and maintenance plans, each with its own page.</p>
+          <p style={para}>&bull; <strong>Ventilation and indoor air quality:</strong> ventilation systems, energy and heat recovery ventilators (ERVs and HRVs), air purification, humidifiers and duct cleaning, explained in plain language with the problems they solve.</p>
+          <p style={para}>&bull; <strong>Commercial HVAC:</strong> rooftop units, preventive maintenance agreements and service request forms for property managers, kept separate from your homeowner pages so each audience finds its own path.</p>
+
           <StockPhoto name="stock-hvac" />
 
           <h2 style={h2}>Local SEO for Heating and Cooling Contractors</h2>
           <p style={para}>Local search for HVAC contractors revolves around phrases like &quot;AC repair near me,&quot; &quot;furnace replacement,&quot; &quot;heat pump installation&quot; and &quot;ductless mini-split,&quot; and demand swings with the weather, so pages need to be ready before each season starts.</p>
           <p style={para}>We give cooling, heating, heat pumps, indoor air quality and commercial work their own clear pages, add HVACBusiness and Service structured data, and add area pages only where you have real local work to show. For a step-by-step plan, read our <Link href="/blog/hvac-local-seo" style={link}>HVAC SEO guide for AC and heating companies</Link>, see how we approach <Link href="/locations/chicago" style={link}>local SEO for Chicago HVAC contractors</Link>, or explore our <Link href="/services/local-seo" style={link}>local SEO service</Link>.</p>
-          <p style={para}>We also work with heating and cooling contractors in <Link href="/locations/fairbanks" style={link}>Fairbanks</Link>, where no-heat calls come at -40°F, in the <Link href="/locations/phoenix" style={link}>Phoenix metro</Link>, where AC failures are summer emergencies, and in <Link href="/locations/los-angeles" style={link}>Los Angeles</Link>.</p>
+          <p style={para}>We also work with heating and cooling contractors in <Link href="/locations/fairbanks" style={link}>Fairbanks</Link>, where no-heat calls come at -40°F, in the <Link href="/locations/phoenix" style={link}>Phoenix metro</Link>, where AC failures are summer emergencies, and in Los Angeles, where we cover <Link href="/locations/los-angeles" style={link}>HVAC website design in Los Angeles</Link> on its own page.</p>
+
+          <h2 style={h2}>HVAC Web Design Services: What Is Included</h2>
+          <p style={para}>Every HVAC website we build is designed and written from scratch for your company. Our HVAC web design services cover:</p>
+          <p style={para}>&bull; <strong>Custom design</strong> in your colors, with your own trucks, team and install photos rather than stock images wherever you have them.</p>
+          <p style={para}>&bull; <strong>Service pages</strong> for cooling, heating, heat pumps, indoor air quality and maintenance plans, written around the questions homeowners ask before they call.</p>
+          <p style={para}>&bull; <strong>Mobile-first layout</strong> with a call button that stays on screen, and a short service request form that works with one thumb.</p>
+          <p style={para}>&bull; <strong>Financing and maintenance plan sections</strong> that only show the terms and prices you actually offer.</p>
+          <p style={para}>&bull; <strong>On-page SEO and structured data:</strong> page titles, descriptions, headings, HVACBusiness and Service markup, and a sitemap submitted to Google.</p>
+          <p style={para}>&bull; <strong>Integrations</strong> with the scheduling, CRM or payment tools you already use, when you need them (see <Link href="/services/website-integrations" style={link}>website integrations</Link>).</p>
+          <p style={para}>&bull; <strong>Full ownership:</strong> the code, content and domain are yours once the site is paid for.</p>
+
+          <h2 style={h2}>HVAC Website Builder or a Custom HVAC Website?</h2>
+          <p style={para}>DIY website builders and HVAC website templates are quick to start, and they are a reasonable choice if you enjoy writing and have time to update the site every season. The trade-offs show up later: the monthly fee never ends, every HVAC company in town can use the same template, and the pages that win calls (a separate page for each service, with real details) still have to be written by someone.</p>
+          <p style={para}>A custom HVAC website costs more up front but is built around your services, your service area and your busy seasons, and you own it outright. For a side-by-side look at the real costs, see our <Link href="/blog/website-cost-for-home-service-businesses" style={link}>website cost guide for home service businesses</Link>, or work out what a website is worth to your business with our <Link href="/blog/website-roi-calculator" style={link}>contractor website ROI calculator</Link>.</p>
+
+          <h2 style={h2}>Choosing an HVAC Web Design Agency or Company</h2>
+          <p style={para}>Whoever you hire, whether it is us, a national HVAC marketing agency or a local freelancer, these questions separate good HVAC web design companies from the rest:</p>
+          <p style={para}>1. <strong>Who owns the website if you leave?</strong> Some agencies rent you the site as part of a monthly contract. You should own the code, content and domain.</p>
+          <p style={para}>2. <strong>Is pricing published?</strong> You should know the full cost before the first call, including any monthly fees.</p>
+          <p style={para}>3. <strong>Can you see real work and check its speed?</strong> Ask for live sites, not just screenshots, and run them through Google&apos;s PageSpeed test yourself.</p>
+          <p style={para}>4. <strong>Who writes the service pages?</strong> Generic copy shared across clients does little for search. Each page should describe your services and your area.</p>
+          <p style={para}>5. <strong>What happens after launch?</strong> Seasonal offers, new photos and new services should be easy to add, by you or by them.</p>
+          <p style={para}>About us, honestly: we are a small remote team of senior designers and developers, our pricing is published, and you see a free custom homepage sample before paying anything. We have not built a live HVAC client site yet (the design above is a concept); our live projects are in auto body repair, handyman, tree service, landscaping and other home services, and each one links to its PageSpeed report in our <Link href="/portfolio" style={link}>portfolio</Link>. For examples of what strong heating and cooling sites have in common, see our guide to <Link href="/blog/hvac-website-examples" style={link}>HVAC website examples</Link>.</p>
+
+          <h2 style={h2}>How an HVAC Website Project Works</h2>
+          <p style={para}>1. <strong>Free homepage sample (within 24 hours):</strong> tell us your services, service area and brand colors, and we design your homepage before you pay anything.</p>
+          <p style={para}>2. <strong>Content and photos (week 1):</strong> we write the service pages with you, using your photos, certifications, reviews and financing details.</p>
+          <p style={para}>3. <strong>Build and review (weeks 1 to 3):</strong> we build every page mobile-first and you review it on your own phone.</p>
+          <p style={para}>4. <strong>Launch and Google setup (2 to 4 weeks from the first call):</strong> we connect your domain, submit the sitemap to Google Search Console and check your Google Business Profile links to the new site. Our <Link href="/blog/hvac-keywords" style={link}>HVAC keywords guide</Link> explains how we choose the searches each page targets.</p>
 
           <h2 style={h2}>Pricing for HVAC Websites</h2>
           <p style={para}>Published pricing, no long-term contract, and you own the finished website:</p>

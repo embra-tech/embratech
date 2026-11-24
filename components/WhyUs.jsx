@@ -28,7 +28,7 @@ const ITEMS = [
   },
   {
     title: 'Long-Term Partnership',
-    text: 'You get a real reply within one business day, not a ticket, not a bot. We stand by every site we ship, long after launch.',
+    text: 'You get a real reply within 24 hours, not a ticket, not a bot. We stand by every site we ship, long after launch.',
     icon: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />,
   },
 ];

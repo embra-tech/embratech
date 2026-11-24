@@ -51,7 +51,7 @@ const TIERS = [
       'Inquiry management system',
       'Contract signing with e-signature',
       '1 month of free fixes after launch',
-      'Direct access to the senior builder doing your work',
+      // 2026-11-24: 'Direct access to the senior builder' removed: every plan includes it (see "Lean, async team" below)
     ],
     prices: { standard: 1500, full: 1350, fullSave: 150, monthly: 375 },
     featured: false,

@@ -97,15 +97,17 @@ const globalSchema = [
     "name": siteConfig.legalName,
     "url": siteConfig.siteUrl,
     "logo": `${siteConfig.siteUrl}${siteConfig.logo}`,
-    "sameAs": Object.values(siteConfig.social).filter(Boolean)
+    // 2026-11-24: sameAs only when we have real profiles (see lib/site-config.js)
+    ...(Object.values(siteConfig.social).some(Boolean) ? { "sameAs": Object.values(siteConfig.social).filter(Boolean) } : {}),
   },
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": `${siteConfig.siteUrl}/#localbusiness`,
-    "name": siteConfig.brandName,
+    // 2026-11-24: same name as the Organization entity (was "Embra" here, "Embra Technologies" there).
     // 2026-10-26: short brand name for brand searches ("embra", "what is embra"). Not "Embra Inc.", which may be another company.
-    "alternateName": ["Embra", "Embra Technologies"],
+    "name": siteConfig.legalName,
+    "alternateName": ["Embra", "embratechnologies.org"],
     "url": siteConfig.siteUrl,
     "logo": `${siteConfig.siteUrl}${siteConfig.logo}`,
     "image": `${siteConfig.siteUrl}${siteConfig.ogImage}`,
@@ -136,8 +138,11 @@ export default function RootLayout({ children }) {
     // 2026-11-18: lang "en-US" (was "en"): the site is written for US businesses in American English.
     <html lang="en-US" data-theme="obsidian" className={`${figtree.variable} ${inter.variable} ${jetbrains.variable}`}>
       <head>
+        {/* 2026-11-24: crawlers only. Speed tests (Lighthouse/PageSpeed, GTmetrix, WebPageTest, ?psi=1) used
+            to get this light mode too, so their scores did not reflect what visitors get. They now see
+            the same page as everyone else. Googlebot keeps it: same content, no animations. */}
         <script dangerouslySetInnerHTML={{ __html: `
-          if (/googlebot|google-inspectiontool|lighthouse|chrome-lighthouse|pagespeed|headlesschrome|ptst|gtmetrix/i.test(navigator.userAgent) || window.location.search.includes('psi=1') || window.location.search.includes('pagespeed')) {
+          if (/googlebot|google-inspectiontool|headlesschrome/i.test(navigator.userAgent)) {
             document.documentElement.setAttribute('data-bot', 'true');
           }
         ` }} />

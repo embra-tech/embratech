@@ -13,6 +13,8 @@ import siteConfig from '../../../lib/site-config';
 // for handyman, handyman website builder) and answers city searches in an FAQ instead of adding
 // city pages. Unsourced stats, fixed PageSpeed numbers and hype removed. Layout unchanged.
 
+// 2026-11-24: Search Console round: "Handyman Website Examples We've Built" (adds Alaska Handyman Services) and a
+// builder-vs-custom section (handyman website design 82/39.6, handyman website examples 5/31, handyman website builder 5/36).
 const PAGE_DESCRIPTION = 'Affordable handyman website design: custom, mobile-first sites with tap-to-call and photo quote requests. From $700, or $600 paid in full. Free sample first.';
 
 export const metadata = {
@@ -61,7 +63,7 @@ const FAQS = [
   },
   {
     q: 'How long does it take to design and launch a handyman website?',
-    a: 'Most projects take 2 to 3 weeks from the first call to launch, depending on how quickly photos and details are ready. Before you commit to anything, we design a free custom homepage sample within 24 hours.',
+    a: 'Most projects take 2 to 4 weeks from the first call to launch, depending on how quickly photos and details are ready. Before you commit to anything, we design a free custom homepage sample within 24 hours.',
   },
 ];
 
@@ -139,12 +141,17 @@ export default function NichePage() {
           <p style={para}>2. <strong>Easy contact on a phone:</strong> a contact bar that stays in view, a tap-to-call button, and a text or WhatsApp option if you use one, placed where a thumb naturally reaches.</p>
           <p style={para}>3. <strong>Photo quote requests:</strong> many homeowners struggle to describe what&apos;s wrong. The quote form lets them snap a photo and send it with their request, so you can judge the job before you drive out.</p>
 
-          <h2 style={h2}>Handyman Websites We&apos;ve Built</h2>
+          <h2 style={h2}>Handyman Website Examples We&apos;ve Built</h2>
+          <p style={para}>For <Link href="/portfolio/alaska-handyman-services" style={link}>Alaska Handyman Services</Link> in Anchorage, which does everything from roof leaks and drywall to bathroom remodels, we grouped the work into eight clear service categories, added drag-to-compare before-and-after photos of real jobs and put the contractor license number at the top of the page.</p>
           <p style={para}>For <Link href="/portfolio/alaska-fast-fix" style={link}>Alaska Fast Fix Handyman</Link>, many calls are urgent and the service area is large. We put the phone number one tap away on every page and showed the service area near the top, so homeowners know straight away whether the business covers them.</p>
           <p style={para}>For <Link href="/portfolio/vvasquez-handyman" style={link}>V Vasquez Handyman LLC</Link> in Merced, CA, which does lawn care, concrete and irrigation work, we replaced a generic template with a clear catalog of services and a quote form that pre-selects the service the visitor was viewing.</p>
           <p style={para}>Each case study links to the site&apos;s live PageSpeed report, so you can check how quickly it loads for yourself.</p>
 
           <StockPhoto name="stock-handyman" />
+
+          <h2 style={h2}>Handyman Website Builder or a Custom Handyman Website?</h2>
+          <p style={para}>Plenty of one-person handyman businesses start with a website builder, and that is fine for a first site. The catch is time: someone still has to write a description for every type of job, take decent photos and keep the site current, and the builder&apos;s monthly fee keeps running whether the site brings in work or not.</p>
+          <p style={para}>A custom handyman website from us is a one-time cost from $600 (paid in full), you own it, and the service categories, photo quote form and service area are set up for how handyman work actually comes in. Whichever you choose, the essentials are the same: a phone number one tap away, a clear list of what you do, real photos and the towns you cover.</p>
 
           <h2 style={h2}>Getting Found by Homeowners Near You</h2>
           <p style={para}>Every handyman website we build includes the search basics: a clear heading structure, a sitemap, and LocalBusiness structured data with your service area and hours. Most local calls come through your Google Business Profile, so a complete, active profile and a steady flow of reviews matter just as much as the website.</p>
