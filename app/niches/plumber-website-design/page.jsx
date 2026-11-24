@@ -12,6 +12,12 @@ import siteConfig from '../../../lib/site-config';
 // and an unconfirmed ServiceTitan embed; pricing aligned with /pricing; honest FAQ about the concept
 // design. Layout and concept image unchanged.
 
+// 2026-11-24 (owner's list): 190 queries in 28 days, mostly "website design for plumbers [city or state]" at
+// positions 5 to 20 (independence 9.4, irving, corona, memphis 11.8, springfield 19.8), plus plumber web design
+// 13/35.6, plumbing web design 5/27.4, website design for plumbers 2/27.5, plumbing web design services cost 20/11.2.
+// Added a services-included section, a "plumbers in any US city" section (one natural sentence names three
+// example cities; no city lists and no city pages, which Google's spam policies treat as stuffing/doorways),
+// project steps, a cost heading and 4 FAQs. Title, H1, existing sections and the concept image are unchanged.
 const PAGE_DESCRIPTION = 'Plumber website design for independent plumbing companies: tap-to-call on every page, emergency and scheduled service pages, license details up front. From $700.';
 
 export const metadata = {
@@ -57,6 +63,22 @@ const FAQS = [
   {
     q: 'How much do plumbing web design services cost?',
     a: 'Our Starter website is $700 total with split payments, or $600 paid in full, for a custom homepage plus 2 inner pages. Growth is $1,000 for up to 7 pages, enough for separate service pages, plus structured data and Google Business Profile setup. The optional Care Plan is $150/month. Our guide to contractor website costs compares these prices with templates and larger agencies.',
+  },
+  {
+    q: 'Do you design websites for plumbers in my city?',
+    a: 'Yes. We work remotely with plumbing companies across the United States, so your location does not matter. Your website is built around the towns you actually serve, with your service area shown clearly near the top so local customers can see you cover them.',
+  },
+  {
+    q: 'Can my website promote water treatment and filtration services?',
+    a: 'Yes. If you install water softeners, whole-house filtration or reverse osmosis systems, that work gets its own page: what each system does, the signs a home needs one, the brands you install and how a water test or quote works. It is planned work, so it gets a quote form rather than an emergency call button.',
+  },
+  {
+    q: 'How long does it take to build a plumbing website?',
+    a: 'Most plumbing websites take 2 to 4 weeks from the first call to launch, depending on the number of pages and how quickly photos and details are ready. The free homepage sample comes first, within 24 hours.',
+  },
+  {
+    q: 'Can you redesign my current plumbing website without losing my Google rankings?',
+    a: 'We keep your existing page addresses where we can and redirect any that change, then check Search Console after launch. No one can guarantee rankings, but those steps protect the positions your current pages have earned.',
   },
 ];
 
@@ -133,7 +155,20 @@ export default function NichePage() {
           <p style={para}>2. <strong>License, insurance and reviews up front:</strong> your license number where your state requires one, insurance, years in business and recent Google reviews near the top of the page, before the visitor has to scroll.</p>
           <p style={para}>3. <strong>Emergency and scheduled work kept separate:</strong> urgent services (burst pipes, leaks, sewer backups) and planned installations (tankless water heaters, repiping, water filtration) each get their own clear pages, with the right call to action for each.</p>
 
+          <h2 style={h2}>Plumbing Web Design Services: What Is Included</h2>
+          <p style={para}>Every plumbing website we build is designed and written for your business, not adapted from a template:</p>
+          <p style={para}>&bull; <strong>A page for each service</strong> you want more of: emergency plumbing, drain cleaning, water heaters (tank and tankless), sewer lines, leak detection, repiping, fixtures, and water treatment or filtration if you install it.</p>
+          <p style={para}>&bull; <strong>An emergency-first mobile layout,</strong> with a call button that stays on screen and a clear message about when you take urgent calls.</p>
+          <p style={para}>&bull; <strong>A short quote form,</strong> plus online booking for scheduled work if your scheduling software offers a booking link.</p>
+          <p style={para}>&bull; <strong>Trust details up front:</strong> license number where your state requires one, insurance, years in business and genuine reviews.</p>
+          <p style={para}>&bull; <strong>Search basics built in:</strong> page titles and headings that match how customers search, Plumber structured data, a sitemap submitted to Google, and Google Business Profile setup on the Growth plan.</p>
+          <p style={para}>&bull; <strong>The writing:</strong> we write every page from a short call with you, and you check the details before anything goes live.</p>
+
           <StockPhoto name="stock-plumber" />
+
+          <h2 style={h2}>Website Design for Plumbers in Any US City</h2>
+          <p style={para}>You don&apos;t need a web designer in your own town. We work remotely with plumbing companies across the US, whether you are a one-truck plumber in Independence, Missouri, a growing shop in Irving, Texas or a family business in Corona, California, with calls and updates during US business hours.</p>
+          <p style={para}>What changes from city to city is the competition and the way local customers search, not what makes a plumbing website work. We build your site around your real service area: your main city in the page titles and headline, the towns you cover in a clear service-area section, and your Google Business Profile linked to the right pages. Separate town pages come later, and only for towns where you have real jobs and reviews to show.</p>
 
           <h2 style={h2}>Getting Found for Plumbing Searches</h2>
           <p style={para}>Most plumbing calls from search come through Google&apos;s map results and the pages below them. Every plumbing website we build includes clear service pages, a sitemap and LocalBusiness and Plumber structured data with your service area and hours. Your Google Business Profile and steady, genuine reviews matter just as much as the website.</p>
@@ -142,7 +177,14 @@ export default function NichePage() {
           <h2 style={h2}>Connecting Your Website to How You Work</h2>
           <p style={para}>Quote requests can arrive by email the moment they are sent, and customers can text you or message you on WhatsApp if you use it. If your scheduling software offers a booking link or embed, we add it where it helps without slowing the page down. See our <Link href="/services/website-integrations" style={link}>website integrations</Link> page for the options.</p>
 
-          <h2 style={h2}>Pricing for Plumbing Websites</h2>
+          <h2 style={h2}>How a Plumbing Website Project Works</h2>
+          <p style={para}>1. <strong>Free homepage sample:</strong> tell us your company name, services and service area, and we send a custom homepage design within 24 hours.</p>
+          <p style={para}>2. <strong>Discovery call:</strong> we go through your services, emergency hours, the towns you cover, your license and insurance, and the photos you have.</p>
+          <p style={para}>3. <strong>Design and writing:</strong> we write and design each page, and you review everything before launch.</p>
+          <p style={para}>4. <strong>Launch:</strong> we publish the site, submit the sitemap to Google and connect your Google Business Profile to the right pages.</p>
+          <p style={para}>Most plumbing websites take 2 to 4 weeks from the first call to launch, depending on how quickly photos and details are ready.</p>
+
+          <h2 style={h2}>Plumbing Web Design Cost and Pricing</h2>
           <p style={para}>Published pricing, no long-term contract, and you own the finished website:</p>
           <p style={para}>&bull; <strong>Starter ($700 total with split payments, or $600 paid in full):</strong> a custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a quote request form and on-page SEO basics.</p>
           <p style={para}>&bull; <strong>Growth ($1,000):</strong> up to 7 pages, enough for separate water heater, drain cleaning and emergency pages, plus structured data and Google Business Profile setup.</p>

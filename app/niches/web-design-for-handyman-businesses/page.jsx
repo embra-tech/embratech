@@ -15,6 +15,11 @@ import siteConfig from '../../../lib/site-config';
 
 // 2026-11-24: Search Console round: "Handyman Website Examples We've Built" (adds Alaska Handyman Services) and a
 // builder-vs-custom section (handyman website design 82/39.6, handyman website examples 5/31, handyman website builder 5/36).
+// 2026-11-24 (round 2, owner's list; 3 months): handyman web design 28/38.6, handyman business website design 23/40.9,
+// handyman web design services 16/27.4, handyman business website design company 14/29.3, website designers for
+// handyman business 12/42, website design for handyman illinois 9/17.3. Added services-included, choosing a designer
+// and project-steps sections, a cost heading, an Illinois link (real client: Sky High Tree Service, Naperville) and a
+// wider city FAQ. Title, H1, existing sections and the live-project image are unchanged.
 const PAGE_DESCRIPTION = 'Affordable handyman website design: custom, mobile-first sites with tap-to-call and photo quote requests. From $700, or $600 paid in full. Free sample first.';
 
 export const metadata = {
@@ -43,7 +48,7 @@ const para = { marginBottom: '20px' };
 const FAQS = [
   {
     q: 'Do you design websites for handymen in my city?',
-    a: 'Yes. We work remotely with handyman businesses across the United States, so your location doesn\'t matter. Your website is built around the towns you actually serve, with your service area shown clearly near the top so local homeowners can see you cover them.',
+    a: 'Yes. We work remotely with handyman businesses across the United States, so your location doesn\'t matter. Our live handyman sites are in Alaska and California, and our clients range from Illinois to Alaska. Your website is built around the towns you actually serve, with your service area shown clearly near the top so local homeowners can see you cover them.',
   },
   {
     q: 'Is there an affordable option for a one-person handyman business?',
@@ -141,6 +146,15 @@ export default function NichePage() {
           <p style={para}>2. <strong>Easy contact on a phone:</strong> a contact bar that stays in view, a tap-to-call button, and a text or WhatsApp option if you use one, placed where a thumb naturally reaches.</p>
           <p style={para}>3. <strong>Photo quote requests:</strong> many homeowners struggle to describe what&apos;s wrong. The quote form lets them snap a photo and send it with their request, so you can judge the job before you drive out.</p>
 
+          <h2 style={h2}>Handyman Web Design Services: What Is Included</h2>
+          <p style={para}>Every handyman business website we build is designed and written for your business, not adapted from a template:</p>
+          <p style={para}>&bull; <strong>Service category pages</strong> for the work you want more of, each listing the kinds of jobs you take on and ending with a quote button.</p>
+          <p style={para}>&bull; <strong>A photo quote form,</strong> so homeowners can show you the problem instead of describing it.</p>
+          <p style={para}>&bull; <strong>Your service area near the top</strong> of the page, so visitors know straight away that you cover them.</p>
+          <p style={para}>&bull; <strong>Trust details:</strong> insurance, any licenses that apply in your state, real photos of your work and genuine reviews.</p>
+          <p style={para}>&bull; <strong>Search basics built in:</strong> page titles and headings that match how homeowners search, LocalBusiness structured data, a sitemap submitted to Google, and Google Business Profile setup on the Growth plan.</p>
+          <p style={para}>&bull; <strong>The writing:</strong> we write every page from a short call with you, and you check the details before anything goes live.</p>
+
           <h2 style={h2}>Handyman Website Examples We&apos;ve Built</h2>
           <p style={para}>For <Link href="/portfolio/alaska-handyman-services" style={link}>Alaska Handyman Services</Link> in Anchorage, which does everything from roof leaks and drywall to bathroom remodels, we grouped the work into eight clear service categories, added drag-to-compare before-and-after photos of real jobs and put the contractor license number at the top of the page.</p>
           <p style={para}>For <Link href="/portfolio/alaska-fast-fix" style={link}>Alaska Fast Fix Handyman</Link>, many calls are urgent and the service area is large. We put the phone number one tap away on every page and showed the service area near the top, so homeowners know straight away whether the business covers them.</p>
@@ -149,6 +163,15 @@ export default function NichePage() {
 
           <StockPhoto name="stock-handyman" />
 
+          <h2 style={h2}>Choosing a Web Designer for Your Handyman Business</h2>
+          <p style={para}>Whoever you hire, ask these questions before you sign:</p>
+          <p style={para}>&bull; <strong>Have you built websites for handymen before?</strong> Ask for live sites, not screenshots, and open them on your phone.</p>
+          <p style={para}>&bull; <strong>Will I own the website and the domain?</strong> Some platforms rent you the site, and it disappears when you stop paying.</p>
+          <p style={para}>&bull; <strong>Is the price published and fixed?</strong> You should know the total before the work starts.</p>
+          <p style={para}>&bull; <strong>Who writes the service descriptions?</strong> For a handyman with dozens of job types, the writing is most of the work.</p>
+          <p style={para}>&bull; <strong>Do they promise guaranteed rankings?</strong> No one controls Google&apos;s results, so treat a guarantee as a warning sign.</p>
+          <p style={para}>Our answers: we have built three live handyman websites (above), our prices are published, you own the finished site, and we write the pages for you.</p>
+
           <h2 style={h2}>Handyman Website Builder or a Custom Handyman Website?</h2>
           <p style={para}>Plenty of one-person handyman businesses start with a website builder, and that is fine for a first site. The catch is time: someone still has to write a description for every type of job, take decent photos and keep the site current, and the builder&apos;s monthly fee keeps running whether the site brings in work or not.</p>
           <p style={para}>A custom handyman website from us is a one-time cost from $600 (paid in full), you own it, and the service categories, photo quote form and service area are set up for how handyman work actually comes in. Whichever you choose, the essentials are the same: a phone number one tap away, a clear list of what you do, real photos and the towns you cover.</p>
@@ -156,9 +179,15 @@ export default function NichePage() {
           <h2 style={h2}>Getting Found by Homeowners Near You</h2>
           <p style={para}>Every handyman website we build includes the search basics: a clear heading structure, a sitemap, and LocalBusiness structured data with your service area and hours. Most local calls come through your Google Business Profile, so a complete, active profile and a steady flow of reviews matter just as much as the website.</p>
           <p style={para}>If you serve several nearby towns, we add town pages only where there is something real to show, such as jobs you&apos;ve done and reviews from local customers, rather than copying one page and swapping the city name. Learn more about our <Link href="/services/local-seo" style={link}>local SEO service for home service businesses</Link>.</p>
-          <p style={para}>Handyman businesses in several areas find us by searching their city. See how we work with handymen in the <Link href="/locations/denver" style={link}>Denver metro, including Centennial, Aurora and Boulder</Link>, in <Link href="/locations/anchorage" style={link}>Anchorage</Link>, in <Link href="/locations/phoenix" style={link}>Tempe and Mesa</Link> and in <Link href="/locations/spokane" style={link}>Spokane</Link>.</p>
+          <p style={para}>Handyman businesses in several areas find us by searching their city. See how we work with handymen in the <Link href="/locations/denver" style={link}>Denver metro, including Centennial, Aurora and Boulder</Link>, in <Link href="/locations/anchorage" style={link}>Anchorage</Link>, in <Link href="/locations/phoenix" style={link}>Tempe and Mesa</Link>, in <Link href="/locations/spokane" style={link}>Spokane</Link>, and in <Link href="/locations/chicago" style={link}>Chicago and the rest of Illinois</Link>, where our tree service client Sky High is based.</p>
 
-          <h2 style={h2}>Pricing for Handyman Websites</h2>
+          <h2 style={h2}>How a Handyman Website Project Works</h2>
+          <p style={para}>1. <strong>Free homepage sample:</strong> tell us your business name, the work you do and your service area, and we send a custom homepage design within 24 hours.</p>
+          <p style={para}>2. <strong>Discovery call:</strong> we go through the jobs you want more of, the towns you cover, your insurance and licenses, and the photos you have.</p>
+          <p style={para}>3. <strong>Design and writing:</strong> we write and design each page, and you review everything before launch.</p>
+          <p style={para}>4. <strong>Launch:</strong> we publish the site, submit the sitemap to Google and connect your Google Business Profile to the right pages.</p>
+
+          <h2 style={h2}>Handyman Website Cost and Pricing</h2>
           <p style={para}>Straightforward pricing, no hidden fees and no platform lock-in:</p>
           <p style={para}>• <strong>Starter ($700 total with split payments, or $600 paid in full):</strong> a custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, a quote request form and on-page SEO basics.</p>
           <p style={para}>• <strong>Growth ($1,000):</strong> up to 7 pages, for handymen who want separate pages for each type of work, plus structured data and Google Business Profile setup.</p>

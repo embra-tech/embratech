@@ -63,8 +63,8 @@ export default function sitemap() {
   ].map(slug => ({
     url: `${baseUrl}/niches/${slug}`,
     // 2026-11-11: near-page-1 push (auto body, roofing, plumber, HVAC); other industry pages last changed 2026-11-06.
-    // 2026-11-24: HVAC, auto body, roofing and handyman pages expanded (Search Console top-30 round).
-    lastModified: ['hvac-website-design', 'auto-body-shop-website-design', 'roofing-website-design', 'web-design-for-handyman-businesses'].includes(slug) ? nov24 : ['hvac-website-design', 'auto-body-shop-website-design'].includes(slug) ? '2026-11-20' : (['roofing-website-design', 'plumber-website-design'].includes(slug) ? '2026-11-13' : (slug === 'tree-service-website-design' ? oct21 : '2026-11-06')),
+    // 2026-11-24: HVAC, auto body, roofing and handyman pages expanded (Search Console top-30 round); plumber page (round 2).
+    lastModified: ['hvac-website-design', 'auto-body-shop-website-design', 'roofing-website-design', 'web-design-for-handyman-businesses', 'plumber-website-design'].includes(slug) ? nov24 : ['hvac-website-design', 'auto-body-shop-website-design'].includes(slug) ? '2026-11-20' : (['roofing-website-design', 'plumber-website-design'].includes(slug) ? '2026-11-13' : (slug === 'tree-service-website-design' ? oct21 : '2026-11-06')),
     changeFrequency: 'monthly',
     priority: 0.8,
   }));

@@ -14,6 +14,11 @@ import siteConfig from '../../../lib/site-config';
 
 // 2026-11-24: Search Console round: "Roofing Company Web Design Services" section (110 impressions, position 38.6)
 // and a hosting note in the pricing section (roofing website cost 21/23.1, roofing website hosting 8/23.2).
+// 2026-11-24 (round 2, owner's list; last 28 days): roofing website design 44/38.5, roofing web design 28/41.9,
+// web design for roofers 13/39.5, website design for roofers 9/37.6, web design for commercial roofing business 4/33,
+// roofing landing page 6/78.8, roofing custom website 3/11.7. Added residential vs commercial, landing pages,
+// custom vs template, choosing a company, project steps, cost/hosting headings and 4 FAQs. Title, H1, existing
+// sections and the concept image are unchanged.
 const PAGE_DESCRIPTION = 'Roofing website design for roofing contractors: license and insurance up front, storm damage and replacement pages, photo galleries and inspection requests. From $700.';
 
 export const metadata = {
@@ -64,6 +69,22 @@ const FAQS = [
     q: 'Do you work with roofing companies in my area?',
     a: 'Yes. We work remotely with roofing contractors across the US. Your website is built around the towns you actually serve, with your service area shown clearly near the top.',
   },
+  {
+    q: 'How long does it take to build a roofing website?',
+    a: 'Most roofing websites take 2 to 4 weeks from the first call to launch, depending on the number of pages and how quickly photos and details are ready. The free homepage sample comes first, within 24 hours.',
+  },
+  {
+    q: 'Do you build websites for commercial roofing companies?',
+    a: 'Yes. Commercial roofing sites are written for property managers and general contractors: the roof systems you install, maintenance programs, a project list, insurance and bonding details, and a bid request form. If you also do residential work, each audience gets its own section.',
+  },
+  {
+    q: 'Can you redesign our current roofing website without losing our Google rankings?',
+    a: 'We keep your existing page addresses where we can and redirect any that change, then check Search Console after launch. No one can guarantee rankings, but those steps protect the positions your current pages have earned.',
+  },
+  {
+    q: 'Do roofers still need a website if they have a Google Business Profile?',
+    a: 'Yes. The profile gets you into the map results, but homeowners click through to your website to check your work, credentials and warranty before they call, and Google uses your website to understand which services and towns you cover.',
+  },
 ];
 
 export default function NichePage() {
@@ -101,7 +122,7 @@ export default function NichePage() {
           <h2 style={h2}>What a Roofing Website Needs to Do</h2>
           <p style={para}>A new roof is one of the biggest repairs a homeowner will pay for, and many have heard stories about storm chasers: out-of-town crews who arrive after a hailstorm, collect a deposit and disappear. So before they call, homeowners look for proof that you are licensed, insured, local and still going to be around when the warranty matters.</p>
           <p style={para}>A roofing website has to provide that proof quickly, then make the next step easy, whether that is an emergency tarp after a storm or a free inspection for a planned replacement.</p>
-          <p style={para}>We build custom websites for roofing contractors around those questions, with your credentials, completed work and service area front and center.</p>
+          <p style={para}>Our roofing web design is built around those questions: custom websites for roofing contractors, with your credentials, completed work and service area front and center.</p>
 
           {/* Visual Showcase Card */}
           <div data-preview-card="true" style={{ margin: '48px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line-dark)', background: 'rgba(255,255,255,0.02)' }}>
@@ -163,17 +184,48 @@ export default function NichePage() {
           <p style={para}>&bull; <strong>Insurance claim and financing sections</strong>, written carefully: how you help with claims, and financing only if you offer it.</p>
           <p style={para}>&bull; <strong>On-page SEO and structured data</strong>, plus a sitemap submitted to Google when the site launches.</p>
 
+          <h2 style={h2}>Web Design for Roofers: Residential and Commercial</h2>
+          <p style={para}>Homeowners and commercial buyers choose a roofer in different ways, so a good roofing website speaks to each of them separately instead of mixing both on one page.</p>
+          <p style={para}>&bull; <strong>Residential roofing:</strong> homeowners usually compare two or three roofers. They want to see that you are local, licensed and insured, what your workmanship warranty covers, photos of roofs on homes like theirs, financing if you offer it, and a quick way to book an inspection.</p>
+          <p style={para}>&bull; <strong>Commercial roofing:</strong> property managers, facility managers and general contractors look for the systems you install (TPO, EPDM, modified bitumen, metal), maintenance and inspection programs, a project list with building types and sizes, your insurance and bonding details and safety record, and a way to request a bid or download a capability statement.</p>
+          <p style={para}>If you do both, commercial work gets its own section and its own contact form, so a property manager is never sent through a homeowner&apos;s inspection request.</p>
+
+          <h2 style={h2}>Roofing Landing Pages for Ads and Storm Season</h2>
+          <p style={para}>A landing page is a single page built for one offer, usually for Google Ads, a mailer or a yard sign QR code. For roofers that might be a free inspection offer, a roof replacement financing page if you offer financing, or a storm response page after hail or high winds in your area.</p>
+          <p style={para}>Good roofing landing pages repeat the exact offer from the ad, keep the phone number and one short form in view, show local proof such as reviews and finished roofs nearby, and leave out the full site menu so visitors are not distracted. Keep storm pages accurate: name the actual storm and the areas affected, and update or remove the page once the work is done. If you run ads, we can build landing pages alongside your main website.</p>
+
+          <h2 style={h2}>Custom Roofing Website or a Template?</h2>
+          <p style={para}>A website builder or a roofing template can work for a new company. The catch is that the template only provides the layout: someone still has to write a page for each service, explain your inspection and claims process, sort your photos by roof type and keep everything current, and the monthly fee keeps running either way.</p>
+          <p style={para}>A custom roofing website from us is a one-time cost from $600 (paid in full). You own it, it is written for your services and service area, and there is no monthly fee unless you choose the Care Plan. If you already have a site that ranks in Google, a redesign should keep your existing page addresses or redirect them to the new ones, so you keep the rankings you have earned. We do that on every redesign.</p>
+
+          <h2 style={h2}>Choosing a Roofing Web Design Company</h2>
+          <p style={para}>Whoever you hire, ask these questions before you sign:</p>
+          <p style={para}>&bull; <strong>Will I own the website and the domain?</strong> Some roofing website platforms rent the site to you, and it disappears when you stop paying.</p>
+          <p style={para}>&bull; <strong>Is the price published and fixed?</strong> You should know the total before the work starts.</p>
+          <p style={para}>&bull; <strong>Can I see live sites you have built and check their speed?</strong> A screenshot is not enough; open the sites on your phone.</p>
+          <p style={para}>&bull; <strong>Who writes the content?</strong> Service pages are most of the work. Find out whether the price includes writing them.</p>
+          <p style={para}>&bull; <strong>Do they promise guaranteed rankings?</strong> No one controls Google&apos;s results, so treat a guarantee as a warning sign.</p>
+          <p style={para}>To be clear about our own record: we have not launched a live roofing client yet. Our live sites are in auto body repair, handyman, tree service, landscaping and other trades, all in our <Link href="/portfolio" style={link}>portfolio</Link> with links to their PageSpeed reports. That is why we design a free homepage sample for your roofing company first, so you can judge the work before you pay anything.</p>
+
+          <h2 style={h2}>How a Roofing Website Project Works</h2>
+          <p style={para}>1. <strong>Free homepage sample:</strong> tell us your company name, services and service area, and we send a custom homepage design within 24 hours.</p>
+          <p style={para}>2. <strong>Discovery call:</strong> we go through your services, the towns you cover, your license, insurance and certifications, and the job photos you have.</p>
+          <p style={para}>3. <strong>Design and writing:</strong> we write and design each page, and you review everything before launch.</p>
+          <p style={para}>4. <strong>Launch:</strong> we publish the site, submit the sitemap to Google and connect your Google Business Profile to the right pages.</p>
+          <p style={para}>Most roofing websites take 2 to 4 weeks from the first call to launch, depending on how quickly photos and details are ready.</p>
+
           <h2 style={h2}>Local SEO for Roofing Contractors</h2>
           <p style={para}>Roofing searches rise sharply after storms, and homeowners usually search for &quot;roof repair near me&quot; or &quot;roofing contractor&quot; plus their town. Most of those calls come through your Google Business Profile and the map results, so a complete profile with real job photos and steady reviews matters as much as the website.</p>
           <p style={para}>We add LocalBusiness and RoofingContractor structured data, give each service its own page, and add town pages only where you have real jobs and reviews to show. Read our <Link href="/blog/local-seo-guide-for-service-businesses" style={link}>local SEO guide for home service businesses</Link>, or see our <Link href="/services/local-seo" style={link}>local SEO service</Link>.</p>
 
-          <h2 style={h2}>Pricing for Roofing Websites</h2>
+          <h2 style={h2}>Roofing Website Cost and Pricing</h2>
           <p style={para}>Published pricing, no long-term contract, and you own the finished website:</p>
           <p style={para}>&bull; <strong>Starter ($700 total with split payments, or $600 paid in full):</strong> a custom homepage plus 2 inner pages, built mobile-first with tap-to-call buttons, an inspection request form and on-page SEO basics.</p>
           <p style={para}>&bull; <strong>Growth ($1,000):</strong> up to 7 pages, enough for separate replacement, repair, storm damage and gallery pages, plus structured data and Google Business Profile setup.</p>
           <p style={para}>&bull; <strong>Care Plan ($150/month, optional):</strong> after each storm season we add your newest roof photos, and we keep hosting, security and search monitoring handled. Cancel anytime.</p>
           <p style={para}>All plans are on our <Link href="/pricing" style={link}>pricing page</Link>; our <Link href="/blog/website-cost-for-home-service-businesses" style={link}>guide to contractor website costs</Link> shows what roofing companies usually pay elsewhere.</p>
-          <p style={para}><strong>What about hosting?</strong> Roofing website hosting is included in the optional Care Plan along with security and updates. Without it, the site is still yours: we hand over the files and you can host it wherever you like.</p>
+          <h3 style={{ color: '#fff', fontSize: '1.35rem', marginBottom: '16px', marginTop: '32px' }}>Roofing Website Hosting</h3>
+          <p style={para}>Roofing website hosting is included in the optional Care Plan along with security and updates. Without it, the site is still yours: we hand over the files and you can host it wherever you like.</p>
 
           {/* Mid-Content Conversion CTA Box */}
           <div data-mid-cta="true" style={{

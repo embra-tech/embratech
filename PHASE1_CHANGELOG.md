@@ -1165,6 +1165,26 @@ Request: deep analysis for anything that could pull rankings down (content misma
 
 ---
 
+## AO. Round 2: roofing, plumber-city, handyman and Juneau queries (2026-11-24, owner requested)
+
+Owner's list (Search Console, top queries): roofing website design 40/31.3, roofing web design 23/39.4, website design for plumbers independence 17/5.5, irving 10/10.3, web design for roofers 10/37.7, website design for handyman illinois 9/17.3, juneau seo 9/18.7, handyman website design 9/24.6, website design for roofers 9/38.8, website design for plumbers corona 8/7.9. Goal: move these up without losing other rankings.
+
+**Where each query lands (Search Console, query filter > Pages):** roofing queries go to /niches/roofing-website-design (368 of 384 impressions in 28 days, avg 35.5); plumber queries go to /niches/plumber-website-design (466 of 488, avg 21.7; 190 distinct queries, mostly "website design for plumbers [city or state]"); handyman queries go to /niches/web-design-for-handyman-businesses (934 of 959 in 3 months, avg 35.2); "juneau seo" goes to /locations/juneau (avg 7.7).
+
+**Approach.** Strengthen the page Google already picks for each query, with additive sections only. No new pages: city pages for plumbers or handymen would be doorway pages, and lists of cities are named as keyword stuffing in Google's spam policies. Titles, H1s and existing sections are unchanged, except the Juneau title (below).
+
+**Changes**
+- Roofing page (+940 words): "Web Design for Roofers: Residential and Commercial", "Roofing Landing Pages for Ads and Storm Season", "Custom Roofing Website or a Template?", "Choosing a Roofing Web Design Company" (says plainly that there is no live roofing client yet), "How a Roofing Website Project Works"; pricing H2 renamed "Roofing Website Cost and Pricing"; hosting note became H3 "Roofing Website Hosting"; 4 FAQs (timeline, commercial, redesign without losing rankings, website vs Business Profile); intro sentence now says "roofing web design".
+- Plumber page (+630 words): "Plumbing Web Design Services: What Is Included", "Website Design for Plumbers in Any US City" (one natural sentence names Independence MO, Irving TX and Corona CA as examples; no list), "How a Plumbing Website Project Works"; pricing H2 renamed "Plumbing Web Design Cost and Pricing"; 4 FAQs (my city, water treatment and filtration, timeline, redesign).
+- Handyman page (+430 words): "Handyman Web Design Services: What Is Included", "Choosing a Web Designer for Your Handyman Business" (three live handyman sites), "How a Handyman Website Project Works"; pricing H2 renamed "Handyman Website Cost and Pricing"; area paragraph links "Chicago and the rest of Illinois" (real Illinois client: Sky High Tree Service, Naperville); city FAQ mentions live handyman sites in Alaska and California.
+- Juneau: title "SEO Agency Services for Juneau Service Businesses" changed to "Juneau SEO: Agency Services for Local Service Businesses" (keeps "SEO agency" for "seo agency juneau"); Juneau SEO checklist paragraph; FAQ on how long Juneau SEO takes.
+- Cost guide: descriptive links to the roofing, plumber, handyman and HVAC pages; payment line now shows the paid-in-full prices ($600 / $900 / $1,350) to match /pricing. dateModified 2026-11-24.
+- Sitemap: plumber page lastmod 2026-11-24.
+
+**Checks:** lint clean; build OK; crawl of all 49 pages compared with the live version: only these 5 pages changed text, the Juneau title is the only title change, no canonical/robots/H1 changes, no JSON-LD errors, Googlebot sees the same text as visitors. Layout audit (desktop, phone, Googlebot) on the 5 pages: 0 problems. Lighthouse (local, mobile): roofing 76 / SEO 100, plumber 70 / SEO 100, CLS 0 (no code changes, text only).
+
+**Undo:** revert the commit; or restore the old Juneau metaTitle in lib/cityGuides.js alone.
+
 ## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)
 
 No site code changed in this section.
