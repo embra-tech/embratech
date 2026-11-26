@@ -83,7 +83,8 @@ export default function CityGuide({ guide }) {
         <Link href="/blog/why-pagespeed-matters" className="link-chip">Why page speed matters</Link>
       </div>
 
-      <h2 style={h2}>Areas We Work With Around {guide.name}</h2>
+      {/* 2026-11-26: optional areasTitle for state-wide guides (Arkansas, Alabama), where "Around Arkansas" reads oddly. */}
+      <h2 style={h2}>{guide.areasTitle || `Areas We Work With Around ${guide.name}`}</h2>
       {/* 2026-11-08: decorative orbit of nearby areas around the city (the real list follows as text). */}
       <div className="orbit" aria-hidden="true">
         <div className="orbit-center"><span>{guide.name}</span></div>

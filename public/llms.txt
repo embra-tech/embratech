@@ -99,6 +99,10 @@ they are not office locations.
 - https://www.embratechnologies.org/locations/denver — Denver metro (Centennial, Aurora, Boulder), CO
 - https://www.embratechnologies.org/locations/spokane — Spokane and Airway Heights, WA
 - https://www.embratechnologies.org/locations/phoenix — Phoenix metro (Tempe, Mesa), AZ
+- https://www.embratechnologies.org/locations/arkansas — Arkansas (Little Rock, Northwest Arkansas)
+- https://www.embratechnologies.org/locations/alabama — Alabama (Birmingham, Mobile, Montgomery)
+- https://www.embratechnologies.org/locations/memphis — Memphis, TN and the Mid-South
+- https://www.embratechnologies.org/locations/bridgeport — Bridgeport and Fairfield County, CT
 - https://www.embratechnologies.org/locations/brooklyn — Brooklyn, NY
 
 ## Contact

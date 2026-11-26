@@ -74,6 +74,22 @@ function LosAngelesContent() {
         Already have a website? Our $150/month <Link href="/services/care-plan" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Care Plan</Link> covers website maintenance for home repair and service businesses: hosting, security, SEO monitoring and content updates.
       </p>
 
+      {/* 2026-11-26 (round 3): Search Console "website for service businesses in los angeles" (68 impressions in 3 months, position 43.8). LA-specific checklist; facts checked against CSLB and the California Health and Safety Code. */}
+      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>A Website for Service Businesses in Los Angeles: What to Include</h2>
+      <p style={{ marginBottom: '24px' }}>
+        Los Angeles is a huge, spread-out market, so a website for an LA service business has to answer three questions fast: do you cover my part of the city, are you licensed, and can you come soon? These are the things we build into websites for service businesses in Los Angeles:
+      </p>
+      <ul style={{ marginBottom: '24px', paddingLeft: '20px', lineHeight: 1.8 }}>
+        <li><strong>Your contractor license number:</strong> California requires licensed contractors, including plumbers, HVAC companies, roofers and remodelers, to include their CSLB license number in their advertising, and the Contractors State License Board counts website content as advertising. We put it in the footer and on every quote page.</li>
+        <li><strong>The parts of LA you really serve:</strong> the Westside, the San Fernando Valley, the South Bay, the San Gabriel Valley, the Eastside and Long Beach are searched as separate places. A clear service-area section that matches your Google Business Profile helps the right customers find you.</li>
+        <li><strong>Spanish where your customers need it:</strong> millions of Los Angeles County residents speak Spanish at home. If your team serves customers in Spanish, a Spanish version of your main service pages lets them read about you in the language they search in.</li>
+        <li><strong>Pages for LA&apos;s seasons and risks:</strong> heat waves in the valleys for AC companies, the fall Santa Ana winds for tree services and roofers, and winter storms for roof leaks and drainage. Earthquake readiness counts too: California requires water heaters to be braced or strapped, a simple service plumbers and handymen can list on its own page.</li>
+        <li><strong>A small start that can grow:</strong> many LA service businesses start with a homepage, one main service page and a contact page, then add pages as they win work in new areas.</li>
+      </ul>
+      <p style={{ marginBottom: '40px' }}>
+        Our <Link href="/pricing" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Starter plan</Link> covers that first website for $700 with split payments, or $600 paid in full, and you see a free homepage sample for your business within 24 hours before you decide. For the cost of each option compared, read <Link href="/blog/website-cost-for-home-service-businesses" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>what a website costs for a home service business</Link>.
+      </p>
+
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why Choose Embra for Your LA Business?</h2>
       <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
         <li><strong>Fast on Phones:</strong> Speed matters to visitors and is one of the signals Google uses. Each case study links to the client site's live PageSpeed report, so you can check it yourself.</li>
@@ -89,6 +105,11 @@ function LosAngelesContent() {
       <div style={{ marginBottom: '40px' }}>
         <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>Can I see a design before committing?</h3>
         <p>Yes. We offer a free, no-obligation custom homepage sample built in 24 hours. You can view it on your phone and desktop before you sign a contract or pay a cent.</p>
+      </div>
+      {/* 2026-11-26 (round 3): website for service businesses in los angeles. */}
+      <div style={{ marginBottom: '40px' }}>
+        <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '12px' }}>Do you build websites for small service businesses anywhere in Los Angeles?</h3>
+        <p>Yes. We work remotely with service businesses across Los Angeles County, from the San Fernando Valley to Long Beach. Our LA work includes the website for Tuxford Collision Center and local SEO for Pick N Drop Laundry, both covered in case studies above.</p>
       </div>
     </>
   );
@@ -281,6 +302,25 @@ function BrooklynContent() {
         <li><strong>Tuxford Collision Center (Los Angeles, CA):</strong> Auto body and collision repair. We built a trust-first website with licensing credentials, Google rating, and free towing guarantee above the fold, designed for the 11 PM accident scenario. <Link href="/portfolio/tuxford-collision" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the case study &rarr;</Link></li>
         <li><strong>Alaska Fast Fix Handyman (Alaska):</strong> Emergency handyman services across a geographically spread-out market. We led with fast response messaging, instant tap-to-call, and a clear service area map. <Link href="/portfolio/alaska-fast-fix" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the case study &rarr;</Link></li>
         <li><strong>V Vasquez Handyman LLC (Merced, CA):</strong> Lawn care, concrete, and irrigation services. We structured each service into its own clear section with quote request CTAs and optimized for mobile-first local search. <Link href="/portfolio/vvasquez-handyman" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>Read the case study &rarr;</Link></li>
+      </ul>
+
+      {/* 2026-11-26 (round 3): Brooklyn queries in Search Console (3 months): brooklyn hvac seo 8/11.6, hvac seo agency/services/company brooklyn (positions 6-7),
+          and neighborhood searches: seo company bedford-stuyvesant 12/42.3, dyker heights 6/43, canarsie ny 5/16.6, bay ridge ny 4/21, flatbush 4/41.8.
+          Facts: NYC HPD heat season and DCWP home improvement license, checked 2026-11-26. */}
+      <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>HVAC SEO and Local SEO for Brooklyn Businesses</h2>
+      <p style={{ marginBottom: '24px' }}>
+        Brooklyn searches are neighborhood searches. A landlord in Bedford-Stuyvesant looking for a heating contractor, or a homeowner in Bay Ridge looking for a handyman, sees results shaped by where they are standing. Our business address is in Brooklyn, and the search data we see for our own site follows the same pattern: people look for an SEO company by neighborhood, from Bed-Stuy and Flatbush to Canarsie, Dyker Heights and Bay Ridge.
+      </p>
+      <h3 style={{ color: '#fff', fontSize: '1.3rem', marginBottom: '16px' }}>HVAC SEO in Brooklyn</h3>
+      <p style={{ marginBottom: '24px' }}>
+        Heating work in Brooklyn follows a calendar set by the city. New York City&apos;s heat season runs from October 1 to May 31, when building owners must keep apartments at minimum indoor temperatures, so boiler, steam heat and no-heat repair calls build through the winter and AC and heat pump work takes over in summer. For an HVAC company, local SEO here means a Google Business Profile with accurate heating and cooling categories, separate pages for boiler repair, heating, AC and heat pumps, a page for building owners and property managers if you serve them, and reviews that mention the neighborhoods you work in. Our <Link href="/blog/hvac-local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>HVAC SEO guide</Link> walks through each step.
+      </p>
+      <h3 style={{ color: '#fff', fontSize: '1.3rem', marginBottom: '16px' }}>Local SEO for Brooklyn contractors and service businesses</h3>
+      <ul style={{ marginBottom: '40px', paddingLeft: '20px', lineHeight: 1.8 }}>
+        <li><strong>Show your license:</strong> home improvement contractors working on homes in New York City need a Home Improvement Contractor license from the Department of Consumer and Worker Protection (DCWP). Putting the license number on your website answers the first question many Brooklyn homeowners ask.</li>
+        <li><strong>Name the neighborhoods you really cover:</strong> Park Slope, Bed-Stuy, Flatbush, Bay Ridge, Bensonhurst, Canarsie or Williamsburg, in your Google Business Profile description and on your service pages, rather than "all of NYC".</li>
+        <li><strong>One clear page per service:</strong> boiler repair, plumbing, handyman work or renovations each on their own page, so Google can match each search to the right page.</li>
+        <li><strong>Neighborhood pages only with real work:</strong> add a page for Dyker Heights or Canarsie when you have jobs, photos and reviews from there, not before. Our <Link href="/services/local-seo" style={{ color: 'var(--primary-bright)', textDecoration: 'underline' }}>local SEO service</Link> starts with a free review of where you stand.</li>
       </ul>
 
       <h2 style={{ color: '#fff', fontSize: '2rem', marginBottom: '24px' }}>Why Brooklyn Home Service Businesses Work With Us</h2>

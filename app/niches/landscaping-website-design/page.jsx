@@ -50,6 +50,11 @@ const FAQS = [
     a: 'Yes. We can add a quote form where customers describe the job and upload photos of their yard, so you can judge the work before visiting.',
   },
   {
+    // 2026-11-26 (round 3): website design for irrigation companies 21/33.9.
+    q: 'Do you design websites for irrigation companies?',
+    a: 'Yes. Irrigation and sprinkler companies get separate pages for repairs, installations, drip systems, start-ups and winterization, with seasonal booking forms and any licenses or backflow certifications shown clearly. The Growth plan ($1,000, up to 7 pages) usually fits an irrigation business.',
+  },
+  {
     q: 'Have you built a landscaping website before?',
     a: 'Yes. We built the website for V Vasquez Handyman LLC in Merced, CA, which does lawn care, concrete and irrigation work. Each service has its own section, and the quote form pre-selects the service the visitor was viewing.',
   },
@@ -140,6 +145,17 @@ export default function NichePage() {
           <p style={para}>For <Link href="/portfolio/vvasquez-handyman" style={link}>V Vasquez Handyman LLC</Link> in Merced, CA, which does lawn care, concrete and irrigation work, we replaced a generic template with a clear catalog of services. Each service has its own section, and the quote form pre-selects the service the visitor was viewing, so requests arrive with the right context. The case study links to the site&apos;s live PageSpeed report.</p>
 
           <StockPhoto name="stock-landscaping" />
+
+          {/* 2026-11-26 (round 3): Search Console "website design for irrigation companies" (21 impressions in 3 months, position 33.9). */}
+          <h2 style={h2}>Website Design for Irrigation and Sprinkler Companies</h2>
+          <p style={para}>Irrigation companies sell two different things: installations, which are planned projects, and service calls (a broken sprinkler head, a leak, a controller that won&apos;t run), which are urgent and seasonal. Their websites work best when the two are kept apart.</p>
+          <ul style={{ ...para, paddingLeft: '20px', lineHeight: 1.8 }}>
+            <li><strong>A page for each service:</strong> sprinkler repair, new system installation, drip irrigation, spring start-ups, fall winterization or blowouts in freezing climates, smart controller upgrades and backflow testing if you are certified for it.</li>
+            <li><strong>Seasonal booking:</strong> start-up and winterization pages with a simple booking form, live a few weeks before each season, plus a maintenance plan sign-up for repeat customers.</li>
+            <li><strong>Licenses and certifications:</strong> some states license irrigation work (Texas, for example, requires a licensed irrigator through the TCEQ), and many water utilities require certified backflow testers. Show the ones you hold.</li>
+            <li><strong>Water-saving work:</strong> if your area has watering restrictions or utility rebates for smart controllers or drip conversions, explain them accurately and link to the official program instead of quoting amounts that may change.</li>
+          </ul>
+          <p style={para}>The <Link href="/portfolio/vvasquez-handyman" style={link}>V Vasquez Handyman LLC</Link> website above follows this pattern: irrigation has its own section next to lawn care and concrete, and the quote form arrives already set to the service the customer was reading about.</p>
 
           <h2 style={h2}>Local SEO for Landscaping Companies</h2>
           <p style={para}>Homeowners usually search for &quot;lawn care near me,&quot; &quot;landscaper&quot; or &quot;patio installation&quot; plus their town, and many of those calls come through your Google Business Profile. A complete profile with real project photos and steady reviews matters as much as the website.</p>

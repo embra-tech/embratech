@@ -169,6 +169,8 @@ export default function NichePage() {
           <h2 style={h2}>Website Design for Plumbers in Any US City</h2>
           <p style={para}>You don&apos;t need a web designer in your own town. We work remotely with plumbing companies across the US, whether you are a one-truck plumber in Independence, Missouri, a growing shop in Irving, Texas or a family business in Corona, California, with calls and updates during US business hours.</p>
           <p style={para}>What changes from city to city is the competition and the way local customers search, not what makes a plumbing website work. We build your site around your real service area: your main city in the page titles and headline, the towns you cover in a clear service-area section, and your Google Business Profile linked to the right pages. Separate town pages come later, and only for towns where you have real jobs and reviews to show.</p>
+          {/* 2026-11-26 (round 3): website design for plumbers memphis 12/11.8, website design for plumbers arkansas 18/11.5. */}
+          <p style={para}>For local detail, including the licenses to show on your site, see our guides for <Link href="/locations/memphis" style={link}>plumbers in Memphis and the Mid-South</Link> and <Link href="/locations/arkansas" style={link}>plumbers across Arkansas</Link>.</p>
 
           <h2 style={h2}>Getting Found for Plumbing Searches</h2>
           <p style={para}>Most plumbing calls from search come through Google&apos;s map results and the pages below them. Every plumbing website we build includes clear service pages, a sitemap and LocalBusiness and Plumber structured data with your service area and hours. Your Google Business Profile and steady, genuine reviews matter just as much as the website.</p>

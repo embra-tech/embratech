@@ -1185,6 +1185,47 @@ Owner's list (Search Console, top queries): roofing website design 40/31.3, roof
 
 **Undo:** revert the commit; or restore the old Juneau metaTitle in lib/cityGuides.js alone.
 
+## AP. Round 3: impressions "drop", top 20 locations and remaining top-100 queries (2026-11-26, owner requested)
+
+Request: impressions dropped by almost half (Search Console, last 24 hours 399 vs previous 24 hours 963); deep analysis of the site, 3 months of Search Console and the top 100 keywords; target the top 100 keywords in the top 20 US locations that appear in queries, without hurting anything at position 1.
+
+**1. The "drop" is a comparison against a rank-tracker sweep, not a loss.**
+- The previous 24 hours (Nov 24) had 963 impressions, the highest day on record. 641 of them (69%) came from 344 queries of the form "website design for handyman [city]" / "website design for plumbers [city]", each with 1 or 2 impressions.
+- The same pattern appears once a week: Oct 5 (84 such impressions), Nov 3 (154), Nov 9 (253), Nov 17 (445), Nov 24 (661). On the six normal days Nov 18–23 the same queries had 54 impressions in total. That is an automated rank-tracking tool checking hundreds of cities, not customers.
+- Normal days run about 170 impressions (Nov 18–23: 1,022). The "last 24 hours" figure of 399 is above that.
+- The one real decline is older: the HVAC page fell from ~250 impressions a day at position ~58 to ~25 a day from Nov 14 (already recorded in AJ and AN). Not related to the Nov 24 releases.
+
+**2. Position-1 queries to protect.** Over 3 months only "embra car" and "que venden" (1 impression each) average position 1; positions 1–3.5: "hvac company local seo marketing", "tree service web design company" (2.3), "embra inc. pricing plans" (2.7), "website design for tree service companies" (3.5). Pages with position-1-to-5 averages: /niches (1.4), /#showcase (1.2), /pricing (4.3), /portfolio (5.5). None of these pages was touched. On location pages, queries in the top 10 (Spokane "airway heights search engine optimization" 4.2, Anchorage handyman 4.0, Phoenix "website design for handyman mesa" 3.9, Brooklyn "hvac seo agency/services/company brooklyn" 6–7) keep their content; changes there are additions only.
+
+**3. Top 20 locations (3 months, impressions outside the sweep days, synonyms merged):** Los Angeles 147, Airway Heights/Spokane 131, Chicago 101, Juneau 72, Arkansas 64, Brooklyn and its neighborhoods 62, Anchorage 41, Alabama (Mobile, Birmingham, Montgomery) 40, Colorado/Denver metro 40, Springfield (state unknown) 38, Illinois 37, Fairbanks 24, Alaska 22, Memphis 20, Bridgeport CT 15, Phoenix metro (Mesa, Tempe) 13, Jackson/Mississippi 13, Newark 9, Florida 8, Raleigh/Apex 8.
+- Already had a page: LA, Chicago (+Illinois), Spokane/Airway Heights, Juneau, Brooklyn, Anchorage, Denver metro, Fairbanks, Alaska, Phoenix metro.
+- No page before this round: Arkansas, Alabama, Memphis, Bridgeport → 4 new guides.
+- Not given a page: Springfield (Search Console does not say which state), Newark, Florida, Raleigh, Jackson (single-digit real impressions; the rest is sweep traffic).
+
+**4. Why not a page per keyword per city.** 512 of the 985 queries in 3 months are "website design for handyman/plumbers [city]" (1,746 impressions), almost all from the weekly sweeps. Pages built for each city and keyword would be doorway pages under Google's spam policies and could pull down the whole site. Each new guide below has its own facts (state licensing, weather calendar, local markets) and says plainly that we are remote with no clients there yet.
+
+**Changes**
+- `lib/cityGuides.js`: 4 new guides, same structure as the existing six:
+  - `/locations/arkansas` (hvac website design ar 57/44, website design for plumbers arkansas 18/11.5, handyman arkansas 15/25.9): HVACR licensing (Department of Labor and Licensing), plumbing (Department of Health), Contractors Licensing Board thresholds ($50,000 commercial, $2,000 home improvement), hail/ice-storm calendar, Central and Northwest Arkansas markets.
+  - `/locations/alabama` (hvac website design mobile al 18/47.7, birmingham al 12/49.8, montgomery al 11/52.3): HVAC board, Home Builders Licensure Board ($10,000, roofing licenses), hurricane season Jun 1–Nov 30, FORTIFIED roofs and the Strengthen Alabama Homes program (no grant amounts quoted).
+  - `/locations/memphis` (website design for plumbers memphis 12/11.8, website design for hvac memphis 9/27.7): three-state metro, Tennessee home improvement license in Shelby County ($3,000–$25,000; $25,000+ contractor's license), Mississippi State Board of Contractors, storm and ice-storm calendar.
+  - `/locations/bridgeport` (website design for handyman bridgeport 18/34.3): Connecticut HIC registration, registration number required in advertising (CGS 20-427), written contracts, EPA lead-safe (RRP) rule for pre-1978 homes.
+  - Denver guide: FAQ "Do you offer HVAC SEO in Aurora and Denver?" and the search example "hvac seo aurora co" (7/15.7).
+- `components/CityGuide.jsx`: optional `areasTitle` (state guides read "Arkansas Markets We Work With" instead of "Areas We Work With Around Arkansas"). Existing guides unchanged.
+- `app/locations/[city]/LocationClient.jsx`:
+  - LA: H2 "A Website for Service Businesses in Los Angeles: What to Include" (CSLB license number in advertising including websites, LA regions, Spanish pages, valley heat / Santa Ana winds / winter storms, water heater strapping rule, Starter plan) and an FAQ on small service businesses across LA (query "website for service businesses in los angeles" 68/43.8).
+  - Brooklyn: H2 "HVAC SEO and Local SEO for Brooklyn Businesses" with H3s for HVAC SEO (NYC heat season Oct 1–May 31) and local SEO for contractors (DCWP Home Improvement Contractor license, neighborhoods). Brooklyn neighborhood queries were at positions 17–43.
+- `app/niches/landscaping-website-design/page.jsx`: H2 "Website Design for Irrigation and Sprinkler Companies" and an FAQ (website design for irrigation companies 21/33.9).
+- `lib/blog/auto-body-shop-marketing.js`: "Who is the target market for an auto body shop?" and "Marketing threats and opportunities for collision shops" (target market of a auto body shop 8/16.4, marketing threats 5/19.2); dateModified 2026-11-26 in `lib/blogData.js`.
+- One-sentence guide links: HVAC page (Arkansas, Alabama, Memphis), plumber page (Memphis, Arkansas), handyman page (Bridgeport).
+- `lib/site-config.js` serviceAreas (footer and Services hub), `app/sitemap.js` (53 URLs; changed pages dated 2026-11-26), `public/llms.txt`.
+
+**Not changed on purpose:** titles, H1s and meta descriptions of every existing page; the homepage hero; Chicago, Juneau, Spokane, Anchorage, Phoenix, roofing, auto body and the HVAC SEO guide (all changed on Nov 24 and not yet recrawled; another edit now would only blur the measurement).
+
+**After deploy:** request indexing for the 4 new guides, then LA, Brooklyn, landscaping and the auto body guide; resubmit the sitemap. Measure Dec 8 and Dec 22 with sweep days excluded (Mondays/Tuesdays with hundreds of "website design for handyman [city]" queries).
+
+**Undo:** revert the commit; the 4 guides can also be removed individually from `lib/cityGuides.js` (and their sitemap, serviceAreas and llms.txt lines).
+
 ## Z. Axiom analytics overhaul: Phase 0 findings and setup (2026-11-01)
 
 No site code changed in this section.

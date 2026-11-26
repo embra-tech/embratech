@@ -18,6 +18,9 @@ export default function sitemap() {
   const oct26 = '2026-10-26';         // review of the external audit: care plan, integrations, pricing, about, homepage, LA and Chicago
   // 2026-11-24: ranking-risk audit (contradictions, unverifiable claims) + Search Console top-30 content round.
   const nov24 = '2026-11-24';
+  // 2026-11-26 (round 3): 4 new location guides; LA, Brooklyn, Denver, landscaping and auto body guide expanded;
+  // one-sentence guide links on the HVAC, plumber and handyman pages.
+  const nov26 = '2026-11-26';
 
   // 2026-11-20: /services, /niches, /services/web-design, /pricing and /about gained the "Recent Client Projects" section.
   const corePages = [
@@ -38,17 +41,22 @@ export default function sitemap() {
   ];
 
   const locationPages = [
-    { url: `${baseUrl}/locations/brooklyn`,            lastModified: nov24,  changeFrequency: 'monthly',  priority: 0.8 },
-    { url: `${baseUrl}/locations/los-angeles`,         lastModified: nov24,  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/brooklyn`,            lastModified: nov26,  changeFrequency: 'monthly',  priority: 0.8 },
+    { url: `${baseUrl}/locations/los-angeles`,         lastModified: nov26,  changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/chicago`,             lastModified: nov24,  changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/alaska`,              lastModified: nov24,  changeFrequency: 'monthly',  priority: 0.7 },
     // 2026-11-02: city guides built from Search Console city queries (lib/cityGuides.js); deepened and live 2026-11-06
     { url: `${baseUrl}/locations/anchorage`,           lastModified: '2026-11-20',  changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/fairbanks`,           lastModified: '2026-11-20',  changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/juneau`,              lastModified: nov24,  changeFrequency: 'monthly',  priority: 0.7 },
-    { url: `${baseUrl}/locations/denver`,              lastModified: '2026-11-20',  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/denver`,              lastModified: nov26,  changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/spokane`,             lastModified: nov24,  changeFrequency: 'monthly',  priority: 0.7 },
     { url: `${baseUrl}/locations/phoenix`,             lastModified: '2026-11-20',  changeFrequency: 'monthly',  priority: 0.7 },
+    // 2026-11-26 (round 3): guides for the top Search Console locations without a page
+    { url: `${baseUrl}/locations/arkansas`,            lastModified: nov26,  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/alabama`,             lastModified: nov26,  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/memphis`,             lastModified: nov26,  changeFrequency: 'monthly',  priority: 0.7 },
+    { url: `${baseUrl}/locations/bridgeport`,          lastModified: nov26,  changeFrequency: 'monthly',  priority: 0.7 },
     // /locations/gulf-coast is noindex, excluded from sitemap intentionally
   ];
 
@@ -64,7 +72,8 @@ export default function sitemap() {
     url: `${baseUrl}/niches/${slug}`,
     // 2026-11-11: near-page-1 push (auto body, roofing, plumber, HVAC); other industry pages last changed 2026-11-06.
     // 2026-11-24: HVAC, auto body, roofing and handyman pages expanded (Search Console top-30 round); plumber page (round 2).
-    lastModified: ['hvac-website-design', 'auto-body-shop-website-design', 'roofing-website-design', 'web-design-for-handyman-businesses', 'plumber-website-design'].includes(slug) ? nov24 : ['hvac-website-design', 'auto-body-shop-website-design'].includes(slug) ? '2026-11-20' : (['roofing-website-design', 'plumber-website-design'].includes(slug) ? '2026-11-13' : (slug === 'tree-service-website-design' ? oct21 : '2026-11-06')),
+    // 2026-11-26: landscaping (irrigation section), HVAC, plumber and handyman (guide links) pages changed.
+    lastModified: ['hvac-website-design', 'plumber-website-design', 'web-design-for-handyman-businesses', 'landscaping-website-design'].includes(slug) ? nov26 : ['auto-body-shop-website-design', 'roofing-website-design'].includes(slug) ? nov24 : ['hvac-website-design', 'auto-body-shop-website-design'].includes(slug) ? '2026-11-20' : (['roofing-website-design', 'plumber-website-design'].includes(slug) ? '2026-11-13' : (slug === 'tree-service-website-design' ? oct21 : '2026-11-06')),
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
